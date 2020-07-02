@@ -6,7 +6,7 @@ Prior to publishing changes to our live website at [ory.sh](https://ory.sh), it 
 
 - [ ] **Cross reference [ory.sh](https://ory.sh) and the netlify deploy with each other, by comparing them in a side by side view. All following steps should happen in side by side comparison.**
   - this will make even subtle changes that are not intended more visible and easier to correct
-  - the website works behaves slighty different in mobile and desktop versions - **repeat all following steps for both mobile and desktop**
+  - the website works slighty different in mobile and desktop versions - **repeat all following steps for both mobile and desktop**
 
 **Links**
   - [ ] Every link in the navigation, external and internal, needs to be checked to work as intended
