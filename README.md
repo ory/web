@@ -1,6 +1,6 @@
 # [www.ory.sh](https://www.ory.sh)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/57a447bf-7887-4204-af24-08cd81e5d825/deploy-status)](https://app.netlify.com/sites/wonderful-sinoussi-8532a7/deploys)
+![GitHub Actions Status](https://github.com/ory/web/workflows/.github/workflows/publish.yml/badge.svg?branch=master)
 
 This is the [www.ory.sh](https://www.ory.sh) website!
 
