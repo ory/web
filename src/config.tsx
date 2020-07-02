@@ -52,7 +52,7 @@ export const projects: Project[] = [
     descriptiveTitle:
       'Identity and Access Proxy',
     description:
-      'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, to interact with your applications.',
+      'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.',
     path: '/oathkeeper',
     links: {
       quickstart: 'https://www.ory.sh/oathkeeper/docs/index',
