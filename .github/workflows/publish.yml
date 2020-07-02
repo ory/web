@@ -1,0 +1,65 @@
+name: Publish or Preview Website
+
+on:
+  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+
+  # This job will:
+  #   * deploy a draft every time there is a pull request created or synchronized that is not on master branch
+  #   * comment on that pull request with the deploy URL
+  deployPRDraft:
+    name: Deploy draft to Netlify
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.ref != 'refs/heads/master'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: v12.x
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy draft to Netlify
+        uses: South-Paw/action-netlify-deploy@v1.0.4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          build-dir: './build'
+          draft: true
+          comment-on-pull-request: true
+
+  # This job will:
+  #   * deploy a production build every time there is a push on the master branch
+  #   * comment that commit with the deploy URL
+  publishMasterCommit:
+    name: Publish to Netlify
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: v12.x
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy production to Netlify
+        uses: South-Paw/action-netlify-deploy@v1.0.4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          build-dir: './build'
+          comment-on-commit: true
