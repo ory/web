@@ -4,11 +4,11 @@ path: '/imprint/'
 title: 'Imprint'
 metaTitle: 'ORY Imprint'
 metaDescription: 'Read the ORY imprint.'
-lastUpdatedAt: 'Apr 6th, 2020'
+lastUpdatedAt: 'July 3, 2020'
 ---
 
 **ORY Corp**  
-32 Veterans Lane, Ste A-128  
+132-A Veterans Lane, UNIT 128  
 Doylestown, PA 18901-3424  
 United States of America
 
