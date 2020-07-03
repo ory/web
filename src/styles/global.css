@@ -10,3 +10,7 @@ img.responsive {
 video {
   max-width: 100%;
 }
+
+.embedVideo-container iframe {
+  max-width: 100%;
+}
