@@ -150,3 +150,4 @@ https://www.ory.sh/contact https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR4
 # 2020-07 Kratos docs refactoring
 
 https://www.ory.sh/kratos/docs/concepts/selfservice-flow-completion https://www.ory.sh/kratos/docs/concepts/browser-redirect-flow-completion 302!
+https://www.ory.sh/kratos/docs/fallback/verify https://www.ory.sh/kratos/docs/fallback/verification 302!
