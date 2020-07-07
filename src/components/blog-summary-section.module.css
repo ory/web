@@ -4,7 +4,7 @@
   background: linear-gradient(to bottom, var(--colors-themed-default) 96px, var(--colors-themed-light) 96px);
 
   & h4 {
-    height: 60px;
+    height: auto;
     margin-bottom: 16px;
     color: var(--colors-themed-default)
   }
