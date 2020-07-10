@@ -150,3 +150,10 @@ https://www.ory.sh/contact https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR4
 # 2020-07 Kratos docs refactoring
 
 https://www.ory.sh/kratos/docs/concepts/selfservice-flow-completion https://www.ory.sh/kratos/docs/concepts/browser-redirect-flow-completion 302!
+
+# 2020-07 Hydra docs refactoring
+
+https://www.ory.sh/hydra/docs/integration https://www.ory.sh/hydra/docs/guides/using-oauth2 302!
+https://www.ory.sh/hydra/docs/implement-consent https://www.ory.sh/hydra/docs/guides/login 302!
+https://www.ory.sh/hydra/docs/oauth2 https://www.ory.sh/hydra/docs/concepts/oauth2 302!
+https://www.ory.sh/hydra/docs/debugging https://www.ory.sh/hydra/docs/debug 302!
