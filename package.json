@@ -83,7 +83,7 @@
     "build": "cross-env NODE_ENV=production LOG_LEVEL=debug npm-run-all tcm build:clean build:site build:docs",
     "build:clean": "rm -Rf public/* .cache/* || exit 0",
     "build:site": "cross-env APP_ENV=browser gatsby build --no-color",
-    "build:docs": "node --stack-size 4000 build.js",
+    "build:docs": "node --stack-size=4000 build.js",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.{js,jsx,ts,tsx,md,css}",
     "start": "npm run develop",
