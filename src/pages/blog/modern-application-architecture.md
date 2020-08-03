@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 path: '/modern-application-architecture/'
 title: 'Ory and Modern Application Architecture'
 metaTitle: 'On building modern application architecture'
