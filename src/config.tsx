@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     id: 'hydra',
     title: `${brandPrefix}Hydra`,
-    descriptiveTitle:'OAuth 2.0 and  OpenID Connect',
+    descriptiveTitle:'OAuth 2.0 and OpenID Connect',
     description: 'OAuth 2.0 and OpenID Certified® OpenID Connect server. Secure access to your applications and APIs.',
     path: '/hydra',
     links: {

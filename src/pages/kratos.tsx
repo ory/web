@@ -83,7 +83,7 @@ const KratosPage = () => (
     />
 
     <CompressedHero
-      title="Cloud Native Identity and  User Management System"
+      title="Cloud Native Identity and User Management System"
       subtitle="Use configurable authentication mechanisms and master user management in the cloud."
       cta={[
         {
