@@ -2,21 +2,21 @@
 published: true
 path: '/modern-application-architecture/'
 title: 'Ory and Modern Application Architecture'
-metaTitle: 'On building modern application architecture'
+metaTitle: 'Modern application architecture at ORY'
 publishedAt: '2020-09-03'
 author: 'Lee Atchison'
 
 subtitle: >
-   Learn more about modern application architecture 
+   From monoliths to service-based architectures 
 
 overline: >
-  Modern application architecture
+   Modern application architecture
 
 teaser: >
-  Learn more about modern application architecture and how ORY builds it cloud service.
+   A short introduction into modern application architecture
 
 metaDescription: >
-  Learn how ORY builds modern application architecture
+  How ORY builds modern application architecture
 
 category: Article
 ---
@@ -43,12 +43,12 @@ Modern applications use modern principles that reduce the brittleness of complex
 
 ## Application architecture at ORY
 
-Today, I’m working with the team at Ory to help them architect the next generation identity service. 
+Today, I’m working with the team at ORY to help them architect the next generation identity service. 
 
-The Ory team understands these principles, which is why Ory cloud is being designed from the ground up as a modern, service-based architecture. 
-As they build Ory cloud, they are utilizing modern development techniques, and modern development and operation processes and procedures.
+The ORY team understands these principles, which is why the ORY cloud product is being designed from the ground up as a modern, service-based architecture. 
+As they build ORY cloud, they are utilizing modern development techniques, and modern development and operation processes and procedures.
 
-This allows them to build a highly scalable, highly available, identity management service for use by all their customers.
+This allows them to build a highly scalable, highly available, identity management service for everyone.
 
 ## Continue reading
 
