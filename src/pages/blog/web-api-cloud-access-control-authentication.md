@@ -1,8 +1,10 @@
 ---
 published: true
 path: '/web-api-cloud-access-control-authentication/'
-title: 'Approaching Access Control on the Web'
-metaTitle: 'Approaching Access Control on the Web: Authentication Overview'
+title: >
+  Approaching Access Control on the Web
+metaTitle: >
+  Approaching Access Control on the Web: Authentication Overview
 metaDescription: >
   Learn how to build future-proof, state of the art login, access control and
   API security systems in this multipart series.

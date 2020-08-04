@@ -20,7 +20,7 @@ type Edge = {
 const BlogSummarySection = () => {
   const data = useStaticQuery(graphql`
 query {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/blog/"}, frontmatter: {published: {eq: true}, title: { regex: "/^.{0,55}$/" }}}, sort: {fields: [frontmatter___publishedAt], order: DESC}, limit: 3) {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/blog/"}, frontmatter: {published: {eq: true}}}, sort: {fields: [frontmatter___publishedAt], order: DESC}, limit: 3) {
     edges {
       node {
         id

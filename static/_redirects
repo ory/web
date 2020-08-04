@@ -82,32 +82,28 @@ https://www.ory.sh/docs/ecosystem/usage https://www.ory.sh/docs/ecosystem/api-de
 
 # April 2020 split docs repository change
 
-https://www.ory.sh/keto/docs/sdk/ https://www.ory.sh/keto/docs/sdk/index 302!
-https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines/index 302!
+https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines 302!
 https://www.ory.sh/docs/keto/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
 https://www.ory.sh/keto/docs/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
 https://www.ory.sh/docs/keto/configuration https://www.ory.sh/keto/docs/reference/configuration 302!
 https://www.ory.sh/docs/keto/* https://www.ory.sh/keto/docs/:splat 302!
 https://www.ory.sh/docs/next/keto/* https://www.ory.sh/keto/docs/:splat 302!
 
-https://www.ory.sh/kratos/docs/sdk/ https://www.ory.sh/kratos/docs/sdk/index/ 302!
-https://www.ory.sh/kratos/docs/concepts/ https://www.ory.sh/kratos/docs/concepts/index 302!
-https://www.ory.sh/kratos/docs/self-service/strategies/ https://www.ory.sh/kratos/docs/self-service/strategies/index 302!
-https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/docs/self-service/flows/index 302!
+https://www.ory.sh/kratos/docs/concepts/ https://www.ory.sh/kratos/docs/concepts 302!
+https://www.ory.sh/kratos/docs/self-service/strategies/ https://www.ory.sh/kratos/docs/self-service/strategies 302!
+https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/docs/self-service/flows 302!
 https://www.ory.sh/docs/kratos/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/kratos/docs/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/docs/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
 https://www.ory.sh/docs/next/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
 
-https://www.ory.sh/oathkeeper/docs/sdk/ https://www.ory.sh/oathkeeper/docs/sdk/index 302!
-https://www.ory.sh/oathkeeper/docs/pipeline/ https://www.ory.sh/oathkeeper/docs/pipeline/index 302!
+https://www.ory.sh/oathkeeper/docs/pipeline/ https://www.ory.sh/oathkeeper/docs/pipeline 302!
 https://www.ory.sh/docs/oathkeeper/sdk/api https://www.ory.sh/oathkeeper/docs/reference/api 302!
 https://www.ory.sh/oathkeeper/docs/sdk/api https://www.ory.sh/oathkeeper/docs/reference/api 302!
 https://www.ory.sh/docs/oathkeeper/configuration https://www.ory.sh/oathkeeper/docs/reference/configuration 302!
 https://www.ory.sh/docs/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
 https://www.ory.sh/docs/next/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
 
-https://www.ory.sh/hydra/docs/sdk/ https://www.ory.sh/hydra/docs/sdk/index 302!
 https://www.ory.sh/docs/performance/hydra https://www.ory.sh/hydra/docs/benchmark 302!
 https://www.ory.sh/docs/performance/ https://www.ory.sh/hydra/docs/benchmark 302!
 https://www.ory.sh/docs/hydra/sdk/api https://www.ory.sh/hydra/docs/reference/api 302!
@@ -132,7 +128,7 @@ https://www.ory.sh/kratos/docs/self-service/strategies/openid-connect-social-sig
 
 https://www.ory.sh/kratos/docs/self-service/strategies/user-settings-profile https://www.ory.sh/kratos/docs/self-service/flows/user-settings/user-profile-management 302!
 https://www.ory.sh/kratos/docs/self-service/flows/index https://www.ory.sh/kratos/docs/self-service 302!
-https://www.ory.sh/kratos/docs/self-service/index https://www.ory.sh/kratos/docs/self-service/index 302!
+https://www.ory.sh/kratos/docs/self-service/index https://www.ory.sh/kratos/docs/self-service 302!
 
 https://www.ory.sh/kratos/docs/next/self-service/flows/user-settings-profile-management https://www.ory.sh/kratos/docs/next/self-service/flows/user-settings 302!
 
@@ -141,7 +137,7 @@ https://www.ory.sh/kratos/docs/next/self-service/strategies/openid-connect-socia
 
 https://www.ory.sh/kratos/docs/next/self-service/strategies/user-settings-profile https://www.ory.sh/kratos/docs/next/self-service/flows/user-settings/user-profile-management 302!
 https://www.ory.sh/kratos/docs/next/self-service/flows/index https://www.ory.sh/kratos/docs/next/self-service 302!
-https://www.ory.sh/kratos/docs/next/self-service/index https://www.ory.sh/kratos/docs/next/self-service/index 302!
+https://www.ory.sh/kratos/docs/next/self-service/index https://www.ory.sh/kratos/docs/next/self-service 302!
 
 # END: 2020 Kratos docs refactoring
 
@@ -150,6 +146,7 @@ https://www.ory.sh/contact https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR4
 # 2020-07 Kratos docs refactoring
 
 https://www.ory.sh/kratos/docs/concepts/selfservice-flow-completion https://www.ory.sh/kratos/docs/concepts/browser-redirect-flow-completion 302!
+https://www.ory.sh/kratos/docs/fallback/verify https://www.ory.sh/kratos/docs/fallback/verification 302!
 
 # 2020-07 Hydra docs refactoring
 

@@ -172,7 +172,7 @@ module.exports = {
             {
               // Cache docs pages
               urlPattern: /^.+\/docs\/([a-zA-Z0-9\-_\/]+)(\/||\.html|\.htm)/,
-              handler: `StaleWhileRevalidate`,
+              handler: `NetworkFirst`,
             },
           ]
         },

@@ -17,7 +17,7 @@ const projects = {
 interface PropTypes {
   left?: ReactNode
   light?: boolean
-  preselect: keyof typeof projects
+  preselect?: keyof typeof projects
 }
 
 class Newsletter extends Component<PropTypes, StateTypes> {
