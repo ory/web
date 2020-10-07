@@ -25,7 +25,7 @@ Serverless computing is a hot topic these days, and so is vendor lock in.
 Knative [https://knative.dev/] looks like something that addresses both points: You can have the cake and eat it too. For sure, there is always some downsides and that should be discussed elsewhere.
 For now, let's simply assume you're interested in ORY's cloud native software applications for security and identity management. And you want to run it on Knative. In order to examine that it's best to have Knative running on your computer.
 
-# Prerequisites
+## Prerequisites
 Kubernetes and Minikube are high performance resource intensive applications. As a minimum requirement, we suggest 16GB of RAM.
 This example was developed on UbuntuLinux/minikube/kvm2 and it should definitely work with [other setups](https://www.youtube.com/watch?v=q6kyHDleioA&t=202s).
 
@@ -44,7 +44,7 @@ mkdir -p .bin
 HELM_INSTALL_DIR=./.bin bash <(curl -s https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3) --no-sudo --version v3.1.2
 ```
 
-# minikube
+## minikube
 Minikube is where it starts. We'll need at least 8GB of RAM for this.
 
 *`make minikube-init`*
@@ -73,7 +73,7 @@ minikube -p ory-knative dashboard & # tidy this up is to to user
 minikube -p ory-knative tunnel
 ```
 
-# Istio and Knative
+## Istio and Knative
 We'll install Istio [https://https:/istio.io/] version 1.3.6. That is the one recommended in the [knative-installation-documentation](https://knative.dev/v0.12-docs/install/installing-istio/). This takes about 30 seconds.
 `make istio-init`
 ```
@@ -136,7 +136,7 @@ kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[
 knative-serving  -o json | jq '.items[].metadata.name' | wc -l )" != 0 ]]
 ```
 
-# Deploy an Go-container example and the ORY Oathkeeper demo
+## Deploy an Go-container example and the ORY Oathkeeper demo
 The Knative documentation has a very [simplistic hello world example](https://knative.dev/docs/serving/getting-started-knative-app/), which we'll use here as a kind of probe to test the funtionality. It's a very simple go-container running a webserver returning "Hello Go Sample v1!".
 
 
@@ -185,7 +185,7 @@ The ksvc-yaml script needs to be handcrafted, though. While its creation was qui
 So applying that yaml-file should make the service available and you can test it via [http://demo-oathkeeper.demo.example.com/authenticator/anonymous/authorizer/allow/mutator/id_token](http://demo-oathkeeper.demo.example.com/authenticator/anonymous/authorizer/allow/mutator/id_token).
 That's not very usefull, but we have to continue as we're only doing a very shallow example here on Knative and Ory software.
 
-# Working on ORY Kratos
+## Working on ORY Kratos
 The goal of this part was to make as much workable as possible from the  [ORY Kratos quickstart tutorial](https://www.ory.sh/kratos/docs/quickstart/). We won't get that far, but more about that later.
 But first another prerequisite: Running ORY Kratos requires an open source relational database system such as Postgres or something equivalent. Without fullfilling that, kratos-bootup will quickly fail. 
 
