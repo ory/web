@@ -117,10 +117,19 @@ several guiding principles:
 Before we head into it, you need to make sure that there are no conflicts with
 existing docker containers or other open ports. Please make sure that ports
 `9000, 9001, 9010, 9020` are open.
-
+For Linux
 ```shell
-$ sudo netstat -tuplen | grep '9000\|9001\|9010\|9020'
-# On windows, use the following command:
+$ sudo ss -atuln | grep '9000\|9001\|9010\|9020'
+```
+For Apple MacOS (BASH)
+ 
+```shell
+$ sudo netstat -atuln | grep '9000\|9001\|9010\|9020'
+```
+Note 'netstat' on the MAC does not support all options used in Lunix and Windows. The 'lsof' command augments some of the missing functionality.
+
+For Microsoft Windows 10, use the following command:
+```shell
 # netstat -an | findstr /r "9000 9001 9010 9020"
 ```
 
