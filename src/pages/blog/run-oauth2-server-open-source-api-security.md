@@ -243,11 +243,12 @@ management, user login ,...)).
 In this example, ORY Hydra runs HTTP instead of
 HTTPS. This simplifies the application. In a production scenario, HTTPS and more secure values would be used.
 
-You may have noticed that there are two exposed ports, 9000 and 9001. The former
-(9000) serves API requests coming from the public internet (e.g. `/oauth2/auth`,
-`/oauth2/token`) while the latter (9001) serves administrative API requests
-which should not be available to the public internet, unless you intentionally
-decide to expose them.
+You may have noticed that there are two exposed ports: 9000 and 9001. The former
+(9000) serves API requests coming from the public internet e.g.: 
+`/oauth2/auth`
+`/oauth2/token` 
+while the latter (9001) serves administrative API requests
+that should not be available, without admin intention, to the public internet.
 
 ```shell
 $ docker run -d \
@@ -279,8 +280,7 @@ time="2017-06-29T21:26:34Z" level=info msg="Setting up http server on :4444"
 
 ### Get help
 
-ORY Hydra can be managed using the Hydra Command Line Interface (CLI), which is
-using ORY Hydra's REST APIs. To see the available commands, run the `help`
+The Hydra Command Line Interface (CLI) manages the ORY Hydra REST APIs. To see the available commands, run the `help`
 command.
 
 ```shell
@@ -305,13 +305,13 @@ $ docker run --rm -it \
     --response-types token,code
 ```
 
-Great! Our infrastructure is all set up! Next it's time to perform the OAuth2
-Client Credentials Flow. For that to work you have to createn an OAuth2 Client
-that is able to perform this flow. For that purpose, you can use the ORY Hydra
+Now that the infrastructure is all set up, it's time to perform the OAuth2
+Client Credentials Flow. In this case the CLI will be used to Fcreate an OAuth2 Client that is able to perform this flow. 
+
 CLI.
 
 We are passing several flags to the command, for example
-`--grant-types client_credentials` which allows the client to perform the OAuth
+`--grant-types client_credentials` that allow the client to perform the OAuth
 2.0 Client Credentials grant.
 
 ### Issue an OAuth2 Access Token
@@ -328,11 +328,11 @@ $ docker run --rm -it \
 ZcE0YWqnxemENLyJrjjlAHlFkdwaHB6TzkSi0c289HI.GQmXJsAYcw5de97S6mqOL0yB2UyFEf4DiXEM05vdfdY
 ```
 
-The ORY Hydra CLI offers a method (`hydra token client`) which performs the
-OAuth2 Client Credentials flow. Let's use the newly created client to perform
+The ORY Hydra CLI offers a method (`hydra token client`) that performs the
+OAuth2 Client Credentials flow. The newly created client can be used to perform
 this flow!
 
-The result will be an OAuth2 access token which we will validate in the next
+The result will be an OAuth2 access token that we will validate in the next
 step.
 
 ### Validate the OAuth2 Access Token
@@ -360,7 +360,7 @@ $ docker run --rm -it \
 
 Using `hydra token introspect` it is possible to validate an access token, and
 receive it's payload. ORY Hydra uses opaque tokens to greatly reduce attack
-vectors. You can set arbitrary data in the token, if you want. For more
+vectors. You can set arbitrary data in the token. For more
 information on this head over to the
 [developer guide](https://www.ory.sh/docs/guides/master/hydra/).
 
@@ -488,7 +488,7 @@ you could probably sign up for a new account or use a social login provider
 ![Consent App showing the login screen](../../images/articles/oauth2/consent-2.png)
 
 The consent screen is the second important screen shown by the User Login &
-Consent app. It asks the end user which permissions to authorize. If a user has
+Consent app. It asks the end user for permission to authorize. If a user has
 privacy concerns, he/she could not grant access to personal details. Since our
 example only requests very basic permissions, you should grant them all.
 
