@@ -236,13 +236,12 @@ Besides setting the system secret (`SECRETS_SYSTEM` ), the database URL (`DSN`
 `URLS_LOGIN`) and the user consent endpoint (`URLS_CONSENT`) are passed using
 environment variables.
 
-Both **user login and consent URLs** point to one or two web service(s) which
-will be explained and set up in the next sections. For now, you can think of it
-as connecting ORY Hydra to your identity management (user registration, profile
+Both **user login and consent URLs** point to one or two web service(s) that
+will be explained and set up in the next sections. For now, it connects ORY Hydra to an identity management (user registration, profile
 management, user login ,...)).
 
-For the sake of simplicity, we will force ORY Hydra to run HTTP instead of
-HTTPS. Also, please, use more secure values in production.
+In this example, ORY Hydra runs HTTP instead of
+HTTPS. This simplifies the application. In a production scenario, HTTPS and more secure values would be used.
 
 You may have noticed that there are two exposed ports, 9000 and 9001. The former
 (9000) serves API requests coming from the public internet (e.g. `/oauth2/auth`,
