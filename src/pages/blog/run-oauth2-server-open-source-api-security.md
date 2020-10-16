@@ -126,7 +126,7 @@ For Apple MacOS (BASH)
 ```shell
 $ sudo netstat -atuln | grep '9000\|9001\|9010\|9020'
 ```
-Note 'netstat' on the MAC does not support all options used in Lunix and Windows. The 'lsof' command augments some of the missing functionality.
+Note 'netstat' on the MAC does not support all options used in Lunix and Windows. The 'lsof' command ($ man -k lsof) augments some of netstat missing functionality.
 
 For Microsoft Windows 10, use the following command:
 ```shell
@@ -140,14 +140,18 @@ container.
 
 ```shell
 $ docker ps | grep 'hydra'
-# On windows, use the following command:
+$ docker kill hydra
+$ docker kill --signal=HUP hydra
+```
+For Microsoft Windows use
+```shell
 # docker ps | findstr "hydra"
 ```
 
 ## Create a Docker Network
 
-Before we can start, a network must be created which we will attach all our
-Docker containers to. That way, the containers can talk to one another.
+Initially, a network must be created that attaches  all 
+Docker containers so the containers can talk to one another.
 
 ```shell
 $ docker network create hydraguide
@@ -158,7 +162,7 @@ $ docker network create hydraguide
 This docker command starts postgres container `ory-hydra-example--postgres` and
 sets up a database called `hydra` with user `hydra` and password `secret`.
 
-By the way, some code listings use `\` at the end of the line. Shells like bash
+Note: Some code listings use `\` at the end of the line. Shells like bash
 concatenate these to one line.
 
 ```shell
@@ -170,16 +174,15 @@ $ docker run --network hydraguide \
   -d postgres:9.6
 ```
 
-By the way, don't deploy databases using docker in production. It will make your
-life miserable. Use a managed solution like Amazon RDS or Google Cloud SQL. Even
-small instances will be able to serve a lot of traffic, check out some of the
+By the way, do not deploy databases using docker in production. It will make your life miserable. Use a managed solution like Amazon RDS (https://aws.amazon.com/rds/) or Google Cloud SQL (https://cloud.google.com/sql). Even
+small instances will be able to serve large traffic numbers, check out some of the
 [benchmarks](https://www.ory.sh/docs/guides/master/performance/1-hydra).
 
 ## Configure the ORY Hydra OAuth2 and OpenID Connect Provider
 
 The **system secret** is used to **encrypt data at rest**, and to **sign tokens
-and authorize codes**. Once a database is initialized with a system secret, you
-always need to use that secret to access the database.
+and authorize codes**. Once a database is initialized with a system secret, 
+that secret must be used to access the database.
 
 ```shell
 ## Linux / macOS ##
@@ -188,7 +191,10 @@ always need to use that secret to access the database.
 # secret is used to encrypt the database and needs to be set to the same value every time the process (re-)starts.
 # You can use /dev/urandom to generate a secret. But make sure that the secret must be the same anytime you define it.
 # You could, for example, store the value somewhere.
+
 $ export SECRETS_SYSTEM=$(export LC_CTYPE=C; cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+# or in a file, for example
+$ 
 
 ## Other systems ##
 #
@@ -200,8 +206,7 @@ $ export SECRETS_SYSTEM=$(export LC_CTYPE=C; cat /dev/urandom | tr -dc 'a-zA-Z0-
 
 ### Define the Data Source Name (DSN)
 
-The database url must point to the postgres container we created above. The
-database will be used to persist and query data. **ORY Hydra prevents data
+The database url must point to the Postgres container that was created above. The database will be used to persist and query data. **ORY Hydra prevents data
 leaks** as only token signatures are stored in the database. For a valid token,
 both payload and signature are required.
 
@@ -211,9 +216,8 @@ $ export DSN=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslm
 
 ### Run SQL Migrations
 
-Next, the database needs to be initialized. This can be achieved with
-`hydra migrate sql`. Here we pull the latest docker image for ORY Hydra and run
-a container that executes the migrate command.
+Next, the following `hydra migrate sql` command initialises the database. It pulls the latest Docker Image for ORY Hydra and runs
+a container that executes the `hydra migrate sql` command.
 
 ```shell
 $ docker run -it --rm \
@@ -222,17 +226,17 @@ $ docker run -it --rm \
   migrate sql --yes $DSN
 ```
 
-To prevent bad things from happening, SQL migrations are never run without you
-explicitly telling them to. This is the case for new and existing databases.
+For safety's sake, SQL migrations do not run without explicit instructions
+This is the case for new and existing databases.
 
 ## Run the ORY Hydra OAuth2 and OpenID Connect Provider
 
-Besides setting the system secret (`SECRETS_SYSTEM` ), the database url (`DSN`
-), the public url (`URLS_SELF_ISSUER`) of the server, the user login endpoint (
+Besides setting the system secret (`SECRETS_SYSTEM` ), the database URL (`DSN`
+), the public URL (`URLS_SELF_ISSUER`) of the server, the user login endpoint (
 `URLS_LOGIN`) and the user consent endpoint (`URLS_CONSENT`) are passed using
 environment variables.
 
-Both **user login and consent urls** point to one or two web service(s) which
+Both **user login and consent URLs** point to one or two web service(s) which
 will be explained and set up in the next sections. For now, you can think of it
 as connecting ORY Hydra to your identity management (user registration, profile
 management, user login ,...)).
