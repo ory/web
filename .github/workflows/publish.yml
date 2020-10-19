@@ -28,6 +28,7 @@ jobs:
       - run: npm run build
 
       - name: Publish draft
+        id: deploy-neflify
         uses: netlify/actions/cli@master
         with:
           args: deploy --dir=./public
