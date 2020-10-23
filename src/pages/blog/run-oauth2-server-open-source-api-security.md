@@ -174,7 +174,7 @@ $ docker run --network hydraguide \
   -d postgres:9.6
 ```
 
-By the way, do not deploy databases using docker in production. It will make your life miserable. Use a managed solution like Amazon RDS (https://aws.amazon.com/rds/) or Google Cloud SQL (https://cloud.google.com/sql). Even
+By the way, we do not recommend to deploy databases using docker in production. It will make your life miserable. Use a managed solution like Amazon RDS (https://aws.amazon.com/rds/) or Google Cloud SQL (https://cloud.google.com/sql). Even
 small instances will be able to serve large traffic numbers, check out some of the
 [benchmarks](https://www.ory.sh/docs/guides/master/performance/1-hydra).
 
@@ -193,12 +193,10 @@ that secret must be used to access the database.
 # You could, for example, store the value somewhere.
 
 $ export SECRETS_SYSTEM=$(export LC_CTYPE=C; cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-# or in a file, for example
-$ 
 
 ## Other systems ##
 #
-# While systems like Windows support creating random secrets, we will just use a fixed one.
+# While systems like Windows support creating random secrets, we will just use a fixed one for this example.
 # Keep in mind that this assumes that you're running some type of linux-ish shell:
 #
 # $ export SECRETS_SYSTEM=this_needs_to_be_the_same_always_and_also_very_$3cuR3-._
@@ -206,9 +204,7 @@ $
 
 ### Define the Data Source Name (DSN)
 
-The database url must point to the Postgres container that was created above. The database will be used to persist and query data. **ORY Hydra prevents data
-leaks** as only token signatures are stored in the database. For a valid token,
-both payload and signature are required.
+The database URL must point to the Postgres container that was created above. The database will be used to persist and query data. **ORY Hydra prevents data leaks** as only token signatures are stored in the database. For a valid token, both payload and signature are required.
 
 ```shell
 $ export DSN=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
@@ -222,7 +218,7 @@ a container that executes the `hydra migrate sql` command.
 ```shell
 $ docker run -it --rm \
   --network hydraguide \
-  oryd/hydra:v1.4.2 \
+  oryd/hydra:v1.9.0 \
   migrate sql --yes $DSN
 ```
 
