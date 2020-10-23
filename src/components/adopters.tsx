@@ -74,7 +74,7 @@ const adopters = [
   {
     title: 'Data Detect',
     image: datadetect,
-    url: 'http://datadetect.com/',
+    url: 'https://unifiedglobalarchiving.com/data-detect/',
   }
 ]
 
