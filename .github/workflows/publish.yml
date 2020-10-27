@@ -23,19 +23,45 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: v12.x
+          node-version: v14.14
       - run: npm ci
       - run: npm run build
 
-      - name: Deploy draft to Netlify
-        uses: South-Paw/action-netlify-deploy@v1.0.4
+      - name: Publish draft
+        id: deploy-neflify
+        run: |
+          OUTPUT=$(sh -c "npm run deploy:draft")
+          NETLIFY_OUTPUT=$(echo "$OUTPUT")
+          NETLIFY_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)[a-zA-Z0-9./?=_-]*') #Unique key: --
+          NETLIFY_LOGS_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://app.netlify.com/[a-zA-Z0-9./?=_-]*') #Unique key: app.netlify.com
+          NETLIFY_LIVE_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*' | grep -Eov "netlify.com") #Unique key: don't containr -- and app.netlify.com
+
+          echo "::set-output name=NETLIFY_OUTPUT::$NETLIFY_OUTPUT"
+          echo "::set-output name=NETLIFY_URL::$NETLIFY_URL"
+          echo "::set-output name=NETLIFY_LOGS_URL::$NETLIFY_LOGS_URL"
+          echo "::set-output name=NETLIFY_LIVE_URL::$NETLIFY_LIVE_URL"
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      - name: Netlify Preview URL
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT: "This pull request is being automatically deployed to Netlify.\n\n🔍 Inspect: ${{ steps.deploy-neflify.outputs.NETLIFY_LOGS_URL }}\n✅ Preview: ${{ steps.deploy-neflify.outputs.NETLIFY_URL }}"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-          build-dir: './public'
-          draft: true
-          comment-on-pull-request: true
+          msg: ${{ env.OUTPUT }}
+          check_for_duplicate_msg: false
+
+#      - name: Deploy draft to Netlify
+#        uses: South-Paw/action-netlify-deploy@v1.0.4
+#        with:
+#          github-token: ${{ secrets.GITHUB_TOKEN }}
+#          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+#          build-dir: './public'
+#          draft: true
+#          comment-on-pull-request: true
 
   # This job will:
   #   * deploy a production build every time there is a push on the master branch
@@ -51,14 +77,12 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: v14.4
+          node-version: v14.14
       - run: npm ci
       - run: npm run build
 
       - name: Publish
-        uses: netlify/actions/cli@master
-        with:
-          args: deploy --prod --dir=./public
+        run: npm run deploy
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
