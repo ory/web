@@ -1,5 +1,5 @@
 .team {
-  background-color: var(--colors-themed-light);
+  background-color: var(--colors-base-light);
   padding: 112px 0;
 
   & h3,

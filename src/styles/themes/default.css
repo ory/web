@@ -5,15 +5,15 @@
   --colors-base-dark: #19191D;
   --colors-base-grey: #5A5B6A;
   --colors-base-text: #99999E;
-  --colors-base-light: #F0F0F1;
+  --colors-base-light: #FAFAFA;
   --colors-base-white: #ffffff;
 
-  --colors-themed-default: #6274F3;
-  --colors-themed-weak: #C8CEFA;
+  --colors-themed-default: #5528FF;
+  --colors-themed-weak: #8E70FF;
   --colors-themed-light: #fafaff;
 
-  --colors-green-default: #43A047;
-  --colors-green-weak: #8BDC8E;
+  --colors-green-default: #4CAF50;
+  --colors-green-weak: #7BC67E;
   --colors-green-light: #EDF6EE;
 
   --colors-yellow-default: #FFB41F;
@@ -21,23 +21,23 @@
   --colors-yellow-light: #FFF8EA;
 
   --colors-red-default: #F44336;
-  --colors-red-weak: #F99C95;
+  --colors-red-weak: #F88078;
   --colors-red-light: #FEEDEC;
 
-  --colors-kratos-default: #FB8200;
-  --colors-kratos-weak: #FFB86C;
+  --colors-kratos-default: #FF9800;
+  --colors-kratos-weak: #FFB547;
   --colors-kratos-light: #fff9f2;
 
-  --colors-hydra-default: #DB2B56;
-  --colors-hydra-weak: #FFBDCD;
+  --colors-hydra-default: #FF6A85;
+  --colors-hydra-weak: #FFB3C0;
   --colors-hydra-light: #fffafb;
 
-  --colors-oathkeeper-default: #2979FF;
-  --colors-oathkeeper-weak: #B3CFFF;
+  --colors-oathkeeper-default: #BD2FEF;
+  --colors-oathkeeper-weak: #E3A5F8;
   --colors-oathkeeper-light: #f7faff;
 
-  --colors-keto-default: #00A571;
-  --colors-keto-weak: #6BE2BD;
+  --colors-keto-default: #1DE9B6;
+  --colors-keto-weak: #5CEFCA;
   --colors-keto-light: #f5fffb;
 }
 

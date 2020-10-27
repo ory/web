@@ -1,7 +1,7 @@
 @import '../styles/properties.css';
 
 .blog-summary {
-  background: linear-gradient(to bottom, var(--colors-themed-default) 96px, var(--colors-themed-light) 96px);
+  background: linear-gradient(to bottom, var(--colors-themed-default) 96px, var(--colors-base-light) 96px);
 
   & h4 {
     height: auto;
