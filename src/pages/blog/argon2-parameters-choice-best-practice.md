@@ -106,3 +106,10 @@ An exemplary output could be:
   "key_length": 32    # in bytes
 }
 ```
+
+## References
+
+- [Argon2 IEFT draft, section on parameter choice](https://tools.ietf.org/html/draft-irtf-cfrg-argon2-11#section-4)
+- [Argon2 Specification Paper](https://password-hashing.net/argon2-specs.pdf)
+- [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+- [Calibration CLI Implementation in C# by @bburman](https://github.com/bburman/Twelve21.PasswordStorage)
