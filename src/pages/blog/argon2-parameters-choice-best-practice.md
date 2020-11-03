@@ -8,7 +8,7 @@ metaDescription: >
   How to configure the cryptographic hashing function Argon2 following best practices
 
 metaTitle: >
-  Choose Argon2 parameters following best practices
+  Set-up Argon2 for secure password hashing
 
 publishedAt: '2020-11-02'
 author: 'Patrik Neu'
