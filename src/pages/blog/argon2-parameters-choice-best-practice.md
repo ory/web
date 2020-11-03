@@ -31,7 +31,7 @@ To securely manage credentials, one has to only store a cryptographic hash of
 the credential. Whenever the credential has to be checked, the hash of the
 provided credential is computed and compared to the stored hash. This ensures
 that no one is able to retrieve the credentials, even with full access to the
-services storage.
+services' storage.
 
 Argon2 is a cryptographic hash algorithm specifically designed to secure
 passwords. It is
