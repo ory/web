@@ -40,7 +40,7 @@ in the Argon2id variant as a modern, secure and flexible algorithm. This
 flexibility means that one has to choose some parameters and is probably the
 reason why you are reading this article.
 
-## Meet the Argon2 Parameters
+## Meet the Argon2 cryptographic hashing Parameters
 
 So let me introduce you to the parameters and explain their impact on the
 hashing operation. This section is based on the
