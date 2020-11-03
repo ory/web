@@ -5,7 +5,8 @@ title: >
   Set-up Argon2 for secure password hashing 
 
 metaDescription: >
-  How to configure the cryptographic hashing function Argon2 following best practices
+  How to configure the cryptographic hashing function Argon2 following best
+  practices
 
 metaTitle: >
   Set-up Argon2 for secure password hashing
@@ -20,9 +21,9 @@ subtitle: >
   How to configure Argon2's cryptographic hashing algorithm
 
 teaser:
-  This article sums up all the security best practices around Argon2's secure password hashing algorithm, specifically in regards to parameter
-  choice. It also presents a CLI tool to automatically calibrate the best
-  values.
+  This article sums up all the security best practices around Argon2's secure
+  password hashing algorithm, specifically in regards to parameter choice. It
+  also presents a CLI tool to automatically calibrate the best values.
 ---
 
 ## What is Argon2?
@@ -46,8 +47,8 @@ So let me introduce you to the parameters and explain their impact on the
 hashing operation. This section is based on the
 [Argon2 specification paper](https://password-hashing.net/argon2-specs.pdf).
 
-1. Memory: The memory used by the algorithm. To make hash cracking more expensive
-   for an attacker, you want to make this value as high as possible.
+1. Memory: The memory used by the algorithm. To make hash cracking more
+   expensive for an attacker, you want to make this value as high as possible.
 2. Iterations: The number of iterations over the memory. The execution time is
    linearly dependent on this parameter. It allows you to increase the
    computational cost required to calculate one hash.
