@@ -21,9 +21,9 @@ subtitle: >
   How to configure Argon2's cryptographic hashing algorithm
 
 teaser:
-  This article sums up all the security best practices around Argon2's secure
-  password hashing algorithm, specifically in regards to parameter choice. It
-  also presents a CLI tool to automatically calibrate the best values.
+  This article sums up all the security best practices around Argon2 parameter
+  choice. It also presents a CLI tool to automatically calibrate the best
+  values.
 ---
 
 ## What is Argon2?
