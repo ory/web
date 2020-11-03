@@ -226,7 +226,7 @@ a container that executes the `hydra migrate sql` command.
 ```shell
 $ docker run -it --rm \
   --network hydraguide \
-  oryd/hydra:v1.4.2 \
+  oryd/hydra:v1.8.5 \
   migrate sql --yes $DSN
 ```
 
@@ -241,18 +241,18 @@ Besides setting the system secret (`SECRETS_SYSTEM` ), the database URL (`DSN`
 environment variables.
 
 Both **user login and consent URLs** point to one or two web service(s) that
-will be explained and set up in the next sections. For now, it connects ORY Hydra to an identity management (user registration, profile
-management, user login ,...)).
+will be explained and set up in the next sections. For now, it connects ORY Hydra to an identity management system that handles user registration, profile
+management, and user login.
 
 In this example, ORY Hydra runs HTTP instead of
 HTTPS. This simplifies the application. In a production scenario, HTTPS and more secure values would be used.
 
-In this example there are two exposed ports: 9000 and 9001. The former
+There are two exposed ports in this case: 9000 and 9001. The former
 (9000) serves API requests coming from the public internet e.g.: 
 `/oauth2/auth`
 `/oauth2/token` 
 while the latter (9001) serves administrative API requests
-that should not be available, without admin intention, to the public internet.
+that should not be available, without administrator intention, to the public internet.
 
 ```shell
 $ docker run -d \
@@ -265,14 +265,16 @@ $ docker run -d \
   -e URLS_SELF_ISSUER=http://127.0.0.1:9000/ \
   -e URLS_CONSENT=http://127.0.0.1:9020/consent \
   -e URLS_LOGIN=http://127.0.0.1:9020/login \
-  oryd/hydra:v1.4.2 serve all --dangerous-force-http
+  oryd/hydra:v1.8.5 serve all --dangerous-force-http
 ```
 
 ### Is it alive?
 
 This is easy to answer, just check the docker logs! Or,
 [open the health check](http://127.0.0.1:9001/health/ready) , which should show
-you ok.
+the following in the browser page:
+
+{"status":"ok"}
 
 ```shell
 $ docker logs ory-hydra-example--hydra
@@ -289,8 +291,31 @@ command.
 
 ```shell
 $ docker run --rm -it \
-  oryd/hydra:v1.4.2 \
+  oryd/hydra:v1.8.5 \
   help
+```
+This command produces an overview of the CLI as follows:
+```shell
+Run and manage ORY Hydra
+
+Usage:
+  hydra [command]
+
+Available Commands:
+  clients     Manage OAuth 2.0 Clients
+  help        Help about any command
+  keys        Manage JSON Web Keys
+  migrate     Various migration helpers
+  serve       Parent command for starting public and administrative HTTP/2 APIs
+  token       Issue and Manage OAuth2 tokens
+  version     Display this binary's version, build time and git hash of this build
+
+Flags:
+      --config string     Config file (default is $HOME/.hydra.yaml)
+  -h, --help              help for hydra
+      --skip-tls-verify   Foolishly accept TLS certificates signed by unkown certificate authorities
+
+Use "hydra [command] --help" for more information about a command.
 ```
 
 ## Performing the OAuth2 Client Credentials Flow
@@ -300,7 +325,7 @@ $ docker run --rm -it \
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.4.2 \
+  oryd/hydra:v1.8.5 \
   clients create \
     --endpoint http://ory-hydra-example--hydra:4445 \
     --id some-consumer \
@@ -309,10 +334,8 @@ $ docker run --rm -it \
     --response-types token,code
 ```
 
-Now that the infrastructure is all set up, it's time to perform the OAuth2
-Client Credentials Flow. In this case the CLI will be used to Fcreate an OAuth2 Client that is able to perform this flow. 
-
-CLI.
+Now the infrastructure is all set up, and it's time to perform the OAuth2
+Client Credentials Flow. In this case the CLI will be used to create an OAuth2 Client that is able to perform this flow. 
 
 The flags used here in the command 
 `--grant-types client_credentials`  allow the client to perform the OAuth
@@ -323,7 +346,7 @@ The flags used here in the command
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.4.2 \
+  oryd/hydra:v1.8.5 \
   token client \
     --client-id some-consumer \
     --client-secret some-secret \
@@ -336,7 +359,7 @@ The ORY Hydra CLI offers a method (`hydra token client`) that performs the
 OAuth2 Client Credentials flow. The newly created client can be used to perform
 this flow!
 
-The result will be an OAuth2 access token that we will validate in the next
+The result will be an OAuth2 access token that will be used to validate in the next
 step.
 
 ### Validate the OAuth2 Access Token
@@ -378,13 +401,13 @@ received.
 
 ORY Hydra is not an
 [Identity Management](https://en.wikipedia.org/wiki/Identity_management)
-solution. Instead it uses your existing Identity Management which reduces
+solution. Instead it uses an existing Identity Management systems to reduce
 adoption complexity. OAuth2 providers such as Keycloak, OpenAM, or
 IdentityServer are usually full-stack enterprise identity and access management
 solutions. They come with complex deployment dependencies, technologies not
 particularly suited for cloud native environments, and subtle, but annoying
 limitations at scale. ORY Hydra solves OAuth2 and OpenID Connect only, but it
-solves it well and extemely scalable.
+solves it well and extremely scalable.
 
 To authenticate users, ORY Hydra defines the
 [user login & consent flow](https://www.ory.sh/docs/hydra/oauth2). You can find
@@ -395,10 +418,9 @@ an
 
 ### Run the user login & consent app
 
-For the sake of simplicity, we will use the already available
+In order to make this example easier to follow, we will use the already available
 [user login and consent](https://github.com/ory/hydra-login-consent-node)
-example app. It emulates a Identity Management application (it has only one
-user) and integrates with ORY Hydra's User Login & Consent Flow.
+example app. It emulates a one user Identity Management application that integrates with ORY Hydra's User Login & Consent Flow.
 
 ```shell
 $ docker run -d \
@@ -423,7 +445,7 @@ and `offline`, and response types `token`, `code`, and `id_token`.
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.4.2 \
+  oryd/hydra:v1.8.5 \
   clients create \
     --endpoint http://ory-hydra-example--hydra:4445 \
     --id another-consumer \
@@ -493,24 +515,23 @@ you could probably sign up for a new account or use a social login provider
 
 The consent screen is the second important screen shown by the User Login &
 Consent app. It asks the end user for permission to authorize. If a user has
-privacy concerns, he/she could not grant access to personal details. Since our
-example only requests very basic permissions, you should grant them all.
+privacy concerns, he/she could not grant access to personal details. Since the
+example only requests very basic permissions, so that all can be granted without concern.
 
 ![Consent App asking the user to grant the requested scopes to the application](../../images/articles/oauth2/consent-3.png)
 
-Once logged in and authorized, ORY Hydra will issue an access, a refresh (if
-scope `offline` was granted), and an ID token (if scope `openid` was granted).
+Once logged in and authorized, ORY Hydra will issue an access, a refresh if
+scope `offline` was granted, and an ID token if scope `openid` was granted.
 
 ## Continue Learning about ORY Hydra OAuth2 and OpenID Connect Server
-
-That's it, you have a running OAuth2 server with an exemplary identity provider,
-and performed an OAuth2 request! You can use the token from the last request and
-pass it to `hydra token introspect` as we did earlier with the OAuth2 Client
-Credentials flow.
+That's it,  this article shows how to have a running OAuth2 server with an exemplary identity provider,
+and perform an OAuth2 request. Using the token from the last request and
+passing it to `hydra token introspect` as explained in earlier OAuth2 Client
+Credentials flow provides further details about the token properties.
 
 ORY Hydra is an Apache 2.0 licensed Go server solving OAuth2, OpenID Connect and
 API security in general. It secures millions of requests per day and has a
 vibrant and welcoming online community.
 
-Check out [ORY Hydra at Github](https://github.com/ory/hydra) and our other
+Check out [ORY Hydra at Github](https://github.com/ory/hydra) and the other Ory
 [API Security](https://www.ory.sh/) products.
