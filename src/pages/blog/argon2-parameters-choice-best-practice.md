@@ -2,7 +2,7 @@
 published: true
 path: '/argon2-parameter-choice-best-practice/'
 title: >
-  Choose Argon2 parameters following best practices
+  Set-up Argon2 for secure password hashing 
 
 metaDescription: >
   Learn how to choose Argon2 parameters following best practices
