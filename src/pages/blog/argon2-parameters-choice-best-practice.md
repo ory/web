@@ -5,7 +5,7 @@ title: >
   Set-up Argon2 for secure password hashing 
 
 metaDescription: >
-  Learn how to choose Argon2 parameters following best practices
+  How to configure the cryptographic hashing function Argon2 following best practices
 
 metaTitle: >
   Choose Argon2 parameters following best practices
