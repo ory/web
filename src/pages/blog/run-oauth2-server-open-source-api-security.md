@@ -49,11 +49,11 @@ Server and OpenID Connect Provider written in Go (Golang).
 ## Refresh your OAuth2 Knowledge
 
 A OAuth2 Server, sometimes also referred to as an OAuth 2.0 Server, OAuth
-Server, Authorization Server, is a piece of software that implements network
-protocol flows which allow a client (piece of software) to act on behalf of a
+Server, Authorization Server, is a software system that implements network
+protocol flows that allow a client software application to act on behalf of a
 user.
 
-In plain english: When using [CircleCI](https://circleci.com) (the OAuth2
+For example when using [CircleCI](https://circleci.com) (the OAuth2
 Client, you perform an OAuth2 Flow to grant CircleCI access to your repositories
 on GitHub (the OAuth2 Server, this would be ORY Hydra). GitHub will ask you what
 repositories you want to grant access to and if it is ok to grant other data
@@ -91,21 +91,19 @@ written in Go.
 
 Compared to other OAuth2 and OpenID Connect Providers it does not implement its
 own user database and management (for user login, user registration, password
-reset, 2fa, ...) but uses the
+reset, 2fa, ...), but uses the
 [Login and Consent Flow](https://www.ory.sh/docs/hydra/implementing-consent) to
 delegate rendering the Login UI ("Please enter your email and password") and
 Consent UI ("Should application MyDropboxDownload be allowed to access all your
 private Dropbox Documents?") to another application, typically written by you in
-your favorite programming language (Java, PHP, Go, NodeJS, ...) and UI framework
-(ReactJS, AngularJS, ...)
+your favorite programming language for example Java, PHP, Go, NodeJS, etc., and UI framework for instance ReactJS, AngularJS, etc.
 
 All
 [ORY technology follows architecture principles](https://www.ory.sh/docs/ecosystem/software-architecture-philosophy)
-that work best on Container Orchestration Systems such as Kubernetes,
+that work best on oontainer orchestration systems such as Kubernetes,
 CloudFoundry, OpenShift, and similar projects. While it is possible to run the
 ORY stack on a RaspberryPI, the integration with the Docker and Container
-ecosystem is best documented and supported. ORY's architecture is designed along
-several guiding principles:
+ecosystem is best documented and supported. ORY's architecture is designed along several guiding principles:
 
 - Minimal dependencies (no system dependencies; might need a database backend)
 - Runs everywhere (Linux, macOS, FreeBSD, Windows; AMD64, i386, ARMv5, ...)
@@ -156,6 +154,12 @@ Docker containers so the containers can talk to one another.
 ```shell
 $ docker network create hydraguide
 ```
+The result will be something like:
+```shell
+641a26284ff2f8ee4580988371b91923d6711e20aa964ebbdf5b2e4b4f2592b8
+```
+The next section explains how to set up the PostgreSQL database system.
+
 
 ## Install and Run PostgreSQL in Docker
 
@@ -174,7 +178,7 @@ $ docker run --network hydraguide \
   -d postgres:9.6
 ```
 
-By the way, we do not recommend to deploy databases using docker in production. It will make your life miserable. Use a managed solution like Amazon RDS (https://aws.amazon.com/rds/) or Google Cloud SQL (https://cloud.google.com/sql). Even
+By the way, we do not recommend deploying databases using Docker in production. It will make your life miserable. Use a managed solution like Amazon RDS (https://aws.amazon.com/rds/) or Google Cloud SQL (https://cloud.google.com/sql). Even
 small instances will be able to serve large traffic numbers, check out some of the
 [benchmarks](https://www.ory.sh/docs/guides/master/performance/1-hydra).
 
@@ -209,6 +213,10 @@ The database URL must point to the Postgres container that was created above. Th
 ```shell
 $ export DSN=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
 ```
+The result will be something like:
+```shell
+postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
+```
 
 ### Run SQL Migrations
 
@@ -218,7 +226,7 @@ a container that executes the `hydra migrate sql` command.
 ```shell
 $ docker run -it --rm \
   --network hydraguide \
-  oryd/hydra:v1.9.0 \
+  oryd/hydra:v1.4.2 \
   migrate sql --yes $DSN
 ```
 
@@ -239,7 +247,7 @@ management, user login ,...)).
 In this example, ORY Hydra runs HTTP instead of
 HTTPS. This simplifies the application. In a production scenario, HTTPS and more secure values would be used.
 
-You may have noticed that there are two exposed ports: 9000 and 9001. The former
+In this example there are two exposed ports: 9000 and 9001. The former
 (9000) serves API requests coming from the public internet e.g.: 
 `/oauth2/auth`
 `/oauth2/token` 
@@ -306,8 +314,8 @@ Client Credentials Flow. In this case the CLI will be used to Fcreate an OAuth2 
 
 CLI.
 
-We are passing several flags to the command, for example
-`--grant-types client_credentials` that allow the client to perform the OAuth
+The flags used here in the command 
+`--grant-types client_credentials`  allow the client to perform the OAuth
 2.0 Client Credentials grant.
 
 ### Issue an OAuth2 Access Token
