@@ -31,7 +31,7 @@ To securely manage credentials, one has to only store a cryptographic hash of
 the credential. Whenever the credential has to be checked, the hash of the
 provided credential is computed and compared to the stored hash. This ensures
 that no one is able to retrieve the credentials, even with full access to the
-services' storage.
+services storage.
 
 Argon2 is a cryptographic hash algorithm specifically designed to secure
 passwords. It is
@@ -46,16 +46,16 @@ So let me introduce you to the parameters and explain their impact on the
 hashing operation. This section is based on the
 [Argon2 specification paper](https://password-hashing.net/argon2-specs.pdf).
 
-1. Memory The memory used by the algorithm. To make hash cracking more expensive
+1. Memory: The memory used by the algorithm. To make hash cracking more expensive
    for an attacker, you want to make this value as high as possible.
-2. Iterations The number of iterations over the memory. The execution time is
+2. Iterations: The number of iterations over the memory. The execution time is
    linearly dependent on this parameter. It allows you to increase the
    computational cost required to calculate one hash.
-3. Parallelism The number of threads to use. This should be chosen as high as
-   possible to reduce the thread imposed by parallelized hash cracking.
-4. Salt Length The authors of Argon2 recommend this parameter to be 128 bits,
+3. Parallelism: The number of threads to use. This should be chosen as high as
+   possible to reduce the threat imposed by parallelized hash cracking.
+4. Salt Length: The authors of Argon2 recommend this parameter to be 128 bits,
    but say it can be reduced to 64 bits in the case of space constraints.
-5. Key Length This parameter depends on the intended usage. The authors say a
+5. Key Length: This parameter depends on the intended usage. The authors say a
    value of 128 bits should be sufficient for most applications. If you plan to
    use the hash as a derived key for e.g. AES, you can use this parameter to get
    a key of the required length.
