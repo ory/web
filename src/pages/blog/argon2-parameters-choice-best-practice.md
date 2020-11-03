@@ -20,7 +20,7 @@ subtitle: >
   Learn how to choose Argon2 parameters following best practices
 
 teaser:
-  This article sums up all the security best practices around Argon2 parameter
+  This article sums up all the security best practices around Argon2's secure password hashing algorithm, specifically in regards to parameter
   choice. It also presents a CLI tool to automatically calibrate the best
   values.
 ---
