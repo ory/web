@@ -18,7 +18,8 @@ overline: >
 
 category: Security
 subtitle: >
-  Learn how to choose Argon2 parameters for cryptographic password hashing following security best practices
+  Learn how to choose Argon2 parameters for cryptographic password hashing
+  following security best practices
 
 teaser:
   This article sums up all the security best practices around Argon2 parameter
@@ -43,8 +44,8 @@ reason why you are reading this article.
 
 ## Meet the Argon2 Cryptographic Hashing Parameters
 
-Let me introduce you to the parameters and explain their impact on the
-hashing operation. This section is based on the
+Let me introduce you to the parameters and explain their impact on the hashing
+operation. This section is based on the
 [Argon2 specification paper](https://password-hashing.net/argon2-specs.pdf).
 
 1. Memory: The memory used by the algorithm. To make hash cracking more
@@ -56,10 +57,10 @@ hashing operation. This section is based on the
    possible to reduce the threat imposed by parallelized hash cracking.
 4. Salt Length: The authors of Argon2 recommend this parameter to be 128 bits,
    but say it can be reduced to 64 bits in the case of space constraints.
-5. Key Length (i.e. Hash Length): This parameter depends on the intended usage. The authors say a
-   value of 128 bits should be sufficient for most applications. If you plan to
-   use the hash as a derived key for e.g. AES, you can use this parameter to get
-   a key of the required length.
+5. Key Length (i.e. Hash Length): This parameter depends on the intended usage.
+   The authors say a value of 128 bits should be sufficient for most
+   applications. If you plan to use the hash as a derived key for e.g. AES, you
+   can use this parameter to get a key of the required length.
 
 ## How to Choose the Parameter Values
 
@@ -72,11 +73,11 @@ require longer keys.
 ### Desired Execution Time
 
 Our goal is to tune the parameters so that a single hashing operation takes an
-acceptable amount of time. Here, user experience is in conflict with
-security, and even in the interest of users security should win out. For
-frontend applications the execution time should be at least 0.5s, but you should
-strive to make it 1s. Backend authentication can take a bit longer, but that
-depends on your use case. Have a look in the
+acceptable amount of time. Here, user experience is in conflict with security,
+and even in the interest of users security should win out. For frontend
+applications the execution time should be at least 0.5s, but you should strive
+to make it 1s. Backend authentication can take a bit longer, but that depends on
+your use case. Have a look in the
 [Argon2 specification paper](https://password-hashing.net/argon2-specs.pdf) to
 get some recommended durations for different applications.
 
