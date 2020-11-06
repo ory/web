@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import { CookieBanner } from '@palmabit/react-cookie-law'
 
 // DO NOT CHANGE THE ORDER OF THESE
 import 'normalize.css'
@@ -12,12 +13,16 @@ import { Menu, IconMenu } from './header'
 import Header from './header'
 import Announcement from './announcement'
 import Footer from './footer'
+import GDPR from './gdpr'
 
 const defaultMenu: Menu = [
   { title: 'Docs', href: '/docs' },
   { title: 'Blog', path: '/blog' },
   { title: 'Jobs', href: 'https://github.com/ory/jobs' },
-  { title: 'Support', href: 'https://github.com/ory/open-source-support/blob/master/README.md' },
+  {
+    title: 'Support',
+    href: 'https://github.com/ory/open-source-support/blob/master/README.md',
+  },
 ]
 
 const defaultIconMenu = ({
@@ -50,6 +55,7 @@ const Layout = ({
     <Header appendix={appendix} menu={menu} icons={icons({ githubLink })} />
     <main>{children}</main>
     <Footer />
+    <GDPR />
   </div>
 )
 

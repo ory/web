@@ -3,8 +3,6 @@ import React from 'react'
 import SEO from '../components/seo'
 import Team from '../components/team'
 
-
-
 const AboutPage = () => (
   <Layout>
     <SEO

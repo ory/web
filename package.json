@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
+    "@palmabit/react-cookie-law": "^0.4.0",
     "@raae/gatsby-remark-oembed": "~0.1.1",
     "@types/classnames": "~2.2.10",
     "@types/csv-parse": "~1.2.2",
@@ -26,6 +27,7 @@
     "gatsby": "^2.24.81",
     "gatsby-image": "^2.4.12",
     "gatsby-plugin-force-trailing-slashes": "~1.0.4",
+    "gatsby-plugin-gdpr-cookies": "^1.0.10",
     "gatsby-plugin-manifest": "^2.4.17",
     "gatsby-plugin-offline": "^3.2.16",
     "gatsby-plugin-postcss": "^2.3.9",
