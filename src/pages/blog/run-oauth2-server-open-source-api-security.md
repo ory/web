@@ -221,6 +221,7 @@ The database URL must point to the Postgres container that was created above. Th
 $ export DSN=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
 ```
 The result will be something like:
+
 ```shell
 postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
 ```
