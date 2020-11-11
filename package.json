@@ -23,7 +23,7 @@
     "csv-parse": "~4.6.3",
     "dateformat": "~3.0.3",
     "fs-extra": "~8.1.0",
-    "gatsby": "^2.24.90",
+    "gatsby": "^2.23.20",
     "gatsby-image": "^2.4.12",
     "gatsby-plugin-force-trailing-slashes": "~1.0.4",
     "gatsby-plugin-manifest": "^2.4.17",
