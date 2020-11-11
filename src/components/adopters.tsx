@@ -11,6 +11,7 @@ import raspberrypi from '../images/adopters/raspberrypi.svg'
 import segment from '../images/adopters/segment.svg'
 import tulip from '../images/adopters/tulip.svg'
 import spiribo from '../images/adopters/spiribo.svg'
+import datadetect from '../images/adopters/datadetect.svg'
 
 const adopters = [
   {
@@ -70,6 +71,11 @@ const adopters = [
     image: spiribo,
     url: 'https://www.spiri.bo/',
   },
+  {
+    title: 'Data Detect',
+    image: datadetect,
+    url: 'https://unifiedglobalarchiving.com/data-detect/',
+  },
 ]
 
 interface PropTypes {
@@ -84,10 +90,10 @@ const Adopters = ({ onlyFeatured }: PropTypes) => (
           <div className={styles.logos}>
             <div className={styles.logosInner}>
               {adopters
-                .filter(({ featured }) => onlyFeatured ? featured : true)
+                .filter(({ featured }) => (onlyFeatured ? featured : true))
                 .map(({ title, image, url }) => (
                   <a href={url} key={title}>
-                    <img src={image} alt={title}/>
+                    <img src={image} alt={title} />
                   </a>
                 ))}
             </div>

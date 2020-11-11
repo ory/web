@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 import cn from 'classnames'
 import * as styles from './compressed-hero.module.css'
 
-
 interface CallToAction {
   title: string
   href: string
@@ -18,13 +17,18 @@ interface PropTypes {
   mobile?: ReactNode[]
 }
 
-const CallToActionButton = ({ title, href, style = 'secondary', openInNewWindow= false }: CallToAction) => (
+const CallToActionButton = ({
+  title,
+  href,
+  style = 'secondary',
+  openInNewWindow = false,
+}: CallToAction) => (
   <a
     key={title}
     href={href}
     className={cn(style, 'cta')}
-    rel={openInNewWindow ? "noopener noreferrer" : ""}
-    target={openInNewWindow ? "_blank" : ""}
+    rel={openInNewWindow ? 'noopener noreferrer' : ''}
+    target={openInNewWindow ? '_blank' : ''}
   >
     {title}
   </a>

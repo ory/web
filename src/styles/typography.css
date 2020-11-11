@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500|IBM+Plex+Sans:300,400,500,600|Open+Sans:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500|Inter:300,400,500,600|Open+Sans:600&display=swap');
 @import './properties.css';
 
 html {
@@ -19,7 +19,7 @@ a,
 li,
 input,
 div {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   margin-top: 0;
   padding-top: 0;

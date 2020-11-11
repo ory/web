@@ -5,7 +5,6 @@ import { Link, navigate } from 'gatsby'
 import * as styles from './header.module.css'
 import logoTiny from '../images/logo-ory-symbol.svg'
 import logo from '../images/logo-ory.svg'
-import burger from '../images/burger.svg'
 import cn from 'classnames'
 
 export type MenuItem = {

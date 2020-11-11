@@ -1,5 +1,4 @@
 declare const styles: {
-  readonly "collaborator": string;
-};
-export = styles;
-
+  readonly collaborator: string
+}
+export = styles

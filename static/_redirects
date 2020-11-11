@@ -155,3 +155,12 @@ https://www.ory.sh/hydra/docs/implement-consent https://www.ory.sh/hydra/docs/gu
 https://www.ory.sh/hydra/docs/implementing-consent https://www.ory.sh/hydra/docs/guides/login 302!
 https://www.ory.sh/hydra/docs/oauth2 https://www.ory.sh/hydra/docs/concepts/oauth2 302!
 https://www.ory.sh/hydra/docs/debugging https://www.ory.sh/hydra/docs/debug 302!
+
+# 2020-09 Kratos docs refactoring
+https://www.ory.sh/kratos/docs/self-service/flows/user-login-user-registration/username-email-password https://www.ory.sh/kratos/docs/self-service/flows/user-registration 302!
+https://www.ory.sh/kratos/docs/self-service/flows/user-login-user-registration/openid-connect-social-sign-in-oauth2 https://www.ory.sh/kratos/docs/self-service/flows/user-registration 302!
+https://www.ory.sh/kratos/docs/self-service/flows/user-login-user-registration https://www.ory.sh/kratos/docs/self-service/flows/user-registration 302!
+https://www.ory.sh/kratos/docs/self-service/flows/user-settings/user-profile-management https://www.ory.sh/kratos/docs/self-service/flows/user-settings 302!
+https://www.ory.sh/kratos/docs/self-service/flows/user-settings/change-password https://www.ory.sh/kratos/docs/self-service/flows/user-settings 302!
+https://www.ory.sh/kratos/docs/self-service/flows/user-settings/link-unlink-openid-connect-oauth2 https://www.ory.sh/kratos/docs/self-service/flows/user-settings 302!
+https://www.ory.sh/kratos/docs/self-service/flows/account-recovery/password-reset-recovery-link https://www.ory.sh/kratos/docs/self-service/flows/account-recovery 302!
