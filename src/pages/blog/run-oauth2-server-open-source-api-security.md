@@ -282,7 +282,9 @@ This is easy to answer, just check the docker logs! Or,
 [open the health check](http://127.0.0.1:9001/health/ready) , which should show
 the following in the browser page:
 
+```
 {"status":"ok"}
+```
 
 ```shell
 $ docker logs ory-hydra-example--hydra
