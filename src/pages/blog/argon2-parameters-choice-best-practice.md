@@ -27,13 +27,21 @@ teaser:
   values.
 ---
 
+## Summary
+
+At Ory we develop open source access control and user management software. This
+guide sums up all the security best practices we follow and developed around
+Argon2. It first provides some background on Argon2 and best practice for
+choosing its parameters. I also wrote a CLI that allows you to calibrate the
+Argon2 parameter values according to your constrains and resources.
+
 ## What is Argon2?
 
 To securely manage credentials, one has to only store a cryptographic hash of
 the credential. Whenever the credential has to be checked, the hash of the
 provided credential is computed and compared to the stored hash. This ensures
 that no one is able to retrieve the credentials, even with full access to the
-services' storage.
+system's storage.
 
 Argon2 is a cryptographic hash algorithm specifically designed to secure
 passwords. It is
@@ -44,23 +52,24 @@ reason why you are reading this article.
 
 ## Meet the Argon2 Cryptographic Hashing Parameters
 
-Let me introduce you to the parameters and explain their impact on the hashing
+Let me introduce you to the parameters and explain their role in the hashing
 operation. This section is based on the
 [Argon2 specification paper](https://password-hashing.net/argon2-specs.pdf).
 
 1. Memory: The memory used by the algorithm. To make hash cracking more
    expensive for an attacker, you want to make this value as high as possible.
-2. Iterations: The number of iterations over the memory. The execution time is
-   linearly dependent on this parameter. It allows you to increase the
+2. Iterations: The number of iterations over the memory. The execution time
+   correlates linearly with this parameter. It allows you to increase the
    computational cost required to calculate one hash.
 3. Parallelism: The number of threads to use. This should be chosen as high as
    possible to reduce the threat imposed by parallelized hash cracking.
 4. Salt Length: The authors of Argon2 recommend this parameter to be 128 bits,
    but say it can be reduced to 64 bits in the case of space constraints.
 5. Key Length (i.e. Hash Length): This parameter depends on the intended usage.
-   The authors say a value of 128 bits should be sufficient for most
-   applications. If you plan to use the hash as a derived key for e.g. AES, you
-   can use this parameter to get a key of the required length.
+   The Argon2 algorithm authors claim that a value of 128 bits should be
+   sufficient for most applications. If you plan to use the hash as a derived
+   key for e.g. AES, you can use this parameter to get a key of the required
+   length.
 
 ## How to Choose the Parameter Values
 
@@ -83,20 +92,20 @@ get some recommended durations for different applications.
 
 ### Adjust Memory and Iterations
 
-To reach the desired execution time, you have two variables to tweak. It is
+To reach the desired execution time, you can tweak two variables. It is
 recommended to start with the highest amount of memory possible and one
 iteration. Reduce the memory until one hashing operation takes less than your
-desired duration. Next, advance the number of iterations to approach the desired
-execution time as close as possible.
+desired duration. Next, advance the number of iterations to approach the
+desired< execution time as close as possible.
 
 ## Automate it!
 
 If the previous paragraph sounds like an algorithm to you, then you are
 absolutely right. We wrote a small CLI helper that allows you to run this
-procedure in an automated manner. It is part of
-[ORY Kratos](https://github.com/ory/kratos). You can use the prebuild binary or
-docker image to run the CLI on your server and figure out the best values for
-your setup. It is as easy as running:
+procedure in an automated manner. It is part of our user management system
+[Ory Kratos](https://github.com/ory/kratos). You can use the prebuild binary
+from GitHub releases or docker image to run the CLI on your server and figure
+out the best values for your setup. It is as easy as running:
 
 ```
 $ kratos hashers argon2 calibrate 1s
