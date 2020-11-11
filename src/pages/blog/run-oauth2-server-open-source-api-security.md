@@ -115,16 +115,21 @@ ecosystem is best documented and supported. ORY's architecture is designed along
 Before we head into it, you need to make sure that there are no conflicts with
 existing docker containers or other open ports. Please make sure that ports
 `9000, 9001, 9010, 9020` are open.
+
 For Linux
+
 ```shell
 $ sudo ss -atuln | grep '9000\|9001\|9010\|9020'
 ```
-For Apple MacOS (BASH)
+
+For Apple MacOS (`/bin/bash` and `/bin/zsh`)
  
 ```shell
 $ sudo netstat -atuln | grep '9000\|9001\|9010\|9020'
 ```
+
 Note 'netstat' on the MAC does not support all options used in Lunix and Windows. The 'lsof' command ($ man -k lsof) augments some of netstat missing functionality.
+
 
 For Microsoft Windows 10, use the following command:
 ```shell
