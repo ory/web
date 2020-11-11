@@ -305,8 +305,10 @@ $ docker run --rm -it \
   help
 ```
 This command produces an overview of the CLI as follows:
+
 ```shell
 Run and manage ORY Hydra
+```
 
 Usage:
   hydra [command]
