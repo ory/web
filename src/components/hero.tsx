@@ -15,13 +15,18 @@ interface PropTypes {
   cta: CallToAction[]
 }
 
-const CallToActionButton = ({ title, href, style = 'secondary', openInNewWindow= false }: CallToAction) => (
+const CallToActionButton = ({
+  title,
+  href,
+  style = 'secondary',
+  openInNewWindow = false,
+}: CallToAction) => (
   <a
     key={title}
     href={href}
     className={cn(style, 'cta')}
-    rel={openInNewWindow ? "noopener noreferrer" : ""}
-    target={openInNewWindow ? "_blank" : ""}
+    rel={openInNewWindow ? 'noopener noreferrer' : ''}
+    target={openInNewWindow ? '_blank' : ''}
   >
     {title}
   </a>

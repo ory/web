@@ -6,13 +6,7 @@ import { brandPrefix, projects } from '../config'
 import { Link } from 'gatsby'
 
 const Projects = () => (
-  <div
-    className={cn(
-      styles.section,
-      styles.dark,
-      'is-dark-background',
-    )}
-  >
+  <div className={cn(styles.section, styles.dark, 'is-dark-background')}>
     <div className="container-fluid">
       <div className="row">
         <div
@@ -36,7 +30,10 @@ const Projects = () => (
             >
               {projects.map(({ title, description, path, id }) => (
                 <div className="col-lg-6 col-md-12 col-sm-12" key={title}>
-                  <Link className={cn(projectStyles.project, projectStyles[id])} to={path}>
+                  <Link
+                    className={cn(projectStyles.project, projectStyles[id])}
+                    to={path}
+                  >
                     <div>
                       <h4>{title}</h4>
                       <p>{description}</p>

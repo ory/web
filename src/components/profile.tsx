@@ -16,7 +16,7 @@ interface PropTypes {
 export enum SocialNetworks {
   twitter,
   github,
-  linkedin
+  linkedin,
 }
 
 type SocialLinks = {
@@ -24,45 +24,41 @@ type SocialLinks = {
   href: string
 }
 
-const socialWithIcon = ({href, network}: SocialLinks) => {
+const socialWithIcon = ({ href, network }: SocialLinks) => {
   let icon
   let alt
   switch (network) {
     case SocialNetworks.github:
       icon = Github
-      alt = "GitHub"
+      alt = 'GitHub'
       break
     case SocialNetworks.linkedin:
       icon = Linkedin
-      alt = "Linkedin"
+      alt = 'Linkedin'
       break
     case SocialNetworks.twitter:
       icon = Twitter
-      alt = "Twitter"
+      alt = 'Twitter'
       break
   }
 
   return {
     href,
     icon,
-    alt
+    alt,
   }
 }
 
-const Profile = ({
-                   name,
-                   img,
-                   social
-                 }: PropTypes) => (
+const Profile = ({ name, img, social }: PropTypes) => (
   <div className={styles.profile}>
     <div>
       <Img fixed={img} alt={name} />
     </div>
     <div className={cn(styles.space)}>
       <h4>{name}</h4>
-      <>{social.map(socialWithIcon).map(({ icon, href, alt }) => (
-          <a href={href}
-            key={href}>
+      <>
+        {social.map(socialWithIcon).map(({ icon, href, alt }) => (
+          <a href={href} key={href}>
             <img className={cn(styles.social)} src={icon} alt={alt} />
           </a>
         ))}

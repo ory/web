@@ -7,7 +7,6 @@
     margin-bottom: 0 !important;
   }
 
-
   & h4 {
     font-style: normal;
     font-weight: 500;
@@ -53,15 +52,13 @@
         margin-bottom: 34px;
       }
 
-        &:last-child {
-          margin-bottom: 34px !important;
-        }
+      &:last-child {
+        margin-bottom: 34px !important;
       }
     }
+  }
 }
 
 .space {
   margin-left: 20px;
 }
-
-

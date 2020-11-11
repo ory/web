@@ -13,13 +13,13 @@ interface PropTypes {
 }
 
 const ThinProject = ({
-                       title,
-                       description,
-                       learn,
-                       theme,
-                       href,
-                       visual,
-                     }: PropTypes) => (
+  title,
+  description,
+  learn,
+  theme,
+  href,
+  visual,
+}: PropTypes) => (
   <div className={cn(`theme-${theme}`, styles.thin)}>
     <div className="container-fluid">
       <div className={cn('row middle-lg')}>
@@ -34,7 +34,7 @@ const ThinProject = ({
         </div>
         <div className="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
           <Link to={href}>
-            <img src={visual} alt={`${title} visualized`}/>
+            <img src={visual} alt={`${title} visualized`} />
           </Link>
         </div>
       </div>

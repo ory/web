@@ -75,7 +75,7 @@ const adopters = [
     title: 'Data Detect',
     image: datadetect,
     url: 'https://unifiedglobalarchiving.com/data-detect/',
-  }
+  },
 ]
 
 interface PropTypes {
@@ -90,10 +90,10 @@ const Adopters = ({ onlyFeatured }: PropTypes) => (
           <div className={styles.logos}>
             <div className={styles.logosInner}>
               {adopters
-                .filter(({ featured }) => onlyFeatured ? featured : true)
+                .filter(({ featured }) => (onlyFeatured ? featured : true))
                 .map(({ title, image, url }) => (
                   <a href={url} key={title}>
-                    <img src={image} alt={title}/>
+                    <img src={image} alt={title} />
                   </a>
                 ))}
             </div>

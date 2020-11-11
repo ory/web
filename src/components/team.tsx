@@ -44,12 +44,12 @@ const Team = () => {
                   social={[
                     {
                       network: SocialNetworks.github,
-                      href: 'https://github.com/aeneasr'
+                      href: 'https://github.com/aeneasr',
                     },
                     {
                       network: SocialNetworks.linkedin,
-                      href: 'https://www.linkedin.com/in/aeneasr'
-                    }
+                      href: 'https://www.linkedin.com/in/aeneasr',
+                    },
                   ]}
                   img={data.aeneas.childImageSharp.fixed}
                 />
@@ -58,12 +58,12 @@ const Team = () => {
                   social={[
                     {
                       network: SocialNetworks.github,
-                      href: 'https://github.com/tacurran'
+                      href: 'https://github.com/tacurran',
                     },
                     {
                       network: SocialNetworks.linkedin,
-                      href: 'https://www.linkedin.com/in/thomasaidancurran/'
-                    }
+                      href: 'https://www.linkedin.com/in/thomasaidancurran/',
+                    },
                   ]}
                   img={data.thomas.childImageSharp.fixed}
                 />
@@ -72,12 +72,12 @@ const Team = () => {
                   social={[
                     {
                       network: SocialNetworks.github,
-                      href: 'https://github.com/jaredpreston'
+                      href: 'https://github.com/jaredpreston',
                     },
                     {
                       network: SocialNetworks.linkedin,
-                      href: 'https://www.linkedin.com/in/jaredpreston'
-                    }
+                      href: 'https://www.linkedin.com/in/jaredpreston',
+                    },
                   ]}
                   img={data.jared.childImageSharp.fixed}
                 />
@@ -92,19 +92,19 @@ const Team = () => {
               engineering.
             </p>
           </div>
-          <div className={cn( 'hidden-sm hidden-md col-lg-offset-2 col-lg-4')}>
+          <div className={cn('hidden-sm hidden-md col-lg-offset-2 col-lg-4')}>
             <>
               <Profile
                 name="Aeneas Rekkas"
                 social={[
                   {
                     network: SocialNetworks.github,
-                    href: 'https://github.com/aeneasr'
+                    href: 'https://github.com/aeneasr',
                   },
                   {
                     network: SocialNetworks.linkedin,
-                    href: 'https://www.linkedin.com/in/aeneasr'
-                  }
+                    href: 'https://www.linkedin.com/in/aeneasr',
+                  },
                 ]}
                 img={data.aeneas.childImageSharp.fixed}
               />
@@ -113,12 +113,12 @@ const Team = () => {
                 social={[
                   {
                     network: SocialNetworks.github,
-                    href: 'https://github.com/tacurran'
+                    href: 'https://github.com/tacurran',
                   },
                   {
                     network: SocialNetworks.linkedin,
-                    href: 'https://www.linkedin.com/in/thomasaidancurran/'
-                  }
+                    href: 'https://www.linkedin.com/in/thomasaidancurran/',
+                  },
                 ]}
                 img={data.thomas.childImageSharp.fixed}
               />
@@ -127,12 +127,12 @@ const Team = () => {
                 social={[
                   {
                     network: SocialNetworks.github,
-                    href: 'https://github.com/jaredpreston'
+                    href: 'https://github.com/jaredpreston',
                   },
                   {
                     network: SocialNetworks.linkedin,
-                    href: 'https://www.linkedin.com/in/jaredpreston'
-                  }
+                    href: 'https://www.linkedin.com/in/jaredpreston',
+                  },
                 ]}
                 img={data.jared.childImageSharp.fixed}
               />
