@@ -160,9 +160,11 @@ Docker containers so the containers can talk to one another.
 $ docker network create hydraguide
 ```
 The result will be something like:
+
 ```shell
 641a26284ff2f8ee4580988371b91923d6711e20aa964ebbdf5b2e4b4f2592b8
 ```
+
 The next section explains how to set up the PostgreSQL database system.
 
 
