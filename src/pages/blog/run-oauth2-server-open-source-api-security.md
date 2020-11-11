@@ -128,7 +128,7 @@ Note 'netstat' on the MAC does not support all options used in Lunix and Windows
 
 For Microsoft Windows 10, use the following command:
 ```shell
-# netstat -an | findstr /r "9000 9001 9010 9020"
+> netstat -an | findstr /r "9000 9001 9010 9020"
 ```
 
 If the result of the command lists open ports, you must kill the command that
