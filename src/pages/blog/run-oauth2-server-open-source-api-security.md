@@ -148,7 +148,7 @@ $ docker kill --signal=HUP hydra
 ```
 For Microsoft Windows use
 ```shell
-# docker ps | findstr "hydra"
+> docker ps | findstr "hydra"
 ```
 
 ## Create a Docker Network
