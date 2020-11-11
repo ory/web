@@ -114,7 +114,7 @@ $ kratos hashers argon2 calibrate 1s
 Or using docker:
 
 ```
-$ docker run -it --entrypoint kratos oryd/kratos:latest hashers argon2 calibrate 1s
+$ docker run -it --entrypoint kratos oryd/kratos:v0.5 hashers argon2 calibrate 1s
 ```
 
 The CLI allows you to set all your constrains, just have a look at all the
