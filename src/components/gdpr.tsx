@@ -30,7 +30,6 @@ const GDPR = () => (
     wholeDomain={true}
     policyLink={'/privacy'}
     onAcceptStatistics={() => {
-      console.log('onAcceptStatistics', getCookie('gdpr_cookie_analytics'))
       if (getCookie('gdpr_cookie_analytics') !== 'true') {
         setCookie('gdpr_cookie_analytics', 'true', 365)
         setTimeout(() => window.location.reload(), 10)
