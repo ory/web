@@ -170,11 +170,11 @@ https://www.ory.sh/api-security-cloud-guide-overview.html https://www.ory.sh/web
 https://editor.ory.sh/ https://react-page.github.io/ 302!
 https://www.ory.sh/api-security-cloud-guide-overview https://www.ory.sh/web-api-cloud-access-control-authentication/ 302!
 https://www.ory.sh/sites https://react-page.github.io/ 302!
-https://www.ory.sh/docs/1-hydra/4-security/0-readme https://www.ory.sh/hydra/docs/v1.6/security-architecture 302!
-https://www.ory.sh/docs/1-hydra/7-sdk/0-readme https://www.ory.sh/hydra/docs/v1.6/sdk 302!
-https://www.ory.sh/docs/1-hydra/0-tutorial/0-readme https://www.ory.sh/hydra/docs/v1.6/5min-tutorial/ 302!
+https://www.ory.sh/docs/1-hydra/4-security/0-readme https://www.ory.sh/hydra/docs/security-architecture 302!
+https://www.ory.sh/docs/1-hydra/7-sdk/0-readme https://www.ory.sh/hydra/docs/sdk/ 302!
+https://www.ory.sh/docs/1-hydra/0-tutorial/0-readme https://www.ory.sh/hydra/docs/5min-tutorial/ 302!
 https://www.ory.sh/docs/keto/sdk/keto-sdk-api https://www.ory.sh/keto/docs/sdk/index 302!
-https://www.ory.sh/docs/api/oathkeeper https://www.ory.sh/oathkeeper/docs/sdk/index 302!
+https://www.ory.sh/docs/api/oathkeeper https://www.ory.sh/oathkeeper/docs/reference/api 302!
 https://www.ory.sh/docs/1-hydra/ https://www.ory.sh/hydra/docs/ 302!
 https://www.ory.sh/docs/ecosystem/ecosystem-versioning https://www.ory.sh/docs/ecosystem/versioning/ 302!
-https://www.ory.sh/docs/api/oathkeeper?version=master https://www.ory.sh/oathkeeper/docs/sdk/index 302!
+https://www.ory.sh/docs/api/oathkeeper?version=master https://www.ory.sh/oathkeeper/docs/reference/api 302!
