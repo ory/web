@@ -178,3 +178,6 @@ https://www.ory.sh/docs/api/oathkeeper https://www.ory.sh/oathkeeper/docs/refere
 https://www.ory.sh/docs/1-hydra/ https://www.ory.sh/hydra/docs/ 302!
 https://www.ory.sh/docs/ecosystem/ecosystem-versioning https://www.ory.sh/docs/ecosystem/versioning/ 302!
 https://www.ory.sh/docs/api/oathkeeper?version=master https://www.ory.sh/oathkeeper/docs/reference/api 302!
+https://www.ory.sh/hydra/docs/images/docs/hydra/insecure-connection.png https://www.ory.sh/hydra/docs/assets/images/insecure-connection-26d35641951f189ef23d1606d59ce6a8.png 302!
+https://www.ory.sh/hydra/docs/images/docs/hydra/install-result.png https://www.ory.sh/hydra/docs/assets/images/install-result-193cacbd418864a96682f6811bbb6355.png 302!
+https://www.ory.sh/hydra/docs/images/docs/hydra/sample_trace.png https://www.ory.sh/hydra/docs/assets/images/sample_trace-0cd5d1302770f8483eef6909b17609e1.png 302!
