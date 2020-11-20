@@ -1,6 +1,5 @@
 const copydir = require('copy-dir')
 const fs = require('fs')
-const fse = require('fs-extra')
 
 ;[
   './public/css',
@@ -38,16 +37,17 @@ const fse = require('fs-extra')
   // fse.copySync(`${src}index/index.html`, `${dst}/index.html`)
 })
 
-copydir.sync('./generated/v1/docs/css', './public/css')
-copydir.sync('./generated/v1/docs/docs', './public/docs')
-copydir.sync('./generated/v1/docs/en', './public/en')
-copydir.sync('./generated/v1/docs/images', './public/images')
-copydir.sync('./generated/v1/docs/img', './public/img')
-copydir.sync('./generated/v1/docs/js', './public/js')
-copydir.sync('./generated/v1/docs/versions', './public/versions')
-
-// fse.copySync('./generated/v1/docs/sitemap.xml', './public/docs/sitemap.xml')
-// fse.copySync('./generated/v1/docs/versions.html', './public/docs/versions.html')
+// It's time for v1 to die:
+//  copydir.sync('./generated/v1/docs/css', './public/css')
+//  copydir.sync('./generated/v1/docs/docs', './public/docs')
+//  copydir.sync('./generated/v1/docs/en', './public/en')
+//  copydir.sync('./generated/v1/docs/images', './public/images')
+//  copydir.sync('./generated/v1/docs/img', './public/img')
+//  copydir.sync('./generated/v1/docs/js', './public/js')
+//  copydir.sync('./generated/v1/docs/versions', './public/versions')
+//
+//  fse.copySync('./generated/v1/docs/sitemap.xml', './public/docs/sitemap.xml')
+//  fse.copySync('./generated/v1/docs/versions.html', './public/docs/versions.html')
 
 // ecosystem needs to be copied after v1 docs!
 copydir.sync('./generated/docs/ecosystem', './public/docs')
