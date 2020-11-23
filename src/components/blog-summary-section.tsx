@@ -62,7 +62,7 @@ const BlogSummarySection = () => {
                 frontmatter: { title, overline, teaser, path },
               }) => (
                 <Link key={id} to={path} className={cn(styles.blogBox)}>
-                  <h4 className={cn('col-lg-offset-1 col-lg-10')}>{title}</h4>
+                  <h3 className={cn('col-lg-offset-1 col-lg-10')}>{title}</h3>
                   <p className={cn('col-lg-offset-1 col-lg-10', 'secondary')}>
                     {teaser}
                   </p>

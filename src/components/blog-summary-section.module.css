@@ -7,11 +7,10 @@
     var(--colors-base-light) 96px
   );
 
-  & h4 {
-    height: auto;
-    margin-bottom: 16px;
-    color: var(--colors-themed-default);
-  }
+  & h3 {
+      color: var(--colors-themed-default);
+      font-size: 1.2rem;
+    }
 
   & :global a:any-link {
     color: var(--colors-base-dark);
@@ -42,9 +41,9 @@
 
 @media (--sm-viewport) {
   .blog-summary {
-    & h4 {
-      height: auto;
-    }
+    & h3 {
+        font-size: 1.067rem;
+      }
   }
 
   .blog-row {
@@ -58,9 +57,9 @@
 
 @media (--md-viewport) {
   .blog-summary {
-    & h4 {
-      height: auto;
-    }
+    & h3 {
+        font-size: 1.125rem;
+      }
   }
 
   .blog-row {
