@@ -50,7 +50,7 @@ const CompressedHero = ({
         })}
       >
         <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
-          <h3>{title}</h3>
+          <h1>{title}</h1>
           <h2>{subtitle}</h2>
           <>{cta.map(CallToActionButton)}</>
         </div>
@@ -67,9 +67,9 @@ const CompressedHero = ({
                 'col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10'
               }
             >
-              <h3>{title}</h3>
+              <h1>{title}</h1>
               {node}
-              <p>{subtitle}</p>
+              <h2>{subtitle}</h2>
               <>{cta.map(CallToActionButton)}</>
             </div>
           ))}

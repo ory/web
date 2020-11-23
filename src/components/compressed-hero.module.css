@@ -4,11 +4,10 @@
   background-color: var(--colors-themed-default);
   padding: 112px 0;
 
-  & h2,
-  & h3,
-  & p {
-    color: var(--colors-base-white);
-  }
+  & h2 {
+        font-weight: 400;
+        font-size: 1.44rem;
+      }
 
   & :global a.cta.secondary:any-link {
     color: var(--colors-base-dark);
@@ -38,11 +37,18 @@
 @media (--sm-viewport) {
   .compressed-hero {
     padding: 64px 0;
+    & h2 {
+        font-size: 1.138rem;
+      }
   }
 }
 
 @media (--md-viewport) {
   .compressed-hero {
     padding: 64px 0;
+
+    & h2 {
+        font-size: 1.266rem;
+      }
   }
 }
