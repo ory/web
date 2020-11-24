@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import Prism from 'prismjs'
 import cn from 'classnames'
-import 'prismjs/components/prism-javascript.js'
-import 'prismjs/components/prism-go.js'
-import 'prismjs/components/prism-yaml.js'
-
 import * as styles from './codebox.module.css'
 
 export enum Languages {
   HTML = 'html',
   YML = 'yml',
   JavaScript = 'javascript',
+  // Shell = 'shell-session',
 }
 
 interface Tab {
