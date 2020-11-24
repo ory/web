@@ -1,19 +1,22 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Footer from '../components/footer'
 import BlogSection from '../components/blog-section'
 import BlogHero from '../components/blog-hero'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
-import Markdown from '../components/markdown'
 import Newsletter from '../components/newsletter'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 export default function BlogTemplate(props: any) {
-  const { markdownRemark } = props.data // data.markdownRemark holds our post data
-  const { frontmatter: fn, html } = markdownRemark
+  const { mdx } = props.data // data.mdx holds our post data
+  const { frontmatter: fn, body } = mdx
   return (
     <Layout>
-      <SEO description={fn.metaDescription || ''} title={fn.metaTitle} />
+      <SEO
+        description={fn.seo.description || ''}
+        title={fn.seo.title}
+        keywords={fn.seo.keywords}
+      />
       <BlogHero
         title={fn.title}
         overline={fn.overline}
@@ -22,7 +25,7 @@ export default function BlogTemplate(props: any) {
         subtitle={fn.subtitle}
       />
       <BlogSection>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
       <Newsletter light left={<h3>Never miss an article</h3>} />
     </Layout>
@@ -31,16 +34,21 @@ export default function BlogTemplate(props: any) {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         path
         title
         author
         overline
         subtitle
-        metaTitle
-        metaDescription
+
+        seo {
+          title
+          description
+          keywords
+        }
+
         publishedAt(formatString: "MMMM DD, YYYY")
       }
     }

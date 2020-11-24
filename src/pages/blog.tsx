@@ -13,8 +13,8 @@ const Post = ({
   node: {
     frontmatter: { path, title, teaser, overline, category },
     id,
-    excerpt,
-  },
+    excerpt
+  }
 }: any) => (
   <div>
     <p className={styles.postOverline}>{category}</p>
@@ -27,8 +27,8 @@ const Post = ({
 
 const BlogPostsPage = ({
   data: {
-    allMarkdownRemark: { edges },
-  },
+    allMdx: { edges }
+  }
 }: any) => (
   <Layout>
     <SEO
@@ -53,7 +53,7 @@ export default BlogPostsPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fileAbsolutePath: { regex: "/blog/" }
         frontmatter: { published: { eq: true } }

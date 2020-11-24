@@ -3,7 +3,7 @@ module.exports = {
     title: `ory.sh`,
     description: `Implement OAuth 2.0 and OpenID Connect in minutes with open source from ORY. Works in both new and existing systems.`,
     author: `ORY Corp.`,
-    siteUrl: `https://www.ory.sh`,
+    siteUrl: `https://www.ory.sh`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -11,22 +11,22 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown`,
-        path: `${__dirname}/src/pages/markdown`,
-      },
+        path: `${__dirname}/src/pages/markdown`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/pages/blog`,
-      },
+        path: `${__dirname}/src/pages/blog`
+      }
     },
     `gatsby-plugin-sharp`,
     {
@@ -38,9 +38,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -48,29 +49,29 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 860,
-              tracedSVG: true,
-            },
+              tracedSVG: true
+            }
           },
           {
-            resolve: 'gatsby-remark-video',
+            resolve: "gatsby-remark-video"
           },
           {
-            resolve: 'gatsby-remark-embed-video',
+            resolve: "gatsby-remark-embed-video",
             options: {
               width: 800,
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
               height: 400, // Optional: Overrides optional.ratio
               related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-            },
+              noIframeBorder: true //Optional: Disable insertion of <style> border: 0
+            }
           },
           {
-            resolve: 'gatsby-remark-emojis',
+            resolve: "gatsby-remark-emojis",
             options: {
               active: true,
-              class: 'remark-emoji',
-              size: 64,
-            },
+              class: "remark-emoji",
+              size: 64
+            }
           },
           // prismjs to be loaded last or it will interfere with remark-embed-video
           {
@@ -83,11 +84,19 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: 'language-',
-            },
+              classPrefix: "language-"
+            }
           },
-        ],
-      },
+          {
+            resolve: `gatsby-remark-admonitions`,
+            options: {
+              tag: ":::",
+              icons: "svg"
+
+            }
+          }
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -95,34 +104,34 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require('postcss-for'),
-          require('postcss-color-mod-function')(),
-          require('lost'),
+          require("postcss-for"),
+          require("postcss-color-mod-function")(),
+          require("lost"),
           require(`postcss-preset-env`)({
             stage: 0,
             features: {
-              'custom-media-queries': {
+              "custom-media-queries": {
                 importFrom: [
                   {
                     customMedia: {
-                      '--sm-viewport': '(max-width: 375px)',
-                      '--md-viewport': '(max-width: 768px) and (min-width: 375px)',
-                      '--lg-viewport': '(min-width: 769px)',
-                      '--mobile-viewport': '(max-width: 768px)',
-                    },
-                  },
-                ],
-              },
-            },
-          }),
-        ],
-      },
+                      "--sm-viewport": "(max-width: 375px)",
+                      "--md-viewport": "(max-width: 768px) and (min-width: 375px)",
+                      "--lg-viewport": "(min-width: 769px)",
+                      "--mobile-viewport": "(max-width: 768px)"
+                    }
+                  }
+                ]
+              }
+            }
+          })
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
-      },
+        output: `/sitemap.xml`
+      }
     },
     // `gatsby-transformer-sharp`,
     // `gatsby-plugin-sharp`,
@@ -144,14 +153,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: 'src/images/icon/favicon-196x196.png',
+        icon: "src/images/icon/favicon-196x196.png",
         name: `ORY Website and Documentation`,
         short_name: `ORY`,
         start_url: `/`,
         background_color: `#15283B`,
         theme_color: `#6274F3`,
-        display: `browser`,
-      },
+        display: `browser`
+      }
     },
     {
       resolve: `gatsby-plugin-offline`,
@@ -162,21 +171,21 @@ module.exports = {
             {
               // Do not cache ads
               urlPattern: /^https?:\/\/codefund\.io/,
-              handler: `NetworkOnly`,
+              handler: `NetworkOnly`
             },
             {
               // Cache docs css etc
               urlPattern: /^.+\/docs\/.+\.(css|js|png|svg|jpg)/,
-              handler: `StaleWhileRevalidate`,
+              handler: `StaleWhileRevalidate`
             },
             {
               // Cache docs pages
               urlPattern: /^.+\/docs\/([a-zA-Z0-9\-_\/]+)(\/||\.html|\.htm)/,
-              handler: `NetworkFirst`,
-            },
+              handler: `NetworkFirst`
+            }
           ]
-        },
-      },
+        }
+      }
     },
     `gatsby-plugin-force-trailing-slashes`,
     {
@@ -184,24 +193,24 @@ module.exports = {
       options: {
 
         googleAnalytics: {
-          trackingId: 'UA-71865250-1',
-          cookieName: 'gdpr_cookie_analytics',
+          trackingId: "UA-71865250-1",
+          cookieName: "gdpr_cookie_analytics",
           anonymize: true,
           allowAdFeatures: false
         },
 
         googleTagManager: {
-          trackingId: '',
-          cookieName: 'gdpr_cookie_analytics'
+          trackingId: "",
+          cookieName: "gdpr_cookie_analytics"
         },
 
         facebookPixel: {
-          pixelId: '', // leave empty if you want to disable the tracker
-          cookieName: 'gdpr_cookie_analytics', // default
+          pixelId: "", // leave empty if you want to disable the tracker
+          cookieName: "gdpr_cookie_analytics" // default
         },
 
-        environments: ['production', 'development']
-      },
-    },
-  ],
-}
+        environments: ["production", "development"]
+      }
+    }
+  ]
+};

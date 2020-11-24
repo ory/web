@@ -3,13 +3,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogSection from '../components/blog-section'
-import Footer from '../components/footer'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import BlogHero from '../components/blog-hero'
 
 export default function PageTemplate(props: any) {
-  console.log(props)
-  const { markdownRemark } = props.data // data.markdownRemark holds our post data
-  const { frontmatter: fn, html } = markdownRemark
+  const { mdx } = props.data // data.mdx holds our post data
+  const { frontmatter: fn, body } = mdx
 
   return (
     <Layout>
@@ -19,7 +18,7 @@ export default function PageTemplate(props: any) {
         date={fn.lastUpdatedAt && `Last updated at ${fn.lastUpdatedAt}`}
       />
       <BlogSection>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
     </Layout>
   )
@@ -27,8 +26,8 @@ export default function PageTemplate(props: any) {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         path
         title
