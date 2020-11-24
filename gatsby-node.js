@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allMdx(filter: {frontmatter: { published: {eq: true} }}) {
+      allMdx(filter: {frontmatter: { published: {ne: false} }}) {
         edges {
           node {
             fileAbsolutePath
@@ -24,20 +24,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `)
+
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query: ${result.errors}`)
     return
   }
-  result.data.allMdx.edges.forEach(({ node }) => {
-    const template = node.fileAbsolutePath.indexOf('pages/blog') > -1
-      ? path.resolve(`src/templates/blog.tsx`)
-      : path.resolve(`src/templates/page.tsx`)
 
-    createPage({
-      path: `/${trimLeft(node.frontmatter.path, '/')}`,
-      component: template,
-      context: {}, // additional data can be passed via context
+  result.data.allMdx.edges
+    .forEach(({ node }) => {
+      const template = node.fileAbsolutePath.indexOf('pages/blog') > -1
+        ? path.resolve(`src/templates/blog.tsx`)
+        : path.resolve(`src/templates/page.tsx`)
+
+      createPage({
+        path: `/${trimLeft(node.frontmatter.path, '/')}`,
+        component: template,
+        context: {} // additional data can be passed via context
+      })
     })
-  })
 }
