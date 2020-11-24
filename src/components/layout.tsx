@@ -1,13 +1,4 @@
 import React, { ReactNode } from 'react'
-import { CookieBanner } from '@palmabit/react-cookie-law'
-
-// DO NOT CHANGE THE ORDER OF THESE
-import 'normalize.css'
-import '../styles/themes/default.css'
-import '../styles/global.css'
-import '../styles/grid.css'
-import '../styles/typography.css'
-// DO NOT CHANGE THE ORDER OF THESE
 
 import { Menu, IconMenu } from './header'
 import Header from './header'
