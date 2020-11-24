@@ -1,78 +1,85 @@
 @import '../styles/properties.css';
 
 .title {
-  background: var(--colors-base-dark);
+    background: var(--colors-base-white);
+    color: var(--colors-base-black);
 
-  color: var(--colors-base-white);
+    & :global .container-fluid {
+        position: relative;
+        padding: 96px 0;
+    }
 
-  & :global .container-fluid {
-    position: relative;
-    padding: 96px 0;
-  }
+    & h1 {
+        margin-top: 0;
+    }
 
-  & h1 {
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 126%;
-    margin-bottom: 16px;
-  }
-
-  & .meta {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 168%;
-    color: var(--colors-base-white);
+    & h2 {
+        font-size: 1.44rem;
+        font-weight: 400;
+    }
 
     & .author {
-      color: var(--colors-themed-default);
+        color: var(--colors-themed-default);
     }
-  }
+
+
+}
+
+.line {
+    position: relative;
+
+    &::before {
+        content: "";
+        height: 100%;
+        border-right: 1px solid var(--colors-themed-default);
+        position: absolute;
+        left: -3rem;
+    }
+}
+
+.info {
+    line-height: 1.5;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 0.833rem;
 }
 
 .subtitle {
-  color: var(--colors-themed-default);
-  font-size: 12px;
-  line-height: 126%;
-  letter-spacing: 0.03em;
-  margin-bottom: 0;
-  font-weight: 600;
+    color: var(--colors-themed-default);
+    font-size: 0.579rem;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    margin: 0;
+    font-weight: 600;
 }
 
 @media (--sm-viewport) {
-  .title {
-    & :global .container-fluid {
-      padding: 64px 0;
+    .title {
+        & :global .container-fluid {
+            padding: 64px 0;
+        }
+
+        & h2 {
+            font-size: 1.138rem;
+        }
     }
-  }
+
+    .line {
+        &::before {
+            display: none;
+        }
+    }
 }
 
 @media (--md-viewport) {
-  .title {
-    & :global .container-fluid {
-      padding: 64px 0;
+    .title {
+        & :global .container-fluid {
+            padding: 64px 0;
+        }
+
+        & h2 {
+            font-size: 1.266rem;
+        }
     }
-  }
-}
-
-.teaser {
-  background: var(--colors-base-dark);
-
-  color: var(--colors-base-white);
-
-  & a:any-link {
-    color: var(--colors-themed-default);
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--colors-base-white);
-      text-decoration: underline;
-    }
-  }
-
-  & :global .container-fluid {
-    position: relative;
-    padding: 32px 0;
-  }
 }

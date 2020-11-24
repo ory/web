@@ -4,6 +4,8 @@ declare const styles: {
   readonly "author": string;
   readonly "subtitle": string;
   readonly "teaser": string;
+  readonly "line": string;
+  readonly "info": string;
 };
 export = styles;
 
