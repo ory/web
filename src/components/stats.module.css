@@ -45,8 +45,8 @@
     & .item {
       margin-top: 32px;
       & .amount * {
-          font-size: 1.215rem;
-        }
+        font-size: 1.215rem;
+      }
     }
 
     & .item:first-child {
@@ -59,9 +59,9 @@
   .items {
     flex-direction: column;
     & .item {
-    & .amount * {
+      & .amount * {
         font-size: 1.424rem;
       }
     }
-}
+  }
 }

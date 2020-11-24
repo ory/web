@@ -5,9 +5,9 @@
   color: var(--colors-base-white);
   text-align: center;
   & h2 {
-      font-weight: 400;
-      font-size: 1.44rem;
-    }
+    font-weight: 400;
+    font-size: 1.44rem;
+  }
 
   & :global a.cta.secondary:any-link {
     color: var(--colors-base-dark);
@@ -48,8 +48,8 @@
     & :global .container-fluid {
       padding: 64px 0;
       & h2 {
-          font-size: 1.138rem;
-        }
+        font-size: 1.138rem;
+      }
     }
   }
 }
@@ -59,8 +59,8 @@
     & :global .container-fluid {
       padding: 64px 0;
       & h2 {
-          font-size: 1.266rem;
-        }
+        font-size: 1.266rem;
+      }
     }
   }
 }

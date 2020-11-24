@@ -1,117 +1,116 @@
 @import '../styles/properties.css';
 
 .section {
-    padding: 32px 0;
-    background-color: var(--colors-base-white);
+  padding: 32px 0;
+  background-color: var(--colors-base-white);
 
-    & h2,
-    & h3,
-    & h4,
-    & h5,
-    & h6 {
-        margin-top: 1rem;
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-top: 1rem;
+  }
+
+  & li,
+  & code,
+  & dl,
+  & dd,
+  & dt,
+  & p {
+    margin-top: 0;
+    color: var(--colors-base-black);
+  }
+
+  & p,
+  & li {
+    & strong {
+      font-weight: 500;
     }
+  }
 
-    & li,
-    & code,
-    & dl,
-    & dd,
-    & dt,
-    & p {
-        margin-top: 0;
-        color: var(--colors-base-black);
-    }
+  & pre {
+    margin-bottom: 32px !important;
+  }
 
-    & p,
-    & li {
+  & p,
+  & ul,
+  & ol {
+    margin-bottom: 32px;
+  }
 
-        & strong {
-            font-weight: 500;
-        }
-    }
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & li {
+    margin-bottom: 16px;
+  }
 
-    & pre {
-        margin-bottom: 32px !important;
-    }
+  & p a {
+    transition: all ease 200ms;
+  }
 
-    & p,
-    & ul,
-    & ol {
-        margin-bottom: 32px;
-    }
+  & a:any-link {
+    color: var(--colors-themed-default);
+  }
 
-    & h2,
-    & h3,
-    & h4,
-    & h5,
-    & h6,
-    & li {
-        margin-bottom: 16px;
-    }
+  & p a:hover,
+  & p a:active {
+    color: var(--colors-base-black);
+    text-decoration: underline;
+  }
 
-    & p a {
-        transition: all ease 200ms;
-    }
+  & img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
 
-    & a:any-link {
-        color: var(--colors-themed-default);
-    }
+  & :not(pre) > code[class*='language-'] {
+    padding: 0 6px;
+    font-weight: 500;
+    word-break: break-all;
+    color: var(--colors-base-dark);
+    font-family: 'IBM Plex Mono', monospace;
+  }
 
-    & p a:hover,
-    & p a:active {
-        color: var(--colors-base-black);
-        text-decoration: underline;
-    }
+  & blockquote {
+    margin: 2rem 0 3rem 0;
+    padding-left: 2rem;
+    border-left: 1px solid var(--colors-themed-default);
+  }
+
+  & blockquote p {
+    font-weight: 300;
+  }
+
+  & figure {
+    margin: 2rem 0 3rem 0;
+    padding-top: 16px;
 
     & img {
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
+      margin-bottom: 16px;
     }
 
-    & :not(pre) > code[class*='language-'] {
-        padding: 0 6px;
-        font-weight: 500;
-        word-break: break-all;
-        color: var(--colors-base-dark);
-        font-family: 'IBM Plex Mono', monospace;
+    & figcaption {
+      text-align: center;
+      color: var(--colors-base-grey);
+      font-size: 0.694rem;
+      margin-bottom: 32px;
     }
-
-    & blockquote {
-        margin: 2rem 0 3rem 0;
-        padding-left: 2rem;
-        border-left: 1px solid var(--colors-themed-default);
-    }
-
-    & blockquote p {
-        font-weight: 300;
-    }
-
-    & figure {
-        margin: 2rem 0 3rem 0;
-        padding-top: 16px;
-
-        & img {
-            margin-bottom: 16px;
-        }
-
-        & figcaption {
-            text-align: center;
-            color: var(--colors-base-grey);
-            font-size: 0.694rem;
-            margin-bottom: 32px;
-        }
-    }
+  }
 }
 
 @media (--sm-viewport) {
-    .section {
-        padding: 32px 0;
-    }
+  .section {
+    padding: 32px 0;
+  }
 }
 
 @media (--md-viewport) {
-    .section {
-        padding: 32px 0;
-    }
+  .section {
+    padding: 32px 0;
+  }
 }

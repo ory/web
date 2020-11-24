@@ -61,8 +61,8 @@ const KetoPage = () => (
           <p>
             {brandPrefix}Keto is written in Go and we provide SDKs for every
             language. Our{' '}
-            <a href="https://www.ory.sh/keto/docs/sdk/index">documentation</a> makes
-            integrating {brandPrefix}Keto a snap.
+            <a href="https://www.ory.sh/keto/docs/sdk/index">documentation</a>{' '}
+            makes integrating {brandPrefix}Keto a snap.
           </p>
         </>
       }
@@ -72,8 +72,8 @@ const KetoPage = () => (
         <p className="mobile-offset-32">
           {brandPrefix}Keto is written in Go and we provide SDKs for every
           language. Our{' '}
-          <a href="https://www.ory.sh/keto/docs/sdk/index">documentation</a> makes
-          integrating {brandPrefix}Keto a snap.
+          <a href="https://www.ory.sh/keto/docs/sdk/index">documentation</a>{' '}
+          makes integrating {brandPrefix}Keto a snap.
         </p>,
       ]}
     />

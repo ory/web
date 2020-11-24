@@ -117,7 +117,7 @@ p {
 a:any-link {
   text-decoration: none;
   transition: color ease 200ms, background-color ease 200ms,
-  border-color ease 200ms;
+    border-color ease 200ms;
 }
 
 p.secondary {
@@ -131,7 +131,7 @@ ol {
   margin: 32px 0 20px 32px;
   list-style-position: outside;
 
-& li {
+  & li {
     margin: 0 0 12px 0;
     padding: 0 0 0 12px;
   }
@@ -148,33 +148,34 @@ main a.cta {
   box-sizing: border-box;
   margin: 32px 32px 0 0;
   text-decoration: none;
-  transition: color ease 200ms, background-color ease 200ms, border-color ease 200ms;
+  transition: color ease 200ms, background-color ease 200ms,
+    border-color ease 200ms;
 
-@media (--md-viewport) {
-  min-width: 6rem;
-  margin: 16px 16px 0 0;
-}
+  @media (--md-viewport) {
+    min-width: 6rem;
+    margin: 16px 16px 0 0;
+  }
 
-@media (--sm-viewport) {
-  min-width: 6rem;
-  margin: 16px 16px 0 0;
-}
+  @media (--sm-viewport) {
+    min-width: 6rem;
+    margin: 16px 16px 0 0;
+  }
 
-&.primary,
-&.primary.visited {
-   border: 2px solid;
- }
+  &.primary,
+  &.primary.visited {
+    border: 2px solid;
+  }
 
-&.secondary,
-&.secondary.visited {
-   border: 2px solid;
-   padding: 10px 16px;
- }
+  &.secondary,
+  &.secondary.visited {
+    border: 2px solid;
+    padding: 10px 16px;
+  }
 
-&.tertiary,
-&.tertiary.visited {
-   border: 2px solid;
- }
+  &.tertiary,
+  &.tertiary.visited {
+    border: 2px solid;
+  }
 }
 
 .remark-emoji {
