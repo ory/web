@@ -9,6 +9,26 @@ interface PropTypes {
   subtitle?: string
 }
 
+const authors = {
+  aeneasr: {
+    fullname: 'Aeneas Rekkas',
+    github: 'http://github.com/aeneasr'
+  },
+  zepatrik: {
+    fullname: 'Patrik Neu',
+    github: 'https://github.com/zepatrik'
+  }
+}
+
+const Author = ({ author }: { author: string }) => {
+  const profile = authors[author]
+  if (!profile) {
+    return author
+  }
+
+  return <a href={profile.github}>{profile.fullname}</a>
+}
+
 const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
   <>
     <div className={styles.title}>
@@ -19,7 +39,9 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             <h1>{title}</h1>
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.meta}>
-              {date} - <span className={styles.author}>{author}</span>
+              {date} - <span className={styles.author}>
+              <Author author={author} />
+            </span>
             </p>
           </div>
         </div>
