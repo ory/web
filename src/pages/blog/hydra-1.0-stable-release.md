@@ -1,16 +1,13 @@
 ---
-published: true
 path: '/hydra-1.0-stable-release/'
-title: 'ORY Hydra v1.0 is here!'
-metaTitle: 'ORY Hydra v1.0 is here!'
 publishedAt: '2019-06-01'
-author: 'Aeneas Rekkas'
-overline: Milestones
+author: aeneasr
 
-teaser: >
-  We are very excited to announce the 1.0 release of ORY Hydra!
+title: 'ORY Hydra v1.0 is Here!'
+teaser:
+    We are very excited to announce the 1.0 release of ORY Hydra!
 
-category: Milestones
+overline: Releases
 ---
 
 We are very excited to announce the 1.0 release of

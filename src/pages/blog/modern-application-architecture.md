@@ -1,27 +1,21 @@
 ---
-published: true
 path: '/modern-application-architecture/'
-title: 'Ory and Modern Application Architecture'
-metaTitle: 'Modern application architecture at ORY'
 publishedAt: '2020-09-03'
 author: 'Lee Atchison'
+
+title: >
+  Ory and Modern Application Architecture
 
 subtitle: >
   From monoliths to service-based architectures 
 
 overline: >
-  Modern application architecture
-
+  Modern Application Architecture
+  
 teaser: >
-  A short introduction into modern application architecture
-
-metaDescription: >
-  How ORY builds modern application architecture
-
-category: Article
+  A short introduction into modern application architecture and ORY's
+  thinking and philosophy around software development.
 ---
-
-## Motivation
 
 Modern software requires the use of modern application architectures. Modern
 application architectures require moving away from monolithic systems and using

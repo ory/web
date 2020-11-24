@@ -1,29 +1,18 @@
 ---
-published: true
 path: '/api-access-control-kubernetes-cloud-native/'
-title: 'Zero Trust API Access Control on Kubernetes'
 publishedAt: '2018-08-18'
-author: 'Aeneas Rekkas'
+author: aeneasr
 
-seo:
-  title: |
-    Zero Trust API Access Control on Kubernetes
-  description: |
-    Control access to your APIs with cloud native ORY Oathkeeper and the
-    Ambassador Reverse Proxy on Kubernetes.
+title: 'Zero Trust API Access Control on Kubernetes'
+teaser: |
+  Control access to your APIs with cloud native ORY Oathkeeper and the
+  Ambassador Reverse Proxy on Kubernetes.
 
 subtitle: >
   With Ambassador and ORY Oathkeeper (Part I)
 
 overline: >
   Controlling Access to APIs in the Cloud
-
-teaser: >
-  Control access to your APIs with cloud native ORY Oathkeeper and the
-  Ambassador Reverse Proxy on Kubernetes.
-
-metaDescription: >
-category: Tutorial
 ---
 
 :warning: ORY Oathkeeper has improved a lot recently and this guide does not yet

@@ -1,17 +1,16 @@
 ---
-published: true
 path: '/sign-in-with-user-impersonation-oauth2-openid-connect/'
-title: 'Impersonating users by abusing broken “Sign in with” implementations'
 publishedAt: '2018-11-27'
-author: 'Aeneas Rekkas'
-metaTitle: >
-  Impersonating users by abusing broken “Sign in with” implementations
+author: aeneasr
 
-metaDescription: >
-  Several applications implementing “Sign in with GitHub” have been found to be
-  using a mutable identifier (username) to match external users to the internal
-  user management system. This allows attackers to completely take over accounts
-  whose GitHub username has changed.
+seo:
+  description: >
+    Several applications implementing “Sign in with GitHub” have been found to be
+    using a mutable identifier (username) to match external users to the internal
+    user management system. This allows attackers to completely take over accounts
+    whose GitHub username has changed.
+
+title: 'Impersonating users by abusing broken “Sign in with” implementations'
 
 teaser: >
   Applications that implement a "Sign in with ..." flow must not use a mutable
@@ -20,8 +19,6 @@ teaser: >
   be vulnerable to this.
 
 overline: Disclosure
-category: Disclosure
-subtitle: ''
 ---
 
 Several applications implementing “Sign in with GitHub” have been found to be

@@ -1,34 +1,22 @@
 ---
-published: true
 path: '/choose-recommended-argon2-parameters-password-hashing/'
 title: >
   Choose Argon2 Parameters for Secure Password Hashing and Login
 
+teaser: >
+  Pick recommended Argon2 (Argon2id, Argon2i) parameters (iteration, memory,
+  parallelism) for secure login and password hashing, following security best
+  practices using only open source.  
+
 seo:
-  title: |
-    Recommended Argon2 Parameters for Secure Login and Protecting Passwords
-  description: |
-    Pick recommended Argon2 (Argon2id, Argon2i) parameters (iteration, memory,
-    parallelism) for secure login and password hashing, following security best
-    practices using only open source.  
   keywords: |
     argon2, password hashing, login, parameters, memory, cpu
 
 publishedAt: '2020-11-11'
-author: 'Patrik Neu'
+author: zepatrik
+
 overline: >
   Secure Password Hashing and Login
-
-category: Security
-subtitle: >
-  Use open source to pick recommended Argon2 (Argon2id, Argon2i) parameters
-  (iteration, memory, parallelism) and settings for secure login and password
-  hashing.
-
-teaser:
-  This article sums up all the security best practices around Argon2 parameter
-  choice. It also presents a CLI tool to automatically calibrate the best
-  values.
 ---
 
 At Ory we develop open source access control and user management software. This

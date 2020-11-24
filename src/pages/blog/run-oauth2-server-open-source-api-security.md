@@ -1,18 +1,17 @@
 ---
-published: true
 path: '/run-oauth2-server-open-source-api-security/'
 title: >
   Run your own OAuth2 Server
 
-metaDescription: >
-  Run your own OAuth2 Server and OpenID Connect Provider (OIDC) using scalable
-  and secure open source software in under 10 minutes.
-
-metaTitle: >
-  Run your own OAuth2 Server using open source - step by step
+seo:
+  description: >
+    Run your own OAuth2 Server and OpenID Connect Provider (OIDC) using scalable
+    and secure open source software in under 10 minutes.
+  title: >
+    Run your own OAuth2 Server using open source - step by step
 
 publishedAt: '2019-08-29'
-author: 'Aeneas Rekkas'
+author: aeneasr
 overline: >
   API Security & OAuth Server
 

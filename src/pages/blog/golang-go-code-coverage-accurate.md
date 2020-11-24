@@ -1,29 +1,22 @@
 ---
-published: true
 path: '/golang-go-code-coverage-accurate/'
-title: >
-  Accurate code coverage in Go
 publishedAt: '2018-02-20'
-author: 'Aeneas Rekkas'
-metaTitle: >
-  How to get accurate code coverage in Golang (Go)
 
-metaDescription: >
-  Get accurate code coverage reports using go-acc. Your test might perform
-  better than you think!
+author: aeneasr
+
+title: >
+  Accurate Code Coverage in Go
+
+seo:
+  title: >
+    Get Accurate Code Coverage in Golang (Go) Across Multiple Packages
+
+teaser: >
+    Get accurate Golang (Go) code coverage reports using go-acc.
+    Your test might perform better than you think!
 
 overline: >
   Code & Productivity
-
-subtitle: >
-  Your Golang tests might perform better than you think.
-
-teaser: >
-  This article introduces you to the problem of reporting accurate code coverage
-  using the Go programming language, and offers a solution that runs on any
-  Operating System.
-
-category: Code & Productivity
 ---
 
 [Go](https://golang.org/), the programming language written and maintained by

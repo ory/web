@@ -1,16 +1,17 @@
 ---
-published: true
 path: '/web-api-cloud-access-control-authentication/'
 title: >
   Approaching Access Control on the Web
-metaTitle: >
-  Approaching Access Control on the Web: Authentication Overview
-metaDescription: >
-  Learn how to build future-proof, state of the art login, access control and
-  API security systems in this multipart series.
+  
+seo:
+  title: >
+    Approaching Access Control on the Web: Authentication Overview
+  description: >
+    Learn how to build future-proof, state of the art login, access control and
+    API security systems in this multipart series.
 
 publishedAt: '2018-08-08'
-author: 'Aeneas Rekkas'
+author: aeneasr
 overline: >
   The definitive guide to future-proof web & API-access control
 
@@ -20,7 +21,6 @@ teaser: >
   with setting up access control (authentication & authorization) for their web
   application.
 
-category: Article
 subtitle: HTTP Authentication (Part I)
 ---
 
