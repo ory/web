@@ -7,6 +7,7 @@ interface PropTypes {
   lang?: string
   meta?: any[]
   title: string
+  keywords?: string
 }
 
 const author = 'ORY'
@@ -26,6 +27,10 @@ const SEO = ({ description, lang = 'en', meta = [], title }: PropTypes) => (
       {
         name: `description`,
         content: description
+      },
+      {
+        name: `keywords`,
+        content: keywords
       },
       {
         property: `og:title`,

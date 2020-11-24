@@ -13,8 +13,8 @@ export default function BlogTemplate(props: any) {
   return (
     <Layout>
       <SEO
-        description={fn.seo.description || ''}
-        title={fn.seo.title}
+        description={fn.seo.description || fn.description}
+        title={fn.seo.title || fn.title}
         keywords={fn.seo.keywords}
       />
       <BlogHero
