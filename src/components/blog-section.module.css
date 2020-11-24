@@ -1,155 +1,117 @@
 @import '../styles/properties.css';
 
 .section {
-  padding: 64px 0;
+    padding: 32px 0;
+    background-color: var(--colors-base-white);
 
-  background-color: var(--colors-base-white);
-
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6,
-  & li,
-  & code,
-  & dl,
-  & dd,
-  & dt,
-  & p {
-    margin-top: 0;
-    color: var(--colors-base-dark);
-  }
-
-  & p,
-  & li {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 168%;
-    margin-top: 0;
-
-    & strong {
-      font-weight: 500;
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+        margin-top: 1rem;
     }
-  }
 
-  & pre {
-    margin-bottom: 32px !important;
-  }
+    & li,
+    & code,
+    & dl,
+    & dd,
+    & dt,
+    & p {
+        margin-top: 0;
+        color: var(--colors-base-black);
+    }
 
-  & p,
-  & ul,
-  & ol {
-    margin-bottom: 32px;
-  }
+    & p,
+    & li {
 
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6,
-  & li {
-    margin-bottom: 16px;
-  }
+        & strong {
+            font-weight: 500;
+        }
+    }
 
-  & h2 {
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 126%;
-  }
+    & pre {
+        margin-bottom: 32px !important;
+    }
 
-  & h3 {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 168%;
-  }
+    & p,
+    & ul,
+    & ol {
+        margin-bottom: 32px;
+    }
 
-  & h4 {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 168%;
-  }
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & li {
+        margin-bottom: 16px;
+    }
 
-  & h5 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 168%;
-  }
+    & p a {
+        transition: all ease 200ms;
+    }
 
-  & h6 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 168%;
-  }
+    & a:any-link {
+        color: var(--colors-themed-default);
+    }
 
-  & p a {
-    transition: all ease 200ms;
-  }
+    & p a:hover,
+    & p a:active {
+        color: var(--colors-base-black);
+        text-decoration: underline;
+    }
 
-  & a:any-link {
-    color: var(--colors-themed-default);
-  }
-
-  & p a:hover,
-  & p a:active {
-    color: var(--colors-base-dark);
-    text-decoration: underline;
-  }
-
-  & img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  & :not(pre) > code[class*='language-'] {
-    padding: 0 4px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 168%;
-    color: var(--colors-base-dark);
-    font-family: 'IBM Plex Mono', monospace;
-  }
-
-  & p + p {
-    margin-top: -16px;
-  }
-
-  & blockquote p {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 168%;
-    padding-left: 34px;
-    margin-bottom: 32px;
-    border-left: 2px solid var(--colors-themed-default);
-  }
-
-  & figure {
-    padding-top: 16px;
     & img {
-      margin-bottom: 16px;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
     }
 
-    & figcaption {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 168%;
-      margin-bottom: 32px;
+    & :not(pre) > code[class*='language-'] {
+        padding: 0 6px;
+        font-weight: 500;
+        word-break: break-all;
+        color: var(--colors-base-dark);
+        font-family: 'IBM Plex Mono', monospace;
     }
-  }
+
+    & blockquote {
+        margin: 2rem 0 3rem 0;
+        padding-left: 2rem;
+        border-left: 1px solid var(--colors-themed-default);
+    }
+
+    & blockquote p {
+        font-weight: 300;
+    }
+
+    & figure {
+        margin: 2rem 0 3rem 0;
+        padding-top: 16px;
+
+        & img {
+            margin-bottom: 16px;
+        }
+
+        & figcaption {
+            text-align: center;
+            color: var(--colors-base-grey);
+            font-size: 0.694rem;
+            margin-bottom: 32px;
+        }
+    }
 }
 
 @media (--sm-viewport) {
-  .section {
-    padding: 64px 0;
-  }
+    .section {
+        padding: 32px 0;
+    }
 }
 
 @media (--md-viewport) {
-  .section {
-    padding: 64px 0;
-  }
+    .section {
+        padding: 32px 0;
+    }
 }

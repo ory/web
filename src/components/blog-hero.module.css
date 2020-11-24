@@ -6,7 +6,7 @@
 
     & :global .container-fluid {
         position: relative;
-        padding: 96px 0;
+        padding: 96px 0 64px;
     }
 
     & h1 {
@@ -56,8 +56,9 @@
 
 @media (--sm-viewport) {
     .title {
+        border-bottom: 1px solid var(--colors-themed-default);
         & :global .container-fluid {
-            padding: 64px 0;
+            padding: 64px 0 16px;
         }
 
         & h2 {
@@ -75,7 +76,7 @@
 @media (--md-viewport) {
     .title {
         & :global .container-fluid {
-            padding: 64px 0;
+            padding: 64px 0 32px;
         }
 
         & h2 {
