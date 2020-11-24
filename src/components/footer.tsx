@@ -10,18 +10,18 @@ const comp = [
     items: [
       {
         title: 'About Us',
-        href: '/about',
+        href: '/about'
       },
       {
         title: 'Privacy',
-        href: 'https://www.ory.sh/privacy',
+        href: 'https://www.ory.sh/privacy'
       },
       {
         title: 'Terms',
-        href: 'https://www.ory.sh/tos',
-      },
-    ],
-  },
+        href: 'https://www.ory.sh/tos'
+      }
+    ]
+  }
 ]
 
 const menu = [
@@ -30,39 +30,39 @@ const menu = [
     items: [
       {
         title: 'Docs',
-        href: 'https://www.ory.sh/docs',
+        href: 'https://www.ory.sh/docs'
       },
       {
         title: 'Forum',
-        href: 'https://community.ory.sh/',
+        href: 'https://community.ory.sh/'
       },
       {
         title: 'Chat',
-        href: 'https://www.ory.sh/chat',
-      },
-    ],
+        href: 'https://www.ory.sh/chat'
+      }
+    ]
   },
   {
     title: 'GitHub',
     items: [
       {
         title: `${brandPrefix}Kratos`,
-        href: 'https://github.com/ory/kratos',
+        href: 'https://github.com/ory/kratos'
       },
       {
         title: `${brandPrefix}Hydra`,
-        href: 'https://github.com/ory/hydra',
+        href: 'https://github.com/ory/hydra'
       },
       {
         title: `${brandPrefix}Oathkeeper`,
-        href: 'https://github.com/ory/oathkeeper',
+        href: 'https://github.com/ory/oathkeeper'
       },
       {
         title: `${brandPrefix}Keto`,
-        href: 'https://github.com/ory/keto',
-      },
-    ],
-  },
+        href: 'https://github.com/ory/keto'
+      }
+    ]
+  }
 ]
 
 const Footer = () => (

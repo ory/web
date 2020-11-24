@@ -12,16 +12,16 @@ const defaultMenu: Menu = [
   { title: 'Jobs', href: 'https://github.com/ory/jobs' },
   {
     title: 'Support',
-    href: 'https://github.com/ory/open-source-support/blob/master/README.md',
-  },
+    href: 'https://github.com/ory/open-source-support/blob/master/README.md'
+  }
 ]
 
 const defaultIconMenu = ({
-  githubLink = 'https://github.com/ory',
+  githubLink = 'https://github.com/ory'
 }): IconMenu => [
   { title: 'Chat', href: 'https://www.ory.sh/chat' },
   { title: 'Forum', href: 'https://community.ory.sh/' },
-  { title: 'GitHub', href: githubLink },
+  { title: 'GitHub', href: githubLink }
 ]
 
 const Layout = ({
@@ -31,7 +31,7 @@ const Layout = ({
   announcement,
   appendix = '',
   theme = 'default',
-  githubLink,
+  githubLink
 }: {
   children: ReactNode
   menu?: Menu

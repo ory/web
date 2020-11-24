@@ -6,7 +6,7 @@ import * as styles from './codebox.module.css'
 export enum Languages {
   HTML = 'html',
   YML = 'yml',
-  JavaScript = 'javascript',
+  JavaScript = 'javascript'
   // Shell = 'shell-session',
 }
 
@@ -28,12 +28,12 @@ interface StateTypes {
 class CodeBox extends Component<PropTypes, StateTypes> {
   state = {
     active: 0,
-    tabs: [],
+    tabs: []
   }
 
   componentDidMount() {
     this.setState({
-      tabs: this.props.tabs.map(this.highlight),
+      tabs: this.props.tabs.map(this.highlight)
     })
   }
 
@@ -48,7 +48,7 @@ class CodeBox extends Component<PropTypes, StateTypes> {
         tab.code,
         Prism.languages[tab.language],
         tab.language
-      ),
+      )
     }
   }
 
@@ -67,7 +67,7 @@ class CodeBox extends Component<PropTypes, StateTypes> {
               <div
                 key={filename}
                 className={cn(styles.tab, {
-                  [styles.selected]: index === this.state.active,
+                  [styles.selected]: index === this.state.active
                 })}
                 onClick={this.onSelectTab(index)}
               >
@@ -81,7 +81,7 @@ class CodeBox extends Component<PropTypes, StateTypes> {
             <pre
               key={filename}
               className={cn(`language-${language}`, {
-                [styles.active]: index === this.state.active,
+                [styles.active]: index === this.state.active
               })}
             >
               <code dangerouslySetInnerHTML={{ __html: `${code}` }} />

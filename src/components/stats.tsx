@@ -41,7 +41,7 @@ const analyze = (raw: string): Promise<number[][]> =>
       // Remove dupes, transform dates to integer keys
       data = uniq(data).map((v: any) => [
         new Date(v[0]).getTime(),
-        parseInt(v[1]),
+        parseInt(v[1])
       ])
 
       resolve(data)
@@ -66,18 +66,18 @@ const stats = (state: StateTypes) => [
   {
     title: 'Requests secured',
     amount: state.requests.amount,
-    description: `in ${dateformat(state.requests.date, 'mmmm yyyy')}`,
+    description: `in ${dateformat(state.requests.date, 'mmmm yyyy')}`
   },
   {
     title: 'Docker pulls',
     amount: countDockerImagePulls(state),
-    description: 'Overall',
+    description: 'Overall'
   },
   {
     title: 'GitHub stars',
     amount: countGitHubStars(state),
-    description: 'Overall',
-  },
+    description: 'Overall'
+  }
 ]
 
 interface PropTypes {}
@@ -132,7 +132,7 @@ class Stats extends Component<PropTypes, StateTypes> {
       'oryd/kratos': 4109,
       'oryd/hydra-maester': 80570,
       'oryd/hydra-login-consent-node': 24175,
-      'oryd/oathkeeper-maester': 76182,
+      'oryd/oathkeeper-maester': 76182
     },
     github: {
       hydra: 8154,
@@ -144,8 +144,8 @@ class Stats extends Component<PropTypes, StateTypes> {
       kratos: 379,
       docs: 17,
       examples: 107,
-      'hydra-login-consent-node': 125,
-    },
+      'hydra-login-consent-node': 125
+    }
   }
 
   fetchGitHubStars = (repo: GitHubRepos) => {
@@ -157,8 +157,8 @@ class Stats extends Component<PropTypes, StateTypes> {
         this.setState(state => ({
           github: {
             ...state.github,
-            [repo]: stargazers_count,
-          },
+            [repo]: stargazers_count
+          }
         }))
       })
       .catch(err =>
@@ -177,8 +177,8 @@ class Stats extends Component<PropTypes, StateTypes> {
         this.setState(state => ({
           docker: {
             ...state.docker,
-            [repo]: pull_count,
-          },
+            [repo]: pull_count
+          }
         }))
       })
       .catch(err =>
@@ -192,7 +192,7 @@ class Stats extends Component<PropTypes, StateTypes> {
     Promise.all([
       analyze(csvHydraHitsPerMonth),
       analyze(csvOathkeeperHitsPerMonth),
-      analyze(csvKetoHitsPerMonth),
+      analyze(csvKetoHitsPerMonth)
     ]).then((services: number[][][]) => {
       const requests: { [key: number]: number } = {}
 
@@ -217,8 +217,8 @@ class Stats extends Component<PropTypes, StateTypes> {
         return {
           requests: {
             amount: max[1],
-            date: new Date(max[0]),
-          },
+            date: new Date(max[0])
+          }
         }
       })
     })

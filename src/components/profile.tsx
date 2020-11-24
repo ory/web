@@ -16,7 +16,7 @@ interface PropTypes {
 export enum SocialNetworks {
   twitter,
   github,
-  linkedin,
+  linkedin
 }
 
 type SocialLinks = {
@@ -45,7 +45,7 @@ const socialWithIcon = ({ href, network }: SocialLinks) => {
   return {
     href,
     icon,
-    alt,
+    alt
   }
 }
 

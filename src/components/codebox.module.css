@@ -59,7 +59,9 @@
 
   &,
   & pre,
-  & code {
+  & code,
+  & pre[class*='language'] > code[class*='language'],
+  & pre > code {
     color: var(--colors-base-light);
     font-family: 'IBM Plex Mono', monospace;
     text-shadow: none;

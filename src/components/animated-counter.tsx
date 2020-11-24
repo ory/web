@@ -13,7 +13,7 @@ interface StateTypes {
 
 class AnimatedCounter extends Component<PropTypes, StateTypes> {
   state = {
-    visible: false,
+    visible: false
   }
 
   onChange = (visible: boolean) => {

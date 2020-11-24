@@ -11,7 +11,7 @@ const projects = {
   kratos: '&group[17097][4]=1',
   hydra: '&group[17097][8]=1',
   oathkeeper: '&group[17097][16]=1',
-  keto: '&group[17097][32]=1',
+  keto: '&group[17097][32]=1'
 }
 
 interface PropTypes {

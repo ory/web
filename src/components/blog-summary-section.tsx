@@ -20,7 +20,7 @@ type Edge = {
 const BlogSummarySection = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
+      allMdx(
         filter: {
           fileAbsolutePath: { regex: "/blog/" }
           frontmatter: { published: { eq: true } }
@@ -44,7 +44,7 @@ const BlogSummarySection = () => {
     }
   `)
 
-  const posts = (data.allMarkdownRemark.edges as Edge[]).map(({ node }) => node)
+  const posts = (data.allMdx.edges as Edge[]).map(({ node }) => node)
   return (
     <div className={cn(styles.blogSummary)}>
       <div className="container-fluid">
@@ -59,7 +59,7 @@ const BlogSummarySection = () => {
               ({
                 id,
                 excerpt,
-                frontmatter: { title, overline, teaser, path },
+                frontmatter: { title, overline, teaser, path }
               }) => (
                 <Link key={id} to={path} className={cn(styles.blogBox)}>
                   <h4 className={cn('col-lg-offset-1 col-lg-10')}>{title}</h4>

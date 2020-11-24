@@ -23,6 +23,10 @@
   align-items: flex-end;
 }
 
+.justify-center-sm {
+  justify-content: center;
+}
+
 @media (--mobile-viewport) {
   .mobile-offset-64 {
     margin-top: 64px !important;

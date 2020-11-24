@@ -38,7 +38,7 @@ const IntegrationCodeBox = () => (
         remember: true
     }),
 })
-    .then((res) => res.json())`,
+    .then((res) => res.json())`
       },
       {
         filename: 'consent.js',
@@ -54,8 +54,8 @@ const IntegrationCodeBox = () => (
         }
     }),
 })
-    .then((res) => res.json())`,
-      },
+    .then((res) => res.json())`
+      }
     ]}
   />
 )
@@ -82,13 +82,13 @@ const HydraPage = () => (
         {
           title: 'Get started',
           href: 'https://www.ory.sh/docs/hydra/5min-tutorial',
-          style: 'primary',
+          style: 'primary'
         },
         {
           title: 'GitHub',
           href: 'https://github.com/ory/hydra',
-          style: 'secondary',
-        },
+          style: 'secondary'
+        }
       ]}
       visual={<HydraAnimation />}
       mobile={[<HydraAnimation />]}
@@ -131,7 +131,7 @@ const HydraPage = () => (
             <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
             more.{' '}
           </p>
-        </div>,
+        </div>
       ]}
     />
 
@@ -158,7 +158,7 @@ const HydraPage = () => (
           the login experience. Our{' '}
           <a href="https://www.ory.sh/docs/hydra/sdk/">documentation</a> makes
           integrating {brandPrefix}Hydra a snap.
-        </p>,
+        </p>
       ]}
     />
 

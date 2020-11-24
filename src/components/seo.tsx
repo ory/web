@@ -14,7 +14,7 @@ const author = 'ORY'
 const SEO = ({ description, lang = 'en', meta = [], title }: PropTypes) => (
   <Helmet
     htmlAttributes={{
-      lang,
+      lang
     }}
     title={title}
     titleTemplate={`%s${
@@ -25,36 +25,36 @@ const SEO = ({ description, lang = 'en', meta = [], title }: PropTypes) => (
     meta={[
       {
         name: `description`,
-        content: description,
+        content: description
       },
       {
         property: `og:title`,
-        content: title,
+        content: title
       },
       {
         property: `og:description`,
-        content: description,
+        content: description
       },
       {
         property: `og:type`,
-        content: `website`,
+        content: `website`
       },
       {
         name: `twitter:card`,
-        content: `summary`,
+        content: `summary`
       },
       {
         name: `twitter:creator`,
-        content: author,
+        content: author
       },
       {
         name: `twitter:title`,
-        content: title,
+        content: title
       },
       {
         name: `twitter:description`,
-        content: description,
-      },
+        content: description
+      }
     ].concat(meta)}
   />
 )

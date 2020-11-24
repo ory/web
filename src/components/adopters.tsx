@@ -17,65 +17,65 @@ const adopters = [
   {
     title: 'Tulip Retail',
     image: tulip,
-    url: 'https://tulip.com/',
+    url: 'https://tulip.com/'
   },
   {
     title: 'ThoughtWorks',
     image: thoughtworks,
     url: 'https://www.thoughtworks.com',
-    featured: true,
+    featured: true
   },
   {
     title: 'Segment',
     image: segment,
     url: 'https://segment.com/',
-    featured: true,
+    featured: true
   },
   {
     title: 'All My Funds',
     image: allmyfunds,
-    url: 'https://cashdeck.com.au/',
+    url: 'https://cashdeck.com.au/'
   },
   {
     title: 'Raspberry Pi',
     image: raspberrypi,
     url: 'https://www.raspberrypi.org/',
-    featured: true,
+    featured: true
   },
   {
     title: 'Arduino',
     image: arduino,
     url: 'https://arduino.cc/',
-    featured: true,
+    featured: true
   },
   {
     title: 'Hootsuite',
     image: hootsuite,
     url: 'https://hootsuite.com',
-    featured: true,
+    featured: true
   },
   {
     title: '3REIN',
     image: threerein,
     url: 'https://3rein.com/',
-    featured: true,
+    featured: true
   },
   {
     title: 'Kyma Project',
     image: kyma,
     url: 'https://kyma-project.io/',
-    featured: true,
+    featured: true
   },
   {
     title: 'Spiribo',
     image: spiribo,
-    url: 'https://www.spiri.bo/',
+    url: 'https://www.spiri.bo/'
   },
   {
     title: 'Data Detect',
     image: datadetect,
-    url: 'https://unifiedglobalarchiving.com/data-detect/',
-  },
+    url: 'https://unifiedglobalarchiving.com/data-detect/'
+  }
 ]
 
 interface PropTypes {

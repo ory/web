@@ -160,7 +160,7 @@ const auth = {
     } else {
       next()
     }
-  },
+  }
 }
 ```
 

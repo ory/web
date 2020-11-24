@@ -21,7 +21,7 @@ const CallToActionButton = ({
   title,
   href,
   style = 'secondary',
-  openInNewWindow = false,
+  openInNewWindow = false
 }: CallToAction) => (
   <a
     key={title}
@@ -39,14 +39,14 @@ const CompressedHero = ({
   subtitle,
   cta,
   visual,
-  mobile = [],
+  mobile = []
 }: PropTypes) => (
   <div className={cn(styles.compressedHero)}>
     <div className="container-fluid">
       <div
         className={cn('row middle-sm', {
           'hidden-sm': mobile.length > 0,
-          'hidden-md': mobile.length > 0,
+          'hidden-md': mobile.length > 0
         })}
       >
         <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">

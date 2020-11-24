@@ -15,7 +15,7 @@ interface StateTypes {
 
 class MobileMenu extends Component<PropTypes, StateTypes> {
   state = {
-    open: false,
+    open: false
   }
 
   toggle = () => {
