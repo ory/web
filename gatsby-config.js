@@ -92,7 +92,6 @@ module.exports = {
             options: {
               tag: ":::",
               icons: "svg"
-
             }
           }
         ]

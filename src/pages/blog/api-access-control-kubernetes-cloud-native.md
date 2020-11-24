@@ -2,9 +2,15 @@
 published: true
 path: '/api-access-control-kubernetes-cloud-native/'
 title: 'Zero Trust API Access Control on Kubernetes'
-metaTitle: 'Zero Trust API Access Control on Kubernetes'
 publishedAt: '2018-08-18'
 author: 'Aeneas Rekkas'
+
+seo:
+  title: |
+    Zero Trust API Access Control on Kubernetes
+  description: |
+    Control access to your APIs with cloud native ORY Oathkeeper and the
+    Ambassador Reverse Proxy on Kubernetes.
 
 subtitle: >
   With Ambassador and ORY Oathkeeper (Part I)
@@ -17,9 +23,6 @@ teaser: >
   Ambassador Reverse Proxy on Kubernetes.
 
 metaDescription: >
-  Control access to your APIs with cloud native ORY Oathkeeper and the
-  Ambassador Reverse Proxy on Kubernetes.
-
 category: Tutorial
 ---
 
