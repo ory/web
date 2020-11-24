@@ -39,7 +39,7 @@ first.
 
 If you are looking for the **solution only, run this:**
 
-```shell
+```shell-session
 # Download and install go-acc
 $ go get -u github.com/ory/go-acc
 
@@ -128,7 +128,7 @@ Let's use `-covermod=atomic` to get a report of how well the tests cover the
 code. We expect 100% code coverage because every line is being touched by the
 tests:
 
-```shell
+```shell-session
 $ go get -d -u github.com/arekkas/accurate-test-coverage
 $ go test -covermode=atomic \
     github.com/arekkas/accurate-test-coverage/...
@@ -143,7 +143,7 @@ reports on code that doesn't belong to the package currently being tested. Of
 course, Go has a flag for that, it's called `-coverpkg`. This flag accepts a
 list of packages to consider while computing code coverage:
 
-```shell
+```shell-session
 $ go test -covermode=atomic \
     -coverpkg $(go list github.com/arekkas/accurate-test-coverage/...) \
     github.com/arekkas/accurate-test-coverage/...
@@ -161,7 +161,7 @@ How about getting some nice code coverage reporting using, for example,
 [coveralls.io](https://coveralls.io/) ? Since `go test` supports writing the
 coverage report to a file using `-coverprofile`, this should be an easy one:
 
-```shell
+```shell-session
 $ go test -covermode=atomic \
     -coverprofile=coverage.tmp \
     -coverpkg $(go list github.com/arekkas/accurate-test-coverage/...) \
@@ -171,8 +171,8 @@ cannot use test profile flag with multiple packages
 ```
 
 <video autoplay muted loop>
-  <source src="../../images/articles/code-coverage/tableflip.mp4" type="video/mp4">
-  <source src="../../images/articles/code-coverage/tableflip.webm" type="video/webm">
+  <source src="../../images/articles/code-coverage/tableflip.mp4" type="video/mp4"/>
+  <source src="../../images/articles/code-coverage/tableflip.webm" type="video/webm"/>
   <img src="../../images/articles/code-coverage/tableflip.gif" alt="Tableflip" />
 </video>
 
@@ -181,7 +181,7 @@ multiple packages into one report. Thus, what needs to be done is loop through
 all the packages, and merge the outputs into one. Doing this either requires
 some bash magic (which does not work on windows), or `go-acc`:
 
-```shell
+```shell-session
 # Download and install go-acc
 $ go get -u github.com/ory/go-acc
 
@@ -197,7 +197,7 @@ $ go-acc $(glide novendor)
 
 Now, let's run this against the package from above:
 
-```shell
+```shell-session
 $ go get -d -u github.com/arekkas/accurate-test-coverage/...
 $ go-acc github.com/arekkas/accurate-test-coverage/...
 

@@ -115,7 +115,7 @@ we will be using in this post.
 
 The first step is confirming that `kubectl` is set up properly:
 
-```shell
+```shell-session
 $ kubectl get service kubernetes
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   21m
@@ -130,7 +130,7 @@ were correct as of publication in August 2018).
 To deploy Ambassador in your default namespace, first you need to check if
 Kubernetes has RBAC enabled:
 
-```shell
+```shell-session
 $ kubectl cluster-info dump --namespace kube-system | grep authorization-mode
 ```
 
@@ -142,19 +142,19 @@ for all new clusters), you will need to grant permissions to the account that
 will be setting up Ambassador. To do this, get your official GKE username, and
 then grant cluster-admin role privileges to that username:
 
-```shell
+```shell-session
 $ kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud info --format="value(config.account)")
 ```
 
 If RBAC is enabled:
 
-```shell
+```shell-session
 $ kubectl apply -f https://getambassador.io/yaml/ambassador/ambassador-rbac.yaml
 ```
 
 Without RBAC, you can use:
 
-```shell
+```shell-session
 $ kubectl apply -f https://getambassador.io/yaml/ambassador/ambassador-no-rbac.yaml
 ```
 
@@ -179,7 +179,7 @@ spec:
 
 Deploy this service with `kubectl`:
 
-```shell
+```shell-session
 $ kubectl apply -f ambassador-service.yaml
 ```
 
@@ -216,7 +216,7 @@ spec:
 
 Then, apply it to the Kubernetes with `kubectl`:
 
-```shell
+```shell-session
 $ kubectl apply -f httpbin.yaml
 ```
 
@@ -237,7 +237,7 @@ external services.
 To test things out, we'll need the external IP for Ambassador (it might take
 some time for this to be available):
 
-```shell
+```shell-session
 $ kubectl get svc -o wide ambassador
 ```
 
@@ -250,7 +250,7 @@ ambassador   10.11.12.13     35.36.37.38     80:31656/TCP   1m
 
 You should now be able to use curl to httpbin:
 
-```shell
+```shell-session
 $ curl 35.36.37.38/httpbin/ip
 {
   "origin": "< your IP address >"
@@ -259,7 +259,7 @@ $ curl 35.36.37.38/httpbin/ip
 
 or on **minikube**:
 
-```shell
+```shell-session
 $ minikube service list
 |-------------|----------------------|------------------------------|
 |  NAMESPACE  |         NAME         |             URL              |
@@ -277,7 +277,7 @@ $ curl http://192.168.178.108:32548/httpbin/ip
 When you have found your Ambassador IP, I would recommend placing this into an
 appropriate variable e.g.
 
-```shell
+```shell-session
 $ export AMBASSADOR_IP=192.168.178.108:30428
 ```
 
@@ -329,7 +329,7 @@ tutorial, we will exclusively look at the API operation mode.
 First we need to create a secret which will be used to sign the ID Token. The
 secret must be 32 characters long:
 
-```shell
+```shell-session
 $ kubectl create secret generic ory-oathkeeper --from-literal=CREDENTIALS_ISSUER_ID_TOKEN_HS256_SECRET=<your-secret>
 # For example:
 # $ kubectl create secret generic ory-oathkeeper --from-literal=CREDENTIALS_ISSUER_ID_TOKEN_HS256_SECRET=dYmTueb6zg8TphfZbOUpOewd0gt7u0SH
@@ -337,7 +337,7 @@ $ kubectl create secret generic ory-oathkeeper --from-literal=CREDENTIALS_ISSUER
 
 Next, deploy the ORY Oathkeeper Service and Deployment in “API mode”.
 
-```shell
+```shell-session
 $ kubectl apply -f https://raw.githubusercontent.com/ory/k8s/master/yaml/oathkeeper/simple/oathkeeper-api.yaml
 ```
 
@@ -352,7 +352,7 @@ available from the Kubernetes-internal network.
 But we want the service to be accessible from the outside world as well! To do
 that we’ll fetch the yaml definition
 
-```shell
+```shell-session
 $ wget https://raw.githubusercontent.com/ory/k8s/master/yaml/oathkeeper/simple/oathkeeper-api.yaml
 ```
 
@@ -427,7 +427,7 @@ spec:
 
 Let’s re-apply the configuration:
 
-```shell
+```shell-session
 $ kubectl apply -f oathkeeper-api.yaml
 ```
 
@@ -435,7 +435,7 @@ Now you can check if the ORY Oathkeeper is alive via the Ambassador route you
 have created, and you can also list all access rules via the Oathkeeper CLI you
 downloaded earlier (for now just an empty array):
 
-```shell
+```shell-session
 $ curl  http://${AMBASSADOR_IP}/ory-oathkeeper/health/alive
 {"status":"ok"}
 
@@ -447,7 +447,7 @@ Next, we will define an access rule for accessing ORY Oathkeeper’s API. To kee
 things simple, we will require no authentication or authorization to access the
 API. Let’s echo to a new file _access-rule-oathkeeper.json_:
 
-```shell
+```shell-session
 cat <<EOT > access-rule-oathkeeper.json
 [{
   "id": "oathkeeper-access-rule",
@@ -474,7 +474,7 @@ set up a more sophisticated rule in the next sections.
 
 Let’s import this rule into ORY Oathkeeper:
 
-```shell
+```shell-session
 $ oathkeeper rules --endpoint  http://${AMBASSADOR_IP}/ory-oathkeeper import access-rule-oathkeeper.json
 ```
 
@@ -530,13 +530,13 @@ spec:
 
 And re-apply the configuration:
 
-```shell
+```shell-session
 $ kubectl apply -f oathkeeper-api.yaml
 ```
 
 If you retry the command from earlier
 
-```shell
+```shell-session
 $ oathkeeper rules --endpoint  http://${AMBASSADOR_IP}/ory-oathkeeper list
 [{
   "authenticators": [{ "handler": "noop" } ],
@@ -547,7 +547,7 @@ You will notice that the request passes and you will also see the access rule
 you just created! Now, if you try to call the httpbin service, the request will
 fail with a 404 because no access rule has been configured for this service:
 
-```shell
+```shell-session
 $ curl http://${AMBASSADOR_IP}/httpbin/
 {"error":{"code":404,"status":"Not Found","request":"84a2b164-7229-4f69-a0cd-227611c07128","message":"Requested url does not match any rules"}}
 ```
@@ -556,7 +556,7 @@ Let’s change that by creating a simple access rule in file
 _access-rule-httpbin.json_ for the _httpbin_ service (Don’t forget to replace
 the URL with your Ambassador IP and port number):
 
-```shell
+```shell-session
 cat <<EOT > access-rule-httpbin.json
 [{
   "id": "httpbin-access-rule",
@@ -575,7 +575,7 @@ The access rule is very similar to the one we created for ORY Oathkeeper. This
 time however, we are using a simple authorizer that denies all requests. Let’s
 import the rule and see what happens when we request the _httpbin_ service.
 
-```shell
+```shell-session
 $ oathkeeper rules --endpoint  http://${AMBASSADOR_IP}/ory-oathkeeper import access-rule-httpbin.json
 
 $ curl http://${AMBASSADOR_IP}/httpbin/
@@ -585,7 +585,7 @@ $ curl http://${AMBASSADOR_IP}/httpbin/
 Ok, so authorization was not granted. Let’s update the rule and allow all
 requests:
 
-```shell
+```shell-session
 cat <<EOT > access-rule-httpbin.json
 [{
   "id": "httpbin-access-rule",
@@ -602,7 +602,7 @@ EOT
 
 Import the file again and execute curl:
 
-```shell
+```shell-session
 $ oathkeeper rules --endpoint  http://${AMBASSADOR_IP}/ory-oathkeeper import access-rule-httpbin.json
 
 $ curl http://${AMBASSADOR_IP}/httpbin/
