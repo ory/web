@@ -1,15 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import fetch from 'node-fetch'
-import { Languages } from './codebox'
 import Prism from 'prismjs'
-import { graphql, StaticQuery, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 interface Props {
   src: string
-  lang: Languages
-  title: string,
   startAt?: string
   endAt?: string
+}
+
+const detectLanguage = (src: string) => {
+  const ext = src.split('.').pop()
+  switch (ext) {
+    case 'jsx':
+      return 'jsx'
+    case 'tsx':
+      return 'tsx'
+    case 'ts':
+      return 'typescript'
+    case 'go':
+      return 'go'
+    case 'yaml':
+    case 'yml':
+      return 'yaml'
+    case 'js':
+      return 'javascript'
+    case 'html':
+      return 'html'
+    case 'pug':
+      return 'pug'
+    default:
+      return ext
+  }
 }
 
 const findLine = (needle: string | undefined, haystack: string[]) => {
@@ -17,8 +39,7 @@ const findLine = (needle: string | undefined, haystack: string[]) => {
     return 0
   }
 
-  const index = haystack.findIndex((s) =>
-    s.indexOf(needle) > -1)
+  const index = haystack.findIndex((s) => s.indexOf(needle) > -1)
 
   if (index === -1) {
     return 0
@@ -27,22 +48,27 @@ const findLine = (needle: string | undefined, haystack: string[]) => {
   return index
 }
 
-const transform = (
-  { lang, startAt, endAt }: Props
-) => (content: string) => {
-  const lines = content.split('\n')
+const transform = ({ startAt, endAt, src }: Props) => (content: string) => {
+  let lines = content.split('\n')
   let startIndex = findLine(startAt, lines)
   let endIndex = findLine(endAt, lines)
 
+  if (endAt) {
+    lines.splice(endIndex, -1)
+    lines.push('', '// ...')
+  }
+
   if (startAt) {
     lines.splice(0, startIndex)
+    lines.unshift('// ...', '')
   }
 
-  if (endAt) {
-    lines.splice(endIndex - startIndex)
-  }
-
-  return Prism.highlight(lines.join('\n'), Prism.languages[lang], lang)
+  const lang = detectLanguage(src)
+  return Prism.highlight(
+    lines.join('\n'),
+    Prism.languages[lang as any],
+    lang as any
+  )
 }
 
 const initialState = (props: Props, { allRemoteFile: { nodes } }: any) => {
@@ -60,18 +86,21 @@ const initialState = (props: Props, { allRemoteFile: { nodes } }: any) => {
 }
 
 const CodeFromRemote = (props: Props) => {
-  const { lang } = props
-
-  const [content, setContent] = useState(initialState(props, useStaticQuery(graphql`
-    {
-      allRemoteFile {
-        nodes {
-          url
-          content
+  const [content, setContent] = useState(
+    initialState(
+      props,
+      useStaticQuery(graphql`
+        {
+          allRemoteFile {
+            nodes {
+              url
+              content
+            }
+          }
         }
-      }
-    }
-  `)))
+      `)
+    )
+  )
 
   useEffect(() => {
     const location = props.src
@@ -84,6 +113,7 @@ const CodeFromRemote = (props: Props) => {
       .catch(console.error)
   }, [])
 
+  const lang = detectLanguage(props.src)
   return (
     <div className="gatsby-highlight" data-language={lang}>
       <pre className={`language-${lang}`}>
