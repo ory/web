@@ -29,10 +29,9 @@ import registration from '../../images/articles/react-native/registration.png'
 import dashboard from '../../images/articles/react-native/dashboard.png'
 import settings from '../../images/articles/react-native/settings.png'
 
-This guide explains how to implement login, registration, logout, profile
+This guide explains step-by-step how to implement login, registration, logout, profile
 management, password change, and many other profile-related flows in React
-Native using the open source [ORY Kratos](https://www.ory.sh/kratos) project
-step-by-step.
+Native using the open source [ORY Kratos](https://www.ory.sh/kratos) project.
 
 <div className="container-fluid">
   <div className="row justify-center-sm">
@@ -196,7 +195,7 @@ structure of the application - including the navigation:
 />
 
 The most interesting component here is probably the `<AuthProvider>`. This
-components adds an authentication / login context to the React Native component
+component adds an authentication / login context to the React Native component
 tree:
 
 <CodeFromRemote
@@ -223,7 +222,7 @@ fallback:
 That's all the magic! Everything else is handled by
 [ORY Kratos' Session Token](https://www.ory.sh/kratos/docs/guides/login-session).
 
-We now have a place to store and refresh the user session. And we have a way to
+We now have a place to store and refresh the user session. In addition, we have a way to
 see if the user session is still active in the navigation and show the dashboard
 or login / registration screens:
 
@@ -241,8 +240,8 @@ renderer for every component, including styling, we abstracted the form
 rendering into their own components, which you can find in
 [`src/components/Form`](https://github.com/ory/kratos-selfservice-ui-react-native/tree/master/src/components/Form).
 
-There isn't anything special happening there, but you can give it a look if you
-intend on changing the layout for example.
+There isn't anything special happening there, but you can have a look if you
+intend to change the layout for example.
 
 ### Login Navigation Component
 
@@ -294,7 +293,7 @@ The User Settings component performs a
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Settings.tsx"
 />
 
-## Writing Login and Registration React Native App From Scratch
+## Writing Login and Registration for a React Native App From Scratch
 
 Using a template is the easiest way to get started. If you wish to understand
 how everything works however, let's have a look at the project set up process!
