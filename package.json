@@ -82,6 +82,7 @@
     "typed-css-modules": "~0.6.4",
     "typed-css-modules-loader": "~0.0.18",
     "typed-css-modules-webpack-plugin": "~0.2.0",
+    "typescript": "^4.1.2",
     "use-sse": "^2.0.0"
   },
   "devDependencies": {
