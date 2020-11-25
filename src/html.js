@@ -20,6 +20,25 @@ import icon15 from './images/icon/mstile-150x150.png'
 import icon16 from './images/icon/mstile-310x150.png'
 import icon17 from './images/icon/mstile-310x310.png'
 
+import 'normalize.css'
+import 'remark-admonitions/styles/classic.css'
+import 'prismjs/themes/prism.css'
+
+import './styles/themes/default.css'
+import './styles/global.css'
+import './styles/grid.css'
+import './styles/typography.css'
+
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-pug'
+import 'prismjs/components/prism-go'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-shell-session'
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>

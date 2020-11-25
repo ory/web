@@ -91,8 +91,8 @@ This guide covers how you would start such a project from scratch.
 ## Auth, Login, Registration, User Management React Native Template for Expo
 
 This guide assumes that you have worked with React and React Native before as we
-will not cover React fundamentals and focus on implementing login,
-registration and so on.
+will not cover React fundamentals and focus on implementing login, registration
+and so on.
 
 To make things a bit easier, we will use [`expo`](https://expo.io). At a
 minimum, you need NodeJS and NPM installed locally. We will use the ORY Kratos
@@ -201,9 +201,8 @@ structure of the application - including the navigation:
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/App.tsx"
 />
 
-The most interesting component here is the `<AuthProvider>`. This
-component adds an authentication / login context to the React Native component
-tree:
+The most interesting component here is the `<AuthProvider>`. This component adds
+an authentication / login context to the React Native component tree:
 
 <CodeFromRemote
   lang="tsx"
@@ -227,8 +226,9 @@ as a fallback:
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/auth.tsx"
 />
 
-That's all it takes to make the magic happen! Everything else is handled by
-The [ORY Kratos' Session Token](https://www.ory.sh/kratos/docs/guides/login-session) handles everything else.
+That's all it takes to make the magic happen! Everything else is handled by The
+[ORY Kratos' Session Token](https://www.ory.sh/kratos/docs/guides/login-session)
+handles everything else.
 
 We now have a place to store and refresh the user session. In addition, we have
 a way to see if the user session is still active in the navigation and show the
