@@ -50,10 +50,9 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             <h1>{title}</h1>
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.info}>
-              {date} -{' '}
               <span className={styles.author}>
                 <Author author={author} />
-              <br />
+                <br />
                 {date}
               </span>
             </p>

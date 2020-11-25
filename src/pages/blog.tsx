@@ -40,7 +40,7 @@ const BlogPostsPage = ({
       <div className={styles.postList}>
         {edges.map(({ node }: any) => (
           <div key={node.id} className={styles.postItem}>
-            <Post node={node}/>
+            <Post node={node} />
           </div>
         ))}
       </div>
