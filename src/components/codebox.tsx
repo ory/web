@@ -7,7 +7,6 @@ export enum Languages {
   HTML = 'html',
   YML = 'yml',
   JavaScript = 'javascript'
-  // Shell = 'shell-session',
 }
 
 interface Tab {
