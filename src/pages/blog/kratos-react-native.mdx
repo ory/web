@@ -21,18 +21,6 @@ author: aeneasr
 
 overline: |
   React Native Authentication
-
-prefetch:
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/App.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/AuthProvider.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/auth.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Navigation.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Login.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Registration.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Home.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Settings.tsx
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/app.config.js
-  - https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/sdk.tsx
 ---
 
 import CodeFromRemote from '../../components/codefromremote'
@@ -92,7 +80,7 @@ flows.
 
 If you just want to check out the app, download it from the
 [Apple App Store](https://apps.apple.com/fj/app/ory-profile-app/id1536546333) or
-the Google App Store (to be released soon)! You can also check out the source
+the [Google Play Store](https://play.google.com/store/apps/details?id=com.ory.kratos_self_service_ui_react_native)! You can also check out the source
 code of our
 [ORY Kratos React Native reference implementation](https://github.com/ory/kratos-selfservice-ui-react-native).
 This guide covers how you would start such a project from scratch.
@@ -203,7 +191,8 @@ structure of the application - including the navigation:
 <CodeFromRemote
   lang="javascript"
   title="App.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/App.tsx#L37-L9999"
+  startAt="export default"
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/App.tsx"
 />
 
 The most interesting component here is probably the `<AuthProvider>`. This
@@ -213,7 +202,8 @@ tree:
 <CodeFromRemote
   lang="javascript"
   title="src/components/AuthProvider.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/AuthProvider.tsx#L34-L9999"
+  startAt="export default"
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/AuthProvider.tsx"
 />
 
 The helper methods in
@@ -226,7 +216,8 @@ fallback:
 <CodeFromRemote
   lang="javascript"
   title="src/helpers/auth.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/auth.tsx#L20-L9999"
+  startAt="// getAuthenticatedSession"
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/auth.tsx"
 />
 
 That's all the magic! Everything else is handled by
@@ -239,6 +230,7 @@ or login / registration screens:
 <CodeFromRemote
   lang="javascript"
   title="src/components/Navigation.tsx"
+  startAt="export default"
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Navigation.tsx#L39-L9999"
 />
 
@@ -260,7 +252,8 @@ The User Login component uses the ORY Kratos TypeScript SDK and the
 <CodeFromRemote
   lang="javascript"
   title="src/components/Routes/Login.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Login.tsx#L19-L9999"
+  startAt="const Login ="
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Login.tsx"
 />
 
 ### Registration Navigation Component
@@ -271,7 +264,8 @@ The User Registration component performs a
 <CodeFromRemote
   lang="javascript"
   title="src/components/Routes/Registration.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Registration.tsx#L18-L9999"
+  startAt="const Registration ="
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Registration.tsx"
 />
 
 ### Home Navigation Component
@@ -284,7 +278,8 @@ Management check out the
 <CodeFromRemote
   lang="javascript"
   title="src/components/Routes/Home.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Home.tsx#L8-L9999"
+  startAt="const Home ="
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Home.tsx"
 />
 
 ### Settings Navigation Component
@@ -294,8 +289,9 @@ The User Settings component performs a
 
 <CodeFromRemote
   lang="javascript"
-  title="src/components/Routes/Registration.tsx"
-  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Settings.tsx#L21-L9999"
+  title="src/components/Routes/Settings.tsx"
+  startAt="const Settings ="
+  src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Settings.tsx"
 />
 
 ## Writing Login and Registration React Native App From Scratch
