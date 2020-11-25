@@ -1,13 +1,4 @@
 import React, { ReactNode } from 'react'
-import { CookieBanner } from '@palmabit/react-cookie-law'
-
-// DO NOT CHANGE THE ORDER OF THESE
-import 'normalize.css'
-import '../styles/themes/default.css'
-import '../styles/global.css'
-import '../styles/grid.css'
-import '../styles/typography.css'
-// DO NOT CHANGE THE ORDER OF THESE
 
 import { Menu, IconMenu } from './header'
 import Header from './header'
@@ -15,22 +6,32 @@ import Announcement from './announcement'
 import Footer from './footer'
 import GDPR from './gdpr'
 
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-pug'
+import 'prismjs/components/prism-go'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-shell-session'
+
 const defaultMenu: Menu = [
   { title: 'Docs', href: '/docs' },
   { title: 'Blog', path: '/blog' },
   { title: 'Jobs', href: 'https://github.com/ory/jobs' },
   {
     title: 'Support',
-    href: 'https://github.com/ory/open-source-support/blob/master/README.md',
-  },
+    href: 'https://github.com/ory/open-source-support/blob/master/README.md'
+  }
 ]
 
 const defaultIconMenu = ({
-  githubLink = 'https://github.com/ory',
+  githubLink = 'https://github.com/ory'
 }): IconMenu => [
   { title: 'Chat', href: 'https://www.ory.sh/chat' },
   { title: 'Forum', href: 'https://community.ory.sh/' },
-  { title: 'GitHub', href: githubLink },
+  { title: 'GitHub', href: githubLink }
 ]
 
 const Layout = ({
@@ -40,7 +41,7 @@ const Layout = ({
   announcement,
   appendix = '',
   theme = 'default',
-  githubLink,
+  githubLink
 }: {
   children: ReactNode
   menu?: Menu

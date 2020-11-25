@@ -6,4 +6,11 @@
 
 // You can delete this file if you're not using it
 
-require("prismjs/themes/prism.css")
+import 'normalize.css'
+import 'remark-admonitions/styles/classic.css'
+import 'prismjs/themes/prism.css'
+
+import './src/styles/themes/default.css'
+import './src/styles/global.css'
+import './src/styles/grid.css'
+import './src/styles/typography.css'

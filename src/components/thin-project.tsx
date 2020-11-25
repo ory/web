@@ -18,7 +18,7 @@ const ThinProject = ({
   learn,
   theme,
   href,
-  visual,
+  visual
 }: PropTypes) => (
   <div className={cn(`theme-${theme}`, styles.thin)}>
     <div className="container-fluid">

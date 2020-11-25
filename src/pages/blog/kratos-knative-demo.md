@@ -1,26 +1,18 @@
 ---
-published: true
 path: '/kratos-knative-demo/'
-title: 'ORY Kratos on Knative'
-metaTitle: 'ORY Kratos on Knative'
+title: 'Deploy ORY Kratos with Knative and Kubernetes in Minikube'
 publishedAt: '2020-10-01'
 author: 'Kim Neunert'
 
-subtitle: >
-  ORY Kratos running on knative in a minikube on your laptop
-
 overline: >
-  ORY Kratos and knative in minikube: Have your cake and eat it too ...
+  Kubernetes & Knative
 
 teaser: >
-  We evaluated knative as a platform for running kratos and here is what we
-  found out ...
+  Run ORY Kratos as a serverless service on Kubernetes and Knative with
+  scale-to-zero deployments.
 
-metaDescription: >
-  We evaluated knative as a platform for running kratos and here is what we
-  found out ...
-
-category: Tutorial
+seo:
+  title: 'ORY Kratos on Kubernetes and Knative'
 ---
 
 Serverless computing is a hot topic these days, and so is vendor lock in.
@@ -38,44 +30,29 @@ a minimum requirement, we suggest 16GB of RAM. This example was developed on
 UbuntuLinux/minikube/kvm2 and it should definitely work with
 [other setups](https://www.youtube.com/watch?v=q6kyHDleioA&t=202s).
 
-We're using a "make" utility that fulfills all the other components:
+We will need Helm. Please download the helm-binary in a local .bin directory for
+later usage.
 
-```
-# Ubuntu
-sudo apt install build-essential
-# MacOS
-brew install make
-```
-
-We'll also need Helm. Please download the helm-binary in a local .bin directory
-for later usage.
-
-`make init`
-
-```
-mkdir -p .bin
-HELM_INSTALL_DIR=./.bin bash <(curl -s https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3) --no-sudo --version v3.1.2
+```shell-session
+$ mkdir -p .bin
+$ HELM_INSTALL_DIR=./.bin bash <(curl -s https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3) --no-sudo --version v3.1.2
 ```
 
 ## minikube
 
 Minikube is where it starts. We'll need at least 8GB of RAM for this.
 
-_`make minikube-init`_
-
-```
-minikube delete -p ory-knative
-@echo "Waiting for minikube delete..."
-sleep 15
-minikube start -p ory-knative \
---memory=8192 --cpus=6 \
---kubernetes-version=v1.15.0 \
---vm-driver=$$VM_DRIVER \
---disk-size=30g \
---extra-config=apiserver.enable-admission-plugins="LimitRanger,NamespaceExists,NamespaceLifecycle,ResourceQuota,ServiceAccount,DefaultStorageClass,MutatingAdmissionWebhook"
-#minikube addons -p ory-knative enable ingress
-#minikube addons -p ory-knative enable dashboard
-kubectl config use-context ory-knative
+```shell-session
+$ minikube delete -p ory-knative
+$ echo "Waiting for minikube delete..."
+$ sleep 15
+$ minikube start -p ory-knative \
+   --memory=8192 --cpus=6 \
+   --kubernetes-version=v1.15.0 \
+   --vm-driver=$VM_DRIVER \
+   --disk-size=30g \
+   --extra-config=apiserver.enable-admission-plugins="LimitRanger,NamespaceExists,NamespaceLifecycle,ResourceQuota,ServiceAccount,DefaultStorageClass,MutatingAdmissionWebhook"
+$ kubectl config use-context ory-knative
 ```
 
 It will probably take some time and you'll have a fully running kubernetes
@@ -88,9 +65,9 @@ Loadbalancer. In Minikube, there is a built-in tool that simulates a
 will continue to run in the foreground. For that reason open a second shell
 terminal session. `make mikikube-access`
 
-```
-minikube -p ory-knative dashboard & # tidy this up is to to user
-minikube -p ory-knative tunnel
+```shell-session
+$ minikube -p ory-knative dashboard
+$ minikube -p ory-knative tunnel
 ```
 
 ## Istio and Knative
@@ -100,69 +77,65 @@ recommended in the
 [knative-installation-documentation](https://knative.dev/v0.12-docs/install/installing-istio/).
 This takes about 30 seconds. `make istio-init`
 
-```
-ISTIO_VERSION=1.3.6 .bin/getLatestIstio
-cd istio-1.3.6
-for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $${i}; done
-kubectl create namespace istio-system
-kubectl label namespace istio-system istio-injection=disabled
-cd istio-1.3.6
-../.bin/helm template --namespace=istio-system \
---set prometheus.enabled=false \
---set mixer.enabled=false \
---set mixer.policy.enabled=false \
---set mixer.telemetry.enabled=false \
-`# Pilot doesn't need a sidecar.` \
---set pilot.sidecar=false \
---set pilot.resources.requests.memory=128Mi \
-`# Disable galley (and things requiring galley).` \
---set galley.enabled=false \
---set global.useMCP=false \
-`# Disable security / policy.` \
---set security.enabled=false \
---set global.disablePolicyChecks=true \
-`# Disable sidecar injection.` \
---set sidecarInjectorWebhook.enabled=false \
---set global.proxy.autoInject=disabled \
---set global.omitSidecarInjectorConfigMap=true \
---set gateways.istio-ingressgateway.autoscaleMin=1 \
---set gateways.istio-ingressgateway.autoscaleMax=2 \
-`# Set pilot trace sampling to 100%` \
---set pilot.traceSampling=100 \
---set global.mtls.auto=false \
-install/kubernetes/helm/istio \
-> ./istio-lean.yaml
-kubectl apply -f istio-${ISTIO_VERSION}/istio-lean.yaml
-echo "Let's wait on the pods coming up in istio-system"
-while [[ "$$(kubectl get pods --field-selector=status.phase!=Running -n istio-system  -o json | jq '.items[].metadata.name' | wc -l )" != 0 ]]; do echo "waiting another 5 secs of approx 30 secs..."; sleep 5; done
-cd ..
+```shell-session
+$ ISTIO_VERSION=1.3.6 .bin/getLatestIstio
+$ cd istio-1.3.6
+$ for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f ${i}; done
+$ kubectl create namespace istio-system
+$ kubectl label namespace istio-system istio-injection=disabled
+$ cd istio-1.3.6
+$ ../.bin/helm template --namespace=istio-system \
+  --set prometheus.enabled=false \
+  --set mixer.enabled=false \
+  --set mixer.policy.enabled=false \
+  --set mixer.telemetry.enabled=false \
+  `# Pilot doesn't need a sidecar.` \
+  --set pilot.sidecar=false \
+  --set pilot.resources.requests.memory=128Mi \
+  `# Disable galley (and things requiring galley).` \
+  --set galley.enabled=false \
+  --set global.useMCP=false \
+  `# Disable security / policy.` \
+  --set security.enabled=false \
+  --set global.disablePolicyChecks=true \
+  `# Disable sidecar injection.` \
+  --set sidecarInjectorWebhook.enabled=false \
+  --set global.proxy.autoInject=disabled \
+  --set global.omitSidecarInjectorConfigMap=true \
+  --set gateways.istio-ingressgateway.autoscaleMin=1 \
+  --set gateways.istio-ingressgateway.autoscaleMax=2 \
+  `# Set pilot trace sampling to 100%` \
+  --set pilot.traceSampling=100 \
+  --set global.mtls.auto=false \
+  install/kubernetes/helm/istio \
+  > ./istio-lean.yaml
+$ kubectl apply -f istio-${ISTIO_VERSION}/istio-lean.yaml
+$ echo "Let's wait on the pods coming up in istio-system"
+$ while [[ "$(kubectl get pods --field-selector=status.phase!=Running -n istio-system  -o json | jq '.items[].metadata.name' | wc -l )" != 0 ]]; do echo "waiting another 5 secs of approx 30 secs..."; sleep 5; done
+$ cd ..
 ```
 
 The knative-installation takes 4 minutes approximately. It's effectively simply
 applying yaml-files directly from Github:
 
-`make knative-init`
-
-```
-kubectl apply --selector knative.dev/crd-install=true \
---filename https://github.com/knative/serving/releases/download/v0.12.0/serving.yaml \
---filename https://github.com/knative/eventing/releases/download/v0.12.0/eventing.yaml \
---filename https://github.com/knative/serving/releases/download/v0.12.0/monitoring.yaml || true
-kubectl apply --filename https://github.com/knative/serving/releases/download/v0.12.0/serving.yaml \
---filename https://github.com/knative/eventing/releases/download/v0.12.0/eventing.yaml \
---filename https://github.com/knative/serving/releases/download/v0.12.0/monitoring.yaml
+```shell-session
+$ kubectl apply --selector knative.dev/crd-install=true \
+  --filename https://github.com/knative/serving/releases/download/v0.12.0/serving.yaml \
+  --filename https://github.com/knative/eventing/releases/download/v0.12.0/eventing.yaml \
+  --filename https://github.com/knative/serving/releases/download/v0.12.0/monitoring.yaml || true
+$ kubectl apply --filename https://github.com/knative/serving/releases/download/v0.12.0/serving.yaml \
+  --filename https://github.com/knative/eventing/releases/download/v0.12.0/eventing.yaml \
+  --filename https://github.com/knative/serving/releases/download/v0.12.0/monitoring.yaml
 ```
 
 You can check whether the installation is finished by listing resources that are
 not yet in "RUNNING" state in each of the 3 knative specific namespaces:
 
-`make knative-check`
-
-```
-kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[*].metadata.name}' -n knative-serving | tr -s '[[:space:]]' '\n'
-kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[*].metadata.name}' -n knative-eventing | tr -s '[[:space:]]' '\n'
-kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[*].metadata.name}' -n knative-eventing | tr -s '[[:space:]]' '\n'
-knative-serving  -o json | jq '.items[].metadata.name' | wc -l )" != 0 ]]
+```shell-session
+$ kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[*].metadata.name}' -n knative-serving | tr -s '[[:space:]]' '\n'
+$ kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[*].metadata.name}' -n knative-eventing | tr -s '[[:space:]]' '\n'
+$ kubectl get pods --field-selector=status.phase!=Running -n -o jsonpath='{.items[*].metadata.name}' -n knative-eventing | tr -s '[[:space:]]' '\n'
+$ knative-serving  -o json | jq '.items[].metadata.name' | wc -l )" != 0 ]]
 ```
 
 ## Deploy an Go-container example and the ORY Oathkeeper demo
@@ -172,12 +145,10 @@ The Knative documentation has a very
 which we'll use here as a kind of probe to test the functionality. It's a very
 simple go-container running a webserver returning "Hello Go Sample v1!".
 
-`make deploy-probe`
-
-```
-kubectl apply --filename probe-helloworld.yaml
-./modify_etchosts.sh $$(kubectl get route helloworld-go --output jsonpath="{.status.url}" | cut -d"/" -f3)
-printf "\n\n    --> Access the probe at  $$(kubectl get route helloworld-go --output jsonpath='{.status.url}')"
+```shell-session
+$ kubectl apply --filename probe-helloworld.yaml
+$ ./modify_etchosts.sh $(kubectl get route helloworld-go --output jsonpath="{.status.url}" | cut -d"/" -f3)
+$ printf "\n\n    --> Access the probe at  $(kubectl get route helloworld-go --output jsonpath='{.status.url}')"
 ```
 
 The code above will also modify your /etc/hosts file in order to make the
@@ -193,25 +164,23 @@ make sure that the tunnel process, mentioned above, is up and running.
 
 The next step is to deploy a very basic oathkeeper-demo.
 
-`make deploy-oathkeeper-demo`
-
-```
-		kubectl create ns demo || true
-		helm template --name-template=demo --namespace=demo \
-		--set 'demo=true' \
-		--set maester.enabled=false \
-		--set service.enabled=false \
-		--set service.api.enabled=false \
-		--set service.proxy.enabled=false \
-		--set global.ory.oathkeeper.maester.mode=this_prevents_rendering_the_deployment \
-		ory/oathkeeper > oathkeeper_config.yaml
-		kubectl apply -f oathkeeper_config.yaml
-		# the other file is handcrafted by merging the deployment-spec with the ksvc-spec
-		kubectl apply -f oathkeeper_ksvc.yaml
-		# see Readme.md for issues which came up with that approach
-		sleep 15
-		./modify_etchosts.sh $$(kubectl get route demo-oathkeeper -n demo --output jsonpath="{.status.url}" | cut -d"/" -f3)
-		printf "\n\n    --> Access the demo at  $$(kubectl get route demo-oathkeeper -n demo --output jsonpath='{.status.url}')/authenticator/anonymous/authorizer/allow/mutator/id_token "
+```shell-session
+$ kubectl create ns demo || true
+$ helm template --name-template=demo --namespace=demo \
+  --set 'demo=true' \
+  --set maester.enabled=false \
+  --set service.enabled=false \
+  --set service.api.enabled=false \
+  --set service.proxy.enabled=false \
+  --set global.ory.oathkeeper.maester.mode=this_prevents_rendering_the_deployment \
+  ory/oathkeeper > oathkeeper_config.yaml
+$ kubectl apply -f oathkeeper_config.yaml
+# the other file is handcrafted by merging the deployment-spec with the ksvc-spec
+$ kubectl apply -f oathkeeper_ksvc.yaml
+# see Readme.md for issues which came up with that approach
+$ sleep 15
+$ ./modify_etchosts.sh $(kubectl get route demo-oathkeeper -n demo --output jsonpath="{.status.url}" | cut -d"/" -f3)
+$ printf "\n\n    --> Access the demo at  $(kubectl get route demo-oathkeeper -n demo --output jsonpath='{.status.url}')/authenticator/anonymous/authorizer/allow/mutator/id_token "
 ```
 
 The trick here is to use some Helm variables in a way that suppress the creation
@@ -245,11 +214,9 @@ Running ORY Kratos requires an open source relational database system such as
 Postgres or something equivalent. Without fulfilling that, kratos-bootup will
 quickly fail.
 
-`make deploy-psql`
-
-```
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm install kratos-psql bitnami/postgresql
+```shell-session
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm install kratos-psql bitnami/postgresql
 ```
 
 This will also give you a hint on how to obtain the password:
@@ -260,17 +227,15 @@ file, you have to replace the PASSWORD in that file in line 28.
 
 Ok, guess we're ready to deploy ORY Kratos.
 
-`make deploy-kratos`
-
-```
-kubectl create ns kratos-demo || true
-helm template --name-template=kratos-demo --namespace=kratos-demo \
---set kratos.config.secrets.session=someSecretNeeds16 \
--f values.yaml \
-ory/kratos | .bin/helm-fan-out.sh kratos-helm
-kubectl apply -f ./kratos-helm/kratos/templates/secrets.yaml
-kubectl apply -f ./kratos-helm/kratos/templates/configmap-config.yaml
-kubectl apply -f kratos_ksvc_public.yaml
+```shell-session
+$ kubectl create ns kratos-demo || true
+$ helm template --name-template=kratos-demo --namespace=kratos-demo \
+  --set kratos.config.secrets.session=someSecretNeeds16 \
+  -f values.yaml \
+  ory/kratos | .bin/helm-fan-out.sh kratos-helm
+$ kubectl apply -f ./kratos-helm/kratos/templates/secrets.yaml
+$ kubectl apply -f ./kratos-helm/kratos/templates/configmap-config.yaml
+$ kubectl apply -f kratos_ksvc_public.yaml
 ```
 
 Other than on the oathkeeper-charts, we were not able to suppress the creation
@@ -289,11 +254,11 @@ values.yaml stuff (kratos.config) is coming from the
 Most of these values are not yet adapted though. So we can expect that things
 don't work, but let's check.
 
-```
-kubectl get  ksvc kratos -n kratos-demo
-curl http://kratos.kratos-demo.example.com
-kubectl describe ksvc kratos -n kratos-demo
-kubectl describe configuration kratos -n kratos-demo
+```shell-session
+$ kubectl get  ksvc kratos -n kratos-demo
+$ curl http://kratos.kratos-demo.example.com
+$ kubectl describe ksvc kratos -n kratos-demo
+$ kubectl describe configuration kratos -n kratos-demo
 ```
 
 the first two commands make sure that the pod is created. Remember, it's
@@ -322,13 +287,13 @@ time="2020-05-27T15:23:53Z" level=fatal msg="The configuration is invalid and co
 So the fatal-message tells us that something with these configuration-lines
 (values.yaml) is wrong:
 
-```
-    urls:
-      login_ui: http://127.0.0.1:4455/auth/login
-      registration_ui: http://127.0.0.1:4455/auth/registration
-      error_ui: http://127.0.0.1:4455/error
-      settings_ui: http://127.0.0.1:4455/settings
-      verify_ui: http://127.0.0.1:4455/verify
+```yaml
+urls:
+  login_ui: http://127.0.0.1:4455/auth/login
+  registration_ui: http://127.0.0.1:4455/auth/registration
+  error_ui: http://127.0.0.1:4455/error
+  settings_ui: http://127.0.0.1:4455/settings
+  verify_ui: http://127.0.0.1:4455/verify
 ```
 
 We shouldn't be surprised! So we need the selfservice_node-application somewhere

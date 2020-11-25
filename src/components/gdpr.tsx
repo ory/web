@@ -45,7 +45,7 @@ const GDPR = () => (
         right: 0,
         zIndex: 100000,
         backgroundColor: '#19191D',
-        padding: '16px 8px',
+        padding: '16px 8px'
       },
       container: {
         maxWidth: 1080,
@@ -53,20 +53,20 @@ const GDPR = () => (
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
       },
       message: {
         fontSize: 12,
         color: 'white',
-        flexShrink: 2,
+        flexShrink: 2
       },
       selectPane: {
         flexGrow: 1,
-        margin: '0 8px',
+        margin: '0 8px'
       },
       checkbox: {
         width: 14,
-        height: 14,
+        height: 14
       },
       optionLabel: {
         fontSize: 12,
@@ -78,13 +78,13 @@ const GDPR = () => (
         left: 0,
         zIndex: 1,
         cursor: 'default',
-        verticalAlign: 'middle',
+        verticalAlign: 'middle'
       },
       policy: {
         marginRight: 8,
         textDecoration: 'underline',
         color: 'white',
-        fontSize: 12,
+        fontSize: 12
       },
       button: {
         border: 'none',
@@ -100,8 +100,8 @@ const GDPR = () => (
         margin: 0,
         textAlign: 'center',
         whiteSpace: 'nowrap',
-        cursor: 'pointer',
-      },
+        cursor: 'pointer'
+      }
     }}
   />
 )

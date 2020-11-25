@@ -1,32 +1,26 @@
 ---
-published: true
 path: '/oauth2-for-mobile-app-spa-browser/'
 title: >
   Securely set up OAuth2 for Mobile Apps, Browser Apps, and Single Page Apps
 
-metaDescription: >
-  Learn how to implement OAuth2 best practices for mobile apps, browser apps,
-  and single page apps.
+seo:
+  description: >
+    Learn how to implement OAuth2 best practices for mobile apps, browser apps,
+    and single page apps.
 
-metaTitle: >
-  OAuth2 for Mobile Apps, Browser Apps, and Single Page Apps Best Practices
-  (2018)
+  title: >
+    OAuth2 for Mobile Apps, Browser Apps, and Single Page Apps Best Practices
+    (2020)
 
 publishedAt: '2019-06-01'
-author: 'Aeneas Rekkas'
+author: aeneasr
 
 teaser: >
   Read this guide to learn how to implement authentication and authorization for
   mobile, browser, and native apps with better user experience and buffed
   security.
 
-subtitle: >
-  Read this guide to learn how to implement authentication and authorization for
-  mobile, browser, and native apps with better user experience and buffed
-  security.
-
 overline: Mobile & Native App Security
-category: Mobile & Native App Security
 ---
 
 ## What is OAuth2 and PKCE?

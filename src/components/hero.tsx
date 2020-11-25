@@ -19,7 +19,7 @@ const CallToActionButton = ({
   title,
   href,
   style = 'secondary',
-  openInNewWindow = false,
+  openInNewWindow = false
 }: CallToAction) => (
   <a
     key={title}

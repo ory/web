@@ -17,21 +17,21 @@ const Section = ({
   right,
   leftWide,
   wide,
-  mobile = [],
+  mobile = []
 }: PropTypes) => (
   <div
     className={cn(styles.section, {
       [styles.dark]: dark,
       [styles.light]: !dark,
       ['is-dark-background']: dark,
-      ['is-light-background']: !dark,
+      ['is-light-background']: !dark
     })}
   >
     <div className="container-fluid">
       <div
         className={cn('row middle-sm', {
           'hidden-sm': mobile.length > 0,
-          'hidden-md': mobile.length > 0,
+          'hidden-md': mobile.length > 0
         })}
       >
         <div
@@ -39,7 +39,7 @@ const Section = ({
             'col-lg-offset-1  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10',
             {
               'col-lg-5': leftWide,
-              'col-lg-4': !leftWide,
+              'col-lg-4': !leftWide
             }
           )}
         >
@@ -52,7 +52,7 @@ const Section = ({
               'col-lg-4': !wide,
               'col-lg-5': wide,
               'col-lg-offset-2': !leftWide,
-              'col-lg-offset-1': leftWide,
+              'col-lg-offset-1': leftWide
             }
           )}
         >

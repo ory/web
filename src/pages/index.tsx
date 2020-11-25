@@ -24,13 +24,13 @@ const IndexPage = () => (
           href:
             'https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR44MLbJM5QjSDoSiZxXaXtmkHvAg22KC-x3z1Dg/viewform',
           style: 'primary',
-          openInNewWindow: true,
+          openInNewWindow: true
         },
         {
           title: 'GitHub',
           href: 'https://github.com/ory',
-          style: 'secondary',
-        },
+          style: 'secondary'
+        }
       ]}
     />
     <BlogSummarySection />

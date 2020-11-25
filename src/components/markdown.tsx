@@ -8,10 +8,10 @@ const Markdown = ({ markdown }: { markdown: string }) => {
   remark()
     .use(remarkHtml)
     .process(markdown)
-    .then(file => {
+    .then((file) => {
       setHtml(file.toString())
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err)
     })
 

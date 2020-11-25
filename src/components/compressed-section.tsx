@@ -13,18 +13,18 @@ const CompressedSection = ({
   expanded = false,
   left,
   right,
-  mobile = [],
+  mobile = []
 }: PropTypes) => (
   <div
     className={cn(styles.compressed, {
-      [styles.expanded]: expanded,
+      [styles.expanded]: expanded
     })}
   >
     <div className="container-fluid">
       <div
         className={cn('row middle-sm', {
           'hidden-sm': mobile.length > 0,
-          'hidden-md': mobile.length > 0,
+          'hidden-md': mobile.length > 0
         })}
       >
         <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">

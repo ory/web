@@ -39,7 +39,7 @@ export const loginRoute = (req, res) => {
     fetch(url.toString())
         .then(r => r.json())
         .then((kratos) => res.render('loginView', { kratos }))
-}`,
+}`
       },
       {
         filename: 'registration.js',
@@ -53,7 +53,7 @@ export const registrationRoute = (req, res) => {
     fetch(url.toString())
         .then(r => r.json())
         .then((kratos) => res.render('registrationView', { kratos }))
-}`,
+}`
       },
       {
         filename: 'login.tmpl',
@@ -65,8 +65,8 @@ export const registrationRoute = (req, res) => {
     {{/each}}
     <button type="submit">Sign In</button>
   </form>
-</div>`,
-      },
+</div>`
+      }
     ]}
   />
 )
@@ -90,13 +90,13 @@ const KratosPage = () => (
           title: 'Get started',
           href: 'https://www.ory.sh/docs/kratos/quickstart',
           style: 'primary',
-          openInNewWindow: true,
+          openInNewWindow: true
         },
         {
           title: 'GitHub',
           href: 'https://github.com/ory/kratos',
-          style: 'secondary',
-        },
+          style: 'secondary'
+        }
       ]}
       visual={<KratosAnimation />}
       mobile={[<KratosAnimation />]}
@@ -141,7 +141,7 @@ const KratosPage = () => (
             <a href="https://www.ory.sh/docs/kratos">documentation</a> and learn
             more.{' '}
           </p>
-        </div>,
+        </div>
       ]}
     />
 
@@ -168,7 +168,7 @@ const KratosPage = () => (
           login, registration and profile management is easy. Our{' '}
           <a href="https://www.ory.sh/docs/kratos/sdk">documentation</a> makes
           integrating {brandPrefix}Kratos a snap.
-        </p>,
+        </p>
       ]}
     />
 

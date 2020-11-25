@@ -1,43 +1,43 @@
 :root {
-  --alpha-20: rgba(0,0,0,0.05);
+  --alpha-20: rgba(0, 0, 0, 0.05);
 
   --colors-base-black: #000000;
-  --colors-base-dark: #19191D;
-  --colors-base-grey: #5A5B6A;
-  --colors-base-text: #99999E;
-  --colors-base-light: #FAFAFA;
+  --colors-base-dark: #19191d;
+  --colors-base-grey: #5a5b6a;
+  --colors-base-text: #99999e;
+  --colors-base-light: #fafafa;
   --colors-base-white: #ffffff;
 
-  --colors-themed-default: #5528FF;
-  --colors-themed-weak: #8E70FF;
+  --colors-themed-default: #5528ff;
+  --colors-themed-weak: #8e70ff;
   --colors-themed-light: #fafaff;
 
-  --colors-green-default: #4CAF50;
-  --colors-green-weak: #7BC67E;
-  --colors-green-light: #EDF6EE;
+  --colors-green-default: #4caf50;
+  --colors-green-weak: #7bc67e;
+  --colors-green-light: #edf6ee;
 
-  --colors-yellow-default: #FFB41F;
-  --colors-yellow-weak: #FFDFA0;
-  --colors-yellow-light: #FFF8EA;
+  --colors-yellow-default: #ffb41f;
+  --colors-yellow-weak: #ffdfa0;
+  --colors-yellow-light: #fff8ea;
 
-  --colors-red-default: #F44336;
-  --colors-red-weak: #F88078;
-  --colors-red-light: #FEEDEC;
+  --colors-red-default: #f44336;
+  --colors-red-weak: #f88078;
+  --colors-red-light: #feedec;
 
-  --colors-kratos-default: #FF9800;
-  --colors-kratos-weak: #FFB547;
+  --colors-kratos-default: #ff9800;
+  --colors-kratos-weak: #ffb547;
   --colors-kratos-light: #fff9f2;
 
-  --colors-hydra-default: #FF6A85;
-  --colors-hydra-weak: #FFB3C0;
+  --colors-hydra-default: #ff6a85;
+  --colors-hydra-weak: #ffb3c0;
   --colors-hydra-light: #fffafb;
 
-  --colors-oathkeeper-default: #BD2FEF;
-  --colors-oathkeeper-weak: #E3A5F8;
+  --colors-oathkeeper-default: #bd2fef;
+  --colors-oathkeeper-weak: #e3a5f8;
   --colors-oathkeeper-light: #f7faff;
 
-  --colors-keto-default: #1DE9B6;
-  --colors-keto-weak: #5CEFCA;
+  --colors-keto-default: #1de9b6;
+  --colors-keto-weak: #5cefca;
   --colors-keto-light: #f5fffb;
 }
 

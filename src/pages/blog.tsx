@@ -2,22 +2,17 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import BlogHero from '../components/blog-hero'
-import Markdown from '../components/markdown'
 import BlogSection from '../components/blog-section'
-import { node } from 'prop-types'
 
 import * as styles from './blog.module.css'
 
 const Post = ({
-                node: {
-                  frontmatter: { path, title, teaser, overline, category, author, publishedAt },
-                  id,
-                  excerpt,
-                },
-              }: any) => (
+  node: {
+    frontmatter: { path, title, teaser, overline, author, publishedAt }
+  }
+}: any) => (
   <div>
-    <p className={styles.postOverline}>{category}</p>
+    <p className={styles.postOverline}>{overline}</p>
     <h2 className={styles.postTitle}>
       <Link to={path}>{title}</Link>
     </h2>
@@ -29,10 +24,10 @@ const Post = ({
 )
 
 const BlogPostsPage = ({
-                         data: {
-                           allMarkdownRemark: { edges },
-                         },
-                       }: any) => (
+  data: {
+    allMdx: { edges }
+  }
+}: any) => (
   <Layout>
     <SEO
       title={'Developer Blog and Articles'}
@@ -56,10 +51,10 @@ export default BlogPostsPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fileAbsolutePath: { regex: "/blog/" }
-        frontmatter: { published: { eq: true } }
+        frontmatter: { published: { ne: false } }
       }
       sort: { fields: [frontmatter___publishedAt], order: DESC }
     ) {
@@ -68,13 +63,16 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 250)
           frontmatter {
+            seo {
+              title
+              description
+            }
             publishedAt(formatString: "MMMM DD, YYYY")
             author
             path
             title
             teaser
             overline
-            category
           }
         }
       }

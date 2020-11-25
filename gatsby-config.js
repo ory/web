@@ -1,9 +1,47 @@
+const getTimeValueInSeconds = (timeValue) => {
+  if (Number(timeValue).toString() === timeValue) {
+    return timeValue
+  }
+
+  const {
+    2: hours = '0',
+    4: minutes = '0',
+    6: seconds = '0'
+  } = timeValue.match(/((\d*)h)?((\d*)m)?((\d*)s)?/)
+
+  return String((Number(hours) * 60 + Number(minutes)) * 60 + Number(seconds))
+}
+
+const getYouTubeIFrameSrc = (urlString) => {
+  const url = new URL(urlString)
+  const id =
+    url.host === 'youtu.be' ? url.pathname.slice(1) : url.searchParams.get('v')
+
+  const embedUrl = new URL(
+    `https://www.youtube-nocookie.com/embed/${id}?rel=0`
+  )
+
+  url.searchParams.forEach((value, name) => {
+    if (name === 'v') {
+      return
+    }
+
+    if (name === 't') {
+      embedUrl.searchParams.append('start', getTimeValueInSeconds(value))
+    } else {
+      embedUrl.searchParams.append(name, value)
+    }
+  })
+
+  return embedUrl.toString()
+}
+
 module.exports = {
   siteMetadata: {
     title: `ory.sh`,
     description: `Implement OAuth 2.0 and OpenID Connect in minutes with open source from ORY. Works in both new and existing systems.`,
     author: `ORY Corp.`,
-    siteUrl: `https://www.ory.sh`,
+    siteUrl: `https://www.ory.sh`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -11,26 +49,26 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown`,
-        path: `${__dirname}/src/pages/markdown`,
-      },
+        path: `${__dirname}/src/pages/markdown`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/pages/blog`,
-      },
+        path: `${__dirname}/src/pages/blog`
+      }
     },
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /.*images\/animations\/.*\.svg$/ // See below to configure properly
@@ -38,9 +76,18 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        remarkPlugins: [
+          [
+            require(`remark-admonitions`), {
+            tag: ':::',
+            icons: 'svg'
+          }
+          ]
+        ],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -48,29 +95,40 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 860,
-              tracedSVG: true,
-            },
+              tracedSVG: true
+            }
           },
           {
-            resolve: 'gatsby-remark-video',
-          },
-          {
-            resolve: 'gatsby-remark-embed-video',
+            resolve: `gatsby-remark-embedder`,
             options: {
-              width: 800,
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              height: 400, // Optional: Overrides optional.ratio
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-            },
+              customTransformers: [
+                {
+                  shouldTransform: (url) => {
+                    const { host, pathname, searchParams } = new URL(url)
+
+                    return (
+                      host === 'youtu.be' ||
+                      (['youtube.com', 'www.youtube.com'].includes(host) &&
+                        pathname.includes('/watch') &&
+                        Boolean(searchParams.get('v')))
+                    )
+                  },
+                  getHTML: (url, { width = '100%', height = '315' }) => {
+                    const iframeSrc = getYouTubeIFrameSrc(url)
+                    return `<div class="youtube">asdf<iframe width="${width}" height="${height}" src="${iframeSrc}" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>`
+                  },
+                  name: 'YouTube'
+                }
+              ]
+            }
           },
           {
             resolve: 'gatsby-remark-emojis',
             options: {
               active: true,
               class: 'remark-emoji',
-              size: 64,
-            },
+              size: 64
+            }
           },
           // prismjs to be loaded last or it will interfere with remark-embed-video
           {
@@ -83,11 +141,11 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: 'language-',
-            },
-          },
-        ],
-      },
+              classPrefix: 'language-'
+            }
+          }
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -108,21 +166,21 @@ module.exports = {
                       '--sm-viewport': '(max-width: 375px)',
                       '--md-viewport': '(max-width: 768px) and (min-width: 375px)',
                       '--lg-viewport': '(min-width: 769px)',
-                      '--mobile-viewport': '(max-width: 768px)',
-                    },
-                  },
-                ],
-              },
-            },
-          }),
-        ],
-      },
+                      '--mobile-viewport': '(max-width: 768px)'
+                    }
+                  }
+                ]
+              }
+            }
+          })
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
-      },
+        output: `/sitemap.xml`
+      }
     },
     // `gatsby-transformer-sharp`,
     // `gatsby-plugin-sharp`,
@@ -150,8 +208,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#15283B`,
         theme_color: `#6274F3`,
-        display: `browser`,
-      },
+        display: `browser`
+      }
     },
     {
       resolve: `gatsby-plugin-offline`,
@@ -162,21 +220,21 @@ module.exports = {
             {
               // Do not cache ads
               urlPattern: /^https?:\/\/codefund\.io/,
-              handler: `NetworkOnly`,
+              handler: `NetworkOnly`
             },
             {
               // Cache docs css etc
               urlPattern: /^.+\/docs\/.+\.(css|js|png|svg|jpg)/,
-              handler: `StaleWhileRevalidate`,
+              handler: `StaleWhileRevalidate`
             },
             {
               // Cache docs pages
               urlPattern: /^.+\/docs\/([a-zA-Z0-9\-_\/]+)(\/||\.html|\.htm)/,
-              handler: `NetworkFirst`,
-            },
+              handler: `NetworkFirst`
+            }
           ]
-        },
-      },
+        }
+      }
     },
     `gatsby-plugin-force-trailing-slashes`,
     {
@@ -197,11 +255,11 @@ module.exports = {
 
         facebookPixel: {
           pixelId: '', // leave empty if you want to disable the tracker
-          cookieName: 'gdpr_cookie_analytics', // default
+          cookieName: 'gdpr_cookie_analytics' // default
         },
 
         environments: ['production', 'development']
-      },
-    },
-  ],
+      }
+    }
+  ]
 }

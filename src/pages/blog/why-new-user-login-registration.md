@@ -3,12 +3,13 @@ published: false
 path: '/why-new-user-login-registration/'
 title: 'Why we need a new identity system for user login, registration'
 publishedAt: '2020-01-30'
-author: 'Aeneas Rekkas'
-metaTitle: >
-  TBD
+author: aeneasr
 
-metaDescription: >
-  TBD
+seo:
+  title: >
+    TBD
+  description: >
+    TBD
 
 teaser: >
   TBD

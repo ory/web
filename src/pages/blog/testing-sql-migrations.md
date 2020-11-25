@@ -1,21 +1,14 @@
 ---
-published: true
 path: '/testing-sql-migrations/'
 title: >
-  Testing SQL migrations? - Here is how
-
-metaDescription: >
-  Learn how to approach testing SQL migrations
-
-metaTitle: >
-  Testing SQL migrations
+  Write Better Migrations with SQL Tests
 
 publishedAt: '2020-04-27'
-author: 'Patrik Neu'
+author: zepatrik
+
 overline: >
   Testing and Continuous Integration
 
-category: Tutorial
 subtitle: >
   Start properly testing SQL migrations.
 
@@ -24,8 +17,6 @@ teaser:
   all the considerations we at ORY make when implementing SQL migration tests
   for our open source products.
 ---
-
-## Motivation
 
 How do you test your SQL migrations? I am pretty sure you don't. Unless one
 calls running the migration and checking if something broke a proper test. But

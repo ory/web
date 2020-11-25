@@ -40,13 +40,13 @@ const KetoPage = () => (
         {
           title: 'Get started',
           href: 'https://www.ory.sh/docs/keto/install',
-          style: 'primary',
+          style: 'primary'
         },
         {
           title: 'GitHub',
           href: 'https://github.com/ory/keto',
-          style: 'secondary',
-        },
+          style: 'secondary'
+        }
       ]}
       visual={<KetoAnimation />}
       mobile={[<KetoAnimation />]}
@@ -74,7 +74,7 @@ const KetoPage = () => (
           language. Our{' '}
           <a href="https://www.ory.sh/keto/docs/sdk/index">documentation</a>{' '}
           makes integrating {brandPrefix}Keto a snap.
-        </p>,
+        </p>
       ]}
     />
 

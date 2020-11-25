@@ -50,7 +50,7 @@ const IntegrationCodeBox = () => (
       config:
         headers:
           X-User: "{{ print .Subject }}"
-# ...`,
+# ...`
       },
       {
         filename: 'config.yml',
@@ -69,8 +69,8 @@ authenticators:
       jwks_urls:
         - https://my-website.com/.well-known/jwks.json
 # ...
-`,
-      },
+`
+      }
     ]}
   />
 )
@@ -93,13 +93,13 @@ const OathkeeperPage = () => (
         {
           title: 'Get started',
           href: 'https://www.ory.sh/docs/oathkeeper',
-          style: 'primary',
+          style: 'primary'
         },
         {
           title: 'GitHub',
           href: 'https://github.com/ory/oathkeeper',
-          style: 'secondary',
-        },
+          style: 'secondary'
+        }
       ]}
       visual={<OathkeeperAnimation />}
       mobile={[<OathkeeperAnimation />]}
@@ -145,7 +145,7 @@ const OathkeeperPage = () => (
             <a href="https://www.ory.sh/docs/oathkeeper">documentation</a> and
             learn more.{' '}
           </p>
-        </div>,
+        </div>
       ]}
     />
 
@@ -172,7 +172,7 @@ const OathkeeperPage = () => (
           the login experience. Our{' '}
           <a href="https://www.ory.sh/docs/oathkeeper/sdk/">documentation</a>{' '}
           makes integrating {brandPrefix}Oathkeeper a snap.
-        </p>,
+        </p>
       ]}
     />
 
