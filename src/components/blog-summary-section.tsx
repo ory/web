@@ -23,7 +23,7 @@ const BlogSummarySection = () => {
       allMdx(
         filter: {
           fileAbsolutePath: { regex: "/blog/" }
-          frontmatter: { published: { eq: true } }
+          frontmatter: { published: { ne: false } }
         }
         sort: { fields: [frontmatter___publishedAt], order: DESC }
         limit: 3
