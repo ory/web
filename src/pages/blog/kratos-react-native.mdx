@@ -101,7 +101,7 @@ Native Login, Registration, and Profile Management template:
 $ npm install -g expo-cli
 $ expo init login-signup-app -t @oryd/expo-login-registration-template
 
-# We also want to install and initialize all require components:
+# We also want to install and initialize all required components:
 $ cd login-signup-app
 ~/login-signup-app$ npm run expo-install
 ~/login-signup-app$ npm run pod-install
@@ -134,7 +134,7 @@ If you wish to get your own demo environment, reach out to
 
 :::
 
-You can also run ORY Kratos on your local machine in Docker instead!
+The following section will show how to run ORY Kratos on your local machine in Docker instead!
 
 ## Run ORY Kratos Login, Registration, 2FA Server in Docker
 
@@ -189,7 +189,7 @@ Besides loading some fonts and setting up the views, this component includes the
 structure of the application - including the navigation:
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="App.tsx"
   startAt="export default"
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/App.tsx"
@@ -200,7 +200,7 @@ components adds an authentication / login context to the React Native component
 tree:
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/components/AuthProvider.tsx"
   startAt="export default"
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/AuthProvider.tsx"
@@ -214,7 +214,7 @@ to work on the web as well, we use `@react-native-community/async-storage` as a
 fallback:
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/helpers/auth.tsx"
   startAt="// getAuthenticatedSession"
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/auth.tsx"
@@ -228,7 +228,7 @@ see if the user session is still active in the navigation and show the dashboard
 or login / registration screens:
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/components/Navigation.tsx"
   startAt="export default"
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Navigation.tsx#L39-L9999"
@@ -250,7 +250,7 @@ The User Login component uses the ORY Kratos TypeScript SDK and the
 [User Login API Flow](https://www.ory.sh/kratos/docs/self-service/flows/user-login).
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/components/Routes/Login.tsx"
   startAt="const Login ="
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Login.tsx"
@@ -262,7 +262,7 @@ The User Registration component performs a
 [User Registration API Flow](https://www.ory.sh/kratos/docs/self-service/flows/user-registration).
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/components/Routes/Registration.tsx"
   startAt="const Registration ="
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Registration.tsx"
@@ -276,7 +276,7 @@ Management check out the
 [ORY Kratos Identity Data Model](https://www.ory.sh/kratos/docs/concepts/identity-data-model).
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/components/Routes/Home.tsx"
   startAt="const Home ="
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Home.tsx"
@@ -288,7 +288,7 @@ The User Settings component performs a
 [User Settings API Flow](https://www.ory.sh/kratos/docs/self-service/flows/user-settings).
 
 <CodeFromRemote
-  lang="javascript"
+  lang="tsx"
   title="src/components/Routes/Settings.tsx"
   startAt="const Settings ="
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/components/Routes/Settings.tsx"
@@ -363,7 +363,7 @@ Create a file called `app.config.js` in the project's root:
 You can use this variable when initializing the ORY Kratos SDK:
 
 <CodeFromRemote
-  lang="js"
+  lang="tsx"
   title="src/helpers/sdk.tsx"
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/sdk.tsx"
 />
