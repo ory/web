@@ -10,26 +10,29 @@ import { node } from 'prop-types'
 import * as styles from './blog.module.css'
 
 const Post = ({
-  node: {
-    frontmatter: { path, title, teaser, overline, category },
-    id,
-    excerpt,
-  },
-}: any) => (
+                node: {
+                  frontmatter: { path, title, teaser, overline, category, author, publishedAt },
+                  id,
+                  excerpt,
+                },
+              }: any) => (
   <div>
     <p className={styles.postOverline}>{category}</p>
-    <h3 className={styles.postTitle}>
+    <h2 className={styles.postTitle}>
       <Link to={path}>{title}</Link>
-    </h3>
+    </h2>
     <p className={styles.postTeaser}>{teaser}</p>
+    <p className={styles.info}>
+      <span className={styles.author}>{author}</span> - {publishedAt}
+    </p>
   </div>
 )
 
 const BlogPostsPage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}: any) => (
+                         data: {
+                           allMarkdownRemark: { edges },
+                         },
+                       }: any) => (
   <Layout>
     <SEO
       title={'Developer Blog and Articles'}
@@ -42,7 +45,7 @@ const BlogPostsPage = ({
       <div className={styles.postList}>
         {edges.map(({ node }: any) => (
           <div key={node.id} className={styles.postItem}>
-            <Post node={node} />
+            <Post node={node}/>
           </div>
         ))}
       </div>
@@ -65,6 +68,8 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 250)
           frontmatter {
+            publishedAt(formatString: "MMMM DD, YYYY")
+            author
             path
             title
             teaser

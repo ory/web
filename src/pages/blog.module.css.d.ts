@@ -6,5 +6,7 @@ declare const styles: {
   readonly postTitle: string
   readonly postTeaser: string
   readonly postLink: string
+  readonly author: string
+  readonly info: string
 }
 export = styles
