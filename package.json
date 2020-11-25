@@ -44,8 +44,7 @@
     "gatsby-plugin-typescript": "~2.7.0",
     "gatsby-remark-admonitions": "^0.1.0",
     "gatsby-remark-copy-linked-files": "~2.5.0",
-    "gatsby-remark-embed-video": "~3.0.10",
-    "gatsby-remark-embed-youtube": "~0.0.7",
+    "gatsby-remark-embedder": "^4.1.0",
     "gatsby-remark-emojis": "~0.4.3",
     "gatsby-remark-images": "~3.6.0",
     "gatsby-remark-prismjs": "~3.8.0",
@@ -57,7 +56,7 @@
     "gatsby-transformer-typescript-css-modules": "~1.0.14",
     "lost": "~8.3.1",
     "netlify-cli": "~2.68.7",
-    "node-fetch": "~2.6.1",
+    "node-fetch": "^2.6.1",
     "normalize.css": "~8.0.1",
     "npm-run-all": "~4.1.5",
     "numeral": "~2.0.6",
@@ -77,10 +76,12 @@
     "react-visibility-sensor": "~5.1.1",
     "regression": "~2.0.1",
     "remark": "~13.0.0",
+    "remark-admonitions": "^1.2.1",
     "remark-html": "~13.0.1",
     "typed-css-modules": "~0.6.4",
     "typed-css-modules-loader": "~0.0.18",
-    "typed-css-modules-webpack-plugin": "~0.2.0"
+    "typed-css-modules-webpack-plugin": "~0.2.0",
+    "use-sse": "^2.0.0"
   },
   "devDependencies": {
     "ory-prettier-styles": "~1.1.1",

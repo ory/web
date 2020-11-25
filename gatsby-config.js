@@ -1,3 +1,41 @@
+const getTimeValueInSeconds = (timeValue) => {
+  if (Number(timeValue).toString() === timeValue) {
+    return timeValue
+  }
+
+  const {
+    2: hours = '0',
+    4: minutes = '0',
+    6: seconds = '0'
+  } = timeValue.match(/((\d*)h)?((\d*)m)?((\d*)s)?/)
+
+  return String((Number(hours) * 60 + Number(minutes)) * 60 + Number(seconds))
+}
+
+const getYouTubeIFrameSrc = (urlString) => {
+  const url = new URL(urlString)
+  const id =
+    url.host === 'youtu.be' ? url.pathname.slice(1) : url.searchParams.get('v')
+
+  const embedUrl = new URL(
+    `https://www.youtube-nocookie.com/embed/${id}?rel=0`
+  )
+
+  url.searchParams.forEach((value, name) => {
+    if (name === 'v') {
+      return
+    }
+
+    if (name === 't') {
+      embedUrl.searchParams.append('start', getTimeValueInSeconds(value))
+    } else {
+      embedUrl.searchParams.append(name, value)
+    }
+  })
+
+  return embedUrl.toString()
+}
+
 module.exports = {
   siteMetadata: {
     title: `ory.sh`,
@@ -30,7 +68,7 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /.*images\/animations\/.*\.svg$/ // See below to configure properly
@@ -41,6 +79,14 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
+        remarkPlugins: [
+          [
+            require(`remark-admonitions`), {
+            tag: ':::',
+            icons: 'svg'
+          }
+          ]
+        ],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -53,23 +99,34 @@ module.exports = {
             }
           },
           {
-            resolve: "gatsby-remark-video"
-          },
-          {
-            resolve: "gatsby-remark-embed-video",
+            resolve: `gatsby-remark-embedder`,
             options: {
-              width: 800,
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              height: 400, // Optional: Overrides optional.ratio
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true //Optional: Disable insertion of <style> border: 0
+              customTransformers: [
+                {
+                  shouldTransform: (url) => {
+                    const { host, pathname, searchParams } = new URL(url)
+
+                    return (
+                      host === 'youtu.be' ||
+                      (['youtube.com', 'www.youtube.com'].includes(host) &&
+                        pathname.includes('/watch') &&
+                        Boolean(searchParams.get('v')))
+                    )
+                  },
+                  getHTML: (url, { width = '100%', height = '315' }) => {
+                    const iframeSrc = getYouTubeIFrameSrc(url)
+                    return `<div class="youtube">asdf<iframe width="${width}" height="${height}" src="${iframeSrc}" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>`
+                  },
+                  name: 'YouTube'
+                }
+              ]
             }
           },
           {
-            resolve: "gatsby-remark-emojis",
+            resolve: 'gatsby-remark-emojis',
             options: {
               active: true,
-              class: "remark-emoji",
+              class: 'remark-emoji',
               size: 64
             }
           },
@@ -84,14 +141,7 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: "language-"
-            }
-          },
-          {
-            resolve: `gatsby-remark-admonitions`,
-            options: {
-              tag: ":::",
-              icons: "svg"
+              classPrefix: 'language-'
             }
           }
         ]
@@ -103,20 +153,20 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require("postcss-for"),
-          require("postcss-color-mod-function")(),
-          require("lost"),
+          require('postcss-for'),
+          require('postcss-color-mod-function')(),
+          require('lost'),
           require(`postcss-preset-env`)({
             stage: 0,
             features: {
-              "custom-media-queries": {
+              'custom-media-queries': {
                 importFrom: [
                   {
                     customMedia: {
-                      "--sm-viewport": "(max-width: 375px)",
-                      "--md-viewport": "(max-width: 768px) and (min-width: 375px)",
-                      "--lg-viewport": "(min-width: 769px)",
-                      "--mobile-viewport": "(max-width: 768px)"
+                      '--sm-viewport': '(max-width: 375px)',
+                      '--md-viewport': '(max-width: 768px) and (min-width: 375px)',
+                      '--lg-viewport': '(min-width: 769px)',
+                      '--mobile-viewport': '(max-width: 768px)'
                     }
                   }
                 ]
@@ -152,7 +202,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: "src/images/icon/favicon-196x196.png",
+        icon: 'src/images/icon/favicon-196x196.png',
         name: `ORY Website and Documentation`,
         short_name: `ORY`,
         start_url: `/`,
@@ -192,24 +242,24 @@ module.exports = {
       options: {
 
         googleAnalytics: {
-          trackingId: "UA-71865250-1",
-          cookieName: "gdpr_cookie_analytics",
+          trackingId: 'UA-71865250-1',
+          cookieName: 'gdpr_cookie_analytics',
           anonymize: true,
           allowAdFeatures: false
         },
 
         googleTagManager: {
-          trackingId: "",
-          cookieName: "gdpr_cookie_analytics"
+          trackingId: '',
+          cookieName: 'gdpr_cookie_analytics'
         },
 
         facebookPixel: {
-          pixelId: "", // leave empty if you want to disable the tracker
-          cookieName: "gdpr_cookie_analytics" // default
+          pixelId: '', // leave empty if you want to disable the tracker
+          cookieName: 'gdpr_cookie_analytics' // default
         },
 
-        environments: ["production", "development"]
+        environments: ['production', 'development']
       }
     }
   ]
-};
+}
