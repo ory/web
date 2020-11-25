@@ -12,7 +12,13 @@ interface PropTypes {
 
 const author = 'ORY'
 
-const SEO = ({ description, lang = 'en', meta = [], title }: PropTypes) => (
+const SEO = ({
+  description,
+  lang = 'en',
+  meta = [],
+  title,
+  keywords
+}: PropTypes) => (
   <Helmet
     htmlAttributes={{
       lang

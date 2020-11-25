@@ -1,4 +1,10 @@
-import React, { ChangeEvent, MouseEvent, Component, ReactNode, FormEvent } from 'react'
+import React, {
+  ChangeEvent,
+  MouseEvent,
+  Component,
+  ReactNode,
+  FormEvent
+} from 'react'
 import cn from 'classnames'
 import * as styles from './newsletter.module.css'
 import VerticalDivider from './vertical-divider'
@@ -23,7 +29,9 @@ interface PropTypes {
 class Newsletter extends Component<PropTypes, StateTypes> {
   state = { email: '' }
 
-  private onSubmit = (e: MouseEvent<HTMLInputElement> | FormEvent<HTMLFormElement>) => {
+  private onSubmit = (
+    e: MouseEvent<HTMLInputElement> | FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault()
     window.open(
       'https://ory.us10.list-manage.com/subscribe?u=ffb1a878e4ec6c0ed312a3480&id=f605a41b53&MERGE0=' +

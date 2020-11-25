@@ -81,7 +81,7 @@ written form:
 
 and in visual form in this video:
 
-`youtube:https://www.youtube.com/embed/996OiexHze0`
+https://www.youtube.com/watch?v=996OiexHze0
 
 ### ORY Hydra: A Headless OAuth2 and OpenID Connect Provider
 
@@ -437,7 +437,7 @@ To authenticate users, ORY Hydra defines the
 an
 [exemplary user login and consent application on our GitHub](https://github.com/ory/hydra-login-consent-node).
 
-`youtube:https://www.youtube.com/embed/txUmfORzu8Y`
+https://www.youtube.com/watch?v=txUmfORzu8Y
 
 ### Run the user login & consent app
 

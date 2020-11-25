@@ -33,7 +33,7 @@ class AnimatedCounter extends Component<PropTypes, StateTypes> {
               end={this.props.countTo}
               useEasing
               duration={3}
-              formattingFn={v => numeral(v).format('0.0a')}
+              formattingFn={(v) => numeral(v).format('0.0a')}
             >
               {({ countUpRef }) => <span ref={countUpRef} />}
             </CountUp>

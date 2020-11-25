@@ -2,7 +2,7 @@
 path: '/web-api-cloud-access-control-authentication/'
 title: >
   Approaching Access Control on the Web
-  
+
 seo:
   title: >
     Approaching Access Control on the Web: Authentication Overview
@@ -140,7 +140,7 @@ app.get(
   '/some-protected-resource',
   auth.hasValidSession,
   auth.hasPermission('canEditContent'),
-  function(req, res) {
+  function (req, res) {
     // console.log(req.user.email)
   }
 )

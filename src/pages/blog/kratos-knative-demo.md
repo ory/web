@@ -8,8 +8,8 @@ overline: >
   Kubernetes & Knative
 
 teaser: >
-    Run ORY Kratos as a serverless service on Kubernetes and Knative with
-    scale-to-zero deployments.
+  Run ORY Kratos as a serverless service on Kubernetes and Knative with
+  scale-to-zero deployments.
 
 seo:
   title: 'ORY Kratos on Kubernetes and Knative'
@@ -30,8 +30,8 @@ a minimum requirement, we suggest 16GB of RAM. This example was developed on
 UbuntuLinux/minikube/kvm2 and it should definitely work with
 [other setups](https://www.youtube.com/watch?v=q6kyHDleioA&t=202s).
 
-We will need Helm. Please download the helm-binary in a local .bin directory
-for later usage.
+We will need Helm. Please download the helm-binary in a local .bin directory for
+later usage.
 
 ```shell-session
 $ mkdir -p .bin
@@ -288,12 +288,12 @@ So the fatal-message tells us that something with these configuration-lines
 (values.yaml) is wrong:
 
 ```yaml
-    urls:
-      login_ui: http://127.0.0.1:4455/auth/login
-      registration_ui: http://127.0.0.1:4455/auth/registration
-      error_ui: http://127.0.0.1:4455/error
-      settings_ui: http://127.0.0.1:4455/settings
-      verify_ui: http://127.0.0.1:4455/verify
+urls:
+  login_ui: http://127.0.0.1:4455/auth/login
+  registration_ui: http://127.0.0.1:4455/auth/registration
+  error_ui: http://127.0.0.1:4455/error
+  settings_ui: http://127.0.0.1:4455/settings
+  verify_ui: http://127.0.0.1:4455/verify
 ```
 
 We shouldn't be surprised! So we need the selfservice_node-application somewhere

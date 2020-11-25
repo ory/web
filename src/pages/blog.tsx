@@ -8,7 +8,7 @@ import * as styles from './blog.module.css'
 
 const Post = ({
   node: {
-    frontmatter: { path, title, teaser, overline },
+    frontmatter: { path, title, teaser, overline }
   }
 }: any) => (
   <div>

@@ -4,12 +4,17 @@ import * as styles from './blog-hero.module.css'
 interface PropTypes {
   title: string
   date?: string
-  author?: string
+  author: string
   overline?: string
   subtitle?: string
 }
 
-const authors = {
+interface Profile {
+  fullname: string
+  github: string
+}
+
+const authors: { [key: string]: Profile } = {
   aeneasr: {
     fullname: 'Aeneas Rekkas',
     github: 'http://github.com/aeneasr'
@@ -23,7 +28,7 @@ const authors = {
 const Author = ({ author }: { author: string }) => {
   const profile = authors[author]
   if (!profile) {
-    return author
+    return <span>{author}</span>
   }
 
   return <a href={profile.github}>{profile.fullname}</a>
@@ -39,9 +44,10 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             <h1>{title}</h1>
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.meta}>
-              {date} - <span className={styles.author}>
-              <Author author={author} />
-            </span>
+              {date} -{' '}
+              <span className={styles.author}>
+                <Author author={author} />
+              </span>
             </p>
           </div>
         </div>

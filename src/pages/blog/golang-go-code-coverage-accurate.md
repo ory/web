@@ -12,8 +12,8 @@ seo:
     Get Accurate Code Coverage in Golang (Go) Across Multiple Packages
 
 teaser: >
-    Get accurate Golang (Go) code coverage reports using go-acc.
-    Your test might perform better than you think!
+  Get accurate Golang (Go) code coverage reports using go-acc. Your test might
+  perform better than you think!
 
 overline: >
   Code & Productivity

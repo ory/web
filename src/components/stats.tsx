@@ -10,12 +10,12 @@ import AnimatedCounter from './animated-counter'
 
 const countGitHubStars = (state: StateTypes) =>
   (Object.keys(state.github) as Array<keyof GitHub>)
-    .map(repo => state.github[repo])
+    .map((repo) => state.github[repo])
     .reduce((p: number, n: number) => p + n, 0)
 
 const countDockerImagePulls = (state: StateTypes) =>
   (Object.keys(state.docker) as Array<keyof Docker>)
-    .map(repo => state.docker[repo])
+    .map((repo) => state.docker[repo])
     .reduce((p: number, n: number) => p + n, 0)
 
 const analyze = (raw: string): Promise<number[][]> =>
@@ -152,16 +152,16 @@ class Stats extends Component<PropTypes, StateTypes> {
     const url = `https://corsar.ory.sh/repos/ory/${repo}?__host=api.github.com&__proto=https`
     // const url = `https://api.github.com/repos/ory/${repo}`
     fetch(url)
-      .then(body => body.json())
+      .then((body) => body.json())
       .then(({ stargazers_count }) => {
-        this.setState(state => ({
+        this.setState((state) => ({
           github: {
             ...state.github,
             [repo]: stargazers_count
           }
         }))
       })
-      .catch(err =>
+      .catch((err) =>
         console.error(
           `An error occurred while trying to fetch "${url}": ${err}`
         )
@@ -172,16 +172,16 @@ class Stats extends Component<PropTypes, StateTypes> {
     fetch(
       `https://corsar.ory.sh/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`
     )
-      .then(body => body.json())
+      .then((body) => body.json())
       .then(({ pull_count }: { pull_count: number }) => {
-        this.setState(state => ({
+        this.setState((state) => ({
           docker: {
             ...state.docker,
             [repo]: pull_count
           }
         }))
       })
-      .catch(err =>
+      .catch((err) =>
         console.error(
           `An error occurred while trying to fetch "${repo}": ${err}`
         )
@@ -196,8 +196,8 @@ class Stats extends Component<PropTypes, StateTypes> {
     ]).then((services: number[][][]) => {
       const requests: { [key: number]: number } = {}
 
-      services.forEach(rows => {
-        rows.forEach(row => {
+      services.forEach((rows) => {
+        rows.forEach((row) => {
           requests[row[0]] = requests[row[0]]
             ? requests[row[0]] + row[1]
             : row[1]
@@ -225,10 +225,10 @@ class Stats extends Component<PropTypes, StateTypes> {
   }
 
   componentDidMount() {
-    ;(Object.keys(this.state.docker) as Array<keyof Docker>).forEach(repo => {
+    ;(Object.keys(this.state.docker) as Array<keyof Docker>).forEach((repo) => {
       this.fetchDockerImagePulls(repo)
     })
-    ;(Object.keys(this.state.github) as Array<keyof GitHub>).forEach(repo => {
+    ;(Object.keys(this.state.github) as Array<keyof GitHub>).forEach((repo) => {
       this.fetchGitHubStars(repo)
     })
 

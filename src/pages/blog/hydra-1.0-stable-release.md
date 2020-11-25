@@ -4,8 +4,7 @@ publishedAt: '2019-06-01'
 author: aeneasr
 
 title: 'ORY Hydra v1.0 is Here!'
-teaser:
-    We are very excited to announce the 1.0 release of ORY Hydra!
+teaser: We are very excited to announce the 1.0 release of ORY Hydra!
 
 overline: Releases
 ---

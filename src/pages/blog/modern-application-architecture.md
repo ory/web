@@ -7,14 +7,14 @@ title: >
   Ory and Modern Application Architecture
 
 subtitle: >
-  From monoliths to service-based architectures 
+  From monoliths to service-based architectures
 
 overline: >
   Modern Application Architecture
-  
+
 teaser: >
-  A short introduction into modern application architecture and ORY's
-  thinking and philosophy around software development.
+  A short introduction into modern application architecture and ORY's thinking
+  and philosophy around software development.
 ---
 
 Modern software requires the use of modern application architectures. Modern

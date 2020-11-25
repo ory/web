@@ -6,7 +6,7 @@ title: >
 teaser: >
   Pick recommended Argon2 (Argon2id, Argon2i) parameters (iteration, memory,
   parallelism) for secure login and password hashing, following security best
-  practices using only open source.  
+  practices using only open source.
 
 seo:
   keywords: |
@@ -116,7 +116,7 @@ options using the `--help` flag. An exemplary output could be:
   'iterations': 2,
   'parallelism': 8,
   'salt_length': 16, # in bytes
-  'key_length': 32, # in bytes
+  'key_length': 32 # in bytes
 }
 ```
 

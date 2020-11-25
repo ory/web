@@ -39,7 +39,6 @@ const Projects = () => (
                       <p>{description}</p>
                     </div>
                   </Link>
-                  )}
                 </div>
               ))}
             </div>
