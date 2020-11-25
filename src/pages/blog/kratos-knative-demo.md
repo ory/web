@@ -24,7 +24,7 @@ category: Tutorial
 ---
 
 Serverless computing is a hot topic these days, and so is vendor lock in.
-Knative [https://knative.dev/] looks like something that addresses both points:
+[Knative](https://knative.dev/) looks like something that addresses both points:
 You can have the cake and eat it too. For sure, there is always some downsides
 and that should be discussed elsewhere. For now, let's simply assume you're
 interested in ORY's cloud native software applications for security and identity
