@@ -72,7 +72,7 @@ Native using the open source [ORY Kratos](https://www.ory.sh/kratos) project.
 
 In the future, this guide will also cover Two-Factor-Authentication (2FA/MFA),
 "Sign in with Google", password reset, email verification, phone number and SMS
-verification, "Sign in with GitHub", "Sign in with Facebook", and many other
+verification, "Sign in with GitHub", "Sign in with Facebook" and many other
 flows.
 
 :::note
@@ -90,27 +90,29 @@ This guide covers how you would start such a project from scratch.
 
 This guide assumes that you have worked with React and React Native before as we
 will not cover React fundamentals and focus mostly on implementing login,
-registration, and so on.
+registration and so on.
 
-To make things a bit easier, we will use [`expo`](https://expo.io). At minimum,
+To make things a bit easier, we will use [`expo`](https://expo.io). At a minimum,
 you need NodeJS and NPM installed locally. We will use the ORY Kratos React
-Native Login, Registration, and Profile Management template:
+Native Login, Registration and Profile Management template:
 
 ```shell-session
 $ npm install -g expo-cli
-$ expo init login-signup-app -t @oryd/expo-login-registration-template
+$ expo init login-signup-app -t @oryd/expo-login-registration-template --npm
 
 # We also want to install and initialize all required components:
 $ cd login-signup-app
+~/login-signup-app$ npm i
 ~/login-signup-app$ npm run expo-install
+# For iOS you also need to run:
 ~/login-signup-app$ npm run pod-install
 ```
 
-If you want to just start exploring, you can now simply run:
+In case you want to just start exploring, simply run:
 
 - `npm start` opens a dashboard where you can open iOS, Android, or web.
-- `npm run android` opens the app as an android app.
-- `npm run ios` opens the app in the iOS simulator.
+- `npm run android` opens the app as an android app (requires a connected android VM or device).
+- `npm run ios` opens the app in the iOS simulator (works only on mac OSX).
 - `npm run web` opens the app as a browser app.
 
 ![Expo CLI Dashboard for ORY Kratos React Native Reference Implementation](../../images/articles/react-native/expo-dashboard.png)
@@ -128,7 +130,7 @@ This is configured in `app.config.js`:
 
 :::note
 
-If you wish to get your own demo environment, reach out to
+Are you looking to set up your own demo environment? Reach out to
 [jared@ory.sh](mailto:jared@ory.sh).
 
 :::
@@ -141,6 +143,8 @@ To run the app against a local deployment, check out
 [ORY Kratos](https://www.ory.sh/kratos) locally and run the quickstart:
 
 ```shell-session
+# You might want to cd into another directory:
+# $ cd ..
 $ git clone https://github.com/ory/kratos.git
 $ cd kratos
 $ git checkout v0.5.4-alpha.1
@@ -148,8 +152,8 @@ $ docker-compose -f quickstart.yml -f quickstart-standalone.yml \
     up --build --force-recreate -d
 ```
 
-Next you need a tool like [`ngrok`](https://ngrok.com) to set up port forwarding
-for the ORY Kratos Docker Image you just started:
+Next you need to set up port forwarding
+for the ORY Kratos Docker Image you just started. We use the tool [`ngrok`](https://ngrok.com).
 
 ```shell-session
 $ ngrok http 4433
@@ -166,18 +170,18 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 ```
 
 Copy the HTTPS forwarding URL (example from above
-`https://04ee3e08367a.ngrok.io`) and set it, in a new terminal, as an
+`https://04ee3e08367a.ngrok.io`) and in a new terminal,  set it as an
 environment variable and start the app:
 
 ```shell-session
 # Change into the directory of your react native app:
 $ cd login-signup-app
-$ KRATOS_URL=<the-ngrok-url> start
+$ KRATOS_URL=<the-ngrok-url> npm start
 # For example:
-# $ export KRATOS_URL=https://04ee3e08367a.ngrok.io
+# $ KRATOS_URL=https://04ee3e08367a.ngrok.io npm start
 ```
 
-Now, your app will use the local deployment of ORY Kratos with your own
+Now your app will use the local deployment of ORY Kratos with your own
 database!
 
 ## React Native Navigation with Authentication Session
@@ -209,7 +213,7 @@ The helper methods in
 [`src/helpers/auth.tsx`](https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/auth.tsx)
 are simple wrappers around Expo's
 [SecureStore](https://docs.expo.io/versions/latest/sdk/securestore/). In order
-to work on the web as well, we use `@react-native-community/async-storage` as a
+to work on the web as well, we use [`@react-native-community/async-storage`](https://github.com/react-native-async-storage/async-storage) as a
 fallback:
 
 <CodeFromRemote
@@ -235,7 +239,7 @@ or login / registration screens:
 
 ## React Native Screens
 
-Let's take a look at the different screens! In order to not write a form
+Let's take a look at the different screens: In order for us to not write a form
 renderer for every component, including styling, we abstracted the form
 rendering into their own components, which you can find in
 [`src/components/Form`](https://github.com/ory/kratos-selfservice-ui-react-native/tree/master/src/components/Form).
@@ -295,13 +299,14 @@ The User Settings component performs a
 
 ## Writing Login and Registration for a React Native App From Scratch
 
-Using a template is the easiest way to get started. If you wish to understand
-how everything works however, let's have a look at the project set up process!
+Granted, using a template is the easiest way to get started. However, understanding how everything works is better.
+Let's have a look at the project set up process!
 
-Here, we assume that you ran `expo init` with one of the default templates:
+Assuming that you ran `expo init` with one of the default templates:
 
 ```shell-session
-$ expo init login-signup-app
+$ expo init login-signup-app --npm
+$ cd login-signup-app
 ```
 
 ### React Native Navigation
@@ -310,7 +315,7 @@ To set up screen navigation, we use the standard React Native navigation
 component:
 
 ```shell-session
-$ npm add @react-navigation/native @react-navigation/stack
+$ npm install @react-navigation/native @react-navigation/stack
 $ expo install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 ```
 
@@ -327,13 +332,13 @@ $ expo install expo-secure-store @react-native-community/async-storage
 $ npx pod-install
 ```
 
-We're also adding `@react-native-community/async-storage` as `expo-secure-store`
+We're also adding `@react-native-community/async-storage` because `expo-secure-store`
 does not work on the Web.
 
 ### ORY Kratos SDKs for React Native
 
-We also need to install the ORY Kratos SDK as well as the ORY Themes package and
-some fonts to make the app beautiful:
+We also need to install the ORY Kratos SDK. We'll also be making sure the app looks beautiful by
+installing the ORY Themes package and some fonts later.
 
 ```shell-session
 # The package "url" is needed as it is not natively available in React Native.
@@ -369,8 +374,8 @@ You can use this variable when initializing the ORY Kratos SDK:
 
 ### Fonts and Other Dependencies
 
-To make things a bit prettier, we are going to add some fonts and the
-[ORY Theme](https://github.com/ory/themes):
+To make things a bit prettier, we are going to add the [ORY Theme](https://github.com/ory/themes)
+and some fonts:
 
 ```shell-session
 $ npm install @oryd/themes styled-components
@@ -380,3 +385,15 @@ $ expo install expo font @expo-google-fonts/rubik \
 
 You are of course free to use your own themes here but for the sake of
 completeness we added this to the guide.
+
+### Conclusion 
+
+We have now implemented ORY Kratos Login, Registration and 2FA Server in React Native!
+
+Thanks for taking the time to follow this guide and hopefully it helps you build secure apps more smoothly.  
+Should you have further questions or feedback, visit the [community forum](https://community.ory.sh/) or [chat](https://www.ory.sh/chat).
+
+ORY Kratos is open-source and freely available on [github](https://github.com/ory/kratos), please consider starring the repository.  
+It is free and helps grow the project and community.
+
+Sign up to [our newsletter](https://ory.us10.list-manage.com/subscribe?u=ffb1a878e4ec6c0ed312a3480&id=f605a41b53) to be notified of new updates to ORY Kratos and other ORY projects.
