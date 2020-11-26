@@ -50,17 +50,15 @@ const findLine = (needle: string | undefined, haystack: string[]) => {
 
 const transform = ({ startAt, endAt, src }: Props) => (content: string) => {
   let lines = content.split('\n')
-  let startIndex = findLine(startAt, lines)
-  let endIndex = findLine(endAt, lines)
 
-  if (endAt) {
-    lines.splice(endIndex, -1)
-    lines.push('', '// ...')
+  const startIndex = findLine(startAt, lines)
+  if (startIndex > 0) {
+    lines = ['// ...', ...lines.slice(startIndex, -1)]
   }
 
-  if (startAt) {
-    lines.splice(0, startIndex)
-    lines.unshift('// ...', '')
+  const endIndex = findLine(endAt, lines)
+  if (endIndex > 0) {
+    lines = [...lines.slice(0, endIndex+1), '// ...']
   }
 
   const lang = detectLanguage(src)

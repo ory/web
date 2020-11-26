@@ -1,5 +1,5 @@
 ---
-path: '/mobile-login-auth-user-management-react-native-desktop-app-expo/'
+path: '/login-user-management-mobile-apps-react-native-expo-template/'
 
 title: |
   Authentication and Profile Management for React Native Mobile and Desktop Apps
@@ -24,69 +24,64 @@ overline: |
 ---
 
 import CodeFromRemote from '../../components/codefromremote'
-import login from '../../images/articles/react-native/login.png'
-import registration from '../../images/articles/react-native/registration.png'
-import dashboard from '../../images/articles/react-native/dashboard.png'
-import settings from '../../images/articles/react-native/settings.png'
+import loginVideoMP4 from '../../images/articles/react-native/login.mp4'
+import loginVideoWebm from '../../images/articles/react-native/login.webm'
+import signupVideoMP4 from '../../images/articles/react-native/signup-profile-settings.mp4'
+import signupVideoWebm from '../../images/articles/react-native/signup-profile-settings.webm'
 
-This guide explains step-by-step how to implement login, registration, logout,
-profile management, password change, and many other profile-related flows in
-React Native using the open source [ORY Kratos](https://www.ory.sh/kratos)
-project.
+This guide explains step-by-step how to add login, registration, logout,
+profile management, password change, and many other profile-related flows to a
+React Native application:
+
+<p>
+  <figure>
+    <video style={{height: 500, display: 'block', margin: '0 auto', width: 'auto'}} autoPlay muted loop>
+      <source src={loginVideoMP4} type="video/mp4"/>
+      <source src={loginVideoWebm} type="video/webm"/>
+    </video>
+    <figcaption>
+      React Native Mobile App with Login and User Management using ORY Kratos as a backend.
+    </figcaption>
+  </figure>
+</p>
+
+As the user storage / identity management we will use the open source [ORY Kratos](https://www.ory.sh/kratos)
+project. The React Native application shown in the screens below is available
+on at [github.com/ory/kratos-selfservice-ui-react-native](https://github.com/ory/kratos-selfservice-ui-react-native)
+as well. Both are maintained by [@aeneasr](https://github.com/aeneasr) and [@zepatrik](https://github.com/zepatrik).
 
 <div className="container-fluid">
   <div className="row justify-center-sm">
-    <div className="col-sm-3">
+    <div className="col-sm-6">
       <p>
-        <img
-          alt="React Native Mobile App with Login using ORY Kratos"
-          src={login}
-        />
+        <a href={"https://github.com/ory/kratos"} rel="nofollow noopener">
+          <img
+            alt="ORY Kratos GitHub Card"
+            src="https://gh-card.dev/repos/ory/kratos.svg?fullname="
+          />
+        </a>
       </p>
     </div>
-    <div className="col-sm-3">
+    <div className="col-sm-6">
       <p>
-        <img
-          alt="React Native Mobile App with Registration using ORY Kratos"
-          src={registration}
-        />
-      </p>
-    </div>
-    <div className="col-sm-3">
-      <p>
-        <img
-          alt="React Native Mobile App with User Dashboard using ORY Kratos"
-          src={dashboard}
-        />
-      </p>
-    </div>
-    <div className="col-sm-3">
-      <p>
-        <img
-          alt="React Native Mobile App with Profile Settings using ORY Kratos"
-          src={settings}
-        />
+        <a href={"https://github.com/ory/kratos-selfservice-ui-react-native"} rel="nofollow noopener">
+          <img
+            alt="ORY Kratos React Native Self-Service UI Reference for React Native GitHub Card"
+            src="https://gh-card.dev/repos/ory/kratos-selfservice-ui-react-native.svg?fullname="
+          />
+        </a>
       </p>
     </div>
   </div>
 </div>
 
+You can download the app right now from the [Apple App Store](https://apps.apple.com/fj/app/ory-profile-app/id1536546333)
+and [Google Play Store](https://play.google.com/store/apps/details?id=com.ory.kratos_self_service_ui_react_native)!
+
 In the future, this guide will also cover Two-Factor-Authentication (2FA/MFA),
 "Sign in with Google", password reset, email verification, phone number and SMS
 verification, "Sign in with GitHub", "Sign in with Facebook" and many other
 flows.
-
-:::note
-
-If you want to check out the app, download it from the
-[Apple App Store](https://apps.apple.com/fj/app/ory-profile-app/id1536546333) or
-the
-[Google Play Store](https://play.google.com/store/apps/details?id=com.ory.kratos_self_service_ui_react_native)!
-You can also check out the source code of our
-[ORY Kratos React Native reference implementation](https://github.com/ory/kratos-selfservice-ui-react-native).
-This guide covers how you would start such a project from scratch.
-
-:::
 
 ## Auth, Login, Registration, User Management React Native Template for Expo
 
@@ -131,19 +126,101 @@ Configure this in `app.config.js`:
   src="https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/app.config.js"
 />
 
-:::note
+:::info
 
-Are you looking to set up your own demo environment? Reach out to
-[jared@ory.sh](mailto:jared@ory.sh).
+Please be aware that the demo environment including its admin APIs is available to everyone. Use only anonymised
+data when playing around with it! If you want your own managed environment reach out to [jared@ory.sh](mailto:jared@ory.sh)
+or set up your own open source environment. Information on achieving that is available in part two of this article.
 
 :::
 
-The following section will show how to run ORY Kratos on your local machine in
-Docker instead!
+## Native Mobile Profile Management
 
-## Run ORY Kratos Login, Registration, 2FA Server in Docker
+This short screen capture shows using the apps' user login, user registration, dashboard, and profile
+management features:
 
-To run the app against a local deployment, check out
+<p>
+  <figure>
+    <video style={{height: 500, display: 'block', margin: '0 auto', width: 'auto'}} autoPlay muted loop>
+      <source src={signupVideoMP4} type="video/mp4"/>
+      <source src={signupVideoWebm} type="video/webm"/>
+    </video>
+    <figcaption>
+      User Registration, Dashboard, Profile Management in React Native using ORY Kratos.
+    </figcaption>
+  </figure>
+</p>
+
+## User Management / Identity Management
+
+To manage identities, you may use the ORY Kratos CLI. An overview of all commands can be found in the [ORY Kratos
+documentation](https://www.ory.sh/kratos/docs/cli/kratos) or by running:
+
+```shell session
+$ docker run oryd/kratos:v0.5.4-alpha.1 help
+```
+
+To list all identities in the system, run:
+
+```shell-session
+$ docker run oryd/kratos:v0.5.4-alpha.1 \
+  --endpoint https://demo.tenants.staging.oryapis.dev/api/kratos/admin \
+  identities list
+
+ID					VERIFIED ADDRESS 1		RECOVERY ADDRESS 1		SCHEMA ID	SCHEMA URL
+f9c33e56-5b43-458a-8cfa-f38a4fb98b9c	office+demo@ory.sh		office+demo@ory.sh		default		https://demo.tenants.staging.oryapis.dev/api/kratos/public/schemas/default
+[...]
+```
+
+You can also search for the identity you just signed up using `jq`:
+
+```shell-session
+$ yourEmail=<the-email-you-used-for-signup>
+# For example:
+#   yourEmail=office+demo@ory.sh
+$ docker run oryd/kratos:v0.5.4-alpha.1 \
+  --endpoint https://demo.tenants.staging.oryapis.dev/api/kratos/admin \
+  identities list -f json | \
+    jq '.[] | select(.traits.email == "'$yourEmail'")'
+
+{
+  "id": "f9c33e56-5b43-458a-8cfa-f38a4fb98b9c",
+  "recovery_addresses": [
+    {
+      "id": "bd7c396c-d893-4a2b-8627-b50aa38e2569",
+      "value": "office+demo@ory.sh",
+      "via": "email"
+    }
+  ],
+  "schema_id": "default",
+  "schema_url": "https://demo.tenants.staging.oryapis.dev/api/kratos/public/schemas/default",
+  "traits": {
+    "email": "office+demo@ory.sh",
+    "name": {
+      "first": "Aeneas",
+      "last": "Hackerman"
+    }
+  },
+  "verifiable_addresses": [
+    {
+      "id": "bee9b276-b57f-41dc-8c61-82eb83c2d4fd",
+      "status": "completed",
+      "value": "office+demo@ory.sh",
+      "verified": true,
+      "verified_at": "2020-11-26T08:45:22.094Z",
+      "via": "email"
+    }
+  ]
+}
+```
+
+To learn more about administration of ORY Kratos' identities, head over to the
+[Managing Users and Identities Documentation](https://www.ory.sh/kratos/docs/admin/managing-users-identities)!
+
+## Run ORY Kratos Login, Registration, 2FA Server Locally in Docker
+
+Instead of using the hosted demo environment, you can also deploy your own ORY Kratos installation locally
+and run the React Native app against its API. To run the app against a local deployment, check out
 [ORY Kratos](https://www.ory.sh/kratos) locally and run the quickstart:
 
 ```shell-session
@@ -397,13 +474,13 @@ We have now implemented ORY Kratos Login, Registration and 2FA Server in React
 Native!
 
 Thanks for taking the time to follow this guide and hopefully it helps you build
-secure apps more smoothly.  
+secure apps more smoothly.
 Should you have further questions or feedback, visit the
 [community forum](https://community.ory.sh/) or [chat](https://www.ory.sh/chat).
 
 ORY Kratos is open-source and freely available on
 [github](https://github.com/ory/kratos), please consider starring the
-repository.  
+repository.
 It is free and helps grow the project and community.
 
 Sign up to
