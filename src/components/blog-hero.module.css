@@ -36,6 +36,7 @@
 }
 
 .info {
+  color: var(--colors-base-grey);
   line-height: 1.5;
   margin-bottom: 0;
   font-weight: normal;

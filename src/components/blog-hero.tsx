@@ -26,8 +26,8 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             <h1>{title}</h1>
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.info}>
-              <span className={styles.author}>
-                <Author name={author} />
+              <span>
+                <Author className={styles.author} name={author} />
                 <br />
                 {date}
               </span>

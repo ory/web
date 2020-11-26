@@ -35,7 +35,7 @@ p.info {
   font-size: 0.833rem;
 
   & .author {
-    color: var(--colors-base-grey);
+    color: var(--colors-themed-default);
   }
 }
 
