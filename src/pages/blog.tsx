@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogSection from '../components/blog-section'
+import Author from '../components/author'
 
 import * as styles from './blog.module.css'
 
@@ -18,7 +19,7 @@ const Post = ({
     </h2>
     <p className={styles.postTeaser}>{teaser}</p>
     <p className={styles.info}>
-      <span className={styles.author}>{author}</span> - {publishedAt}
+      <Author name={author} className={styles.author} /> - {publishedAt}
     </p>
   </div>
 )

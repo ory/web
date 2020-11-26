@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from './blog-hero.module.css'
 import cn from 'classnames'
+import Author from './author'
 
 interface PropTypes {
   title: string
@@ -8,31 +9,6 @@ interface PropTypes {
   author: string
   overline?: string
   subtitle?: string
-}
-
-interface Profile {
-  fullname: string
-  github: string
-}
-
-const authors: { [key: string]: Profile } = {
-  aeneasr: {
-    fullname: 'Aeneas Rekkas',
-    github: 'http://github.com/aeneasr'
-  },
-  zepatrik: {
-    fullname: 'Patrik Neu',
-    github: 'https://github.com/zepatrik'
-  }
-}
-
-const Author = ({ author }: { author: string }) => {
-  const profile = authors[author]
-  if (!profile) {
-    return <span>{author}</span>
-  }
-
-  return <a href={profile.github}>{profile.fullname}</a>
 }
 
 const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
@@ -51,7 +27,7 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.info}>
               <span className={styles.author}>
-                <Author author={author} />
+                <Author name={author} />
                 <br />
                 {date}
               </span>
