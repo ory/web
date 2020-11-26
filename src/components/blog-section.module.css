@@ -94,15 +94,11 @@
     margin: 2rem 0 3rem 0;
     padding-top: 16px;
 
-    & img {
-      margin-bottom: 16px;
-    }
-
     & figcaption {
       text-align: center;
       color: var(--colors-base-grey);
       font-size: 0.694rem;
-      margin-bottom: 32px;
+      margin: 16px 0 32px;
     }
   }
 }
