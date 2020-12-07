@@ -105,16 +105,16 @@ https://www.ory.sh/docs/ecosystem/usage https://www.ory.sh/docs/ecosystem/api-de
 
 # April 2020 split docs repository change
 
-https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines 302!
+# https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines 302!
 https://www.ory.sh/docs/keto/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
 https://www.ory.sh/keto/docs/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
 https://www.ory.sh/docs/keto/configuration https://www.ory.sh/keto/docs/reference/configuration 302!
 https://www.ory.sh/docs/keto/* https://www.ory.sh/keto/docs/:splat 302!
 https://www.ory.sh/docs/next/keto/* https://www.ory.sh/keto/docs/:splat 302!
 
-https://www.ory.sh/kratos/docs/concepts/ https://www.ory.sh/kratos/docs/concepts 302!
+# https://www.ory.sh/kratos/docs/concepts/ https://www.ory.sh/kratos/docs/concepts 302!
 https://www.ory.sh/kratos/docs/self-service/strategies/ https://www.ory.sh/kratos/docs/self-service/strategies 302!
-https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/docs/self-service/flows 302!
+# https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/docs/self-service/flows 302!
 https://www.ory.sh/docs/kratos/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/kratos/docs/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/docs/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
