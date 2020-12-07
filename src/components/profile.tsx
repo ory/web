@@ -52,7 +52,7 @@ const socialWithIcon = ({ href, network }: SocialLinks) => {
 const Profile = ({ name, img, social }: PropTypes) => (
   <div className={styles.profile}>
     <div>
-      <img loading="lazy" fixed={img} alt={name} />
+      <Img fixed={img} alt={name} />
     </div>
     <div className={cn(styles.space)}>
       <h4>{name}</h4>
