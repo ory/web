@@ -29,7 +29,7 @@ teaser:
 
 In this guide you will set up a hardened, fully functional OAuth2 Server and
 OpenID Connect Provider (OIDC / OP) using open source only. It will take you
-about ~15 minutes. This guide is for you, if you are looking to do something
+about ~10 minutes. This guide is for you, if you are looking to do something
 like in the gif on the right, or more specifically:
 
 - You want to use OAuth2 for API security.
@@ -44,6 +44,19 @@ like in the gif on the right, or more specifically:
 We will use open source [ORY Hydra](https://github.com/ory/hydra) (7k+ GitHub
 Stars, 5M+ Docker Downloads), a hardened production-ready, security-first OAuth2
 Server and OpenID Connect Provider written in Go (Golang).
+
+Also check out the video on the [ORY Hydra 5 Minute Tutorial](https://www.ory.sh/hydra/docs/5min-tutorial):
+There are differences to this guide, but it covers a similar setup.
+
+<p align="center">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/tlO9p2E501A"
+    frameborder="0"
+    allowfullscreen
+  />
+</p>
 
 ## Refresh your OAuth2 Knowledge
 
