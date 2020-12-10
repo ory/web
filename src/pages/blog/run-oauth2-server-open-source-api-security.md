@@ -48,15 +48,7 @@ Server and OpenID Connect Provider written in Go (Golang).
 Also check out the video on the [ORY Hydra 5 Minute Tutorial](https://www.ory.sh/hydra/docs/5min-tutorial):
 There are differences to this guide, but it covers a similar setup.
 
-<p align="center">
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/tlO9p2E501A"
-    frameborder="0"
-    allowfullscreen
-  />
-</p>
+https://www.youtube.com/watch?v=tlO9p2E501A
 
 ## Refresh your OAuth2 Knowledge
 
