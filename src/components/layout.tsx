@@ -27,12 +27,25 @@ const defaultMenu: Menu = [
 ]
 
 const defaultIconMenu = ({
-  githubLink = 'https://github.com/ory'
-}): IconMenu => [
-  { title: 'Chat', href: 'https://www.ory.sh/chat' },
-  { title: 'Forum', href: 'https://community.ory.sh/' },
-  { title: 'GitHub', href: githubLink }
-]
+  githubLink = 'https://github.com/ory',
+  discussionsLink
+}: {
+  discussionsLink?: string
+  githubLink?: string
+}): IconMenu => {
+  if (discussionsLink) {
+    return [
+      { title: 'Chat', href: 'https://www.ory.sh/chat' },
+      { title: 'Discussions', href: discussionsLink },
+      { title: 'GitHub', href: githubLink }
+    ]
+  }
+
+  return [
+    { title: 'Chat', href: 'https://www.ory.sh/chat' },
+    { title: 'GitHub', href: githubLink }
+  ]
+}
 
 const Layout = ({
   children,
@@ -41,7 +54,8 @@ const Layout = ({
   announcement,
   appendix = '',
   theme = 'default',
-  githubLink
+  githubLink,
+  discussionsLink
 }: {
   children: ReactNode
   menu?: Menu
@@ -50,10 +64,15 @@ const Layout = ({
   theme?: string
   appendix?: string
   githubLink?: string
+  discussionsLink?: string
 }) => (
   <div className={`theme-${theme}`}>
     {announcement ? <Announcement>{announcement}</Announcement> : null}
-    <Header appendix={appendix} menu={menu} icons={icons({ githubLink })} />
+    <Header
+      appendix={appendix}
+      menu={menu}
+      icons={icons({ githubLink, discussionsLink })}
+    />
     <main>{children}</main>
     <Footer />
   </div>

@@ -82,6 +82,7 @@ const OathkeeperPage = () => (
     theme="oathkeeper"
     appendix={'Oathkeeper'}
     githubLink="https://github.com/ory/oathkeeper"
+    discussionsLink="https://github.com/ory/oathkeeper/discussions"
   >
     <SEO
       description=""

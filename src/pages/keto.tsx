@@ -34,6 +34,7 @@ const KetoPage = () => (
     theme="keto"
     appendix={'Keto'}
     githubLink="https://github.com/ory/keto"
+    discussionsLink="https://github.com/ory/keto/discussions"
   >
     <SEO
       description=""

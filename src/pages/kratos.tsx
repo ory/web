@@ -82,6 +82,7 @@ const KratosPage = () => (
     theme="kratos"
     appendix={'Kratos'}
     githubLink="https://github.com/ory/kratos"
+    discussionsLink="https://github.com/ory/kratos/discussions"
   >
     <SEO
       description=""

@@ -71,6 +71,7 @@ const HydraPage = () => (
     theme="hydra"
     appendix={'Hydra'}
     githubLink="https://github.com/ory/hydra"
+    discussionsLink="https://github.com/ory/hydra/discussions"
   >
     <SEO
       description=""
