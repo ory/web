@@ -91,6 +91,15 @@ type GitHubRepos =
   | 'keto'
   | 'kratos'
   | 'docs'
+  | 'go-acc'
+  | 'k8s'
+  | 'herodot'
+  | 'x'
+  | 'graceful'
+  | 'kratos-selfservice-ui-node'
+  | 'oathkeeper-maester'
+  | 'sdk'
+  | 'hydra-maester'
   | 'examples'
   | 'hydra-login-consent-node'
 
@@ -99,9 +108,12 @@ type DockerImages =
   | 'oryam/hydra'
   | 'oryd/oathkeeper'
   | 'oryd/keto'
+  | 'oryd/xgoreleaser'
+  | 'oryd/mailslurper'
   | 'oryd/kratos'
   | 'oryd/hydra-maester'
   | 'oryd/hydra-login-consent-node'
+  | 'oryd/kratos-selfservice-ui-node'
   | 'oryd/oathkeeper-maester'
 
 type GitHub = {
@@ -132,19 +144,31 @@ class Stats extends Component<PropTypes, StateTypes> {
       'oryd/kratos': 4109,
       'oryd/hydra-maester': 80570,
       'oryd/hydra-login-consent-node': 24175,
-      'oryd/oathkeeper-maester': 76182
+      'oryd/oathkeeper-maester': 76182,
+      'oryd/xgoreleaser': 1,
+      'oryd/mailslurper': 1,
+      'oryd/kratos-selfservice-ui-node': 1
     },
     github: {
-      hydra: 8154,
-      fosite: 1361,
-      ladon: 1624,
-      dockertest: 1055,
-      oathkeeper: 1662,
-      keto: 502,
-      kratos: 379,
-      docs: 17,
-      examples: 107,
-      'hydra-login-consent-node': 125
+      hydra: 0,
+      fosite: 0,
+      ladon: 0,
+      dockertest: 0,
+      oathkeeper: 0,
+      keto: 0,
+      kratos: 0,
+      docs: 0,
+      'go-acc': 0,
+      k8s: 0,
+      herodot: 0,
+      x: 0,
+      graceful: 0,
+      'kratos-selfservice-ui-node': 0,
+      'oathkeeper-maester': 0,
+      sdk: 0,
+      'hydra-maester': 0,
+      examples: 0,
+      'hydra-login-consent-node': 0
     }
   }
 

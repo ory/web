@@ -45,7 +45,8 @@ We will use open source [ORY Hydra](https://github.com/ory/hydra) (7k+ GitHub
 Stars, 5M+ Docker Downloads), a hardened production-ready, security-first OAuth2
 Server and OpenID Connect Provider written in Go (Golang).
 
-Also check out the video on the [ORY Hydra 5 Minute Tutorial](https://www.ory.sh/hydra/docs/5min-tutorial):
+Also check out the video on the
+[ORY Hydra 5 Minute Tutorial](https://www.ory.sh/hydra/docs/5min-tutorial):
 There are differences to this guide, but it covers a similar setup.
 
 https://www.youtube.com/watch?v=tlO9p2E501A
