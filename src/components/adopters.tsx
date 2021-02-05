@@ -65,7 +65,7 @@ const adopters = [
     title: 'Spiribo',
     image: spiribo,
     url: 'https://www.spiri.bo/',
-    featured: true,
+    featured: true
   },
   {
     title: 'Tulip Retail',
@@ -80,7 +80,7 @@ const adopters = [
   {
     title: '3REIN',
     image: threerein,
-    url: 'https://3rein.com/',
+    url: 'https://3rein.com/'
   }
 ]
 
@@ -97,8 +97,9 @@ const Adopters = ({ onlyFeatured }: PropTypes) => (
             <div className={cn(styles.adoptersInner)}>
               {adopters
                 .filter(({ featured }) => (onlyFeatured ? featured : true))
-                .map(({ title, image, url, hiddenSm = true }) => (
+                .map(({ title, image, url, hiddenSm = true }, key) => (
                   <div
+                    key={key}
                     className={cn(
                       styles.adoptersBox,
                       'col-lg-3',

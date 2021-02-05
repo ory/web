@@ -2,9 +2,9 @@
 
 .highlight {
   background: linear-gradient(
-          to bottom,
-          var(--colors-themed-default) 96px,
-          var(--colors-base-light) 96px
+    to bottom,
+    var(--colors-themed-default) 96px,
+    var(--colors-base-light) 96px
   );
 
   & h3 {

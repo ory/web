@@ -1,48 +1,48 @@
 @import '../styles/properties.css';
 
 .thin {
-    background-color: var(--colors-base-white);
-    padding: 32px 0;
+  background-color: var(--colors-base-white);
+  padding: 32px 0;
 
-    &:first-child {
-        padding-top: 96px;
-    }
+  &:first-child {
+    padding-top: 96px;
+  }
 
-    &:last-child {
-        padding-bottom: 64px;
-    }
+  &:last-child {
+    padding-bottom: 64px;
+  }
 
-    & h3 {
-        color: var(--colors-themed-default);
-    }
-    & p {
-        color: var(--colors-base-dark);
-        margin-bottom: 16px;
-    }
+  & h3 {
+    color: var(--colors-themed-default);
+  }
+  & p {
+    color: var(--colors-base-dark);
+    margin-bottom: 16px;
+  }
 
-    & :global a:any-link {
-        color: var(--colors-themed-default);
+  & :global a:any-link {
+    color: var(--colors-themed-default);
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--colors-base-dark);
-        }
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--colors-base-dark);
     }
+  }
 }
 
 .cap {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 @media (--sm-viewport) {
-    .thin {
-        padding: 64px 0;
-    }
+  .thin {
+    padding: 64px 0;
+  }
 }
 
 @media (--md-viewport) {
-    .thin {
-        padding: 64px 0;
-    }
+  .thin {
+    padding: 64px 0;
+  }
 }

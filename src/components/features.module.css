@@ -1,47 +1,47 @@
 @import '../styles/properties.css';
 
 .features {
-    background: var(--colors-base-light);
-    padding: 32px 0;
+  background: var(--colors-base-light);
+  padding: 32px 0;
 
-    & h2 {
-        margin-top: 0;
-        margin-bottom: 3rem;
+  & h2 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  & h3 {
+    color: var(--colors-base-black);
+    line-height: 1;
+    margin: 0 0 1rem;
+    font-size: 1rem;
+  }
+
+  & :global a:any-link {
+    color: var(--colors-themed-default);
+
+    &:hover {
+      color: var(--colors-base-black);
     }
-
-    & h3 {
-        color: var(--colors-base-black);
-        line-height: 1;
-        margin: 0 0 1rem;
-        font-size: 1rem;
-    }
-
-    & :global a:any-link {
-        color: var(--colors-themed-default);
-
-        &:hover {
-            color: var(--colors-base-black);
-        }
-    }
+  }
 }
 .overline {
-    color: var(--colors-themed-default);
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0;
+  color: var(--colors-themed-default);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
-.features-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+.features-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .features-box {
-    margin-bottom: 2rem;
-    padding-right: 2rem;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
 }
 
 /*.icon {
@@ -53,23 +53,23 @@
 } comment out for later */
 
 @media (--sm-viewport) {
-    .features-flex {
-        flex-wrap: wrap;
-    }
+  .features-flex {
+    flex-wrap: wrap;
+  }
 
-    .features-box {
-        padding-right: unset;
-        width: 100%;
-    }
+  .features-box {
+    padding-right: unset;
+    width: 100%;
+  }
 }
 
 @media (--md-viewport) {
-    .features-flex {
-        flex-wrap: wrap;
-    }
+  .features-flex {
+    flex-wrap: wrap;
+  }
 
-    .features-box {
-        padding-right: 1rem;
-        width: 40%;
-    }
+  .features-box {
+    padding-right: 1rem;
+    width: 40%;
+  }
 }

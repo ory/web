@@ -1,8 +1,8 @@
 declare const styles: {
-  readonly features: string
-  readonly featuresFlex: string
-  readonly featuresBox: string
-  readonly overline: string
-  readonly icon: string
-}
-export = styles
+  readonly "features": string;
+  readonly "overline": string;
+  readonly "featuresFlex": string;
+  readonly "featuresBox": string;
+};
+export = styles;
+
