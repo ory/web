@@ -6,9 +6,10 @@ import LargeFeature from '../../components/large-feature'
 import Quicklinks from '../../components/quicklinks'
 import Highlights from '../../components/highlights'
 import CompressedHero from '../../components/compressed-hero'
-import kratosProcess from '../../images/kratos/kratos.svg'
 import Stats from '../../components/stats'
 import Newsletter from '../../components/newsletter'
+import kratosProcess from '../../images/kratos/kratos.svg'
+
 
 const PlaceHolder = () => (
   <img
@@ -28,7 +29,7 @@ const HomePage = () => (
     />
 
     <CompressedHero
-      title="Identity infrastructure for everyone."
+      title="The New Identity Platform."
       subtitle="Give your customers rich experiences and easy secure ways to register and sign in across your mobile and web apps."
       cta={[
         {
@@ -112,9 +113,9 @@ const HomePage = () => (
       openInNewWindow={true}
     />
 
-    <Stats/>
+    <Stats />
 
-    <Newsletter/>
+    <Newsletter />
 
     <Quicklinks
       title={'Ready to get started?'}
