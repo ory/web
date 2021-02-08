@@ -1,16 +1,12 @@
 @import '../styles/properties.css';
 
 .highlight {
-    background: linear-gradient(
-            to bottom,
-            var(--colors-base-black) 96px,
-            var(--colors-base-light) 96px
-    );
+    background: var(--colors-base-white);
+    padding-bottom: 6rem;
 
     & h3 {
         color: var(--colors-themed-default);
         font-size: 1.2rem;
-        min-height: 3rem;
     }
 
     & :global a:any-link {
@@ -29,17 +25,23 @@
 }
 
 .highlight-box {
-    width: 30%;
-    background-color: var(--colors-base-white);
-    padding: 32px 16px;
+    width: 33%;
+    background-color: var(--colors-themed-light);
+    padding: 1rem 0rem;
+
+    & h3 {
+        padding-left: 1rem;
+        border-left: 2px solid;
+        border-color: var(--colors-themed-default)
+    }
 
     &:hover {
         background-color: var(--colors-themed-default);
-        transform: translateY(-4px);
         transition: 0.25s ease-in-out;
 
         & h3 {
             color: var(--colors-base-white);
+            border-color: var(--colors-base-white)
         }
     }
 }
@@ -56,6 +58,7 @@
     }
 
     .highlight-box {
+        padding: 1rem 1rem;
         width: 100%;
     }
 }
@@ -72,6 +75,7 @@
     }
 
     .highlight-box {
+        padding: 1rem 1rem;
         width: 100%;
     }
 }
