@@ -1,0 +1,77 @@
+@import '../styles/properties.css';
+
+.highlight {
+    background: linear-gradient(
+            to bottom,
+            var(--colors-base-black) 96px,
+            var(--colors-base-light) 96px
+    );
+
+    & h3 {
+        color: var(--colors-themed-default);
+        font-size: 1.2rem;
+        min-height: 3rem;
+    }
+
+    & :global a:any-link {
+        color: var(--colors-base-dark);
+
+        &:hover {
+            color: var(--colors-base-white);
+        }
+    }
+}
+
+.highlight-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.highlight-box {
+    width: 30%;
+    background-color: var(--colors-base-white);
+    padding: 32px 16px;
+
+    &:hover {
+        background-color: var(--colors-themed-default);
+        transform: translateY(-4px);
+        transition: 0.25s ease-in-out;
+
+        & h3 {
+            color: var(--colors-base-white);
+        }
+    }
+}
+
+@media (--sm-viewport) {
+    .highlight {
+        & h3 {
+            font-size: 1.067rem;
+        }
+    }
+
+    .highlight-row {
+        flex-wrap: wrap;
+    }
+
+    .highlight-box {
+        width: 100%;
+    }
+}
+
+@media (--md-viewport) {
+    .highlight {
+        & h3 {
+            font-size: 1.125rem;
+        }
+    }
+
+    .highlight-row {
+        flex-wrap: wrap;
+    }
+
+    .highlight-box {
+        width: 100%;
+    }
+}
