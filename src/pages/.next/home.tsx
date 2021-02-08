@@ -134,24 +134,24 @@ const HomePage = () => (
       ]}
       quick={[
         {
-          description: 'Start your integration. Get up and running.',
+          description: 'Start your integration. Our documentation makes integrating Ory a snap.',
           learn: 'Go to our Docs',
           href: '/docs',
           openInNewWindow: true,
-          icon: 'placeholder1',
+          icon: 'docs',
         },
         {
           description: 'Learn about what’s new at Ory and great stuff being worked on.',
           learn: 'Go to our Blog',
           href: '/blog',
-          icon: 'placeholder2',
+          icon: 'blog',
         },
         {
           description: 'We’re hiring. Work on the most exciting stuff in software with us!',
           learn: 'Work with us',
           href: 'https://github.com/ory/jobs',
           openInNewWindow: true,
-          icon: 'placeholder3',
+          icon: 'jobs',
         },
       ]}
     />
