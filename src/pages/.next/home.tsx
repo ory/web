@@ -4,8 +4,7 @@ import SEO from '../../components/seo'
 import Adopters from '../../components/adopters'
 import LargeFeature from '../../components/large-feature'
 import Quicklinks from '../../components/quicklinks'
-
-
+import Highlights from '../../components/highlights'
 
 
 const HomePage = () => (
@@ -14,7 +13,32 @@ const HomePage = () => (
       description=""
       title=""
     />
-    <Adopters onlyFeatured />
+
+    <Highlights
+      highlight={[
+        {
+          title: 'Lorem Ipsum',
+          href: '/hydra',
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ipsum interdum, consequat metus in, lobortis nunc. Praesent tempus tellus vitae gravida tempus. Vestibulum malesuada',
+          openInNewWindow: true,
+        },
+        {
+          title: 'Lorem Ipsum',
+          href: '/hydra',
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ipsum interdum, consequat metus in, lobortis nunc. Praesent tempus tellus vitae gravida tempus. Vestibulum malesuada',
+        },
+        {
+          title: 'Lorem Ipsum',
+          href: '/hydra',
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ipsum interdum, consequat metus in, lobortis nunc. Praesent tempus tellus vitae gravida tempus. Vestibulum malesuada',
+        },
+      ]}
+    />
+
+    <Adopters onlyFeatured/>
 
     <LargeFeature
       title={'Placeholder'}
