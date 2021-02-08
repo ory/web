@@ -1,0 +1,80 @@
+@import '../styles/properties.css';
+
+.quicklinks {
+    background-color: var(--colors-base-white);
+    border-top: 1px solid;
+    border-color: var(--colors-themed-default);
+    padding: 96px 0;
+
+    & h3 {
+        margin: 0 0 1rem;
+    }
+
+    & p {
+        margin: 0 0 1rem;
+    }
+
+    & :global a.cta.secondary:any-link {
+        color: var(--colors-base-dark);
+        border-color: var(--colors-base-dark);
+
+        &:last-child {
+            margin-right: 0 !important;
+        }
+
+        &:hover {
+            border-color: var(--colors-themed-default);
+            color: var(--colors-themed-default);
+        }
+    }
+
+    & :global a.cta.primary:any-link {
+        color: var(--colors-base-white);
+        background-color: var(--colors-themed-default);
+        border-color: var(--colors-themed-default);
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--colors-base-white);
+            background-color: var(--colors-base-black);
+            border-color: var(--colors-base-black);
+        }
+    }
+}
+
+.quicklinks-content {
+    margin-bottom: 4rem;
+}
+
+.quicklinks-box {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    & img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 2rem;
+    }
+}
+
+.quicklinks-inner {
+
+    & :global a:any-link {
+        color: var(--colors-themed-default);
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--colors-base-black);
+        }
+    }
+
+    & p {
+        margin: 0 0 .5rem;
+    }
+
+}
