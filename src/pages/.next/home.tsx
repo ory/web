@@ -1,8 +1,11 @@
 import React from 'react'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import Quicklinks from '../../components/quicklinks'
+import Adopters from '../../components/adopters'
 import LargeFeature from '../../components/large-feature'
+import Quicklinks from '../../components/quicklinks'
+
+
 
 
 const HomePage = () => (
@@ -11,6 +14,7 @@ const HomePage = () => (
       description=""
       title=""
     />
+    <Adopters onlyFeatured />
 
     <LargeFeature
       title={'Placeholder'}
