@@ -90,7 +90,7 @@ const HomePage = () => (
       alternate
       title={'Rely on Open Standards'}
       description={'Give your customers secure choices for how they register and sign in with you. Rely on Oauth 2.0 and OpenID Connect and web standard best practices to secure you and your customers.'}
-      learn={'Learn more about Ory Products'}
+      learn={'Explore Ory Products'}
       href={'/products'}
       visual={'Placeholder2'}
     />
@@ -107,7 +107,7 @@ const HomePage = () => (
       alternate
       title={'Easy Integrations'}
       description={'Ory already works with what you’re doing. Lots of easy ways to make tools, software, platforms and coding languages your business uses work with Ory.'}
-      learn={'Learn about Ory integrations'}
+      learn={'Discover Ory integrations'}
       href={'https://github.com/ory/sdk'}
       visual={'Placeholder4'}
       openInNewWindow={true}
