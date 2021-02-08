@@ -24,7 +24,7 @@ const LargeFeature = ({ title, description, learn, href, openInNewWindow, visual
     <div className="container-fluid">
       <div className={cn('row middle-lg', { [styles.alternate]: alternate })}>
         <div
-          className={!alternate ? 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10' : 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'}
+          className={!alternate ? 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10' : 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'}
         >
           <Link
             to={href}
@@ -41,7 +41,7 @@ const LargeFeature = ({ title, description, learn, href, openInNewWindow, visual
           </Link>
         </div>
         <div
-          className={!alternate ? 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm' : 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'}>
+          className={!alternate ? 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm' : 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'}>
           <Link
             to={href}
             rel={openInNewWindow ? 'noopener noreferrer' : ''}
