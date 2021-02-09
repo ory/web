@@ -4,29 +4,28 @@
 @import '../styles/typography.css';
 
 .newsletter {
-  background-color: var(--colors-base-dark);
-  padding: 64px 0;
-  position: relative;
-  color: var(--colors-base-white);
+  background-color: var(--colors-base-light);
+  padding: 4rem 0;
+  color: var(--colors-base-black);
 }
 
 @media (--sm-viewport) {
   .newsletter {
-    padding: 64px 0;
+    padding: 4rem 0;
   }
 
   .right {
-    margin-top: 32px;
+    margin-top: 2rem;
   }
 }
 
 @media (--md-viewport) {
   .newsletter {
-    padding: 64px 0;
+    padding: 4rem 0;
   }
 
   .right {
-    margin-top: 32px;
+    margin-top: 2rem;
   }
 }
 
@@ -68,11 +67,12 @@
   }
 
   & input[type='email'] {
-    background-color: rgba(255, 255, 255, 0.3);
-    width: calc(60% - 32px);
+    color: var(--colors-base-black);
+    background-color: rgba(33,16,100, 0.1);
+    width: calc(60% - 2rem);
 
     &::placeholder {
-      color: var(--colors-base-white);
+      color: var(--colors-base-text);
     }
   }
 }
