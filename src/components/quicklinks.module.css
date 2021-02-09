@@ -2,9 +2,7 @@
 
 .quicklinks {
     background-color: var(--colors-base-white);
-    border-top: 1px solid;
-    border-color: var(--colors-themed-default);
-    padding: 96px 0;
+    padding: 6rem 0;
 
     & h3 {
         margin: 0 0 1rem;
@@ -52,7 +50,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+
+    &:last-child {
+        margin-bottom: unset;
+    }
 
     & img {
         width: 2.5rem;
@@ -75,6 +77,11 @@
 
     & p {
         margin: 0 0 .5rem;
+    }
+
+    & .redirects {
+        font-weight: 500;
+        font-size: 0.833rem
     }
 
 }
