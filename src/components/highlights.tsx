@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 import * as styles from './highlights.module.css'
 import cn from 'classnames'
 
-import Placeholder1 from '../images/icon/GitHub.svg'
-import Placeholder2 from '../images/icon/twitter.svg'
-import Placeholder3 from '../images/icon/linkedin.svg'
-import Integration from '../images/illustrations/integration.svg'
+import Authentication from '../images/icon/authentication.svg'
+import Authorization from '../images/icon/authorization.svg'
+import UserManagement from '../images/icon/usermanagement.svg'
+import ZeroTrust from '../images/icon/zerotrust.svg'
 
 interface PropTypes {
   highlight: Highlight[]
@@ -43,13 +43,13 @@ const Highlights = ({ highlight }: PropTypes) => (
                   <img
                     src={
                       visual === 'hydra'
-                        ? Placeholder1
+                        ? Authentication
                         : visual === 'keto'
-                        ? Placeholder2
+                        ? Authorization
                         : visual === 'kratos'
-                        ? Placeholder3
+                        ? UserManagement
                         : visual === 'oathkeeper'
-                        ? Integration
+                        ? ZeroTrust
                         : ''
                     }
                   />
