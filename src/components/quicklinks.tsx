@@ -49,24 +49,28 @@ const CallToActionButton = ({
 const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
   <div className={cn(styles.quicklinks)}>
     <div className="container-fluid">
-      <div className="row middle-lg">
+      <div className={cn(styles.quicklinksRow, 'row middle-lg')}>
         <div
           className={cn(
             styles.quicklinksContent,
-            'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+            'col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
           )}
         >
           <h3>{title}</h3>
           <p>{description}</p>
           <>{cta.map(CallToActionButton)}</>
         </div>
-        <div className="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
+        <div
+          className={cn(
+            styles.quicklinksChildren,
+            'col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+          )}
+        >
           {quick.map(
             ({ description, learn, href, openInNewWindow, icon }, key) => (
-              <div key={key} className={cn(styles.quicklinksBox)}>
+              <div key={key} className={cn(styles.quicklinksChild)}>
                 <div>
                   <Link
-                    className={'hidden-sm hidden-md'}
                     to={href}
                     rel={openInNewWindow ? 'noopener noreferrer' : ''}
                     target={openInNewWindow ? '_blank' : ''}
@@ -86,8 +90,6 @@ const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
                       alt={`${icon}`}
                     />
                   </Link>
-                </div>
-                <div className={cn(styles.quicklinksInner)}>
                   <p>{description}</p>
                   <Link
                     className={cn(styles.redirects)}
