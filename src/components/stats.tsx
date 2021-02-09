@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import parse from 'csv-parse'
 import dateformat from 'dateformat'
 
+import cn from 'classnames'
 import styles from './stats.module.css'
 import csvHydraHitsPerMonth from 'raw-loader!../stats/hydra/hits-per-month.csv'
 import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-month.csv'
@@ -227,20 +228,25 @@ class Stats extends Component<PropTypes, StateTypes> {
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <h3>Billions of Identities.</h3>
               <p>
-                Companies from all over the world rely on Ory for their identity needs. Ory technology secures billions of identity requests.
+                Companies from all over the world rely on Ory for their identity
+                needs. Ory technology secures billions of identity requests.
               </p>
             </div>
-            <div className="mobile-offset-32 col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-              <div className={styles.items}>
-                {stats(this.state).map(({ title, amount, description }) => (
-                  <div key={title} className={styles.item}>
-                    <div className={styles.title}>{title}</div>
-                    <div className={styles.amount}>
-                      <AnimatedCounter countTo={amount} />
+          </div>
+          <div className={cn(styles.statsRow, 'row')}>
+            <div className="col-lg-offset-1 col-lg-10  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
+              <div className={styles.itemWrapper}>
+                <div className={styles.items}>
+                  {stats(this.state).map(({ title, amount, description }) => (
+                    <div key={title} className={styles.item}>
+                      <div className={styles.amount}>
+                        <AnimatedCounter countTo={amount} />
+                      </div>
+                      <div className={styles.title}>{title}</div>
+                      <div className={styles.description}>{description}</div>
                     </div>
-                    <div className={styles.description}>{description}</div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
