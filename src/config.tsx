@@ -6,7 +6,7 @@ import kratosAnimation from './images/kratos/kratos.svg'
 import hydraAnimation from './images/hydra/hydra.svg'
 import ketoAnimation from './images/keto/keto.svg'
 import oathkeeperAnimation from './images/oathkeeper/oathkeeper.svg'
-export const brandPrefix = 'ORY / '
+export const brandPrefix = 'Ory / '
 
 export type Project = {
   id: 'hydra' | 'keto' | 'oathkeeper' | 'kratos'
