@@ -52,11 +52,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 
     & img {
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         margin-right: 2rem;
     }
 }

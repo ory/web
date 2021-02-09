@@ -3,9 +3,9 @@ import cn from 'classnames'
 import * as styles from './quicklinks.module.css'
 import { Link } from 'gatsby'
 
-import Placeholder1 from '../images/icon/GitHub.svg'
-import Placeholder2 from '../images/icon/twitter.svg'
-import Placeholder3 from '../images/icon/linkedin.svg'
+import Docs from '../images/icon/docs.svg'
+import Blog from '../images/icon/blog.svg'
+import Jobs from '../images/icon/jobs.svg'
 
 interface PropTypes {
   title: string
@@ -18,7 +18,7 @@ interface Quick {
   description: string
   learn: string
   href: string
-  icon: 'placeholder1' | 'placeholder2' | 'placeholder3'
+  icon: 'docs' | 'blog' | 'jobs'
   openInNewWindow?: boolean
 }
 
@@ -63,7 +63,7 @@ const Quicklinks = ({ title, description, quick, cta}: PropTypes) => (
                   <img
                     key={key}
                     loading="lazy"
-                    src={icon === 'placeholder1' ? Placeholder1 : (icon === 'placeholder2' ? Placeholder2 : (icon === 'placeholder3' ? Placeholder3 : ''))}
+                    src={icon === 'docs' ? Docs : (icon === 'blog' ? Blog : (icon === 'jobs' ? Jobs : ''))}
                     alt={`${icon}`}
                   />
                 </div>
