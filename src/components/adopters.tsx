@@ -91,7 +91,7 @@ interface PropTypes {
 const Adopters = ({ onlyFeatured }: PropTypes) => (
   <div className={styles.adopters}>
     <div className="container-fluid">
-      <div className="row">
+      <div className={cn(styles.divider, 'row')}>
         <div className="col-lg-offset-1 col-lg-10  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
           <div>
             <div className={cn(styles.adoptersInner)}>

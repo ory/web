@@ -2,9 +2,7 @@
 
 .large-feature {
     background-color: var(--colors-base-white);
-    padding: 96px 0;
-    border-bottom: 1px solid;
-    border-color: var(--colors-themed-default);
+    padding-top: 6rem;
 
 
     & h3 {
@@ -28,6 +26,12 @@
             border-color: var(--colors-base-black);
         }
     }
+}
+
+.divider {
+    padding-bottom: 6rem;
+    border-bottom: 2px solid;
+    border-color: var(--colors-themed-light)
 }
 
 .alternate {
