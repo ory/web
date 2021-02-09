@@ -138,27 +138,23 @@ ol {
 }
 
 main a.cta {
-  min-width: 8rem;
-  border-radius: 30px;
   text-align: center;
   display: inline-block;
   font-weight: 500;
   font-size: 0.833rem;
-  padding: 10px 16px;
+  padding: .5rem 1rem;
   box-sizing: border-box;
-  margin: 32px 32px 0 0;
+  margin: 1.5rem 1.5rem 0 0;
   text-decoration: none;
   transition: color ease 200ms, background-color ease 200ms,
     border-color ease 200ms;
 
   @media (--md-viewport) {
-    min-width: 6rem;
-    margin: 16px 16px 0 0;
+    margin: 1rem 1rem 0 0;
   }
 
   @media (--sm-viewport) {
-    min-width: 6rem;
-    margin: 16px 16px 0 0;
+    margin: 1rem 1rem 0 0;
   }
 
   &.primary,
@@ -168,13 +164,7 @@ main a.cta {
 
   &.secondary,
   &.secondary.visited {
-    border: 2px solid;
-    padding: 10px 16px;
-  }
-
-  &.tertiary,
-  &.tertiary.visited {
-    border: 2px solid;
+    border: 0px solid;
   }
 }
 
