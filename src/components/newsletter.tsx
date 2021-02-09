@@ -51,7 +51,6 @@ class Newsletter extends Component<PropTypes, StateTypes> {
       <div className={cn(styles.newsletter, { [styles.light]: light })}>
         <div className="container-fluid">
           <div className="row">
-            <VerticalDivider padding={64} />
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               {left ? (
                 left
@@ -59,7 +58,7 @@ class Newsletter extends Component<PropTypes, StateTypes> {
                 <>
                   <h3>Never miss a patch</h3>
                   <p>
-                    ORY ships regular product patches and updates. Subscribe to
+                    Ory ships regular product patches and updates. Subscribe to
                     our newsletter to get the good stuff, and stay up to date.
                   </p>
                 </>
