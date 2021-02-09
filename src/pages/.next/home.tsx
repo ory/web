@@ -33,7 +33,7 @@ const HomePage = () => (
           style: 'primary'
         },
         {
-          title: 'Learn More',
+          title: 'Learn More →',
           href: '/products',
           style: 'secondary'
         }
@@ -131,12 +131,12 @@ const HomePage = () => (
       }
       cta={[
         {
-          title: 'Start building for free',
+          title: 'Start building',
           href: '/products',
           style: 'primary'
         },
         {
-          title: 'Contact',
+          title: 'Contact Us →',
           href: '/support',
           style: 'secondary'
         }
