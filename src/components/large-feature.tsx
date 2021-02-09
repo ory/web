@@ -8,7 +8,6 @@ import Placeholder2 from '../images/icon/twitter.svg'
 import Placeholder3 from '../images/icon/linkedin.svg'
 import Integration from '../images/illustrations/integration.svg'
 
-
 interface PropTypes {
   title: string
   description: string
@@ -19,37 +18,69 @@ interface PropTypes {
   alternate?: boolean
 }
 
-const LargeFeature = ({ title, description, learn, href, openInNewWindow, visual, alternate }: PropTypes) => (
+const LargeFeature = ({
+  title,
+  description,
+  learn,
+  href,
+  openInNewWindow,
+  visual,
+  alternate
+}: PropTypes) => (
   <div className={cn(styles.largeFeature)}>
     <div className="container-fluid">
-      <div className={cn('row middle-lg', { [styles.alternate]: alternate })}>
+      <div
+        className={cn('row middle-lg', styles.divider, {
+          [styles.alternate]: alternate
+        })}
+      >
         <div
-          className={!alternate ? 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10' : 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'}
+          className={
+            !alternate
+              ? 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+              : 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+          }
         >
           <Link
             to={href}
             rel={openInNewWindow ? 'noopener noreferrer' : ''}
             target={openInNewWindow ? '_blank' : ''}
-            className="secondary">
+            className="secondary"
+          >
             <h3>{title}</h3>
           </Link>
           <p>{description}</p>
-          <Link
-            to={href}
-            className={cn('cta', 'primary')}>
+          <Link to={href} className={cn('cta', 'primary')}>
             {learn}
           </Link>
         </div>
         <div
-          className={!alternate ? 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm' : 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'}>
+          className={
+            !alternate
+              ? 'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'
+              : 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'
+          }
+        >
           <Link
             to={href}
             rel={openInNewWindow ? 'noopener noreferrer' : ''}
             target={openInNewWindow ? '_blank' : ''}
           >
-            <img loading="lazy"
-                 src={visual === 'Placeholder1' ? Placeholder1 : (visual === 'Placeholder2' ? Placeholder2 : (visual === 'Placeholder3' ? Placeholder3 : (visual === 'integration' ? Integration : '')))}
-                 alt={`${title}`}/>
+            <img
+              loading="lazy"
+              src={
+                visual === 'Placeholder1'
+                  ? Placeholder1
+                  : visual === 'Placeholder2'
+                  ? Placeholder2
+                  : visual === 'Placeholder3'
+                  ? Placeholder3
+                  : visual === 'integration'
+                  ? Integration
+                  : ''
+              }
+              alt={`${title}`}
+            />
           </Link>
         </div>
       </div>
