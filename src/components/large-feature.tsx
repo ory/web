@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import Placeholder1 from '../images/icon/GitHub.svg'
 import Placeholder2 from '../images/icon/twitter.svg'
 import Placeholder3 from '../images/icon/linkedin.svg'
-import Placeholder4 from '../images/icon/GitHub.svg'
+import Integration from '../images/illustrations/integration.svg'
 
 
 interface PropTypes {
@@ -14,7 +14,7 @@ interface PropTypes {
   description: string
   learn: string
   href: string
-  visual: 'Placeholder1' | 'Placeholder2' | 'Placeholder3' | 'Placeholder4'
+  visual: 'Placeholder1' | 'Placeholder2' | 'Placeholder3' | 'integration'
   openInNewWindow?: boolean
   alternate?: boolean
 }
@@ -48,7 +48,7 @@ const LargeFeature = ({ title, description, learn, href, openInNewWindow, visual
             target={openInNewWindow ? '_blank' : ''}
           >
             <img loading="lazy"
-                 src={visual === 'Placeholder1' ? Placeholder1 : (visual === 'Placeholder2' ? Placeholder2 : (visual === 'Placeholder3' ? Placeholder3 : (visual === 'Placeholder4' ? Placeholder4 : '')))}
+                 src={visual === 'Placeholder1' ? Placeholder1 : (visual === 'Placeholder2' ? Placeholder2 : (visual === 'Placeholder3' ? Placeholder3 : (visual === 'integration' ? Integration : '')))}
                  alt={`${title}`}/>
           </Link>
         </div>

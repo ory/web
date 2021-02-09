@@ -15,11 +15,6 @@
         margin-bottom: 16px;
     }
 
-    & img {
-        width: 90px;
-        height: 90px;
-    }
-
     & :global a.cta.primary:any-link {
         color: var(--colors-base-white);
         background-color: var(--colors-themed-default);
