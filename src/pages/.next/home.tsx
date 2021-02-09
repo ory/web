@@ -45,27 +45,32 @@ const HomePage = () => (
     <Highlights
       highlight={[
         {
-          title: 'Keep threats out',
+          visual: 'hydra',
+          title: 'Authentication',
           href: '/hydra',
           content:
-            'Easily verify who is a customer, and customize sign in flows that fit you and your customers.\n' +
-            'Rely on open standards Oauth 2.0 and OpenID Connect to provide safe and secure choices for signing in. Provide customers with social login.\n' +
-            'Learn more about authentication\n'
+            'Keep threats out and easily verify who is a customer, and customize sign in flows that fit you and your customers.'
         },
         {
-          title: 'Personalize experiences.',
+          visual: 'keto',
+          title: 'Authorization',
           href: '/keto',
-          content: `Use customer specific access rules, define roles, and give customers individual access to your service.
-Stay in control of how your mobile and web apps are being accessed by your customers, detect anomalies, and personalize app experiences.
-Learn more about authorization`
+          content:
+            'Personalize experiences using customer specific access rules, define roles, and give customers individual access to your service.'
         },
         {
-          title: 'Grow your customers.',
+          visual: 'kratos',
+          title: 'User Management',
           href: '/kratos',
           content:
-            'Easily register and manage customer  identities. Use custom flows in your look and feel, and give customers self service options for their profiles.\n' +
-            'Make signing up as easy as possible and grow without worrying about scale.\n' +
-            'Learn more about user management\n'
+            'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel'
+        },
+        {
+          visual: 'oathkeeper',
+          title: 'Zero Trust',
+          href: '/oathkeeper',
+          content:
+            'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel'
         }
       ]}
     />
