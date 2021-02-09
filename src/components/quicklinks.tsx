@@ -30,11 +30,11 @@ interface CallToAction {
 }
 
 const CallToActionButton = ({
-                              title,
-                              href,
-                              style = 'secondary',
-                              openInNewWindow = false,
-                            }: CallToAction) => (
+  title,
+  href,
+  style = 'secondary',
+  openInNewWindow = false
+}: CallToAction) => (
   <a
     key={title}
     href={href}
@@ -46,38 +46,63 @@ const CallToActionButton = ({
   </a>
 )
 
-const Quicklinks = ({ title, description, quick, cta}: PropTypes) => (
+const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
   <div className={cn(styles.quicklinks)}>
     <div className="container-fluid">
-      <div className="row middle-lg">
-        <div className={cn(styles.quicklinksContent, "col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10")}>
+      <div className={cn(styles.quicklinksRow, 'row middle-lg')}>
+        <div
+          className={cn(
+            styles.quicklinksContent,
+            'col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+          )}
+        >
           <h3>{title}</h3>
           <p>{description}</p>
           <>{cta.map(CallToActionButton)}</>
         </div>
-        <div className="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
+        <div
+          className={cn(
+            styles.quicklinksChildren,
+            'col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+          )}
+        >
           {quick.map(
             ({ description, learn, href, openInNewWindow, icon }, key) => (
-              <div key={key} className={cn(styles.quicklinksBox)}>
+              <div key={key} className={cn(styles.quicklinksChild)}>
                 <div>
-                  <img
-                    key={key}
-                    loading="lazy"
-                    src={icon === 'docs' ? Docs : (icon === 'blog' ? Blog : (icon === 'jobs' ? Jobs : ''))}
-                    alt={`${icon}`}
-                  />
-                </div>
-                <div className={cn(styles.quicklinksInner)}>
-                  <p>{description}</p>
                   <Link
                     to={href}
                     rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                    target={openInNewWindow ? '_blank' : ''}>
-                    {learn}
+                    target={openInNewWindow ? '_blank' : ''}
+                  >
+                    <img
+                      key={key}
+                      loading="lazy"
+                      src={
+                        icon === 'docs'
+                          ? Docs
+                          : icon === 'blog'
+                          ? Blog
+                          : icon === 'jobs'
+                          ? Jobs
+                          : ''
+                      }
+                      alt={`${icon}`}
+                    />
+                  </Link>
+                  <p>{description}</p>
+                  <Link
+                    className={cn(styles.redirects)}
+                    to={href}
+                    rel={openInNewWindow ? 'noopener noreferrer' : ''}
+                    target={openInNewWindow ? '_blank' : ''}
+                  >
+                    {learn} →
                   </Link>
                 </div>
               </div>
-            ))}
+            )
+          )}
         </div>
       </div>
     </div>

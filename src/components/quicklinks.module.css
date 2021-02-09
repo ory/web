@@ -2,9 +2,7 @@
 
 .quicklinks {
     background-color: var(--colors-base-white);
-    border-top: 1px solid;
-    border-color: var(--colors-themed-default);
-    padding: 96px 0;
+    padding: 6rem 0;
 
     & h3 {
         margin: 0 0 1rem;
@@ -47,34 +45,84 @@
     margin-bottom: 4rem;
 }
 
-.quicklinks-box {
-    margin-bottom: 2rem;
+.quicklinksRow {
+    align-items: flex-start;
+}
+
+
+.quicklinks-children {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    & img {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin-right: 2rem;
+    & .quicklinks-child {
+        width: auto;
+        margin: 0 1rem 0 0;
+        padding: 1rem 0;
+
+
+        &:last-child {
+            margin: unset;
+        }
+
+        & :global a:any-link {
+            color: var(--colors-themed-default);
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--colors-base-black);
+            }
+        }
+
+        & p {
+            margin: 0 0 .5rem;
+        }
+
+        & .redirects {
+            font-weight: 500;
+            font-size: 0.833rem
+        }
+
+        & img {
+            margin-top: .5rem;
+            width: 1.5rem;
+            height: auto;
+        }
     }
 }
 
-.quicklinks-inner {
+@media (--md-viewport) {
 
-    & :global a:any-link {
-        color: var(--colors-themed-default);
+    .quicklinks-children {
+        flex-wrap: wrap;
+    }
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--colors-base-black);
+    .quicklinks-child {
+        margin: 0 0 1rem 0;
+        padding: 1rem 1rem;
+
+
+        &:last-child {
+            margin: unset;
         }
     }
+}
 
-    & p {
-        margin: 0 0 .5rem;
+@media (--sm-viewport) {
+
+    .quicklinks-children {
+        flex-wrap: wrap;
     }
 
+    .quicklinks-child {
+        margin: 0 0 1rem 0;
+        padding: 1rem 1rem;
+
+        &:last-child {
+            margin: unset;
+        }
+    }
 }
