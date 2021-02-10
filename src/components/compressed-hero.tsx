@@ -33,12 +33,7 @@ const CallToActionButton = ({
   </a>
 )
 
-const CompressedHero = ({
-  title,
-  subtitle,
-  cta,
-  visual,
-}: PropTypes) => (
+const CompressedHero = ({ title, subtitle, cta, visual }: PropTypes) => (
   <div className={cn(styles.compressedHero)}>
     <div className="container-fluid">
       <div className={cn('row middle-sm')}>
