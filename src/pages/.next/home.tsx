@@ -8,14 +8,14 @@ import Highlights from '../../components/highlights'
 import CompressedHero from '../../components/compressed-hero'
 import Stats from '../../components/stats'
 import Newsletter from '../../components/newsletter'
-import kratosProcess from '../../images/kratos/kratos.svg'
+import heroIllustration from '../../images/illustrations/hero.svg'
 
-const PlaceHolder = () => (
+const HeroIllustration = () => (
   <img
     loading="lazy"
-    alt="The ORY Kratos user login and registration service"
+    alt="Open Source Identity Infrastructure and Services"
     className="responsive"
-    src={kratosProcess}
+    src={heroIllustration}
   />
 )
 
@@ -29,17 +29,12 @@ const HomePage = () => (
       cta={[
         {
           title: 'Start Now',
-          href: '/developer',
-          style: 'primary'
-        },
-        {
-          title: 'Learn More →',
-          href: '/products',
-          style: 'secondary'
+          href: '/docs',
+          style: 'primary',
+          openInNewWindow: true
         }
       ]}
-      visual={<PlaceHolder />}
-      mobile={[<PlaceHolder />]}
+      visual={<HeroIllustration />}
     />
 
     <Highlights
@@ -63,14 +58,14 @@ const HomePage = () => (
           title: 'User Management',
           href: '/kratos',
           content:
-            'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel'
+            'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel.'
         },
         {
           visual: 'oathkeeper',
           title: 'Zero Trust Networking',
           href: '/oathkeeper',
           content:
-            'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel'
+            'Be in full control - secure web-facing applications and services by implementing Zero-Trust Network Architecture.'
         }
       ]}
     />
@@ -83,8 +78,9 @@ const HomePage = () => (
         'You can rely on open source software that is built together in a world-wide community of developers. Ory software is peer reviewed, vetted by expert developers, and tried, tested and used in companies of all sizes all over the world.'
       }
       learn={'Explore Ory Open Source'}
-      href={'/index'}
-      visual={'Placeholder1'}
+      href={'https://github.com/ory'}
+      visual={'opensource'}
+      openInNewWindow={true}
     />
 
     <LargeFeature
@@ -93,9 +89,10 @@ const HomePage = () => (
       description={
         'Give your customers secure choices for how they register and sign in with you. Rely on Oauth 2.0 and OpenID Connect and web standard best practices to secure you and your customers.'
       }
-      learn={'Explore Ory Products'}
-      href={'/products'}
-      visual={'Placeholder2'}
+      learn={'Learn More'}
+      href={'/docs/ecosystem/software-architecture-philosophy'}
+      visual={'standards'}
+      openInNewWindow={true}
     />
 
     <LargeFeature
@@ -104,8 +101,9 @@ const HomePage = () => (
         'Be a hero at your company. Ory has everything you need to add authentication, authorization, and user management to your apps. Create your own identity provider or run your own Oauth server.'
       }
       learn={'Start building with Ory'}
-      href={'/developer'}
-      visual={'Placeholder3'}
+      href={'https://www.ory.sh/docs/ecosystem/projects'}
+      visual={'developer'}
+      openInNewWindow={true}
     />
 
     <LargeFeature
@@ -114,7 +112,7 @@ const HomePage = () => (
       description={
         'Ory already works with what you’re doing. Lots of easy ways to make tools, software, platforms and coding languages your business uses work with Ory.'
       }
-      learn={'Discover Ory integrations'}
+      learn={'Integrate with Ory'}
       href={'https://github.com/ory/sdk'}
       visual={'integration'}
       openInNewWindow={true}
@@ -132,13 +130,15 @@ const HomePage = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/products',
+          href: '/docs',
           style: 'primary'
         },
         {
           title: 'Contact Us →',
-          href: '/support',
-          style: 'secondary'
+          href:
+            'https://github.com/ory/open-source-support/blob/master/README.md',
+          style: 'secondary',
+          openInNewWindow: true
         }
       ]}
       quick={[
