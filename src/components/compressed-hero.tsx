@@ -14,7 +14,6 @@ interface PropTypes {
   subtitle: string
   cta: CallToAction[]
   visual: ReactNode
-  mobile?: ReactNode[]
 }
 
 const CallToActionButton = ({
@@ -39,42 +38,19 @@ const CompressedHero = ({
   subtitle,
   cta,
   visual,
-  mobile = []
 }: PropTypes) => (
   <div className={cn(styles.compressedHero)}>
     <div className="container-fluid">
-      <div
-        className={cn('row middle-sm', {
-          'hidden-sm': mobile.length > 0,
-          'hidden-md': mobile.length > 0
-        })}
-      >
+      <div className={cn('row middle-sm')}>
         <div className="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
           <h1>{title}</h1>
           <h2>{subtitle}</h2>
           <>{cta.map(CallToActionButton)}</>
         </div>
-        <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
+        <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10  hidden-sm hidden-md">
           {visual}
         </div>
       </div>
-      {mobile.length > 0 && (
-        <div className="row middle-sm hidden-lg">
-          {mobile.map((node, index) => (
-            <div
-              key={index}
-              className={
-                'col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10'
-              }
-            >
-              <h1>{title}</h1>
-              {node}
-              <h2>{subtitle}</h2>
-              <>{cta.map(CallToActionButton)}</>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   </div>
 )
