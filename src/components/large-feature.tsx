@@ -3,9 +3,9 @@ import cn from 'classnames'
 import * as styles from './large-feature.module.css'
 import { Link } from 'gatsby'
 
-import Placeholder1 from '../images/icon/GitHub.svg'
-import Placeholder2 from '../images/icon/twitter.svg'
-import Placeholder3 from '../images/icon/linkedin.svg'
+import Opensource from '../images/illustrations/opensource.svg'
+import Standards from '../images/illustrations/standards.svg'
+import Developer from '../images/illustrations/developer.svg'
 import Integration from '../images/illustrations/integration.svg'
 
 interface PropTypes {
@@ -13,7 +13,7 @@ interface PropTypes {
   description: string
   learn: string
   href: string
-  visual: 'Placeholder1' | 'Placeholder2' | 'Placeholder3' | 'integration'
+  visual: 'opensource' | 'standards' | 'developer' | 'integration'
   openInNewWindow?: boolean
   alternate?: boolean
 }
@@ -69,12 +69,12 @@ const LargeFeature = ({
             <img
               loading="lazy"
               src={
-                visual === 'Placeholder1'
-                  ? Placeholder1
-                  : visual === 'Placeholder2'
-                  ? Placeholder2
-                  : visual === 'Placeholder3'
-                  ? Placeholder3
+                visual === 'opensource'
+                  ? Opensource
+                  : visual === 'standards'
+                  ? Standards
+                  : visual === 'developer'
+                  ? Developer
                   : visual === 'integration'
                   ? Integration
                   : ''

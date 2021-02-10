@@ -49,12 +49,12 @@ const CompressedHero = ({
           'hidden-md': mobile.length > 0
         })}
       >
-        <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
+        <div className="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
           <h1>{title}</h1>
           <h2>{subtitle}</h2>
           <>{cta.map(CallToActionButton)}</>
         </div>
-        <div className="col-lg-offset-2 col-lg-5 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
+        <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
           {visual}
         </div>
       </div>
