@@ -67,7 +67,7 @@ const HomePage = () => (
         },
         {
           visual: 'oathkeeper',
-          title: 'Zero Trust',
+          title: 'Zero Trust Networking',
           href: '/oathkeeper',
           content:
             'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel'
