@@ -6,7 +6,7 @@
 
   & h2 {
     font-weight: 400;
-    font-size: 1.44rem;
+    font-size: 1.22rem;
   }
 
   & :global a.cta.secondary:any-link {
@@ -48,7 +48,7 @@
     padding: 64px 0;
 
     & h2 {
-      font-size: 1.266rem;
+      font-size: 1.18rem;
     }
   }
 }
