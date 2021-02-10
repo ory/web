@@ -39,7 +39,7 @@ interface MenuItem {
 const menu: MenuItem[] = [
   {
     title: 'Product',
-    href: '/foo',
+    href: '/.next/home',
     items: [
       {
         title: 'Authentication',
@@ -62,7 +62,7 @@ const menu: MenuItem[] = [
   },
   {
     title: 'Developer',
-    href: '/foo',
+    href: '/docs',
     items: [
       {
         title: 'Documentation',
@@ -76,7 +76,7 @@ const menu: MenuItem[] = [
   },
   {
     title: 'Resources',
-    href: '/foo',
+    href: '/.next/home',
     items: [
       {
         title: 'Docs',
@@ -94,7 +94,7 @@ const menu: MenuItem[] = [
   },
   {
     title: 'Open Source',
-    href: '/opensource',
+    href: 'https://github.com/ory',
     openInNewWindow: true,
     items: [
       {
