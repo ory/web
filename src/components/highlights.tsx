@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from '../components/link'
 import * as styles from './highlights.module.css'
 import cn from 'classnames'
 
@@ -33,14 +33,14 @@ const Highlights = ({ highlight }: PropTypes) => (
           {highlight.map(
             ({ visual, title, content, href, openInNewWindow }) => (
               <Link
+                openInNewWindow={openInNewWindow}
                 key={title}
                 to={href}
-                rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                target={openInNewWindow ? '_blank' : ''}
                 className={cn(styles.highlightBox)}
               >
                 <div className={cn('col-lg-offset-1 col-lg-10')}>
                   <img
+                    alt={`${visual}`}
                     src={
                       visual === 'hydra'
                         ? Authentication
