@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
+import Link from '../components/link'
 import * as styles from './blog-summary-section.module.css'
 import cn from 'classnames'
 
