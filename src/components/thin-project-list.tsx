@@ -13,6 +13,7 @@ const ThinProjectList = () => (
         description={description}
         learn={`Explore ${brandPrefix} ${id}`}
         visual={visual}
+        openInNewWindow={false}
       />
     ))}
   </div>
