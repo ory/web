@@ -7,13 +7,21 @@ import Opensource from '../images/illustrations/opensource.svg'
 import Standards from '../images/illustrations/standards.svg'
 import Developer from '../images/illustrations/developer.svg'
 import Integration from '../images/illustrations/integration.svg'
+import Support from '../images/illustrations/support.svg'
+import Docs from '../images/illustrations/docs.svg'
 
 interface PropTypes {
   title: string
   description: string
   learn: string
   href: string
-  visual: 'opensource' | 'standards' | 'developer' | 'integration'
+  visual:
+    | 'opensource'
+    | 'standards'
+    | 'developer'
+    | 'integration'
+    | 'support'
+    | 'docs'
   openInNewWindow?: boolean
   alternate?: boolean
 }
@@ -76,6 +84,10 @@ const LargeFeature = ({
                   ? Developer
                   : visual === 'integration'
                   ? Integration
+                  : visual === 'support'
+                  ? Support
+                  : visual === 'docs'
+                  ? Docs
                   : ''
               }
               alt={`${title}`}
