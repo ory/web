@@ -50,7 +50,12 @@ const LargeFeature = ({
             <h3>{title}</h3>
           </Link>
           <p>{description}</p>
-          <Link to={href} className={cn('cta', 'primary')}>
+          <Link
+            to={href}
+            rel={openInNewWindow ? 'noopener noreferrer' : ''}
+            target={openInNewWindow ? '_blank' : ''}
+            className={cn('cta', 'primary')}
+          >
             {learn}
           </Link>
         </div>
