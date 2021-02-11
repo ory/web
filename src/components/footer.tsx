@@ -4,9 +4,17 @@ import logo from '../images/logo-ory-footer.svg'
 import logoTiny from '../images/logo-ory-footer-tiny.svg'
 import styles from './footer.module.css'
 import { brandPrefix } from '../config'
-import { Link } from 'gatsby'
+import Link from '../components/link'
 
-const comp = [
+interface CompItem {
+  items: {
+    openInNewWindow?: boolean
+    title: string
+    href: string
+  }[]
+}
+
+const comp: CompItem[] = [
   {
     items: [
       {
@@ -15,11 +23,11 @@ const comp = [
       },
       {
         title: 'Privacy',
-        href: 'https://www.ory.sh/privacy'
+        href: '/privacy'
       },
       {
         title: 'Terms',
-        href: 'https://www.ory.sh/tos'
+        href: '/tos'
       }
     ]
   }
@@ -154,21 +162,13 @@ const Footer = () => (
           <div className={cn('row', styles.menuRow)}>
             {menu.map(({ title, items, href, openInNewWindow = false }) => (
               <div key={title} className={styles.menuItem}>
-                <Link
-                  to={href}
-                  rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                  target={openInNewWindow ? '_blank' : ''}
-                >
+                <Link to={href} openInNewWindow={openInNewWindow}>
                   <p className={styles.listTitle}>{title}</p>
                 </Link>
                 <ul className={styles.list}>
                   {items.map(({ title, href, openInNewWindow = false }) => (
                     <li key={title} className={styles.item}>
-                      <Link
-                        to={href}
-                        rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                        target={openInNewWindow ? '_blank' : ''}
-                      >
+                      <Link to={href} openInNewWindow={openInNewWindow}>
                         {title}
                       </Link>
                     </li>
@@ -199,9 +199,11 @@ const Footer = () => (
             {comp.map(({ items }, index) => (
               <div key={index} className={styles.menuItem}>
                 <ul className={styles.list}>
-                  {items.map(({ title, href }) => (
+                  {items.map(({ title, href, openInNewWindow = false }) => (
                     <li key={title} className={styles.compItem}>
-                      <a href={href}>{title}</a>
+                      <Link to={href} openInNewWindow={openInNewWindow}>
+                        {title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
