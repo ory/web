@@ -14,7 +14,7 @@ const Link = ({
   openInNewWindow = false,
   children
 }: Proptypes) => {
-  if (to.startsWith('http' || '/docs' )) {
+  if (to.startsWith('http' || '/docs')) {
     return (
       <a
         href={to}
