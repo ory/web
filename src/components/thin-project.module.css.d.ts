@@ -1,5 +1,6 @@
 declare const styles: {
-  readonly thin: string
-  readonly cap: string
+  readonly thinProject: string
+  readonly divider: string
+  readonly alternate: string
 }
 export = styles
