@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 import * as styles from './quicklinks.module.css'
-import { Link } from 'gatsby'
+import Link from '../components/link'
 
 import Docs from '../images/icon/docs.svg'
 import Blog from '../images/icon/blog.svg'
@@ -35,15 +35,14 @@ const CallToActionButton = ({
   style = 'secondary',
   openInNewWindow = false
 }: CallToAction) => (
-  <a
+  <Link
     key={title}
-    href={href}
+    to={href}
     className={cn(style, 'cta')}
-    rel={openInNewWindow ? 'noopener noreferrer' : ''}
-    target={openInNewWindow ? '_blank' : ''}
+    openInNewWindow={openInNewWindow}
   >
     {title}
-  </a>
+  </Link>
 )
 
 const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
@@ -70,11 +69,7 @@ const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
             ({ description, learn, href, openInNewWindow, icon }, key) => (
               <div key={key} className={cn(styles.quicklinksChild)}>
                 <div>
-                  <Link
-                    to={href}
-                    rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                    target={openInNewWindow ? '_blank' : ''}
-                  >
+                  <Link to={href} openInNewWindow={openInNewWindow}>
                     <img
                       key={key}
                       loading="lazy"
@@ -94,8 +89,7 @@ const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
                   <Link
                     className={cn(styles.redirects)}
                     to={href}
-                    rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                    target={openInNewWindow ? '_blank' : ''}
+                    openInNewWindow={openInNewWindow}
                   >
                     {learn} →
                   </Link>
