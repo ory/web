@@ -14,7 +14,11 @@ const Link = ({
   openInNewWindow = false,
   children
 }: Proptypes) => {
-  if (to.startsWith('http' || '/docs')) {
+  if (
+    to.startsWith('http') ||
+    to.startsWith('/docs') ||
+    to.startsWith('mailto:')
+  ) {
     return (
       <a
         href={to}
