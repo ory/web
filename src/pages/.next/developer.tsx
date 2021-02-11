@@ -42,7 +42,9 @@ const DeveloperPage = () => (
       ]}
       visual={<HeroIllustration />}
     />
+
     <BlogSummarySection />
+
     <Adopters onlyFeatured />
 
     <LargeFeature
@@ -74,7 +76,7 @@ const DeveloperPage = () => (
         'There is a whole community to help you succeed with an active developer Slack Channel and GitHub Discussions. You can also contact us to create a custom package for your business.'
       }
       learn={'Contact us'}
-      href={'mailto:office@ory.sh'}
+      href={'mailto:jared@ory.sh'}
       visual={'support'}
       openInNewWindow={true}
     />
@@ -103,13 +105,13 @@ const DeveloperPage = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/docs',
-          style: 'primary'
+          href: '/.next/products',
+          style: 'primary',
+          openInNewWindow: true
         },
         {
           title: 'Contact Us →',
-          href:
-            'https://github.com/ory/open-source-support/blob/master/README.md',
+          href: 'mailto:jared@ory.sh',
           style: 'secondary',
           openInNewWindow: true
         }
