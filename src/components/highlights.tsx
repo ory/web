@@ -7,13 +7,25 @@ import Authentication from '../images/icon/authentication.svg'
 import Authorization from '../images/icon/authorization.svg'
 import UserManagement from '../images/icon/usermanagement.svg'
 import ZeroTrust from '../images/icon/zerotrust.svg'
+import OpenSource from '../images/icon/opensource.svg'
+import Integration from '../images/icon/integration.svg'
+import Developer from '../images/icon/developer.svg'
+import OpenStandards from '../images/icon/openstandards.svg'
 
 interface PropTypes {
   highlight: Highlight[]
 }
 
 interface Highlight {
-  visual: 'hydra' | 'keto' | 'kratos' | 'oathkeeper'
+  visual:
+    | 'hydra'
+    | 'keto'
+    | 'kratos'
+    | 'oathkeeper'
+    | 'integration'
+    | 'openstandards'
+    | 'developer'
+    | 'opensource'
   title: string
   content: string
   href: string
@@ -50,6 +62,14 @@ const Highlights = ({ highlight }: PropTypes) => (
                         ? UserManagement
                         : visual === 'oathkeeper'
                         ? ZeroTrust
+                        : visual === 'integration'
+                        ? Integration
+                        : visual === 'openstandards'
+                        ? OpenStandards
+                        : visual === 'developer'
+                        ? Developer
+                        : visual === 'opensource'
+                        ? OpenSource
                         : ''
                     }
                   />
