@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 import * as styles from './large-feature.module.css'
-import { Link } from 'gatsby'
+import Link from '../components/link'
 
 import Opensource from '../images/illustrations/opensource.svg'
 import Standards from '../images/illustrations/standards.svg'
@@ -43,8 +43,7 @@ const LargeFeature = ({
         >
           <Link
             to={href}
-            rel={openInNewWindow ? 'noopener noreferrer' : ''}
-            target={openInNewWindow ? '_blank' : ''}
+            openInNewWindow={openInNewWindow}
             className="secondary"
           >
             <h3>{title}</h3>
@@ -52,8 +51,7 @@ const LargeFeature = ({
           <p>{description}</p>
           <Link
             to={href}
-            rel={openInNewWindow ? 'noopener noreferrer' : ''}
-            target={openInNewWindow ? '_blank' : ''}
+            openInNewWindow={openInNewWindow}
             className={cn('cta', 'primary')}
           >
             {learn}
@@ -66,11 +64,7 @@ const LargeFeature = ({
               : 'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'
           }
         >
-          <Link
-            to={href}
-            rel={openInNewWindow ? 'noopener noreferrer' : ''}
-            target={openInNewWindow ? '_blank' : ''}
-          >
+          <Link to={href} openInNewWindow={openInNewWindow}>
             <img
               loading="lazy"
               src={
