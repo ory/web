@@ -28,9 +28,15 @@ const ProductTeam = () => (
       subtitle="Cloud native authentication, authorization and user management based on open standards and open source."
       cta={[
         {
-          title: 'Developer? Start now',
-          href: '/developer',
+          title: 'Start now',
+          href: '/.next/developer',
           style: 'primary'
+        },
+        {
+          title: 'GitHub →',
+          href: 'https://github.com/ory',
+          style: 'secondary',
+          openInNewWindow: true
         }
       ]}
       visual={<HeroIllustration />}
@@ -48,7 +54,7 @@ const ProductTeam = () => (
         },
         {
           visual: 'integration',
-          title: 'Easy Integration',
+          title: 'Easy integration',
           href: 'https://github.com/ory/sdk',
           openInNewWindow: true,
           content:
@@ -56,15 +62,15 @@ const ProductTeam = () => (
         },
         {
           visual: 'openstandards',
-          title: 'Rely on Open Standards',
+          title: 'Rely on open standards',
           href: '/docs/ecosystem/software-architecture-philosophy',
           content:
             'Give your customers secure choices for how they register and sign in with you. Rely on Oauth 2.0 and OpenID Connect and web standard best practices.'
         },
         {
           visual: 'developer',
-          title: "You're a Developer?",
-          href: '/developer',
+          title: "You're a developer?",
+          href: '/.next/developer',
           content:
             'Be a hero at your company. Ory has everything you need to add authentication, authorization, and user management to your apps.'
         }
@@ -87,13 +93,13 @@ const ProductTeam = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/docs',
-          style: 'primary'
+          href: '/.next/developer',
+          style: 'primary',
+          openInNewWindow: true
         },
         {
           title: 'Contact Us →',
-          href:
-            'https://github.com/ory/open-source-support/blob/master/README.md',
+          href: 'mailto:jared@ory.sh',
           style: 'secondary',
           openInNewWindow: true
         }
