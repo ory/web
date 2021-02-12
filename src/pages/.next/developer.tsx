@@ -60,23 +60,23 @@ const DeveloperPage = () => (
 
     <LargeFeature
       alternate
-      title={'Extensive Documentation'}
+      title={'Extensive documentation'}
       description={
-        'Everything you need to know about how to integrate Ory technology is in the documentation. Take a dive in and RTFM ☺️'
+        'Everything you need to know about how to integrate Ory technology is in the documentation. Take a dive in.'
       }
-      learn={'Go to the Ory Docs'}
+      learn={'Go to the Ory docs'}
       href={'/docs'}
       visual={'docs'}
       openInNewWindow={true}
     />
 
     <LargeFeature
-      title={'Need Support?'}
+      title={'Need support?'}
       description={
         'There is a whole community to help you succeed with an active developer Slack Channel and GitHub Discussions. You can also contact us to create a custom package for your business.'
       }
       learn={'Contact us'}
-      href={'mailto:jared@ory.sh'}
+      href={'https://github.com/ory/open-source-support/blob/master/README.md'}
       visual={'support'}
       openInNewWindow={true}
     />
@@ -87,8 +87,8 @@ const DeveloperPage = () => (
       description={
         'Ory is an extensive set of open source projects. Together they represent Kratos, Hydra, Oathkeeper, Keto.'
       }
-      learn={'Learn about Ory Open Source'}
-      href={'https://github.com/ory'}
+      learn={'Explore Ory Open Source'}
+      href={'/.next/products'}
       visual={'opensource'}
       openInNewWindow={true}
     />
