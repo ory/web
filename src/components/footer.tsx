@@ -112,11 +112,22 @@ const menu: MenuItem[] = [
   },
   {
     title: 'Resources',
-    href: '/.next/home',
+    href: '/.next/resources',
     items: [
+      {
+        title: 'Developer Blog',
+        href: '/blog',
+        openInNewWindow: true
+      },
       {
         title: 'Developer Chat',
         href: 'https://www.ory.sh/chat',
+        openInNewWindow: true
+      },
+      {
+        title: 'Support',
+        href:
+          'https://github.com/ory/open-source-support/blob/master/README.md',
         openInNewWindow: true
       }
     ]
