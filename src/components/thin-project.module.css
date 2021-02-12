@@ -6,7 +6,6 @@
   background-color: var(--colors-base-white);
   padding-top: 6rem;
 
-
   & h3 {
     color: var(--colors-base-black);
   }
@@ -33,11 +32,10 @@
 .divider {
   padding-bottom: 6rem;
   border-bottom: 2px solid;
-  border-color: var(--colors-base-light)
+  border-color: var(--colors-base-light);
 }
 
 .alternate {
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
-

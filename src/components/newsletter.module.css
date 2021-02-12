@@ -68,7 +68,7 @@
 
   & input[type='email'] {
     color: var(--colors-base-black);
-    background-color: rgba(33,16,100, 0.1);
+    background-color: rgba(33, 16, 100, 0.1);
     width: calc(60% - 2rem);
 
     &::placeholder {

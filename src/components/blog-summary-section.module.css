@@ -1,90 +1,89 @@
 @import '../styles/properties.css';
 
 .blog-summary {
-    background: var(--colors-base-white);
-    padding-bottom: 6rem;
+  background: var(--colors-base-white);
+  padding-bottom: 6rem;
 
-    & h3 {
-        margin-top: .25rem;
-        color: var(--colors-base-black);
-        font-size: 1rem;
+  & h3 {
+    margin-top: 0.25rem;
+    color: var(--colors-base-black);
+    font-size: 1rem;
+  }
+
+  & :global a:any-link {
+    border: 1px solid;
+    border-color: var(--colors-themed-light);
+    color: var(--colors-base-dark);
+
+    &:hover {
+      border: 1px solid;
+      border-color: var(--colors-themed-default);
     }
-
-    & :global a:any-link {
-        border: 1px solid;
-        border-color: var(--colors-themed-light);
-        color: var(--colors-base-dark);
-
-        &:hover {
-            border: 1px solid;
-            border-color: var(--colors-themed-default);
-        }
-    }
+  }
 }
 
 .blog-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .blog-box {
-    width: 33%;
-    margin: 0 1rem 0 0;
-    background-color: var(--colors-themed-light);
-    padding: 1rem 0;
+  width: 33%;
+  margin: 0 1rem 0 0;
+  background-color: var(--colors-themed-light);
+  padding: 1rem 0;
 
-    &:last-child {
-        margin: unset;
-    }
+  &:last-child {
+    margin: unset;
+  }
 
-    &:hover {
-        transition: 0.10s ease-in-out;
-    }
+  &:hover {
+    transition: 0.1s ease-in-out;
+  }
 }
 
 @media (--sm-viewport) {
-    .blog-summary {
-        & h3 {
-            font-size: 1rem;
-        }
+  .blog-summary {
+    & h3 {
+      font-size: 1rem;
     }
+  }
 
-    .blog-row {
-        flex-wrap: wrap;
+  .blog-row {
+    flex-wrap: wrap;
+  }
+
+  .blog-box {
+    margin: 0 0 1rem 0;
+    padding: 1rem 1rem;
+    width: 100%;
+
+    &:last-child {
+      margin: unset;
     }
-
-    .blog-box {
-        margin: 0 0 1rem 0;
-        padding: 1rem 1rem;
-        width: 100%;
-
-        &:last-child {
-            margin: unset;
-        }
-    }
+  }
 }
 
 @media (--md-viewport) {
-    .blog-summary {
-        & h3 {
-            font-size: 1rem;
-        }
+  .blog-summary {
+    & h3 {
+      font-size: 1rem;
     }
+  }
 
-    .blog-row {
-        flex-wrap: wrap;
+  .blog-row {
+    flex-wrap: wrap;
+  }
+
+  .blog-box {
+    margin: 0 0 1rem 0;
+    padding: 1rem 1rem;
+    width: 100%;
+
+    &:last-child {
+      margin: unset;
     }
-
-    .blog-box {
-        margin: 0 0 1rem 0;
-        padding: 1rem 1rem;
-        width: 100%;
-
-        &:last-child {
-            margin: unset;
-        }
-    }
+  }
 }
-
