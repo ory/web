@@ -13,7 +13,7 @@ import heroIllustration from '../../images/illustrations/hero.svg'
 const HeroIllustration = () => (
   <img
     loading="lazy"
-    alt="Open Source Identity Infrastructure and Services"
+    alt="Open source identity infrastructure and services by Ory"
     className="responsive"
     src={heroIllustration}
   />
@@ -24,13 +24,19 @@ const HomePage = () => (
     <SEO description="" title="" />
 
     <CompressedHero
-      title="The New Identity Platform."
+      title="The new identity platform."
       subtitle="Give your customers rich experiences and easy secure ways to register and sign in across your mobile and web apps."
       cta={[
         {
-          title: 'Start Now',
-          href: '/docs',
+          title: 'Start now',
+          href: '/.next/products',
           style: 'primary',
+          openInNewWindow: true
+        },
+        {
+          title: 'For developers →',
+          href: '/.next/developer',
+          style: 'secondary',
           openInNewWindow: true
         }
       ]}
@@ -55,14 +61,14 @@ const HomePage = () => (
         },
         {
           visual: 'kratos',
-          title: 'User Management',
+          title: 'User management',
           href: '/kratos',
           content:
             'Grow your customers, easily register and manage customer identities, using custom flows in your look and feel.'
         },
         {
           visual: 'oathkeeper',
-          title: 'Zero Trust Networking',
+          title: 'Zero trust networking',
           href: '/oathkeeper',
           content:
             'Be in full control - secure web-facing applications and services by implementing Zero-Trust Network Architecture.'
@@ -77,7 +83,7 @@ const HomePage = () => (
       description={
         'You can rely on open source software that is built together in a world-wide community of developers. Ory software is peer reviewed, vetted by expert developers, and tried, tested and used in companies of all sizes all over the world.'
       }
-      learn={'Explore Ory Open Source'}
+      learn={'Explore Ory open source'}
       href={'https://github.com/ory'}
       visual={'opensource'}
       openInNewWindow={true}
@@ -85,30 +91,30 @@ const HomePage = () => (
 
     <LargeFeature
       alternate
-      title={'Rely on Open Standards'}
+      title={'Rely on open standards'}
       description={
         'Give your customers secure choices for how they register and sign in with you. Rely on Oauth 2.0 and OpenID Connect and web standard best practices to secure you and your customers.'
       }
-      learn={'Learn More'}
+      learn={'Learn more'}
       href={'/docs/ecosystem/software-architecture-philosophy'}
       visual={'standards'}
       openInNewWindow={true}
     />
 
     <LargeFeature
-      title={'Are You A Developer?'}
+      title={'Are you a developer?'}
       description={
         'Be a hero at your company. Ory has everything you need to add authentication, authorization, and user management to your apps. Create your own identity provider or run your own Oauth server.'
       }
       learn={'Start building with Ory'}
-      href={'https://www.ory.sh/docs/ecosystem/projects'}
+      href={'/.next/developer'}
       visual={'developer'}
       openInNewWindow={true}
     />
 
     <LargeFeature
       alternate
-      title={'Easy Integrations'}
+      title={'Easy integrations'}
       description={
         'Ory already works with what you’re doing. Lots of easy ways to make tools, software, platforms and coding languages your business uses work with Ory.'
       }
@@ -135,8 +141,7 @@ const HomePage = () => (
         },
         {
           title: 'Contact Us →',
-          href:
-            'https://github.com/ory/open-source-support/blob/master/README.md',
+          href: 'mailto:jared@ory.sh',
           style: 'secondary',
           openInNewWindow: true
         }
@@ -153,7 +158,7 @@ const HomePage = () => (
         {
           description:
             'Learn about what’s new at Ory and great stuff being worked on.',
-          learn: 'Go to our Blog',
+          learn: 'Read the Developer Blog',
           href: '/blog',
           icon: 'blog'
         },
