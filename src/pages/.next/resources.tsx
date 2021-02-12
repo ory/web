@@ -65,7 +65,8 @@ const ResourcePage = () => (
           href:
             'https://github.com/ory/open-source-support/blob/master/README.md',
           content:
-            'Looking for support above and beyond the community? Need help to review your setup or want help with performance tuning? Contact us for a custom package that suits you.'
+            'Looking for support above and beyond the community? Need help to review your setup or want help with performance tuning? Contact us for a custom package that suits you.',
+          openInNewWindow: true
         }
       ]}
     />
