@@ -46,7 +46,7 @@ interface MenuItem {
 
 const menu: MenuItem[] = [
   {
-    title: 'Product',
+    title: 'Products',
     href: '/products',
     items: [
       {
