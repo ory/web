@@ -60,7 +60,7 @@ const ResourcePage = () => (
           title: 'Developer Blog',
           href: '/blog',
           content:
-            "Learn about what’s new at Ory and gain insights on the great stuff being worked on, our views on today's pressing security issues or guides to modern problems."
+            "Learn about what’s new at Ory, what great stuff we're working on, get the inside scoop and learn about what drives Ory."
         },
         {
           visual: 'support',
