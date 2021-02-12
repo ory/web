@@ -30,7 +30,7 @@ const IndexPage = () => (
       subtitle="Give your customers rich experiences and easy secure ways to register and sign in across your mobile and web apps."
       cta={[
         {
-          title: 'Start now',
+          title: 'Learn more',
           href: '/products',
           style: 'primary',
           openInNewWindow: true

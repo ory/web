@@ -73,12 +73,12 @@ const DeveloperPage = () => (
     />
 
     <LargeFeature
-      title={'Need support?'}
+      title={'Resources for success'}
       description={
         'There is a whole community to help you succeed with an active developer Slack Channel and GitHub Discussions. You can also contact us to create a custom package for your business.'
       }
-      learn={'Contact us'}
-      href={'https://github.com/ory/open-source-support/blob/master/README.md'}
+      learn={'Resources'}
+      href={'/resources'}
       visual={'support'}
       openInNewWindow={true}
     />
@@ -90,7 +90,7 @@ const DeveloperPage = () => (
         'Ory is an extensive set of open source projects. Together they represent Kratos, Hydra, Oathkeeper, Keto.'
       }
       learn={'Explore Ory Open Source'}
-      href={'/products'}
+      href={'https://github.com/ory/'}
       visual={'opensource'}
       openInNewWindow={true}
     />

@@ -62,7 +62,7 @@ const menu: MenuItem[] = [
         href: '/kratos'
       },
       {
-        title: 'Zero Trust',
+        title: 'Zero Trust Networking',
         href: '/oathkeeper'
       }
     ]
