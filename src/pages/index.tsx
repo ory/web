@@ -22,8 +22,8 @@ const HeroIllustration = () => (
 const IndexPage = () => (
   <Layout>
     <SEO
-      description="Implement OAuth 2.0 and OpenID Connect in minutes with open source from ORY. Works in both new and existing systems."
-      title="ORY - Open Source OAuth2 and OpenID Connect Access Control & API Security"
+      description="Implement OAuth 2.0 and OpenID Connect in minutes with open source from Ory. Works in both new and existing systems."
+      title="Ory - Open Source OAuth2 and OpenID Connect Access Control & API Security"
     />
     <CompressedHero
       title="The new identity platform."
@@ -49,7 +49,7 @@ const IndexPage = () => (
       highlight={[
         {
           visual: 'hydra',
-          title: 'Authentication',
+          title: 'OAuth 2.0 and OpenID Connect',
           href: '/hydra',
           content:
             'Keep threats out and easily verify who is a customer, and customize sign in flows that fit you and your customers.'
