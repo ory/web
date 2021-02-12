@@ -47,7 +47,7 @@ interface MenuItem {
 const menu: MenuItem[] = [
   {
     title: 'Product',
-    href: '/.next/products',
+    href: '/products',
     items: [
       {
         title: 'Authentication',
@@ -96,7 +96,7 @@ const menu: MenuItem[] = [
   },
   {
     title: 'Developer',
-    href: '/.next/developer',
+    href: '/developer',
     items: [
       {
         title: 'Documentation',
@@ -112,12 +112,11 @@ const menu: MenuItem[] = [
   },
   {
     title: 'Resources',
-    href: '/.next/resources',
+    href: '/resources',
     items: [
       {
         title: 'Developer Blog',
-        href: '/blog',
-        openInNewWindow: true
+        href: '/blog'
       },
       {
         title: 'Developer Chat',

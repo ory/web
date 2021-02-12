@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import Quicklinks from '../../components/quicklinks'
-import CompressedHero from '../../components/compressed-hero'
-import Newsletter from '../../components/newsletter'
-import heroIllustration from '../../images/illustrations/support.svg'
-import Highlights from '../../components/highlights'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Quicklinks from '../components/quicklinks'
+import CompressedHero from '../components/compressed-hero'
+import Newsletter from '../components/newsletter'
+import heroIllustration from '../images/illustrations/support.svg'
+import Highlights from '../components/highlights'
 
 const HeroIllustration = () => (
   <img
@@ -47,7 +47,7 @@ const ResourcePage = () => (
         {
           visual: 'discuss',
           title: 'Github Discussions',
-          href: 'https://github.com/ory/',
+          href: 'https://github.com/ory/kratos/discussions',
           content:
             'Check out our discussions on Github. All of our open source projects and developers exchanging ideas and asking questions on a fully Github integrated forum.',
           openInNewWindow: true
@@ -81,7 +81,7 @@ const ResourcePage = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/.next/products',
+          href: '/products',
           style: 'primary',
           openInNewWindow: true
         },

@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import Adopters from '../../components/adopters'
-import LargeFeature from '../../components/large-feature'
-import Quicklinks from '../../components/quicklinks'
-import CompressedHero from '../../components/compressed-hero'
-import Stats from '../../components/stats'
-import Newsletter from '../../components/newsletter'
-import heroIllustration from '../../images/illustrations/developer.svg'
-import BlogSummarySection from '../../components/blog-summary-section'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Adopters from '../components/adopters'
+import LargeFeature from '../components/large-feature'
+import Quicklinks from '../components/quicklinks'
+import CompressedHero from '../components/compressed-hero'
+import Stats from '../components/stats'
+import Newsletter from '../components/newsletter'
+import heroIllustration from '../images/illustrations/developer.svg'
+import BlogSummarySection from '../components/blog-summary-section'
 
 const HeroIllustration = () => (
   <img
@@ -88,7 +88,7 @@ const DeveloperPage = () => (
         'Ory is an extensive set of open source projects. Together they represent Kratos, Hydra, Oathkeeper, Keto.'
       }
       learn={'Explore Ory Open Source'}
-      href={'/.next/products'}
+      href={'/products'}
       visual={'opensource'}
       openInNewWindow={true}
     />
@@ -105,7 +105,7 @@ const DeveloperPage = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/.next/products',
+          href: '/products',
           style: 'primary',
           openInNewWindow: true
         },

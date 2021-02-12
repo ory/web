@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import Adopters from '../../components/adopters'
-import Quicklinks from '../../components/quicklinks'
-import Highlights from '../../components/highlights'
-import CompressedHero from '../../components/compressed-hero'
-import Stats from '../../components/stats'
-import Newsletter from '../../components/newsletter'
-import heroIllustration from '../../images/illustrations/hero.svg'
-import ThinProjectList from '../../components/thin-project-list'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Adopters from '../components/adopters'
+import Quicklinks from '../components/quicklinks'
+import Highlights from '../components/highlights'
+import CompressedHero from '../components/compressed-hero'
+import Stats from '../components/stats'
+import Newsletter from '../components/newsletter'
+import heroIllustration from '../images/illustrations/hero.svg'
+import ThinProjectList from '../components/thin-project-list'
 
 const HeroIllustration = () => (
   <img
@@ -29,7 +29,7 @@ const ProductTeam = () => (
       cta={[
         {
           title: 'Start now',
-          href: '/.next/developer',
+          href: '/developer',
           style: 'primary'
         },
         {
@@ -70,7 +70,7 @@ const ProductTeam = () => (
         {
           visual: 'developer',
           title: "You're a developer?",
-          href: '/.next/developer',
+          href: '/developer',
           content:
             'Be a hero at your company. Ory has everything you need to add authentication, authorization, and user management to your apps.'
         }
@@ -93,7 +93,7 @@ const ProductTeam = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/.next/developer',
+          href: '/developer',
           style: 'primary',
           openInNewWindow: true
         },
