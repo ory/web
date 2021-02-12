@@ -11,6 +11,10 @@ import OpenSource from '../images/icon/opensource.svg'
 import Integration from '../images/icon/integration.svg'
 import Developer from '../images/icon/developer.svg'
 import OpenStandards from '../images/icon/openstandards.svg'
+import Slack from '../images/icon/slack.svg'
+import Discuss from '../images/icon/discuss.svg'
+import Blog from '../images/icon/blog.svg'
+import Support from '../images/icon/support.svg'
 
 interface PropTypes {
   highlight: Highlight[]
@@ -26,6 +30,10 @@ interface Highlight {
     | 'openstandards'
     | 'developer'
     | 'opensource'
+    | 'slack'
+    | 'discuss'
+    | 'blog'
+    | 'support'
   title: string
   content: string
   href: string
@@ -70,6 +78,14 @@ const Highlights = ({ highlight }: PropTypes) => (
                         ? Developer
                         : visual === 'opensource'
                         ? OpenSource
+                        : visual === 'slack'
+                        ? Slack
+                        : visual === 'discuss'
+                        ? Discuss
+                        : visual === 'blog'
+                        ? Blog
+                        : visual === 'support'
+                        ? Support
                         : ''
                     }
                   />
