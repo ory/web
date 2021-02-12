@@ -47,12 +47,11 @@ interface MenuItem {
 const menu: MenuItem[] = [
   {
     title: 'Product',
-    href: '/.next/home',
+    href: '/.next/products',
     items: [
       {
         title: 'Authentication',
-        href: '/hydra',
-        openInNewWindow: true
+        href: '/hydra'
       },
       {
         title: 'Authorization',
@@ -65,38 +64,6 @@ const menu: MenuItem[] = [
       {
         title: 'Zero Trust',
         href: '/oathkeeper'
-      }
-    ]
-  },
-  {
-    title: 'Developer',
-    href: '/docs',
-    items: [
-      {
-        title: 'Documentation',
-        href: '/docs'
-      },
-      {
-        title: 'SDKs',
-        href: 'https://github.com/ory/sdk'
-      }
-    ]
-  },
-  {
-    title: 'Resources',
-    href: '/.next/home',
-    items: [
-      {
-        title: 'Docs',
-        href: 'https://www.ory.sh/docs'
-      },
-      {
-        title: 'Forum',
-        href: 'https://community.ory.sh/'
-      },
-      {
-        title: 'Chat',
-        href: 'https://www.ory.sh/chat'
       }
     ]
   },
@@ -123,6 +90,33 @@ const menu: MenuItem[] = [
       {
         title: `${brandPrefix}Keto`,
         href: 'https://github.com/ory/keto',
+        openInNewWindow: true
+      }
+    ]
+  },
+  {
+    title: 'Developer',
+    href: '/.next/developer',
+    items: [
+      {
+        title: 'Documentation',
+        href: '/docs',
+        openInNewWindow: true
+      },
+      {
+        title: 'Integrations',
+        href: 'https://github.com/ory/sdk',
+        openInNewWindow: true
+      }
+    ]
+  },
+  {
+    title: 'Resources',
+    href: '/.next/home',
+    items: [
+      {
+        title: 'Developer Chat',
+        href: 'https://www.ory.sh/chat',
         openInNewWindow: true
       }
     ]
