@@ -21,8 +21,10 @@ const HeroIllustration = () => (
 
 const DeveloperPage = () => (
   <Layout>
-    <SEO description="" title="" />
-
+    <SEO
+      description="Add OAuth 2.0, OpenID Connect and User Management to your Apps with Ory. Use Zero Trust, open standards and open source."
+      title="Ory for Developers - Add Open Source OAuth 2.0, OpenID Connect, User Management and Zero Trust Networking to your application"
+    />
     <CompressedHero
       title="Be a hero in your company."
       subtitle="Ory has everything you need to solve identity problems and add authentication, authorization, and user management to your apps."

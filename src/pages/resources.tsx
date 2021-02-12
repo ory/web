@@ -18,7 +18,10 @@ const HeroIllustration = () => (
 
 const ResourcePage = () => (
   <Layout>
-    <SEO description="" title="" />
+    <SEO
+      description="Resources to implement Ory OAuth 2.0, OpenID Connect and User Management. Use Zero Trust, open standards and open source."
+      title="Ory Resources - Open Source OAuth 2.0, OpenID Connect, User Management and Zero Trust Networking"
+    />
 
     <CompressedHero
       title="We want to help you succeed."
