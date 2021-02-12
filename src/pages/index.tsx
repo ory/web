@@ -31,13 +31,13 @@ const IndexPage = () => (
       cta={[
         {
           title: 'Start now',
-          href: '/.next/products',
+          href: '/products',
           style: 'primary',
           openInNewWindow: true
         },
         {
           title: 'For developers →',
-          href: '/.next/developer',
+          href: '/developer',
           style: 'secondary',
           openInNewWindow: true
         }
@@ -109,7 +109,7 @@ const IndexPage = () => (
         'Be a hero at your company. Ory has everything you need to add authentication, authorization, and user management to your apps. Create your own identity provider or run your own Oauth server.'
       }
       learn={'Start building with Ory'}
-      href={'/.next/developer'}
+      href={'/developer'}
       visual={'developer'}
       openInNewWindow={true}
     />
