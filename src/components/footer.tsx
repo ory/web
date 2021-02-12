@@ -50,7 +50,7 @@ const menu: MenuItem[] = [
     href: '/products',
     items: [
       {
-        title: 'Authentication',
+        title: 'OAuth 2.0',
         href: '/hydra'
       },
       {
