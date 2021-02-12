@@ -5,7 +5,8 @@ title: >
 
 seo:
   description: >
-    Implement OAuth2 and OpenID Connect on mobile apps and single page apps (SPA).
+    Implement OAuth2 and OpenID Connect on mobile apps and single page apps
+    (SPA).
 
   title: >
     OAuth2 for Mobile Apps and Single Page Apps Best Practices (2020)
@@ -21,63 +22,68 @@ teaser: >
 overline: Mobile & Native App Security
 ---
 
-In this article we will cover best practices for OAuth2- and OpenID Connect flows
-for mobile apps and single page apps (SPA).
+In this article we will cover best practices for OAuth2- and OpenID Connect
+flows for mobile apps and single page apps (SPA).
 
 Before reading ahead, keep in mind that OAuth2 and OpenID Connect are delegation
-protocols. OpenID Connect is useful when you want to become a "Sign in with ..." provider
-like Google or Twitter. If you plan on allowing third party developers access your
-user's data with their consent (e.g "Access to your private repositories"), OAuth2 is the correct choice.
-Using these two protocols in first-party scenario, for example OpenID Connect
-to attempt and solve "SSO", can become quite complex [due to several conceptual
-limitations](https://www.ory.sh/hydra/docs/concepts/before-oauth2).
+protocols. OpenID Connect is useful when you want to become a "Sign in with ..."
+provider like Google or Twitter. If you plan on allowing third party developers
+access your user's data with their consent (e.g "Access to your private
+repositories"), OAuth2 is the correct choice. Using these two protocols in
+first-party scenario, for example OpenID Connect to attempt and solve "SSO", can
+become quite complex
+[due to several conceptual limitations](https://www.ory.sh/hydra/docs/concepts/before-oauth2).
 
-If you are looking to solve authentication (login), sign up, profile management, and more
-check out the [Add Authentication to your React Native App article](https://www.ory.sh/react-native-authentication-login-signup).
+If you are looking to solve authentication (login), sign up, profile management,
+and more check out the
+[Add Authentication to your React Native App article](https://www.ory.sh/react-native-authentication-login-signup).
 
 ## Choosing the Correct OAuth2 Flow
 
-Read the [introduction to OAuth2 and OpenID Connect](https://www.ory.sh/hydra/docs/concepts/oauth2)
+Read the
+[introduction to OAuth2 and OpenID Connect](https://www.ory.sh/hydra/docs/concepts/oauth2)
 if you need a refresher.
 
-You can choose from several OAuth2 flows (e.g. Resource Owner Password Credentials, Implicit, Authorize Code).
-Let's exclude the ones which should no longer be used.
+You can choose from several OAuth2 flows (e.g. Resource Owner Password
+Credentials, Implicit, Authorize Code). Let's exclude the ones which should no
+longer be used.
 
-Second, you will be introduced to the OAuth2
-Authorize Code flow with Proof Key for Code Exchange (PKCE) for public clients.
-Third, you will be supplied with links to open source software capable of
-solving the introduced flows and features.
+Second, you will be introduced to the OAuth2 Authorize Code flow with Proof Key
+for Code Exchange (PKCE) for public clients. Third, you will be supplied with
+links to open source software capable of solving the introduced flows and
+features.
 
 ### Avoid the OAuth2 Resource Owner Password Credentials Flow
 
-This flow was built into OAuth2 to help old systems migrate to OAuth2 authorization
-without changing the user experience flow. Because the user enters his/her credentials
-directly into the client's UI, it would be possible for third parties to phish the
-credentials. You should never allow third party developers to use this flow.
-Additionally, OAuth 2.1 [is going to remove this flow](https://oauth.net/2.1/).
+This flow was built into OAuth2 to help old systems migrate to OAuth2
+authorization without changing the user experience flow. Because the user enters
+his/her credentials directly into the client's UI, it would be possible for
+third parties to phish the credentials. You should never allow third party
+developers to use this flow. Additionally, OAuth 2.1
+[is going to remove this flow](https://oauth.net/2.1/).
 
 Second, the OAuth2 Resource Owner Password Credentials Flow is not compatible
 with OpenID Connect. If you rely on OpenID Connect ID Tokens for your login
 sequence, you can not use this flow.
 
-Third, if you use OAuth2 as an SSO mechanism (e.g. having multiple
-mobile apps which all use the same OAuth2 server to authorize), the
-OAuth2 Resource Owner Password Credentials Flow opens up potential
-attack vectors such as phishing: Let's assume you have published 15 mobile apps (e.g. "game cloud - world's best freemium games")
-which all use the OAuth2 Resource Owner Password Credentials Flow
-to access the user's profile and game data at "game cloud". Your users are used to
-entering their "game cloud" credentials in the game's UI.
-An attacker could write a 16th app, with a similar publisher name (e.g. "game cloud enterprise"),
-and trick your users into entering their "game cloud" credentials into
-the malicious app.
+Third, if you use OAuth2 as an SSO mechanism (e.g. having multiple mobile apps
+which all use the same OAuth2 server to authorize), the OAuth2 Resource Owner
+Password Credentials Flow opens up potential attack vectors such as phishing:
+Let's assume you have published 15 mobile apps (e.g. "game cloud - world's best
+freemium games") which all use the OAuth2 Resource Owner Password Credentials
+Flow to access the user's profile and game data at "game cloud". Your users are
+used to entering their "game cloud" credentials in the game's UI. An attacker
+could write a 16th app, with a similar publisher name (e.g. "game cloud
+enterprise"), and trick your users into entering their "game cloud" credentials
+into the malicious app.
 
-Similarly, an attacker could publish a counterfeit app with a similar name
-and the same UI, which phishes for user's "game cloud" credentials.
-The user is not able to distinguish
-the login screen in the counterfeit from legitimate apps, because there is no
-domain name, no TLS certificate, and more broadly no trusted environment
-(browser). If the attackers can push a counterfeit app to the app store, users -
-used to enter their credentials in the app - will not become suspicious.
+Similarly, an attacker could publish a counterfeit app with a similar name and
+the same UI, which phishes for user's "game cloud" credentials. The user is not
+able to distinguish the login screen in the counterfeit from legitimate apps,
+because there is no domain name, no TLS certificate, and more broadly no trusted
+environment (browser). If the attackers can push a counterfeit app to the app
+store, users - used to enter their credentials in the app - will not become
+suspicious.
 
 Let’s take a look at an example. The two screenshots below are from two
 different apps. The one on the left is the original app, the one on the right
@@ -173,7 +179,8 @@ transmit data via URLs to JavaScript applications running in the browser. Today,
 as browser APIs improved, it’s possible to use the OAuth2 Authorize Code Flow
 for browser apps instead, and benefit from, e.g., refresh tokens.
 
-Implicit flows are scheduled to be removed in the [OAuth 2.1 specification](https://oauth.net/2.1/).
+Implicit flows are scheduled to be removed in the
+[OAuth 2.1 specification](https://oauth.net/2.1/).
 
 ### Embedded User Agents
 
@@ -255,9 +262,10 @@ with the Apache 2.0 License.
 
 ### OAuth2 Server and OpenID Connect Provider ORY Hydra
 
-[ORY Hydra](https://www.ory.sh/hydra) is an OAuth2 and OpenID Connect server that integrates with existing identity
-management solutions. It supports all features presented in this article. To get started
-with ORY Hydra check out the [5 Minute Quickstart](https://www.ory.sh/hydra/docs/5min-tutorial)!
+[ORY Hydra](https://www.ory.sh/hydra) is an OAuth2 and OpenID Connect server
+that integrates with existing identity management solutions. It supports all
+features presented in this article. To get started with ORY Hydra check out the
+[5 Minute Quickstart](https://www.ory.sh/hydra/docs/5min-tutorial)!
 
 ### OAuth2 Client: AppAuth
 
@@ -269,8 +277,9 @@ PKCE.
 ## Open Source and other Resources
 
 Besides the obvious ones like Stackoverflow or Reddit, you can ask questions
-related to these topics at [ORY Hydra GitHub Discussions](https://github.com/ory/hydra/discussions) or
-in the [Ory Community Slack](https://www.ory.sh/chat).
+related to these topics at
+[ORY Hydra GitHub Discussions](https://github.com/ory/hydra/discussions) or in
+the [Ory Community Slack](https://www.ory.sh/chat).
 
 Thank you for reading! I hope you learned something useful! If this was of any
 help, you can follow me on [GitHub](https://github.com/aeneasr) and

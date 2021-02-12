@@ -3,7 +3,6 @@ declare const styles: {
   readonly cta: string
   readonly primary: string
   readonly visited: string
-  readonly tertiary: string
   readonly remarkEmoji: string
 }
 export = styles
