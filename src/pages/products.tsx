@@ -19,7 +19,7 @@ const HeroIllustration = () => (
   />
 )
 
-const ProductTeam = () => (
+const ProductsPage = () => (
   <Layout>
     <SEO
       description="Products to implement Ory OAuth 2.0, OpenID Connect and User Management. Use Zero Trust, open standards and open source."
@@ -136,4 +136,4 @@ const ProductTeam = () => (
   </Layout>
 )
 
-export default ProductTeam
+export default ProductsPage

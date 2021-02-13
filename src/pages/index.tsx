@@ -32,14 +32,12 @@ const IndexPage = () => (
         {
           title: 'Learn more',
           href: '/products',
-          style: 'primary',
-          openInNewWindow: true
+          style: 'primary'
         },
         {
           title: 'For developers →',
           href: '/developer',
-          style: 'secondary',
-          openInNewWindow: true
+          style: 'secondary'
         }
       ]}
       visual={<HeroIllustration />}
