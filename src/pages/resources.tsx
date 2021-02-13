@@ -84,7 +84,7 @@ const ResourcePage = () => (
       cta={[
         {
           title: 'Start building',
-          href: '/products',
+          href: '/developer',
           style: 'primary',
           openInNewWindow: true
         },
@@ -107,7 +107,7 @@ const ResourcePage = () => (
         {
           description:
             'Learn about what’s new at Ory and great stuff being worked on.',
-          learn: 'Go to our Developer Blog',
+          learn: 'Go to our Blog',
           href: '/blog',
           icon: 'blog'
         },
