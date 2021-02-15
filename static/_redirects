@@ -30,8 +30,7 @@ https://www.ory.sh/forum https://community.ory.sh 302!
 
 # end domains
 
-https://www.ory.am/products/* https://www.ory.sh 301!
-https://www.ory.sh/products/* https://www.ory.sh 301!
+https://www.ory.am/products/* https://www.ory.sh/products 301!
 https://www.ory.sh/sites https://editor.ory.sh 301!
 https://www.ory.am/sites https://editor.ory.sh 301!
 https://www.ory.sh/sites/* https://editor.ory.sh 301!
