@@ -106,7 +106,6 @@ const KratosPage = () => (
         }
       ]}
       visual={<KratosAnimation />}
-      mobile={[<KratosAnimation />]}
     />
 
     <Newsletter preselect={'kratos'} />
@@ -179,9 +178,9 @@ const KratosPage = () => (
       ]}
     />
 
-    <Stats />
-    <Adopters />
     <Collaborator />
+    <Adopters onlyFeatured={true} />
+    <Stats />
   </Layout>
 )
 

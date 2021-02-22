@@ -56,7 +56,6 @@ const KetoPage = () => (
         }
       ]}
       visual={<KetoAnimation />}
-      mobile={[<KetoAnimation />]}
     />
 
     <Newsletter preselect={'keto'} />
@@ -85,9 +84,9 @@ const KetoPage = () => (
       ]}
     />
 
-    <Stats />
-    <Adopters />
     <Collaborator />
+    <Adopters onlyFeatured={true} />
+    <Stats />
   </Layout>
 )
 
