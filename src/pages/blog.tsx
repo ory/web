@@ -3,25 +3,30 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogSection from '../components/blog-section'
-import Author from '../components/author'
 
 import * as styles from './blog.module.css'
+import cn from 'classnames'
 
 const Post = ({
   node: {
-    frontmatter: { path, title, teaser, overline, author, publishedAt }
+    frontmatter: { path, banner, overline, title, teaser, author, publishedAt }
   }
 }: any) => (
-  <div>
-    <p className={styles.postOverline}>{overline}</p>
-    <h2 className={styles.postTitle}>
-      <Link to={path}>{title}</Link>
-    </h2>
-    <p className={styles.postTeaser}>{teaser}</p>
-    <p className={styles.info}>
-      <Author name={author} className={styles.author} /> - {publishedAt}
-    </p>
-  </div>
+  <Link to={path}>
+    <div className={styles.postBox}>
+      <div className={cn(styles.postImg)}>
+        <img src={banner} alt={overline} />
+      </div>
+      <div className={cn(styles.postContent)}>
+        <p className={styles.postOverline}>{overline}</p>
+        <h2 className={styles.postTitle}>{title}</h2>
+        <p className={styles.postTeaser}>{teaser}</p>
+        <p className={styles.info}>
+          <span className={styles.author}>{author}</span> - {publishedAt}
+        </p>
+      </div>
+    </div>
+  </Link>
 )
 
 const BlogPostsPage = ({
@@ -74,6 +79,7 @@ export const pageQuery = graphql`
             title
             teaser
             overline
+            banner
           }
         }
       }
