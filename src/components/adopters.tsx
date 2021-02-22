@@ -56,9 +56,9 @@ const adopters = [
     hiddenSm: false
   },
   {
-    title: 'Data Detect',
-    image: datadetect,
-    url: 'https://unifiedglobalarchiving.com/data-detect/',
+    title: '3REIN',
+    image: threerein,
+    url: 'https://3rein.com/',
     featured: true
   },
   {
@@ -78,9 +78,9 @@ const adopters = [
     url: 'https://cashdeck.com.au/'
   },
   {
-    title: '3REIN',
-    image: threerein,
-    url: 'https://3rein.com/'
+    title: 'Data Detect',
+    image: datadetect,
+    url: 'https://unifiedglobalarchiving.com/data-detect/'
   }
 ]
 
