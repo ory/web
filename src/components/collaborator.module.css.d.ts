@@ -1,4 +1,6 @@
 declare const styles: {
-  readonly collaborator: string
+  readonly largeFeature: string
+  readonly divider: string
+  readonly alternate: string
 }
 export = styles

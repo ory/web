@@ -1,44 +1,63 @@
 import React from 'react'
 import cn from 'classnames'
-import styles from './collaborator.module.css'
+import * as styles from './collaborator.module.css'
 
 const Contributors = () => (
   <img
     loading="lazy"
-    alt="OpenCollective"
+    alt="The Ory Community"
     className="responsive"
     src="https://opencollective.com/ory/contributors.svg?avatarHeight=24&width=540&button=false"
   />
 )
 
-const Collaborator = () => (
-  <div className={cn(styles.collaborator)}>
+const LargeFeature = () => (
+  <div className={cn(styles.largeFeature)}>
     <div className="container-fluid">
       <div className={cn('row middle-lg')}>
-        <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
-          <h3>ORY Community</h3>
-          <div className={cn('hidden-lg')}>
-            <Contributors />
-          </div>
+        <div
+          className={
+            'col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 hidden-md hidden-sm'
+          }
+        >
+          <Contributors />
+        </div>
+        <div
+          className={
+            'col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
+          }
+        >
+          <h3>The Ory Community</h3>
           <p>
-            The ORY Community stands on the shoulders of individuals, companies,
+            The Ory Community stands on the shoulders of individuals, companies,
             and maintainers. We thank everyone involved - from submitting bug
             reports and feature requests, to contributing patches, to sponsoring
-            our work! You make this project possible!
+            our work.
           </p>
           <p>
             If you like, consider becoming a sponsor or supporter of our open
             source efforts via{' '}
-            <a href="https://opencollective.com/ory">Open Collective</a> or{' '}
-            <a href="https://www.patreon.com/_ory">Patreon</a>.
+            <a
+              href="https://opencollective.com/ory"
+              rel={'noopener noreferrer'}
+              target={'_blank'}
+            >
+              Open Collective
+            </a>{' '}
+            or{' '}
+            <a
+              href="https://www.patreon.com/_ory"
+              rel={'noopener noreferrer'}
+              target={'_blank'}
+            >
+              Patreon
+            </a>
+            .
           </p>
-        </div>
-        <div className={cn('hidden-sm hidden-md col-lg-offset-2 col-lg-4')}>
-          <Contributors />
         </div>
       </div>
     </div>
   </div>
 )
 
-export default Collaborator
+export default LargeFeature
