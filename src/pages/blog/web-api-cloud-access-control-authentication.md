@@ -1,5 +1,6 @@
 ---
 path: '/web-api-cloud-access-control-authentication/'
+banner: '/images/blog-banner-ory.png'
 title: >
   Approaching Access Control on the Web
 

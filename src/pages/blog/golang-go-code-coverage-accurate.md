@@ -1,5 +1,6 @@
 ---
 path: '/golang-go-code-coverage-accurate/'
+banner: '/images/blog-banner-ory.png'
 publishedAt: '2018-02-20'
 
 author: aeneasr

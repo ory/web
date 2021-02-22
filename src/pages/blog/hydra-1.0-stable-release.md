@@ -1,5 +1,6 @@
 ---
 path: '/hydra-1.0-stable-release/'
+banner: '/images/blog-banner-hydra.png'
 publishedAt: '2019-06-01'
 author: aeneasr
 

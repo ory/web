@@ -1,6 +1,7 @@
 ---
 path: '/api-access-control-kubernetes-cloud-native/'
 publishedAt: '2018-08-18'
+banner: '/images/blog-banner-oathkeeper.png'
 author: aeneasr
 
 title: 'Zero Trust API Access Control on Kubernetes'
