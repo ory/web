@@ -26,7 +26,6 @@
   }
 }
 
-
 .post-content {
   width: 90%;
   padding: 2rem;
@@ -42,7 +41,7 @@
   }
 }
 
-p.info{
+p.info {
   color: var(--colors-base-text);
   line-height: 1.5;
   margin-bottom: 0;
