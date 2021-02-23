@@ -9,6 +9,7 @@ import Stats from '../components/stats'
 import Newsletter from '../components/newsletter'
 import heroIllustration from '../images/illustrations/developer.svg'
 import BlogSummarySection from '../components/blog-summary-section'
+import Link from '../components/link'
 
 const HeroIllustration = () => (
   <img
@@ -75,7 +76,15 @@ const DeveloperPage = () => (
     <LargeFeature
       title={'Resources for success'}
       description={
-        'There is a whole community to help you succeed with an active developer Slack Channel and GitHub Discussions. You can also contact us to create a custom package for your business.'
+        <>
+          There is a whole community to help you succeed with an active
+          developer{' '}
+          <Link to={'https://www.ory.sh/chat'} openInNewWindow={true}>
+            Slack Channel
+          </Link>{' '}
+          and GitHub Discussions. You can also contact us to create a custom
+          package for your business.
+        </>
       }
       learn={'Resources'}
       href={'/resources'}
@@ -100,10 +109,6 @@ const DeveloperPage = () => (
     <Newsletter />
 
     <Quicklinks
-      title={'Ready to get started?'}
-      description={
-        'Explore our Products or start building and get authentication, authorization, and user management added to your app. You can also contact us to design a custom package for your business.'
-      }
       cta={[
         {
           title: 'Start building',
