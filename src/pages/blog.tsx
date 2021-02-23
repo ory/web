@@ -6,6 +6,7 @@ import BlogSection from '../components/blog-section'
 
 import * as styles from './blog.module.css'
 import cn from 'classnames'
+import { AuthorName } from '../components/author'
 
 const Post = ({
   node: {
@@ -22,7 +23,7 @@ const Post = ({
         <h2 className={styles.postTitle}>{title}</h2>
         <p className={styles.postTeaser}>{teaser}</p>
         <p className={styles.info}>
-          <span className={styles.author}>{author}</span> - {publishedAt}
+          <AuthorName name={author} className={styles.author} /> - {publishedAt}
         </p>
       </div>
     </div>

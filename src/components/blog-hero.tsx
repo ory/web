@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './blog-hero.module.css'
 import cn from 'classnames'
-import Author from './author'
+import { AuthorLink } from './author'
 
 interface PropTypes {
   title: string
@@ -27,7 +27,7 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.info}>
               <span>
-                <Author className={styles.author} name={author} />
+                <AuthorLink className={styles.author} name={author} />
                 <br />
                 {date}
               </span>
