@@ -8,8 +8,6 @@ import Blog from '../images/icon/blog.svg'
 import Jobs from '../images/icon/jobs.svg'
 
 interface PropTypes {
-  title: string
-  description: string
   quick: Quick[]
   cta: CallToAction[]
 }
@@ -45,7 +43,7 @@ const CallToActionButton = ({
   </Link>
 )
 
-const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
+const Quicklinks = ({ quick, cta }: PropTypes) => (
   <div className={cn(styles.quicklinks)}>
     <div className="container-fluid">
       <div className={cn(styles.quicklinksRow, 'row middle-lg')}>
@@ -55,8 +53,13 @@ const Quicklinks = ({ title, description, quick, cta }: PropTypes) => (
             'col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10'
           )}
         >
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <h3>Ready to get started?</h3>
+          <p>
+            Explore our <Link to={'/products'}>Products</Link> or start building
+            and get authentication, authorization, and user management added to
+            your app. You can also contact us to design a custom package for
+            your business.
+          </p>
           <>{cta.map(CallToActionButton)}</>
         </div>
         <div
