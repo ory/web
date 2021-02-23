@@ -13,6 +13,14 @@ const authors: { [key: string]: Profile } = {
   zepatrik: {
     fullname: 'Patrik Neu',
     github: 'https://github.com/zepatrik'
+  },
+  vinckr: {
+    fullname: 'Vincent Kraus',
+    github: 'https://github.com/vinckr'
+  },
+  k9ert: {
+    fullname: 'Kim Neunert',
+    github: 'https://github.com/k9ert'
   }
 }
 
