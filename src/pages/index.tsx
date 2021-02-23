@@ -9,6 +9,7 @@ import Highlights from '../components/highlights'
 import LargeFeature from '../components/large-feature'
 import Quicklinks from '../components/quicklinks'
 import heroIllustration from '../images/illustrations/hero.svg'
+import Link from '../components/link'
 
 const HeroIllustration = () => (
   <img
@@ -93,7 +94,18 @@ const IndexPage = () => (
       alternate
       title={'Rely on open standards'}
       description={
-        'Give your customers secure choices for how they register and sign in with you. Rely on Oauth 2.0 and OpenID Connect and web standard best practices to secure you and your customers.'
+        <>
+          Give your customers secure choices for how they register and sign in
+          with you. Rely on{' '}
+          <Link to={'https://oauth.net/2/'} openInNewWindow={true}>
+            Oauth 2.0
+          </Link>{' '}
+          and{' '}
+          <Link to={'https://openid.net/connect/'} openInNewWindow={true}>
+            OpenID Connect
+          </Link>{' '}
+          and web standard best practices to secure you and your customers.
+        </>
       }
       learn={'Learn more'}
       href={'/docs/ecosystem/software-architecture-philosophy'}
