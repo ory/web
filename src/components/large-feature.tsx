@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import cn from 'classnames'
 import * as styles from './large-feature.module.css'
 import Link from '../components/link'
@@ -12,7 +12,7 @@ import Docs from '../images/illustrations/docs.svg'
 
 interface PropTypes {
   title: string
-  description: string
+  description: ReactNode
   learn: string
   href: string
   visual:
