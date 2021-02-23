@@ -16,7 +16,21 @@ const authors: { [key: string]: Profile } = {
   }
 }
 
-const Author = ({ name, className }: { name: string; className?: string }) => {
+const AuthorName = ({
+  name,
+  className
+}: {
+  name: string
+  className: string
+}) => <span className={className}>{authors[name]?.fullname ?? name}</span>
+
+const AuthorLink = ({
+  name,
+  className
+}: {
+  name: string
+  className?: string
+}) => {
   const profile = authors[name]
   if (!profile) {
     return <span className={className}>{name}</span>
@@ -29,4 +43,4 @@ const Author = ({ name, className }: { name: string; className?: string }) => {
   )
 }
 
-export default Author
+export { AuthorLink, AuthorName }
