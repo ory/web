@@ -89,10 +89,6 @@ const ProductsPage = () => (
     <Newsletter />
 
     <Quicklinks
-      title={'Ready to get started?'}
-      description={
-        'Explore our Products or start building and get authentication, authorization, and user management added to your app. You can also contact us to design a custom package for your business.'
-      }
       cta={[
         {
           title: 'Start building',
