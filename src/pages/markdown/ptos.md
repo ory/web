@@ -40,9 +40,9 @@ This Agreement is effective as of the date you accept this Agreement (the “Eff
       (A) License.  Subject to the terms of this Agreement (including Section 2.2(C) (Instructions; Policies; Misuse)), Ory grants to you, under its intellectual property rights and during the Term, a non-exclusive license to access and use Ory Modules solely in a non-production environment and solely for internal use, unless Ory explicitly permits a broader scope of use in writing (such as in the applicable Preview Program documentation).  
       (B) Form of Ory Modules.  Ory does not give you access to Ory Modules in source code form under this Agreement, and you have no right to modify (or attempt to modify) Ory Modules in connection with this Agreement.  
       (C) Instructions; Policies; Misuse. When you use the Preview Products:  
-        - You must follow any applicable instructions, policies, and other product documentation made available to you by Ory.  
-        - You may use the Preview Products only as permitted by law, including applicable export and re-export control laws and regulations.  
-        - You must not misuse the Preview Products. For example, don’t interfere with the Preview Products or try to access them using a method other than the interface and the instructions that Ory provides.  
+      You must follow any applicable instructions, policies, and other product documentation made available to you by Ory.  
+      You may use the Preview Products only as permitted by law, including applicable export and re-export control laws and regulations.  
+      You must not misuse the Preview Products. For example, don’t interfere with the Preview Products or try to access them using a method other than the interface and the instructions that Ory provides.  
       (D) Ownership.  As between you and Ory, Ory retains all right, title, and interest in the Ory Modules and anything else that Ory makes available to you through the Preview Program (other than Third Party Copyleft Software), including all associated intellectual property rights.  
       (E) No Reverse Engineering.  You will not disassemble or reverse engineer the Ory Modules (and you will not allow anyone else to do so).  
 
