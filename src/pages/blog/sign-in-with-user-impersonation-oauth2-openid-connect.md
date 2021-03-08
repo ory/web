@@ -1,5 +1,6 @@
 ---
 path: '/sign-in-with-user-impersonation-oauth2-openid-connect/'
+banner: '/images/blog-banner-hydra.png'
 publishedAt: '2018-11-27'
 author: aeneasr
 

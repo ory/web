@@ -1,5 +1,6 @@
 ---
 path: '/run-oauth2-server-open-source-api-security/'
+banner: '/images/blog-banner-hydra.png'
 title: >
   Run your own OAuth2 Server
 

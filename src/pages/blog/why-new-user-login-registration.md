@@ -1,6 +1,7 @@
 ---
 published: false
 path: '/why-new-user-login-registration/'
+banner: '/images/blog-banner-ory.png'
 title: 'Why we need a new identity system for user login, registration'
 publishedAt: '2020-01-30'
 author: aeneasr

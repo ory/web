@@ -12,6 +12,16 @@
     margin: 0 0 1rem;
   }
 
+  & :global a:any-link {
+    color: var(--colors-themed-default);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--colors-base-black);
+    }
+  }
+
   & :global a.cta.secondary:any-link {
     color: var(--colors-base-dark);
     border-color: var(--colors-base-dark);
@@ -57,6 +67,7 @@
   justify-content: space-between;
 
   & .quicklinks-child {
+    min-width: 33%;
     width: auto;
     margin: 0 1rem 0 0;
     padding: 1rem 0;
@@ -76,12 +87,13 @@
     }
 
     & p {
+      font-size: .875rem;
       margin: 0 0 0.5rem;
     }
 
     & .redirects {
       font-weight: 500;
-      font-size: 0.833rem;
+      font-size: 0.875rem;
     }
 
     & img {

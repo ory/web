@@ -105,7 +105,6 @@ const OathkeeperPage = () => (
         }
       ]}
       visual={<OathkeeperAnimation />}
-      mobile={[<OathkeeperAnimation />]}
     />
 
     <Newsletter preselect={'oathkeeper'} />
@@ -179,9 +178,9 @@ const OathkeeperPage = () => (
       ]}
     />
 
-    <Stats />
-    <Adopters />
     <Collaborator />
+    <Adopters onlyFeatured={true} />
+    <Stats />
   </Layout>
 )
 

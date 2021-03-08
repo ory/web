@@ -1,5 +1,6 @@
 ---
 path: '/modern-application-architecture/'
+banner: '/images/blog-banner-ory.png'
 publishedAt: '2020-09-03'
 author: 'Lee Atchison'
 

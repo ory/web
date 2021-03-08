@@ -63,11 +63,11 @@
   & pre[class*='language'] > code[class*='language'],
   & pre > code {
     color: var(--colors-base-light);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Inconsolata', monospace;
     text-shadow: none;
     font-style: normal;
     font-weight: 400;
-    font-size: 11px;
+    font-size: .875rem;
     line-height: 175%;
     background-color: var(--colors-base-dark);
 

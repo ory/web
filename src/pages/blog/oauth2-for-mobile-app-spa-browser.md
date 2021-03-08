@@ -1,5 +1,6 @@
 ---
 path: '/oauth2-for-mobile-app-spa-browser/'
+banner: '/images/blog-banner-hydra.png'
 title: >
   OAuth2 with PKCE for Mobile Apps and Single Page Apps
 

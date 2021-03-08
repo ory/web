@@ -27,7 +27,17 @@ export default function BlogTemplate(props: any) {
       <BlogSection>
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
-      <Newsletter light left={<h3>Never miss an article</h3>} />
+      <Newsletter
+        left={
+          <>
+            <h3>Never miss an article</h3>
+            <p>
+              Ory ships regular product patches and updates. Subscribe to our
+              newsletter to get the good stuff, and stay up to date.
+            </p>
+          </>
+        }
+      />
     </Layout>
   )
 }
