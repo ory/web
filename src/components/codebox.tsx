@@ -6,7 +6,9 @@ import * as styles from './codebox.module.css'
 export enum Languages {
   HTML = 'html',
   YML = 'yml',
-  JavaScript = 'javascript'
+  JavaScript = 'javascript',
+  Shell = 'shell',
+  Go = 'go'
 }
 
 interface Tab {
