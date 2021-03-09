@@ -62,7 +62,7 @@ export const projects: Project[] = [
     title: `${brandPrefix}Keto`,
     descriptiveTitle: 'Global access control',
     description:
-      'Access Control and Permission Management Server. Use best practices (RBAC, ABAC, ACL, ...) to secure your application.',
+      'Authorization Server based on Google Zanzibar, providing RBAC, ABAC and ACL',
     path: '/keto',
     links: {
       quickstart: 'https://www.ory.sh/keto/docs/configure-deploy'
