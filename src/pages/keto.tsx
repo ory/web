@@ -37,12 +37,12 @@ const KetoPage = () => (
     discussionsLink="https://github.com/ory/keto/discussions"
   >
     <SEO
-      description=""
+      description="Authorization Server based on Google Zanzibar, providing RBAC, ABAC and ACL"
       title={`${brandPrefix}Keto Permission and Role Management`}
     />
     <CompressedHero
-      title="Access Control and Permission Management"
-      subtitle="Control who is allowed to do what using established best practices (RBAC, ACL, ...) and easy configuration."
+      title="Global access control"
+      subtitle="Manage user roles, rights, and permissions with ACL based on Google Zanzibar"
       cta={[
         {
           title: 'Get started',
