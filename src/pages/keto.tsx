@@ -60,6 +60,43 @@ const KetoPage = () => (
 
     <Newsletter preselect={'keto'} />
     <CompressedSection
+      expanded
+      left={
+        <>
+          <h3>Easy integration</h3>
+          <p>
+            {brandPrefix}Keto is a cloud native global access control server. It
+            is fully configurable, completely headless, and based on Google
+            Zanzibar. Take a global view of permissions management and scale on
+            any system.
+          </p>
+          <p>
+            Take a look at our{' '}
+            <a href="https://www.ory.sh/docs/keto">documentation</a> and learn
+            more.{' '}
+          </p>
+        </>
+      }
+      right={<IntegrationCodeBox />}
+      mobile={[
+        <h3>Easy integration</h3>,
+        <IntegrationCodeBox />,
+        <div className={'mobile-offset-32'}>
+          <p>
+            {brandPrefix}Keto is a cloud native global access control server. It
+            is fully configurable, completely headless, and based on Google
+            Zanzibar. Take a global view of permissions management and scale on
+            any system.
+          </p>
+          <p>
+            Take a look at our{' '}
+            <a href="https://www.ory.sh/docs/keto">documentation</a> and learn
+            more.{' '}
+          </p>
+        </div>
+      ]}
+    />
+    <CompressedSection
       right={<KetoSdk />}
       left={
         <>
