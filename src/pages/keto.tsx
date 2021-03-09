@@ -65,7 +65,7 @@ func main() {
 \t\t\tRelation:  "access",
 \t\t\tSubject: &acl.Subject{Ref: &acl.Subject_Id{
 \t\t\t\tId: "john",
-\t\t\t}
+\t\t\t}},
 \t\t},
 \t})
 \tif err != nil {
