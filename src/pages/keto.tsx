@@ -36,7 +36,7 @@ const IntegrationCodeBox = () => (
       {
         filename: 'curl.sh',
         language: Languages.Shell,
-        code: `curl -G --silent \\
+        code: `curl -G \\
      --data-urlencode "subject=john" \\
      --data-urlencode "relation=access" \\
      --data-urlencode "namespace=files" \\
