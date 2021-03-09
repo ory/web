@@ -168,8 +168,8 @@ const KetoPage = () => (
           </p>
           <p>
             Take a look at our{' '}
-            <a href="https://www.ory.sh/docs/keto">documentation</a> and learn
-            more.{' '}
+            <a href="https://www.ory.sh/docs/keto">documentation</a> to learn
+            more.
           </p>
         </div>
       ]}
