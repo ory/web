@@ -84,10 +84,7 @@ func main() {
         language: Languages.JavaScript,
         code: `import ...
 
-const checkClient = new checkService.CheckServiceClient(
-  'keto-read-api',
-  grpc.credentials.createInsecure()
-)
+const checkClient = new checkService.CheckServiceClient('keto-read-api')
 
 const checkRequest = new checkData.CheckRequest()
 checkRequest.setNamespace('files')
