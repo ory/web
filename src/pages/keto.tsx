@@ -51,7 +51,7 @@ const IntegrationCodeBox = () => (
 import (...)
 
 func main() {
-\tconn, err := grpc.Dial("keto-read-api", grpc.WithInsecure())
+\tconn, err := grpc.Dial("keto-read-api")
 \tif err != nil {
 \t\tpanic(err.Error())
 \t}
