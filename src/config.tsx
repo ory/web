@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     id: 'keto',
     title: `${brandPrefix}Keto`,
-    descriptiveTitle: 'Permission and Role Management',
+    descriptiveTitle: 'Global access control',
     description:
       'Access Control and Permission Management Server. Use best practices (RBAC, ABAC, ACL, ...) to secure your application.',
     path: '/keto',
