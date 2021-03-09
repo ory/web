@@ -10,6 +10,7 @@ import Collaborator from '../components/collaborator'
 import ketoProcess from '../images/keto/keto.svg'
 import ketoPolyglot from '../images/keto/keto_p.svg'
 import Adopters from '../components/adopters'
+import CodeBox, { Languages } from '../components/codebox'
 
 const KetoAnimation = () => (
   <img
@@ -26,6 +27,86 @@ const KetoSdk = () => (
     alt="Ory Keto SDKs"
     className="responsive"
     src={ketoPolyglot}
+  />
+)
+
+const IntegrationCodeBox = () => (
+  <CodeBox
+    tabs={[
+      {
+        filename: 'curl.sh',
+        language: Languages.Shell,
+        code: `curl -G --silent \\
+     --data-urlencode "subject=john" \\
+     --data-urlencode "relation=access" \\
+     --data-urlencode "namespace=files" \\
+     --data-urlencode "object=file_a" \\
+     http://keto-read-api/check`
+      },
+      {
+        filename: 'main.go',
+        language: Languages.Go,
+        code: `package main
+
+import (...)
+
+func main() {
+\tconn, err := grpc.Dial("keto-read-api", grpc.WithInsecure())
+\tif err != nil {
+\t\tpanic(err.Error())
+\t}
+
+\tclient := acl.NewCheckServiceClient(conn)
+
+\tres, err := client.Check(context.Background(),
+\t\t&acl.CheckRequest{
+\t\t\tNamespace: "files",
+\t\t\tObject:    "file_a",
+\t\t\tRelation:  "access",
+\t\t\tSubject: &acl.Subject{Ref: &acl.Subject_Id{
+\t\t\t\tId: "john",
+\t\t\t}
+\t\t},
+\t})
+\tif err != nil {
+\t\tpanic(err.Error())
+\t}
+
+\tif res.Allowed {
+\t\tfmt.Println("Allowed")
+\t\treturn
+\t}
+\tfmt.Println("Denied")
+}`
+      },
+      {
+        filename: 'index.js',
+        language: Languages.JavaScript,
+        code: `import ...
+
+const checkClient = new checkService.CheckServiceClient(
+  'keto-read-api',
+  grpc.credentials.createInsecure()
+)
+
+const checkRequest = new checkData.CheckRequest()
+checkRequest.setNamespace('files')
+checkRequest.setObject('file_a')
+checkRequest.setRelation('access')
+
+const sub = new acl.Subject()
+sub.setId('john')
+checkRequest.setSubject(sub)
+
+checkClient.check(checkRequest, (error, resp) => {
+  if (error) {
+    console.log('Encountered error:', error)
+  } else {
+    console.log(resp.getAllowed() ? 'Allowed' : 'Denied')
+  }
+})`
+      }
+    ]}
   />
 )
 
