@@ -143,10 +143,7 @@ const KetoPage = () => (
         <>
           <h3>Easy integration</h3>
           <p>
-            {brandPrefix}Keto is a cloud native global access control server. It
-            is fully configurable, completely headless, and based on Google
-            Zanzibar. Take a global view of permissions management and scale on
-            any system.
+{brandPrefix}Keto is a global and consistent permission & authorization server with an easy and granular permission language and sub 10-millisecond latency. It is based on Google Zanzibar, written in Go, and ships gRPC and REST APIs.
           </p>
           <p>
             Take a look at our{' '}
@@ -161,10 +158,7 @@ const KetoPage = () => (
         <IntegrationCodeBox />,
         <div className={'mobile-offset-32'}>
           <p>
-            {brandPrefix}Keto is a cloud native global access control server. It
-            is fully configurable, completely headless, and based on Google
-            Zanzibar. Take a global view of permissions management and scale on
-            any system.
+{brandPrefix}Keto is a global and consistent permission & authorization server with an easy and granular permission language and sub 10-millisecond latency. It is based on Google Zanzibar, written in Go, and ships gRPC and REST APIs.
           </p>
           <p>
             Take a look at our{' '}
