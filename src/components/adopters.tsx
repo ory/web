@@ -12,6 +12,7 @@ import segment from '../images/adopters/segment.svg'
 import tulip from '../images/adopters/tulip.svg'
 import spiribo from '../images/adopters/spiribo.svg'
 import datadetect from '../images/adopters/datadetect.svg'
+import sainsburys from '../images/adopters/sainsburys.svg'
 import cn from 'classnames'
 
 const adopters = [
@@ -37,9 +38,9 @@ const adopters = [
     hiddenSm: false
   },
   {
-    title: 'Arduino',
-    image: arduino,
-    url: 'https://arduino.cc/',
+    title: 'Sainsburys',
+    image: sainsburys,
+    url: 'https://www.sainsburys.co.uk/',
     featured: true
   },
   {
