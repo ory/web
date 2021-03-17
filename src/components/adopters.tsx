@@ -82,6 +82,11 @@ const adopters = [
     title: 'Data Detect',
     image: datadetect,
     url: 'https://unifiedglobalarchiving.com/data-detect/'
+  },
+  {
+    title: 'Arduino',
+    image: arduino,
+    url: 'https://arduino.cc/'
   }
 ]
 
