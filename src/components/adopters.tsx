@@ -38,7 +38,7 @@ const adopters = [
     hiddenSm: false
   },
   {
-    title: 'Sainsburys',
+    title: `Sainsbury's`,
     image: sainsburys,
     url: 'https://www.sainsburys.co.uk/',
     featured: true
