@@ -179,7 +179,7 @@ const KratosPage = () => (
     />
 
     <Collaborator />
-    <Adopters onlyFeatured={true} />
+    <Adopters />
     <Stats />
   </Layout>
 )

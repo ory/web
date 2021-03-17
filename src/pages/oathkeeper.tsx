@@ -179,7 +179,7 @@ const OathkeeperPage = () => (
     />
 
     <Collaborator />
-    <Adopters onlyFeatured={true} />
+    <Adopters />
     <Stats />
   </Layout>
 )
