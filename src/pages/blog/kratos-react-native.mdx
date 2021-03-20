@@ -140,7 +140,7 @@ In case you want to just start exploring, simply run:
 
 Running these commands directly will use our hosted demo environment of ORY
 Kratos at
-[demo.tenants.staging.oryapis.dev](https://demo.tenants.staging.oryapis.dev).
+[playground.projects.oryapis.com](https://playground.projects.oryapis.com/hosted/login).
 Configure this in `app.config.js`:
 
 <CodeFromRemote
@@ -183,21 +183,27 @@ dashboard, and profile management features:
 
 ## User Management and Identity Management Admin API
 
-To manage identities, you may use the ORY Kratos CLI. An overview of all
+To manage identities, you may use the Ory Kratos CLI. An overview of all
 commands can be found in the
-[ORY Kratos documentation](https://www.ory.sh/kratos/docs/cli/kratos) or by
-running:
+[ORY Kratos documentation](https://www.ory.sh/kratos/docs/cli/kratos). Because we are using
+the playground in this example, we will use the [Ory CLI](https://github.com/ory/cli) instead as it allows us to connect
+to Ory.
 
 ```shell session
-$ docker run oryd/kratos:v0.5.4-alpha.1 help
+$ docker run oryd/ory:v0.0.47 help
 ```
 
 To list all identities in the system, run:
 
 ```shell-session
-$ docker run oryd/kratos:v0.5.4-alpha.1 \
-  --endpoint https://demo.tenants.staging.oryapis.dev/api/kratos/admin \
-  identities list
+# A public access token to manage the Ory playground project!
+$ export ORY_ACCESS_TOKEN=nPC0h0jOyG3Q7fHyICnf8sCV3LRH5skf
+$ docker run \
+  -e ORY_ACCESS_TOKEN=$ORY_ACCESS_TOKEN \
+  oryd/ory:v0.0.47 \
+  identities \
+  list \
+  --project playground
 
 ID					VERIFIED ADDRESS 1		RECOVERY ADDRESS 1		SCHEMA ID	SCHEMA URL
 f9c33e56-5b43-458a-8cfa-f38a4fb98b9c	office+demo@ory.sh		office+demo@ory.sh		default		https://demo.tenants.staging.oryapis.dev/api/kratos/public/schemas/default
@@ -210,9 +216,14 @@ You can also search for the identity you just signed up using `jq`:
 $ yourEmail=<the-email-you-used-for-signup>
 # For example:
 #   yourEmail=office+demo@ory.sh
-$ docker run oryd/kratos:v0.5.4-alpha.1 \
-  --endpoint https://demo.tenants.staging.oryapis.dev/api/kratos/admin \
-  identities list -f json | \
+$ export ORY_ACCESS_TOKEN=nPC0h0jOyG3Q7fHyICnf8sCV3LRH5skf
+$ docker run \
+  -e ORY_ACCESS_TOKEN=$ORY_ACCESS_TOKEN \
+  oryd/ory:v0.0.47 \
+  identities \
+  list \
+  --project playground \
+  --format json | \
     jq '.[] | select(.traits.email == "'$yourEmail'")'
 
 {
