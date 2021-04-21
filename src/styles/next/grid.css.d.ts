@@ -25,6 +25,10 @@ declare const styles: {
   readonly "bottomLg": string;
   readonly "colLg": string;
   readonly "colLgOffset": string;
+  readonly "topXl": string;
+  readonly "middleXl": string;
+  readonly "bottomXl": string;
+  readonly "colXl": string;
 };
 export = styles;
 
