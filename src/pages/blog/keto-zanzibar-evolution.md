@@ -166,13 +166,13 @@ In an ideal world all access control systems would be a strongly consistent
 system.  
 The problem is, that this is clashing with other requirements, especially low
 latency and high availability.  
-Because of the required strict data duplication, a strongly consistent system can not achieve low latency worldwide.
-Also your access control policies are probably not in the same physical place as
-the data you want to protect. 
+Because of the required strict data duplication, a strongly consistent system
+can not achieve low latency worldwide. Also your access control policies are
+probably not in the same physical place as the data you want to protect.
 
-The solution is to use version snapshot tokens (short "snaptokens").
-They allow us to provide a strongly consistent response from an eventually
-consistent system.  
+The solution is to use version snapshot tokens (short "snaptokens"). They allow
+us to provide a strongly consistent response from an eventually consistent
+system.  
 The basic idea is that all digital objects are versioned. Keto only answers
 `allow` if access to this specific version is granted. After an ACL update is
 issued (grant or revoke permissions), there is a short period until the update
@@ -184,7 +184,10 @@ guarantees that an entity can only access objects they currently have access to
 and the exact versions of the objects they used to have access to.
 
 For example a common scenario is that a user had access to a previous object
-version, but then access was revoked to the object. During the propagation time the system can still answer `allow` for the old version as defined by the snaptoken. But when newer object versions are requested, it will always be denied.
+version, but then access was revoked to the object. During the propagation time
+the system can still answer `allow` for the old version as defined by the
+snaptoken. But when newer object versions are requested, it will always be
+denied.
 
 Similarly, the system might answer `deny` for older object versions if access
 was granted later on, but will always answer `allow` for object versions younger
@@ -197,8 +200,8 @@ with data object changes.
 One important point is that Keto can be operated locally as well, which means
 there are no database sync delays.
 
-Currently snaptokens are not implemented in Ory Keto, but they have been considered
-in the design and will be added soon.
+Currently snaptokens are not implemented in Ory Keto, but they have been
+considered in the design and will be added soon.
 
 ## Conclusion
 
