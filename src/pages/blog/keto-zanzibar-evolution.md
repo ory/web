@@ -6,8 +6,9 @@ title: >
 
 seo:
   description: >
-    Run your own OAuth2 Server and OpenID Connect Provider (OIDC) using scalable
-    and secure open source software in under 10 minutes.
+    Authorize billions of requests securelx and consistent with low latency and
+    no downtime using Ory Keto, the open source implementation of Google
+    Zanzibar access control.
   title: >
     Low latency, consistent, open source access control system
 
@@ -25,16 +26,17 @@ teaser:
   consistent access control system.
 ---
 
----
-
-## Introduction
-
 This article discusses the pioneering efforts by Ory to build the open source
-implementation of Google Zanzibar called Ory Keto.
+implementation of Google Zanzibar authorization system called Ory Keto.
 
-In 2017 Google was facing an increasingly complex problem. The
-[Zanzibar paper](https://research.google/pubs/pub48190) describes the challenge
-as follows:
+Authorization is the process of determining who is allowed to do what in an
+application. Especially in critical global systems featuring human and machine
+actors with different sets of permissions it is still a hard problem to solve.
+In such a system, billions of permission checks have to be processed fast,
+reliably and consistently across many different environments.
+
+The [research paper](https://research.google/pubs/pub48190) describes how Google
+solved authorization globally and across all products:
 
 > "Zanzibar provides a uniform data model and configuration language for
 > expressing a wide range of access control policies from hundreds of client
@@ -47,32 +49,29 @@ as follows:
 > milliseconds and availability of greater than 99.999% over 3 years of
 > production use."
 
-Authorization is the process of determining wo is allowed to do what in an
-application. It is still a hard problem to solve.  
-Especially in critical global systems featuring human and machine actors with
-different sets of permissions.
+## Problem Statement
 
-The challenge is to process billions of permission checks fast and without
-downtime across many different environments.
-
-A solution would have to enable Google to continue to grow at a massive scale,
-and work in milliseconds - independent of location around the globe. There are a
-number of hard requirements for such a solution, it had to be:
+Google needed a solution that would enabled them to continue to grow at a
+massive scale, but still respond within milliseconds - independent of location
+around the globe. They had a number of hard requirements for this to work, it
+had to be:
 
 - flexible,
-- low latency;
+- low latency,
+- large scale,
 - always available and
 - consistent.
 
 A highly qualified team of researchers came up with a new type of access system,
-codenamed Zanzibar (it was originally
+later codenamed Zanzibar ( originally it was
 [called "Spice"](https://mobile.twitter.com/LeaKissner/status/1136631437514272768)
-). This substance from the space saga “Dune” makes it possible to safely travel
-to other planets and grants superhuman powers. For cloud based services in
-particular, a globally spanning low latency access control system is nothing
-short of a superpower.
+).  
+"Spice" from the space saga “Dune” makes it possible to safely travel to other
+planets and grants superhuman powers.  
+For cloud based services a globally spanning low latency access control system
+is nothing short of a superpower.
 
-At Ory, we knew we had to unlock this superpower as well!
+At Ory, we knew we had to unlock this superpower free and open for everyone!
 
 With the previous approach based on [OPA](https://www.openpolicyagent.org/)
 prior to 2019, Ory Keto reached some boundary conditions in both complexity and
@@ -85,68 +84,76 @@ proprietary implementations of the Zanzibar paper, most notably by
 great demand for such a solution.
 
 Building upon the knowledge that was available publicly, the Ory team devised a
-new generation of Ory Keto, with input and hard work from the open source
-community.
+new generation of Ory Keto, with input and hard work from our awesome open
+source community.
 
 ## Flexible
 
+> “When strangers meet, great allowances should be made for differences in
+> custom and training.”- _Frank Herbert, Dune_
+
 Ory Keto is designed with the goal to serve hundreds or thousands of different
-clients. Each client may have different access control patterns, so it is
-crucial it works for all possible patterns.
+applications and services (it's clients). Each client may have different access
+control patterns, so it is crucial it works for all possible patterns.
 
-Cloud services, for instance small applications with few users and integrations,
-or massive multi-national cloud access control systems with millions of users
-for a giant enterprise, must create and organize access control policies
-independent of internal data structure. Ory Keto needs to be able to understand
-and work with all policies.
+Small applications with few users, resources and integrations have vastly
+different requirements than massive multi-national cloud services with millions
+of users. All kinds of services must be able to manage access control policies
+at any detail and in compliance with their internal data structure. Ory Keto
+needs to be able to understand and work with all policies.
 
-It does not matter how your internal data structure looks, if you are a small
-application with few users and integrations or a massive multi-national cloud
-access control system for a giant enterprise; Keto needs to be able to
-understand and work with your policies, regardless of how you create and
-organize access control policies.
+A simple, but powerful data model provides the basis for this, combined with
+effective configuration capabilities.
 
-A simple, but powerful data model using JSON Schema forms the basis for this,
-combined with effective configuration capabilities.
-
-This allows to define relationships between digital objects and users e.g.
-owners, editors, bots etc.  
+This data model allows to define arbitrary relationships such as `owner`,
+`editor`, and `pays for` between digital objects and subjects (like users).  
 In Ory Keto Access Control Lists (ACLs) contain information on
 `is _subject_ allowed to do _relation_ on _object_`.  
 `object`, `relation` and `subject` are all variables that can be defined as
 required, together they form a
 "[relation tuple](https://www.ory.sh/keto/docs/concepts/relation-tuples)".
 
+For the simplest case a relation tuple would be "user X has the relation Y to
+object Z". But ACLs can become much more complex for example "set of users X has
+the relation Y to object Z", while this set of users is defined as another
+relation tuple. So ACLs can contain other ACLs, for example to define that a set
+of users that can modify a document is made up of the users that have been
+granted rights to view that specific document as well as those who have viewing
+permissions for the whole folder of documents.
+
 ## Low latency and high availability
 
 > "Delay is as dangerous as the wrong answer." - _Frank Herbert, Dune_
 
-Access control systems need to be secure and consistent and they must be
-flexible enough to meet the myriad of user demands.  
-They also serve high numbers of users around the planet; while being almost
-unnoticeable and available at all times.
+Access control systems need to be secure, consistent and flexible enough to meet
+the myriad of user demands.  
+They also have to serve high numbers of users around the planet, while ideally
+being unnoticed and available at all times.
 
 Authorization checks are usually in the path of the most critical parts of our
 interaction with digital systems.  
 When a service wants to do something that could have dire consequences, delete a
-table for instance, authorization checks should assure that the task and
-initiator are really allowed to perform that action.
+table for instance, authorization checks should assure that the initiator are
+really allowed to perform that action.
 
-( If the request comes from a person, is it the right person?
-[Ory Kratos](https://www.ory.sh/kratos/) solves login,creates credentials, and
-provides the ID management system )
+It is important to not confuse this with authorization (is this person who they
+pretend to be?). This question can be answered by
+[Ory Kratos](https://www.ory.sh/kratos/), which is a fully fledged modern
+identity management system?
 
-In sophisticated cloud systems this can mean that dozens of authorization checks
-are made, before even starting a quick search service, for example.  
-If each of those checks takes only tenths of a second, round trips and waiting
-times can range in the minutes. This is bothersome when searching for something,
-but not acceptable when running critical infrastructure.
+In sophisticated cloud systems this can mean that thousands of authorization
+checks have to be made to serve a basic search response. f each of those checks
+takes only tenths of a second, round trips and waiting times can range in the
+minutes. This is bothersome when searching for something, but not acceptable
+when running critical infrastructure.
 
-Worse, if your system goes offline, all access requests would have to be
-denied - completely blocking even basic interactions. Ory Keto was designed to
-be able to meet these demands spanning across clouds and environments.
+Worse, if the authorization system is offline, all requests have to be denied -
+completely blocking even basic interactions. Ory Keto was designed to be able to
+meet these demands spanning across clouds and environments.
 
 ## Consistency
+
+> "A place is only a place.”- _Frank Herbert, Dune_
 
 One concern is strong consistency. In distributed systems this means you always
 get the same response if you send the same requests to different parts of your
@@ -159,28 +166,25 @@ In an ideal world all access control systems would be a strongly consistent
 system.  
 The problem is, that this is clashing with other requirements, especially low
 latency and high availability.  
-In a strongly consistent system you can not simply duplicate data in different
-physical locations as you would need to achieve low latency worldwide.  
+Because of the required strict data duplication, a strongly consistent system can not achieve low latency worldwide.
 Also your access control policies are probably not in the same physical place as
-the data you want to protect. Furthermore, whenever a write to the system fails,
-it will be unavailable until it is successful.
+the data you want to protect. 
 
-The solution are version tokens called “Zookies”.  
+The solution is to use version snapshot tokens (short "snaptokens").
 They allow us to provide a strongly consistent response from an eventually
 consistent system.  
-Basically all digital objects (that can be defined as needed) are versioned.
-This means that you store a version token (aka zookie) next to every object
-version. When you ask Keto if a user is allowed to access a given object, the
-request contains the stored token. The system only answers `allow` if access to
-this specific version is granted. When you receive a successful response, you
-get a new token that you store with the new version of that object.  
-This guarantees that an entity can only access objects they currently have
-access to and the exact versions of the objects they used to have access to.
+The basic idea is that all digital objects are versioned. Keto only answers
+`allow` if access to this specific version is granted. After an ACL update is
+issued (grant or revoke permissions), there is a short period until the update
+propagates. The snaptokens ensure that the system only ever wrongly answers
+`allowed` if the permission on the requested version was previously granted.
+This requires the application to store the snaptoken next to every object
+version and provide it on every access check request. In essence, Keto
+guarantees that an entity can only access objects they currently have access to
+and the exact versions of the objects they used to have access to.
 
 For example a common scenario is that a user had access to a previous object
-version, but then access was revoked to the object. So the system still answers
-`allow` for the old version as defined in your version token. But when newer
-object versions are requested, it will always be denied.
+version, but then access was revoked to the object. During the propagation time the system can still answer `allow` for the old version as defined by the snaptoken. But when newer object versions are requested, it will always be denied.
 
 Similarly, the system might answer `deny` for older object versions if access
 was granted later on, but will always answer `allow` for object versions younger
@@ -193,10 +197,12 @@ with data object changes.
 One important point is that Keto can be operated locally as well, which means
 there are no database sync delays.
 
-Currently Zookies are not implemented in Ory Keto, but they have been considered
-in the design.
+Currently snaptokens are not implemented in Ory Keto, but they have been considered
+in the design and will be added soon.
 
 ## Conclusion
+
+> "The spice must flow." - _Frank Herbert, Dune_
 
 So far the Ory Keto effort implements:
 
@@ -211,8 +217,8 @@ So far the Ory Keto effort implements:
 
   In the near future:
 
-- Consistency guarantees using Zookies
-- Simulation tests using planet scale key value store
+- Consistency guarantees using snaptokens
+- Globe spanning cluster operation mode
 - Interoperability with other Ory products including Hydra and Kratos
 
 Also check our
