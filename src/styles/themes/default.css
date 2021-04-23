@@ -207,7 +207,7 @@
   --colors-themed-dark--next: var(--colors-kratos-dark--next);
 }
 
-.theme-keto {
+.theme-keto--next {
   --colors-themed-primary--next: var(--colors-keto-primary--next);
   --colors-themed-light--next: var(--colors-keto-light--next);
   --colors-themed-background--next: var(--colors-keto-background--next);

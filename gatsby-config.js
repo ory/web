@@ -178,7 +178,7 @@ module.exports = {
                       '--sm': '(min-width: 600px) and (max-width: 960px)',
                       '--md': '(min-width: 960px) and (max-width: 1280px)',
                       '--lg': '(min-width: 1280px) and (max-width: 1920px)',
-                      '--xl': '(min-width: 1920px)',
+                      '--xl': '(min-width: 1920px)'
                     }
                   }
                 ]
@@ -260,7 +260,7 @@ module.exports = {
         matomoJsScript: 'js/np.js',
         disableCookies: true
       }
-    },
+    }
     // {
     //   resolve: `gatsby-plugin-gdpr-cookies`,
     //   options: {
