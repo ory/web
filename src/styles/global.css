@@ -33,3 +33,28 @@ video {
     height: 100%;
   }
 }
+
+.elevation-base {
+  background: var(--colors-base-grey-25--next);
+  box-shadow: var(--elevation-base);
+}
+
+.elevation-medium {
+  background: var(--colors-base-grey-25--next);
+  box-shadow: var(--elevation-medium);
+}
+
+.elevation-large {
+  background: var(--colors-base-grey-25--next);
+  box-shadow: var(--elevation-large);
+}
+
+.elevation-xl {
+  background: var(--colors-base-grey-25--next);
+  box-shadow: var(--elevation-xl);
+}
+
+.elevation-xxl {
+  background: var(--colors-base-grey-25--next);
+  box-shadow: var(--elevation-xxl);
+}
