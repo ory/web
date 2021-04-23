@@ -133,8 +133,7 @@ const DeveloperPage = () => (
           icon: 'docs'
         },
         {
-          description:
-            'Learn about what’s new at Ory.',
+          description: 'Learn about what’s new at Ory.',
           learn: 'Go to our Blog',
           href: '/blog',
           icon: 'blog'

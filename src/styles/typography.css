@@ -297,7 +297,6 @@ main a.cta {
   line-height: 228.5%;
 }
 
-
 @media (--lg) and (--xl) {
   .font-p {
     font-size: 18px;
