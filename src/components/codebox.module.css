@@ -1,90 +1,88 @@
 .box {
-    background-color: var(--colors-base-dark);
-    box-shadow: 0 4px 8px rgba(00, 00, 00, 0.4);
-    padding: 0 16px;
-    border-radius: 3px;
-    height: 392px;
+  background-color: var(--colors-base-dark);
+  box-shadow: 0 4px 8px rgba(00, 00, 00, 0.4);
+  padding: 0 16px;
+  border-radius: 3px;
+  height: 392px;
 }
 
 .editor-header {
-    display: flex;
-    align-items: center;
-    color: var(--colors-base-white);
-    position: sticky;
+  display: flex;
+  align-items: center;
+  color: var(--colors-base-white);
+  position: sticky;
 
-    & .tabs {
-        overflow: auto;
+  & .tabs {
+    overflow: auto;
+  }
+
+  & .tab {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 200%;
+    margin-right: 24px;
+    cursor: pointer;
+    display: inline;
+
+    &.selected {
+      color: var(--colors-themed-default);
     }
-
-    & .tab {
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11px;
-        line-height: 200%;
-        margin-right: 24px;
-        cursor: pointer;
-        display: inline;
-
-        &.selected {
-            color: var(--colors-themed-default);
-        }
-    }
+  }
 }
 
 .window-actions {
-    display: flex;
-    align-items: center;
-    height: 36px;
-    margin-right: 16px;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-right: 16px;
 
-    & .window-action {
-        width: 8px;
-        height: 8px;
-        border-radius: 4px;
-        background-color: var(--colors-base-grey);
-        margin-right: 5px;
+  & .window-action {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--colors-base-grey);
+    margin-right: 5px;
 
-        &.primary {
-            background-color: var(--colors-themed-default);
-        }
+    &.primary {
+      background-color: var(--colors-themed-default);
     }
+  }
 }
 
 .content {
-    max-height: 85%;
-    overflow: auto;
+  max-height: 85%;
+  overflow: auto;
 
-    & pre {
-        display: none;
+  & pre {
+    display: none;
 
-        &.active {
-            display: block;
-        }
+    &.active {
+      display: block;
     }
+  }
 
-    &,
-    & pre,
-    & code,
-    & pre[class*='language'] > code[class*='language'],
-    & pre > code {
-        color: var(--colors-base-light);
-        font-family: 'Inconsolata', monospace;
-        text-shadow: none;
-        font-style: normal;
-        font-weight: 400;
-        font-size: .875rem;
-        line-height: 175%;
-        background-color: var(--colors-base-dark);
+  &,
+  & pre,
+  & code,
+  & pre[class*='language'] > code[class*='language'],
+  & pre > code {
+    color: var(--colors-base-light);
+    font-family: 'Inconsolata', monospace;
+    text-shadow: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 175%;
+    background-color: var(--colors-base-dark);
 
-        word-wrap: break-word;
-        white-space: pre-wrap;
-    }
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
 
-    & pre code :global .token.operator {
-        color: var(--colors-base-white);
-        background-color: var(--colors-base-dark);
-    }
-
-
+  & pre code :global .token.operator {
+    color: var(--colors-base-white);
+    background-color: var(--colors-base-dark);
+  }
 }

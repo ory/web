@@ -50,4 +50,4 @@ const fs = require('fs')
 //  fse.copySync('./generated/v1/docs/versions.html', './public/docs/versions.html')
 
 // ecosystem needs to be copied after v1 docs!
-copydir.sync('./generated/docs/ecosystem', './public/docs')
+copydir.sync('./generated/docs/docs', './public/docs')

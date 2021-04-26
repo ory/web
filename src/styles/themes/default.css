@@ -39,6 +39,131 @@
   --colors-keto-default: #1de9b6;
   --colors-keto-weak: #5cefca;
   --colors-keto-light: #f5fffb;
+
+  --colors-base-white--next: #ffffff;
+  --colors-base-grey-25--next: #f9f9fa;
+  --colors-base-grey-50--next: #f3f4f5;
+  --colors-base-grey-75--next: #edeef0;
+  --colors-base-grey-200--next: #cfd2d7;
+  --colors-base-grey-400--next: #9ea5b0;
+  --colors-base-grey-600--next: #6e7888;
+  --colors-base-grey-800--next: #3d4b61;
+  --colors-base-grey-900--next: #25354d;
+  --colors-base-grey--next: #0d1f39;
+  --colors-base-black--next: #000000;
+
+  --colors-themed-primary--next: #5528ff;
+  --colors-themed-dark--next: #331899;
+  --colors-themed-light--next: #eeeaff;
+  --colors-themed-darkmode--next: #bba9ff;
+  --colors-themed-background--next: #faf9ff;
+
+  --colors-oathkeeper-background--next: #fdf9fe;
+  --colors-oathkeeper-light--next: #f8ecfd;
+  --colors-oathkeeper-darkmode--next: #e3b1f8;
+  --colors-oathkeeper-primary--next: #b93dee;
+  --colors-oathkeeper-dark--next: #6f258f;
+
+  --colors-dockertest-background--next: #f7feff;
+  --colors-dockertest-light--next: #e6fcfe;
+  --colors-dockertest-darkmode--next: #9bf1f9;
+  --colors-dockertest-primary--next: #04ddf1;
+  --colors-dockertest-dark--next: #028491;
+
+  --colors-keto-background--next: #f7fefb;
+  --colors-keto-light--next: #e6fcf2;
+  --colors-keto-darkmode--next: #99f3c9;
+  --colors-keto-primary--next: #00e078;
+  --colors-keto-dark--next: #008648;
+
+  --colors-kratos-background--next: #fffbf8;
+  --colors-kratos-light--next: #fff3e9;
+  --colors-kratos-darkmode--next: #ffcfa5;
+  --colors-kratos-primary--next: #ff871f;
+  --colors-kratos-dark--next: #995113;
+
+  --colors-hydra-background--next: #fffbfa;
+  --colors-hydra-light--next: #fff0ee;
+  --colors-hydra-darkmode--next: #ffc4b9;
+  --colors-hydra-primary--next: #ff6b51;
+  --colors-hydra-dark--next: #994031;
+
+  --color-error-background--next: #fff7f7;
+  --color-error-light--next: #ffe6e6;
+  --color-error-darkmode--next: #ff9999;
+  --color-error-primary--next: #ff0000;
+  --color-error-dark--next: #990000;
+
+  --color-warning-background--next: #fffef9;
+  --color-warning-light--next: #fffdea;
+  --color-warning-darkmode--next: #fef6ab;
+  --color-warning-primary--next: #fde82c;
+  --color-warning-dark--next: #988b1b;
+
+  --color-success-background--next: #fafef8;
+  --color-success-light--next: #eefbe8;
+  --color-success-darkmode--next: #bcf0a2;
+  --color-success-primary--next: #57d916;
+  --color-success-dark--next: #34820d;
+
+  --color-info-background--next: #f7fdff;
+  --color-info-light--next: #e6f8ff;
+  --color-info-darkmode--next: #99e3ff;
+  --color-info-primary--next: #00baff;
+  --color-info-dark--next: #007099;
+
+  --gradient-ory--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #9bf1f9 0%,
+    #5528ff 100%
+  );
+  --gradient-oathkeeper--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #bba9ff 0%,
+    #b93dee 100%
+  );
+  --gradient-dockertest--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #99f3c9 0%,
+    #04ddf1 100%
+  );
+  --gradient-keto--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #fef6ab 0%,
+    #00e078 100%
+  );
+  --gradient-kratos--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #ffc4b9 0%,
+    #ff871f 100%
+  );
+  --gradient-hydra--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #e3b1f8 0%,
+    #ff6b51 100%
+  );
+  --gradient-white--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #f9f9fa 0%,
+    #cfd2d7 100%
+  );
+  --gradient-grey--next: radial-gradient(
+    100% 114.57% at 0% 0%,
+    #6e7888 0%,
+    #0d1f39 100%
+  );
+
+  --font-default--next: 'Inter', sans-serif;
+
+  --elevation-base: 0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.06);
+  --elevation-medium: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px rgba(0, 0, 0, 0.06);
+  --elevation-large: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --elevation-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --elevation-xxl: 0px 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
 .theme-hydra {
@@ -63,4 +188,32 @@
   --colors-themed-default: var(--colors-keto-default);
   --colors-themed-weak: var(--colors-keto-weak);
   --colors-themed-light: var(--colors-keto-light);
+}
+
+.theme-hydra--next {
+  --colors-themed-primary--next: var(--colors-hydra-primary--next);
+  --colors-themed-light--next: var(--colors-hydra-light--next);
+  --colors-themed-background--next: var(--colors-hydra-background--next);
+  --colors-themed-dark--next: var(--colors-hydra-dark--next);
+}
+
+.theme-oathkeeper--next {
+  --colors-themed-primary--next: var(--colors-oathkeeper-primary--next);
+  --colors-themed-light--next: var(--colors-oathkeeper-light--next);
+  --colors-themed-background--next: var(--colors-oathkeeper-background--next);
+  --colors-themed-dark--next: var(--colors-oathkeeper-dark--next);
+}
+
+.theme-kratos--next {
+  --colors-themed-primary--next: var(--colors-kratos-primary--next);
+  --colors-themed-light--next: var(--colors-kratos-light--next);
+  --colors-themed-background--next: var(--colors-kratos-background--next);
+  --colors-themed-dark--next: var(--colors-kratos-dark--next);
+}
+
+.theme-keto--next {
+  --colors-themed-primary--next: var(--colors-keto-primary--next);
+  --colors-themed-light--next: var(--colors-keto-light--next);
+  --colors-themed-background--next: var(--colors-keto-background--next);
+  --colors-themed-dark--next: var(--colors-keto-dark--next);
 }
