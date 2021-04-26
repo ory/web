@@ -6,9 +6,9 @@ title: >
 
 seo:
   description: >
-    Authorize billions of requests securelx and consistent with low latency and
-    no downtime using Ory Keto, the open source implementation of Google
-    Zanzibar access control.
+    Authorize billions of requests secure, consistent, low latency and no
+    downtime using Ory Keto, the open source implementation of Google Zanzibar
+    access control.
   title: >
     Low latency, consistent, open source access control system
 
@@ -56,17 +56,16 @@ massive scale, but still respond within milliseconds - independent of location
 around the globe. They had a number of hard requirements for this to work, it
 had to be:
 
-- flexible,
-- low latency,
-- large scale,
+- flexible;
+- low latency;
+- large scale;
 - always available and
 - consistent.
 
 A highly qualified team of researchers came up with a new type of access system,
-later codenamed Zanzibar ( originally it was
-[called "Spice"](https://mobile.twitter.com/LeaKissner/status/1136631437514272768)
-).  
-"Spice" from the space saga “Dune” makes it possible to safely travel to other
+later codenamed Zanzibar (originally it was
+[called ”Spice”](https://mobile.twitter.com/LeaKissner/status/1136631437514272768)).  
+”Spice” from the space saga “Dune” makes it possible to safely travel to other
 planets and grants superhuman powers.  
 For cloud based services a globally spanning low latency access control system
 is nothing short of a superpower.
@@ -81,11 +80,17 @@ prompting us to study alternatives. There is also work in progress on some other
 proprietary implementations of the Zanzibar paper, most notably by
 [authzed](https://docs.authzed.com/) and
 [auth0](https://sandman-86.herokuapp.com/). We believe this shows that there is
-great demand for such a solution.
+great demand for an open source solution that is community vetted and
+transparent.
 
 Building upon the knowledge that was available publicly, the Ory team devised a
 new generation of Ory Keto, with input and hard work from our awesome open
 source community.
+
+Ory uses Keto as part of the Ory Platform, a comprehensive security system
+designed to meet the needs of sophisticated application developers seeking to
+provide cloud identity and access management in low latency infrastructure at
+scale.
 
 ## Flexible
 
@@ -106,9 +111,11 @@ A simple, but powerful data model provides the basis for this, combined with
 effective configuration capabilities.
 
 This data model allows to define arbitrary relationships such as `owner`,
-`editor`, and `pays for` between digital objects and subjects (like users).  
-In Ory Keto Access Control Lists (ACLs) contain information on
-`is _subject_ allowed to do _relation_ on _object_`.  
+`editor`, and `pays for` between digital objects and subjects (like users).
+
+In Ory Keto, Access Control Lists (ACLs) contain information on
+`is _subject_ allowed to do _relation_ on _object_`.
+
 `object`, `relation` and `subject` are all variables that can be defined as
 required, together they form a
 "[relation tuple](https://www.ory.sh/keto/docs/concepts/relation-tuples)".
@@ -117,13 +124,13 @@ For the simplest case a relation tuple would be "user X has the relation Y to
 object Z". But ACLs can become much more complex for example "set of users X has
 the relation Y to object Z", while this set of users is defined as another
 relation tuple. So ACLs can contain other ACLs, for example to define that a set
-of users that can modify a document is made up of the users that have been
-granted rights to view that specific document as well as those who have viewing
+of users that can view a document is made up of the users that have been granted
+rights to modify that specific document as well as those who have viewing
 permissions for the whole folder of documents.
 
 ## Low latency and high availability
 
-> "Delay is as dangerous as the wrong answer." - _Frank Herbert, Dune_
+> ”Delay is as dangerous as the wrong answer.” - _Frank Herbert, Dune_
 
 Access control systems need to be secure, consistent and flexible enough to meet
 the myriad of user demands.  
@@ -139,10 +146,10 @@ really allowed to perform that action.
 It is important to not confuse this with authorization (is this person who they
 pretend to be?). This question can be answered by
 [Ory Kratos](https://www.ory.sh/kratos/), which is a fully fledged modern
-identity management system?
+identity management system.
 
 In sophisticated cloud systems this can mean that thousands of authorization
-checks have to be made to serve a basic search response. f each of those checks
+checks have to be made to serve a basic search response. If each of those checks
 takes only tenths of a second, round trips and waiting times can range in the
 minutes. This is bothersome when searching for something, but not acceptable
 when running critical infrastructure.
@@ -153,14 +160,14 @@ meet these demands spanning across clouds and environments.
 
 ## Consistency
 
-> "A place is only a place.”- _Frank Herbert, Dune_
+> ”A place is only a place.”- _Frank Herbert, Dune_
 
 One concern is strong consistency. In distributed systems this means you always
 get the same response if you send the same requests to different parts of your
 system. This is opposed to
 ["eventual consistency"](https://en.wikipedia.org/wiki/Eventual_consistency),
-which simplified means that you will get the same response when there are no
-more updates to a data item.
+which simplified means that you will get the same response once all updates are
+propagated.
 
 In an ideal world all access control systems would be a strongly consistent
 system.  
@@ -200,12 +207,13 @@ with data object changes.
 One important point is that Keto can be operated locally as well, which means
 there are no database sync delays.
 
-Currently snaptokens are not implemented in Ory Keto, but they have been
-considered in the design and will be added soon.
+Currently snaptokens are not implemented in Ory Keto, but all the concepts have
+been worked out and integrated into the design already. Actual consistency
+guarantees will be added soon.
 
 ## Conclusion
 
-> "The spice must flow." - _Frank Herbert, Dune_
+> ”The spice must flow.” - _Frank Herbert, Dune_
 
 So far the Ory Keto effort implements:
 
@@ -218,7 +226,7 @@ So far the Ory Keto effort implements:
   [Expand](https://github.com/ory/keto/pull/285) API
 - [Namespaces](https://www.ory.sh/keto/docs/concepts/namespaces)
 
-  In the near future:
+In the near future:
 
 - Consistency guarantees using snaptokens
 - Globe spanning cluster operation mode
