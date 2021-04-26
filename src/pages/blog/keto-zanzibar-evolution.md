@@ -12,7 +12,7 @@ seo:
   title: >
     Low latency, consistent, open source access control system
 
-publishedAt: '2020-04-22'
+publishedAt: '2021-04-26'
 author: vinckr
 overline: >
   Next-Generation Ory Keto - An Open Source Google Zanzibar
