@@ -1,0 +1,59 @@
+.styled-image {
+  position: static;
+  width: 592px;
+  height: 422px;
+  left: 20px;
+  top: 20px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 100px 0px;
+}
+
+.styled-image-inner {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background-color: var(--colors-base-dark--next);
+  /*background: url(Default Schema (Tree).jpg);*/
+
+  border: 1px solid var(--colors-base-grey-200--next);
+  box-sizing: border-box;
+  /* elevation / XXL */
+
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+@media (--md) {
+  .styled-image {
+    position: static;
+    width: 552px;
+    height: 394px;
+    left: 20px;
+    top: 542px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 100px 0px;
+  }
+}
+
+@media (--sm) {
+  .styled-image {
+    position: static;
+    width: 328px;
+    height: 234px;
+    left: 20px;
+    top: 1036px;
+  }
+}
