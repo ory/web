@@ -19,7 +19,7 @@ overline: >
 
 category: Article
 
-teaser:
+teaser: >
   This article discusses the pioneering efforts by Ory to build the open source
   implementation of Google Zanzibar called Ory Keto. It will outline the
   motivation, challenges and concepts of building a global, low latency
