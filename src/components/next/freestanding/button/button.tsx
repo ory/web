@@ -6,7 +6,7 @@ import cn from 'classnames'
 export interface PropTypes {
   children?: React.ReactNode
   className?: string
-  size: 'small' | 'medium' | 'large'
+  /*  size: 'small' | 'medium' | 'large'*/
   style: 'filled' | 'outlined' | 'text'
   href: string
   openInNewWindow?: boolean
@@ -25,7 +25,7 @@ const getStyle = (style: string) => {
   }
 }
 
-const getSize = (size: string) => {
+/*const getSize = (size: string) => {
   switch (size) {
     case 'small':
       return 'font-btn-sm'
@@ -34,12 +34,12 @@ const getSize = (size: string) => {
     case 'large':
       return 'font-btn-lg'
   }
-}
+}*/
 
 const Button = ({
   children,
   className,
-  size = 'medium',
+  /*size = 'medium',*/
   style = 'filled',
   href,
   openInNewWindow = false
@@ -52,7 +52,6 @@ const Button = ({
         getStyle(style),
         'font-base',
         'font-btn',
-        getSize(size),
         className && className
       )}
       rel={openInNewWindow ? 'noopener noreferrer' : ''}

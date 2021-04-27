@@ -1,4 +1,4 @@
 declare const styles: {
-  readonly team: string
+  readonly molecule: string
 }
 export = styles

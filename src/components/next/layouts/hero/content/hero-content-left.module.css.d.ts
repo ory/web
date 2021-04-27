@@ -1,4 +1,4 @@
 declare const styles: {
-  readonly team: string
+  readonly heroContentLeft: string
 }
 export = styles

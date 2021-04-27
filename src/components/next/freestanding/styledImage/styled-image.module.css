@@ -10,15 +10,15 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 100px 0px;
+  margin: 100px 0;
 }
 
 .styled-image-inner {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 
   background-color: var(--colors-base-dark--next);
   /*background: url(Default Schema (Tree).jpg);*/
@@ -27,7 +27,7 @@
   box-sizing: border-box;
   /* elevation / XXL */
 
-  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 

@@ -243,21 +243,8 @@ main a.cta {
 
 .font-btn {
   font-weight: 500;
-
-  &.font-btn-lg {
-    font-size: 18px;
-    line-height: 135%;
-  }
-
-  &.font-btn-md {
-    font-size: 15px;
-    line-height: 160%;
-  }
-
-  &.font-btn-sm {
-    font-size: 13px;
-    line-height: 184.6%;
-  }
+  font-size: 15px;
+  line-height: 160%;
 }
 
 .font-link {
@@ -285,6 +272,22 @@ main a.cta {
   line-height: 200%;
 }
 
+.font-p-lg {
+  font-size: 18px;
+  line-height: 177%;
+}
+
+.font-p-sm {
+  font-size: 14px;
+  line-height: 228.5%;
+}
+
+.font-p-xs {
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.5px;
+}
+
 .font-mono {
   font-weight: normal;
   font-size: 16px;
@@ -297,17 +300,17 @@ main a.cta {
   line-height: 228.5%;
 }
 
-@media (--lg) and (--xl) {
-  .font-p {
+@media (--xl) {
+  /*.font-btn {
     font-size: 18px;
-    line-height: 177%;
-  }
+    line-height: 135%;
+  }*/
 }
 
-@media (--sm) {
-  .font-p {
-    font-size: 14px;
-    line-height: 228.5%;
+@media (--md), (--sm), (--xs) {
+  .font-btn {
+    font-size: 13px;
+    line-height: 184.6%;
   }
 
   .font-hero {
@@ -328,13 +331,5 @@ main a.cta {
   .font-subtitle {
     font-size: 18px;
     line-height: 200%;
-  }
-}
-
-@media (--xs) {
-  .font-p {
-    font-size: 12px;
-    line-height: 200%;
-    letter-spacing: 0.5px;
   }
 }

@@ -1,49 +1,52 @@
 import React from 'react'
 import * as styles from './hero.module.css'
-import * as defaults from '../../../../styles/themes/default.css'
-
 import cn from 'classnames'
+import HeroContentLeft from './content/hero-content-left'
+import HeroContentRight from './content/hero-content-right'
+import hero from '../../../../images/illustrations/hero.svg'
+import Molecule from '../../freestanding/molecule/molecule'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Button from '../../freestanding/button/button'
-import HeroImage from './hero-image'
 import { ArrowRight } from 'phosphor-react'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <div className={cn(styles.heroMain)}>
-      <div className={cn(styles.heroInnerLeft)}>
-        <div className={cn(styles.heroInnerLeftInfo)}>
-          <div className={cn(styles.heroTitle)}>
-            Security infrastructure for global internet services.
-          </div>
-          <div className={cn(styles.heroSubtitle)}>
-            Thousands of businesses with billions of network requests trust
-            Ory's security infrastructure to authenticate and manage users, set
-            and check permissions and to protect APIs, applications and data.
-          </div>
-        </div>
-        <Button
-          className={styles.heroButtonGetStarted}
-          size="medium"
-          style="filled"
-          href="/products"
-        >
-          Get started for free
-        </Button>
-        <div className={cn(styles.heroInnerLeftBtnGroup)}>
-          
-          <Button
-            className={styles.heroButtonOpenSource}
-            size={'medium'}
-            style={'text'}
-            href={'/products'}
-          >
-            <div className={styles.text}>Open Source</div>
-            <ArrowRight className={styles.icon} />
-          </Button>
-        </div>
-      </div>
-      <div className={cn(styles.heroInnerRight)}>
-        <HeroImage></HeroImage>
+    <div className="container-fluid">
+      <div className={cn('row middle-md middle-lg middle-sm')}>
+        <HeroContentLeft className={cn('col-lg-5 col-md-12 col-sm-12')}>
+          <>
+            <Molecule>
+              <p className="font-h1">
+                Security infrastructure for global internet services.
+              </p>
+              <p className="font-p-lg">
+                Thousands of businesses with billions of network requests trust
+                Ory's security infrastructure to authenticate and manage users,
+                set and check permissions and to protect APIs, applications and
+                data.
+              </p>
+            </Molecule>
+            <MoleculeInteraction>
+              <Button
+                className={cn('col-lg-6 col-md-6 col-sm-6')}
+                href={'/products'}
+                style={'filled'}
+              >
+                Get Started for free
+              </Button>
+              <Button
+                className={cn('col-lg-6 col-md-6 col-sm-6')}
+                href={'/open-source'}
+                style={'text'}
+              >
+                Contact Sales <ArrowRight />
+              </Button>
+            </MoleculeInteraction>
+          </>
+        </HeroContentLeft>
+        <HeroContentRight className={cn('col-lg-6 col-md-12 col-sm-12')}>
+          <img loading="lazy" src={hero} alt="placeholder" />
+        </HeroContentRight>
       </div>
     </div>
   </div>

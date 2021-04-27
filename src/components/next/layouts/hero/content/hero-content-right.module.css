@@ -1,0 +1,18 @@
+.hero-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+
+  &.image {
+    background-color: var(--colors-themed-background--next);
+    box-shadow: var(--elevation-base);
+    border-radius: 10px;
+  }
+}
+
+@media (--sm), (--xs) {
+  .hero-content-right {
+    display: none !important;
+  }
+}
