@@ -4,8 +4,8 @@
   <ShortName>ORY Oathkeeper</ShortName>
   <Description>Search ORY Oathkeeper</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://www.ory.sh/img/favico.png</Image>
-  <Url type="text/html" method="get" template="https://www.ory.sh//search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.ory.sh//opensearch.xml" />
-  <moz:SearchForm>https://www.ory.sh/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://www.ory.sh/oathkeeper/docs/img/favico.png</Image>
+  <Url type="text/html" method="get" template="https://www.ory.sh//oathkeeper/docs/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.ory.sh//oathkeeper/docs/opensearch.xml" />
+  <moz:SearchForm>https://www.ory.sh//oathkeeper/docs/</moz:SearchForm>
 </OpenSearchDescription>
