@@ -11,9 +11,11 @@ import { ArrowRight } from 'phosphor-react'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <div className="container-fluid">
-      <div className={cn('row middle-md middle-lg middle-sm')}>
-        <HeroContentLeft className={cn('col-lg-5 col-md-12 col-sm-12')}>
+    <div className="container-fluid--next">
+      <div className={cn('row middle-md')}>
+        <HeroContentLeft
+          className={cn('col-lg-5 col-md-12 col-sm-12')}
+        >
           <>
             <Molecule>
               <p className="font-h1">
