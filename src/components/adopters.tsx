@@ -41,13 +41,15 @@ const adopters = [
     title: `Sainsbury's`,
     image: sainsburys,
     url: 'https://www.sainsburys.co.uk/',
-    featured: true
+    featured: true,
+    hiddenSm: false
   },
   {
     title: 'Hootsuite',
     image: hootsuite,
     url: 'https://hootsuite.com',
-    featured: true
+    featured: true,
+    hiddenSm: false
   },
   {
     title: 'Kyma Project',
@@ -60,33 +62,43 @@ const adopters = [
     title: '3REIN',
     image: threerein,
     url: 'https://3rein.com/',
-    featured: true
+    featured: true,
+    hiddenSm: false
   },
   {
     title: 'Spiribo',
     image: spiribo,
     url: 'https://www.spiri.bo/',
-    featured: true
+    featured: false,
+    hiddenSm: true
   },
   {
     title: 'Tulip Retail',
     image: tulip,
-    url: 'https://tulip.com/'
+    url: 'https://tulip.com/',
+    featured: false,
+    hiddenSm: true
   },
   {
     title: 'All My Funds',
     image: allmyfunds,
-    url: 'https://cashdeck.com.au/'
+    url: 'https://cashdeck.com.au/',
+    featured: false,
+    hiddenSm: true
   },
   {
     title: 'Data Detect',
     image: datadetect,
-    url: 'https://unifiedglobalarchiving.com/data-detect/'
+    url: 'https://unifiedglobalarchiving.com/data-detect/',
+    featured: false,
+    hiddenSm: true
   },
   {
     title: 'Arduino',
     image: arduino,
-    url: 'https://arduino.cc/'
+    url: 'https://arduino.cc/',
+    featured: false,
+    hiddenSm: true
   }
 ]
 

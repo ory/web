@@ -8,10 +8,7 @@ export interface PropTypes {
 }
 
 const Molecule = ({ children, className }: PropTypes) => (
-  <div className={cn(styles.molecule, className && className)}>
-    {children}
-    {/*<div className={cn(styles[style])}></div>*/}
-  </div>
+  <div className={cn(styles.molecule, className && className)}>{children}</div>
 )
 
 export default Molecule

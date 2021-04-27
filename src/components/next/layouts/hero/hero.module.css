@@ -1,5 +1,19 @@
 .hero {
   /*lost-utility: edit;*/
   background-color: var(--colors-base-white--next);
-  padding: 64px 0;
+  padding: 128px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+@media (--sm), (--xs) {
+  .hero {
+    padding: 64px 0;
+  }
 }

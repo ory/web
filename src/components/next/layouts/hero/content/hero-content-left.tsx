@@ -9,7 +9,7 @@ export interface PropTypes {
 
 const HeroContentLeft = ({ children, className }: PropTypes) => (
   <div className={cn(styles.heroContentLeft, className && className)}>
-    {children}
+    <div className={cn(styles.content)}>{children}</div>
   </div>
 )
 

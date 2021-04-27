@@ -1,0 +1,8 @@
+.adopters-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  opacity: 0.25;
+}

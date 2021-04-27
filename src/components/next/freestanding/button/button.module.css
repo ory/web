@@ -75,7 +75,7 @@
   }
 }
 
-@media (--sm) {
+@media (--sm), (--xs) {
   .btn-base {
     padding: 4px 12px;
   }
