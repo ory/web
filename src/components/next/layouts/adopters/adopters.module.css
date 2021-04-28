@@ -1,12 +1,30 @@
 .adopters {
   background-color: var(--colors-base-grey-25--next);
+  position: relative;
 }
 
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 0;
+}
+
+.adopters-box {
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+
+  & a {
+    max-height: 2em;
+  }
+  & img {
+    height: auto;
+    max-height: 2em;
+  }
 }

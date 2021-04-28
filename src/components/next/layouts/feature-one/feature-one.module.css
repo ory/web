@@ -1,0 +1,9 @@
+.feature-one {
+  background-color: var(--colors-base-white--next);
+  /*background: url(wire / pattern.png);*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 128px 0 0;
+}
