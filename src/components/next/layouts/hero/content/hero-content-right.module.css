@@ -13,7 +13,7 @@
   }
 }
 
-@media (--sm), (--xs) {
+@media (--xs) {
   .hero-content-right {
     display: none !important;
   }

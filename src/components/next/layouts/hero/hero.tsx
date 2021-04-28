@@ -13,7 +13,9 @@ const Hero = () => (
   <div className={cn(styles.hero)}>
     <div className="container-fluid--next">
       <div className={cn(styles.content)}>
-        <HeroContentLeft className={cn('col-lg-5 col-md-12 col-sm-12')}>
+        <HeroContentLeft
+          className={cn('col-lg-5--next col-md-6--next col-sm-12--next')}
+        >
           <>
             <Molecule>
               <p className="font-h1">
@@ -26,25 +28,27 @@ const Hero = () => (
                 data.
               </p>
             </Molecule>
-            <MoleculeInteraction>
+            {/*<MoleculeInteraction>
               <Button
-                className={cn('col-lg-6 col-md-6 col-sm-6')}
+                className={cn('col-lg-6--next col-md-5--next col-sm-12--next')}
                 href={'/products'}
                 style={'filled'}
               >
                 Get Started for free
               </Button>
               <Button
-                className={cn('col-lg-6 col-md-6 col-sm-6')}
+                className={cn('col-lg-6--next col-md-12--next col-sm-12--next')}
                 href={'/open-source'}
                 style={'text'}
               >
                 Contact Sales <ArrowRight />
               </Button>
-            </MoleculeInteraction>
+            </MoleculeInteraction>*/}
           </>
         </HeroContentLeft>
-        <HeroContentRight className={cn('col-lg-6 col-md-12 col-sm-12')}>
+        <HeroContentRight
+          className={cn('col-lg-6--next col-md-8--next col-sm-12--next')}
+        >
           <img loading="lazy" src={hero} alt="placeholder" />
         </HeroContentRight>
       </div>

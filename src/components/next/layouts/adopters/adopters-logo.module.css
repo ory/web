@@ -4,5 +4,19 @@
   justify-content: center;
   align-items: center;
   padding: 24px;
-  opacity: 0.25;
+  opacity: 100;
+
+  & a img {
+    transition: all ease 200ms;
+  }
+
+  & a:any-link {
+    &:hover,
+    &:active,
+    &:focus {
+      & img {
+        filter: invert(1);
+      }
+    }
+  }
 }

@@ -174,11 +174,11 @@ module.exports = {
                       '--md-viewport': '(max-width: 768px) and (min-width: 375px)',
                       '--lg-viewport': '(min-width: 769px)',
                       '--mobile-viewport': '(max-width: 768px)',
-                      '--xs': '(min-width: 0px) and (max-width: 600px)',
-                      '--sm': '(min-width: 600px) and (max-width: 960px)',
-                      '--md': '(min-width: 960px) and (max-width: 1280px)',
-                      '--lg': '(min-width: 1280px) and (max-width: 1920px)',
-                      '--xl': '(min-width: 1920px)'
+                      '--xs': '(min-width: 0px) and (max-width: 600px)', // extra-small
+                      '--sm': '(min-width: 600px) and (max-width: 960px)', //small
+                      '--md': '(min-width: 960px) and (max-width: 1280px)',//medium
+                      '--lg': '(min-width: 1280px) and (max-width: 1920px)',//large
+                      '--xl': '(min-width: 1920px)' //extra-large
                     }
                   }
                 ]

@@ -2,6 +2,7 @@ import React from 'react'
 import * as styles from './adopters.module.css'
 
 import cn from 'classnames'
+import blues from '../../../../images/adopters/blues.svg'
 import thoughtworks from '../../../../images/adopters/thoughtworks.svg'
 import kyma from '../../../../images/adopters/kyma.svg'
 import raspberrypi from '../../../../images/adopters/raspberrypi.svg'
@@ -14,7 +15,7 @@ import AdoptersLogo from './adopters-logo'
 const adopters = [
   {
     title: 'BluesWireless',
-    image: thoughtworks,
+    image: blues,
     url: 'https://blues.io/',
     pos: 1
   },
@@ -70,7 +71,9 @@ const Adopters = () => (
           .sort((a, b) => a.pos - b.pos)
           .map((adopter) => {
             return (
-              <AdoptersLogo className={cn('col-lg-2 col-md-4 col-sm-4')}>
+              <AdoptersLogo
+                className={cn('col-lg-2--next col-md-2--next col-sm-4--next')}
+              >
                 <a href={adopter.url} key={adopter.title}>
                   <img loading="lazy" src={adopter.image} alt={adopter.title} />
                 </a>
