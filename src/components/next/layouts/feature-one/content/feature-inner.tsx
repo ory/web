@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from './feature-inner.module.css'
 import cn from 'classnames'
+import FeatureInnerText from '../../feature-two/content/feature-inner-text'
 
 export interface PropTypes {
   children: React.ReactNode
@@ -9,7 +10,7 @@ export interface PropTypes {
 
 const FeatureInner = ({ children, className }: PropTypes) => (
   <div className={cn(styles.featureInner, className && className)}>
-    {children}
+    <FeatureInnerText>{children}</FeatureInnerText>
   </div>
 )
 
