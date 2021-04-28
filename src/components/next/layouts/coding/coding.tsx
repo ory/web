@@ -3,10 +3,10 @@ import * as styles from './coding.module.css'
 import cn from 'classnames'
 
 const Coding = () => (
-  <div className={cn(styles.coding)}>
+  <div className={cn(styles.coding, styles.codingContainer)}>
     <div className="container-fluid--next">
-      <div className={cn(styles.container)}>
-        <div className={cn(styles.content)}></div>
+      <div className={cn(styles.content)}>
+        <p>Some content</p>
       </div>
     </div>
   </div>

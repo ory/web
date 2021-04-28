@@ -1,12 +1,12 @@
-.coding {
+.security {
+  background-color: var(--colors-base-white--next);
+  /*background: url(wire / pattern.png);*/
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0;
 
-  background: /*url(wire / pattern.png),*/ #0d1f39;
-
-  &.coding-container {
+  &.security-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,9 +15,9 @@
   }
 }
 
-.content {
+.security-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   padding: 0;
 }

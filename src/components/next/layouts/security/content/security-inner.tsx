@@ -1,5 +1,5 @@
 import React from 'react'
-import * as styles from './feature-inner.module.css'
+import * as styles from './security-inner.module.css'
 import cn from 'classnames'
 import ContentWrapper from '../../../freestanding/content/content-wrapper'
 
@@ -8,10 +8,8 @@ export interface PropTypes {
   className?: string
 }
 
-const FeatureInner = ({ children, className }: PropTypes) => (
-  <div className={cn(styles.featureInner, className && className)}>
+const SecurityInner = ({ children, className }: PropTypes) => (
+  <div className={cn(styles.securityInner, className && className)}>
     <ContentWrapper>{children}</ContentWrapper>
   </div>
 )
-
-export default FeatureInner

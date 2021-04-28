@@ -1,23 +1,16 @@
-.coding {
+.stats {
+  background-color: var(--colors-base-grey--next);
+  /*background: url(wire / pattern.png), #0D1F39;*/
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0;
 
-  background: /*url(wire / pattern.png),*/ #0d1f39;
-
-  &.coding-container {
+  &.stats-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 128px 0;
   }
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0;
 }

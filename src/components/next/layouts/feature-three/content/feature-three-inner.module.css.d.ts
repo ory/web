@@ -1,4 +1,4 @@
 declare const styles: {
-  readonly featureInnerText: string
+  readonly featureThreeInner: string
 }
 export = styles
