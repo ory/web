@@ -199,17 +199,29 @@
 @media (--xs) {
   .container-fluid--next {
     width: 100%;
-    max-width: max(100vw, 444px);
+    max-width: 350px; /*max(100vw, 444px);*/
   }
 }
 
-@media (--sm), (--xs) {
+@media (--sm) {
   @for $i from 1 to 12 {
     .col-sm-$(i)--next {
       lost-column: $(i) / 12 12 24px;
     }
 
     .col-sm-offset-$(i)--next {
+      lost-offset: $(i) / 12 12 24px;
+    }
+  }
+}
+
+@media (--xs) {
+  @for $i from 1 to 12 {
+    .col-xs-$(i)--next {
+      lost-column: $(i) / 12 12 24px;
+    }
+
+    .col-xs-offset-$(i)--next {
       lost-offset: $(i) / 12 12 24px;
     }
   }

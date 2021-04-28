@@ -26,5 +26,7 @@ declare const styles: {
   readonly colLg: string
   readonly colLgOffset: string
   readonly containerFluidNext: string
+  readonly colXs: string
+  readonly colXsOffset: string
 }
 export = styles

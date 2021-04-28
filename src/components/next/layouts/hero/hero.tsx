@@ -14,7 +14,9 @@ const Hero = () => (
     <div className="container-fluid--next">
       <div className={cn(styles.content)}>
         <HeroContentLeft
-          className={cn('col-lg-5--next col-md-6--next col-sm-12--next')}
+          className={cn(
+            'col-lg-5--next col-md-6--next col-sm-6--next col-xs-12--next'
+          )}
         >
           <>
             <Molecule>
@@ -30,14 +32,18 @@ const Hero = () => (
             </Molecule>
             <MoleculeInteraction>
               <Button
-                className={cn('col-lg-6--next col-md-6--next col-sm-5--next')}
+                className={cn(
+                  'col-lg-6--next col-md-6--next col-sm-5--next col-xs-6--next'
+                )}
                 href={'/products'}
                 style={'filled'}
               >
                 Get Started for free
               </Button>
               <Button
-                className={cn('col-lg-6--next col-md-6--next col-sm-5--next')}
+                className={cn(
+                  'col-lg-6--next col-md-6--next col-sm-5--next col-xs-6--next'
+                )}
                 href={'/open-source'}
                 style={'text'}
               >
@@ -47,7 +53,7 @@ const Hero = () => (
           </>
         </HeroContentLeft>
         <HeroContentRight
-          className={cn('col-lg-6--next col-md-6--next col-sm-12--next')}
+          className={cn('col-lg-6--next col-md-6--next col-sm-5--next')}
         >
           <img loading="lazy" src={hero} alt="placeholder" />
         </HeroContentRight>
