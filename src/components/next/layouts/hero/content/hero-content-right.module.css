@@ -1,9 +1,7 @@
 .hero-content-right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  align-items: flex-start;
   padding: 0;
 
   &.image {

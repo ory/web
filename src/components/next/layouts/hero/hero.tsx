@@ -28,26 +28,26 @@ const Hero = () => (
                 data.
               </p>
             </Molecule>
-            {/*<MoleculeInteraction>
+            <MoleculeInteraction>
               <Button
-                className={cn('col-lg-6--next col-md-5--next col-sm-12--next')}
+                className={cn('col-lg-6--next col-md-6--next col-sm-5--next')}
                 href={'/products'}
                 style={'filled'}
               >
                 Get Started for free
               </Button>
               <Button
-                className={cn('col-lg-6--next col-md-12--next col-sm-12--next')}
+                className={cn('col-lg-6--next col-md-6--next col-sm-5--next')}
                 href={'/open-source'}
                 style={'text'}
               >
                 Contact Sales <ArrowRight />
               </Button>
-            </MoleculeInteraction>*/}
+            </MoleculeInteraction>
           </>
         </HeroContentLeft>
         <HeroContentRight
-          className={cn('col-lg-6--next col-md-8--next col-sm-12--next')}
+          className={cn('col-lg-6--next col-md-6--next col-sm-12--next')}
         >
           <img loading="lazy" src={hero} alt="placeholder" />
         </HeroContentRight>

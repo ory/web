@@ -72,6 +72,7 @@ const Adopters = () => (
           .map((adopter) => {
             return (
               <AdoptersLogo
+                key={adopter.title}
                 className={cn('col-lg-2--next col-md-2--next col-sm-4--next')}
               >
                 <a href={adopter.url} key={adopter.title}>
