@@ -13,3 +13,5 @@ const SecurityInner = ({ children, className }: PropTypes) => (
     <ContentWrapper>{children}</ContentWrapper>
   </div>
 )
+
+export default SecurityInner

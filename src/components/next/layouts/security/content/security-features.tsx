@@ -6,19 +6,20 @@ import Molecule from '../../../freestanding/molecule/molecule'
 import MoleculeFeatureIcon from '../../../freestanding/molecule/molecule-feature-icon'
 import { Fingerprint } from 'phosphor-react'
 
-const SecurityFeatures = () => (
-  <div className={cn(styles.securityFeatures)}>
+export interface PropTypes {
+  children: React.ReactNode
+  className?: string
+}
+
+const SecurityFeatures = ({ children, className }: PropTypes) => (
+  <div className={cn(styles.securityFeatures, className && className)}>
     <MoleculeFeature>
       <MoleculeFeatureIcon>
         <Fingerprint></Fingerprint>
       </MoleculeFeatureIcon>
-      <Molecule>
-        <p className="font-h5">Feature</p>
-        <p className="font-p">
-          Thousands of businesses with billions of network requests trust Ory's
-          security infrastructure
-        </p>
-      </Molecule>
+      <Molecule>{children}</Molecule>
     </MoleculeFeature>
   </div>
 )
+
+export default SecurityFeatures
