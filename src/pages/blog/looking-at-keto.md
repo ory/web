@@ -2,13 +2,13 @@
 path: '/looking-at-keto/'
 banner: '/images/blog-banner-keto.png'
 title: >
-  Looking at Zanzibar through ORY Keto
+  Looking at Zanzibar through Ory Keto
 
 seo:
   description: >
     A practical look at the capabilities of Ory Keto based on a real-life scenario.
   title: >
-    A hands-on example of ORY Keto and its features.
+    A hands-on example of Ory Keto and its features.
   canonical: > 
     "https://gruchalski.com/posts/2021-04-11-looking-at-zanzibar-through-ory-keto/"
 
@@ -28,7 +28,7 @@ Permissions management is an interesting topic. Modern applications are often co
 
 Building a flexible permissions management system is not easy. They tend to be tightly coupled with the business logic and executed every time a decision whether to grant or deny access is required. There are as many requirements as software systems out there. A permissions management systems must also perform. If decisions are to be made often, the latency to make a decision must be minimal.
 
-ORY Keto is one of the ORY platform components and a few days ago it has seen a major upgrade. Versions 0.6.0-alpha.1 is a complete reimplementation of Keto and is marketed as the first open source implementation of [_Zanzibar: Google’s Consistent, Global Authorization System_](https://research.google/pubs/pub48190/).
+Ory Keto is one of the Ory platform components and a few days ago it has seen a major upgrade. Versions 0.6.0-alpha.1 is a complete reimplementation of Keto and is marketed as the first open source implementation of [_Zanzibar: Google’s Consistent, Global Authorization System_](https://research.google/pubs/pub48190/).
 
 From the Zanzibar abstract:
 
