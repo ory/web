@@ -53,11 +53,11 @@ export const pageQuery = graphql`
         author
         overline
         subtitle
-        canonical
         seo {
           title
           description
           keywords
+          canonical
         }
 
         publishedAt(formatString: "MMMM DD, YYYY")
