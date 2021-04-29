@@ -9,9 +9,22 @@ interface PropTypes {
   sm?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   md?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   lg?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  lgOffset?: boolean
+  mdOffset?: boolean
+  smOffset?: boolean
 }
 
-const Grid = ({ children, className, xs, sm, md, lg }: PropTypes) => {
+const Grid = ({
+  children,
+  className,
+  xs,
+  sm,
+  md,
+  lg,
+  lgOffset = false,
+  mdOffset = false,
+  smOffset = false
+}: PropTypes) => {
   const getLg = (i: number) => {
     // @ts-ignore
     return styles[`colLg${i}`]
@@ -40,9 +53,11 @@ const Grid = ({ children, className, xs, sm, md, lg }: PropTypes) => {
     <div
       className={cn(
         lg && getLg(lg),
+        lgOffset && styles.colLgOffset1,
         md && getMd(md),
+        mdOffset && styles.colMdOffset1,
         sm && getSm(sm),
-        xs && getXs(xs),
+        smOffset && styles.colSmOffset1,
         className && className
       )}
     >

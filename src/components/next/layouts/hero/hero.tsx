@@ -15,7 +15,7 @@ import Grid from '../../freestanding/containers/grid'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <Container fluid={true} flexContainer={'row'}>
+    <Container fluid={true}>
       <Grid lg={6} md={12} sm={12}>
         <ContentText>
           <Molecule>
@@ -39,7 +39,7 @@ const Hero = () => (
           </MoleculeInteraction>
         </ContentText>
       </Grid>
-      <Grid lg={5} md={12}>
+      <Grid lg={4} md={12} sm={12}>
         <ContentVisual className={cn('hidden-sm hidden-md')}>
           <img loading="lazy" src={hero} alt="placeholder" />
         </ContentVisual>

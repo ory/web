@@ -1,4 +1,5 @@
 declare const styles: {
+  readonly colLgOffset1: string
   readonly colLg1: string
   readonly colLg2: string
   readonly colLg3: string
@@ -11,6 +12,7 @@ declare const styles: {
   readonly colLg10: string
   readonly colLg11: string
   readonly colLg12: string
+  readonly colMdOffset1: string
   readonly colMd1: string
   readonly colMd2: string
   readonly colMd3: string
@@ -23,6 +25,7 @@ declare const styles: {
   readonly colMd10: string
   readonly colMd11: string
   readonly colMd12: string
+  readonly colSmOffset1: string
   readonly colSm1: string
   readonly colSm2: string
   readonly colSm3: string

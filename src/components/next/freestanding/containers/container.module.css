@@ -46,8 +46,12 @@
 
 @media (--lg-viewport) {
   .container-fluid {
-    width: calc(100% - 32px);
-    max-width: 1280px;
+    /*width: calc(100% - 32px);
+    max-width: 1280px;*/
+    width: calc(100% - 20px);
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }
 
@@ -55,6 +59,9 @@
   .container-fluid {
     width: calc(100% - 32px);
     max-width: 960px;
+    /*width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;*/
   }
 }
 
@@ -63,12 +70,15 @@
     /*lost-utility: edit;*/
     width: calc(100% - 24px);
     max-width: 600px;
+    /*width: 100%;
+    max-width: 350px;
+    margin: 0 auto;*/
   }
 }
 
-@media (--mobile-viewport) {
+/*@media (--mobile-viewport) {
   .container-fluid {
     width: calc(100% - 24px);
     max-width: 350px;
   }
-}
+}*/

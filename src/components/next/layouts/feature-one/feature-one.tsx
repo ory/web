@@ -12,11 +12,12 @@ import MoleculeInteraction from '../../freestanding/molecule/molecule-interactio
 import Button from '../../freestanding/button/button'
 import { ArrowRight } from 'phosphor-react'
 import Grid from '../../freestanding/containers/grid'
+import FeatureOneInner from './content/feature-one-inner'
 
 const FeatureOne = () => (
   <div className={cn(styles.featureOne)}>
-    <Container fluid={true} flexContainer={'row'}>
-      <Container flexContainer={'row'} alignItems={'center'}>
+    <Container fluid={true} flexContainer={'column'}>
+      <FeatureOneInner>
         <Grid lg={6} md={12} sm={12}>
           <ContentText>
             <MoleculeTextInteraction>
@@ -44,18 +45,14 @@ const FeatureOne = () => (
             </MoleculeTextInteraction>
           </ContentText>
         </Grid>
-        <Grid lg={6} md={12} sm={12}>
+        <Grid lg={4} md={12} sm={12}>
           <ContentVisual>
             <img loading="lazy" src={hero} alt="placeholder" />
           </ContentVisual>
         </Grid>
-      </Container>
+      </FeatureOneInner>
 
-      <Container
-        className={cn('hidden-sm hidden-md')}
-        flexContainer={'row'}
-        alignItems={'start'}
-      >
+      <FeatureOneInner className={cn('hidden-sm hidden-md')}>
         <Grid lg={8} md={12} sm={12}>
           <ContentVisual>
             <img loading="lazy" src={hero} alt="placeholder" />
@@ -66,19 +63,14 @@ const FeatureOne = () => (
             <img loading="lazy" src={hero} alt="placeholder" />
           </ContentVisual>
         </Grid>
-      </Container>
+      </FeatureOneInner>
 
-      <Container
-        className={cn('hidden-sm hidden-md')}
-        flexContainer={'row'}
-        alignItems={'center'}
-      >
-        <Grid lg={12} md={12} sm={12}>
-          <ContentVisual>
-            <img loading="lazy" src={hero} alt="placeholder" />
-          </ContentVisual>
-        </Grid>
-      </Container>
+      <FeatureOneInner className={cn('hidden-sm hidden-md')}>
+        <ContentVisual>
+          <img loading="lazy" src={hero} alt="placeholder" />
+        </ContentVisual>
+      </FeatureOneInner>
+      
     </Container>
   </div>
 )

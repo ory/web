@@ -1,158 +1,170 @@
-@lost gutter 32px;
+@lost gutter 20px;
 @lost flexbox flex;
 
 @media (--lg-viewport) {
+  .col-lg-offset-1 {
+    lost-offset: 1/12 12 20px;
+  }
+
   .col-lg-1 {
-    lost-column: 1/12 12 32px;
+    lost-column: 1/12 12 20px;
   }
   .col-lg-2 {
-    lost-column: 2/12 12 32px;
+    lost-column: 2/12 12 20px;
   }
   .col-lg-3 {
-    lost-column: 3/12 12 32px;
+    lost-column: 3/12 12 20px;
   }
   .col-lg-4 {
-    lost-column: 4/12 12 32px;
+    lost-column: 4/12 12 20px;
   }
   .col-lg-5 {
-    lost-column: 5/12 12 32px;
+    lost-column: 5/12 12 20px;
   }
   .col-lg-6 {
-    lost-column: 6/12 12 32px;
+    lost-column: 6/12 12 20px;
   }
   .col-lg-7 {
-    lost-column: 7/12 12 32px;
+    lost-column: 7/12 12 20px;
   }
   .col-lg-8 {
-    lost-column: 8/12 12 32px;
+    lost-column: 8/12 12 20px;
   }
   .col-lg-9 {
-    lost-column: 9/12 12 32px;
+    lost-column: 9/12 12 20px;
   }
   .col-lg-10 {
-    lost-column: 10/12 12 32px;
+    lost-column: 10/12 12 20px;
   }
   .col-lg-11 {
-    lost-column: 11/12 12 32px;
+    lost-column: 11/12 12 20px;
   }
   .col-lg-12 {
-    lost-column: 12/12 12 32px;
+    lost-column: 12/12 12 20px;
   }
 }
 
 @media (--md-viewport) {
+  .col-md-offset-1 {
+    lost-offset: 1/12 12 20px;
+  }
+
   .col-md-1 {
-    lost-column: 1/12 12 32px;
+    lost-column: 1/12 12 20px;
   }
   .col-md-2 {
-    lost-column: 2/12 12 32px;
+    lost-column: 2/12 12 20px;
   }
   .col-md-3 {
-    lost-column: 3/12 12 32px;
+    lost-column: 3/12 12 20px;
   }
   .col-md-4 {
-    lost-column: 4/12 12 32px;
+    lost-column: 4/12 12 20px;
   }
   .col-md-5 {
-    lost-column: 5/12 12 32px;
+    lost-column: 5/12 12 20px;
   }
   .col-md-6 {
-    lost-column: 6/12 12 32px;
+    lost-column: 6/12 12 20px;
   }
   .col-md-7 {
-    lost-column: 7/12 12 32px;
+    lost-column: 7/12 12 20px;
   }
   .col-md-8 {
-    lost-column: 8/12 12 32px;
+    lost-column: 8/12 12 20px;
   }
   .col-md-9 {
-    lost-column: 9/12 12 32px;
+    lost-column: 9/12 12 20px;
   }
   .col-md-10 {
-    lost-column: 10/12 12 32px;
+    lost-column: 10/12 12 20px;
   }
   .col-md-11 {
-    lost-column: 11/12 12 32px;
+    lost-column: 11/12 12 20px;
   }
   .col-md-12 {
-    lost-column: 12/12 12 32px;
+    lost-column: 12/12 12 20px;
   }
 }
 
 @media (--sm-viewport) {
+  .col-sm-offset-1 {
+    lost-offset: 1/12 12 10px;
+  }
+
   .col-sm-1 {
-    lost-column: 1/12 12 24px;
+    lost-column: 1/12 12 10px;
   }
   .col-sm-2 {
-    lost-column: 2/12 12 24px;
+    lost-column: 2/12 12 10px;
   }
   .col-sm-3 {
-    lost-column: 3/12 12 24px;
+    lost-column: 3/12 12 10px;
   }
   .col-sm-4 {
-    lost-column: 4/12 12 24px;
+    lost-column: 4/12 12 10px;
   }
   .col-sm-5 {
-    lost-column: 5/12 12 24px;
+    lost-column: 5/12 12 10px;
   }
   .col-sm-6 {
-    lost-column: 6/12 12 24px;
+    lost-column: 6/12 12 10px;
   }
   .col-sm-7 {
-    lost-column: 7/12 12 24px;
+    lost-column: 7/12 12 10px;
   }
   .col-sm-8 {
-    lost-column: 8/12 12 24px;
+    lost-column: 8/12 12 10px;
   }
   .col-sm-9 {
-    lost-column: 9/12 12 32px;
+    lost-column: 9/12 12 10px;
   }
   .col-sm-10 {
-    lost-column: 10/12 12 32px;
+    lost-column: 10/12 12 10px;
   }
   .col-sm-11 {
-    lost-column: 11/12 12 32px;
+    lost-column: 11/12 12 10px;
   }
   .col-sm-12 {
-    lost-column: 12/12 12 32px;
+    lost-column: 12/12 12 10px;
   }
 }
 
 @media (--mobile-viewport) {
   .col-xs-1 {
-    lost-column: 1/4 4 24px;
+    lost-column: 1/4 4 10px;
   }
   .col-xs-2 {
-    lost-column: 2/4 4 24px;
+    lost-column: 2/4 4 10px;
   }
   .col-xs-3 {
-    lost-column: 3/4 4 24px;
+    lost-column: 3/4 4 10px;
   }
   .col-xs-4 {
-    lost-column: 4/4 4 24px;
+    lost-column: 4/4 4 10px;
   }
   /*.col-xs-5 {
-    lost-column: 5/12 4 24px;
+    lost-column: 5/12 4 10px;
   }
   .col-xs-6 {
-    lost-column: 6/12 4 24px;
+    lost-column: 6/12 4 10px;
   }
   .col-xs-7 {
-    lost-column: 7/12 4 24px;
+    lost-column: 7/12 4 10px;
   }
   .col-xs-8 {
-    lost-column: 8/12 4 24px;
+    lost-column: 8/12 4 10px;
   }
   .col-xs-9 {
-    lost-column: 9/12 4 24px;
+    lost-column: 9/12 4 10px;
   }
   .col-xs-10 {
-    lost-column: 10/12 4 24px;
+    lost-column: 10/12 4 10px;
   }
   .col-xs-11 {
-    lost-column: 11/12 4 24px;
+    lost-column: 11/12 4 10px;
   }
   .col-xs-12 {
-    lost-column: 12/12 4 24px;
+    lost-column: 12/12 4 10px;
   }*/
 }
