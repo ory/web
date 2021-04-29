@@ -6,10 +6,15 @@ import ContentVisual from '../../freestanding/content/content-visual'
 import FeatureInner from './content/feature-inner'
 
 const FeatureOne = () => (
-  <div className={cn(styles.featureOne, styles.featureOneContainer)}>
+  <div className={cn(styles.featureOne)}>
     <div className="container-fluid--next">
-      <div className={cn(styles.featureOneContent)}>
-        <FeatureInner className={cn(styles.featureOneContentCenter)}>
+      <div className={cn(styles.featureOneContainer, styles.featureOneContent)}>
+        <FeatureInner
+          className={cn(
+            styles.featureOneContentCenter,
+            styles.featureOneContentStart
+          )}
+        >
           <ContentText
             className={cn('col-lg-6--next col-md-5--next col-sm-4--next')}
           >

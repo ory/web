@@ -10,57 +10,55 @@ import Button from '../../freestanding/button/button'
 import { ArrowRight } from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
 import ContentVisual from '../../freestanding/content/content-visual'
+import Container from '../../freestanding/containers/container'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <div className="container-fluid--next">
-      <div className={cn(styles.content)}>
-        <ContentText
-          className={cn(
-            'col-lg-5--next col-md-6--next col-sm-8--next col-xs-12--next'
-          )}
-        >
-          <Molecule>
-            <p className="font-h1">
-              Security infrastructure for global internet services.
-            </p>
-            <p className="font-p-lg">
-              Thousands of businesses with billions of network requests trust
-              Ory's security infrastructure to authenticate and manage users,
-              set and check permissions and to protect APIs, applications and
-              data.
-            </p>
-          </Molecule>
-          <MoleculeInteraction>
-            <Button
-              className={cn(
-                'col-lg-6--next col-md-6--next col-sm-6--next col-xs-6--next'
-              )}
-              href={'/products'}
-              style={'filled'}
-            >
-              Get Started for free
-            </Button>
-            <Button
-              className={cn(
-                'col-lg-6--next col-md-6--next col-sm-6--next col-xs-6--next'
-              )}
-              href={'/open-source'}
-              style={'text'}
-            >
-              Contact Sales <ArrowRight />
-            </Button>
-          </MoleculeInteraction>
-        </ContentText>
-        <ContentVisual
-          className={cn(
-            'col-lg-6--next col-md-5--next col-sm-5--next hidden-xs--next'
-          )}
-        >
-          <img loading="lazy" src={hero} alt="placeholder" />
-        </ContentVisual>
-      </div>
-    </div>
+    <Container>
+      <ContentText
+        className={cn(
+          'col-lg-5--next col-md-6--next col-sm-8--next col-xs-12--next'
+        )}
+      >
+        <Molecule>
+          <p className="font-h1">
+            Security infrastructure for global internet services.
+          </p>
+          <p className="font-p-lg">
+            Thousands of businesses with billions of network requests trust
+            Ory's security infrastructure to authenticate and manage users, set
+            and check permissions and to protect APIs, applications and data.
+          </p>
+        </Molecule>
+        <MoleculeInteraction>
+          <Button
+            className={cn(
+              'col-lg-6--next col-md-6--next col-sm-6--next col-xs-6--next'
+            )}
+            href={'/products'}
+            style={'filled'}
+          >
+            Get Started for free
+          </Button>
+          <Button
+            className={cn(
+              'col-lg-6--next col-md-6--next col-sm-6--next col-xs-6--next'
+            )}
+            href={'/open-source'}
+            style={'text'}
+          >
+            Contact Sales <ArrowRight />
+          </Button>
+        </MoleculeInteraction>
+      </ContentText>
+      <ContentVisual
+        className={cn(
+          'col-lg-6--next col-md-5--next col-sm-5--next hidden-xs--next'
+        )}
+      >
+        <img loading="lazy" src={hero} alt="placeholder" />
+      </ContentVisual>
+    </Container>
   </div>
 )
 

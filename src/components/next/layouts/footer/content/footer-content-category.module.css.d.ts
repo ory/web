@@ -1,4 +1,4 @@
 declare const styles: {
-  readonly hero: string
+  readonly footerContentCategory: string
 }
 export = styles

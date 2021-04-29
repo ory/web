@@ -1,25 +1,26 @@
 .feature-one {
   background-color: var(--colors-base-white--next);
   /*background: url(wire / pattern.png);*/
-  display: flex;
+  /*display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0;
-
-  & .feature-one-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 128px 0 0;
-  }
+  padding: 0;*/
+  padding: 128px 0;
 }
 
-.feature-one-content {
+.feature-one-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 128px 0 0;
+
+  &.feature-one-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
 }
 
 .feature-one-content-center {

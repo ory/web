@@ -1,0 +1,13 @@
+.footer-content-category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+
+  .footer-content-category-item-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0;
+  }
+}

@@ -1,4 +1,4 @@
 declare const styles: {
-  readonly hero: string
+  readonly resourceBox: string
 }
 export = styles

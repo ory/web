@@ -1,0 +1,29 @@
+.resource {
+  background-color: var(--colors-base-white--next);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+
+  &.resource-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 128px 0;
+  }
+}
+
+.resource-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.resource-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+}
