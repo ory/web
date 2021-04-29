@@ -16,6 +16,7 @@ export default function BlogTemplate(props: any) {
         description={fn.seo?.description || fn.description}
         title={fn.seo?.title || fn.title}
         keywords={fn.seo?.keywords || ''}
+        canonical={fn.seo?.canonical}
       />
       <BlogHero
         title={fn.title}
@@ -57,6 +58,7 @@ export const pageQuery = graphql`
           title
           description
           keywords
+          canonical
         }
 
         publishedAt(formatString: "MMMM DD, YYYY")
