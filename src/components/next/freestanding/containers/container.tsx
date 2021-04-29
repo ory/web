@@ -7,8 +7,21 @@ export interface PropTypes {
   className?: string
   flexContainer?: 'row' | 'column'
   alignItems?: 'start' | 'center' | 'end'
-  justify?: 'center'
+  justify?: 'center' | 'space-around' | 'space-between' | 'start' | 'end'
   fluid?: false | true
+}
+
+const parseCase = (s: string) => {
+  const ss = s.split('-');
+  let final = '';
+  if (ss.length > 0){
+    for (const word of ss) {
+      final += (word.charAt(0).toUpperCase() + word.slice(1)).replace('-', '');
+    }
+  }else {
+    final += s.charAt(0).toUpperCase() + s.slice(1);
+  }
+  return final
 }
 
 const getFlex = (flex: string) => {
@@ -18,20 +31,20 @@ const getFlex = (flex: string) => {
 
 const getAlign = (align: string) => {
   // @ts-ignore
-  return styles[`flex-${align}`]
+  return styles[`flex-${parseCase}`];
 }
 
 const getJustify = (justify: string) => {
   // @ts-ignore
-  return styles[`justify-${justify}`]
+  return styles[`justify${parseCase(justify)}`]
 }
 
 const Container = ({
   children,
   className,
   flexContainer = 'row',
-  alignItems,
-  justify,
+  alignItems = 'center',
+  justify = 'center',
   fluid = false
 }: PropTypes) => (
   <div className={cn(fluid && styles.containerFluid)}>

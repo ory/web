@@ -12,7 +12,6 @@
   color: var(--colors-base-grey--next);
 }
 
-
 @media (--sm), (--xs) {
   .hero {
     padding: 64px 0;

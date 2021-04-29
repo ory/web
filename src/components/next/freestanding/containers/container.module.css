@@ -3,9 +3,6 @@
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 0;
 }
 
@@ -22,10 +19,12 @@
 
 .row {
   lost-flex-container: row;
+  flex-direction: row;
 }
 
 .column {
   lost-flex-container: column;
+  flex-direction: column;
 }
 
 .flex-start {
@@ -42,6 +41,22 @@
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
 }
 
 @media (--lg-viewport) {

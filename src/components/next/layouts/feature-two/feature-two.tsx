@@ -1,11 +1,11 @@
 import React from 'react'
 import * as styles from './feature-two.module.css'
 import cn from 'classnames'
-import FeatureInnerContainer from './content/feature-inner-container'
 import { GitDiff } from 'phosphor-react'
 import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
+import FeatureTwoInner from './content/feature-two-inner'
 
 const features = [
   {
@@ -53,32 +53,31 @@ const features = [
 const FeatureTwo = () => {
   return (
     <div className={cn(styles.featureTwo)}>
-      <Container fluid={true}>
-        <Container flexContainer={'row'} alignItems={'start'}>
-          <Grid lg={8} md={12} sm={12}>
-            <ContentText>
-              <p className="font-h2">
-                Very smart headline lorem ipsum dolor sit amet adipiscent.
-              </p>
-            </ContentText>
-          </Grid>
-        </Container>
-
-        <Container
-          flexContainer={'row'}
-          alignItems={'start'}
-          justify={'center'}
-        >
-          {features.map((feature) => {
-            return (
-              <ContentText>
-                {feature.icon}
-                <p className="font-h5">{feature.title}</p>
-                <p className="font-p">{feature.description}</p>
-              </ContentText>
-            )
-          })}
-        </Container>
+      <Container fluid={true} flexContainer={'row'}>
+        <FeatureTwoInner>
+          <ContentText>
+            <p className="font-h2">
+              Very smart headline lorem ipsum dolor sit amet adipiscent.
+            </p>
+          </ContentText>
+        </FeatureTwoInner>
+        <FeatureTwoInner>
+          <Container
+            flexContainer={'row'}
+            alignItems={'start'}
+            justify={'center'}
+          >
+            {features.map((feature, index) => {
+              return (
+                <ContentText key={index}>
+                  {feature.icon}
+                  <p className="font-h5">{feature.title}</p>
+                  <p className="font-p">{feature.description}</p>
+                </ContentText>
+              )
+            })}
+          </Container>
+        </FeatureTwoInner>
       </Container>
     </div>
   )

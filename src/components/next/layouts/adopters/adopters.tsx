@@ -81,13 +81,13 @@ const chunks = (arrObj: Array<Adopter>, size: number) => {
 
 const Adopters = () => (
   <div className={cn(styles.adopters)}>
-    {chunks(adopters, 4).map((chunk) => {
+    {chunks(adopters, 4).map((chunk, index) => {
       return (
-        <Container fluid={true}>
+        <Container fluid={true} key={index}>
           {chunk.map((adopter) => {
             return (
-              <Grid lg={3} md={12} sm={12}>
-                <AdoptersLogo key={adopter.title}>
+              <Grid lg={3} md={12} sm={12} key={adopter.title}>
+                <AdoptersLogo>
                   <a href={adopter.url} key={adopter.title}>
                     <img
                       loading="lazy"
