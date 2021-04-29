@@ -11,8 +11,16 @@ import sainsburys from '../../../../images/adopters/sainsburys.svg'
 import hootsuite from '../../../../images/adopters/hootsuite.svg'
 import threerein from '../../../../images/adopters/threerein.svg'
 import AdoptersLogo from './adopters-logo'
+import Container from '../../freestanding/containers/container'
 
-const adopters = [
+interface Adopter {
+  title: string,
+  image: string,
+  url: string,
+  pos: number
+}
+
+const adopters: Array<Adopter> = [
   {
     title: 'BluesWireless',
     image: blues,
@@ -63,28 +71,37 @@ const adopters = [
   }
 ]
 
+const chunks = (arrObj: Array<Adopter>, size: number) => {
+  arrObj.sort((a, b) => a.pos - b.pos)
+  return Array.from(new Array(Math.ceil(arrObj.length/size)), (_, i) => arrObj.slice(i * size, i * size + size))
+}
+
 const Adopters = () => (
   <div className={cn(styles.adopters)}>
-    <div className="container-fluid--next">
-      <div className={cn(styles.container)}>
-        {adopters
-          .sort((a, b) => a.pos - b.pos)
-          .map((adopter) => {
-            return (
-              <AdoptersLogo
-                key={adopter.title}
-                className={cn(
-                  'col-lg-2--next col-md-2--next col-sm-4--next col-xs-4--next'
-                )}
-              >
-                <a href={adopter.url} key={adopter.title}>
-                  <img loading="lazy" src={adopter.image} alt={adopter.title} />
-                </a>
-              </AdoptersLogo>
-            )
-          })}
-      </div>
-    </div>
+      {chunks(adopters, 4)
+        .map((chunk) => {
+          return (
+            <Container>
+              {chunk
+                .map((adopter) => {
+                  return (
+                    <AdoptersLogo
+                      key={adopter.title}
+                      className={cn(
+                        'col-lg-3--next col-md-2--next col-sm-4--next col-xs-4--next'
+                      )}
+                    >
+                      <a href={adopter.url} key={adopter.title}>
+                        <img loading="lazy" src={adopter.image} alt={adopter.title} />
+                      </a>
+                    </AdoptersLogo>
+                  )
+                })
+              }
+            </Container>
+          )
+        })
+      }
   </div>
 )
 
