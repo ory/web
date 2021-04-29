@@ -19,11 +19,11 @@ const IndexPage = () => (
     <Hero />
     <Adopters />
     <FeatureOne />
-
+    <FeatureTwo />
     {/*
     
     <Coding />
-    <FeatureTwo />
+    
     <FeatureThree />
     <FeatureFour />
     <Security />

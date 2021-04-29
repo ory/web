@@ -197,30 +197,35 @@ main a.cta {
   font-weight: 500;
   font-size: 40px;
   line-height: 120%;
+  color: var(--colors-base-grey--next);
 }
 
 .font-h2 {
   font-weight: 500;
   font-size: 32px;
   line-height: 120%;
+  color: var(--colors-base-grey--next);
 }
 
 .font-h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 120%;
+  color: var(--colors-base-grey--next);
 }
 
 .font-h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
+  color: var(--colors-base-grey--next);
 }
 
 .font-h5 {
   font-weight: 500;
   font-size: 18px;
   line-height: 135%;
+  color: var(--colors-base-grey--next);
 }
 
 .font-h6 {
@@ -270,16 +275,19 @@ main a.cta {
   font-weight: normal;
   font-size: 16px;
   line-height: 200%;
+  color: var(--colors-base-grey-900--next);
 }
 
 .font-p-lg {
   font-size: 18px;
   line-height: 177%;
+  color: var(--colors-base-grey-900--next);
 }
 
 .font-p-sm {
   font-size: 14px;
   line-height: 228.5%;
+  color: var(--colors-base-grey-900--next);
 }
 
 .font-p-xs {

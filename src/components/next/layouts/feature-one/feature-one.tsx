@@ -22,16 +22,16 @@ const FeatureOne = () => (
           <ContentText>
             <MoleculeTextInteraction>
               <Molecule>
-                <div className="font-h3">
+                <p className={cn('font-h3')}>
                   A fully integrated suite of security products.
-                </div>
-                <div className="font-p">
+                </p>
+                <p className={cn('font-p')}>
                   Securing internet services requires more than a username and a
                   password. We bring together everything that’s needed to make
                   websites and internet services secure, regardless of scale or
                   geolocation. Ory is affordable and based on mature open source
                   software and open standards.
-                </div>
+                </p>
               </Molecule>
               <MoleculeInteraction>
                 <Button style={'filled'} href={''}>
@@ -70,7 +70,6 @@ const FeatureOne = () => (
           <img loading="lazy" src={hero} alt="placeholder" />
         </ContentVisual>
       </FeatureOneInner>
-      
     </Container>
   </div>
 )
