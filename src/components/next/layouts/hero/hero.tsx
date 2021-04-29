@@ -15,40 +15,35 @@ import Grid from '../../freestanding/containers/grid'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <Container>
-      <ContentText>
-        <Grid lg={6} md={8} sm={8} xs={4}>
+    <Container flexContainer={'row'}>
+      <Grid lg={6} md={12} sm={12}>
+        <ContentText>
           <Molecule>
             <p className="font-h1">
               Security infrastructure for global internet services.
             </p>
             <p className="font-p-lg">
               Thousands of businesses with billions of network requests trust
-              Ory's security infrastructure to authenticate and manage users, set
-              and check permissions and to protect APIs, applications and data.
+              Ory's security infrastructure to authenticate and manage users,
+              set and check permissions and to protect APIs, applications and
+              data.
             </p>
           </Molecule>
           <MoleculeInteraction>
-            <Button
-              href={'/products'}
-              style={'filled'}
-            >
+            <Button href={'/products'} style={'filled'}>
               Get Started for free
             </Button>
-            <Button
-              href={'/open-source'}
-              style={'text'}
-            >
+            <Button href={'/open-source'} style={'text'}>
               Contact Sales <ArrowRight />
             </Button>
           </MoleculeInteraction>
-        </Grid>
-      </ContentText>
-      <ContentVisual className={cn('hidden-xs--next')}>
-        <Grid lg={6} md={4} sm={8} xs={4}>
+        </ContentText>
+      </Grid>
+      <Grid lg={5} md={12}>
+        <ContentVisual className={cn('hidden-sm hidden-md')}>
           <img loading="lazy" src={hero} alt="placeholder" />
-        </Grid>
-      </ContentVisual>
+        </ContentVisual>
+      </Grid>
     </Container>
   </div>
 )

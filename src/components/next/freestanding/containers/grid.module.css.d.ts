@@ -19,6 +19,10 @@ declare const styles: {
   readonly "colMd6": string;
   readonly "colMd7": string;
   readonly "colMd8": string;
+  readonly "colMd9": string;
+  readonly "colMd10": string;
+  readonly "colMd11": string;
+  readonly "colMd12": string;
   readonly "colSm1": string;
   readonly "colSm2": string;
   readonly "colSm3": string;
@@ -27,6 +31,10 @@ declare const styles: {
   readonly "colSm6": string;
   readonly "colSm7": string;
   readonly "colSm8": string;
+  readonly "colSm9": string;
+  readonly "colSm10": string;
+  readonly "colSm11": string;
+  readonly "colSm12": string;
   readonly "colXs1": string;
   readonly "colXs2": string;
   readonly "colXs3": string;

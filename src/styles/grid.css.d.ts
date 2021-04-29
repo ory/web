@@ -29,7 +29,6 @@ declare const styles: {
   readonly "hiddenSmNext": string;
   readonly "hiddenMdNext": string;
   readonly "hiddenLgNext": string;
-  readonly "containerFluidNext": string;
 };
 export = styles;
 
