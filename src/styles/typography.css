@@ -200,11 +200,25 @@ main a.cta {
   color: var(--colors-base-grey--next);
 }
 
+.font-h1-light {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  color: var(--colors-base-white--next);
+}
+
 .font-h2 {
   font-weight: 500;
   font-size: 32px;
   line-height: 120%;
   color: var(--colors-base-grey--next);
+}
+
+.font-h2-light {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  color: var(--colors-base-white--next);
 }
 
 .font-h3 {
@@ -214,11 +228,25 @@ main a.cta {
   color: var(--colors-base-grey--next);
 }
 
+.font-h3-light {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--colors-base-white--next);
+}
+
 .font-h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
   color: var(--colors-base-grey--next);
+}
+
+.font-h3-light {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--colors-base-white--next);
 }
 
 .font-h5 {
@@ -228,10 +256,25 @@ main a.cta {
   color: var(--colors-base-grey--next);
 }
 
+.font-h5-light {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+  color: var(--colors-base-white--next);
+}
+
 .font-h6 {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
+  color: var(--colors-base-grey--next);
+}
+
+.font-h6-light {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--colors-base-white--next);
 }
 
 .font-overline {
@@ -278,10 +321,23 @@ main a.cta {
   color: var(--colors-base-grey-900--next);
 }
 
+.font-p-light {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: var(--colors-base-white--next);
+}
+
 .font-p-lg {
   font-size: 18px;
   line-height: 177%;
   color: var(--colors-base-grey-900--next);
+}
+
+.font-p-lg-light {
+  font-size: 18px;
+  line-height: 177%;
+  color: var(--colors-base-white--next);
 }
 
 .font-p-sm {
@@ -290,10 +346,24 @@ main a.cta {
   color: var(--colors-base-grey-900--next);
 }
 
+.font-p-sm-light {
+  font-size: 14px;
+  line-height: 228.5%;
+  color: var(--colors-base-white--next);
+}
+
 .font-p-xs {
   font-size: 12px;
   line-height: 200%;
   letter-spacing: 0.5px;
+  color: var(--colors-base-grey-900--next);
+}
+
+.font-p-xs-light {
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.5px;
+  color: var(--colors-base-white--next);
 }
 
 .font-mono {

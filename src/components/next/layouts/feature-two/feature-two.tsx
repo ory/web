@@ -16,7 +16,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff />
+    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -26,7 +26,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff />
+    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -36,7 +36,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff />
+    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -46,7 +46,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff />
+    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
   }
 ]
 

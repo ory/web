@@ -143,3 +143,8 @@ video {
 .icon-news {
   background-color: var(--colors-themed-primary--next);
 }
+
+.icon-dark {
+  color: var(--colors-dockertest-primary--next);
+  border-color: var(--colors-themed-primary--next);
+}
