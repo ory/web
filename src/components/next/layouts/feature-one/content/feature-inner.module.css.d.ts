@@ -1,4 +1,5 @@
 declare const styles: {
-  readonly featureInner: string
-}
-export = styles
+  readonly "featureInner": string;
+};
+export = styles;
+

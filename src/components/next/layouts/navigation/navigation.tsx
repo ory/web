@@ -17,12 +17,15 @@ const mainLinks = [
   }
 ]
 
-
 const Navigation = () => (
   <div className={cn(styles.navigation, styles.navigationContainer)}>
-    <div className={cn(styles.content, styles.contentContainer, styles.contentContainerInner)}>
-    
-    </div>
+    <div
+      className={cn(
+        styles.content,
+        styles.contentContainer,
+        styles.contentContainerInner
+      )}
+    ></div>
   </div>
 )
 

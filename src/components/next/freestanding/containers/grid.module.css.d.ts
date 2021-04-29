@@ -1,0 +1,36 @@
+declare const styles: {
+  readonly "colLg1": string;
+  readonly "colLg2": string;
+  readonly "colLg3": string;
+  readonly "colLg4": string;
+  readonly "colLg5": string;
+  readonly "colLg6": string;
+  readonly "colLg7": string;
+  readonly "colLg8": string;
+  readonly "colLg9": string;
+  readonly "colLg10": string;
+  readonly "colLg11": string;
+  readonly "colLg12": string;
+  readonly "colMd1": string;
+  readonly "colMd2": string;
+  readonly "colMd3": string;
+  readonly "colMd4": string;
+  readonly "colMd5": string;
+  readonly "colMd6": string;
+  readonly "colMd7": string;
+  readonly "colMd8": string;
+  readonly "colSm1": string;
+  readonly "colSm2": string;
+  readonly "colSm3": string;
+  readonly "colSm4": string;
+  readonly "colSm5": string;
+  readonly "colSm6": string;
+  readonly "colSm7": string;
+  readonly "colSm8": string;
+  readonly "colXs1": string;
+  readonly "colXs2": string;
+  readonly "colXs3": string;
+  readonly "colXs4": string;
+};
+export = styles;
+

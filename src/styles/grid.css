@@ -171,13 +171,6 @@
   margin: 0 auto;
 }
 
-@media (--lg) {
-  .container-fluid--next {
-    width: 100%;
-    max-width: 1280px;
-  }
-}
-
 @media (--xl) {
   .container-fluid--next {
     width: calc(100% - 448px);
@@ -185,15 +178,10 @@
   }
 }
 
-@media (--lg), (--xl) {
-  @for $i from 1 to 12 {
-    .col-lg-$(i)--next {
-      lost-column: $(i) / 12 12 32px;
-    }
-
-    .col-lg-offset-$(i)--next {
-      lost-offset: $(i) / 12 12 32px;
-    }
+@media (--lg) {
+  .container-fluid--next {
+    width: 100%;
+    max-width: 1280px;
   }
 }
 
@@ -201,15 +189,6 @@
   .container-fluid--next {
     width: 100%;
     max-width: 960px;
-  }
-  @for $i from 1 to 12 {
-    .col-md-$(i)--next {
-      lost-column: $(i) / 8 8 32px;
-    }
-
-    .col-md-offset-$(i)--next {
-      lost-column: $(i) / 8 8 32px;
-    }
   }
 }
 
@@ -219,30 +198,11 @@
     width: 100%;
     max-width: 600px;
   }
-
-  @for $i from 1 to 12 {
-    .col-sm-$(i)--next {
-      lost-column: $(i) / 4 4 32px;
-    }
-
-    .col-sm-offset-$(i)--next {
-      lost-offset: $(i) / 4 4 32px;
-    }
-  }
 }
 
 @media (--xs) {
   .container-fluid--next {
     width: 100%;
     max-width: max(100vw, 444px);
-  }
-  @for $i from 1 to 12 {
-    .col-xs-$(i)--next {
-      lost-column: $(i) / 4 4 24px;
-    }
-
-    .col-xs-offset-$(i)--next {
-      lost-offset: $(i) / 4 4 24px;
-    }
   }
 }

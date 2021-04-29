@@ -17,7 +17,7 @@ import Stats from '../../components/stats'
 const IndexPage = () => (
   <Layout>
     <Hero />
-    <Adopters />
+    {/*<Adopters />
     <FeatureOne />
     <Coding />
     <FeatureTwo />
@@ -26,7 +26,7 @@ const IndexPage = () => (
     <Security />
     <Stats />
     <Resource />
-    <Footer />
+    <Footer />*/}
   </Layout>
 )
 

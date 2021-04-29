@@ -4,7 +4,7 @@ import cn from 'classnames'
 
 interface PropTypes {
   children: React.ReactNode
-  className: string
+  className?: string
 }
 
 const AdoptersLogo = ({ children, className }: PropTypes) => (

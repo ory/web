@@ -11,52 +11,43 @@ import { ArrowRight } from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
 import ContentVisual from '../../freestanding/content/content-visual'
 import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
     <Container>
-      <ContentText
-        className={cn(
-          'col-lg-5--next col-md-6--next col-sm-8--next col-xs-12--next'
-        )}
-      >
-        <Molecule>
-          <p className="font-h1">
-            Security infrastructure for global internet services.
-          </p>
-          <p className="font-p-lg">
-            Thousands of businesses with billions of network requests trust
-            Ory's security infrastructure to authenticate and manage users, set
-            and check permissions and to protect APIs, applications and data.
-          </p>
-        </Molecule>
-        <MoleculeInteraction>
-          <Button
-            className={cn(
-              'col-lg-6--next col-md-6--next col-sm-6--next col-xs-6--next'
-            )}
-            href={'/products'}
-            style={'filled'}
-          >
-            Get Started for free
-          </Button>
-          <Button
-            className={cn(
-              'col-lg-6--next col-md-6--next col-sm-6--next col-xs-6--next'
-            )}
-            href={'/open-source'}
-            style={'text'}
-          >
-            Contact Sales <ArrowRight />
-          </Button>
-        </MoleculeInteraction>
+      <ContentText>
+        <Grid lg={6} md={8} sm={8} xs={4}>
+          <Molecule>
+            <p className="font-h1">
+              Security infrastructure for global internet services.
+            </p>
+            <p className="font-p-lg">
+              Thousands of businesses with billions of network requests trust
+              Ory's security infrastructure to authenticate and manage users, set
+              and check permissions and to protect APIs, applications and data.
+            </p>
+          </Molecule>
+          <MoleculeInteraction>
+            <Button
+              href={'/products'}
+              style={'filled'}
+            >
+              Get Started for free
+            </Button>
+            <Button
+              href={'/open-source'}
+              style={'text'}
+            >
+              Contact Sales <ArrowRight />
+            </Button>
+          </MoleculeInteraction>
+        </Grid>
       </ContentText>
-      <ContentVisual
-        className={cn(
-          'col-lg-6--next col-md-5--next col-sm-5--next hidden-xs--next'
-        )}
-      >
-        <img loading="lazy" src={hero} alt="placeholder" />
+      <ContentVisual className={cn('hidden-xs--next')}>
+        <Grid lg={6} md={4} sm={8} xs={4}>
+          <img loading="lazy" src={hero} alt="placeholder" />
+        </Grid>
       </ContentVisual>
     </Container>
   </div>

@@ -12,11 +12,12 @@ import hootsuite from '../../../../images/adopters/hootsuite.svg'
 import threerein from '../../../../images/adopters/threerein.svg'
 import AdoptersLogo from './adopters-logo'
 import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
 
 interface Adopter {
-  title: string,
-  image: string,
-  url: string,
+  title: string
+  image: string
+  url: string
   pos: number
 }
 
@@ -73,35 +74,30 @@ const adopters: Array<Adopter> = [
 
 const chunks = (arrObj: Array<Adopter>, size: number) => {
   arrObj.sort((a, b) => a.pos - b.pos)
-  return Array.from(new Array(Math.ceil(arrObj.length/size)), (_, i) => arrObj.slice(i * size, i * size + size))
+  return Array.from(new Array(Math.ceil(arrObj.length / size)), (_, i) =>
+    arrObj.slice(i * size, i * size + size)
+  )
 }
 
 const Adopters = () => (
   <div className={cn(styles.adopters)}>
-      {chunks(adopters, 4)
-        .map((chunk) => {
-          return (
-            <Container>
-              {chunk
-                .map((adopter) => {
-                  return (
-                    <AdoptersLogo
-                      key={adopter.title}
-                      className={cn(
-                        'col-lg-3--next col-md-2--next col-sm-4--next col-xs-4--next'
-                      )}
-                    >
-                      <a href={adopter.url} key={adopter.title}>
-                        <img loading="lazy" src={adopter.image} alt={adopter.title} />
-                      </a>
-                    </AdoptersLogo>
-                  )
-                })
-              }
-            </Container>
-          )
-        })
-      }
+    {chunks(adopters, 4).map((chunk) => {
+      return (
+        <Container>
+          {chunk.map((adopter) => {
+            return (
+              <AdoptersLogo key={adopter.title}>
+                <Grid lg={3} md={2} sm={4} xs={4}>
+                <a href={adopter.url} key={adopter.title}>
+                  <img loading="lazy" src={adopter.image} alt={adopter.title} />
+                </a>
+                </Grid>
+              </AdoptersLogo>
+            )
+          })}
+        </Container>
+      )
+    })}
   </div>
 )
 

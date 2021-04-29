@@ -1,4 +1,5 @@
 declare const styles: {
-  readonly statsBox: string
-}
-export = styles
+  readonly "statsBox": string;
+};
+export = styles;
+

@@ -1,7 +1,6 @@
 import React from 'react'
 import * as styles from './feature-inner.module.css'
 import cn from 'classnames'
-import ContentWrapper from '../../../freestanding/content/content-wrapper'
 
 export interface PropTypes {
   children: React.ReactNode
@@ -10,7 +9,7 @@ export interface PropTypes {
 
 const FeatureInner = ({ children, className }: PropTypes) => (
   <div className={cn(styles.featureInner, className && className)}>
-    <ContentWrapper>{children}</ContentWrapper>
+    {children}
   </div>
 )
 
