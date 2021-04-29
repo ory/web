@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 interface PropTypes {
+  canonical?: string
   description?: string
   lang?: string
   meta?: any[]
@@ -13,6 +14,7 @@ interface PropTypes {
 const author = 'ORY'
 
 const SEO = ({
+  canonical,
   description,
   lang = 'en',
   meta = [],
@@ -29,6 +31,11 @@ const SEO = ({
         ? ' - ory.sh'
         : ''
     }`}
+    link={
+      canonical
+        ? [{ rel: 'canonical', key: canonical, href: canonical }]
+        : []
+    }
     meta={[
       {
         name: `description`,

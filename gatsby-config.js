@@ -156,7 +156,11 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    {
+    {      
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+    options: {
+      siteUrl: `https://www.ory.sh`,
+    },
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
