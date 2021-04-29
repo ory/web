@@ -17,10 +17,11 @@ import Stats from '../../components/stats'
 const IndexPage = () => (
   <Layout>
     <Hero />
+    <Adopters />
+    <FeatureOne />
 
     {/*
-     <Adopters />
-    <FeatureOne />
+    
     <Coding />
     <FeatureTwo />
     <FeatureThree />

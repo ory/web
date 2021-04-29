@@ -15,7 +15,7 @@ import Grid from '../../freestanding/containers/grid'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <Container flexContainer={'row'}>
+    <Container fluid={true} flexContainer={'row'}>
       <Grid lg={6} md={12} sm={12}>
         <ContentText>
           <Molecule>

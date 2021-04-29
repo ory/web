@@ -8,6 +8,7 @@ export interface PropTypes {
   flexContainer?: 'row' | 'column'
   alignItems?: 'start' | 'center' | 'end'
   justifyItem?: 'center'
+  fluid?: false | true
 }
 
 const getFlex = (flex: string) => {
@@ -30,9 +31,10 @@ const Container = ({
   className,
   flexContainer = 'row',
   alignItems,
-  justifyItem
+  justifyItem,
+  fluid = false
 }: PropTypes) => (
-  <div className={cn(styles.containerFluid)}>
+  <div className={cn(fluid && styles.containerFluid)}>
     <div
       className={cn(
         styles.container,

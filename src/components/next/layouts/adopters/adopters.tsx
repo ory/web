@@ -83,11 +83,11 @@ const Adopters = () => (
   <div className={cn(styles.adopters)}>
     {chunks(adopters, 4).map((chunk) => {
       return (
-        <Container>
+        <Container fluid={true}>
           {chunk.map((adopter) => {
             return (
-              <AdoptersLogo key={adopter.title}>
-                <Grid lg={2} md={4} sm={8} xs={4}>
+              <Grid lg={3} md={12} sm={12}>
+                <AdoptersLogo key={adopter.title}>
                   <a href={adopter.url} key={adopter.title}>
                     <img
                       loading="lazy"
@@ -95,8 +95,8 @@ const Adopters = () => (
                       alt={adopter.title}
                     />
                   </a>
-                </Grid>
-              </AdoptersLogo>
+                </AdoptersLogo>
+              </Grid>
             )
           })}
         </Container>
