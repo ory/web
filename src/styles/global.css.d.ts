@@ -27,5 +27,6 @@ declare const styles: {
   readonly iconInfo: string
   readonly iconError: string
   readonly iconNews: string
+  readonly iconDark: string
 }
 export = styles

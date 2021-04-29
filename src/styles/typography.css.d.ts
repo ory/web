@@ -8,11 +8,16 @@ declare const styles: {
   readonly fontBold: string
   readonly fontHero: string
   readonly fontH1: string
+  readonly fontH1Light: string
   readonly fontH2: string
+  readonly fontH2Light: string
   readonly fontH3: string
+  readonly fontH3Light: string
   readonly fontH4: string
   readonly fontH5: string
+  readonly fontH5Light: string
   readonly fontH6: string
+  readonly fontH6Light: string
   readonly fontOverline: string
   readonly fontSubtitle: string
   readonly fontBtn: string
@@ -21,9 +26,13 @@ declare const styles: {
   readonly fontLinkMd: string
   readonly fontLinkSm: string
   readonly fontP: string
+  readonly fontPLight: string
   readonly fontPLg: string
+  readonly fontPLgLight: string
   readonly fontPSm: string
+  readonly fontPSmLight: string
   readonly fontPXs: string
+  readonly fontPXsLight: string
   readonly fontMono: string
   readonly fontMonoS: string
 }

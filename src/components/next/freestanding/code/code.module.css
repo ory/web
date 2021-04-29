@@ -1,0 +1,76 @@
+.code-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 24px;
+}
+
+.code-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /*padding: 16px 24px;*/
+}
+
+.window-toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px;
+  /*background-color: var(--colors-base-grey--next);*/
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+}
+
+.window-actions {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-right: 16px;
+
+  & .window-action {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--colors-base-grey--next);
+    margin-right: 5px;
+
+    &.primary {
+      background-color: var(--colors-hydra-primary--next);
+    }
+    &.second {
+      background-color: var(--color-warning-primary--next);
+    }
+    &.third {
+      background-color: var(--colors-keto-primary--next);
+    }
+  }
+}
+
+.code-highlights {
+  color: var(--colors-themed-darkmode--next) !important;
+  background-color: var(--colors-base-grey--next) !important;
+  opacity: inherit !important;
+  overflow: hidden;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+
+  /* prevent text select */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* prevent prism from changing text background color */
+span[class*='token operator'] {
+  background-color: transparent !important;
+}

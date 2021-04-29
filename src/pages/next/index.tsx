@@ -21,10 +21,8 @@ const IndexPage = () => (
     <FeatureOne />
     <Coding />
     <FeatureTwo />
+
     {/*
-    
-    
-    
     <FeatureThree />
     <FeatureFour />
     <Security />
