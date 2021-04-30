@@ -6,6 +6,7 @@ import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
 import FeatureTwoInner from './content/feature-two-inner'
+import Molecule from '../../freestanding/molecule/molecule'
 
 const features = [
   {
@@ -53,31 +54,38 @@ const features = [
 const FeatureTwo = () => {
   return (
     <div className={cn(styles.featureTwo)}>
-      <Container fluid={true} flexContainer={'row'}>
-        <FeatureTwoInner>
+      <Container fluid={true} flexContainer={'column'} justify={'center'} alignItems={'center'}>
+        
+        <Container flexContainer={'row'} justify={'center'} alignItems={'start'}>
           <ContentText>
-            <p className="font-h2">
-              Very smart headline lorem ipsum dolor sit amet adipiscent.
-            </p>
+            <Molecule>
+              <p className="font-h2">
+                Very smart headline lorem ipsum dolor sit amet adipiscent.
+              </p>
+            </Molecule>
           </ContentText>
-        </FeatureTwoInner>
-        <FeatureTwoInner>
-          <Container
+        </Container>
+        
+        <Container
             flexContainer={'row'}
             alignItems={'start'}
-            justify={'center'}
+            justify={'start'}
           >
             {features.map((feature, index) => {
               return (
-                <ContentText key={index}>
-                  {feature.icon}
-                  <p className="font-h5">{feature.title}</p>
-                  <p className="font-p">{feature.description}</p>
-                </ContentText>
+                <Grid lg={2} md={4} sm={10} key={index}>
+                  <ContentText>
+                    <Molecule>
+                      {feature.icon}
+                      <p className="font-h5">{feature.title}</p>
+                      <p className="font-p">{feature.description}</p>
+                    </Molecule>
+                  </ContentText>
+                </Grid>
               )
             })}
           </Container>
-        </FeatureTwoInner>
+      
       </Container>
     </div>
   )
