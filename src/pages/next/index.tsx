@@ -12,7 +12,8 @@ import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
-import Stats from '../../components/stats'
+import Stats from '../../components/next/layouts/stats/stats'
+
 
 const IndexPage = () => (
   <Layout>
@@ -22,9 +23,10 @@ const IndexPage = () => (
     <Coding />
     <FeatureTwo />
       <FeatureThree />
-    {/*
-    <FeatureThree />
     <FeatureFour />
+  <Stats/>
+    {/*
+    
     <Security />
     <Stats />
     <Resource />

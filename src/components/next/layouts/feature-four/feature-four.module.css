@@ -1,21 +1,4 @@
 .feature-four {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0;
-
-  &.feature-four-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 64px 0;
-  }
-}
-
-.feature-four-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
+  background-color: var(--colors-base-white--next);
+  padding: 64px 0;
 }
