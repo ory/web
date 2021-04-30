@@ -14,7 +14,6 @@ import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
 
-
 const IndexPage = () => (
   <Layout>
     <Hero />
@@ -22,13 +21,11 @@ const IndexPage = () => (
     <FeatureOne />
     <Coding />
     <FeatureTwo />
-      <FeatureThree />
+    <FeatureThree />
     <FeatureFour />
-  <Stats/>
-    {/*
-    
     <Security />
     <Stats />
+    {/*
     <Resource />
     <Footer />*/}
   </Layout>

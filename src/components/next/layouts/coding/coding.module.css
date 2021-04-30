@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-@media (--md-viewport),(--sm-viewport) {
+@media (--md-viewport), (--sm-viewport) {
   .coding {
     padding: 64px 0;
   }

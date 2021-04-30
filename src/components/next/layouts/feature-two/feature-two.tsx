@@ -54,23 +54,35 @@ const features = [
 const FeatureTwo = () => {
   return (
     <div className={cn(styles.featureTwo)}>
-      <Container fluid={true} flexContainer={'column'} justify={'start'} alignItems={'center'}>
-  
+      <Container
+        fluid={true}
+        flexContainer={'column'}
+        justify={'start'}
+        alignItems={'center'}
+      >
         <Grid lg={10} md={10} sm={10}>
-            <ContentText>
-              <Molecule>
-                <p className="font-h2">
-                  Very smart headline lorem ipsum dolor sit amet adipiscent.
-                </p>
-              </Molecule>
-            </ContentText>
+          <ContentText>
+            <Molecule>
+              <p className="font-h2">
+                Very smart headline lorem ipsum dolor sit amet adipiscent.
+              </p>
+            </Molecule>
+          </ContentText>
         </Grid>
-        
+
         <Grid lg={10} md={12} sm={10}>
           <Container>
             {features.map((feature, index) => {
               return (
-                <Grid lg={3} md={5} sm={10} lgOffset={false} mdOffset={false} smOffset={false} key={index}>
+                <Grid
+                  lg={3}
+                  md={5}
+                  sm={10}
+                  lgOffset={false}
+                  mdOffset={false}
+                  smOffset={false}
+                  key={index}
+                >
                   <ContentText>
                     <Molecule>
                       {feature.icon}
@@ -83,7 +95,6 @@ const FeatureTwo = () => {
             })}
           </Container>
         </Grid>
-      
       </Container>
     </div>
   )

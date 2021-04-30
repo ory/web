@@ -228,17 +228,23 @@ class Stats extends Component<PropTypes, StateTypes> {
     return (
       <div className={styles.stats}>
         <Container flexContainer={'row'}>
-            <Grid lg={4} md={10} sm={10}>
-              <ContentText>
-                <Molecule>
-                  <p className={cn('font-h3-light')}>Billions of Identities.</p>
-                  <p className={cn('font-p-light')}>
-                    <a href={''} className={cn('font-link font-link-lg link-news')}>Companies</a> from all over the world rely on Ory for their identity needs.
-                    Ory technology secures billions of identity requests.
-                  </p>
-                </Molecule>
-              </ContentText>
-            </Grid>
+          <Grid lg={4} md={10} sm={10}>
+            <ContentText>
+              <Molecule>
+                <p className={cn('font-h3-light')}>Billions of Identities.</p>
+                <p className={cn('font-p-light')}>
+                  <a
+                    href={''}
+                    className={cn('font-link font-link-lg link-news')}
+                  >
+                    Companies
+                  </a>{' '}
+                  from all over the world rely on Ory for their identity needs.
+                  Ory technology secures billions of identity requests.
+                </p>
+              </Molecule>
+            </ContentText>
+          </Grid>
           <Grid lg={4}>
             <Container className={cn(styles.statsRow)}>
               <Grid lg={10} md={10} sm={10}>
@@ -258,7 +264,7 @@ class Stats extends Component<PropTypes, StateTypes> {
               </Grid>
             </Container>
           </Grid>
-          </Container>
+        </Container>
       </div>
     )
   }

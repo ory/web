@@ -102,15 +102,15 @@ const Coding = () => (
             </Container>
           </Container>
         </Grid>
-      
-      <Grid lg={5} className={cn('hidden-sm hidden-md')}>
-        <Container
-          flexContainer={'column'}
-          alignItems={'start'}
-          className={cn(styles.codeContainer)}
-        >
-          <Code
-            code={`const app = express();
+
+        <Grid lg={5} className={cn('hidden-sm hidden-md')}>
+          <Container
+            flexContainer={'column'}
+            alignItems={'start'}
+            className={cn(styles.codeContainer)}
+          >
+            <Code
+              code={`const app = express();
 const kratos = new PublicApi(new Configuration({
   basePath: 'https://<my-project>.projects.oryapis.com/api/kratos/public',
 }));
@@ -125,9 +125,9 @@ function protect(req, res, next) {
       res.redirect('/login');
     });
 }`}
-          ></Code>
-          <Terminal
-            code={`$ export ORY_ACCESS_TOKEN=RaEEZfMbx7QGuf0uWNt9c15NE4FG4OOW
+            ></Code>
+            <Terminal
+              code={`$ export ORY_ACCESS_TOKEN=RaEEZfMbx7QGuf0uWNt9c15NE4FG4OOW
 $ ory identities list --project playground --format json-pretty
 [
   {
@@ -139,19 +139,19 @@ $ ory identities list --project playground --format json-pretty
      }
    }
 ]`}
-          ></Terminal>
-        </Container>
-      </Grid>
+            ></Terminal>
+          </Container>
+        </Grid>
 
-      <Grid md={6} mdOffset={false} className={cn('hidden-lg hidden-sm')}>
-        <Container
-          flexContainer={'column'}
-          alignItems={'center'}
-          justify={'center'}
-          className={cn(styles.codeContainer)}
-        >
-          {/*Currently unstable for tablet and mobile view*/}
-          {/*<Code
+        <Grid md={6} mdOffset={false} className={cn('hidden-lg hidden-sm')}>
+          <Container
+            flexContainer={'column'}
+            alignItems={'center'}
+            justify={'center'}
+            className={cn(styles.codeContainer)}
+          >
+            {/*Currently unstable for tablet and mobile view*/}
+            {/*<Code
             code={`const app = express();
 const kratos = new PublicApi(new Configuration({
   basePath: 'https://<my-project>.projects.oryapis.com/api/kratos/public',
@@ -168,7 +168,7 @@ function protect(req, res, next) {
     });
 }`}
           ></Code>*/}
-          {/*<Terminal
+            {/*<Terminal
             code={`$ export ORY_ACCESS_TOKEN=RaEEZfMbx7QGuf0uWNt9c15NE4FG4OOW
 $ ory identities list --project playground --format json-pretty
 [
@@ -182,8 +182,8 @@ $ ory identities list --project playground --format json-pretty
    }
 ]`}
           ></Terminal>*/}
-        </Container>
-      </Grid>
+          </Container>
+        </Grid>
       </Container>
     </Container>
   </div>
