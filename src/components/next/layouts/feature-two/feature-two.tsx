@@ -69,7 +69,7 @@ const FeatureTwo = () => {
         <Container
             flexContainer={'row'}
             alignItems={'start'}
-            justify={'start'}
+            justify={'center'}
           >
             {features.map((feature, index) => {
               return (
