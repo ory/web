@@ -54,37 +54,35 @@ const features = [
 const FeatureTwo = () => {
   return (
     <div className={cn(styles.featureTwo)}>
-      <Container fluid={true} flexContainer={'column'} justify={'center'} alignItems={'center'}>
+      <Container fluid={true} flexContainer={'column'} justify={'start'} alignItems={'center'}>
+  
+        <Grid lg={10} md={10} sm={10}>
+            <ContentText>
+              <Molecule>
+                <p className="font-h2">
+                  Very smart headline lorem ipsum dolor sit amet adipiscent.
+                </p>
+              </Molecule>
+            </ContentText>
+        </Grid>
         
-        <Container flexContainer={'row'} justify={'center'} alignItems={'start'}>
-          <ContentText>
-            <Molecule>
-              <p className="font-h2">
-                Very smart headline lorem ipsum dolor sit amet adipiscent.
-              </p>
-            </Molecule>
-          </ContentText>
-        </Container>
-        
-        <Container
-            flexContainer={'row'}
-            alignItems={'start'}
-            justify={'center'}
-          >
+        <Grid lg={10} md={12} sm={10}>
+          <Container>
             {features.map((feature, index) => {
               return (
-                <Grid lg={2} md={4} sm={10} key={index}>
+                <Grid lg={3} md={5} sm={10} lgOffset={false} mdOffset={false} smOffset={false} key={index}>
                   <ContentText>
                     <Molecule>
                       {feature.icon}
                       <p className="font-h5">{feature.title}</p>
-                      <p className="font-p">{feature.description}</p>
+                      <p className="font-p-sm">{feature.description}</p>
                     </Molecule>
                   </ContentText>
                 </Grid>
               )
             })}
           </Container>
+        </Grid>
       
       </Container>
     </div>

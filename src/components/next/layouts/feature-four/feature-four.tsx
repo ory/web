@@ -19,8 +19,8 @@ const FeatureFour = () => (
               <p className={'font-h3'}>A fully integrated suite of security products.</p>
               <p className={'font-p'}>Securing internet services requires more than a username and a password.
                 We bring together everything that’s needed to make websites and internet services secure,
-                regardless of scale or geolocation. Ory is affordable and based on mature <a href={''} className={'font-link font-link-md'}>open source</a> software
-                and <a href={''} className={'font-link font-link-md'}>open standards</a>.
+                regardless of scale or geolocation. Ory is affordable and based on mature <a href={''} className={cn('font-link font-link-md link-news')}>open source</a> software
+                and <a href={''} className={cn('font-link font-link-md link-news')}>open standards</a>.
               </p>
             </Molecule>
           </ContentText>
