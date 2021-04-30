@@ -25,8 +25,9 @@ const IndexPage = () => (
     <FeatureFour />
     <Security />
     <Stats />
-    {/*
     <Resource />
+    {/*
+    
     <Footer />*/}
   </Layout>
 )
