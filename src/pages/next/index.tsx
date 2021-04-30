@@ -10,6 +10,7 @@ import FeatureThree from '../../components/next/layouts/feature-three/feature-th
 import FeatureTwo from '../../components/next/layouts/feature-two/feature-two'
 import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
+import Quickstart from '../../components/next/layouts/quickstart/quickstart'
 import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
@@ -25,8 +26,10 @@ const IndexPage = () => (
     <FeatureFour />
     <Security />
     <Stats />
-    {/*
     <Resource />
+      <Quickstart></Quickstart>
+    {/*
+    
     <Footer />*/}
   </Layout>
 )

@@ -1,15 +1,10 @@
 .quickstart {
   background-color: var(--colors-base-white--next);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0;
+  padding: 128px 0;
+}
 
-  .quickstart-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 128px 0;
+@media (--md-viewport), (--sm-viewport) {
+  .quickstart {
+    padding: 64px 0;
   }
 }
