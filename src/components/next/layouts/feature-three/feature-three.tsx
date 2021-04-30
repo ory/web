@@ -13,7 +13,7 @@ const FeatureThree = () => (
     
     <Container flexContainer={'row'} alignItems={'center'} justify={'center'}>
     
-        <Grid lg={4} md={8} sm={10} smOffset={false}>
+        <Grid lg={4} md={8} sm={10}>
           <ContentText>
             <Molecule>
               <p className={'font-h3'}>A fully integrated suite of security products.</p>

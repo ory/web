@@ -16,7 +16,7 @@ import Grid from '../../freestanding/containers/grid'
 const Hero = () => (
   <div className={cn(styles.hero)}>
     <Container fluid={true} alignItems={'center'} justify={'center'}>
-      <Grid lg={5} md={10} sm={12} smOffset={false}>
+      <Grid lg={5} md={10} sm={10}>
         <ContentText>
           <Molecule>
             <p className="font-h1">

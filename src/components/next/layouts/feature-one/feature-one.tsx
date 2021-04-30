@@ -18,7 +18,7 @@ const FeatureOne = () => (
   <div className={cn(styles.featureOne)}>
     <Container fluid={true} flexContainer={'column'}>
       <Container flexContainer={'row'} alignItems={'center'} justify={'center'}>
-        <Grid lg={5} md={10} sm={12} smOffset={false}>
+        <Grid lg={5} md={10} sm={10}>
           <ContentText>
             <MoleculeTextInteraction>
               <Molecule>
