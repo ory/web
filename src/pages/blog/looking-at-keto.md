@@ -13,7 +13,7 @@ seo:
   canonical: >
     https://gruchalski.com/posts/2021-04-11-looking-at-zanzibar-through-ory-keto/
 
-publishedAt: '2021-04-28'
+publishedAt: '2021-05-05'
 author: radekg
 overline: >
   Try out Ory Keto with this simple, easy to follow real world example!
