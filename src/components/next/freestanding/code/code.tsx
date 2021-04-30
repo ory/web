@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import * as styles from './code.module.css'
 import cn from 'classnames'
 import Prism from 'prismjs'
+import Container from '../containers/container'
 
 interface PropTypes {
   className?: string
@@ -14,7 +15,7 @@ const Code = ({ code, className }: PropTypes) => {
   })
 
   return (
-    <>
+    <div className={cn(className && className)}>
       <div className={cn(styles.windowToolbar)}>
         <div className={styles.editorHeader}>
           <div className={styles.windowActions}>
@@ -24,20 +25,14 @@ const Code = ({ code, className }: PropTypes) => {
           </div>
         </div>
       </div>
-      <div
-        className={cn(
-          styles.codeContainer,
-          styles.codeHighlights,
-          className && className
-        )}
-      >
-        <pre className={cn('font-p-mono', styles.codeHighlights)}>
-          <code className={cn('language-javascript', styles.codeHighlights)}>
-            {code}
-          </code>
-        </pre>
-      </div>
-    </>
+        <div className={cn(styles.codeContainer, styles.codeHighlights)}>
+          <pre className={cn('font-p-mono', styles.codeHighlights)}>
+            <code className={cn('language-javascript', styles.codeHighlights)}>
+              {code}
+            </code>
+          </pre>
+        </div>
+    </div>
   )
 }
 

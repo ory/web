@@ -15,15 +15,8 @@ import Grid from '../../freestanding/containers/grid'
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <Container fluid={true} justify={'center'}>
-      <Grid
-        lg={6}
-        md={12}
-        sm={12}
-        lgOffset={true}
-        mdOffset={true}
-        smOffset={true}
-      >
+    <Container fluid={true} alignItems={'center'} justify={'center'}>
+      <Grid lg={5} md={10} sm={12} smOffset={false}>
         <ContentText>
           <Molecule>
             <p className="font-h1">
@@ -46,8 +39,8 @@ const Hero = () => (
           </MoleculeInteraction>
         </ContentText>
       </Grid>
-      <Grid lg={4} md={12} sm={12}>
-        <ContentVisual className={cn('hidden-sm hidden-md')}>
+      <Grid lg={5} md={8} sm={10} className={cn('hidden-sm hidden-md')}>
+        <ContentVisual>
           <img loading="lazy" src={hero} alt="placeholder" />
         </ContentVisual>
       </Grid>

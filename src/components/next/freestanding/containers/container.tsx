@@ -31,7 +31,7 @@ const getFlex = (flex: string) => {
 
 const getAlign = (align: string) => {
   // @ts-ignore
-  return styles[`flex-${parseCase}`]
+  return styles[`flex${parseCase(align)}`]
 }
 
 const getJustify = (justify: string) => {

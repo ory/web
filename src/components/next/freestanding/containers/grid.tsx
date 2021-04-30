@@ -21,9 +21,9 @@ const Grid = ({
   sm,
   md,
   lg,
-  lgOffset = false,
-  mdOffset = false,
-  smOffset = false
+  lgOffset = true,
+  mdOffset = true,
+  smOffset = true
 }: PropTypes) => {
   const getLg = (i: number) => {
     // @ts-ignore

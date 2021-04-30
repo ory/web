@@ -5,9 +5,6 @@
 }
 
 .code-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 0;
   background: var(--colors-base-black--next);
 
@@ -20,4 +17,10 @@
   border-radius: 16px;
 
   overflow: hidden;
+}
+
+@media (--md-viewport),(--sm-viewport) {
+  .coding {
+    padding: 64px 0;
+  }
 }

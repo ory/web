@@ -1,6 +1,5 @@
 declare const styles: {
   readonly codeContainer: string
-  readonly codeBox: string
   readonly windowToolbar: string
   readonly editorHeader: string
   readonly windowActions: string

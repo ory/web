@@ -17,8 +17,8 @@ import FeatureOneInner from './content/feature-one-inner'
 const FeatureOne = () => (
   <div className={cn(styles.featureOne)}>
     <Container fluid={true} flexContainer={'column'}>
-      <FeatureOneInner>
-        <Grid lg={6} md={12} sm={12}>
+      <Container flexContainer={'row'} alignItems={'center'} justify={'center'}>
+        <Grid lg={5} md={10} sm={12} smOffset={false}>
           <ContentText>
             <MoleculeTextInteraction>
               <Molecule>
@@ -45,31 +45,41 @@ const FeatureOne = () => (
             </MoleculeTextInteraction>
           </ContentText>
         </Grid>
-        <Grid lg={4} md={12} sm={12}>
+        <Grid lg={5} className={cn('hidden-sm hidden-md')}>
           <ContentVisual>
             <img loading="lazy" src={hero} alt="placeholder" />
           </ContentVisual>
         </Grid>
-      </FeatureOneInner>
+      </Container>
 
-      <FeatureOneInner className={cn('hidden-sm hidden-md')}>
-        <Grid lg={8} md={12} sm={12}>
+      <Container
+        flexContainer={'row'}
+        alignItems={'start'}
+        justify={'center'}
+        className={cn('hidden-sm hidden-md')}
+      >
+        <Grid lg={5} md={10} sm={4}>
           <ContentVisual>
             <img loading="lazy" src={hero} alt="placeholder" />
           </ContentVisual>
         </Grid>
-        <Grid lg={4} md={12} sm={12}>
+        <Grid lg={5} md={10} sm={4}>
           <ContentVisual>
             <img loading="lazy" src={hero} alt="placeholder" />
           </ContentVisual>
         </Grid>
-      </FeatureOneInner>
+      </Container>
 
-      <FeatureOneInner className={cn('hidden-sm hidden-md')}>
+      <Container
+        flexContainer={'row'}
+        alignItems={'center'}
+        justify={'center'}
+        className={cn('hidden-sm hidden-md')}
+      >
         <ContentVisual>
           <img loading="lazy" src={hero} alt="placeholder" />
         </ContentVisual>
-      </FeatureOneInner>
+      </Container>
     </Container>
   </div>
 )
