@@ -16,7 +16,7 @@ const Coding = () => (
   <div className={cn(styles.coding)}>
     <Container fluid={true}>
       <Container>
-        <Grid lg={5} md={10} sm={10}>
+        <Grid lg={4} md={10} sm={10}>
           <Container flexContainer={'column'}>
             <ContentText>
               <MoleculeTextInteraction>
@@ -45,7 +45,7 @@ const Coding = () => (
               justify={'center'}
               alignItems={'start'}
             >
-              <Grid lg={5} md={6} sm={12} mdOffset={false}>
+              <Grid lg={6} md={6} sm={12} lgOffset={false} mdOffset={false}>
                 <ContentText>
                   <MoleculeTextInteraction>
                     <Molecule>
@@ -71,7 +71,7 @@ const Coding = () => (
                   </MoleculeTextInteraction>
                 </ContentText>
               </Grid>
-              <Grid lg={5} md={6} sm={12} mdOffset={false}>
+              <Grid lg={6} md={6} sm={12} lgOffset={false} mdOffset={false}>
                 <ContentText>
                   <MoleculeTextInteraction>
                     <Molecule>
