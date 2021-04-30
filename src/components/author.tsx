@@ -18,6 +18,10 @@ const authors: { [key: string]: Profile } = {
     fullname: 'Vincent Kraus',
     github: 'https://github.com/vinckr'
   },
+  radekg: {
+    fullname: 'Radek Gruchalski',
+    github: 'https://github.com/radekg'
+  },
   k9ert: {
     fullname: 'Kim Neunert',
     github: 'https://github.com/k9ert'
