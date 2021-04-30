@@ -36,20 +36,23 @@ const Quickstart = () => (
         <MoleculeFeature>
           <Molecule>
             <GitDiff />
-            <p className={cn('font-h5')}>Powerful Tools</p>
+            <p className={cn('font-h5')}>Check out our documentation!</p>
             <p className={cn('font-p-md')}>
-              Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all operating
-              systems and CPUs.
+              We believe in providing clear and extensive documentation to
+              enable developers to use our services quickly. They provide a deep
+              understanding of API concepts in an organized format.
             </p>
           </Molecule>
         </MoleculeFeature>
         <MoleculeFeature>
           <Molecule>
             <GitDiff />
-            <p className={cn('font-h5')}>Powerful Tools</p>
+            <p className={cn('font-h5')}>Join a diverse community!</p>
             <p className={cn('font-p-md')}>
-              Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all operating
-              systems and CPUs.
+              Join our developer community to contribute to the Ory platform!
+              You will have access to our public chat, a knowledge base to get
+              started and the ability to actively contribute and shape our open
+              source project.
             </p>
           </Molecule>
         </MoleculeFeature>

@@ -20,7 +20,7 @@ const Hero = () => (
         <ContentText>
           <Molecule>
             <p className="font-h1">
-              Security infrastructure for global internet services.
+              Access and Identity for secure global internet services.
             </p>
             <p className="font-p-lg">
               Thousands of businesses with billions of network requests trust
