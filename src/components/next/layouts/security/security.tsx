@@ -14,39 +14,39 @@ import { Fingerprint } from 'phosphor-react'
 
 const features = [
   {
-    title: 'Feature',
+    title: 'Headless Login, Sign-Up & User Management',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      'Bring your own UI and Branding. Ory is the easiest way to add a custom login and registration process to your website or app.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'Zero Trust Architecture',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      'Our Zero Trust Architecture helps mitigate organizations’ security concerns regarding third-party applications and web applications.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'Scale globally',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      'Ory provides a reliable and resilient foundation for your business. Serve users around the globe quickly and without downtime.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'Permissions',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      'From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'SDKs in every language',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      'Ory works with all popular programming languages like Java, PHP, Python, Ruby, Rust, Go, .Net, Dart.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'Social Sign In & Integrations',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      'Ory offers social sign in for all common OIDC providers (Google, Github, Facebook, Twitter ect.) as well as payment and email integrations. ',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   }
 ]
@@ -58,14 +58,18 @@ const Security = () => (
           <MoleculeTextInteraction>
             <Molecule>
               <p className={cn('font-h3')}>
-                A fully integrated suite of security products.
+                Ory solves identity and access control, no matter what industry
+                you’re in.
               </p>
               <p className={cn('font-p')}>
-                Securing internet services requires more than a username and a
-                password. We bring together everything that’s needed to make
-                websites and internet services secure, regardless of scale or
-                geolocation. Ory is affordable and based on mature open source
-                software and open standards.
+                To meet the needs of modern web development, we have designed a
+                system that performs with a high level of security and
+                robustness every single day, no matter how big the business is
+                or where they operate. <p />
+                The heart of Ory is a modern web service that works for all
+                sizes of customers. It requires little to no pre-configuration,
+                is highly scalable and uses only open source software and
+                standards.
               </p>
             </Molecule>
             <MoleculeInteraction>

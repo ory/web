@@ -15,21 +15,14 @@ const FeatureThree = () => (
         <ContentText>
           <Molecule>
             <p className={'font-h3'}>
-              A fully integrated suite of security products.
+              Intelligent, integrated, and secure products.
             </p>
             <p className={'font-p'}>
-              Securing internet services requires more than a username and a
-              password. We bring together everything that’s needed to make
-              websites and internet services secure, regardless of scale or
-              geolocation. Ory is affordable and based on mature{' '}
-              <a href={''} className={cn('font-link font-link-md link-news')}>
-                open source
-              </a>{' '}
-              software and{' '}
-              <a href={''} className={cn('font-link font-link-md link-news')}>
-                open standards
-              </a>
-              .
+              Ory is a turnkey solution that protects businesses from credential
+              thefts and other security threats. It authenticates users, sets
+              permissions and enforces rules for applications and data. The
+              fully-managed service scales to protect the largest global network
+              services.
             </p>
           </Molecule>
         </ContentText>

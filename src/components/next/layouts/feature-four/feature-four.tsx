@@ -14,22 +14,12 @@ const FeatureFour = () => (
       <Grid lg={4} md={8} sm={10}>
         <ContentText>
           <Molecule>
-            <p className={'font-h3'}>
-              A fully integrated suite of security products.
-            </p>
+            <p className={'font-h3'}>Stay on top of security!</p>
             <p className={'font-p'}>
-              Securing internet services requires more than a username and a
-              password. We bring together everything that’s needed to make
-              websites and internet services secure, regardless of scale or
-              geolocation. Ory is affordable and based on mature{' '}
-              <a href={''} className={cn('font-link font-link-md link-news')}>
-                open source
-              </a>{' '}
-              software and{' '}
-              <a href={''} className={cn('font-link font-link-md link-news')}>
-                open standards
-              </a>
-              .
+              Ory secures the most demanding internet services, regardless of
+              scale. We will get you up and running with Ory in minutes. Our
+              service is based on mature open source software and open
+              standards. And it’s affordable to everyone.
             </p>
           </Molecule>
         </ContentText>

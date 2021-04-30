@@ -10,43 +10,39 @@ import Molecule from '../../freestanding/molecule/molecule'
 
 const features = [
   {
-    title: 'Security infrastructure for global internet services.',
+    title: 'A firm foundation',
     description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
+      'Our network is designed to scale ' +
+      'according to your needs, whether ' +
+      'you have hundreds or millions of ' +
+      'users. Grow without limits! ',
+    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32} />
+  },
+  {
+    title: 'Managed by experts',
+    description:
+      'Instead of developing and ' +
+      'maintaining your own solution, you ' +
+      'pay for what you use − and ' +
+      'we take care of the rest.',
     icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32} />
   },
   {
     title: 'Security infrastructure for global internet services.',
     description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
+      'Ory has been built to work alongside other ' +
+      'applications so you can easily ' +
+      'deploy new features and add ' +
+      'additional capabilities. ',
     icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32} />
   },
   {
-    title: 'Security infrastructure for global internet services.',
+    title: 'Tailored user experience',
     description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
-    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32} />
-  },
-  {
-    title: 'Security infrastructure for global internet services.',
-    description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
+      'Ory allows for complete ' +
+      'customization, for both UI  ' +
+      'framework and style. Quickly ' +
+      'onboard users your way. ',
     icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32} />
   }
 ]
@@ -64,7 +60,7 @@ const FeatureTwo = () => {
           <ContentText>
             <Molecule>
               <p className="font-h2">
-                Very smart headline lorem ipsum dolor sit amet adipiscent.
+                Focus on what matters: <b /> Creating value for your business
               </p>
             </Molecule>
           </ContentText>

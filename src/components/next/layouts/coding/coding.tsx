@@ -25,12 +25,11 @@ const Coding = () => (
                     Ory takes developer experience serious
                   </p>
                   <p className={cn('font-p-light')}>
-                    We started Ory because “IAM” developer experience was and
-                    still is terrible. Ory ships with SDKs for all programming
-                    languages, extensive and detailed documentation, easy-to-use
-                    CLIs. Our open source approach enables you to participate in
-                    API and architecture design - your next PR will be shipped
-                    in Ory.
+                    At Ory, our mission is to improve the developer experience.
+                    Ory ships with SDKs for all programming languages, extensive
+                    and detailed documentation, easy-to-use CLIs. Our open
+                    source approach enables you to participate in API and
+                    architecture design - your next PR will be shipped in Ory.
                   </p>
                 </Molecule>
                 <MoleculeInteraction>
@@ -81,7 +80,7 @@ const Coding = () => (
                         size={32}
                       />
                       <p className={cn('font-h3-light')}>
-                        Open Source Governance
+                        Based on Open Source
                       </p>
                       <p className={cn('font-p-light')}>
                         Participate in discussions, feature requests, bug fixes,
