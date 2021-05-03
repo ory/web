@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from './container.module.css'
 import cn from 'classnames'
+import { ParseCase } from '../../../../util'
 
 export interface PropTypes {
   children: React.ReactNode
@@ -11,19 +12,6 @@ export interface PropTypes {
   fluid?: false | true
 }
 
-const parseCase = (s: string) => {
-  const ss = s.split('-')
-  let final = ''
-  if (ss.length > 0) {
-    for (const word of ss) {
-      final += (word.charAt(0).toUpperCase() + word.slice(1)).replace('-', '')
-    }
-  } else {
-    final += s.charAt(0).toUpperCase() + s.slice(1)
-  }
-  return final
-}
-
 const getFlex = (flex: string) => {
   // @ts-ignore
   return styles[flex]
@@ -31,12 +19,12 @@ const getFlex = (flex: string) => {
 
 const getAlign = (align: string) => {
   // @ts-ignore
-  return styles[`flex${parseCase(align)}`]
+  return styles[`flex${ParseCase(align)}`]
 }
 
 const getJustify = (justify: string) => {
   // @ts-ignore
-  return styles[`justify${parseCase(justify)}`]
+  return styles[`justify${ParseCase(justify)}`]
 }
 
 const Container = ({

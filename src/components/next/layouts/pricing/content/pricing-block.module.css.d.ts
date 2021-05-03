@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "adoptersLogo": string;
+  readonly "pricingBlock": string;
 };
 export = styles;
 

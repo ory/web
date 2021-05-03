@@ -1,0 +1,9 @@
+.pricing {
+  background-color: var(--colors-base-white--next);
+  padding: 64px 0;
+}
+
+.pricing-important {
+  background: var(--colors-themed-primary--next);
+  border-radius: 10px;
+}

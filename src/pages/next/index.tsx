@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../../components/layout'
 import Button from '../../components/next/freestanding/button/button'
 import Molecule from '../../components/next/freestanding/molecule/molecule'
 import Adopters from '../../components/next/layouts/adopters/adopters'
@@ -10,6 +9,7 @@ import FeatureThree from '../../components/next/layouts/feature-three/feature-th
 import FeatureTwo from '../../components/next/layouts/feature-two/feature-two'
 import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
+import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
 import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
@@ -19,6 +19,8 @@ const IndexPage = () => (
   <Layout>
     <Hero />
     <Adopters />
+    {/*
+    
     <FeatureOne />
     <Coding />
     <FeatureTwo />
@@ -27,10 +29,7 @@ const IndexPage = () => (
     <Security />
     <Stats />
     <Resource />
-      <Quickstart></Quickstart>
-    {/*
-    
-    <Footer />*/}
+    <Quickstart/>*/}
   </Layout>
 )
 

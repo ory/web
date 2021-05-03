@@ -1,6 +1,18 @@
 @lost gutter 32px;
 @lost flexbox flex;
 
+:root {
+  --xs-min: 0px;
+  --xs-max: 599px;
+  --sm-min: 600px;
+  --sm-max: 959px;
+  --md-min: 960px;
+  --md-max: 1279px;
+  --lg-min: 1280px;
+  --lg-max: 1919px;
+  --xl-min: 1920px;
+}
+
 .container {
   display: flex;
   padding: 0;
@@ -14,7 +26,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .row {
@@ -59,35 +70,227 @@
   justify-content: end;
 }
 
-@media (--lg-viewport) {
+/*
+  Large desktops
+*/
+@media (min-width: 1280px) {
   .container-fluid {
     /*width: calc(100% - 32px);
     max-width: 1280px;*/
-    width: calc(100% - 20px);
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 10px;
+    width: calc(100% - 32px);
+    max-width: 1216px;
+  }
+
+  .hidden-lg {
+    display: none !important;
+  }
+
+  .col-lg-offset-1 {
+    lost-offset: 1/12 12;
+  }
+
+  .col-lg-1 {
+    lost-column: 1/12 12;
+  }
+  .col-lg-2 {
+    lost-column: 2/12 12;
+  }
+  .col-lg-3 {
+    lost-column: 3/12 12;
+  }
+  .col-lg-4 {
+    lost-column: 4/12 12;
+  }
+  .col-lg-5 {
+    lost-column: 5/12 12;
+  }
+  .col-lg-6 {
+    lost-column: 6/12 12;
+  }
+  .col-lg-7 {
+    lost-column: 7/12 12;
+  }
+  .col-lg-8 {
+    lost-column: 8/12 12;
+  }
+  .col-lg-9 {
+    lost-column: 9/12 12;
+  }
+  .col-lg-10 {
+    lost-column: 10/12 12;
+  }
+  .col-lg-11 {
+    lost-column: 11/12 12;
+  }
+  .col-lg-12 {
+    lost-column: 12/12 12;
   }
 }
 
-@media (--md-viewport) {
+/*
+  small laptops / large tablet
+*/
+@media (min-width: 960px) and (max-width: 1279px) {
   .container-fluid {
     width: calc(100% - 32px);
-    max-width: 960px;
+    max-width: 912px;
     /*width: 100%;
     max-width: 1300px;
     margin: 0 auto;*/
   }
+
+  .hidden-md {
+    display: none !important;
+  }
+
+  .col-md-offset-1 {
+    lost-offset: 1/12 12;
+  }
+
+  .col-md-1 {
+    lost-column: 1/12 12;
+  }
+  .col-md-2 {
+    lost-column: 2/12 12;
+  }
+  .col-md-3 {
+    lost-column: 3/12 12;
+  }
+  .col-md-4 {
+    lost-column: 4/12 12;
+  }
+  .col-md-5 {
+    lost-column: 5/12 12;
+  }
+  .col-md-6 {
+    lost-column: 6/12 12;
+  }
+  .col-md-7 {
+    lost-column: 7/12 12;
+  }
+  .col-md-8 {
+    lost-column: 8/12 12;
+  }
+  .col-md-9 {
+    lost-column: 9/12 12;
+  }
+  .col-md-10 {
+    lost-column: 10/12 12;
+  }
+  .col-md-11 {
+    lost-column: 11/12 12;
+  }
+  .col-md-12 {
+    lost-column: 12/12 12;
+  }
 }
 
-@media (--sm-viewport) {
+/*
+  sm - tablets
+*/
+@media (min-width: 600px) and (max-width: 959px) {
   .container-fluid {
     /*lost-utility: edit;*/
     width: calc(100% - 24px);
-    max-width: 600px;
-    /*width: 100%;
-    max-width: 350px;
-    margin: 0 auto;*/
+    max-width: 552px;
+  }
+
+  .hidden-sm {
+    display: none !important;
+  }
+
+  .col-sm-offset-1 {
+    lost-offset: 1/12 12 24px;
+  }
+
+  .col-sm-1 {
+    lost-column: 1/12 12 24px;
+  }
+  .col-sm-2 {
+    lost-column: 2/12 12 24px;
+  }
+  .col-sm-3 {
+    lost-column: 3/12 12 24px;
+  }
+  .col-sm-4 {
+    lost-column: 4/12 12 24px;
+  }
+  .col-sm-5 {
+    lost-column: 5/12 12 24px;
+  }
+  .col-sm-6 {
+    lost-column: 6/12 12 24px;
+  }
+  .col-sm-7 {
+    lost-column: 7/12 12 24px;
+  }
+  .col-sm-8 {
+    lost-column: 8/12 12 24px;
+  }
+  .col-sm-9 {
+    lost-column: 9/12 12 24px;
+  }
+  .col-sm-10 {
+    lost-column: 10/12 12 24px;
+  }
+  .col-sm-11 {
+    lost-column: 11/12 12 24px;
+  }
+  .col-sm-12 {
+    lost-column: 12/12 12 24px;
+  }
+}
+
+/*xs - extra small (phone)*/
+@media (min-width: 0px) and (max-width: 599px) {
+  .container-fluid {
+    width: calc(100vw - 16px);
+    max-width: 552px; /*max(calc(100vw - 32px), 425px);*/
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .col-xs-offset-1 {
+    lost-offset: 1/12 12 16px;
+  }
+
+  .col-xs-1 {
+    lost-column: 1/12 12 16px;
+  }
+  .col-xs-2 {
+    lost-column: 2/12 12 16px;
+  }
+  .col-xs-3 {
+    lost-column: 3/12 12 16px;
+  }
+  .col-xs-4 {
+    lost-column: 4/12 12 16px;
+  }
+  .col-xs-5 {
+    lost-column: 5/12 12 16px;
+  }
+  .col-xs-6 {
+    lost-column: 6/12 12 16px;
+  }
+  .col-xs-7 {
+    lost-column: 7/12 12 16px;
+  }
+  .col-xs-8 {
+    lost-column: 8/12 12 16px;
+  }
+  .col-xs-9 {
+    lost-column: 9/12 12 16px;
+  }
+  .col-xs-10 {
+    lost-column: 10/12 12 16px;
+  }
+  .col-xs-11 {
+    lost-column: 11/12 12 16px;
+  }
+  .col-xs-12 {
+    lost-column: 12/12 12 16px;
   }
 }
 

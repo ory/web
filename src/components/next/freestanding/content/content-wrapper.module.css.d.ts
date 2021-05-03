@@ -1,4 +1,5 @@
 declare const styles: {
-  readonly contentWrapper: string
-}
-export = styles
+  readonly "contentWrapper": string;
+};
+export = styles;
+

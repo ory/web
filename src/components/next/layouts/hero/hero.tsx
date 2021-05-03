@@ -16,33 +16,37 @@ import Grid from '../../freestanding/containers/grid'
 const Hero = () => (
   <div className={cn(styles.hero)}>
     <Container fluid={true} alignItems={'center'} justify={'center'}>
-      <Grid lg={5} md={10} sm={10}>
-        <ContentText>
-          <Molecule>
-            <p className="font-h1">
-              Security infrastructure for global internet services.
-            </p>
-            <p className="font-p-lg">
-              Thousands of businesses with billions of network requests trust
-              Ory's security infrastructure to authenticate and manage users,
-              set and check permissions and to protect APIs, applications and
-              data.
-            </p>
-          </Molecule>
-          <MoleculeInteraction>
-            <Button href={'/products'} style={'filled'}>
-              Get Started for free
-            </Button>
-            <Button href={'/open-source'} style={'text'}>
-              Contact Sales <ArrowRight />
-            </Button>
-          </MoleculeInteraction>
-        </ContentText>
+      <Grid lg={5} md={5} sm={5} xs={12}>
+        <Container alignItems={'start'}>
+          <ContentText>
+            <Molecule>
+              <p className="font-h1">
+                Security infrastructure for global internet services.
+              </p>
+              <p className="font-p-lg">
+                Thousands of businesses with billions of network requests trust
+                Ory's security infrastructure to authenticate and manage users,
+                set and check permissions and to protect APIs, applications and
+                data.
+              </p>
+            </Molecule>
+            <MoleculeInteraction>
+              <Button href={'/products'} style={'filled'}>
+                Get Started for free
+              </Button>
+              <Button href={'/open-source'} style={'text'}>
+                Contact Sales <ArrowRight />
+              </Button>
+            </MoleculeInteraction>
+          </ContentText>
+        </Container>
       </Grid>
-      <Grid lg={5} md={8} sm={10} className={cn('hidden-sm hidden-md')}>
-        <ContentVisual>
-          <img loading="lazy" src={hero} alt="placeholder" />
-        </ContentVisual>
+      <Grid lg={6} md={6} sm={6} xsHidden={true}>
+        <Container alignItems={'start'}>
+          <ContentVisual>
+            <img loading="lazy" src={hero} alt="placeholder" />
+          </ContentVisual>
+        </Container>
       </Grid>
     </Container>
   </div>

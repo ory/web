@@ -39,29 +39,51 @@ const Quickstart = () => (
       </Grid>
       <Grid lg={6} md={10} sm={10}>
         <Container justify={'start'}>
-          <Grid lg={6} md={6} sm={12} lgOffset={false} mdOffset={false} smOffset={false}>
+          <Grid
+            lg={6}
+            md={6}
+            sm={12}
+            lgOffset={false}
+            mdOffset={false}
+            smOffset={false}
+          >
             <MoleculeFeature>
               <ContentText>
                 <Molecule>
-                  <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
+                  <GitDiff
+                    className={cn('icon-dark')}
+                    weight={'duotone'}
+                    size={32}
+                  />
                   <p className={cn('font-h5')}>Powerful Tools</p>
                   <p className={cn('font-p-md')}>
-                    Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all operating
-                    systems and CPUs.
+                    Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all
+                    operating systems and CPUs.
                   </p>
                 </Molecule>
               </ContentText>
             </MoleculeFeature>
           </Grid>
-          <Grid lg={6} md={6} sm={12} lgOffset={false} mdOffset={false} smOffset={false}>
+          <Grid
+            lg={6}
+            md={6}
+            sm={12}
+            lgOffset={false}
+            mdOffset={false}
+            smOffset={false}
+          >
             <MoleculeFeature>
               <ContentText>
                 <Molecule>
-                  <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32} />
+                  <GitDiff
+                    className={cn('icon-dark')}
+                    weight={'duotone'}
+                    size={32}
+                  />
                   <p className={cn('font-h5')}>Powerful Tools</p>
                   <p className={cn('font-p-md')}>
-                    Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all operating
-                    systems and CPUs.
+                    Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all
+                    operating systems and CPUs.
                   </p>
                 </Molecule>
               </ContentText>

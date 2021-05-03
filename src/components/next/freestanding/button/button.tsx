@@ -8,21 +8,10 @@ export interface PropTypes {
   className?: string
   /*  size: 'small' | 'medium' | 'large'*/
   style: 'filled' | 'outlined' | 'text'
+  theme?: 'light' | 'dark'
   href: string
   openInNewWindow?: boolean
-}
-
-const getStyle = (style: string) => {
-  switch (style) {
-    case 'filled':
-      return styles.styleFilled
-    case 'outlined':
-      return styles.styleOutlined
-    case 'text':
-      return styles.styleText
-    default:
-      return styles.styleFilled
-  }
+  disabled?: boolean
 }
 
 /*const getSize = (size: string) => {
@@ -41,19 +30,51 @@ const Button = ({
   className,
   /*size = 'medium',*/
   style = 'filled',
+  theme = 'light',
   href,
-  openInNewWindow = false
+  openInNewWindow = false,
+  disabled = false
 }: PropTypes) => {
+  const getStyle = (style: string, theme: string) => {
+    // @ts-ignore
+    return styles[`style${parseCase(style)}${parseCase(theme)}`]
+    /*switch (style) {
+      case 'filled':
+        return styles.styleFilled
+      case 'outlined':
+        return styles.styleOutlined
+      case 'text':
+        return styles.styleText
+      default:
+        return styles.styleFilled
+    }*/
+  }
+
+  const parseCase = (s: string) => {
+    const ss = s.split('-')
+    let final = ''
+    if (ss.length > 0) {
+      for (const word of ss) {
+        final += (word.charAt(0).toUpperCase() + word.slice(1)).replace('-', '')
+      }
+    } else {
+      final += s.charAt(0).toUpperCase() + s.slice(1)
+    }
+    return final
+  }
+
+  const classes = cn(
+    styles.btnBase,
+    getStyle(style, theme),
+    'font-base',
+    'font-btn',
+    disabled && styles.disabled,
+    className && className
+  )
   return (
     <a
       href={href}
-      className={cn(
-        styles.btnBase,
-        getStyle(style),
-        'font-base',
-        'font-btn',
-        className && className
-      )}
+      className={classes}
       rel={openInNewWindow ? 'noopener noreferrer' : ''}
       target={openInNewWindow ? '_blank' : ''}
     >
