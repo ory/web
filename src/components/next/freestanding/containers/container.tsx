@@ -8,7 +8,7 @@ export interface PropTypes {
   className?: string
   flexContainer?: 'row' | 'column'
   alignItems?: 'start' | 'center' | 'end'
-  justify?: 'center' | 'space-around' | 'space-between' | 'start' | 'end'
+  justify?: 'center' | 'space-around' | 'space-between' | 'start' | 'end' | 'stretch'
   fluid?: false | true
 }
 
@@ -32,7 +32,7 @@ const Container = ({
   className,
   flexContainer = 'row',
   alignItems = 'center',
-  justify = 'center',
+  justify = 'space-between',
   fluid = false
 }: PropTypes) => (
   <div className={cn(fluid && styles.containerFluid)}>

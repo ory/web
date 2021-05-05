@@ -81,27 +81,29 @@ const chunks = (arrObj: Array<Adopter>, size: number) => {
 
 const Adopters = () => (
   <div className={cn(styles.adopters)}>
-    {chunks(adopters, 4).map((chunk, index) => {
-      return (
-        <Container fluid={true} key={index}>
-          {chunk.map((adopter) => {
-            return (
-              <Grid lg={3} md={4} sm={4} xs={12} key={adopter.title}>
-                <AdoptersLogo>
-                  <a href={adopter.url} key={adopter.title}>
-                    <img
-                      loading="lazy"
-                      src={adopter.image}
-                      alt={adopter.title}
-                    />
-                  </a>
-                </AdoptersLogo>
-              </Grid>
-            )
-          })}
-        </Container>
-      )
-    })}
+    <Container fluid={true} justify={'center'}>
+      {chunks(adopters, 4).map((chunk, index) => {
+        return (
+          <Container key={index}>
+            {chunk.map((adopter) => {
+              return (
+                <Grid lg={3} md={4} sm={4} xs={12} key={adopter.title}>
+                  <AdoptersLogo>
+                    <a href={adopter.url} key={adopter.title}>
+                      <img
+                        loading="lazy"
+                        src={adopter.image}
+                        alt={adopter.title}
+                      />
+                    </a>
+                  </AdoptersLogo>
+                </Grid>
+              )
+            })}
+          </Container>
+        )
+      })}
+    </Container>
   </div>
 )
 
