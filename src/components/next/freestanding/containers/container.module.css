@@ -21,8 +21,8 @@
 .container-fluid {
   display: flex;
   flex-wrap: wrap;
-  lost-center: 100%;
-  /*margin: 0 auto;*/
+  margin: 0 auto;
+  padding: 0;
 }
 
 .row {
@@ -133,10 +133,6 @@
   .container-fluid {
     width: calc(100% - 32px);
     max-width: 912px;
-    lost-center: 912px;
-    /*width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;*/
   }
 
   .hidden-md {
@@ -190,10 +186,8 @@
 */
 @media (min-width: 600px) and (max-width: 959px) {
   .container-fluid {
-    /*lost-utility: edit;*/
     width: calc(100% - 24px);
     max-width: 552px;
-    lost-center: 552px;
   }
 
   .hidden-sm {
@@ -245,9 +239,8 @@
 /*xs - extra small (phone)*/
 @media (min-width: 0px) and (max-width: 599px) {
   .container-fluid {
-    width: calc(100vw - 16px);
-    max-width: 552px; /*max(calc(100vw - 32px), 425px);*/
-    lost-center: 552px;
+    width: calc(100% - 16px);
+    max-width: 552px;
   }
 
   .hidden-xs {
@@ -255,51 +248,43 @@
   }
 
   .col-xs-offset-1 {
-    lost-offset: 1/12 12 16px flex;
+    lost-offset: 1/12 12 16px;
   }
 
   .col-xs-1 {
-    lost-column: 1/12 12 16px flex;
+    lost-column: 1/12 12 16px;
   }
   .col-xs-2 {
-    lost-column: 2/12 12 16px flex;
+    lost-column: 2/12 12 16px;
   }
   .col-xs-3 {
-    lost-column: 3/12 12 16px flex;
+    lost-column: 3/12 12 16px;
   }
   .col-xs-4 {
-    lost-column: 4/12 12 16px flex;
+    lost-column: 4/12 12 16px;
   }
   .col-xs-5 {
-    lost-column: 5/12 12 16px flex;
+    lost-column: 5/12 12 16px;
   }
   .col-xs-6 {
-    lost-column: 6/12 12 16px flex;
+    lost-column: 6/12 12 16px;
   }
   .col-xs-7 {
-    lost-column: 7/12 12 16px flex;
+    lost-column: 7/12 12 16px;
   }
   .col-xs-8 {
-    lost-column: 8/12 12 16px flex;
+    lost-column: 8/12 12 16px;
   }
   .col-xs-9 {
-    lost-column: 9/12 12 16px flex;
+    lost-column: 9/12 12 16px;
   }
   .col-xs-10 {
-    lost-column: 10/12 12 16px flex;
+    lost-column: 10/12 12 16px;
   }
   .col-xs-11 {
-    lost-column: 11/12 12 16px flex;
+    lost-column: 11/12 12 16px;
   }
   .col-xs-12 {
-    lost-column: 12/12 12 16px flex;
+    lost-column: 12/12 12 16px;
   }
 }
-
-/*@media (--mobile-viewport) {
-  .container-fluid {
-    width: calc(100% - 24px);
-    max-width: 350px;
-  }
-}*/
-

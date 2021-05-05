@@ -11,6 +11,7 @@ declare const styles: {
   readonly "justifySpaceBetween": string;
   readonly "justifyStart": string;
   readonly "justifyEnd": string;
+  readonly "justifyStretch": string;
   readonly "hiddenLg": string;
   readonly "colLgOffset1": string;
   readonly "colLg1": string;

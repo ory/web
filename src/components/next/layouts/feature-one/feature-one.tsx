@@ -18,8 +18,8 @@ const FeatureOne = () => (
     <Container fluid={true} flexContainer={'column'}>
       
       <Container>
-        <Grid lg={8} md={6} sm={6} xs={12}>
-          <Container alignItems={'start'}>
+        <Grid lg={5} md={5} sm={12} xs={12}>
+          <Container>
             <ContentText>
               <MoleculeTextInteraction>
                 <Molecule>
@@ -47,39 +47,44 @@ const FeatureOne = () => (
             </ContentText>
           </Container>
         </Grid>
-        <Grid lg={4} md={6} sm={6} xs={12} xsHidden={true}>
-          <Container alignItems={'start'}>
+        <Grid lg={6} md={6} sm={12} xsHidden={true}>
+          <Container>
             <ContentVisual>
-              <img loading="lazy" src={hero} alt="placeholder"/>
+              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
             </ContentVisual>
           </Container>
         </Grid>
       </Container>
       
-    <Container>
+      <Container>
+        <Grid lg={8} md={8} smHidden={true} xsHidden={true} className={cn(styles.featureMiddleRow)}>
+          <Container>
+            <ContentVisual>
+              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+            </ContentVisual>
+          </Container>
+        </Grid>
+        
+        <Grid lg={4} md={4} smHidden={true} xsHidden={true}>
+          <Container>
+            <ContentVisual>
+              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+            </ContentVisual>
+          </Container>
+          
+        </Grid>
+      </Container>
       
-      <Grid lg={8} md={8} sm={12} xs={12} smHidden={true} xsHidden={true}>
-        <ContentVisual>
-          <img loading="lazy" src={hero} alt="placeholder"/>
-        </ContentVisual>
-      </Grid>
+      <Container justify={'space-around'}>
+        <Grid lg={12} md={12} sm={12} xs={12}>
+          <Container>
+            <ContentVisual>
+              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+            </ContentVisual>
+          </Container>
+        </Grid>
+      </Container>
       
-      <Grid lg={4} md={4} sm={12} xs={12} smHidden={true} xsHidden={true}>
-        <ContentVisual>
-          <img loading="lazy" src={hero} alt="placeholder"/>
-        </ContentVisual>
-      </Grid>
-      
-    </Container>
-    
-    <Container>
-      <Grid lg={12} md={12} sm={12} xs={12}>
-        <ContentVisual>
-          <img loading="lazy" src={hero} alt="placeholder"/>
-        </ContentVisual>
-      </Grid>
-    
-    </Container>
     </Container>
   </div>
 )

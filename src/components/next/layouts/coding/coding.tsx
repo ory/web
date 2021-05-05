@@ -15,8 +15,8 @@ import Code from '../../freestanding/code/code'
 const Coding = () => (
   <div className={cn(styles.coding)}>
     <Container fluid={true}>
-      <Container>
-        <Grid lg={4} md={10} sm={10}>
+
+        <Grid lg={6} md={6} sm={10} xs={12}>
           <Container flexContainer={'column'}>
             <ContentText>
               <MoleculeTextInteraction>
@@ -103,7 +103,7 @@ const Coding = () => (
           </Container>
         </Grid>
 
-        <Grid lg={5} className={cn('hidden-sm hidden-md')}>
+        <Grid lg={6} md={6} sm={6} xsHidden={true}>
           <Container
             flexContainer={'column'}
             alignItems={'start'}
@@ -142,50 +142,9 @@ $ ory identities list --project playground --format json-pretty
             ></Terminal>
           </Container>
         </Grid>
-
-        <Grid md={6} mdOffset={false} className={cn('hidden-lg hidden-sm')}>
-          <Container
-            flexContainer={'column'}
-            alignItems={'center'}
-            justify={'center'}
-            className={cn(styles.codeContainer)}
-          >
-            {/*Currently unstable for tablet and mobile view*/}
-            {/*<Code
-            code={`const app = express();
-const kratos = new PublicApi(new Configuration({
-  basePath: 'https://<my-project>.projects.oryapis.com/api/kratos/public',
-}));
-function protect(req, res, next) {
-  kratos.whoami(req.header('Cookie'), req.header('Authorization'))
-    .then(({ data: session }) => {
-      req.session = { session };
-      next();
-    })
-    // If no session is found, redirect to login.
-    .catch(() => {
-      res.redirect('/login');
-    });
-}`}
-          ></Code>*/}
-            {/*<Terminal
-            code={`$ export ORY_ACCESS_TOKEN=RaEEZfMbx7QGuf0uWNt9c15NE4FG4OOW
-$ ory identities list --project playground --format json-pretty
-[
-  {
-     "id": "7c7d040d-97f6-4a57-95e8-08c61e6df016",
-     "schema_id": "default",
-     "schema_url": "https://playground.projects.oryapis.com/api/kratos/public/schemas/default",
-     "traits": {
-       "email": "alice@example.com"
-     }
-   }
-]`}
-          ></Terminal>*/}
-          </Container>
-        </Grid>
+      
       </Container>
-    </Container>
+
   </div>
 )
 
