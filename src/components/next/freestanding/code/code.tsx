@@ -15,7 +15,7 @@ const Code = ({ code, className }: PropTypes) => {
   })
 
   return (
-    <div className={cn(className && className)}>
+    <div className={cn(className && className, styles.windowContainer)}>
       <div className={cn(styles.windowToolbar)}>
         <div className={styles.editorHeader}>
           <div className={styles.windowActions}>

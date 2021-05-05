@@ -17,7 +17,7 @@ const Terminal = ({ code, className }: PropTypes) => {
     <div
       className={cn(
         styles.terminal,
-        styles.terminalCode,
+        styles.terminalContainer,
         className && className
       )}
     >

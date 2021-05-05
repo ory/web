@@ -18,7 +18,7 @@ const FeatureOne = () => (
     <Container fluid={true} flexContainer={'column'}>
       
       <Container>
-        <Grid lg={5} md={5} sm={12} xs={12}>
+        <Grid lg={5} md={5} sm={6} xs={12}>
           <Container>
             <ContentText>
               <MoleculeTextInteraction>
@@ -47,7 +47,7 @@ const FeatureOne = () => (
             </ContentText>
           </Container>
         </Grid>
-        <Grid lg={6} md={6} sm={12} xsHidden={true}>
+        <Grid lg={6} md={6} sm={6} xsHidden={true}>
           <Container>
             <ContentVisual>
               <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
@@ -56,8 +56,8 @@ const FeatureOne = () => (
         </Grid>
       </Container>
       
-      <Container>
-        <Grid lg={8} md={8} smHidden={true} xsHidden={true} className={cn(styles.featureMiddleRow)}>
+      <Container className={cn(styles.featureMiddleRow)}>
+        <Grid lg={8} md={8} sm={12} xsHidden={true}>
           <Container>
             <ContentVisual>
               <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
@@ -75,7 +75,7 @@ const FeatureOne = () => (
         </Grid>
       </Container>
       
-      <Container justify={'space-around'}>
+      <Container>
         <Grid lg={12} md={12} sm={12} xs={12}>
           <Container>
             <ContentVisual>

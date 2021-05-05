@@ -46,7 +46,7 @@ const Hero = () => (
         </Grid>
         <Grid lg={6} md={6} sm={6} xsHidden={true}>
           <ContentVisual>
-            <img loading="lazy" src={hero} alt="placeholder"/>
+            <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
           </ContentVisual>
         </Grid>
       </Container>

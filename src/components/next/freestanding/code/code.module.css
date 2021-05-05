@@ -3,6 +3,11 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 16px 24px;
+  width: 100%;
+}
+
+.window-container {
+  width: 100%;
 }
 
 .window-toolbar {
