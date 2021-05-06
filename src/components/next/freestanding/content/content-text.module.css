@@ -11,3 +11,7 @@
   align-items: flex-start;
   padding: 0;
 }
+
+.content-padded {
+  padding: 24px;
+}

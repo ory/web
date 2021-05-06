@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './button.module.css'
-
+import { Link as GatsbyLink } from 'gatsby'
 import cn from 'classnames'
 
 export interface PropTypes {
@@ -9,7 +9,7 @@ export interface PropTypes {
   /*  size: 'small' | 'medium' | 'large'*/
   style: 'filled' | 'outlined' | 'text'
   theme?: 'light' | 'dark'
-  href: string
+  to: string
   openInNewWindow?: boolean
   disabled?: boolean
 }
@@ -31,23 +31,13 @@ const Button = ({
   /*size = 'medium',*/
   style = 'filled',
   theme = 'light',
-  href,
+  to,
   openInNewWindow = false,
   disabled = false
 }: PropTypes) => {
   const getStyle = (style: string, theme: string) => {
     // @ts-ignore
     return styles[`style${parseCase(style)}${parseCase(theme)}`]
-    /*switch (style) {
-      case 'filled':
-        return styles.styleFilled
-      case 'outlined':
-        return styles.styleOutlined
-      case 'text':
-        return styles.styleText
-      default:
-        return styles.styleFilled
-    }*/
   }
 
   const parseCase = (s: string) => {
@@ -71,16 +61,22 @@ const Button = ({
     disabled && styles.disabled,
     className && className
   )
-  return (
-    <a
-      href={href}
-      className={classes}
-      rel={openInNewWindow ? 'noopener noreferrer' : ''}
-      target={openInNewWindow ? '_blank' : ''}
-    >
+  
+  return to.startsWith('/') ? (
+    <GatsbyLink to={to}
+                className={classes}
+                rel={openInNewWindow ? 'noopener noreferrer' : ''}
+                target={openInNewWindow ? '_blank' : ''}>
       {children}
-    </a>
-  )
+    </GatsbyLink>
+  ): (
+    <a
+    href={to}
+    className={classes}
+    rel={openInNewWindow ? 'noopener noreferrer' : ''}
+    target={openInNewWindow ? '_blank' : ''}>
+    {children}
+  </a>)
 }
 
 export default Button

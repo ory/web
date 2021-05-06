@@ -74,7 +74,8 @@
 /*
   Large desktops
 */
-@media (min-width: 1280px) {
+/*@media (min-width: 1280px) {*/
+@media (--lg), (--xl) {
   .container-fluid {
     width: calc(100% - 32px);
     max-width: 1216px;
@@ -129,7 +130,8 @@
 /*
   small laptops / large tablet
 */
-@media (min-width: 960px) and (max-width: 1279px) {
+/*@media (min-width: 960px) and (max-width: 1279px) {*/
+@media (--md) {
   .container-fluid {
     width: calc(100% - 32px);
     max-width: 912px;
@@ -184,7 +186,8 @@
 /*
   sm - tablets
 */
-@media (min-width: 600px) and (max-width: 959px) {
+/*@media (min-width: 600px) and (max-width: 959px) {*/
+@media (--sm) {
   .container-fluid {
     width: calc(100% - 24px);
     max-width: 552px;
@@ -237,7 +240,8 @@
 }
 
 /*xs - extra small (phone)*/
-@media (min-width: 0px) and (max-width: 599px) {
+/*@media (min-width: 0px) and (max-width: 599px) {*/
+@media (--xs) {
   .container-fluid {
     width: calc(100% - 16px);
     max-width: 552px;

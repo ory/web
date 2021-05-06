@@ -17,16 +17,18 @@ import Stats from '../../components/next/layouts/stats/stats'
 
 const IndexPage = () => (
   <Layout>
-    <Hero />
-    <Adopters />
-    <FeatureOne />
-    <Coding />
-    <FeatureTwo />
-    {/*
+    <Hero/>
+    <Adopters/>
+    <FeatureOne/>
     
-    <FeatureThree />
-    <FeatureFour />
-    <Security />
+    <FeatureTwo/>
+    <FeatureThree/>
+    <Security/>
+    {/*
+    <Coding />
+    <FeatureFour/>
+    
+    
     <Stats />
     <Resource />
     <Quickstart/>*/}

@@ -6,6 +6,10 @@ import ContentVisual from '../../freestanding/content/content-visual'
 import Container from '../../freestanding/containers/container'
 import ContentWrapper from '../../freestanding/content/content-wrapper'
 import hero from '../../../../images/illustrations/hero.svg'
+import rbac from '../../../../images/illustrations/rbac.png'
+import faceid from '../../../../images/illustrations/faceid.png'
+import console from '../../../../images/illustrations/console.png'
+import login from '../../../../images/illustrations/login.png'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
@@ -35,10 +39,10 @@ const FeatureOne = () => (
                   </p>
                 </Molecule>
                 <MoleculeInteraction>
-                  <Button style={'filled'} href={''}>
+                  <Button style={'filled'} to={''}>
                     Get started for free
                   </Button>
-                  <Button style={'text'} href={''}>
+                  <Button style={'text'} to={''}>
                     Contact sales
                     <ArrowRight/>
                   </Button>
@@ -50,7 +54,7 @@ const FeatureOne = () => (
         <Grid lg={6} md={6} sm={6} xsHidden={true}>
           <Container>
             <ContentVisual>
-              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+              <img width={'100%'} loading="lazy" src={rbac} alt="placeholder"/>
             </ContentVisual>
           </Container>
         </Grid>
@@ -60,7 +64,7 @@ const FeatureOne = () => (
         <Grid lg={8} md={8} sm={12} xsHidden={true}>
           <Container>
             <ContentVisual>
-              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+              <img width={'100%'} loading="lazy" src={console} alt="placeholder"/>
             </ContentVisual>
           </Container>
         </Grid>
@@ -68,7 +72,7 @@ const FeatureOne = () => (
         <Grid lg={4} md={4} smHidden={true} xsHidden={true}>
           <Container>
             <ContentVisual>
-              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+              <img width={'100%'} loading="lazy" src={faceid} alt="placeholder"/>
             </ContentVisual>
           </Container>
           
@@ -79,7 +83,7 @@ const FeatureOne = () => (
         <Grid lg={12} md={12} sm={12} xs={12}>
           <Container>
             <ContentVisual>
-              <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+              <img width={'100%'} loading="lazy" src={console} alt="placeholder"/>
             </ContentVisual>
           </Container>
         </Grid>

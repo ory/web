@@ -378,13 +378,9 @@ main a.cta {
   line-height: 228.5%;
 }
 
-@media (--xl) {
-  /*.font-btn {
-    font-size: 18px;
-    line-height: 135%;
-  }*/
-}
-
+/*
+  Tablets, large phones, smaller phones
+*/
 @media (--md), (--sm), (--xs) {
   .font-btn {
     font-size: 13px;

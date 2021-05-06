@@ -16,40 +16,38 @@ import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-i
 
 const Hero = () => (
   <div className={cn(styles.hero)}>
-    <Container fluid={true}>
+    <Container fluid={true} alignItems={'start'}>
       
-      <Container>
-        <Grid lg={5} md={5} sm={5} xs={12}>
-          <ContentText>
-            <MoleculeTextInteraction>
-              <Molecule>
-                <p className="font-h1">
-                  Security infrastructure for global internet services.
-                </p>
-                <p className="font-p-lg">
-                  Thousands of businesses with billions of network requests trust
-                  Ory's security infrastructure to authenticate and manage users,
-                  set and check permissions and to protect APIs, applications and
-                  data.
-                </p>
-              </Molecule>
-              <MoleculeInteraction>
-                <Button href={'/products'} style={'filled'}>
-                  Get Started for free
-                </Button>
-                <Button href={'/open-source'} style={'text'}>
-                  Contact Sales <ArrowRight/>
-                </Button>
-              </MoleculeInteraction>
-            </MoleculeTextInteraction>
-          </ContentText>
-        </Grid>
-        <Grid lg={6} md={6} sm={6} xsHidden={true}>
-          <ContentVisual>
-            <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
-          </ContentVisual>
-        </Grid>
-      </Container>
+      <Grid lg={5} md={5} sm={5} xs={12}>
+        <ContentText>
+          <MoleculeTextInteraction>
+            <Molecule>
+              <p className="font-h1">
+                Security infrastructure for global internet services.
+              </p>
+              <p className="font-p-lg">
+                Thousands of businesses with billions of network requests trust
+                Ory's security infrastructure to authenticate and manage users,
+                set and check permissions and to protect APIs, applications and
+                data.
+              </p>
+            </Molecule>
+            <MoleculeInteraction>
+              <Button to={'/products'} style={'filled'}>
+                Get Started for free
+              </Button>
+              <Button to={'/open-source'} style={'text'}>
+                Contact Sales <ArrowRight/>
+              </Button>
+            </MoleculeInteraction>
+          </MoleculeTextInteraction>
+        </ContentText>
+      </Grid>
+      <Grid lg={6} md={6} sm={6} xsHidden={true}>
+        <ContentVisual>
+          <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
+        </ContentVisual>
+      </Grid>
     
     </Container>
   </div>

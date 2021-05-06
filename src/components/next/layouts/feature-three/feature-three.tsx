@@ -10,8 +10,9 @@ import hero from '../../../../images/illustrations/hero.svg'
 
 const FeatureThree = () => (
   <div className={cn(styles.featureThree)}>
-    <Container flexContainer={'row'} alignItems={'center'} justify={'center'}>
-      <Grid lg={4} md={8} sm={10}>
+    <Container fluid={true}>
+      
+      <Grid lg={5} md={6} sm={12} xs={12}>
         <ContentText>
           <Molecule>
             <p className={'font-h3'}>
@@ -34,9 +35,9 @@ const FeatureThree = () => (
           </Molecule>
         </ContentText>
       </Grid>
-      <Grid lg={4} md={8} className={cn('hidden-sm')}>
+      <Grid lg={6} md={6} sm={12} xs={12} xsHidden={true}>
         <ContentVisual>
-          <img loading="lazy" src={hero} alt="placeholder" />
+          <img width={'100%'} loading="lazy" src={hero} alt="placeholder" />
         </ContentVisual>
       </Grid>
     </Container>

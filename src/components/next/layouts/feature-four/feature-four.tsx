@@ -10,7 +10,7 @@ import hero from '../../../../images/illustrations/hero.svg'
 
 const FeatureFour = () => (
   <div className={cn(styles.featureFour)}>
-    <Container flexContainer={'row'} alignItems={'center'} justify={'center'}>
+    <Container fluid={true}>
       <Grid lg={4} md={8} sm={10}>
         <ContentText>
           <Molecule>

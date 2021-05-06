@@ -53,7 +53,7 @@ const pricings: Array<PricingInformation> = [
     price: <p className={cn('font-h1')}>$0</p>,
     cycle: 'No billing',
     button: (
-      <Button style={'filled'} disabled={true} href={''}>
+      <Button style={'filled'} disabled={true} to={''}>
         Coming Soon
       </Button>
     )
@@ -78,7 +78,7 @@ const pricings: Array<PricingInformation> = [
     price: <p className={cn('font-h1')}>$99</p>,
     cycle: <p className={cn('font-p-lg')}>Billed Monthly</p>,
     button: (
-      <Button style={'filled'} href={''}>
+      <Button style={'filled'} to={''}>
         Get started
       </Button>
     )
@@ -103,7 +103,7 @@ const pricings: Array<PricingInformation> = [
     price: <p className={cn('font-h1-light')}>Individual</p>,
     cycle: <p className={cn('font-p-lg-light')}>Billed Monthly</p>,
     button: (
-      <Button style={'filled'} href={''} theme={'dark'}>
+      <Button style={'filled'} to={''} theme={'dark'}>
         Contact Sales
       </Button>
     ),

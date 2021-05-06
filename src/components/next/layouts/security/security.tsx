@@ -52,8 +52,9 @@ const features = [
 ]
 const Security = () => (
   <div className={cn(styles.security)}>
-    <Container alignItems={'start'} justify={'center'}>
-      <Grid lg={4} md={10} sm={10}>
+    <Container fluid={true} alignItems={'start'}>
+      <Grid lg={4} md={6} sm={10} xs={12}>
+        <Container justify={'start'}>
         <ContentText>
           <MoleculeTextInteraction>
             <Molecule>
@@ -69,21 +70,22 @@ const Security = () => (
               </p>
             </Molecule>
             <MoleculeInteraction>
-              <Button href={''} style={'filled'}>
+              <Button to={''} style={'filled'}>
                 Get started for free
               </Button>
             </MoleculeInteraction>
           </MoleculeTextInteraction>
         </ContentText>
+        </Container>
       </Grid>
-      <Grid lg={5} md={10} sm={10}>
-        <Container alignItems={'center'} justify={'start'}>
+      <Grid lg={8} md={6} sm={12} xs={12}>
+        <Container alignItems={'center'} justify={'stretch'}>
           {features.map((feature, index) => {
             return (
               <Grid
                 lg={5}
                 md={12}
-                sm={10}
+                sm={5}
                 lgOffset={false}
                 smOffset={false}
                 mdOffset={false}

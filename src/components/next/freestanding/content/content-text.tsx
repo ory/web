@@ -6,10 +6,11 @@ import Molecule from '../molecule/molecule'
 export interface PropTypes {
   children: React.ReactNode
   className?: string
+  padded?: boolean
 }
 
-const ContentText = ({ children, className }: PropTypes) => (
-  <div className={cn(styles.contentText, className && className)}>
+const ContentText = ({ children, className, padded }: PropTypes) => (
+  <div className={cn(styles.contentText, padded && styles.contentPadded, className && className)}>
     <Molecule className={cn(styles.content)}>{children}</Molecule>
   </div>
 )

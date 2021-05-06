@@ -35,7 +35,7 @@ const Coding = () => (
                 </p>
               </Molecule>
               <MoleculeInteraction>
-                <Button href={''} style={'filled'}>
+                <Button to={''} style={'filled'}>
                   Documentation
                 </Button>
               </MoleculeInteraction>
