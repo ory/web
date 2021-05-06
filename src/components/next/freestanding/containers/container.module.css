@@ -1,18 +1,6 @@
 @lost gutter 32px;
 @lost flexbox flex;
 
-:root {
-  --xs-min: 0px;
-  --xs-max: 599px;
-  --sm-min: 600px;
-  --sm-max: 959px;
-  --md-min: 960px;
-  --md-max: 1279px;
-  --lg-min: 1280px;
-  --lg-max: 1919px;
-  --xl-min: 1920px;
-}
-
 .container {
   display: flex;
   padding: 0;
@@ -27,12 +15,12 @@
 
 .row {
   lost-flex-container: row;
-  flex-direction: row;
+  /*flex-direction: row;*/
 }
 
 .column {
   lost-flex-container: column;
-  flex-direction: column;
+  /*flex-direction: column;*/
 }
 
 .flex-start {

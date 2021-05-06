@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './feature-two.module.css'
 import cn from 'classnames'
-import {GitDiff} from 'phosphor-react'
+import {GitDiff, Triangle} from 'phosphor-react'
 import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
@@ -17,7 +17,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -27,7 +27,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -37,7 +37,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -47,7 +47,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <GitDiff className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
   }
 ]
 

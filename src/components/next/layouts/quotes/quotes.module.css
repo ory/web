@@ -1,0 +1,10 @@
+.quotes {
+    background-color: var(--colors-base-grey-25--next);
+    padding: 32px 0 128px;
+}
+
+.quotes-content {
+    background-color: var(--colors-base-white--next);
+    box-shadow: var(--elevation-xxl);
+    border-radius: 20px;
+}

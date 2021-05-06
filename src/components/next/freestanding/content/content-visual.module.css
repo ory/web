@@ -1,7 +1,5 @@
 .content-visual {
-  /*display: flex;
-  flex-direction: column;
-  align-items: flex-start;*/
   padding: 0;
   box-shadow: var(--elevation-xxl);
+  /*background: var(--colors-themed-background--next);*/
 }

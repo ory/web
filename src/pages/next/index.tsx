@@ -11,6 +11,7 @@ import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
+import Quotes from '../../components/next/layouts/quotes/quotes'
 import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
@@ -18,20 +19,21 @@ import Stats from '../../components/next/layouts/stats/stats'
 const IndexPage = () => (
   <Layout>
     <Hero/>
-    <Adopters/>
-    <FeatureOne/>
-    
     <FeatureTwo/>
-    <FeatureThree/>
+    <Adopters/>
+    <Quotes/>
+    <Stats/>
     <Security/>
+    <Coding/>
+    <Resource/>
+    <Quickstart/>
+    
+    
     {/*
-    <Coding />
-    <FeatureFour/>
-    
-    
-    <Stats />
-    <Resource />
-    <Quickstart/>*/}
+    <FeatureOne/>
+     <FeatureFour/>
+    <FeatureThree/>
+    */}
   </Layout>
 )
 

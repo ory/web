@@ -76,6 +76,7 @@
     "react-helmet": "~6.1.0",
     "react-keyshape": "~3.3.0",
     "react-prism": "~4.3.2",
+    "react-responsive-carousel": "^3.2.18",
     "react-visibility-sensor": "~5.1.1",
     "regression": "~2.0.1",
     "remark": "~13.0.0",

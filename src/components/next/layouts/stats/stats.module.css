@@ -15,7 +15,7 @@
   justify-content: space-evenly;
 
   & .item {
-    width: 33%;
+    /*width: 33%;*/
     border-right: 2px solid;
     border-color: var(--colors-themed-light);
     margin: 0 6rem 0 0;
@@ -49,7 +49,7 @@
     flex-direction: column;
 
     & .item {
-      width: 100%;
+      /*width: 100%;*/
       border-right: none;
       border-bottom: 2px solid;
       border-color: var(--colors-themed-light);
@@ -74,7 +74,7 @@
     flex-direction: column;
 
     & .item {
-      width: 100%;
+      /*width: 100%;*/
       border-right: none;
       border-bottom: 2px solid;
       border-color: var(--colors-themed-light);
