@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './feature-two.module.css'
 import cn from 'classnames'
-import {GitDiff, Triangle} from 'phosphor-react'
+import { GitDiff, Triangle } from 'phosphor-react'
 import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
@@ -17,7 +17,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -27,7 +27,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -37,7 +37,7 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
   },
   {
     title: 'Security infrastructure for global internet services.',
@@ -47,18 +47,14 @@ const features = [
       'websites and internet services secure, regardless of scale or ' +
       'geolocation. Ory is affordable and based on mature open source ' +
       'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32}/>
+    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
   }
 ]
 
 const FeatureTwo = () => {
   return (
     <div className={cn(styles.featureTwo)}>
-      <Container
-        fluid={true}
-      >
-        
-        
+      <Container fluid={true}>
         <ContentText>
           <Molecule>
             <p className="font-h2">
@@ -66,18 +62,11 @@ const FeatureTwo = () => {
             </p>
           </Molecule>
         </ContentText>
-        
-        
-        <Container justify={'stretch'}>
+
+        <Container justify={'start'}>
           {features.map((feature, index) => {
             return (
-              <Grid
-                lg={3}
-                md={5}
-                sm={5}
-                xs={12}
-                key={index}
-              >
+              <Grid lg={3} md={5} sm={5} xs={12} key={index}>
                 <Container flexContainer={'column'}>
                   <ContentText>
                     <Molecule>
@@ -87,12 +76,10 @@ const FeatureTwo = () => {
                     </Molecule>
                   </ContentText>
                 </Container>
-                
               </Grid>
             )
           })}
         </Container>
-      
       </Container>
     </div>
   )

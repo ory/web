@@ -11,7 +11,6 @@ import hero from '../../../../images/illustrations/hero.svg'
 const FeatureThree = () => (
   <div className={cn(styles.featureThree)}>
     <Container fluid={true}>
-      
       <Grid lg={5} md={6} sm={12} xs={12}>
         <ContentText>
           <Molecule>

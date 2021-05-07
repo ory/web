@@ -14,7 +14,7 @@ import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-i
 
 const Quickstart = () => (
   <div className={cn(styles.quickstart)}>
-    <Container flexContainer={'row'} justify={'center'}>
+    <Container fluid={true}>
       <Grid lg={4} md={10} sm={10}>
         <MoleculeTextInteraction>
           <ContentText>
@@ -26,13 +26,12 @@ const Quickstart = () => (
               </p>
             </Molecule>
             <MoleculeInteraction>
-              <Button style={'filled'} to={''}>
-                Get started for free
-              </Button>
-              <Button style={'text'} to={''}>
-                Contact Sales
-                <ArrowRight />
-              </Button>
+                <Button style={'filled'} to={''}>
+                  Get started for free
+                </Button>
+                <Button style={'text'} to={''} iconRight={(<ArrowRight size={24}/>)}>
+                  Contact Sales
+                </Button>
             </MoleculeInteraction>
           </ContentText>
         </MoleculeTextInteraction>

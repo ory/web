@@ -55,27 +55,27 @@ const Security = () => (
     <Container fluid={true} alignItems={'start'}>
       <Grid lg={4} md={6} sm={10} xs={12}>
         <Container justify={'start'}>
-        <ContentText>
-          <MoleculeTextInteraction>
-            <Molecule>
-              <p className={cn('font-h3')}>
-                A fully integrated suite of security products.
-              </p>
-              <p className={cn('font-p')}>
-                Securing internet services requires more than a username and a
-                password. We bring together everything that’s needed to make
-                websites and internet services secure, regardless of scale or
-                geolocation. Ory is affordable and based on mature open source
-                software and open standards.
-              </p>
-            </Molecule>
-            <MoleculeInteraction>
-              <Button to={''} style={'filled'}>
-                Get started for free
-              </Button>
-            </MoleculeInteraction>
-          </MoleculeTextInteraction>
-        </ContentText>
+          <ContentText>
+            <MoleculeTextInteraction>
+              <Molecule>
+                <p className={cn('font-h3')}>
+                  A fully integrated suite of security products.
+                </p>
+                <p className={cn('font-p')}>
+                  Securing internet services requires more than a username and a
+                  password. We bring together everything that’s needed to make
+                  websites and internet services secure, regardless of scale or
+                  geolocation. Ory is affordable and based on mature open source
+                  software and open standards.
+                </p>
+              </Molecule>
+              <MoleculeInteraction>
+                <Button to={''} style={'filled'}>
+                  Get started for free
+                </Button>
+              </MoleculeInteraction>
+            </MoleculeTextInteraction>
+          </ContentText>
         </Container>
       </Grid>
       <Grid lg={8} md={6} sm={12} xs={12}>

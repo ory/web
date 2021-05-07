@@ -7,6 +7,7 @@ declare const styles: {
   readonly "styleTextLight": string;
   readonly "styleTextDark": string;
   readonly "disabled": string;
+  readonly "iconRight": string;
 };
 export = styles;
 

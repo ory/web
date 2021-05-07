@@ -27,13 +27,6 @@ const IndexPage = () => (
     <Coding/>
     <Resource/>
     <Quickstart/>
-    
-    
-    {/*
-    <FeatureOne/>
-     <FeatureFour/>
-    <FeatureThree/>
-    */}
   </Layout>
 )
 

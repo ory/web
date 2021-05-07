@@ -8,17 +8,15 @@ import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-i
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Button from '../../freestanding/button/button'
-import {ArrowRight, ArrowSquareIn, GitDiff} from 'phosphor-react'
+import { ArrowRight, ArrowSquareIn, GitDiff } from 'phosphor-react'
 import Terminal from '../../freestanding/code/terminal'
 import Code from '../../freestanding/code/code'
 
 const Coding = () => (
   <div className={cn(styles.coding)}>
     <Container fluid={true}>
-      
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
-          
           <ContentText>
             <MoleculeTextInteraction>
               <Molecule>
@@ -30,8 +28,8 @@ const Coding = () => (
                   still is terrible. Ory ships with SDKs for all programming
                   languages, extensive and detailed documentation, easy-to-use
                   CLIs. Our open source approach enables you to participate in
-                  API and architecture design - your next PR will be shipped
-                  in Ory.
+                  API and architecture design - your next PR will be shipped in
+                  Ory.
                 </p>
               </Molecule>
               <MoleculeInteraction>
@@ -41,10 +39,9 @@ const Coding = () => (
               </MoleculeInteraction>
             </MoleculeTextInteraction>
           </ContentText>
-          
+
           <Container>
             <Grid lg={6} md={6} sm={12} xs={12}>
-              
               <ContentText>
                 <MoleculeTextInteraction>
                   <Molecule>
@@ -64,16 +61,13 @@ const Coding = () => (
                       className={cn('font-link font-link-md link-news')}
                       href={''}
                     >
-                      API Reference <ArrowRight/>
+                      API Reference <ArrowRight />
                     </a>
                   </MoleculeInteraction>
                 </MoleculeTextInteraction>
               </ContentText>
-            
-            
             </Grid>
             <Grid lg={6} md={6} sm={12} xs={12}>
-              
               <ContentText>
                 <MoleculeTextInteraction>
                   <Molecule>
@@ -95,17 +89,16 @@ const Coding = () => (
                       className={cn('font-link font-link-md link-news')}
                       href={''}
                     >
-                      GitHub <ArrowSquareIn/>
+                      GitHub <ArrowSquareIn />
                     </a>
                   </MoleculeInteraction>
                 </MoleculeTextInteraction>
               </ContentText>
-            
             </Grid>
           </Container>
         </Container>
       </Grid>
-      
+
       <Grid lg={6} md={6} smHidden={true} xsHidden={true}>
         <Container
           flexContainer={'column'}
@@ -145,9 +138,7 @@ $ ory identities list --project playground --format json-pretty
           ></Terminal>
         </Container>
       </Grid>
-    
     </Container>
-  
   </div>
 )
 

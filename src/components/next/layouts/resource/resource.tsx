@@ -12,65 +12,69 @@ import Grid from '../../freestanding/containers/grid'
 
 const resources = [
   {
-    title: 'Security infrastructure for global internet services.',
+    title: 'Quickstart in 5 minutes',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />
+    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    background: 'keto'
   },
   {
-    title: 'Security infrastructure for global internet services.',
+    title: 'Complete API reference',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />
+    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    background: 'dockertest'
   },
   {
-    title: 'Security infrastructure for global internet services.',
+    title: 'Community Slack Channel',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />
+    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    background: 'kratos'
   },
   {
-    title: 'Security infrastructure for global internet services.',
+    title: 'Onboard with one of our engineers',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />
+    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    background: 'hydra'
   }
 ]
 
 const Resource = () => (
   <div className={cn(styles.resource)}>
-    <Container flexContainer={'column'}>
-      <Container justify={'start'}>
-        <Grid lg={8} md={8} sm={10}>
-          <ContentText>
-            <Molecule>
-              <p className="font-h2">
-                Very smart headline lorem ipsum dolor sit amet adipiscent.
-              </p>
-            </Molecule>
-          </ContentText>
-        </Grid>
-      </Container>
+    <Container fluid={true}>
+      <ContentText>
+        <Molecule>
+          <p className="font-h2">
+            Very smart headline lorem ipsum dolor sit amet adipiscent.
+          </p>
+        </Molecule>
+      </ContentText>
 
-      <Container flexContainer={'row'} justify={'start'}>
+      <Container
+        flexContainer={'row'}
+        justify={'space-between'}
+        alignItems={'stretch'}
+        className={cn(styles.resourceBoxContainer)}
+      >
         {resources.map((resource, index) => {
           return (
-            <Grid
-              lg={4}
-              md={4}
-              sm={10}
-              key={index}
-              smOffset={false}
-              className={cn(styles.resourceBoxContainer)}
-            >
-              <ResourceBox>
-                <ContentText>
+            <Grid lg={3} md={3} sm={10} key={index}>
+              <ResourceBox color={resource.background}>
+                <ContentText padded={true}>
                   <MoleculeTextInteraction>
-                    <Molecule>
-                      <p className="font-h3">{resource.title}</p>
-                    </Molecule>
-                    <MoleculeInteraction>
-                      <a href={''} className="font-link font-link-md">
-                        {resource.linkTitle}
-                      </a>
-                      {resource.linkIcon}
-                    </MoleculeInteraction>
+                    <Container
+                      flexContainer={'row'}
+                      justify={'space-between'}
+                      alignItems={'stretch'}
+                    >
+                      <Molecule>
+                        <p className="font-h3">{resource.title}</p>
+                      </Molecule>
+                      <MoleculeInteraction>
+                        <a href={''} className={cn('font-link font-link-md')}>
+                          {resource.linkTitle}
+                        </a>
+                        {resource.linkIcon}
+                      </MoleculeInteraction>
+                    </Container>
                   </MoleculeTextInteraction>
                 </ContentText>
               </ResourceBox>

@@ -227,9 +227,9 @@ class Stats extends Component<PropTypes, StateTypes> {
   render() {
     return (
       <div className={styles.stats}>
-        <Container flexContainer={'row'}>
-          <Grid lg={4} md={10} sm={10}>
-            <ContentText>
+        <Container fluid={true} justify={'stretch'}>
+          <Grid lg={3} md={3} sm={12} xs={12}>
+            <ContentText padded={true}>
               <Molecule>
                 <p className={cn('font-h3-light')}>Billions of Identities.</p>
                 <p className={cn('font-p-light')}>
@@ -245,23 +245,23 @@ class Stats extends Component<PropTypes, StateTypes> {
               </Molecule>
             </ContentText>
           </Grid>
-          <Grid lg={4}>
-            <Container className={cn(styles.statsRow)}>
-              <Grid lg={10} md={10} sm={10}>
-                <div className={styles.itemWrapper}>
-                  <div className={styles.items}>
-                    {stats(this.state).map(({ title, amount, description }) => (
-                      <div key={title} className={styles.item}>
-                        <p className={cn('font-h1-light')}>
+          <Grid lg={9} md={9} sm={12} xs={12}>
+            <Container alignItems={'start'}>
+              {stats(this.state).map(({ title, amount, description }) => (
+                <Grid lg={3} md={3} sm={3} xs={12}>
+                  <Container justify={'start'}>
+                    <ContentText padded={true}>
+                      <Molecule>
+                        <div className={cn('font-h1-light')}>
                           <AnimatedCounter countTo={amount} />
-                        </p>
-                        <p className={cn('font-p-lg-light')}>{title}</p>
-                        <p className={cn('font-p-lg-light')}>{description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </Grid>
+                        </div>
+                        <div className={cn('font-p-lg-light')}>{title}</div>
+                        <div className={cn('font-p-lg')}>{description}</div>
+                      </Molecule>
+                    </ContentText>
+                  </Container>
+                </Grid>
+              ))}
             </Container>
           </Grid>
         </Container>

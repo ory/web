@@ -12,6 +12,7 @@ export interface PropTypes {
   to: string
   openInNewWindow?: boolean
   disabled?: boolean
+  iconRight?: React.ReactNode
 }
 
 /*const getSize = (size: string) => {
@@ -33,7 +34,8 @@ const Button = ({
   theme = 'light',
   to,
   openInNewWindow = false,
-  disabled = false
+  disabled = false,
+  iconRight,
 }: PropTypes) => {
   const getStyle = (style: string, theme: string) => {
     // @ts-ignore
@@ -61,22 +63,29 @@ const Button = ({
     disabled && styles.disabled,
     className && className
   )
-  
+
   return to.startsWith('/') ? (
-    <GatsbyLink to={to}
-                className={classes}
-                rel={openInNewWindow ? 'noopener noreferrer' : ''}
-                target={openInNewWindow ? '_blank' : ''}>
+    <GatsbyLink
+      to={to}
+      className={classes}
+      rel={openInNewWindow ? 'noopener noreferrer' : ''}
+      target={openInNewWindow ? '_blank' : ''}
+    >
       {children}
+      {iconRight && (
+        <div className={cn(styles.iconRight)}>{iconRight}</div>
+      )}
     </GatsbyLink>
-  ): (
+  ) : (
     <a
-    href={to}
-    className={classes}
-    rel={openInNewWindow ? 'noopener noreferrer' : ''}
-    target={openInNewWindow ? '_blank' : ''}>
-    {children}
-  </a>)
+      href={to}
+      className={classes}
+      rel={openInNewWindow ? 'noopener noreferrer' : ''}
+      target={openInNewWindow ? '_blank' : ''}
+    >
+      {children}
+    </a>
+  )
 }
 
 export default Button

@@ -19,21 +19,17 @@ interface PropTypes {
   quoteContent: Quote
 }
 
-const QuotesContent = ({quoteContent, className}: PropTypes) => (
+const QuotesContent = ({ quoteContent, className }: PropTypes) => (
   <div className={cn(className && className)}>
-    <Container>
-      <Grid lg={5} md={5} sm={5} xs={12}>
-        <Container justify={'center'}>
-          <MoleculeLogo>
-            {quoteContent.companyLogo}
-          </MoleculeLogo>
+    <Container justify={'center'} alignItems={'center'}>
+      <Grid lg={5} md={5} sm={12} xs={12}>
+        <Container justify={'center'} alignItems={'center'}>
+          <MoleculeLogo>{quoteContent.companyLogo}</MoleculeLogo>
         </Container>
       </Grid>
-      <Grid lg={6} md={5} sm={5} xs={12}>
+      <Grid lg={6} md={5} sm={12} xs={12}>
         <ContentText className={cn(styles.quotesText)}>
-          <Molecule>
-            {quoteContent.text}
-          </Molecule>
+          <Molecule>{quoteContent.text}</Molecule>
         </ContentText>
       </Grid>
     </Container>

@@ -7,7 +7,7 @@ interface PropTypes {
   children: React.ReactNode
 }
 
-const MoleculeLogo = ({className, children}: PropTypes) => (
+const MoleculeLogo = ({ className, children }: PropTypes) => (
   <div className={cn(styles.moleculeLogo, className && className)}>
     {children}
   </div>

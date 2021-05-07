@@ -7,9 +7,19 @@ export interface PropTypes {
   children: React.ReactNode
   className?: string
   flexContainer?: 'row' | 'column'
-  alignItems?: 'start' | 'center' | 'end'
-  justify?: 'center' | 'space-around' | 'space-between' | 'start' | 'end' | 'stretch'
+  alignItems?: 'start' | 'center' | 'end' | 'stretch'
+  justify?:
+    | 'center'
+    | 'space-around'
+    | 'space-between'
+    | 'start'
+    | 'end'
+    | 'stretch'
   fluid?: false | true
+  lgHidden?: boolean
+  mdHidden?: boolean
+  smHidden?: boolean
+  xsHidden?: boolean
 }
 
 const getFlex = (flex: string) => {
@@ -27,13 +37,22 @@ const getJustify = (justify: string) => {
   return styles[`justify${ParseCase(justify)}`]
 }
 
+const getHidden = (mode: string) => {
+  // @ts-ignore
+  return styles[`hidden${ParseCase(mode)}`]
+}
+
 const Container = ({
   children,
   className,
   flexContainer = 'row',
   alignItems = 'center',
   justify = 'space-between',
-  fluid = false
+  fluid = false,
+  lgHidden = false,
+  mdHidden = false,
+  smHidden = false,
+  xsHidden = false
 }: PropTypes) => (
   <div className={cn(fluid && styles.containerFluid)}>
     <div
@@ -42,6 +61,10 @@ const Container = ({
         flexContainer && getFlex(flexContainer),
         alignItems && getAlign(alignItems),
         justify && getJustify(justify),
+        xsHidden && getHidden('xs'),
+        smHidden && getHidden('sm'),
+        mdHidden && getHidden('md'),
+        lgHidden && getHidden('lg'),
         className && className
       )}
     >

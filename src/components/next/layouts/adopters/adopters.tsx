@@ -87,7 +87,7 @@ const Adopters = () => (
           <Container key={index}>
             {chunk.map((adopter) => {
               return (
-                <Grid lg={3} md={4} sm={4} xs={12} key={adopter.title}>
+                <Grid lg={3} md={5} sm={4} xs={12} key={adopter.title}>
                   <AdoptersLogo>
                     <a href={adopter.url} key={adopter.title}>
                       <img

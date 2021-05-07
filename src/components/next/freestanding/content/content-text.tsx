@@ -10,7 +10,13 @@ export interface PropTypes {
 }
 
 const ContentText = ({ children, className, padded }: PropTypes) => (
-  <div className={cn(styles.contentText, padded && styles.contentPadded, className && className)}>
+  <div
+    className={cn(
+      styles.contentText,
+      padded && styles.contentPadded,
+      className && className
+    )}
+  >
     <Molecule className={cn(styles.content)}>{children}</Molecule>
   </div>
 )

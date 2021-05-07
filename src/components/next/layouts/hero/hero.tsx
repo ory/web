@@ -7,7 +7,7 @@ import hero from '../../../../images/illustrations/hero.svg'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Button from '../../freestanding/button/button'
-import {ArrowRight} from 'phosphor-react'
+import { ArrowRight } from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
 import ContentVisual from '../../freestanding/content/content-visual'
 import Container from '../../freestanding/containers/container'
@@ -17,7 +17,6 @@ import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-i
 const Hero = () => (
   <div className={cn(styles.hero)}>
     <Container fluid={true} alignItems={'start'}>
-      
       <Grid lg={5} md={5} sm={5} xs={12}>
         <ContentText>
           <MoleculeTextInteraction>
@@ -34,21 +33,18 @@ const Hero = () => (
             </Molecule>
             <MoleculeInteraction>
               <Button to={'/products'} style={'filled'}>
-                Get Started for free
+                Get Started
               </Button>
-              <Button to={'/open-source'} style={'text'}>
-                Contact Sales <ArrowRight/>
+              <Button to={'/open-source'} style={'text'} iconRight={(<ArrowRight size={24}/>)}>
+                Contact Sales
               </Button>
             </MoleculeInteraction>
           </MoleculeTextInteraction>
         </ContentText>
       </Grid>
       <Grid lg={6} md={6} sm={6} xsHidden={true}>
-        <ContentVisual>
-          <img width={'100%'} loading="lazy" src={hero} alt="placeholder"/>
-        </ContentVisual>
+          <img width={'100%'} loading="lazy" src={hero} alt="placeholder" />
       </Grid>
-    
     </Container>
   </div>
 )

@@ -1,9 +1,8 @@
 .stats {
   background-color: var(--colors-base-grey--next);
   /*background: url(molecules / pattern.png), #0D1F39;*/
-  padding: 6rem 0;
-  position: relative;
   color: var(--colors-base-black);
+  padding: 128px 0;
 }
 
 .statsRow {

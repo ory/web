@@ -1,7 +1,5 @@
 import React from 'react'
 
-const FeatureOnePartOne = () => (
-  <></>
-)
+const FeatureOnePartOne = () => <></>
 
 export default FeatureOnePartOne

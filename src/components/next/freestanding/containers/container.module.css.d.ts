@@ -6,6 +6,7 @@ declare const styles: {
   readonly "flexStart": string;
   readonly "flexCenter": string;
   readonly "flexEnd": string;
+  readonly "flexStretch": string;
   readonly "justifyCenter": string;
   readonly "justifySpaceAround": string;
   readonly "justifySpaceBetween": string;
