@@ -69,6 +69,7 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 /* prevent prism from changing text background color */
-span[class*='token operator'] {
+span[class*='token arrow operator'],
+span[class*='token parameter operator'] {
   background-color: transparent !important;
 }

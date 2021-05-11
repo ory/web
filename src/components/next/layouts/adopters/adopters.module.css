@@ -1,4 +1,5 @@
 .adopters {
   background-color: var(--colors-base-grey-25--next);
   position: relative;
+  padding: 64px 0;
 }

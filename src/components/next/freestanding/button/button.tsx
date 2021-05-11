@@ -2,40 +2,31 @@ import React from 'react'
 import * as styles from './button.module.css'
 import { Link as GatsbyLink } from 'gatsby'
 import cn from 'classnames'
+import Container from '../containers/container'
+import * as padding from '../utils/padding.module.css'
 
 export interface PropTypes {
   children?: React.ReactNode
   className?: string
-  /*  size: 'small' | 'medium' | 'large'*/
   style: 'filled' | 'outlined' | 'text'
   theme?: 'light' | 'dark'
   to: string
   openInNewWindow?: boolean
   disabled?: boolean
-  iconRight?: React.ReactNode
+  iconRight?: React.ReactElement
+  iconLeft?: React.ReactElement
 }
-
-/*const getSize = (size: string) => {
-  switch (size) {
-    case 'small':
-      return 'font-btn-sm'
-    case 'medium':
-      return 'font-btn-md'
-    case 'large':
-      return 'font-btn-lg'
-  }
-}*/
 
 const Button = ({
   children,
   className,
-  /*size = 'medium',*/
   style = 'filled',
   theme = 'light',
   to,
   openInNewWindow = false,
   disabled = false,
   iconRight,
+  iconLeft
 }: PropTypes) => {
   const getStyle = (style: string, theme: string) => {
     // @ts-ignore
@@ -71,20 +62,25 @@ const Button = ({
       rel={openInNewWindow ? 'noopener noreferrer' : ''}
       target={openInNewWindow ? '_blank' : ''}
     >
-      {children}
-      {iconRight && (
-        <div className={cn(styles.iconRight)}>{iconRight}</div>
-      )}
+      <Container justify={'center'} alignItems={'start'}>
+        {iconLeft && <div className={cn(padding.mr8)}>{iconLeft}</div>}
+        {children}
+        {iconRight && <div className={cn(padding.ml8)}>{iconRight}</div>}
+      </Container>
     </GatsbyLink>
   ) : (
-    <a
-      href={to}
-      className={classes}
-      rel={openInNewWindow ? 'noopener noreferrer' : ''}
-      target={openInNewWindow ? '_blank' : ''}
-    >
-      {children}
-    </a>
+    <Container justify={'center'} alignItems={'center'}>
+      <a
+        href={to}
+        className={classes}
+        rel={openInNewWindow ? 'noopener noreferrer' : ''}
+        target={openInNewWindow ? '_blank' : ''}
+      >
+        {iconLeft && <div className={cn(padding.mr8)}>{iconLeft}</div>}
+        {children}
+        {iconRight && <div className={cn(padding.ml8)}>{iconRight}</div>}
+      </a>
+    </Container>
   )
 }
 

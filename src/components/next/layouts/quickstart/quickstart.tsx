@@ -26,12 +26,16 @@ const Quickstart = () => (
               </p>
             </Molecule>
             <MoleculeInteraction>
-                <Button style={'filled'} to={''}>
-                  Get started for free
-                </Button>
-                <Button style={'text'} to={''} iconRight={(<ArrowRight size={24}/>)}>
-                  Contact Sales
-                </Button>
+              <Button style={'filled'} to={''}>
+                Get started for free
+              </Button>
+              <Button
+                style={'text'}
+                to={''}
+                iconRight={<ArrowRight size={24} />}
+              >
+                Contact Sales
+              </Button>
             </MoleculeInteraction>
           </ContentText>
         </MoleculeTextInteraction>

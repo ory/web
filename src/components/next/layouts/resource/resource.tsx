@@ -9,6 +9,7 @@ import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import Grid from '../../freestanding/containers/grid'
+import Button from '../../freestanding/button/button'
 
 const resources = [
   {
@@ -69,10 +70,13 @@ const Resource = () => (
                         <p className="font-h3">{resource.title}</p>
                       </Molecule>
                       <MoleculeInteraction>
-                        <a href={''} className={cn('font-link font-link-md')}>
+                        <Button
+                          to={'/'}
+                          style={'text'}
+                          iconRight={resource.linkIcon}
+                        >
                           {resource.linkTitle}
-                        </a>
-                        {resource.linkIcon}
+                        </Button>
                       </MoleculeInteraction>
                     </Container>
                   </MoleculeTextInteraction>

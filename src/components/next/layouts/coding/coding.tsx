@@ -17,7 +17,7 @@ const Coding = () => (
     <Container fluid={true}>
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
-          <ContentText>
+          <ContentText padded={true}>
             <MoleculeTextInteraction>
               <Molecule>
                 <p className={cn('font-h3-light')}>
@@ -40,9 +40,9 @@ const Coding = () => (
             </MoleculeTextInteraction>
           </ContentText>
 
-          <Container>
+          <Container alignItems={'start'}>
             <Grid lg={6} md={6} sm={12} xs={12}>
-              <ContentText>
+              <ContentText padded={true}>
                 <MoleculeTextInteraction>
                   <Molecule>
                     <GitDiff
@@ -68,7 +68,7 @@ const Coding = () => (
               </ContentText>
             </Grid>
             <Grid lg={6} md={6} sm={12} xs={12}>
-              <ContentText>
+              <ContentText padded={true}>
                 <MoleculeTextInteraction>
                   <Molecule>
                     <GitDiff
@@ -103,7 +103,7 @@ const Coding = () => (
         <Container
           flexContainer={'column'}
           alignItems={'start'}
-          /*className={cn(styles.codeContainer)}*/
+          className={cn(styles.codeContainer)}
         >
           <Code
             code={`const app = express();

@@ -1,0 +1,19 @@
+.feature-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.feature-enabled {
+  color: var(--color-success-primary--next);
+}
+
+.feature-disabled {
+  color: var(--colors-base-grey-600--next);
+}
+
+.feature-planned {
+  color: var(--colors-themed-primary--next);
+}

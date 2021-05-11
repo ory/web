@@ -66,7 +66,7 @@ const Quotes = () => (
         {quotes.map((quote, index) => {
           return (
             <>
-              <hr/>
+              <hr />
               <QuotesContent quoteContent={quote} key={index} />
             </>
           )
