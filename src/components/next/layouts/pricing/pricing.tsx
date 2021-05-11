@@ -5,116 +5,117 @@ import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
-import PricingBlock, {
-  Feature,
-  PricingInformation
-} from './content/pricing-block'
 import Button from '../../freestanding/button/button'
+import { pb32 } from '../../freestanding/utils/padding.module.css'
+import PricingBlock from './content/pricing-block'
+import { CheckCircle } from 'phosphor-react'
+import { PriceTier } from './content/pricing-tier'
 
-const features: Array<Feature> = [
+const pricingTiers: Array<PriceTier> = [
   {
-    id: '1',
-    title: 'feature 1',
-    order: 1,
-    show: true
-  },
-  {
-    id: '2',
-    title: 'feature 2',
-    order: 2,
-    show: true
-  },
-  {
-    id: '3',
-    title: 'feature 3',
-    order: 3,
-    show: true
-  }
-]
-
-const pricings: Array<PricingInformation> = [
-  {
-    features: [
-      {
-        id: '1',
-        mark: true
-      },
-      {
-        id: '2',
-        mark: false
-      },
-      {
-        id: '3',
-        mark: true
-      }
-    ],
-    title: <p className={cn('font-h4')}>Free</p>,
-    order: 1,
-    price: <p className={cn('font-h1')}>$0</p>,
-    cycle: 'No billing',
+    theme: 'dark',
+    title: 'Early Access',
+    description: 'Get early access to the full Ory platform now!',
+    price: '$99',
+    priceDescription: 'per Project/Member',
     button: (
-      <Button style={'filled'} disabled={true} to={''}>
-        Coming Soon
-      </Button>
-    )
-  },
-  {
-    features: [
-      {
-        id: '1',
-        mark: true
-      },
-      {
-        id: '2',
-        mark: false
-      },
-      {
-        id: '3',
-        mark: true
-      }
-    ],
-    title: <p className={cn('font-h4')}>Start Up</p>,
-    order: 2,
-    price: <p className={cn('font-h1')}>$99</p>,
-    cycle: <p className={cn('font-p-lg')}>Billed Monthly</p>,
-    button: (
-      <Button style={'filled'} to={''}>
-        Get started
-      </Button>
-    )
-  },
-  {
-    features: [
-      {
-        id: '1',
-        mark: true
-      },
-      {
-        id: '2',
-        mark: true
-      },
-      {
-        id: '3',
-        mark: true
-      }
-    ],
-    title: <p className={cn('font-h4-light')}>Enterprise</p>,
-    order: 3,
-    price: <p className={cn('font-h1-light')}>Individual</p>,
-    cycle: <p className={cn('font-p-lg-light')}>Billed Monthly</p>,
-    button: (
-      <Button style={'filled'} to={''} theme={'dark'}>
-        Contact Sales
+      <Button to={'/'} style={'filled'}>
+        Become a member
       </Button>
     ),
-    customClass: cn(styles.pricingImportant)
+    features: [
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'No limits on identities'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: '1 Member & Project'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: '100,000 API Calls / 24 hours'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'UI & Dashboard'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'Ory CLI'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'Unlimited data objects'
+      }
+    ]
+  },
+  {
+    theme: 'light',
+    title: 'Enterprise',
+    description:
+      'The full Ory platform with dedicated support & custom hosting options.',
+    price: 'Individual',
+    priceDescription: 'per Project/Member',
+    button: (
+      <Button to={'/'} style={'outlined'}>
+        Contact sales
+      </Button>
+    ),
+    features: [
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'No limits on identities'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'Unlimited Members / Projects'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'No limits on API calls'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'UI & Dashboard'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'Ory CLI'
+      },
+      {
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'Unlimited data objects'
+      }
+    ]
   }
 ]
 
 const Pricing = () => (
   <div className={cn(styles.pricing)}>
-    <Container fluid={true}>
-      <PricingBlock features={features} pricings={pricings} />
+    <Container fluid={true} alignItems={'start'}>
+      <Grid lg={6} md={6} sm={6} xs={12}>
+        <ContentText>
+          <Molecule>
+            <div className={cn('font-h1', pb32)}>No Limit on identity</div>
+            <div className={cn('font-p-lg')}>
+              Ory is based on mature open source software and open standards.
+              And it’s affordable for everyone. We also offer individual plans
+              for enterprise customers, please contact us to learn more!
+            </div>
+          </Molecule>
+        </ContentText>
+      </Grid>
+      <Grid lg={6} md={6} sm={6} xs={12}>
+        <Container justify={'start'} alignItems={'start'}>
+          <PricingBlock tiers={pricingTiers} />
+        </Container>
+        <Container justify={'end'} alignItems={'end'}>
+          <div className={cn('font-sm')}>
+            Prices in USD, taxes may apply. Billed monthly.
+          </div>
+        </Container>
+      </Grid>
     </Container>
   </div>
 )

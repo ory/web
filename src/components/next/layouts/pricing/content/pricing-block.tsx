@@ -1,106 +1,37 @@
 import React from 'react'
-import * as styles from './pricing-block.module.css'
 import cn from 'classnames'
 import Container from '../../../freestanding/containers/container'
+import ContentText from '../../../freestanding/content/content-text'
 import Molecule from '../../../freestanding/molecule/molecule'
 import Grid from '../../../freestanding/containers/grid'
-import ContentText from '../../../freestanding/content/content-text'
-import { Check, X } from 'phosphor-react'
-import MoleculeInteraction from '../../../freestanding/molecule/molecule-interaction'
-import MoleculeTextInteraction from '../../../freestanding/molecule/molecule-text-interaction'
-
-export interface Feature {
-  id: string
-  title: string
-  show: boolean
-  order: number
-}
-
-export interface FeatureMark {
-  id: string
-  mark: boolean
-}
-
-export interface PricingInformation {
-  title: React.ReactNode
-  price: React.ReactNode
-  cycle: React.ReactNode
-  order: number
-  button?: React.ReactNode
-  customClass?: string
-  features: Array<FeatureMark>
-}
+import {
+  pb32,
+  pb48,
+  pb64,
+  pb8
+} from '../../../freestanding/utils/padding.module.css'
+import Button from '../../../freestanding/button/button'
+import styled from 'styled-components'
+import PricingTier, { PriceTier } from './pricing-tier'
 
 interface PropTypes {
   className?: string
-  pricings: Array<PricingInformation>
-  features: Array<Feature>
+  tiers: Array<PriceTier>
 }
 
-const PricingBlock = ({ className, features, pricings }: PropTypes) => {
-  const sortedFeatures = features.sort((a, b) => a.order - b.order)
-  const sortedPricing = pricings.sort((a, b) => a.order - b.order)
-
+const PricingBlock = ({ className, tiers }: PropTypes) => {
   return (
-    <Container flexContainer={'row'} alignItems={'start'} justify={'start'}>
-      <Container
-        flexContainer={'column'}
-        alignItems={'center'}
-        className={cn(styles.pricingBlock)}
-      >
-        <p className={cn('font-h2')}>Pricing</p>
-        <Container flexContainer={'column'}>
-          {sortedFeatures.map((feature) => {
-            return <Molecule key={feature.id}>{feature.title}</Molecule>
-          })}
-        </Container>
+    <div className={cn(className && className)}>
+      <Container>
+        {tiers.map((tier) => {
+          return (
+            <Grid lg={4} md={4} sm={12} xs={12} key={tier.title}>
+              <PricingTier tier={tier} />
+            </Grid>
+          )
+        })}
       </Container>
-      {sortedPricing.map((pricing, index) => {
-        return (
-          <Grid
-            lg={3}
-            md={10}
-            sm={10}
-            key={index}
-            lgOffset={false}
-            className={cn(
-              styles.pricingBlock,
-              pricing.customClass && pricing.customClass
-            )}
-          >
-            <Container flexContainer={'column'}>
-              <ContentText>
-                <MoleculeTextInteraction>
-                  <Molecule>
-                    {pricing.title}
-                    {pricing.price}
-                    {pricing.cycle}
-                  </Molecule>
-                  {sortedFeatures.map((f) => {
-                    return (
-                      <>
-                        {pricing.features
-                          .filter((feature) => feature.id == f.id)
-                          .map((x) => {
-                            return (
-                              <Molecule>
-                                {x.mark ? <Check size={16} /> : <X size={16} />}
-                              </Molecule>
-                            )
-                          })}
-                      </>
-                    )
-                  })}
-                  <MoleculeInteraction>
-                    <Molecule>{pricing.button}</Molecule>
-                  </MoleculeInteraction>
-                </MoleculeTextInteraction>
-              </ContentText>
-            </Container>
-          </Grid>
-        )
-      })}
-    </Container>
+    </div>
   )
 }
 

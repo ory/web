@@ -1,6 +1,5 @@
 import React from 'react'
 import * as styles from './adopters.module.css'
-
 import cn from 'classnames'
 import blues from '../../../../images/adopters/blues.svg'
 import thoughtworks from '../../../../images/adopters/thoughtworks.svg'

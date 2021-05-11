@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './hero.module.css'
-import { mb48, mb32 } from '../../freestanding/utils/padding.module.css'
+import { pb48, pb32 } from '../../freestanding/utils/padding.module.css'
 import cn from 'classnames'
 import HeroContentLeft from './content/hero-content-left'
 import HeroContentRight from './content/hero-content-right'
@@ -21,8 +21,8 @@ const Hero = () => (
       <Grid lg={5} md={5} sm={5} xs={12}>
         <ContentText>
           <MoleculeTextInteraction>
-            <Molecule className={cn(mb48)}>
-              <p className={cn('font-h1', mb32)}>
+            <Molecule className={cn(pb48)}>
+              <p className={cn('font-h1', pb32)}>
                 Security infrastructure for global internet services.
               </p>
               <p className="font-p-lg">

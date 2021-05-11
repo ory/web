@@ -4,6 +4,13 @@
 }
 
 .pricing-important {
-  background: var(--colors-themed-primary--next);
-  border-radius: 10px;
+  background: var(--colors-base-grey--next);
+}
+
+.feature-enabled {
+  color: var(--color-success-primary--next);
+}
+
+.feature-disabled {
+  color: var(--colors-base-grey-600--next);
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import * as styles from './feature-list.module.css'
 import {
-  mb32,
-  mb48,
-  mb64,
-  mt64
+  pb32,
+  pb48,
+  pb64,
+  pt64
 } from '../../freestanding/utils/padding.module.css'
 
 import cn from 'classnames'
@@ -98,18 +98,18 @@ const FeatureList = () => (
       {featureSections.map((section) => {
         return (
           <Container
-            className={cn(mb64, mt64)}
+            className={cn(pb64, pt64)}
             alignItems={'start'}
             key={section.title}
           >
-            <Grid lg={3} md={3} sm={12} xs={12} className={cn(mb48)}>
+            <Grid lg={3} md={3} sm={12} xs={12} className={cn(pb48)}>
               <ContentText>
                 <MoleculeTextInteraction>
                   <Molecule>
-                    <MoleculeIconWrapper className={cn(mb32)}>
+                    <MoleculeIconWrapper className={cn(pb32)}>
                       {section.icon}
                     </MoleculeIconWrapper>
-                    <div className={cn('font-h3', mb32)}>{section.title}</div>
+                    <div className={cn('font-h3', pb32)}>{section.title}</div>
                     <div className={cn('font-p')}>{section.description}</div>
                   </Molecule>
                 </MoleculeTextInteraction>
