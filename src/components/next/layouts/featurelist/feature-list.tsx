@@ -51,7 +51,7 @@ const featureSections: Array<FeatureSection> = [
         description:
           'The basics of IAM: Login & register users fast and without complicated flows and store credentials securely.',
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
-      },      
+      },
       {
         title: 'Account Managment',
         description:
@@ -69,7 +69,7 @@ const featureSections: Array<FeatureSection> = [
         description:
           'A flexible identity model adapts to your business needs. You can use one of our provided presets or cook up your own identity model.',
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
-      },      
+      },
       {
         title: 'Social Logins',
         description:
@@ -112,7 +112,7 @@ const featureSections: Array<FeatureSection> = [
         title: 'Webhooks & Triggers',
         description:
           'Use webhooks to define and trigger certain actions when users e.g. register, log in, verify their email... you name it!'
-      },      
+      },
       {
         icon: <Flag className={cn(styles.featurePlanned)} size={16} />,
         title: 'Payments',

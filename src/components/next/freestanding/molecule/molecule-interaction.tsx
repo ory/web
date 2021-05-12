@@ -3,7 +3,8 @@ import * as styles from './molecule-interaction.module.css'
 import cn from 'classnames'
 import Container from '../containers/container'
 import Grid from '../containers/grid'
-import * as padding from '../utils/padding.module.css'
+import { moleculeInteraction } from './molecule-interaction.module.css'
+import { pr8 } from '../utils/padding.module.css'
 
 export interface PropTypes {
   children: React.ReactNode
@@ -11,11 +12,11 @@ export interface PropTypes {
 }
 
 const MoleculeInteraction = ({ children, className }: PropTypes) => (
-  <div className={cn(className && className)}>
-    <Container justify={'start'}>
+  <div className={cn(moleculeInteraction, className && className)}>
+    <Container>
       {React.Children.count(children) > 1
         ? React.Children.map(children, (child) => {
-            return <div className={cn(padding.mr8)}>{child}</div>
+            return <div className={cn(pr8)}>{child}</div>
           })
         : children}
     </Container>

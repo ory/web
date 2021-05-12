@@ -54,12 +54,19 @@ const FeatureImage = ({
   title,
   overline,
   description,
-  image
+  image,
+  buttons
 }: PropTypes) => {
   const order = [
     <Visual image={image} />,
-    <Content title={title} description={description} overline={overline} />
+    <Content
+      title={title}
+      description={description}
+      overline={overline}
+      buttons={buttons}
+    />
   ]
+
   if (mirror) {
     order.reverse()
   }

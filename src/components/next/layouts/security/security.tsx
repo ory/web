@@ -22,19 +22,19 @@ const features = [
   {
     title: 'No limits on identities',
     description:
-      "The unique pricing model does not charge you for Monthly Active Users. Choose a flexible and transparent plan that adapts to your needs.",
+      'The unique pricing model does not charge you for Monthly Active Users. Choose a flexible and transparent plan that adapts to your needs.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
     title: 'More features',
     description:
-      "Ory draws from a large set of features: IAM, Permissions and Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency and many more.",
+      'Ory draws from a large set of features: IAM, Permissions and Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency and many more.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
     title: 'No lock in',
     description:
-      "We support the migration from Ory open source to Ory as a Service, and the other way around. Never worry about cloud lock in again.",
+      'We support the migration from Ory open source to Ory as a Service, and the other way around. Never worry about cloud lock in again.',
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   }
 ]
