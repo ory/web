@@ -30,8 +30,8 @@ interface ColourProps {
 
 const Colour = styled.div<ColourProps>`
   > * {
-    color: var(${props => props.text || ''});
-    background: var(${props => props.background || ''});
+    color: var(${(props) => props.text || ''});
+    background: var(${(props) => props.background || ''});
   }
 `
 

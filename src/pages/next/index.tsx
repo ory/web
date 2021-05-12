@@ -1,4 +1,4 @@
-import {ArrowRight, RocketLaunch} from 'phosphor-react'
+import { ArrowRight, RocketLaunch } from 'phosphor-react'
 import React from 'react'
 import Button from '../../components/next/freestanding/button/button'
 import ColourWrapper from '../../components/next/freestanding/colour/colour-wrapper'
@@ -31,25 +31,25 @@ const IndexPage = () => (
         <Button
           to={'/products'}
           style={'filled'}
-          iconLeft={<RocketLaunch size={24}/>}
+          iconLeft={<RocketLaunch size={24} />}
         >
           Sign up for early access
         </Button>
       }
-      image={<img loading="lazy" alt="" src={heroIllustration}/>}
+      image={<img loading="lazy" alt="" src={heroIllustration} />}
     />
-    
-    <Adopters/>
-    
+
+    <Adopters />
+
     <FeatureImage
       overline={'Security'}
       title={'Ory as a service'}
       description={`Authenticate and manage users, set and check permissions, protect APIs, applications and data.
         Ory as a Service comes with for metrics and insights and can be managed fully from the intuitive user interface
         or dedicated CLI.`}
-      image={<img loading="lazy" alt="" src={heroIllustration}/>}
+      image={<img loading="lazy" alt="" src={heroIllustration} />}
     />
-    
+
     <FeatureImage
       mirror={true}
       overline={'Flexibility'}
@@ -57,19 +57,23 @@ const IndexPage = () => (
       description={`You want to brand all user facing UIs and use your styles and designs?
         No problem with Ory's headless integration. You want custom auth flows? Done.
         And this is included without extra charges.`}
-      image={<img loading="lazy" alt="" src={heroIllustration}/>}
+      image={<img loading="lazy" alt="" src={heroIllustration} />}
       buttons={
-        <Button style={'text'} to={'/'} iconRight={<ArrowRight weight={'bold'} size={16}/>}>
+        <Button
+          style={'text'}
+          to={'/'}
+          iconRight={<ArrowRight weight={'bold'} size={16} />}
+        >
           Read more
         </Button>
       }
     />
-    <Quotes/>
-    <Stats/>
-    <Security/>
-    <Coding/>
-    <Resource/>
-    <Quickstart/>
+    <Quotes />
+    <Stats />
+    <Security />
+    <Coding />
+    <Resource />
+    <Quickstart />
   </Layout>
 )
 

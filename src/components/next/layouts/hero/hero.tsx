@@ -1,6 +1,6 @@
 import React from 'react'
 import { hero } from './hero.module.css'
-import { pb48, pb32 } from '../../freestanding/utils/padding.module.css'
+import { pb48, pb32, pt48 } from '../../freestanding/utils/padding.module.css'
 import cn from 'classnames'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'

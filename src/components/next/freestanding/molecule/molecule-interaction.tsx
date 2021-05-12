@@ -1,5 +1,4 @@
 import React from 'react'
-import * as styles from './molecule-interaction.module.css'
 import cn from 'classnames'
 import Container from '../containers/container'
 import Grid from '../containers/grid'
@@ -13,13 +12,11 @@ export interface PropTypes {
 
 const MoleculeInteraction = ({ children, className }: PropTypes) => (
   <div className={cn(moleculeInteraction, className && className)}>
-    <Container>
-      {React.Children.count(children) > 1
-        ? React.Children.map(children, (child) => {
-            return <div className={cn(pr8)}>{child}</div>
-          })
-        : children}
-    </Container>
+    {React.Children.count(children) > 1
+      ? React.Children.map(children, (child) => {
+          return <div className={cn(pr8)}>{child}</div>
+        })
+      : children}
   </div>
 )
 

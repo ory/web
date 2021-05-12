@@ -6,9 +6,15 @@ import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
 import Molecule from '../../freestanding/molecule/molecule'
-import { pb16, pb32, pt32 } from '../../freestanding/utils/padding.module.css'
+import {
+  pb16,
+  pb32,
+  pt24,
+  pt32
+} from '../../freestanding/utils/padding.module.css'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import ContentVisual from '../../freestanding/content/content-visual'
+import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 
 interface PropTypes {
   mirror?: boolean
@@ -37,14 +43,18 @@ const Visual = ({ image }: Visual) => (
 )
 
 const Content = ({ title, overline, description, buttons }: Content) => (
-  <Grid lg={5} md={5} sm={12} xs={12}>
+  <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb32)}>
     <ContentText>
       <Molecule>
         <div className={cn(pb16, 'font-overline')}>{overline}</div>
         <div className={cn('font-h3', pb32)}>{title}</div>
         <div className={cn('font-p')}>{description}</div>
       </Molecule>
-      {buttons && <MoleculeInteraction>{buttons}</MoleculeInteraction>}
+      {buttons && (
+        <MoleculeInteraction className={cn(pt24)}>
+          {buttons}
+        </MoleculeInteraction>
+      )}
     </ContentText>
   </Grid>
 )
@@ -73,7 +83,9 @@ const FeatureImage = ({
 
   return (
     <div className={cn(featureImage)}>
-      <Container fluid={true}>{order.map((x) => x)}</Container>
+      <Container fluid={true} alignItems={'start'}>
+        {order.map((x) => x)}
+      </Container>
     </div>
   )
 }

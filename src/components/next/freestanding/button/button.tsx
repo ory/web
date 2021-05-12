@@ -3,7 +3,8 @@ import * as styles from './button.module.css'
 import { Link as GatsbyLink } from 'gatsby'
 import cn from 'classnames'
 import Container from '../containers/container'
-import * as padding from '../utils/padding.module.css'
+import { pl8, pr8 } from '../utils/padding.module.css'
+import { ParseCase } from '../../../../util'
 
 export interface PropTypes {
   children?: React.ReactNode
@@ -30,20 +31,7 @@ const Button = ({
 }: PropTypes) => {
   const getStyle = (style: string, theme: string) => {
     // @ts-ignore
-    return styles[`style${parseCase(style)}${parseCase(theme)}`]
-  }
-
-  const parseCase = (s: string) => {
-    const ss = s.split('-')
-    let final = ''
-    if (ss.length > 0) {
-      for (const word of ss) {
-        final += (word.charAt(0).toUpperCase() + word.slice(1)).replace('-', '')
-      }
-    } else {
-      final += s.charAt(0).toUpperCase() + s.slice(1)
-    }
-    return final
+    return styles[`style${ParseCase(style)}${ParseCase(theme)}`]
   }
 
   const classes = cn(
@@ -62,25 +50,21 @@ const Button = ({
       rel={openInNewWindow ? 'noopener noreferrer' : ''}
       target={openInNewWindow ? '_blank' : ''}
     >
-      <Container justify={'center'} alignItems={'start'}>
-        {iconLeft && <div className={cn(padding.pr8)}>{iconLeft}</div>}
-        {children}
-        {iconRight && <div className={cn(padding.pl8)}>{iconRight}</div>}
-      </Container>
+      {iconLeft && <div className={cn(pr8)}>{iconLeft}</div>}
+      {children}
+      {iconRight && <div className={cn(pl8)}>{iconRight}</div>}
     </GatsbyLink>
   ) : (
-    <Container justify={'center'} alignItems={'center'}>
-      <a
-        href={to}
-        className={classes}
-        rel={openInNewWindow ? 'noopener noreferrer' : ''}
-        target={openInNewWindow ? '_blank' : ''}
-      >
-        {iconLeft && <div className={cn(padding.pr8)}>{iconLeft}</div>}
-        {children}
-        {iconRight && <div className={cn(padding.pl8)}>{iconRight}</div>}
-      </a>
-    </Container>
+    <a
+      href={to}
+      className={classes}
+      rel={openInNewWindow ? 'noopener noreferrer' : ''}
+      target={openInNewWindow ? '_blank' : ''}
+    >
+      {iconLeft && <div className={cn(pr8)}>{iconLeft}</div>}
+      {children}
+      {iconRight && <div className={cn(pl8)}>{iconRight}</div>}
+    </a>
   )
 }
 
