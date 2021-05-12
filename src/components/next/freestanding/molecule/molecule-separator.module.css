@@ -1,0 +1,11 @@
+.molecule-separator {
+  border: 1px solid var(--colors-base-grey-200--next);
+}
+
+.molecule-separator-vertical {
+  transform: rotate(90deg);
+}
+
+.molecule-separator-horizontal {
+  transform: rotate(180deg);
+}

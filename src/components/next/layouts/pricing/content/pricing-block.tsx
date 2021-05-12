@@ -23,13 +23,15 @@ const PricingBlock = ({ className, tiers }: PropTypes) => {
   return (
     <div className={cn(className && className)}>
       <Container alignItems={'start'}>
-        {tiers.map((tier) => {
-          return (
-            <Grid lg={6} md={4} sm={12} xs={12} key={tier.title}>
-              <PricingTier tier={tier} />
-            </Grid>
-          )
-        })}
+        {tiers.length > 1
+          ? tiers.map((tier) => {
+              return (
+                <Grid lg={6} md={4} sm={12} xs={12} key={tier.title}>
+                  <PricingTier tier={tier} />
+                </Grid>
+              )
+            })
+          : tiers.length > 0 && <PricingTier tier={tiers[0]} />}
       </Container>
     </div>
   )

@@ -54,9 +54,11 @@ const Container = ({
   mdHidden = false,
   smHidden = false,
   xsHidden = false,
-  editMode = false,
+  editMode = false
 }: PropTypes) => (
-  <div className={cn(fluid && styles.containerFluid, editMode && styles.editMode)}>
+  <div
+    className={cn(fluid && styles.containerFluid, editMode && styles.editMode)}
+  >
     <div
       className={cn(
         styles.container,
