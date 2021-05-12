@@ -1,4 +1,5 @@
 declare const styles: {
-  readonly quickstart: string
-}
-export = styles
+  readonly "quickstart": string;
+};
+export = styles;
+
