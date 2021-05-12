@@ -9,7 +9,7 @@ export interface PropTypes {
   children?: React.ReactNode
   className?: string
   style: 'filled' | 'outlined' | 'text'
-  theme?: 'light' | 'dark'
+  theme?: 'light' | 'dark' | 'grey'
   to: string
   openInNewWindow?: boolean
   disabled?: boolean
@@ -63,9 +63,9 @@ const Button = ({
       target={openInNewWindow ? '_blank' : ''}
     >
       <Container justify={'center'} alignItems={'start'}>
-        {iconLeft && <div className={cn(padding.mr8)}>{iconLeft}</div>}
+        {iconLeft && <div className={cn(padding.pr8)}>{iconLeft}</div>}
         {children}
-        {iconRight && <div className={cn(padding.ml8)}>{iconRight}</div>}
+        {iconRight && <div className={cn(padding.pl8)}>{iconRight}</div>}
       </Container>
     </GatsbyLink>
   ) : (
@@ -76,9 +76,9 @@ const Button = ({
         rel={openInNewWindow ? 'noopener noreferrer' : ''}
         target={openInNewWindow ? '_blank' : ''}
       >
-        {iconLeft && <div className={cn(padding.mr8)}>{iconLeft}</div>}
+        {iconLeft && <div className={cn(padding.pr8)}>{iconLeft}</div>}
         {children}
-        {iconRight && <div className={cn(padding.ml8)}>{iconRight}</div>}
+        {iconRight && <div className={cn(padding.pl8)}>{iconRight}</div>}
       </a>
     </Container>
   )

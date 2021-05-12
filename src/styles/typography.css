@@ -343,7 +343,7 @@ main a.cta {
 .font-p-sm {
   font-size: 14px;
   line-height: 228.5%;
-  color: var(--colors-base-grey-900--next);
+  color: var(--colors-base-grey-400--next);
 }
 
 .font-p-sm-light {

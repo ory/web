@@ -6,7 +6,7 @@ import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import Button from '../../freestanding/button/button'
-import { pb32 } from '../../freestanding/utils/padding.module.css'
+import { pb32, pt32 } from '../../freestanding/utils/padding.module.css'
 import PricingBlock from './content/pricing-block'
 import { CheckCircle } from 'phosphor-react'
 import { PriceTier } from './content/pricing-tier'
@@ -58,7 +58,7 @@ const pricingTiers: Array<PriceTier> = [
     price: 'Individual',
     priceDescription: 'per Project/Member',
     button: (
-      <Button to={'/'} style={'outlined'}>
+      <Button to={'/'} style={'outlined'} theme={'grey'}>
         Contact sales
       </Button>
     ),
@@ -94,10 +94,10 @@ const pricingTiers: Array<PriceTier> = [
 const Pricing = () => (
   <div className={cn(styles.pricing)}>
     <Container fluid={true} alignItems={'start'}>
-      <Grid lg={6} md={6} sm={6} xs={12}>
+      <Grid lg={3} md={6} sm={12} xs={12}>
         <ContentText>
           <Molecule>
-            <div className={cn('font-h1', pb32)}>No Limit on identity</div>
+            <div className={cn('font-h1', pb32)}>No limits on identity</div>
             <div className={cn('font-p-lg')}>
               Ory is based on mature open source software and open standards.
               And it’s affordable for everyone. We also offer individual plans
@@ -106,12 +106,12 @@ const Pricing = () => (
           </Molecule>
         </ContentText>
       </Grid>
-      <Grid lg={6} md={6} sm={6} xs={12}>
+      <Grid lg={6} md={6} sm={5} xs={12}>
         <Container justify={'start'} alignItems={'start'}>
           <PricingBlock tiers={pricingTiers} />
         </Container>
-        <Container justify={'end'} alignItems={'end'}>
-          <div className={cn('font-sm')}>
+        <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
+          <div className={cn('font-p-sm')}>
             Prices in USD, taxes may apply. Billed monthly.
           </div>
         </Container>

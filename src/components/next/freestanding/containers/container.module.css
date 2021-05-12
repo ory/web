@@ -6,6 +6,16 @@
   padding: 0;
 }
 
+.edit-mode {
+  lost-utility: edit;
+}
+
+.wrap {
+  overflow-wrap: break-word;
+  line-break: anywhere;
+  flex-wrap: nowrap;
+}
+
 .container-fluid {
   display: flex;
   flex-wrap: wrap;

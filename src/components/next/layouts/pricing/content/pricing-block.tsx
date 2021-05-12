@@ -22,10 +22,10 @@ interface PropTypes {
 const PricingBlock = ({ className, tiers }: PropTypes) => {
   return (
     <div className={cn(className && className)}>
-      <Container>
+      <Container alignItems={'start'}>
         {tiers.map((tier) => {
           return (
-            <Grid lg={4} md={4} sm={12} xs={12} key={tier.title}>
+            <Grid lg={6} md={4} sm={12} xs={12} key={tier.title}>
               <PricingTier tier={tier} />
             </Grid>
           )

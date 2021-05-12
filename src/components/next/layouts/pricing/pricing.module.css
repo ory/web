@@ -3,10 +3,6 @@
   padding: 128px 0;
 }
 
-.pricing-important {
-  background: var(--colors-base-grey--next);
-}
-
 .feature-enabled {
   color: var(--color-success-primary--next);
 }

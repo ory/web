@@ -20,6 +20,7 @@ export interface PropTypes {
   mdHidden?: boolean
   smHidden?: boolean
   xsHidden?: boolean
+  editMode?: false | true
 }
 
 const getFlex = (flex: string) => {
@@ -52,9 +53,10 @@ const Container = ({
   lgHidden = false,
   mdHidden = false,
   smHidden = false,
-  xsHidden = false
+  xsHidden = false,
+  editMode = false,
 }: PropTypes) => (
-  <div className={cn(fluid && styles.containerFluid)}>
+  <div className={cn(fluid && styles.containerFluid, editMode && styles.editMode)}>
     <div
       className={cn(
         styles.container,

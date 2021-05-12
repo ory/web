@@ -4,6 +4,7 @@ declare const styles: {
   readonly "styleFilledDark": string;
   readonly "styleOutlinedLight": string;
   readonly "styleOutlinedDark": string;
+  readonly "styleOutlinedGrey": string;
   readonly "styleTextLight": string;
   readonly "styleTextDark": string;
   readonly "disabled": string;

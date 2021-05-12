@@ -1,5 +1,7 @@
 declare const styles: {
   readonly "container": string;
+  readonly "editMode": string;
+  readonly "wrap": string;
   readonly "containerFluid": string;
   readonly "row": string;
   readonly "column": string;
