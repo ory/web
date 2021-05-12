@@ -51,6 +51,30 @@ const featureSections: Array<FeatureSection> = [
         description:
           'The basics of IAM: Login & register users fast and without complicated flows and store credentials securely.',
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
+      },      
+      {
+        title: 'Account Managment',
+        description:
+          'Manage your users, enable email verification, let users pick new passwords and change their profile data.',
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
+      },
+      {
+        title: 'User Interface & Dashboards',
+        description:
+          'Display everything in a smooth and responsive dashboard. We also offer presets for all common user interfaces.',
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
+      },
+      {
+        title: 'Identity Model',
+        description:
+          'A flexible identity model adapts to your business needs. You can use one of our provided presets or cook up your own identity model.',
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
+      },      
+      {
+        title: 'Social Logins',
+        description:
+          'Simplify your users experience and let them use their existing accounts at Google, GitHub, Apple etc. to sign up and log in. All OIDC providers are supported.',
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
       }
     ]
   },
@@ -88,6 +112,30 @@ const featureSections: Array<FeatureSection> = [
         title: 'Webhooks & Triggers',
         description:
           'Use webhooks to define and trigger certain actions when users e.g. register, log in, verify their email... you name it!'
+      },      
+      {
+        icon: <Flag className={cn(styles.featurePlanned)} size={16} />,
+        title: 'Payments',
+        description:
+          'Payments integration powered by Stripe. Secure, fast and reliable payments.'
+      },
+      {
+        icon: <Flag className={cn(styles.featurePlanned)} size={16} />,
+        title: 'Email',
+        description:
+          'Send out emails in bulk or individually reliably and without hassle. Send updates to all users connected to your platform.'
+      },
+      {
+        icon: <Flag className={cn(styles.featurePlanned)} size={16} />,
+        title: 'OAuth2.0',
+        description:
+          'Become an OAuth2.0 provider, enable complex use cases, standardize and interface your business with other systems.'
+      },
+      {
+        icon: <Flag className={cn(styles.featurePlanned)} size={16} />,
+        title: 'Machine 2 Machine',
+        description:
+          'Enables machine interactions powered by Ory. If you use automated agents, this is for you!'
       }
     ]
   }

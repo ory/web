@@ -14,39 +14,27 @@ import { Fingerprint } from 'phosphor-react'
 
 const features = [
   {
-    title: 'Feature',
+    title: 'Ory is open source',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      "Ory's heart and soul are rooted in the open source community. Our commitment to open software will stay unchanged forever. ",
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'No limits on identities',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      "The unique pricing model does not charge you for Monthly Active Users. Choose a flexible and transparent plan that adapts to your needs.",
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'More features',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      "Ory draws from a large set of features: IAM, Permissions and Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency and many more.",
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   },
   {
-    title: 'Feature',
+    title: 'No lock in',
     description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
-    icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
-  },
-  {
-    title: 'Feature',
-    description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
-    icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
-  },
-  {
-    title: 'Feature',
-    description:
-      "Thousands of businesses with billions of network requests trust Ory' security infrastructure",
+      "We support the migration from Ory open source to Ory as a Service, and the other way around. Never worry about cloud lock in again.",
     icon: <Fingerprint className={cn('icon-dark')} weight={'fill'} size={32} />
   }
 ]
@@ -59,19 +47,12 @@ const Security = () => (
             <MoleculeTextInteraction>
               <Molecule>
                 <p className={cn('font-h3')}>
-                  A fully integrated suite of security products.
-                </p>
-                <p className={cn('font-p')}>
-                  Securing internet services requires more than a username and a
-                  password. We bring together everything that’s needed to make
-                  websites and internet services secure, regardless of scale or
-                  geolocation. Ory is affordable and based on mature open source
-                  software and open standards.
+                  Auth integration in 1.. 2.. done!
                 </p>
               </Molecule>
               <MoleculeInteraction>
                 <Button to={''} style={'filled'}>
-                  Get started for free
+                  Get started
                 </Button>
               </MoleculeInteraction>
             </MoleculeTextInteraction>
