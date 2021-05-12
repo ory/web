@@ -1,10 +1,7 @@
 import React from 'react'
-import * as styles from './hero.module.css'
+import { hero } from './hero.module.css'
 import { pb48, pb32 } from '../../freestanding/utils/padding.module.css'
 import cn from 'classnames'
-import HeroContentLeft from './content/hero-content-left'
-import HeroContentRight from './content/hero-content-right'
-import hero from '../../../../images/illustrations/hero.svg'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Button from '../../freestanding/button/button'
@@ -15,37 +12,29 @@ import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 
-const Hero = () => (
-  <div className={cn(styles.hero)}>
+interface PropTypes {
+  title: string
+  description: string
+  image: React.ReactElement
+  buttons?: React.ReactNode
+}
+
+const Hero = ({ title, description, image, buttons }: PropTypes) => (
+  <div className={cn(hero)}>
     <Container fluid={true} alignItems={'start'}>
       <Grid lg={5} md={5} sm={5} xs={12}>
         <ContentText>
           <MoleculeTextInteraction>
             <Molecule className={cn(pb48)}>
-              <p className={cn('font-h1', pb32)}>
-                Security infrastructure for global internet services.
-              </p>
-              <p className="font-p-lg">
-                Thousands of businesses with billions of network requests trust
-                Ory's security infrastructure to authenticate and manage users,
-                set and check permissions and to protect APIs, applications and
-                data.
-              </p>
+              <div className={cn('font-h1', pb32)}>{title}</div>
+              <div className="font-p-lg">{description}</div>
             </Molecule>
-            <MoleculeInteraction>
-              <Button
-                to={'/products'}
-                style={'filled'}
-                iconLeft={<RocketLaunch size={24} />}
-              >
-                Sign up for early access
-              </Button>
-            </MoleculeInteraction>
+            <MoleculeInteraction>{buttons}</MoleculeInteraction>
           </MoleculeTextInteraction>
         </ContentText>
       </Grid>
       <Grid lg={6} md={6} sm={6} xsHidden={true}>
-        <img width={'100%'} loading="lazy" src={hero} alt="placeholder" />
+        <ContentVisual>{image}</ContentVisual>
       </Grid>
     </Container>
   </div>

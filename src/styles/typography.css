@@ -278,9 +278,12 @@ main a.cta {
 }
 
 .font-overline {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 200%;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 130%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--colors-themed-primary--next);
 }
 
 .font-subtitle {

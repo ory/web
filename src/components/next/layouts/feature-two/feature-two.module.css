@@ -1,11 +1,3 @@
 .feature-two {
-  background-color: var(--colors-base-white--next);
-  /*background: url(wire / pattern.png);*/
   padding: 128px 0;
-}
-
-@media (--md-viewport), (--sm-viewport) {
-  .feature-two {
-    padding: 64px 0;
-  }
 }

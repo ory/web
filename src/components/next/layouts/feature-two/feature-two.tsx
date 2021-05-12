@@ -1,85 +1,36 @@
 import React from 'react'
-import * as styles from './feature-two.module.css'
+import { featureTwo } from './feature-two.module.css'
 import cn from 'classnames'
 import { GitDiff, Triangle } from 'phosphor-react'
 import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
-import FeatureTwoInner from './content/feature-two-inner'
 import Molecule from '../../freestanding/molecule/molecule'
+import { pb16, pt32 } from '../../freestanding/utils/padding.module.css'
 
-const features = [
-  {
-    title: 'Security infrastructure for global internet services.',
-    description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
-  },
-  {
-    title: 'Security infrastructure for global internet services.',
-    description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
-  },
-  {
-    title: 'Security infrastructure for global internet services.',
-    description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
-  },
-  {
-    title: 'Security infrastructure for global internet services.',
-    description:
-      'Securing internet services requires more than a username and ' +
-      'password. We bring together everything that’s needed to make ' +
-      'websites and internet services secure, regardless of scale or ' +
-      'geolocation. Ory is affordable and based on mature open source ' +
-      'software and open standards.',
-    icon: <Triangle className={cn('icon-dark')} weight={'duotone'} size={32} />
-  }
-]
+interface PropTypes {
+  title: string
+  overline: string
+  description: string
+  image: React.ReactElement
+}
 
-const FeatureTwo = () => {
+const FeatureTwo = ({ title, overline, description, image }: PropTypes) => {
   return (
-    <div className={cn(styles.featureTwo)}>
+    <div className={cn(featureTwo)}>
       <Container fluid={true}>
-        <ContentText>
-          <Molecule>
-            <p className="font-h2">
-              Very smart headline lorem ipsum dolor sit amet adipiscent.
-            </p>
-          </Molecule>
-        </ContentText>
-
-        <Container justify={'start'}>
-          {features.map((feature, index) => {
-            return (
-              <Grid lg={3} md={5} sm={5} xs={12} key={index}>
-                <Container flexContainer={'column'}>
-                  <ContentText>
-                    <Molecule>
-                      {feature.icon}
-                      <p className="font-h5">{feature.title}</p>
-                      <p className="font-p-sm">{feature.description}</p>
-                    </Molecule>
-                  </ContentText>
-                </Container>
-              </Grid>
-            )
-          })}
-        </Container>
+        <Grid className={cn(pt32)} lg={6} md={6} sm={12} xs={12}>
+          {image}
+        </Grid>
+        <Grid lg={5} md={5} sm={12} xs={12}>
+          <ContentText>
+            <Molecule>
+              <div className={cn(pb16, 'font-overline')}>{overline}</div>
+              <div className={cn('font-h3')}>{title}</div>
+              <div className={cn('font-p')}>{description}</div>
+            </Molecule>
+          </ContentText>
+        </Grid>
       </Container>
     </div>
   )

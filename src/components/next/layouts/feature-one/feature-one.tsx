@@ -1,5 +1,5 @@
 import React from 'react'
-import * as styles from './feature-one.module.css'
+import { featureOne, featureMiddleRow } from './feature-one.module.css'
 import cn from 'classnames'
 import ContentText from '../../freestanding/content/content-text'
 import ContentVisual from '../../freestanding/content/content-visual'
@@ -18,7 +18,7 @@ import { ArrowRight } from 'phosphor-react'
 import Grid from '../../freestanding/containers/grid'
 
 const FeatureOne = () => (
-  <div className={cn(styles.featureOne)}>
+  <div className={cn(featureOne)}>
     <Container fluid={true} flexContainer={'column'}>
       <Container>
         <Grid lg={5} md={5} sm={6} xs={12}>
@@ -59,7 +59,7 @@ const FeatureOne = () => (
         </Grid>
       </Container>
 
-      <Container className={cn(styles.featureMiddleRow)}>
+      <Container className={cn(featureMiddleRow)}>
         <Grid lg={8} md={8} sm={12} xsHidden={true}>
           <Container>
             <ContentVisual>

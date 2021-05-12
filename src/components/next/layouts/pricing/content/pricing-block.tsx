@@ -26,7 +26,14 @@ const PricingBlock = ({ className, tiers }: PropTypes) => {
         {tiers.length > 1
           ? tiers.map((tier) => {
               return (
-                <Grid lg={6} md={4} sm={12} xs={12} key={tier.title}>
+                <Grid
+                  className={cn(pb32)}
+                  lg={6}
+                  md={6}
+                  sm={6}
+                  xs={12}
+                  key={tier.title}
+                >
                   <PricingTier tier={tier} />
                 </Grid>
               )

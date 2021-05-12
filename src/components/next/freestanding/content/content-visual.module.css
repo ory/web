@@ -1,5 +1,5 @@
 .content-visual {
   padding: 0;
   box-shadow: var(--elevation-xxl);
-  /*background: var(--colors-themed-background--next);*/
+  border-radius: 20px;
 }

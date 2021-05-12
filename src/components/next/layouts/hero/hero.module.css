@@ -1,17 +1,3 @@
 .hero {
   padding: 128px 0;
 }
-
-.feature-text {
-  color: var(--colors-base-grey-900--next);
-}
-
-.feature-heading {
-  color: var(--colors-base-grey--next);
-}
-
-@media (--sm), (--xs) {
-  .hero {
-    padding: 64px 0;
-  }
-}

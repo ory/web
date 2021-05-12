@@ -65,7 +65,7 @@ const PricingContent = ({
   button,
   classes
 }: PriceTierContent) => (
-  <Container alignItems={'start'} justify={'stretch'}>
+  <Container justify={'center'}>
     <Container flexContainer={'column'} alignItems={'start'}>
       <ContentText className={cn(pb48)}>
         <Molecule>
@@ -85,7 +85,11 @@ const PricingContent = ({
 )
 
 const PricingFeatures = ({ features, classes }: PriceTierFeatures) => (
-  <Container flexContainer={'column'} alignItems={'start'}>
+  <Container
+    flexContainer={'column'}
+    alignItems={'start'}
+    justify={'space-around'}
+  >
     {features.map((feature) => {
       return (
         <Container justify={'start'} alignItems={'start'} key={feature.title}>
@@ -146,7 +150,7 @@ const PricingTier = ({
               />
             </Grid>
             <Grid lg={6} md={6} sm={6} xs={12}>
-              <Container justify={'start'} alignItems={'start'}>
+              <Container justify={'center'} alignItems={'start'}>
                 <MoleculeSeparator style={'vertical'} />
                 <PricingFeatures classes={classes} features={features} />
               </Container>

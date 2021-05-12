@@ -27,7 +27,7 @@ const FeatureListContent = ({ className, features }: PropType) => (
     <Container flexContainer={'column'}>
       {features.map((feature) => {
         return (
-          <Container className={cn(pb24)} justify={'start'}>
+          <Container className={cn(pb24)} justify={'start'} key={feature.title}>
             {feature.icon}
             <ContentText className={cn(pb4, pl8)}>
               <Molecule>

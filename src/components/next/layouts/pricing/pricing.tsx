@@ -6,7 +6,15 @@ import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import Button from '../../freestanding/button/button'
-import { pb32, pt32, pt64 } from '../../freestanding/utils/padding.module.css'
+import {
+  pb32,
+  pr16,
+  pr32,
+  pr48,
+  pr8,
+  pt32,
+  pt64
+} from '../../freestanding/utils/padding.module.css'
 import PricingBlock from './content/pricing-block'
 import { CheckCircle } from 'phosphor-react'
 import { PriceTier } from './content/pricing-tier'
@@ -17,7 +25,7 @@ const pricingTiers: Array<PriceTier> = [
   {
     theme: 'dark',
     title: 'Early Access',
-    description: 'Get early access to the full Ory platform now!',
+    description: 'Get early access to the full Ory platform now',
     price: '$99',
     priceDescription: 'per Project/Member',
     button: (
@@ -55,8 +63,7 @@ const pricingTiers: Array<PriceTier> = [
   {
     theme: 'light',
     title: 'Enterprise',
-    description:
-      'The full Ory platform with dedicated support & custom hosting options.',
+    description: 'Ory with dedicated support & custom hosting options',
     price: 'Individual',
     priceDescription: 'per Project/Member',
     button: (
@@ -157,22 +164,20 @@ const Pricing = () => {
             </Molecule>
           </ContentText>
         </Grid>
-        <Grid lg={6} md={6} sm={5} xs={12}>
-          <Container justify={'center'}>
+        <Grid lg={6} md={6} sm={12} xs={12}>
+          <Container justify={'space-around'}>
             <Toggle
-              className={cn(pb32)}
+              className={cn(pb32, pr48, pt64)}
               onClick={handleToggle}
               enabled={togglePricing}
               text={{ textEnable: 'Self-hosted', textDisable: 'Cloud' }}
             />
           </Container>
-          <Container justify={'start'} alignItems={'start'}>
-            {togglePricing ? (
-              <PricingBlock tiers={pricingTiers} />
-            ) : (
-              <PricingBlock tiers={pricingOS} />
-            )}
-          </Container>
+          {togglePricing ? (
+            <PricingBlock tiers={pricingTiers} />
+          ) : (
+            <PricingBlock tiers={pricingOS} />
+          )}
           <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
             <div className={cn('font-p-sm')}>
               Prices in USD, taxes may apply. Billed monthly.
