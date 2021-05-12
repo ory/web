@@ -10,6 +10,7 @@ import Container from '../../../freestanding/containers/container'
 import Grid from '../../../freestanding/containers/grid'
 import ContentText from '../../../freestanding/content/content-text'
 import Molecule from '../../../freestanding/molecule/molecule'
+import MoleculeIconWrapper from '../../../freestanding/molecule/molecule-icon-wrapper'
 
 export interface Features {
   title: string

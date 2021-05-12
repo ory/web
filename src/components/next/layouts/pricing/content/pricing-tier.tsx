@@ -65,7 +65,7 @@ const PricingContent = ({
   button,
   classes
 }: PriceTierContent) => (
-  <Container justify={'center'}>
+  <>
     <Container flexContainer={'column'} alignItems={'start'}>
       <ContentText className={cn(pb48)}>
         <Molecule>
@@ -81,7 +81,7 @@ const PricingContent = ({
       </ContentText>
     </Container>
     <div className={cn(pb64)}>{button}</div>
-  </Container>
+  </>
 )
 
 const PricingFeatures = ({ features, classes }: PriceTierFeatures) => (
@@ -136,7 +136,7 @@ const PricingTier = ({
 
   return (
     <div className={cn(classes.background, className && className)}>
-      <Container flexContainer={featuresContainer} justify={'start'}>
+      <Container flexContainer={featuresContainer} justify={'start'} alignItems={'stretch'}>
         {featuresContainer === 'row' ? (
           <>
             <Grid lg={6} md={6} sm={6} xs={12}>

@@ -8,10 +8,13 @@ import Molecule from '../../freestanding/molecule/molecule'
 import Button from '../../freestanding/button/button'
 import {
   pb32,
+  pb64,
   pr16,
+  pr24,
   pr32,
   pr48,
   pr8,
+  pt128,
   pt32,
   pt64
 } from '../../freestanding/utils/padding.module.css'
@@ -153,7 +156,7 @@ const Pricing = () => {
     <div className={cn(styles.pricing)}>
       <Container fluid={true} alignItems={'start'}>
         <Grid lg={3} md={6} sm={12} xs={12}>
-          <ContentText className={cn(pt64)}>
+          <ContentText className={cn(pt64, pb64)}>
             <Molecule>
               <div className={cn('font-h1', pb32)}>No limits on identity</div>
               <div className={cn('font-p-lg')}>
@@ -165,14 +168,16 @@ const Pricing = () => {
           </ContentText>
         </Grid>
         <Grid lg={6} md={6} sm={12} xs={12}>
-          <Container justify={'space-around'}>
+          <Container justify={'center'}>
             <Toggle
-              className={cn(pb32, pr48, pt64)}
+              className={cn(pb32, pr24)}
               onClick={handleToggle}
               enabled={togglePricing}
               text={{ textEnable: 'Self-hosted', textDisable: 'Cloud' }}
             />
           </Container>
+          
+          
           {togglePricing ? (
             <PricingBlock tiers={pricingTiers} />
           ) : (
