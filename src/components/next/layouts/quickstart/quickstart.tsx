@@ -1,97 +1,60 @@
 import React from 'react'
 import * as styles from './quickstart.module.css'
 import cn from 'classnames'
-import QuickstartInner from './content/quickstart-inner'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Button from '../../freestanding/button/button'
-import { ArrowRight, GitDiff } from 'phosphor-react'
-import MoleculeFeature from '../../freestanding/molecule/molecule-feature'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
-import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import {
+  pb32,
+  pb48,
+  pb8,
+  pt24
+} from '../../freestanding/utils/padding.module.css'
 
-const Quickstart = () => (
+export interface QuickstartContent {
+  icon: React.ReactElement
+  title: React.ReactElement
+  description: React.ReactElement
+  button: React.ReactElement
+}
+
+interface PropType {
+  title: React.ReactElement
+  description: React.ReactElement
+  buttons?: React.ReactNode
+  content: Array<QuickstartContent>
+}
+
+const Quickstart = ({ title, description, buttons, content }: PropType) => (
   <div className={cn(styles.quickstart)}>
-    <Container fluid={true}>
-      <Grid lg={4} md={10} sm={10}>
-        <MoleculeTextInteraction>
-          <ContentText>
-            <Molecule>
-              <p className="font-h3">Ready to get started?</p>
-              <p className="font-p">
-                Thousands of businesses with billions of network requests trust
-                Ory's security to auth and manage users.
-              </p>
-            </Molecule>
-            <MoleculeInteraction>
-              <Button style={'filled'} to={''}>
-                Get started for free
-              </Button>
-              <Button
-                style={'text'}
-                to={''}
-                iconRight={<ArrowRight size={24} />}
-              >
-                Contact Sales
-              </Button>
-            </MoleculeInteraction>
-          </ContentText>
-        </MoleculeTextInteraction>
+    <Container fluid={true} alignItems={'start'}>
+      <Grid lg={6} md={6} sm={12} xs={12}>
+        <ContentText>
+          <Molecule>
+            <div className={cn('font-h3', pb32)}>{title}</div>
+            <div className={cn('font-p', pb48)}>{description}</div>
+          </Molecule>
+          <MoleculeInteraction>{buttons}</MoleculeInteraction>
+        </ContentText>
       </Grid>
-      <Grid lg={6} md={10} sm={10}>
-        <Container justify={'start'}>
-          <Grid
-            lg={6}
-            md={6}
-            sm={12}
-            lgOffset={false}
-            mdOffset={false}
-            smOffset={false}
-          >
-            <MoleculeFeature>
+      <Grid lg={6} md={6} sm={12} xs={12}>
+        <Container alignItems={'start'}>
+          {content.map(({ button, icon, description, title }) => (
+            <Grid lg={5} md={6} sm={12} xs={12}>
               <ContentText>
-                <Molecule>
-                  <GitDiff
-                    className={cn('icon-dark')}
-                    weight={'duotone'}
-                    size={32}
-                  />
-                  <p className={cn('font-h5')}>Powerful Tools</p>
-                  <p className={cn('font-p-md')}>
-                    Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all
-                    operating systems and CPUs.
-                  </p>
-                </Molecule>
+                <ColourWrapper text={'themed-primary'}>{icon}</ColourWrapper>
+                <div className={cn('font-h5', pb8)}>{title}</div>
+                <div className={cn('font-p-sm')}>{description}</div>
+                <MoleculeInteraction className={pt24}>
+                  {button}
+                </MoleculeInteraction>
               </ContentText>
-            </MoleculeFeature>
-          </Grid>
-          <Grid
-            lg={6}
-            md={6}
-            sm={12}
-            lgOffset={false}
-            mdOffset={false}
-            smOffset={false}
-          >
-            <MoleculeFeature>
-              <ContentText>
-                <Molecule>
-                  <GitDiff
-                    className={cn('icon-dark')}
-                    weight={'duotone'}
-                    size={32}
-                  />
-                  <p className={cn('font-h5')}>Powerful Tools</p>
-                  <p className={cn('font-p-md')}>
-                    Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all
-                    operating systems and CPUs.
-                  </p>
-                </Molecule>
-              </ContentText>
-            </MoleculeFeature>
-          </Grid>
+            </Grid>
+          ))}
         </Container>
       </Grid>
     </Container>

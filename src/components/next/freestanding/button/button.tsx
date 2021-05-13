@@ -43,7 +43,7 @@ const Button = ({
       'font-base'
     ])
   }
-  
+
   if (style == 'link') {
     classes = classes.concat(['font-link', 'font-link-md'])
   } else {

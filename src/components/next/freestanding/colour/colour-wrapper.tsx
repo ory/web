@@ -44,7 +44,13 @@ const getVariable = (name: string) => {
   return `--colors-${name}--next`
 }
 
-const ColourWrapper = ({ children, className, background, text, fill }: PropType) => {
+const ColourWrapper = ({
+  children,
+  className,
+  background,
+  text,
+  fill
+}: PropType) => {
   let props: ColourProps = {}
 
   if (text) {
@@ -54,7 +60,7 @@ const ColourWrapper = ({ children, className, background, text, fill }: PropType
   if (background) {
     props.background = getVariable(background)
   }
-  
+
   if (fill) {
     props.fill = getVariable(fill)
   }
