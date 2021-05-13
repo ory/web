@@ -7,6 +7,7 @@ declare const styles: {
   readonly styleOutlinedGrey: string
   readonly styleTextLight: string
   readonly styleTextDark: string
+  readonly styleLinkLight: string
   readonly disabled: string
   readonly iconRight: string
 }

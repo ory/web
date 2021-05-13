@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import cn from 'classnames'
 
 type Greys = '25' | '50' | '75' | '200' | '400' | '600' | '800' | '900'
 type ThemeTypes = 'primary' | 'dark' | 'light' | 'darkmode' | 'background'
@@ -19,6 +20,7 @@ type Themes =
 
 interface PropType {
   children: React.ReactElement
+  className?: string
   background?: Themes
   text?: Themes
 }
@@ -39,7 +41,7 @@ const getVariable = (name: string) => {
   return `--colors-${name}--next`
 }
 
-const ColourWrapper = ({ children, background, text }: PropType) => {
+const ColourWrapper = ({ children, className, background, text }: PropType) => {
   let props: ColourProps = {}
 
   if (text) {
@@ -50,7 +52,11 @@ const ColourWrapper = ({ children, background, text }: PropType) => {
     props.background = getVariable(background)
   }
 
-  return <Colour {...props}>{children}</Colour>
+  return (
+    <Colour className={cn(className && className)} {...props}>
+      {children}
+    </Colour>
+  )
 }
 
 export default ColourWrapper

@@ -1,4 +1,11 @@
-import { ArrowRight, CirclesThreePlus, Code, LockOpen, RocketLaunch, UserPlus } from 'phosphor-react'
+import {
+  ArrowRight,
+  CirclesThreePlus,
+  Code,
+  LockOpen,
+  RocketLaunch,
+  UserPlus
+} from 'phosphor-react'
 import React from 'react'
 import Button from '../../components/next/freestanding/button/button'
 import ColourWrapper from '../../components/next/freestanding/colour/colour-wrapper'
@@ -14,7 +21,6 @@ import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
-import Quotes from '../../components/next/layouts/quotes/quotes'
 import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
@@ -48,56 +54,58 @@ const IndexPage = () => (
       image={<img loading="lazy" alt="" src={heroIllustration} />}
     />
 
-    <Adopters adopters={[
-    {
-      title: 'BluesWireless',
-      image: blues,
-      url: 'https://blues.io/',
-      pos: 1
-    },
-    {
-      title: 'ThoughtWorks',
-      image: thoughtworks,
-      url: 'https://www.thoughtworks.com',
-      pos: 8
-    },
-    {
-      title: 'Segment',
-      image: segment,
-      url: 'https://segment.com/',
-      pos: 5
-    },
-    {
-      title: 'Raspberry Pi',
-      image: raspberrypi,
-      url: 'https://www.raspberrypi.org/',
-      pos: 3
-    },
-    {
-      title: `Sainsbury's`,
-      image: sainsburys,
-      url: 'https://www.sainsburys.co.uk/',
-      pos: 2
-    },
-    {
-      title: 'Hootsuite',
-      image: hootsuite,
-      url: 'https://hootsuite.com',
-      pos: 7
-    },
-    {
-      title: 'Kyma Project',
-      image: kyma,
-      url: 'https://kyma-project.io/',
-      pos: 4
-    },
-    {
-      title: '3REIN',
-      image: threerein,
-      url: 'https://3rein.com/',
-      pos: 6
-    }
-      ]}/>
+    <Adopters
+      adopters={[
+        {
+          title: 'BluesWireless',
+          image: blues,
+          url: 'https://blues.io/',
+          pos: 1
+        },
+        {
+          title: 'ThoughtWorks',
+          image: thoughtworks,
+          url: 'https://www.thoughtworks.com',
+          pos: 8
+        },
+        {
+          title: 'Segment',
+          image: segment,
+          url: 'https://segment.com/',
+          pos: 5
+        },
+        {
+          title: 'Raspberry Pi',
+          image: raspberrypi,
+          url: 'https://www.raspberrypi.org/',
+          pos: 3
+        },
+        {
+          title: `Sainsbury's`,
+          image: sainsburys,
+          url: 'https://www.sainsburys.co.uk/',
+          pos: 2
+        },
+        {
+          title: 'Hootsuite',
+          image: hootsuite,
+          url: 'https://hootsuite.com',
+          pos: 7
+        },
+        {
+          title: 'Kyma Project',
+          image: kyma,
+          url: 'https://kyma-project.io/',
+          pos: 4
+        },
+        {
+          title: '3REIN',
+          image: threerein,
+          url: 'https://3rein.com/',
+          pos: 6
+        }
+      ]}
+    />
 
     <FeatureImage
       overline={'Security'}
@@ -118,7 +126,7 @@ const IndexPage = () => (
       image={<img loading="lazy" alt="" src={heroIllustration} />}
       buttons={
         <Button
-          style={'text'}
+          style={'link'}
           to={'/'}
           iconRight={<ArrowRight weight={'bold'} size={16} />}
         >
@@ -129,9 +137,11 @@ const IndexPage = () => (
     <Features
       overline={'Top Features'}
       title={'Auth integration in 1.. 2.. done!'}
-      buttons={(
-        <Button to={'/'} style={'text'} iconRight={(<ArrowRight size={16} />)}>See our roadmap</Button>
-      )}
+      buttons={
+        <Button to={'/'} style={'link'} iconRight={<ArrowRight size={16} />}>
+          See our roadmap
+        </Button>
+      }
       feature={[
         {
           icon: <Code size={32} />,
@@ -158,8 +168,7 @@ const IndexPage = () => (
           Never worry about cloud lock in again.`
         }
       ]}
-      />
-    <Quotes />
+    />
     <Stats />
     <Security />
     <Coding />

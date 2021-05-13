@@ -9,7 +9,7 @@ import { ParseCase } from '../../../../util'
 export interface PropTypes {
   children?: React.ReactNode
   className?: string
-  style: 'filled' | 'outlined' | 'text' | 'none'
+  style: 'filled' | 'outlined' | 'text' | 'none' | 'link'
   theme?: 'light' | 'dark' | 'grey'
   to: string
   openInNewWindow?: boolean
