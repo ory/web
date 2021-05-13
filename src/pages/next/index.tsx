@@ -21,9 +21,10 @@ import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
-import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
+import Features from '../../components/next/layouts/features/features'
+import Quotes from '../../components/next/layouts/quotes/quotes'
 import heroIllustration from '../../images/illustrations/hero.svg'
 import blues from '../../images/adopters/blues.svg'
 import thoughtworks from '../../images/adopters/thoughtworks.svg'
@@ -33,7 +34,6 @@ import segment from '../../images/adopters/segment.svg'
 import sainsburys from '../../images/adopters/sainsburys.svg'
 import hootsuite from '../../images/adopters/hootsuite.svg'
 import threerein from '../../images/adopters/threerein.svg'
-import Features from '../../components/next/layouts/features/features'
 
 const IndexPage = () => (
   <Layout>
@@ -46,14 +46,14 @@ const IndexPage = () => (
         <Button
           to={'/products'}
           style={'filled'}
-          iconLeft={<RocketLaunch size={24} />}
+          iconLeft={<RocketLaunch size={24}/>}
         >
           Sign up for early access
         </Button>
       }
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+      image={<img loading="lazy" alt="" src={heroIllustration}/>}
     />
-
+    
     <Adopters
       adopters={[
         {
@@ -106,74 +106,99 @@ const IndexPage = () => (
         }
       ]}
     />
-
+    
     <FeatureImage
       overline={'Security'}
-      title={'Ory as a service'}
-      description={`Authenticate and manage users, set and check permissions, protect APIs, applications and data.
+      title={<>Ory as a service</>}
+      description={<>Authenticate and manage users, set and check permissions, protect APIs, applications and data.
         Ory as a Service comes with for metrics and insights and can be managed fully from the intuitive user interface
-        or dedicated CLI.`}
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+        or dedicated CLI.</>}
+      image={<img loading="lazy" alt="" src={heroIllustration}/>}
     />
-
+    
     <FeatureImage
       mirror={true}
       overline={'Flexibility'}
-      title={'Bring your own UX'}
-      description={`You want to brand all user facing UIs and use your styles and designs?
+      title={<>Bring your own UX</>}
+      description={<>You want to brand all user facing UIs and use your styles and designs?
         No problem with Ory's headless integration. You want custom auth flows? Done.
-        And this is included without extra charges.`}
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+        And this is included without extra charges.</>}
+      image={<img loading="lazy" alt="" src={heroIllustration}/>}
       buttons={
         <Button
           style={'link'}
           to={'/'}
-          iconRight={<ArrowRight weight={'bold'} size={16} />}
+          iconRight={<ArrowRight weight={'bold'} size={16}/>}
         >
           Read more
         </Button>
       }
     />
+    
+    <Coding/>
+    
+    <Stats/>
+    
     <Features
       overline={'Top Features'}
-      title={'Auth integration in 1.. 2.. done!'}
+      title={<>Auth integration in 1.. 2..<br/> done!</>}
       buttons={
-        <Button to={'/'} style={'link'} iconRight={<ArrowRight size={16} />}>
+        <Button to={'/'} style={'link'} iconRight={<ArrowRight size={16}/>}>
           See our roadmap
         </Button>
       }
       feature={[
         {
-          icon: <Code size={32} />,
-          title: 'Ory is open source',
-          description: `Ory's heart and soul are rooted in the open source community.
-          Our commitment to open software will stay unchanged forever.`
+          icon: <Code size={32}/>,
+          title: <>Ory is open source</>,
+          description: <>Ory's heart and soul are rooted in the open source community.
+          Our commitment to open software will stay unchanged forever.</>
         },
         {
-          icon: <UserPlus size={32} />,
-          title: `No limits on identities`,
-          description: `The unique pricing model does not charge you for Monthly Active Users.
-          Choose a flexible and transparent plan that adapts to your needs.`
+          icon: <UserPlus size={32}/>,
+          title: <>No limits on identities</>,
+          description: <>The unique pricing model does not charge you for Monthly Active Users.
+          Choose a flexible and transparent plan that adapts to your needs.</>
         },
         {
-          icon: <CirclesThreePlus size={32} />,
-          title: `More features`,
-          description: `Ory draws from a large set of features:
-          IAM, Permissions and Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency and many more.`
+          icon: <CirclesThreePlus size={32}/>,
+          title: <>More features</>,
+          description: <>Ory draws from a large set of features:
+          IAM, Permissions and Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency and many more.</>
         },
         {
-          icon: <LockOpen size={32} />,
-          title: `No lock in`,
-          description: `We support the migration from Ory open source to Ory as a Service, and the other way around.
-          Never worry about cloud lock in again.`
+          icon: <LockOpen size={32}/>,
+          title: <>No lock in</>,
+          description: <>We support the migration from Ory open source to Ory as a Service, and the other way around.
+          Never worry about cloud lock in again.</>
         }
       ]}
     />
-    <Stats />
-    <Security />
-    <Coding />
-    <Resource />
-    <Quickstart />
+    
+    <Quotes title={<>Read about our<br/> customers experience</>} quotes={[
+      {
+        logo: (
+          <ColourWrapper text={'kratos-primary'}>
+            <img src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"}/>
+          </ColourWrapper>
+        ),
+        description: <>At Sainsbury’s Tech we use Ory tools to power our identity platform.
+        We needed a feature complete OAuth provider which can operate securely at scale and Ory Hydra
+        fit the bill perfectly.</>,
+        person: `Paul Harman`,
+        jobTitle: `Engineering Manager, Sainsbury’s Tech`
+      },
+      {
+        logo: (
+          <img src={blues} loading="lazy" alt={"Blues Logo"}/>
+        ),
+        description: <>We love it!</>,
+        person: `Harman Harman`,
+        jobTitle: `Engineering Manager, B’s Tech`
+      }
+    ]}/>
+    
+    <Quickstart/>
   </Layout>
 )
 

@@ -18,17 +18,17 @@ import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-i
 
 interface PropTypes {
   mirror?: boolean
-  title: string
+  title: React.ReactElement
   overline: string
-  description: string
+  description: React.ReactElement
   image: React.ReactElement
   buttons?: React.ReactNode
 }
 
 interface Content {
-  title: string
+  title: React.ReactElement
   overline: string
-  description: string
+  description: React.ReactElement
   buttons?: React.ReactNode
 }
 

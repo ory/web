@@ -40,9 +40,14 @@ const Button = ({
     classes = classes.concat([
       styles.btnBase,
       getStyle(style, theme),
-      'font-base',
-      'font-btn'
+      'font-base'
     ])
+  }
+  
+  if (style == 'link') {
+    classes = classes.concat(['font-link', 'font-link-md'])
+  } else {
+    classes.push('font-btn')
   }
 
   return to.startsWith('/') ? (

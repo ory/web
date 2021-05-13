@@ -23,17 +23,20 @@ interface PropType {
   className?: string
   background?: Themes
   text?: Themes
+  fill?: Themes
 }
 
 interface ColourProps {
   text?: string
   background?: string
+  fill?: string
 }
 
 const Colour = styled.div<ColourProps>`
   > * {
     color: var(${(props) => props.text || ''});
     background: var(${(props) => props.background || ''});
+    fill: var(${(props) => props.fill || ''});
   }
 `
 
@@ -41,7 +44,7 @@ const getVariable = (name: string) => {
   return `--colors-${name}--next`
 }
 
-const ColourWrapper = ({ children, className, background, text }: PropType) => {
+const ColourWrapper = ({ children, className, background, text, fill }: PropType) => {
   let props: ColourProps = {}
 
   if (text) {
@@ -50,6 +53,10 @@ const ColourWrapper = ({ children, className, background, text }: PropType) => {
 
   if (background) {
     props.background = getVariable(background)
+  }
+  
+  if (fill) {
+    props.fill = getVariable(fill)
   }
 
   return (

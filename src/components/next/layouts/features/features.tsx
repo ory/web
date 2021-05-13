@@ -21,14 +21,14 @@ import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 
 export interface Feat {
   icon: React.ReactElement
-  title: string
-  description: string
+  title: React.ReactElement
+  description: React.ReactElement
 }
 
 interface PropTypes {
   overline: string
-  title: string
-  description?: string
+  title: React.ReactElement
+  description?: React.ReactElement
   buttons?: React.ReactNode
   feature: Array<Feat>
 }
@@ -46,7 +46,7 @@ const Features = ({
         <ContentText>
           <Molecule>
             <div className={cn('font-overline', pb16)}>{overline}</div>
-            <div className={cn('font-h3')}>{title}</div>
+            <div className={cn('font-h2')}>{title}</div>
             {description && (
               <div className={cn('font-p', pt32)}>{description}</div>
             )}

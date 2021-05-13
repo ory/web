@@ -188,7 +188,7 @@
   }
 
   &:focus {
-     color: var(--colors-themed-light--next);
+    color: var(--colors-themed-light--next);
   }
 
   &:active {
