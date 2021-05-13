@@ -12,6 +12,8 @@ import segment from '../../images/adopters/segment.svg'
 import sainsburys from '../../images/adopters/sainsburys.svg'
 import hootsuite from '../../images/adopters/hootsuite.svg'
 import threerein from '../../images/adopters/threerein.svg'
+import Quotes from '../../components/next/layouts/quotes/quotes'
+import ColourWrapper from '../../components/next/freestanding/colour/colour-wrapper'
 
 const PricingPage = () => (
   <Layout>
@@ -70,6 +72,38 @@ const PricingPage = () => (
     />
     <FeatureList />
     <Stats />
+    <Quotes
+      title={
+        <>
+          Read about our
+          <br /> customers experience
+        </>
+      }
+      quotes={[
+        {
+          logo: (
+            <ColourWrapper text={'kratos-primary'}>
+              <img src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"} />
+            </ColourWrapper>
+          ),
+          description: (
+            <>
+              At Sainsbury’s Tech we use Ory tools to power our identity
+              platform. We needed a feature complete OAuth provider which can
+              operate securely at scale and Ory Hydra fit the bill perfectly.
+            </>
+          ),
+          person: `Paul Harman`,
+          jobTitle: `Engineering Manager, Sainsbury’s Tech`
+        },
+        {
+          logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
+          description: <>We love it!</>,
+          person: `Harman Harman`,
+          jobTitle: `Engineering Manager, B’s Tech`
+        }
+      ]}
+    />
   </Layout>
 )
 
