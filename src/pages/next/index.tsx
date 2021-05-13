@@ -1,4 +1,4 @@
-import { ArrowRight, RocketLaunch } from 'phosphor-react'
+import { ArrowRight, CirclesThreePlus, Code, LockOpen, RocketLaunch, UserPlus } from 'phosphor-react'
 import React from 'react'
 import Button from '../../components/next/freestanding/button/button'
 import ColourWrapper from '../../components/next/freestanding/colour/colour-wrapper'
@@ -19,6 +19,15 @@ import Resource from '../../components/next/layouts/resource/resource'
 import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
 import heroIllustration from '../../images/illustrations/hero.svg'
+import blues from '../../images/adopters/blues.svg'
+import thoughtworks from '../../images/adopters/thoughtworks.svg'
+import kyma from '../../images/adopters/kyma.svg'
+import raspberrypi from '../../images/adopters/raspberrypi.svg'
+import segment from '../../images/adopters/segment.svg'
+import sainsburys from '../../images/adopters/sainsburys.svg'
+import hootsuite from '../../images/adopters/hootsuite.svg'
+import threerein from '../../images/adopters/threerein.svg'
+import Features from '../../components/next/layouts/features/features'
 
 const IndexPage = () => (
   <Layout>
@@ -39,7 +48,56 @@ const IndexPage = () => (
       image={<img loading="lazy" alt="" src={heroIllustration} />}
     />
 
-    <Adopters />
+    <Adopters adopters={[
+    {
+      title: 'BluesWireless',
+      image: blues,
+      url: 'https://blues.io/',
+      pos: 1
+    },
+    {
+      title: 'ThoughtWorks',
+      image: thoughtworks,
+      url: 'https://www.thoughtworks.com',
+      pos: 8
+    },
+    {
+      title: 'Segment',
+      image: segment,
+      url: 'https://segment.com/',
+      pos: 5
+    },
+    {
+      title: 'Raspberry Pi',
+      image: raspberrypi,
+      url: 'https://www.raspberrypi.org/',
+      pos: 3
+    },
+    {
+      title: `Sainsbury's`,
+      image: sainsburys,
+      url: 'https://www.sainsburys.co.uk/',
+      pos: 2
+    },
+    {
+      title: 'Hootsuite',
+      image: hootsuite,
+      url: 'https://hootsuite.com',
+      pos: 7
+    },
+    {
+      title: 'Kyma Project',
+      image: kyma,
+      url: 'https://kyma-project.io/',
+      pos: 4
+    },
+    {
+      title: '3REIN',
+      image: threerein,
+      url: 'https://3rein.com/',
+      pos: 6
+    }
+      ]}/>
 
     <FeatureImage
       overline={'Security'}
@@ -68,6 +126,39 @@ const IndexPage = () => (
         </Button>
       }
     />
+    <Features
+      overline={'Top Features'}
+      title={'Auth integration in 1.. 2.. done!'}
+      buttons={(
+        <Button to={'/'} style={'text'} iconRight={(<ArrowRight size={16} />)}>See our roadmap</Button>
+      )}
+      feature={[
+        {
+          icon: <Code size={32} />,
+          title: 'Ory is open source',
+          description: `Ory's heart and soul are rooted in the open source community.
+          Our commitment to open software will stay unchanged forever.`
+        },
+        {
+          icon: <UserPlus size={32} />,
+          title: `No limits on identities`,
+          description: `The unique pricing model does not charge you for Monthly Active Users.
+          Choose a flexible and transparent plan that adapts to your needs.`
+        },
+        {
+          icon: <CirclesThreePlus size={32} />,
+          title: `More features`,
+          description: `Ory draws from a large set of features:
+          IAM, Permissions and Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency and many more.`
+        },
+        {
+          icon: <LockOpen size={32} />,
+          title: `No lock in`,
+          description: `We support the migration from Ory open source to Ory as a Service, and the other way around.
+          Never worry about cloud lock in again.`
+        }
+      ]}
+      />
     <Quotes />
     <Stats />
     <Security />

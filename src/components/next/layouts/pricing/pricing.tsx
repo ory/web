@@ -176,8 +176,7 @@ const Pricing = () => {
               text={{ textEnable: 'Self-hosted', textDisable: 'Cloud' }}
             />
           </Container>
-          
-          
+
           {togglePricing ? (
             <PricingBlock tiers={pricingTiers} />
           ) : (

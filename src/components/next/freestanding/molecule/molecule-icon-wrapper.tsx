@@ -1,5 +1,8 @@
 import React from 'react'
-import {moleculeIconWrapper, moleculePadding} from './molecule-icon-wrapper.module.css'
+import {
+  moleculeIconWrapper,
+  moleculePadding
+} from './molecule-icon-wrapper.module.css'
 import cn from 'classnames'
 
 interface PropTypes {

@@ -9,7 +9,7 @@ import { ParseCase } from '../../../../util'
 export interface PropTypes {
   children?: React.ReactNode
   className?: string
-  style: 'filled' | 'outlined' | 'text'
+  style: 'filled' | 'outlined' | 'text' | 'none'
   theme?: 'light' | 'dark' | 'grey'
   to: string
   openInNewWindow?: boolean
@@ -34,19 +34,21 @@ const Button = ({
     return styles[`style${ParseCase(style)}${ParseCase(theme)}`]
   }
 
-  const classes = cn(
-    styles.btnBase,
-    getStyle(style, theme),
-    'font-base',
-    'font-btn',
-    disabled && styles.disabled,
-    className && className
-  )
+  let classes = [disabled && styles.disabled, className && className]
+
+  if (style !== 'none') {
+    classes = classes.concat([
+      styles.btnBase,
+      getStyle(style, theme),
+      'font-base',
+      'font-btn'
+    ])
+  }
 
   return to.startsWith('/') ? (
     <GatsbyLink
       to={to}
-      className={classes}
+      className={cn(...classes)}
       rel={openInNewWindow ? 'noopener noreferrer' : ''}
       target={openInNewWindow ? '_blank' : ''}
     >
@@ -57,7 +59,7 @@ const Button = ({
   ) : (
     <a
       href={to}
-      className={classes}
+      className={cn(...classes)}
       rel={openInNewWindow ? 'noopener noreferrer' : ''}
       target={openInNewWindow ? '_blank' : ''}
     >

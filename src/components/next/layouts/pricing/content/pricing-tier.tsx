@@ -136,7 +136,11 @@ const PricingTier = ({
 
   return (
     <div className={cn(classes.background, className && className)}>
-      <Container flexContainer={featuresContainer} justify={'start'} alignItems={'stretch'}>
+      <Container
+        flexContainer={featuresContainer}
+        justify={'start'}
+        alignItems={'stretch'}
+      >
         {featuresContainer === 'row' ? (
           <>
             <Grid lg={6} md={6} sm={6} xs={12}>
