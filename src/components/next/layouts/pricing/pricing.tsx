@@ -47,7 +47,7 @@ const pricingTiers: Array<PriceTier> = [
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: '100,000 API Calls / 24 hours'
+        title: '100k API Calls / 24 hours'
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
@@ -59,7 +59,7 @@ const pricingTiers: Array<PriceTier> = [
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Unlimited data objects'
+        title: 'Data objects not metered'
       }
     ]
   },
@@ -81,7 +81,7 @@ const pricingTiers: Array<PriceTier> = [
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Unlimited Members / Projects'
+        title: '>1 Member & Project'
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
