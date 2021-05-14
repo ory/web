@@ -11,6 +11,7 @@ import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import {
   pb32,
   pb48,
+  pb64,
   pb8,
   pt24
 } from '../../freestanding/utils/padding.module.css'
@@ -32,7 +33,7 @@ interface PropType {
 const Quickstart = ({ title, description, buttons, content }: PropType) => (
   <div className={cn(styles.quickstart)}>
     <Container fluid={true} alignItems={'start'}>
-      <Grid lg={6} md={6} sm={12} xs={12}>
+      <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
             <div className={cn('font-h3', pb32)}>{title}</div>
@@ -44,7 +45,7 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container alignItems={'start'}>
           {content.map(({ button, icon, description, title }) => (
-            <Grid lg={5} md={6} sm={12} xs={12}>
+            <Grid lg={5} md={6} sm={12} xs={12} className={cn(pb48)}>
               <ContentText>
                 <ColourWrapper text={'themed-primary'}>{icon}</ColourWrapper>
                 <div className={cn('font-h5', pb8)}>{title}</div>

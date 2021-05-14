@@ -1,138 +1,129 @@
 import React from 'react'
-import * as styles from './footer.module.css'
+import {footer, footerFill, footerLeft, footerText, footerItem} from './footer.module.css'
 import cn from 'classnames'
-import FooterContentMain from './content/footer-content-main'
-import FooterContentCategoryItem from './content/footer-content-category-item'
-import FooterContentCategory from './content/footer-content-category'
-import FooterContentSub from './content/footer-content-sub'
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
+import Molecule from '../../freestanding/molecule/molecule'
+import ContentVisual from '../../freestanding/content/content-visual'
+import {
+  pb16,
+  pb24,
+  pb32,
+  pb64,
+  pl128,
+  pl16,
+  pl24,
+  pl32,
+  pl64,
+  pl8,
+  pr16,
+  pr24,
+  pr32,
+  pr8,
+  pt32
+} from '../../freestanding/utils/padding.module.css'
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 
-const links = [
-  {
-    category: 'Product',
-    menuItems: [
-      {
-        title: 'Ory',
-        href: '',
-        order: 1
-      },
-      {
-        title: 'Open Source',
-        href: '',
-        order: 2
-      },
-      {
-        title: 'Hydra',
-        href: '',
-        order: 3
-      },
-      {
-        title: 'Kratos',
-        href: '',
-        order: 4
-      },
-      {
-        title: 'Keto',
-        href: '',
-        order: 5
-      },
-      {
-        title: 'Oathkeeper',
-        href: '',
-        order: 6
-      },
-      {
-        title: 'Dockertest',
-        href: '',
-        order: 7
-      },
-      {
-        title: 'Pricing',
-        href: '',
-        order: 8
-      }
-    ]
-  },
-  {
-    category: 'Developers',
-    menuItems: [
-      {
-        title: 'Documentation',
-        href: '',
-        order: 1
-      },
-      {
-        title: 'Community',
-        href: '',
-        order: 2
-      },
-      {
-        title: 'Learning',
-        href: '',
-        order: 3
-      },
-      {
-        title: 'GitHub',
-        href: '',
-        order: 4
-      }
-    ]
-  },
-  {
-    category: 'Company',
-    menuItems: [
-      {
-        title: 'Blog',
-        href: '',
-        order: 1
-      },
-      {
-        title: 'About Us',
-        href: '',
-        order: 2
-      },
-      {
-        title: 'Jobs',
-        href: '',
-        order: 3
-      },
-      {
-        title: 'Contact Us',
-        href: '',
-        order: 4
-      }
-    ]
-  }
-]
+export interface Contact {
+  contactEmail: React.ReactElement
+  contactText: React.ReactElement
+}
 
-const Footer = () => (
-  <div className={cn(styles.footer, styles.footerContainer)}>
-    <div className="container-fluid--next">
-      <div className={cn(styles.footerContainerContent)}>
-        {/*<FooterContentMain className={cn(styles.footerContentMainLogo)}>
-        <span>logo</span>
-      </FooterContentMain>*/}
-        <FooterContentMain className={cn(styles.footerContentMainLinks)}>
-          {links.map((category) => {
-            return (
-              <FooterContentCategory key={category.category}>
-                <p className={'font-p-sm'}>{category.category}</p>
-                {category.menuItems.map((link) => {
-                  return (
-                    <FooterContentCategoryItem key={link.title}>
-                      <a href={link.href}>{link.title}</a>
-                    </FooterContentCategoryItem>
-                  )
-                })}
-              </FooterContentCategory>
-            )
-          })}
-        </FooterContentMain>
-        <FooterContentSub>
-          <p className="font-p-sm">© Copyright 2021 Ory Corp</p>
-        </FooterContentSub>
-      </div>
-    </div>
+export interface LinkSection {
+  title: string
+  links: React.ReactNodeArray
+}
+
+export interface FooterPropTypes {
+  logo: React.ReactElement
+  copyright: React.ReactElement
+  contact: Contact
+  social: React.ReactNodeArray
+  links: Array<LinkSection>
+  legal: React.ReactNodeArray
+}
+
+interface FooterMain {
+  className: string
+  logo: React.ReactElement
+  contact: Contact
+  links: Array<LinkSection>
+}
+
+const FooterMain = ({className, logo, contact, links}: FooterMain) => (
+  <Container className={className} justify={'space-between'} alignItems={'start'}>
+    <Grid lg={6} md={4} sm={4} xs={6}>
+      <ContentText>
+        <div className={cn(pb64)}>{logo}</div>
+        {contact.contactEmail}
+        <div className={cn('p-sm')}>{contact.contactText}</div>
+      </ContentText>
+    </Grid>
+    <Grid lg={6} md={8} sm={8} xs={6}>
+      <Container alignItems={'start'} justify={'end'}>
+        {links.map((l) => (
+          <Grid lg={3} md={3} sm={4} xs={3} key={l.title} className={cn(pb24)}>
+            <ContentText>
+              {l.title}
+              {l.links.map((i, index) => (
+                <ColourWrapper text={'base-grey-600'} key={index}
+                               className={cn('font-menu', footerText)}>{i as React.ReactElement}</ColourWrapper>
+              ))}
+            </ContentText>
+          </Grid>
+        ))}
+      </Container>
+    </Grid>
+  </Container>
+)
+
+interface FooterSub {
+  className: string
+  copyright: React.ReactElement
+  social: React.ReactNodeArray
+  legal: React.ReactNodeArray
+}
+
+const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
+  <Container className={cn(className)} alignItems={'start'}>
+    <Grid lg={4} md={4} sm={3} xs={12} className={cn(pb16)}>
+      <div className={cn('font-p-sm')}>{copyright}</div>
+    </Grid>
+    <Grid lg={4} md={4} sm={3} xs={12}>
+      <Container justify={'center'}>
+        <MoleculeInteraction>
+          {social.map((s, index) => (
+            <ColourWrapper className={pl16} text={'base-grey-400'} key={index}>
+              {s as React.ReactElement}
+            </ColourWrapper>
+          ))}
+        </MoleculeInteraction>
+      </Container>
+    </Grid>
+    <Grid lg={4} md={4} sm={3} xs={12}>
+      <Container justify={'end'}>
+        <MoleculeInteraction>
+          {legal.map((l, index) => (
+            <ColourWrapper className={cn(pl16)} text={'base-grey-400'} key={index}>
+              {l as React.ReactElement}
+            </ColourWrapper>
+          ))}
+        </MoleculeInteraction>
+      </Container>
+    </Grid>
+  </Container>
+)
+
+const Footer = ({logo, contact, links, copyright, social, legal}: FooterPropTypes) => (
+  <div className={cn(footer)}>
+    <Container flexContainer={'column'} fluid={true}>
+        <FooterMain className={cn(pb32)} logo={logo} contact={contact} links={links}/>
+        <FooterSub className={cn(pt32)} copyright={copyright} social={social} legal={legal}/>
+    </Container>
   </div>
 )
 
 export default Footer
+

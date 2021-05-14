@@ -21,7 +21,6 @@ import FeatureImage from '../../components/next/layouts/feature-image/feature-im
 import FeatureOne from '../../components/next/layouts/feature-one/feature-one'
 import FeatureThree from '../../components/next/layouts/feature-three/feature-three'
 import FeatureTwo from '../../components/next/layouts/feature-two/feature-two'
-import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
@@ -40,9 +39,12 @@ import hootsuite from '../../images/adopters/hootsuite.svg'
 import threerein from '../../images/adopters/threerein.svg'
 import { pl32 } from '../../components/next/freestanding/utils/padding.module.css'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const IndexPage = () => (
   <Layout>
+    <SEO title={'Ory'} description={''} />
+
     <Hero
       title={'Never Build Auth Again'}
       description={

@@ -390,6 +390,13 @@ main a.cta {
   line-height: 228.5%;
 }
 
+.font-menu {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 228.5%;
+}
+
 /*
   Tablets, large phones, smaller phones
 */

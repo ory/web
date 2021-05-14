@@ -19,7 +19,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 0;
 }
 
 .row {
@@ -61,11 +60,11 @@
 }
 
 .justify-start {
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .justify-end {
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .justify-stretch {

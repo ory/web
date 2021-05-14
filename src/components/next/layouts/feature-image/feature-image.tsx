@@ -1,7 +1,7 @@
 import React from 'react'
-import { featureImage } from './feature-image.module.css'
+import {featureImage} from './feature-image.module.css'
 import cn from 'classnames'
-import { GitDiff, Triangle } from 'phosphor-react'
+import {GitDiff, Triangle} from 'phosphor-react'
 import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
@@ -36,13 +36,13 @@ interface Visual {
   image: React.ReactElement
 }
 
-const Visual = ({ image }: Visual) => (
+const Visual = ({image}: Visual) => (
   <Grid className={cn(pt32)} lg={6} md={6} sm={12} xs={12}>
     <ContentVisual>{image}</ContentVisual>
   </Grid>
 )
 
-const Content = ({ title, overline, description, buttons }: Content) => (
+const Content = ({title, overline, description, buttons}: Content) => (
   <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb32)}>
     <ContentText>
       <Molecule>
@@ -59,16 +59,23 @@ const Content = ({ title, overline, description, buttons }: Content) => (
   </Grid>
 )
 
+interface ContainerProps {
+  xsHidden?: boolean
+  smHidden?: boolean
+  mdHidden?: boolean
+  lgHidden?: boolean
+}
+
 const FeatureImage = ({
-  mirror = false,
-  title,
-  overline,
-  description,
-  image,
-  buttons
-}: PropTypes) => {
+                        mirror = false,
+                        title,
+                        overline,
+                        description,
+                        image,
+                        buttons
+                      }: PropTypes) => {
   const order = [
-    <Visual image={image} />,
+    <Visual image={image}/>,
     <Content
       title={title}
       description={description}
@@ -76,15 +83,33 @@ const FeatureImage = ({
       buttons={buttons}
     />
   ]
-
+  
+  let containerMirror: ContainerProps = {
+    xsHidden: true,
+    smHidden: false,
+    mdHidden: false,
+    lgHidden: false
+  }
+  let containerAdditional: ContainerProps = {
+    xsHidden: false,
+    smHidden: true,
+    mdHidden: true,
+    lgHidden: true
+  }
+  
   if (mirror) {
     order.reverse()
+    containerMirror.xsHidden = false
+    containerAdditional.xsHidden = true
   }
-
+  
   return (
     <div className={cn(featureImage)}>
-      <Container fluid={true} alignItems={'start'}>
+      <Container fluid={true} alignItems={'start'} {...containerMirror}>
         {order.map((x) => x)}
+      </Container>
+      <Container fluid={true} alignItems={'start'} {...containerAdditional}>
+        {order.reverse().map((x) => x)}
       </Container>
     </div>
   )

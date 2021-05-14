@@ -62,7 +62,7 @@ const Container = ({
     <div
       className={cn(
         styles.container,
-        flexContainer && getFlex(flexContainer),
+        getFlex(flexContainer),
         alignItems && getAlign(alignItems),
         justify && getJustify(justify),
         xsHidden && getHidden('xs'),

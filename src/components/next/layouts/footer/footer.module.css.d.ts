@@ -1,9 +1,9 @@
 declare const styles: {
   readonly "footer": string;
-  readonly "footerContainer": string;
-  readonly "footerContainerContent": string;
-  readonly "footerContentMainLogo": string;
-  readonly "footerContentMainLinks": string;
+  readonly "footerLeft": string;
+  readonly "footerFill": string;
+  readonly "footerItem": string;
+  readonly "footerText": string;
 };
 export = styles;
 

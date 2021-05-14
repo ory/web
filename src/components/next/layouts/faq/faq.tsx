@@ -57,12 +57,12 @@ const Faq = ({ title, description, content }: PropTypes) => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <div className={cn('font-h3', faqHeading)}>
-                        {question}
-                        {expanded.includes(String(index)) ? (
-                          <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
-                        ) : (
-                          <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
-                        )}
+                      {question}
+                      {expanded.includes(String(index)) ? (
+                        <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
+                      ) : (
+                        <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
+                      )}
                     </div>
                   </AccordionItemButton>
                 </AccordionItemHeading>

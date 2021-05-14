@@ -37,6 +37,7 @@ declare const styles: {
   readonly "fontPXsLight": string;
   readonly "fontMono": string;
   readonly "fontMonoS": string;
+  readonly "fontMenu": string;
 };
 export = styles;
 
