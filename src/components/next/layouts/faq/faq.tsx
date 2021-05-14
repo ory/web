@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { faq } from './faq.module.css'
+import { faq, faqHeading, faqHeadingIcon } from './faq.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import { pb32, pb48 } from '../../freestanding/utils/padding.module.css'
+import { pb32, pb48, pl8 } from '../../freestanding/utils/padding.module.css'
 import {
   Accordion,
   AccordionItem,
@@ -14,6 +14,7 @@ import {
 } from 'react-accessible-accordion'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
+import { Minus, Plus } from 'phosphor-react'
 
 export interface FaqContent {
   question: string
@@ -27,30 +28,48 @@ interface PropTypes {
 }
 
 const Faq = ({ title, description, content }: PropTypes) => {
-  const [expanded, setExpanded] = useState<boolean>(false);
-  
+  const [expanded, setExpanded] = useState<Array<string>>(['0'])
+
   return (
     <div className={cn(faq)}>
       <Container fluid={true} alignItems={'start'}>
-        <Grid lg={5} md={5} sm={12} xs={12}>
+        <Grid lg={5} md={5} sm={12} xs={12} className={pb48}>
           <ContentText>
             <div className={cn('font-h3', pb32)}>{title}</div>
             <div className={cn('font-p')}>{description}</div>
           </ContentText>
         </Grid>
         <Grid lg={6} md={6} sm={12} xs={12}>
-          <Accordion allowMultipleExpanded={false} allowZeroExpanded={true} preExpanded={['0']}>
+          <Accordion
+            allowMultipleExpanded={false}
+            allowZeroExpanded={true}
+            preExpanded={['0']}
+            onChange={(args: Array<string>) => {
+              setExpanded(args)
+            }}
+          >
             {content.map(({ answer, question }, index) => (
-              <AccordionItem key={index} uuid={String(index)} className={cn(pb48)}>
+              <AccordionItem
+                key={index}
+                uuid={String(index)}
+                className={cn(pb48)}
+              >
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                      <div className={'font-h3'}>{question}</div>
+                    <div className={cn('font-h3', faqHeading)}>
+                        {question}
+                        {expanded.includes(String(index)) ? (
+                          <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
+                        ) : (
+                          <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
+                        )}
+                    </div>
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <div className={'font-p'}>{answer}</div>
                 </AccordionItemPanel>
-                <MoleculeSeparator style={'horizontal'}/>
+                <MoleculeSeparator style={'horizontal'} />
               </AccordionItem>
             ))}
           </Accordion>
