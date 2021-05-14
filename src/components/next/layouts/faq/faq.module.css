@@ -4,6 +4,11 @@
 
 .faq-heading {
   &:hover {
-    cursor: pointer;
-  }
+     cursor: pointer;
+   }
+}
+
+.faq-heading-icon {
+  display: flex;
+  margin-left: auto;
 }

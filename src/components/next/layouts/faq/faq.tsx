@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { faq, faqHeading } from './faq.module.css'
+import { faq, faqHeading, faqHeadingIcon } from './faq.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -33,7 +33,7 @@ const Faq = ({ title, description, content }: PropTypes) => {
   return (
     <div className={cn(faq)}>
       <Container fluid={true} alignItems={'start'}>
-        <Grid lg={5} md={5} sm={12} xs={12}>
+        <Grid lg={5} md={5} sm={12} xs={12} className={pb48}>
           <ContentText>
             <div className={cn('font-h3', pb32)}>{title}</div>
             <div className={cn('font-p')}>{description}</div>
@@ -57,17 +57,12 @@ const Faq = ({ title, description, content }: PropTypes) => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <div className={cn('font-h3', faqHeading)}>
-                      <Container
-                        alignItems={'center'}
-                        justify={'space-between'}
-                      >
                         {question}
                         {expanded.includes(String(index)) ? (
-                          <Minus size={32} className={cn(pl8)} />
+                          <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
                         ) : (
-                          <Plus size={32} className={cn(pl8)} />
+                          <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
                         )}
-                      </Container>
                     </div>
                   </AccordionItemButton>
                 </AccordionItemHeading>
