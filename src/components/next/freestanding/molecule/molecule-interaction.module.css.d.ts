@@ -1,4 +1,5 @@
 declare const styles: {
-  readonly moleculeInteraction: string
-}
-export = styles
+  readonly "moleculeInteraction": string;
+};
+export = styles;
+

@@ -54,23 +54,25 @@ const Quotes = ({ quotes, title }: PropTypes) => (
           infiniteLoop={true}
           useKeyboardArrows={false}
         >
-          {quotes.map((quote) => (
+          {quotes.map((quote, index) => (
             <QuoteBlock
               logo={quote.logo}
               description={quote.description}
               person={quote.person}
               jobTitle={quote.jobTitle}
+              key={index}
             />
           ))}
         </Carousel>
       </Grid>
       <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
-        {quotes.map((quote) => (
+        {quotes.map((quote, index) => (
           <QuoteBlock
             logo={quote.logo}
             description={quote.description}
             person={quote.person}
             jobTitle={quote.jobTitle}
+            key={index}
           />
         ))}
       </Grid>

@@ -247,8 +247,8 @@ class Stats extends Component<PropTypes, StateTypes> {
           </Grid>
           <Grid lg={9} md={9} sm={12} xs={12}>
             <Container alignItems={'start'}>
-              {stats(this.state).map(({ title, amount, description }) => (
-                <Grid lg={3} md={3} sm={3} xs={12}>
+              {stats(this.state).map(({ title, amount, description }, index) => (
+                <Grid lg={3} md={3} sm={3} xs={12} key={index}>
                   <Container justify={'start'}>
                     <ContentText padded={true}>
                       <Molecule>

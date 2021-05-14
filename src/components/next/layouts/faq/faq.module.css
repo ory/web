@@ -1,3 +1,9 @@
 .faq {
   padding: 128px 0;
 }
+
+.faq-heading {
+  &:hover {
+    cursor: pointer;
+  }
+}

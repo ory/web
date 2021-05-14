@@ -1,4 +1,6 @@
 declare const styles: {
-  readonly faq: string
-}
-export = styles
+  readonly "faq": string;
+  readonly "faqHeading": string;
+};
+export = styles;
+
