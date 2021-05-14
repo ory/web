@@ -20,6 +20,7 @@ declare const styles: {
   readonly fontH6: string
   readonly fontH6Light: string
   readonly fontOverline: string
+  readonly fontOverlineLight: string
   readonly fontSubtitle: string
   readonly fontBtn: string
   readonly fontLink: string

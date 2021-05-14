@@ -3,8 +3,10 @@ import {
   BookOpen,
   CirclesThreePlus,
   Code,
+  GitMerge,
   LockOpen,
   RocketLaunch,
+  Terminal,
   UserPlus,
   Users
 } from 'phosphor-react'
@@ -148,7 +150,67 @@ const IndexPage = () => (
       }
     />
 
-    <Coding />
+    <Coding
+      overline={'Made for developers'}
+      title={<>Improve your developer experience</>}
+      description={
+        <>
+          At Ory, our mission is to improve the overall developer experience. We
+          ship SDKs for all programming languages, documentation, tutorials and
+          intuitive CLIs. Our open source approach lets you to participate in
+          API and architecture discussions - your next PR will be shipped in
+          Ory.
+        </>
+      }
+      buttons={
+        <>
+          <Button to={'/'} style={'filled'}>
+            Documentation
+          </Button>
+        </>
+      }
+      visual={<img loading="lazy" alt="" src={heroIllustration} />}
+      content={[
+        {
+          icon: <Terminal size={32} />,
+          title: <>Powerful tools</>,
+          description: (
+            <>
+              Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all operating
+              systems and CPUs.
+            </>
+          ),
+          button: (
+            <Button
+              to={'/'}
+              style={'link'}
+              iconRight={<ArrowRight size={16} />}
+            >
+              Read more
+            </Button>
+          )
+        },
+        {
+          icon: <GitMerge size={32} />,
+          title: <>Based on Open Source</>,
+          description: (
+            <>
+              Participate in discussions, feature requests, bug fixes, and PRs,
+              the way you are used to from open source.
+            </>
+          ),
+          button: (
+            <Button
+              to={'/'}
+              style={'link'}
+              iconRight={<ArrowRight size={16} />}
+            >
+              Read more
+            </Button>
+          )
+        }
+      ]}
+    />
 
     <Stats />
 

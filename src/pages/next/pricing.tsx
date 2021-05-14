@@ -14,6 +14,9 @@ import hootsuite from '../../images/adopters/hootsuite.svg'
 import threerein from '../../images/adopters/threerein.svg'
 import Quotes from '../../components/next/layouts/quotes/quotes'
 import ColourWrapper from '../../components/next/freestanding/colour/colour-wrapper'
+import Faq from '../../components/next/layouts/faq/faq'
+import Button from '../../components/next/freestanding/button/button'
+import cn from 'classnames'
 
 const PricingPage = () => (
   <Layout>
@@ -71,6 +74,42 @@ const PricingPage = () => (
       ]}
     />
     <FeatureList />
+    <Faq
+      title={<>Frequently Asked Questions</>}
+      description={
+        <>
+          If you cant find your question here, reach out to us on{' '}
+          <a href={'/'} className={cn('link link-md link-news')}>
+            GitHub
+          </a>
+          , our{' '}
+          <a href={'/'} className={cn('link link-md link-news')}>
+            Slack Channel
+          </a>{' '}
+          or{' '}
+          <a href={'mailto://'} className={cn('link link-md link-news')}>
+            via email.
+          </a>{' '}
+        </>
+      }
+      content={[
+        {
+          question: `Why should I choose Ory as identity solution?`,
+          answer: (
+            <>
+              Fortune500 companies and financial institutions use our hardened
+              and reliable software. Our software is open source and vetted by a
+              large international community. Our unique pricing model does not
+              charge you for identities.
+            </>
+          )
+        },
+        {
+          question: `What happens if I stop using Ory?`,
+          answer: <>Solar eclipse</>
+        }
+      ]}
+    />
     <Stats />
     <Quotes
       title={

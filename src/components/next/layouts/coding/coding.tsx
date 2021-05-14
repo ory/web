@@ -11,132 +11,83 @@ import Button from '../../freestanding/button/button'
 import { ArrowRight, ArrowSquareIn, GitDiff } from 'phosphor-react'
 import Terminal from '../../freestanding/code/terminal'
 import Code from '../../freestanding/code/code'
+import {
+  pb16,
+  pb32,
+  pt24,
+  pt48,
+  pt64,
+  pt8
+} from '../../freestanding/utils/padding.module.css'
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import ContentVisual from '../../freestanding/content/content-visual'
 
-const Coding = () => (
+export interface CodingContent {
+  icon: React.ReactElement
+  title: React.ReactElement
+  description: React.ReactElement
+  button: React.ReactElement
+}
+
+interface PropTypes {
+  overline: string
+  title: React.ReactElement
+  description: React.ReactElement
+  buttons?: React.ReactNode
+  visual: React.ReactNode
+  content: Array<CodingContent>
+}
+
+const Coding = ({
+  overline,
+  title,
+  description,
+  buttons,
+  visual,
+  content
+}: PropTypes) => (
   <div className={cn(styles.coding)}>
     <Container fluid={true}>
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
           <ContentText padded={true}>
-            <MoleculeTextInteraction>
-              <Molecule>
-                <p className={cn('font-h3-light')}>
-                  Ory takes developer experience serious
-                </p>
-                <p className={cn('font-p-light')}>
-                  We started Ory because “IAM” developer experience was and
-                  still is terrible. Ory ships with SDKs for all programming
-                  languages, extensive and detailed documentation, easy-to-use
-                  CLIs. Our open source approach enables you to participate in
-                  API and architecture design - your next PR will be shipped in
-                  Ory.
-                </p>
-              </Molecule>
-              <MoleculeInteraction>
-                <Button to={''} style={'filled'}>
-                  Documentation
-                </Button>
+            <div className={cn('font-overline-light', pb16)}>{overline}</div>
+            <div className={cn('font-h3-light', pb32)}>{title}</div>
+            <div className={cn('font-p-light')}>{description}</div>
+            {buttons && (
+              <MoleculeInteraction className={cn(pt48)}>
+                {buttons}
               </MoleculeInteraction>
-            </MoleculeTextInteraction>
+            )}
           </ContentText>
 
-          <Container alignItems={'start'}>
-            <Grid lg={6} md={6} sm={12} xs={12}>
-              <ContentText padded={true}>
-                <MoleculeTextInteraction>
-                  <Molecule>
-                    <GitDiff
-                      className={cn('icon-dark')}
-                      weight={'duotone'}
-                      size={32}
-                    />
-                    <p className={cn('font-h3-light')}>Powerful Tools</p>
-                    <p className={cn('font-p-light')}>
-                      Ory ships REST APIs, gRPC APIs, SDKs, and CLIs for all
-                      operating systems and CPUs.
-                    </p>
-                  </Molecule>
-                  <MoleculeInteraction>
-                    <a
-                      className={cn('font-link font-link-md link-news')}
-                      href={''}
-                    >
-                      API Reference <ArrowRight />
-                    </a>
-                  </MoleculeInteraction>
-                </MoleculeTextInteraction>
-              </ContentText>
-            </Grid>
-            <Grid lg={6} md={6} sm={12} xs={12}>
-              <ContentText padded={true}>
-                <MoleculeTextInteraction>
-                  <Molecule>
-                    <GitDiff
-                      className={cn('icon-dark')}
-                      weight={'duotone'}
-                      size={32}
-                    />
-                    <p className={cn('font-h3-light')}>
-                      Open Source Governance
-                    </p>
-                    <p className={cn('font-p-light')}>
-                      Participate in discussions, feature requests, bug fixes,
-                      and PRs the way you are used to from open source.
-                    </p>
-                  </Molecule>
-                  <MoleculeInteraction>
-                    <a
-                      className={cn('font-link font-link-md link-news')}
-                      href={''}
-                    >
-                      GitHub <ArrowSquareIn />
-                    </a>
-                  </MoleculeInteraction>
-                </MoleculeTextInteraction>
-              </ContentText>
-            </Grid>
+          <Container alignItems={'start'} className={cn(pt64)}>
+            {content.map(({ button, description, icon, title }) => (
+              <Grid lg={6} md={6} sm={12} xs={12}>
+                <ContentText padded={true}>
+                  <MoleculeTextInteraction>
+                    <Molecule>
+                      <ColourWrapper text={'themed-darkmode'}>
+                        {icon}
+                      </ColourWrapper>
+                      <div className={cn('font-h3-light', pt8)}>{title}</div>
+                      <div className={cn('font-p-light', pt8)}>
+                        {description}
+                      </div>
+                    </Molecule>
+                    <MoleculeInteraction className={cn(pt24)}>
+                      {button}
+                    </MoleculeInteraction>
+                  </MoleculeTextInteraction>
+                </ContentText>
+              </Grid>
+            ))}
           </Container>
         </Container>
       </Grid>
 
-      <Grid lg={6} md={6} smHidden={true} xsHidden={true}>
-        <Container
-          flexContainer={'column'}
-          alignItems={'start'}
-          className={cn(styles.codeContainer)}
-        >
-          <Code
-            code={`const app = express();
-const kratos = new PublicApi(new Configuration({
-  basePath: 'https://<my-project>.projects.oryapis.com/api/kratos/public',
-}));
-function protect(req, res, next) {
-  kratos.whoami(req.header('Cookie'), req.header('Authorization'))
-    .then(({ data: session }) => {
-      req.session = { session };
-      next();
-    })
-    // If no session is found, redirect to login.
-    .catch(() => {
-      res.redirect('/login');
-    });
-}`}
-          ></Code>
-          <Terminal
-            code={`$ export ORY_ACCESS_TOKEN=RaEEZfMbx7QGuf0uWNt9c15NE4FG4OOW
-$ ory identities list --project playground --format json-pretty
-[
-  {
-     "id": "7c7d040d-97f6-4a57-95e8-08c61e6df016",
-     "schema_id": "default",
-     "schema_url": "https://playground.projects.oryapis.com/api/kratos/public/schemas/default",
-     "traits": {
-       "email": "alice@example.com"
-     }
-   }
-]`}
-          ></Terminal>
-        </Container>
+      <Grid lg={6} md={6} sm={12} xs={12}>
+        <ContentVisual>{visual}</ContentVisual>
       </Grid>
     </Container>
   </div>

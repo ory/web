@@ -73,6 +73,7 @@
     "prop-types": "~15.7.2",
     "raw-loader": "~4.0.1",
     "react": "~16.13.1",
+    "react-accessible-accordion": "^3.3.4",
     "react-countup": "~4.3.2",
     "react-dom": "~16.13.1",
     "react-helmet": "~6.1.0",
