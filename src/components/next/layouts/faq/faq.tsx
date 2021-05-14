@@ -4,7 +4,7 @@ import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import { pb32, pb48 } from '../../freestanding/utils/padding.module.css'
+import { pb32, pb48, pl8 } from '../../freestanding/utils/padding.module.css'
 import {
   Accordion,
   AccordionItem,
@@ -14,6 +14,7 @@ import {
 } from 'react-accessible-accordion'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
+import { Plus } from 'phosphor-react'
 
 export interface FaqContent {
   question: string
@@ -44,7 +45,12 @@ const Faq = ({ title, description, content }: PropTypes) => {
               <AccordionItem key={index} uuid={String(index)} className={cn(pb48)}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                      <div className={'font-h3'}>{question}</div>
+                      <div className={'font-h3'}>
+                        <Container alignItems={'center'} justify={'space-between'}>
+                          {question}
+                          <Plus size={32} className={cn(pl8)}/>
+                        </Container>
+                      </div>
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
