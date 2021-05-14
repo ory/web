@@ -119,7 +119,7 @@ const IndexPage = () => (
       description={
         <>
           Authenticate and manage users, set and check permissions, protect
-          APIs, applications and data. Ory as a Service comes with for metrics
+          APIs, applications and data. Ory as a Service comes with dashboards for metrics
           and insights and can be managed fully from the intuitive user
           interface or dedicated CLI.
         </>
@@ -133,8 +133,8 @@ const IndexPage = () => (
       title={<>Bring your own UX</>}
       description={
         <>
-          You want to brand all user facing UIs and use your styles and designs?
-          No problem with Ory's headless integration. You want custom auth
+          You want to brand user facing UIs and use your styles and design?
+          No problem with headless integration. You want custom auth
           flows? Done. And this is included without extra charges.
         </>
       }
@@ -234,7 +234,7 @@ const IndexPage = () => (
           description: (
             <>
               Ory's heart and soul are rooted in the open source community. Our
-              commitment to open software will stay unchanged forever.
+              commitment to open software will stay unchanged.
             </>
           )
         },
@@ -244,7 +244,7 @@ const IndexPage = () => (
           description: (
             <>
               The unique pricing model does not charge you for Monthly Active
-              Users. Choose a flexible and transparent plan that adapts to your
+              Users. Choose a transparent plan that adapts to your
               needs.
             </>
           )
@@ -255,8 +255,7 @@ const IndexPage = () => (
           description: (
             <>
               Ory draws from a large set of features: IAM, Permissions and
-              Roles, Zero-Trust, OAuth2, OIDC, Integrations, global low latency
-              and many more.
+              Roles, Zero-Trust, OAuth2, OIDC, Integrations and many more.
             </>
           )
         },
@@ -266,13 +265,12 @@ const IndexPage = () => (
           description: (
             <>
               We support the migration from Ory open source to Ory as a Service,
-              and the other way around. Never worry about cloud lock in again.
+              and the other way around. Don't worry about lock in.
             </>
           )
         }
       ]}
     />
-
     <Quotes
       title={
         <>
