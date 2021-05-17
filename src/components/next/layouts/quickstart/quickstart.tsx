@@ -55,8 +55,8 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
             >
               <ContentText>
                 <ColourWrapper text={'themed-primary'}>{icon}</ColourWrapper>
-                <div className={cn('font-h5', pb8)}>{title}</div>
-                <div className={cn('font-p-sm')}>{description}</div>
+                <h5 className={cn('font-h5', pb8)}>{title}</h5>
+                <p className={cn('font-p-sm')}>{description}</p>
                 <MoleculeInteraction className={pt24}>
                   {button}
                 </MoleculeInteraction>

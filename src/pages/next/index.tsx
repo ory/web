@@ -268,6 +268,7 @@ const IndexPage = () => (
         }
       ]}
     />
+    
     <Quotes
       title={
         <>

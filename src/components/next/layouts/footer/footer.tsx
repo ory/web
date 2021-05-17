@@ -82,7 +82,7 @@ const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
         {links.map((l) => (
           <Grid lg={3} md={3} sm={3} xs={3} key={l.title} className={cn(pb24)}>
             <ContentText>
-              {l.title}
+              <p className={cn('font-p-sm', pb16)}>{l.title}</p>
               {l.links.map((i, index) => (
                 <ColourWrapper
                   text={'base-grey-600'}

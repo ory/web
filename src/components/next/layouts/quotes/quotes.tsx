@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 import ContentText from '../../freestanding/content/content-text'
-import { quote, quoteBlock } from './quote.module.css'
+import { quote, quoteBlock, quoteImg } from './quote.module.css'
 import { pt32, pt4, pt64 } from '../../freestanding/utils/padding.module.css'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -23,7 +23,9 @@ export interface Quote {
 
 const QuoteBlock = ({ logo, description, person, jobTitle }: Quote) => (
   <ContentText className={cn(quoteBlock)}>
-    {logo}
+    <div className={cn(quoteImg)}>
+      {logo}
+    </div>
     <h4 className={cn('font-h4', pt64)}>{description}</h4>
     <ColourWrapper text={'base-grey-600'}>
       <h5 className={cn('font-h5', pt32)}>{person}</h5>
