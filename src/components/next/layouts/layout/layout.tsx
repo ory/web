@@ -15,9 +15,11 @@ interface PropTypes {
 const Layout = ({children}: PropTypes) => (
   <div>
     <Navigation/>
-    <main className={cn(styles.layout)}>{children}</main>
+    <main className={cn(styles.layout)}>
+      {children}
+    </main>
     <Footer
-      logo={<img width={'100%'} loading="lazy" alt="" src={heroIllustration}/>}
+      logo={<img loading="lazy" alt="" src={heroIllustration}/>}
       copyright={<>© Copyright 2021 Ory Corp</>}
       contact={{
         contactEmail: (
@@ -59,28 +61,28 @@ const Layout = ({children}: PropTypes) => (
         {
           title: 'Product',
           links: [
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Ory
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Open Source
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Hydra
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Kratos
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Keto
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Oathkeeper
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Dockertest
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Pricing
             </Button>
           ]
@@ -88,13 +90,13 @@ const Layout = ({children}: PropTypes) => (
         {
           title: 'Developers',
           links: [
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Documentation
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Community
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               GitHub
             </Button>
           ]
@@ -102,19 +104,19 @@ const Layout = ({children}: PropTypes) => (
         {
           title: 'Company',
           links: [
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Blog
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               About Us
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Jobs
               <ColourWrapper text={'themed-primary'}>
                 <div className={cn('font-p-sm')}>we're hiring!</div>
               </ColourWrapper>
             </Button>,
-            <Button to={'/'} style={'none'} openInNewWindow={true}>
+            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
               Contact Us
             </Button>
           ]

@@ -38,6 +38,7 @@ declare const styles: {
   readonly "fontMono": string;
   readonly "fontMonoS": string;
   readonly "fontMenu": string;
+  readonly "fontCategory": string;
 };
 export = styles;
 

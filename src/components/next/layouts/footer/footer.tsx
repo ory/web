@@ -1,5 +1,5 @@
 import React from 'react'
-import {footer, footerFill, footerLeft, footerText, footerItem, footerInner} from './footer.module.css'
+import {footer, footerContainer} from './footer.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -53,7 +53,8 @@ interface FooterMain {
 }
 
 const FooterMain = ({className, logo, contact, links}: FooterMain) => (
-  <Container className={className} justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']}
+  <Container className={className}
+             justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']}
              alignItems={'start'}>
     <Grid lg={4} md={4} sm={12} xs={12} className={cn(pb32)}>
       <Container flexContainer={'column'} alignItems={'start'}
@@ -61,8 +62,8 @@ const FooterMain = ({className, logo, contact, links}: FooterMain) => (
         <Grid lg={12} sm={4} xs={6} className={cn(pb64)}>
           {logo}
         </Grid>
-          <ColourWrapper text={'base-grey-600'}>{contact.contactEmail}</ColourWrapper>
-          <div className={cn('p-sm')}>{contact.contactText}</div>
+        <ColourWrapper text={'base-grey-600'}>{contact.contactEmail}</ColourWrapper>
+        <div className={cn('p-sm')}>{contact.contactText}</div>
       </Container>
     </Grid>
     <Grid lg={8} md={8} sm={12} xs={12}>
@@ -91,7 +92,7 @@ interface FooterSub {
 }
 
 const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
-  <Container className={cn(className)} alignItems={'start'} justify={'start'}>
+  <Container className={cn(className)} alignItems={'start'} justify={'center'}>
     <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
       <Container justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}>
         <div className={cn('font-p-sm')}>{copyright}</div>
@@ -124,8 +125,8 @@ const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
 
 const Footer = ({logo, contact, links, copyright, social, legal}: FooterPropTypes) => (
   <div className={cn(footer)}>
-    <FooterMain className={cn(pb32, footerFill)} logo={logo} contact={contact} links={links}/>
-    <FooterSub className={cn(pt32, footerFill)} copyright={copyright} social={social} legal={legal}/>
+    <FooterMain className={cn(footerContainer)} contact={contact} links={links} logo={logo}/>
+    <FooterSub className={cn(footerContainer)} copyright={copyright} social={social} legal={legal}/>
   </div>
 )
 

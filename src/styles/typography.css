@@ -355,7 +355,7 @@ main a.cta {
 .font-p-sm {
   font-size: 14px;
   line-height: 228.5%;
-  color: var(--colors-base-grey-400--next);
+  color: var(--colors-base-grey-900--next);
 }
 
 .font-p-sm-light {
@@ -397,6 +397,12 @@ main a.cta {
   line-height: 228.5%;
 }
 
+.font-category {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 184.6%;
+}
 /*
   Tablets, large phones, smaller phones
 */

@@ -3,12 +3,17 @@ import {
   BookOpen,
   CirclesThreePlus,
   Code,
+  GithubLogo,
   GitMerge,
+  LinkedinLogo,
   LockOpen,
   RocketLaunch,
+  SlackLogo,
   Terminal,
+  TwitterLogo,
   UserPlus,
-  Users
+  Users,
+  YoutubeLogo
 } from 'phosphor-react'
 import React from 'react'
 import Button from '../../components/next/freestanding/button/button'
@@ -36,6 +41,7 @@ import threerein from '../../images/adopters/threerein.svg'
 import { pl32 } from '../../components/next/freestanding/utils/padding.module.css'
 import cn from 'classnames'
 import SEO from '../../components/next/layouts/seo/seo'
+import Footer from '../../components/next/layouts/footer/footer'
 
 const IndexPage = () => (
   <Layout>

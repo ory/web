@@ -4,24 +4,29 @@
   color: var(--colors-base-grey-600--next);
 }
 
-.footer-left {
-  display: flex;
-  margin-right: auto;
-}
-
-.footer-fill {
+.footer-container {
+  width: calc(100% - 32px);
+  max-width: 1216px;
   margin: 0 auto;
 }
 
-.footer-item {
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: space-between;
-  align-items: start;
+@media (--md) {
+  .footer-container {
+    width: calc(100% - 32px);
+    max-width: 912px;
+  }
 }
 
-.footer-text {
-  width: 152px;
-  overflow: hidden;
-  white-space: nowrap;
+@media (--sm) {
+  .footer-container {
+    width: calc(100% - 24px);
+    max-width: 552px;
+  }
+}
+
+@media (--xs) {
+  .footer-container {
+    width: calc(100% - 16px);
+    max-width: 552px;
+  }
 }
