@@ -60,10 +60,6 @@ const pricingTiers: Array<PriceTier> = [
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
         title: 'Data objects not metered'
-      },      
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Community Support'
       }
     ]
   },
@@ -102,10 +98,6 @@ const pricingTiers: Array<PriceTier> = [
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
         title: 'Unlimited data objects'
-      },      
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Hypercare Support'
       }
     ]
   }
@@ -148,11 +140,6 @@ const pricingOS: Array<PriceTier> = [
       {
         icon: <CheckCircle className={cn(styles.featureDisabled)} size={16} />,
         title: 'Data limited by database'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Community Support'
-      
       }
     ]
   }
