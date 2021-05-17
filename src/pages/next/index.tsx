@@ -30,6 +30,8 @@ import Stats from '../../components/next/layouts/stats/stats'
 import Features from '../../components/next/layouts/features/features'
 import Quotes from '../../components/next/layouts/quotes/quotes'
 import heroIllustration from '../../images/illustrations/hero.svg'
+import headlessIllustration from '../../images/illustrations/headless.png'
+import dashboardIllustration from '../../images/illustrations/dashboard_small.png'
 import blues from '../../images/adopters/blues.svg'
 import thoughtworks from '../../images/adopters/thoughtworks.svg'
 import kyma from '../../images/adopters/kyma.svg'
@@ -124,7 +126,7 @@ const IndexPage = () => (
           interface or dedicated CLI.
         </>
       }
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+      image={<img loading="lazy" alt="" src={dashboardIllustration} />}
     />
 
     <FeatureImage
@@ -138,7 +140,7 @@ const IndexPage = () => (
           flows? Done. And this is included without extra charges.
         </>
       }
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+      image={<img loading="lazy" alt="" src={headlessIllustration} />}
     />
 
     <Coding
