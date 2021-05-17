@@ -76,7 +76,6 @@
 */
 /*@media (min-width: 1280px) {*/
 @media (--lg), (--xl) {
-
   .flex-start-lg {
     align-items: flex-start;
   }
@@ -302,7 +301,7 @@
     justify-content: space-between;
   }
 
-  .justify-start-sm{
+  .justify-start-sm {
     justify-content: flex-start;
   }
 

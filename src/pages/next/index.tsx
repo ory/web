@@ -124,9 +124,9 @@ const IndexPage = () => (
       description={
         <>
           Authenticate and manage users, set and check permissions, protect
-          APIs, applications and data. Ory as a Service comes with dashboards for metrics
-          and insights and can be managed fully from the intuitive user
-          interface or dedicated CLI.
+          APIs, applications and data. Ory as a Service comes with dashboards
+          for metrics and insights and can be managed fully from the intuitive
+          user interface or dedicated CLI.
         </>
       }
       image={<img loading="lazy" alt="" src={heroIllustration} />}
@@ -137,9 +137,9 @@ const IndexPage = () => (
       title={<>Bring your own UX</>}
       description={
         <>
-          You want to brand user facing UIs and use your styles and design?
-          No problem with headless integration. You want custom auth
-          flows? Done. And this is included without extra charges.
+          You want to brand user facing UIs and use your styles and design? No
+          problem with headless integration. You want custom auth flows? Done.
+          And this is included without extra charges.
         </>
       }
       image={<img loading="lazy" alt="" src={heroIllustration} />}
@@ -160,7 +160,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button to={'/'} style={'filled'}>
-          Get Started Today
+            Get Started Today
           </Button>
         </>
       }
@@ -239,8 +239,7 @@ const IndexPage = () => (
           description: (
             <>
               The unique pricing model does not charge you for Monthly Active
-              Users. Choose a transparent plan that adapts to your
-              needs.
+              Users. Choose a transparent plan that adapts to your needs.
             </>
           )
         },
@@ -282,21 +281,37 @@ const IndexPage = () => (
           ),
           description: (
             <>
-              We like using Ory because it’s API first design made it super easy to integrate with the rest our stack.
+              We like using Ory because it’s API first design made it super easy
+              to integrate with the rest our stack.
             </>
           ),
           person: `Paul Harman`,
           jobTitle: `Engineering Manager, Sainsbury’s Tech`
         },
         {
-          logo: <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />,
-          description: <>Securing modern digital systems requires new approaches to identity. With Ory, I can build custom and secure ID infrastructure and APIs that fit perfectly into my client's ever-evolving cloud environments.</>,
+          logo: (
+            <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
+          ),
+          description: (
+            <>
+              Securing modern digital systems requires new approaches to
+              identity. With Ory, I can build custom and secure ID
+              infrastructure and APIs that fit perfectly into my client's
+              ever-evolving cloud environments.
+            </>
+          ),
           person: `Ken Adler`,
           jobTitle: `Identity & Infosec, Thoughtworks`
         },
         {
           logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
-          description: <>I needed an Auth System that would work with modern setups, and I did not want to write it myself. Ory fit the bill perfectly and just works.</>,
+          description: (
+            <>
+              I needed an Auth System that would work with modern setups, and I
+              did not want to write it myself. Ory fit the bill perfectly and
+              just works.
+            </>
+          ),
           person: `Steff Kelsey`,
           jobTitle: `Head of Engineering. Blues Wireless`
         }
@@ -347,8 +362,8 @@ const IndexPage = () => (
           title: <>Join a diverse community</>,
           description: (
             <>
-              Make yourself heard in chat and contribute code and insights to the open source projects at
-              the heart of Ory.
+              Make yourself heard in chat and contribute code and insights to
+              the open source projects at the heart of Ory.
             </>
           ),
           button: (

@@ -64,7 +64,14 @@ const Coding = ({
 
           <Container alignItems={['start']} className={cn(pt64)}>
             {content.map(({ button, description, icon, title }, index) => (
-              <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)} key={index}>
+              <Grid
+                lg={6}
+                md={6}
+                sm={12}
+                xs={12}
+                className={cn(pb64)}
+                key={index}
+              >
                 <ContentText padded={true}>
                   <MoleculeTextInteraction>
                     <Molecule>

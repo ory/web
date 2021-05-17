@@ -1,25 +1,80 @@
 import React from 'react'
 import * as styles from './layout.module.css'
 import cn from 'classnames'
-import Footer, {Contact, FooterPropTypes, LinkSection} from '../footer/footer'
+import Footer, { Contact, FooterPropTypes, LinkSection } from '../footer/footer'
 import Navigation from '../navigation/navigation'
 import heroIllustration from '../../../../images/illustrations/hero.svg'
 import Button from '../../freestanding/button/button'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import {GithubLogo, LinkedinLogo, SlackLogo, TwitterLogo, YoutubeLogo} from 'phosphor-react'
+import {
+  ArrowRight,
+  GithubLogo,
+  LinkedinLogo,
+  SignIn,
+  SlackLogo,
+  TwitterLogo,
+  YoutubeLogo
+} from 'phosphor-react'
+import oryLogo from '../../../../images/logo-ory.svg'
+import developerIllustration from '../../../../images/illustrations/developer.svg'
 
 interface PropTypes {
   children?: React.ReactNode
 }
 
-const Layout = ({children}: PropTypes) => (
-  <div>
-    <Navigation/>
-    <main className={cn(styles.layout)}>
-      {children}
-    </main>
+const Layout = ({ children }: PropTypes) => (
+  <div className={cn(styles.layout)}>
+    <Navigation
+      logo={oryLogo}
+      sideNav={[
+        <Button
+          to={'/'}
+          style={'text'}
+          openInNewWindow={false}
+          iconRight={<SignIn size={24} />}
+        >
+          Login
+        </Button>,
+        <Button to={'/'} style={'filled'} openInNewWindow={false}>
+          Get Started
+        </Button>
+      ]}
+      dropdownMenu={[
+        {
+          title: 'Product',
+          sideMenu: [
+            {
+              description: 'User & Identity Management',
+              button: (
+                <Button to={'/'} style={'none'} openInNewWindow={true}>
+                  Kratos
+                </Button>
+              )
+            }
+          ],
+          mainMenu: [
+            {
+              image: developerIllustration,
+              description: 'Never Build Auth Again',
+              title: 'Ory as a Service',
+              button: (
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
+                  Read more
+                </Button>
+              )
+            }
+          ]
+        }
+      ]}
+    />
+    <main >{children}</main>
     <Footer
-      logo={<img loading="lazy" alt="" src={heroIllustration}/>}
+      logo={<img loading="lazy" alt="" src={heroIllustration} />}
       copyright={<>© Copyright 2021 Ory Corp</>}
       contact={{
         contactEmail: (
@@ -31,20 +86,20 @@ const Layout = ({children}: PropTypes) => (
       }}
       social={[
         <Button to={''} style={'none'} openInNewWindow={true}>
-          <GithubLogo size={24}/>
+          <GithubLogo size={24} />
         </Button>,
         <Button to={''} style={'none'} openInNewWindow={true}>
-          <YoutubeLogo size={24}/>
+          <YoutubeLogo size={24} />
         </Button>,
         <Button to={''} style={'none'} openInNewWindow={true}>
-          <TwitterLogo size={24}/>
+          <TwitterLogo size={24} />
         </Button>,
         <Button to={''} style={'none'} openInNewWindow={true}>
-          <SlackLogo size={24}/>
+          <SlackLogo size={24} />
         </Button>,
         <Button to={''} style={'none'} openInNewWindow={true}>
-          <LinkedinLogo size={24}/>
-        </Button>,
+          <LinkedinLogo size={24} />
+        </Button>
       ]}
       legal={[
         <Button to={'/'} style={'none'} openInNewWindow={true}>
@@ -61,28 +116,68 @@ const Layout = ({children}: PropTypes) => (
         {
           title: 'Product',
           links: [
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Ory
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Open Source
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Hydra
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Kratos
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Keto
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Oathkeeper
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Dockertest
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Pricing
             </Button>
           ]
@@ -90,13 +185,28 @@ const Layout = ({children}: PropTypes) => (
         {
           title: 'Developers',
           links: [
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Documentation
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Community
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               GitHub
             </Button>
           ]
@@ -104,19 +214,39 @@ const Layout = ({children}: PropTypes) => (
         {
           title: 'Company',
           links: [
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Blog
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               About Us
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Jobs
               <ColourWrapper text={'themed-primary'}>
                 <div className={cn('font-p-sm')}>we're hiring!</div>
               </ColourWrapper>
             </Button>,
-            <Button className={cn('font-base font-p-sm')} to={'/'} style={'none'} openInNewWindow={true}>
+            <Button
+              className={cn('font-base font-p-sm')}
+              to={'/'}
+              style={'none'}
+              openInNewWindow={true}
+            >
               Contact Us
             </Button>
           ]

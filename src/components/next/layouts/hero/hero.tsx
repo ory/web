@@ -27,7 +27,7 @@ const Hero = ({ title, description, image, buttons }: PropTypes) => (
           <MoleculeTextInteraction>
             <Molecule className={cn(pb48)}>
               <div className={cn('font-h1', pb32)}>{title}</div>
-              <div className={cn("font-p-lg")}>{description}</div>
+              <div className={cn('font-p-lg')}>{description}</div>
             </Molecule>
             <MoleculeInteraction>{buttons}</MoleculeInteraction>
           </MoleculeTextInteraction>

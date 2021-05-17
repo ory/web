@@ -1,0 +1,11 @@
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (--xs), (--sm) {
+  .image-hidden {
+    display: none !important;
+  }
+}

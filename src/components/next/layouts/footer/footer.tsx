@@ -1,5 +1,5 @@
 import React from 'react'
-import {footer, footerContainer} from './footer.module.css'
+import { footer, footerContainer } from './footer.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -25,6 +25,7 @@ import {
 } from '../../freestanding/utils/padding.module.css'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 
 export interface Contact {
   contactEmail: React.ReactElement
@@ -52,29 +53,44 @@ interface FooterMain {
   links: Array<LinkSection>
 }
 
-const FooterMain = ({className, logo, contact, links}: FooterMain) => (
-  <Container className={className}
-             justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']}
-             alignItems={'start'}>
+const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
+  <Container
+    className={className}
+    justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']}
+    alignItems={'start'}
+  >
     <Grid lg={4} md={4} sm={12} xs={12} className={cn(pb32)}>
-      <Container flexContainer={'column'} alignItems={'start'}
-                 justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}>
+      <Container
+        flexContainer={'column'}
+        alignItems={'start'}
+        justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}
+      >
         <Grid lg={12} sm={4} xs={6} className={cn(pb64)}>
           {logo}
         </Grid>
-        <ColourWrapper text={'base-grey-600'}>{contact.contactEmail}</ColourWrapper>
+        <ColourWrapper text={'base-grey-600'}>
+          {contact.contactEmail}
+        </ColourWrapper>
         <div className={cn('p-sm')}>{contact.contactText}</div>
       </Container>
     </Grid>
     <Grid lg={8} md={8} sm={12} xs={12}>
-      <Container alignItems={'start'} justify={['end-lg', 'end-md', 'space-between-sm', 'space-between-xs']}>
+      <Container
+        alignItems={'start'}
+        justify={['end-lg', 'end-md', 'space-between-sm', 'space-between-xs']}
+      >
         {links.map((l) => (
           <Grid lg={3} md={3} sm={3} xs={3} key={l.title} className={cn(pb24)}>
             <ContentText>
               {l.title}
               {l.links.map((i, index) => (
-                <ColourWrapper text={'base-grey-600'} key={index}
-                               className={cn('font-menu')}>{i as React.ReactElement}</ColourWrapper>
+                <ColourWrapper
+                  text={'base-grey-600'}
+                  key={index}
+                  className={cn('font-menu')}
+                >
+                  {i as React.ReactElement}
+                </ColourWrapper>
               ))}
             </ContentText>
           </Grid>
@@ -91,11 +107,13 @@ interface FooterSub {
   legal: React.ReactNodeArray
 }
 
-const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
+const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
   <Container className={cn(className)} alignItems={'start'} justify={'center'}>
     <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
       <Container justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}>
-        <div className={cn('font-p-sm')}>{copyright}</div>
+        <ColourWrapper text={'base-grey-400'}>
+          <div className={cn('font-p-sm')}>{copyright}</div>
+        </ColourWrapper>
       </Container>
     </Grid>
     <Grid lg={4} md={4} sm={4} xs={12}>
@@ -123,12 +141,29 @@ const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
   </Container>
 )
 
-const Footer = ({logo, contact, links, copyright, social, legal}: FooterPropTypes) => (
+const Footer = ({
+  logo,
+  contact,
+  links,
+  copyright,
+  social,
+  legal
+}: FooterPropTypes) => (
   <div className={cn(footer)}>
-    <FooterMain className={cn(footerContainer)} contact={contact} links={links} logo={logo}/>
-    <FooterSub className={cn(footerContainer)} copyright={copyright} social={social} legal={legal}/>
+    <FooterMain
+      className={cn(footerContainer, pb32)}
+      contact={contact}
+      links={links}
+      logo={logo}
+    />
+    <MoleculeSeparator style={'horizontal'} />
+    <FooterSub
+      className={cn(footerContainer, pt32)}
+      copyright={copyright}
+      social={social}
+      legal={legal}
+    />
   </div>
 )
 
 export default Footer
-

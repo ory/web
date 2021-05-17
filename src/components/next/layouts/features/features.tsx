@@ -60,7 +60,14 @@ const Features = ({
         <Container alignItems={'start'} justify={'start'}>
           {feature.map((f, index) => {
             return (
-              <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb64)} key={index}>
+              <Grid
+                lg={5}
+                md={5}
+                sm={12}
+                xs={12}
+                className={cn(pb64)}
+                key={index}
+              >
                 <ColourWrapper text={'themed-primary'} className={cn(pr32)}>
                   {f.icon}
                 </ColourWrapper>

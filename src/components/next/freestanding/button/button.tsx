@@ -53,13 +53,14 @@ const Button = ({
   return to.startsWith('/') ? (
     <GatsbyLink
       to={to}
-      className={cn(...classes)}
+      className={cn(...classes, styles.btnText)}
       rel={openInNewWindow ? 'noopener noreferrer' : ''}
       target={openInNewWindow ? '_blank' : ''}
     >
       {iconLeft && <div className={cn(pr8)}>{iconLeft}</div>}
       {children}
       {iconRight && <div className={cn(pl8)}>{iconRight}</div>}
+      
     </GatsbyLink>
   ) : (
     <a

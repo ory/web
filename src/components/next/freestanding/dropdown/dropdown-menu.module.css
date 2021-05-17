@@ -1,0 +1,9 @@
+.dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--colors-base-white--next);
+  box-shadow: var(--elevation-large);
+  border-radius: 20px;
+}

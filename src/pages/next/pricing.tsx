@@ -108,41 +108,54 @@ const PricingPage = () => (
           question: `What happens if I stop using Ory?`,
           answer: (
             <>
-          As long as your data is on our platform, it will be safe. If you decide to switch away from Ory, you can choose to use the open source and host it yourself.  Or export your user data to any format. 
+              As long as your data is on our platform, it will be safe. If you
+              decide to switch away from Ory, you can choose to use the open
+              source and host it yourself. Or export your user data to any
+              format.
             </>
-         )
+          )
         },
         {
           question: `What is Ory’s security policy & uptime?`,
           answer: (
             <>
-          Ory builds things to last. The platform is always up to date and backwards compatible. Security patches are merged and released within 48 hours after disclosure, see details in our security policy. Live details on the Ory Network, including uptime and status updates can be found on our status page. 
+              Ory builds things to last. The platform is always up to date and
+              backwards compatible. Security patches are merged and released
+              within 48 hours after disclosure, see details in our security
+              policy. Live details on the Ory Network, including uptime and
+              status updates can be found on our status page.
             </>
-         )
+          )
         },
         {
           question: `Who is using Ory?`,
           answer: (
             <>
-          Thousands of companies are trusting Ory to provide consistent, reliable infrastructure for identity and access management. We count among our users: Sainsbury’s, Giesecke+Devrient, SAP, Discogs, imgur and many more... 
+              Thousands of companies are trusting Ory to provide consistent,
+              reliable infrastructure for identity and access management. We
+              count among our users: Sainsbury’s, Giesecke+Devrient, SAP,
+              Discogs, imgur and many more...
             </>
-         )
+          )
         },
         {
           question: `What payment methods are accepted?`,
           answer: (
             <>
-          Visa, MasterCard, and American Express credit cards are accepted. All payments are processed and secured by Stripe.           
-           </>
-         )
+              Visa, MasterCard, and American Express credit cards are accepted.
+              All payments are processed and secured by Stripe.
+            </>
+          )
         },
         {
           question: `What is a project and member at Ory?`,
           answer: (
             <>
-          A project is one instance of Ory, e.g. to host sign up for a web application you need one project. A member is one admin or superuser to control that project. 
+              A project is one instance of Ory, e.g. to host sign up for a web
+              application you need one project. A member is one admin or
+              superuser to control that project.
             </>
-         )
+          )
         }
       ]}
     />
