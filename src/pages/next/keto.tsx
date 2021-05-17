@@ -16,21 +16,13 @@ import ColourWrapper from '../../components/next/freestanding/colour/colour-wrap
 import Molecule from '../../components/next/freestanding/molecule/molecule'
 import Adopters from '../../components/next/layouts/adopters/adopters'
 import Coding from '../../components/next/layouts/coding/coding'
-import FeatureFour from '../../components/next/layouts/feature-four/feature-four'
 import FeatureImage from '../../components/next/layouts/feature-image/feature-image'
-import FeatureOne from '../../components/next/layouts/feature-one/feature-one'
-import FeatureThree from '../../components/next/layouts/feature-three/feature-three'
-import FeatureTwo from '../../components/next/layouts/feature-two/feature-two'
+import Newsletter from '../../components/newsletter'
 import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
-import Security from '../../components/next/layouts/security/security'
-import Stats from '../../components/next/layouts/stats/stats'
-import Features from '../../components/next/layouts/features/features'
-import Quotes from '../../components/next/layouts/quotes/quotes'
 import ketoPolyglot from '../../images/keto/keto_p.svg'
-import opensource from '../../images/illustrations/opensource.svg'
 import ketoProcess from '../../images/keto/keto.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
@@ -121,6 +113,8 @@ const IndexPage = () => (
       }
       image={<img loading="lazy" alt="" src={ketoProcess} />}
     />
+
+    <Newsletter preselect="keto" />
 
     <FeatureImage
       overline={'Start in minutes'}
