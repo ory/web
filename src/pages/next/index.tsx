@@ -32,6 +32,7 @@ import Quotes from '../../components/next/layouts/quotes/quotes'
 import heroIllustration from '../../images/illustrations/hero.svg'
 import headlessIllustration from '../../images/illustrations/headless.png'
 import dashboardIllustration from '../../images/illustrations/dashboard_small.png'
+import codeboxIllustration from '../../images/illustrations/codebox.svg'
 import blues from '../../images/adopters/blues.svg'
 import thoughtworks from '../../images/adopters/thoughtworks.svg'
 import kyma from '../../images/adopters/kyma.svg'
@@ -162,7 +163,7 @@ const IndexPage = () => (
           </Button>
         </>
       }
-      visual={<img loading="lazy" alt="" src={heroIllustration} />}
+      visual={<img loading="lazy" alt="" src={codeboxIllustration} />}
       content={[
         {
           icon: <Terminal size={32} />,
