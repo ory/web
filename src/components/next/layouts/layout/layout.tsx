@@ -16,8 +16,8 @@ const Layout = ({children}: PropTypes) => (
   <div>
     <Navigation/>
     <main className={cn(styles.layout)}>{children}</main>
-    {/*<Footer
-      logo={<img loading="lazy" alt="" src={heroIllustration}/>}
+    <Footer
+      logo={<img width={'100%'} loading="lazy" alt="" src={heroIllustration}/>}
       copyright={<>© Copyright 2021 Ory Corp</>}
       contact={{
         contactEmail: (
@@ -120,7 +120,7 @@ const Layout = ({children}: PropTypes) => (
           ]
         }
       ]}
-    />*/}
+    />
   </div>
 )
 

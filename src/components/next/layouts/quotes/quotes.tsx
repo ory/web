@@ -36,11 +36,11 @@ const QuoteBlock = ({ logo, description, person, jobTitle }: Quote) => (
 
 const Quotes = ({ quotes, title }: PropTypes) => (
   <div className={cn(quote)}>
-    <Container fluid={true} justify={'space-between'}>
+    <Container fluid={true} justify={'start'}>
       <Grid lg={5} md={6} sm={12} xs={12}>
         <div className={cn('font-h2')}>{title}</div>
       </Grid>
-      <Grid lg={6} md={6} smHidden={true} xsHidden={true}>
+      <Grid lg={5} md={6} smHidden={true} xsHidden={true}>
         <Carousel
           centerMode={false}
           autoPlay={true}

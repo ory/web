@@ -1,5 +1,5 @@
 import React from 'react'
-import {footer, footerFill, footerLeft, footerText, footerItem} from './footer.module.css'
+import {footer, footerFill, footerLeft, footerText, footerItem, footerInner} from './footer.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -53,25 +53,27 @@ interface FooterMain {
 }
 
 const FooterMain = ({className, logo, contact, links}: FooterMain) => (
-  <Container className={className} justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']} alignItems={'start'}>
-    <Grid lg={5} md={4} sm={12} xs={12} className={cn(pb32)}>
-      <Container alignItems={'center'} justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}>
-        <ContentText>
-          <div className={cn(pb64)}>{logo}</div>
-          {contact.contactEmail}
+  <Container className={className} justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']}
+             alignItems={'start'}>
+    <Grid lg={4} md={4} sm={12} xs={12} className={cn(pb32)}>
+      <Container flexContainer={'column'} alignItems={'start'}
+                 justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}>
+        <Grid lg={12} sm={4} xs={6} className={cn(pb64)}>
+          {logo}
+        </Grid>
+          <ColourWrapper text={'base-grey-600'}>{contact.contactEmail}</ColourWrapper>
           <div className={cn('p-sm')}>{contact.contactText}</div>
-        </ContentText>
       </Container>
     </Grid>
-    <Grid lg={6} md={8} sm={12} xs={12}>
+    <Grid lg={8} md={8} sm={12} xs={12}>
       <Container alignItems={'start'} justify={['end-lg', 'end-md', 'space-between-sm', 'space-between-xs']}>
         {links.map((l) => (
-          <Grid lg={3} md={3} sm={4} xs={4} key={l.title} className={cn(pb24)}>
+          <Grid lg={3} md={3} sm={3} xs={3} key={l.title} className={cn(pb24)}>
             <ContentText>
               {l.title}
               {l.links.map((i, index) => (
                 <ColourWrapper text={'base-grey-600'} key={index}
-                               className={cn('font-menu', footerText)}>{i as React.ReactElement}</ColourWrapper>
+                               className={cn('font-menu')}>{i as React.ReactElement}</ColourWrapper>
               ))}
             </ContentText>
           </Grid>
@@ -89,28 +91,28 @@ interface FooterSub {
 }
 
 const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
-  <Container className={cn(className)} alignItems={'start'}>
-    <Grid lg={4} md={4} sm={3} xs={12} className={cn(pb16)}>
-      <Container justify={['start-lg', 'start-md', 'center-sm', 'center-xs']}>
+  <Container className={cn(className)} alignItems={'start'} justify={'start'}>
+    <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
+      <Container justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}>
         <div className={cn('font-p-sm')}>{copyright}</div>
       </Container>
     </Grid>
-    <Grid lg={4} md={4} sm={3} xs={12}>
-      <Container justify={['center-lg','center-md', 'center-sm', 'center-xs']}>
+    <Grid lg={4} md={4} sm={4} xs={12}>
+      <Container justify={'center'}>
         <MoleculeInteraction>
           {social.map((s, index) => (
-            <ColourWrapper className={pl16} text={'base-grey-400'} key={index}>
+            <ColourWrapper text={'base-grey-400'} key={index}>
               {s as React.ReactElement}
             </ColourWrapper>
           ))}
         </MoleculeInteraction>
       </Container>
     </Grid>
-    <Grid lg={4} md={4} sm={3} xs={12}>
-      <Container justify={['end-lg', 'end-md', 'center-xs']}>
+    <Grid lg={4} md={4} sm={4} xs={12}>
+      <Container justify={['end-lg', 'end-md', 'center-sm', 'center-xs']}>
         <MoleculeInteraction>
           {legal.map((l, index) => (
-            <ColourWrapper className={cn(pl16)} text={'base-grey-400'} key={index}>
+            <ColourWrapper text={'base-grey-400'} key={index}>
               {l as React.ReactElement}
             </ColourWrapper>
           ))}
@@ -122,10 +124,8 @@ const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
 
 const Footer = ({logo, contact, links, copyright, social, legal}: FooterPropTypes) => (
   <div className={cn(footer)}>
-    <Container flexContainer={'column'} fluid={true}>
-        <FooterMain className={cn(pb32)} logo={logo} contact={contact} links={links}/>
-        <FooterSub className={cn(pt32)} copyright={copyright} social={social} legal={legal}/>
-    </Container>
+    <FooterMain className={cn(pb32, footerFill)} logo={logo} contact={contact} links={links}/>
+    <FooterSub className={cn(pt32, footerFill)} copyright={copyright} social={social} legal={legal}/>
   </div>
 )
 
