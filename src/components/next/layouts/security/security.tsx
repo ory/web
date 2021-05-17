@@ -73,7 +73,7 @@ const Security = () => (
                 key={index}
               >
                 {feature.icon}
-                <p className="font-h5">{feature.title}</p>
+                <h5 className="font-h5">{feature.title}</h5>
                 <p className="font-p">{feature.description}</p>
               </Grid>
             )

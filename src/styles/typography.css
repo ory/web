@@ -8,7 +8,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
+/*h1,
 h2,
 h3,
 h4,
@@ -112,7 +112,7 @@ h5 {
 
 p {
   margin-bottom: 1rem;
-}
+}*/
 
 a:any-link {
   text-decoration: none;
@@ -120,12 +120,12 @@ a:any-link {
     border-color ease 200ms;
 }
 
-p.secondary {
+/*p.secondary {
   font-weight: normal;
   font-size: 0.833rem;
-}
+}*/
 
-ul,
+/*ul,
 ol {
   padding: 0;
   margin: 32px 0 20px 32px;
@@ -135,7 +135,7 @@ ol {
     margin: 0 0 12px 0;
     padding: 0 0 0 12px;
   }
-}
+}*/
 
 main a.cta {
   text-align: center;
@@ -177,8 +177,17 @@ main a.cta {
 
 /*Custom classes for font sizing*/
 
-.font-base {
-  font-family: var(--font-default--next);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+input{
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   color: var(--colors-base-grey);
 }
@@ -305,6 +314,7 @@ main a.cta {
   font-weight: 500;
   font-size: 15px;
   line-height: 160%;
+  color: var(--colors-base-white--next);
 }
 
 .font-link {
@@ -321,7 +331,7 @@ main a.cta {
   }
 
   &.font-link-sm {
-    font-size: 14px;
+    font-size: 14px ;
     line-height: 228.5%;
   }
 }

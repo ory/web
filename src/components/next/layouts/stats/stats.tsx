@@ -231,10 +231,10 @@ class Stats extends Component<PropTypes, StateTypes> {
           <Grid lg={3} md={3} sm={12} xs={12}>
             <ContentText padded={true}>
               <Molecule>
-                <p className={cn('font-h3-light')}>Billions of Identities.</p>
+                <h3 className={cn('font-h3-light')}>Billions of Identities.</h3>
                 <p className={cn('font-p-light')}>
                   <a
-                    href={''}
+                    href={'#'}
                     className={cn('font-link font-link-lg link-news')}
                   >
                     Companies
@@ -253,11 +253,11 @@ class Stats extends Component<PropTypes, StateTypes> {
                     <Container justify={'start'}>
                       <ContentText padded={true}>
                         <Molecule>
-                          <div className={cn('font-h1-light')}>
+                          <h1 className={cn('font-h1-light')}>
                             <AnimatedCounter countTo={amount} />
-                          </div>
-                          <div className={cn('font-p-lg-light')}>{title}</div>
-                          <div className={cn('font-p-lg')}>{description}</div>
+                          </h1>
+                          <p className={cn('font-p-lg-light')}>{title}</p>
+                          <p className={cn('font-p-lg')}>{description}</p>
                         </Molecule>
                       </ContentText>
                     </Container>

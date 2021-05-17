@@ -71,7 +71,7 @@ const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
         <ColourWrapper text={'base-grey-600'}>
           {contact.contactEmail}
         </ColourWrapper>
-        <div className={cn('p-sm')}>{contact.contactText}</div>
+        <p className={cn('p-sm')}>{contact.contactText}</p>
       </Container>
     </Grid>
     <Grid lg={8} md={8} sm={12} xs={12}>

@@ -51,7 +51,7 @@ const Navigation = ({logo, dropdownMenu, sideNav}: PropTypes) => {
               />
           </Container>
         </Grid>
-        <Grid lg={4}>
+        <Grid lg={5}>
           <Container justify={'center'}>
             <nav role={'navigation'}>
               <ul>
@@ -75,9 +75,9 @@ const Navigation = ({logo, dropdownMenu, sideNav}: PropTypes) => {
                             {sideMenu.map(({description, button}, index) => (
                               <ContentText key={index} className={cn(pb24)}>
                                 {button}
-                                <div className={cn('font-p-sm')}>
+                                <p className={cn('font-p-sm')}>
                                   {description}
-                                </div>
+                                </p>
                               </ContentText>
                             ))}
                           </Container>

@@ -45,10 +45,10 @@ const Features = ({
       <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
-            <div className={cn('font-overline', pb16)}>{overline}</div>
-            <div className={cn('font-h3')}>{title}</div>
+            <p className={cn('font-overline', pb16)}>{overline}</p>
+            <h3 className={cn('font-h3')}>{title}</h3>
             {description && (
-              <div className={cn('font-p', pt32)}>{description}</div>
+              <p className={cn('font-p', pt32)}>{description}</p>
             )}
           </Molecule>
           <MoleculeInteraction className={cn(pt24)}>
@@ -72,8 +72,8 @@ const Features = ({
                   {f.icon}
                 </ColourWrapper>
                 <ContentText>
-                  <div className={cn('font-h5', pb8)}>{f.title}</div>
-                  <div className={cn('font-p-sm')}>{f.description}</div>
+                  <h5 className={cn('font-h5', pb8)}>{f.title}</h5>
+                  <p className={cn('font-p-sm')}>{f.description}</p>
                 </ContentText>
               </Grid>
             )

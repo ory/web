@@ -262,7 +262,7 @@ const Layout = ({ children }: PropTypes) => (
           title: 'Product',
           links: [
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -270,7 +270,7 @@ const Layout = ({ children }: PropTypes) => (
               Ory
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -278,7 +278,7 @@ const Layout = ({ children }: PropTypes) => (
               Open Source
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -286,7 +286,7 @@ const Layout = ({ children }: PropTypes) => (
               Hydra
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -294,7 +294,7 @@ const Layout = ({ children }: PropTypes) => (
               Kratos
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -302,7 +302,7 @@ const Layout = ({ children }: PropTypes) => (
               Keto
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -310,7 +310,7 @@ const Layout = ({ children }: PropTypes) => (
               Oathkeeper
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -318,7 +318,7 @@ const Layout = ({ children }: PropTypes) => (
               Dockertest
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -331,7 +331,7 @@ const Layout = ({ children }: PropTypes) => (
           title: 'Developers',
           links: [
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -339,7 +339,7 @@ const Layout = ({ children }: PropTypes) => (
               Documentation
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -347,7 +347,7 @@ const Layout = ({ children }: PropTypes) => (
               Community
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -360,7 +360,7 @@ const Layout = ({ children }: PropTypes) => (
           title: 'Company',
           links: [
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -368,7 +368,7 @@ const Layout = ({ children }: PropTypes) => (
               Blog
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -376,7 +376,7 @@ const Layout = ({ children }: PropTypes) => (
               About Us
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}
@@ -387,7 +387,7 @@ const Layout = ({ children }: PropTypes) => (
               </ColourWrapper>
             </Button>,
             <Button
-              className={cn('font-base font-p-sm')}
+              className={cn('font-p-sm')}
               to={'/'}
               style={'none'}
               openInNewWindow={true}

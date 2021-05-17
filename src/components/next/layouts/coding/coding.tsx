@@ -52,9 +52,9 @@ const Coding = ({
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
           <ContentText padded={true}>
-            <div className={cn('font-overline-light', pb16)}>{overline}</div>
-            <div className={cn('font-h3-light', pb32)}>{title}</div>
-            <div className={cn('font-p-light')}>{description}</div>
+            <p className={cn('font-overline-light', pb16)}>{overline}</p>
+            <h3 className={cn('font-h3-light', pb32)}>{title}</h3>
+            <p className={cn('font-p-light')}>{description}</p>
             {buttons && (
               <MoleculeInteraction className={cn(pt48)}>
                 {buttons}
@@ -62,7 +62,7 @@ const Coding = ({
             )}
           </ContentText>
 
-          <Container alignItems={['start']} className={cn(pt64)}>
+          <Container alignItems={'start'} className={cn(pt64)}>
             {content.map(({ button, description, icon, title }, index) => (
               <Grid
                 lg={6}
@@ -78,10 +78,10 @@ const Coding = ({
                       <ColourWrapper text={'themed-darkmode'}>
                         {icon}
                       </ColourWrapper>
-                      <div className={cn('font-h3-light', pt8)}>{title}</div>
-                      <div className={cn('font-p-light', pt8)}>
+                      <h3 className={cn('font-h3-light', pt8)}>{title}</h3>
+                      <p className={cn('font-p-light', pt8)}>
                         {description}
-                      </div>
+                      </p>
                     </Molecule>
                     <MoleculeInteraction className={cn(pt24)}>
                       {button}

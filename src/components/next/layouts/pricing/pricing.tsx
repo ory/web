@@ -9,12 +9,7 @@ import Button from '../../freestanding/button/button'
 import {
   pb32,
   pb64,
-  pr16,
   pr24,
-  pr32,
-  pr48,
-  pr8,
-  pt128,
   pt32,
   pt64
 } from '../../freestanding/utils/padding.module.css'
@@ -158,12 +153,12 @@ const Pricing = () => {
         <Grid lg={3} md={6} sm={12} xs={12}>
           <ContentText className={cn(pt64, pb64)}>
             <Molecule>
-              <div className={cn('font-h1', pb32)}>No limits on identity</div>
-              <div className={cn('font-p-lg')}>
+              <h1 className={cn('font-h1', pb32)}>No limits on identity</h1>
+              <p className={cn('font-p-lg')}>
                 Ory is based on mature open source software and open standards.
                 And it’s affordable for everyone. We also offer individual plans
                 for enterprise customers, please contact us to learn more!
-              </div>
+              </p>
             </Molecule>
           </ContentText>
         </Grid>

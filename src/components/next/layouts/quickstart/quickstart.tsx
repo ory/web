@@ -36,8 +36,8 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
       <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
-            <div className={cn('font-h3', pb32)}>{title}</div>
-            <div className={cn('font-p', pb48)}>{description}</div>
+            <h3 className={cn('font-h3', pb32)}>{title}</h3>
+            <p className={cn('font-p', pb48)}>{description}</p>
           </Molecule>
           <MoleculeInteraction>{buttons}</MoleculeInteraction>
         </ContentText>

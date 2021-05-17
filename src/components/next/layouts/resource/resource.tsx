@@ -67,7 +67,7 @@ const Resource = () => (
                       alignItems={'stretch'}
                     >
                       <Molecule>
-                        <p className="font-h3">{resource.title}</p>
+                        <h3 className="font-h3">{resource.title}</h3>
                       </Molecule>
                       <MoleculeInteraction>
                         <Button

@@ -39,8 +39,7 @@ const Button = ({
   if (style !== 'none') {
     classes = classes.concat([
       styles.btnBase,
-      getStyle(style, theme),
-      'font-base'
+      getStyle(style, theme)
     ])
   }
 

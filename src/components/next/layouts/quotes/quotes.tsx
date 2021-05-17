@@ -24,12 +24,12 @@ export interface Quote {
 const QuoteBlock = ({ logo, description, person, jobTitle }: Quote) => (
   <ContentText className={cn(quoteBlock)}>
     {logo}
-    <div className={cn('font-h4', pt64)}>{description}</div>
+    <h4 className={cn('font-h4', pt64)}>{description}</h4>
     <ColourWrapper text={'base-grey-600'}>
-      <div className={cn('font-h5', pt32)}>{person}</div>
+      <h5 className={cn('font-h5', pt32)}>{person}</h5>
     </ColourWrapper>
     <ColourWrapper text={'base-grey-400'}>
-      <div className={cn('font-p-lg', pt4)}>{jobTitle}</div>
+      <p className={cn('font-p-lg', pt4)}>{jobTitle}</p>
     </ColourWrapper>
   </ContentText>
 )
@@ -38,7 +38,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
   <div className={cn(quote)}>
     <Container fluid={true} justify={'start'} smHidden={true} xsHidden={true}>
       <Grid lg={6} md={6} sm={12} xs={12}>
-        <div className={cn('font-h2')}>{title}</div>
+        <h2 className={cn('font-h2')}>{title}</h2>
       </Grid>
       <Grid lg={6} md={6}>
         <Carousel
@@ -69,7 +69,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
     </Container>
     <Container fluid={true} lgHidden={true} mdHidden={true}>
       <Grid lg={5} md={6} sm={12} xs={12}>
-        <div className={cn('font-h2')}>{title}</div>
+        <h2 className={cn('font-h2')}>{title}</h2>
       </Grid>
       <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
         {quotes.map((quote, index) => (

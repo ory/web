@@ -35,8 +35,8 @@ const Faq = ({ title, description, content }: PropTypes) => {
       <Container fluid={true} alignItems={['start']}>
         <Grid lg={5} md={5} sm={12} xs={12} className={pb48}>
           <ContentText>
-            <div className={cn('font-h3', pb32)}>{title}</div>
-            <div className={cn('font-p')}>{description}</div>
+            <h3 className={cn('font-h3', pb32)}>{title}</h3>
+            <p className={cn('font-p')}>{description}</p>
           </ContentText>
         </Grid>
         <Grid lg={6} md={6} sm={12} xs={12}>
@@ -56,18 +56,18 @@ const Faq = ({ title, description, content }: PropTypes) => {
               >
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <div className={cn('font-h3', faqHeading)}>
+                    <h3 className={cn('font-h3', faqHeading)}>
                       {question}
                       {expanded.includes(String(index)) ? (
                         <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
                       ) : (
                         <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
                       )}
-                    </div>
+                    </h3>
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  <div className={'font-p'}>{answer}</div>
+                  <p className={'font-p'}>{answer}</p>
                 </AccordionItemPanel>
                 <MoleculeSeparator style={'horizontal'} />
               </AccordionItem>
