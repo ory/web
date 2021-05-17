@@ -36,7 +36,7 @@ const Colour = styled.div<ColourProps>`
   > * {
     color: var(${(props) => props.text || ''});
     background: var(${(props) => props.background || ''});
-    fill: var(${(props) => props.fill || ''});
+    filter: var(${(props) => props.fill || ''});
   }
 `
 

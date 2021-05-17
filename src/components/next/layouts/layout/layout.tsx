@@ -15,7 +15,7 @@ import {
   TwitterLogo,
   YoutubeLogo
 } from 'phosphor-react'
-import oryLogoDark from '../../../../images/logo-ory-dark.svg'
+import oryLogoPrimary from '../../../../images/logo-ory-primary.svg'
 import developerIllustration from '../../../../images/illustrations/developer.svg'
 
 interface PropTypes {
@@ -25,7 +25,7 @@ interface PropTypes {
 const Layout = ({ children }: PropTypes) => (
   <div className={cn(styles.layout)}>
     <Navigation
-      logo={oryLogoDark}
+      logo={oryLogoPrimary}
       sideNav={[
         <Button
           to={'/'}

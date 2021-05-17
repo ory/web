@@ -60,7 +60,7 @@ li:focus-within a {
 ul li ul {
   visibility: hidden;
   opacity: 0;
-  /*min-width: 5rem;*/
+  min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
   margin-top: 1rem;

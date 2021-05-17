@@ -43,14 +43,12 @@ const Navigation = ({logo, dropdownMenu, sideNav}: PropTypes) => {
       <Container className={cn(styles.navContainer)}>
         <Grid lg={2}>
           <Container justify={'start'}>
-            <ColourWrapper text={'themed-primary'}>
               <img
                 className={cn(styles.navLogo)}
                 src={logo}
                 loading={'eager'}
                 alt={'Ory logo'}
               />
-            </ColourWrapper>
           </Container>
         </Grid>
         <Grid lg={4}>
@@ -60,31 +58,30 @@ const Navigation = ({logo, dropdownMenu, sideNav}: PropTypes) => {
                 {dropdownMenu.map(({title, mainMenu, sideMenu}, index) => (
                   <MenuItem title={title} key={index} className={cn(pr32)}>
                     <DropdownMenu>
-                      {mainMenu.map(
-                        ({title, image, button, description}, index) => (
-                          <DropdownItem
-                            className={cn(pr32)}
-                            key={index}
-                            title={title}
-                            image={image}
-                            button={button}
-                            description={description}
-                          />
-                        )
-                      )}
-                      
-                      {sideMenu && (
-                        <Container flexContainer={'column'}>
-                          {sideMenu.map(({description, button}, index) => (
-                            <ContentText key={index} className={cn(pb24)}>
-                              {button}
-                              <div className={cn('font-p-sm')}>
-                                {description}
-                              </div>
-                            </ContentText>
-                          ))}
-                        </Container>
-                      )}
+                        {mainMenu.map(
+                          ({title, image, button, description}, index) => (
+                              <DropdownItem
+                                className={cn(pr32)}
+                                key={index}
+                                title={title}
+                                image={image}
+                                button={button}
+                                description={description}
+                              />
+                          )
+                        )}
+                        {sideMenu && (
+                          <Container flexContainer={'column'}>
+                            {sideMenu.map(({description, button}, index) => (
+                              <ContentText key={index} className={cn(pb24)}>
+                                {button}
+                                <div className={cn('font-p-sm')}>
+                                  {description}
+                                </div>
+                              </ContentText>
+                            ))}
+                          </Container>
+                        )}
                     </DropdownMenu>
                   </MenuItem>
                 ))}
