@@ -36,11 +36,11 @@ const QuoteBlock = ({ logo, description, person, jobTitle }: Quote) => (
 
 const Quotes = ({ quotes, title }: PropTypes) => (
   <div className={cn(quote)}>
-    <Container fluid={true} justify={'start'}>
-      <Grid lg={5} md={6} sm={12} xs={12}>
+    <Container fluid={true} justify={'start'} smHidden={true} xsHidden={true}>
+      <Grid lg={6} md={6} sm={12} xs={12}>
         <div className={cn('font-h2')}>{title}</div>
       </Grid>
-      <Grid lg={5} md={6} smHidden={true} xsHidden={true}>
+      <Grid lg={6} md={6}>
         <Carousel
           centerMode={false}
           autoPlay={true}
@@ -53,6 +53,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
           showThumbs={false}
           infiniteLoop={true}
           useKeyboardArrows={false}
+          stopOnHover={true}
         >
           {quotes.map((quote, index) => (
             <QuoteBlock
@@ -64,6 +65,11 @@ const Quotes = ({ quotes, title }: PropTypes) => (
             />
           ))}
         </Carousel>
+      </Grid>
+    </Container>
+    <Container fluid={true} lgHidden={true} mdHidden={true}>
+      <Grid lg={5} md={6} sm={12} xs={12}>
+        <div className={cn('font-h2')}>{title}</div>
       </Grid>
       <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
         {quotes.map((quote, index) => (
@@ -77,6 +83,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
         ))}
       </Grid>
     </Container>
+    
   </div>
 )
 

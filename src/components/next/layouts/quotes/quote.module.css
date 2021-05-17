@@ -3,5 +3,11 @@
 }
 
 .quote-block {
-  padding: 64px;
+  padding: 32px;
+  background: var(--colors-base-white--next);
+  /* base/grey 75 */
+
+  border: 1px solid var(--colors-base-grey-75--next);
+  box-sizing: border-box;
+  border-radius: 20px;
 }
