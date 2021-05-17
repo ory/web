@@ -29,9 +29,9 @@ import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
 import Features from '../../components/next/layouts/features/features'
 import Quotes from '../../components/next/layouts/quotes/quotes'
-import hydraPolyglot from '../../images/hydra/hydra_p.svg'
+import kratosPolyglot from '../../images/kratos/kratos_p.svg'
 import opensource from '../../images/illustrations/opensource.svg'
-import hydraProcess from '../../images/hydra/hydra.svg'
+import kratosProcess from '../../images/kratos/kratos.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
 
@@ -41,31 +41,42 @@ const IntegrationCodeBox = () => (
       {
         filename: 'login.js',
         language: Languages.JavaScript,
-        code: `fetch('https://hydra-admin-api/oauth2/auth/requests/login/accept?login_challenge=12345', {
-    method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        subject: 'john.doe@mydomain.com',
-        remember: true
-    }),
-})
-    .then((res) => res.json())`
+        code: `const kratosAdminURL = process.env.KRATOS_ADMIN_URL
+// express.get('/auth/login', loginRoute)
+export const loginRoute = (req, res) => {
+    const request = req.query["request"]
+    const url = new URL(\`\${kratosAdminURL}/auth/browser/requests/login\`)
+    url.searchParams.set('request', request)
+    fetch(url.toString())
+        .then(r => r.json())
+        .then((kratos) => res.render('loginView', { kratos }))
+}`
       },
       {
-        filename: 'consent.js',
+        filename: 'registration.js',
         language: Languages.JavaScript,
-        code: `fetch('https://hydra-admin-api/oauth2/auth/requests/consent/accept?consent_challenge=12345', {
-    method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        grant_scope: ['openid', 'offline', 'photos.read'],
-        session: {
-            access_token: { subscription_plan: 'small', foo: 'bar' },
-            id_token: { phone: '+123 321 123 321', foo: 'bar' }
-        }
-    }),
-})
-    .then((res) => res.json())`
+        code: `const kratosAdminURL = process.env.KRATOS_ADMIN_URL
+// express.get('/auth/registration', registrationRoute)
+export const registrationRoute = (req, res) => {
+    const request = req.query["request"]
+    const url = new URL(\`\${kratosAdminURL}/auth/browser/requests/registration\`)
+    url.searchParams.set('request', request)
+    fetch(url.toString())
+        .then(r => r.json())
+        .then((kratos) => res.render('registrationView', { kratos }))
+}`
+      },
+      {
+        filename: 'login.tmpl',
+        language: Languages.HTML,
+        code: `<div class="login-view">
+  <form action="{{kratos.methods.password.config.action}}" method="{{kratos.methods.password.config.method}}">
+    {{#each kratos.methods.password.config.fields}}
+      <input name="{{name}}" type="{{type}}" value="{{value}}">
+    {{/each}}
+    <button type="submit">Sign In</button>
+  </form>
+</div>`
       }
     ]}
   />
@@ -74,11 +85,11 @@ const IntegrationCodeBox = () => (
 const IndexPage = () => (
   <Layout>
     <Hero
-      title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
+      title={'Identity and User Management System'}
       description={
-        ' Secure access to your applications and APIs, and authenticate third party users.'
+        ' Use configurable authentication mechanisms and master user management in the cloud.'
       }
-      image={<img loading="lazy" alt="" src={hydraProcess} />}
+      image={<img loading="lazy" alt="" src={kratosProcess} />}
     />
 
     <FeatureImage
@@ -86,20 +97,22 @@ const IndexPage = () => (
       title={<>Easy Integration</>}
       description={
         <>
-          Ory / Hydra is Open Source and OpenID Connect Certified® technology
-          that integrates with any login system. Get started in minutes, and
-          provide secure access to your application and API endpoints.
+          Ory / Kratos is a cloud native user management system. It provides
+          user login and registration, multi-factor authentication, and user
+          information storage with a headless API.
           <br />
-          Ory / Hydra works with any login system and only a few lines of code
-          are required.
+          It is fully configurable and supports a wide range of protocols such
+          as Google Authenticator, and stores user information using JSON
+          Schema.
           <br />
-          Head over to our documentation and learn more.
+          Ory / Kratos works with any UI framework and only a few lines of code
+          are required. Take a look at our documentation and learn more.
         </>
       }
       buttons={
         <>
           <Button
-            to={'docs/hydra/'}
+            to={'docs/kratos/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -116,26 +129,26 @@ const IndexPage = () => (
       title={<>SDKs for all languages</>}
       description={
         <>
-          Ory / Hydra is written in Go and we provide SDKs for every language.
+          Ory / Kratos is written in Go and we provide SDKs for every language.
           <br />
-          We work with any login system and it is easy to customize the login
-          experience.
+          We work with any UI framework and interfacing with the login,
+          registration and profile management is easy.
           <br />
-          Our documentation makes integrating Ory / Hydra a snap.
+          Our documentation makes integrating Ory / Kratos a snap.
         </>
       }
       buttons={
         <>
           <Button
-            to={'docs/hydra/next/'}
+            to={'docs/kratos/next/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
-            Install Hydra
+            Install Kratos
           </Button>
         </>
       }
-      image={<img loading="lazy" alt="" src={hydraPolyglot} />}
+      image={<img loading="lazy" alt="" src={kratosPolyglot} />}
     />
 
     <Quickstart

@@ -29,9 +29,9 @@ import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
 import Features from '../../components/next/layouts/features/features'
 import Quotes from '../../components/next/layouts/quotes/quotes'
-import hydraPolyglot from '../../images/hydra/hydra_p.svg'
+import ketoPolyglot from '../../images/keto/keto_p.svg'
 import opensource from '../../images/illustrations/opensource.svg'
-import hydraProcess from '../../images/hydra/hydra.svg'
+import ketoProcess from '../../images/keto/keto.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
 
@@ -39,33 +39,74 @@ const IntegrationCodeBox = () => (
   <CodeBox
     tabs={[
       {
-        filename: 'login.js',
-        language: Languages.JavaScript,
-        code: `fetch('https://hydra-admin-api/oauth2/auth/requests/login/accept?login_challenge=12345', {
-    method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        subject: 'john.doe@mydomain.com',
-        remember: true
-    }),
-})
-    .then((res) => res.json())`
+        filename: 'curl.sh',
+        language: Languages.Shell,
+        code: `curl -G \\
+     --data-urlencode "subject=john" \\
+     --data-urlencode "relation=access" \\
+     --data-urlencode "namespace=files" \\
+     --data-urlencode "object=file_a" \\
+     http://keto-read-api/check`
       },
       {
-        filename: 'consent.js',
+        filename: 'main.go',
+        language: Languages.Go,
+        code: `package main
+
+import (...)
+
+func main() {
+\tconn, err := grpc.Dial("keto-read-api")
+\tif err != nil {
+\t\tpanic(err.Error())
+\t}
+
+\tclient := acl.NewCheckServiceClient(conn)
+
+\tres, err := client.Check(context.Background(),
+\t\t&acl.CheckRequest{
+\t\t\tNamespace: "files",
+\t\t\tObject:    "file_a",
+\t\t\tRelation:  "access",
+\t\t\tSubject: &acl.Subject{Ref: &acl.Subject_Id{
+\t\t\t\tId: "john",
+\t\t\t}},
+\t\t},
+\t})
+\tif err != nil {
+\t\tpanic(err.Error())
+\t}
+
+\tif res.Allowed {
+\t\tfmt.Println("Allowed")
+\t\treturn
+\t}
+\tfmt.Println("Denied")
+}`
+      },
+      {
+        filename: 'index.js',
         language: Languages.JavaScript,
-        code: `fetch('https://hydra-admin-api/oauth2/auth/requests/consent/accept?consent_challenge=12345', {
-    method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        grant_scope: ['openid', 'offline', 'photos.read'],
-        session: {
-            access_token: { subscription_plan: 'small', foo: 'bar' },
-            id_token: { phone: '+123 321 123 321', foo: 'bar' }
-        }
-    }),
-})
-    .then((res) => res.json())`
+        code: `import ...
+
+const checkClient = new checkService.CheckServiceClient('keto-read-api')
+
+const checkRequest = new checkData.CheckRequest()
+checkRequest.setNamespace('files')
+checkRequest.setObject('file_a')
+checkRequest.setRelation('access')
+
+const sub = new acl.Subject()
+sub.setId('john')
+checkRequest.setSubject(sub)
+
+checkClient.check(checkRequest, (error, resp) => {
+  if (error) {
+    console.log('Encountered error:', error)
+  } else {
+    console.log(resp.getAllowed() ? 'Allowed' : 'Denied')
+  }
+})`
       }
     ]}
   />
@@ -74,11 +115,11 @@ const IntegrationCodeBox = () => (
 const IndexPage = () => (
   <Layout>
     <Hero
-      title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
+      title={'Global access control'}
       description={
-        ' Secure access to your applications and APIs, and authenticate third party users.'
+        'Manage user roles, rights, and permissions with ACL based on Google Zanzibar'
       }
-      image={<img loading="lazy" alt="" src={hydraProcess} />}
+      image={<img loading="lazy" alt="" src={ketoProcess} />}
     />
 
     <FeatureImage
@@ -86,20 +127,18 @@ const IndexPage = () => (
       title={<>Easy Integration</>}
       description={
         <>
-          Ory / Hydra is Open Source and OpenID Connect Certified® technology
-          that integrates with any login system. Get started in minutes, and
-          provide secure access to your application and API endpoints.
+          Ory / Keto is a global and consistent permission & authorization
+          server with an easy and granular permission language and sub
+          10-millisecond latency.
           <br />
-          Ory / Hydra works with any login system and only a few lines of code
-          are required.
-          <br />
-          Head over to our documentation and learn more.
+          It is based on Google Zanzibar, written in Go, and ships gRPC and REST
+          APIs.
         </>
       }
       buttons={
         <>
           <Button
-            to={'docs/hydra/'}
+            to={'docs/keto/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -116,26 +155,23 @@ const IndexPage = () => (
       title={<>SDKs for all languages</>}
       description={
         <>
-          Ory / Hydra is written in Go and we provide SDKs for every language.
+          Ory / Keto is written in Go and we provide SDKs for every language.
           <br />
-          We work with any login system and it is easy to customize the login
-          experience.
-          <br />
-          Our documentation makes integrating Ory / Hydra a snap.
+          Our documentation makes integrating Ory / Keto a snap.
         </>
       }
       buttons={
         <>
           <Button
-            to={'docs/hydra/next/'}
+            to={'docs/keto/next/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
-            Install Hydra
+            Install Kratos
           </Button>
         </>
       }
-      image={<img loading="lazy" alt="" src={hydraPolyglot} />}
+      image={<img loading="lazy" alt="" src={ketoPolyglot} />}
     />
 
     <Quickstart

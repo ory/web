@@ -29,9 +29,9 @@ import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
 import Features from '../../components/next/layouts/features/features'
 import Quotes from '../../components/next/layouts/quotes/quotes'
-import hydraPolyglot from '../../images/hydra/hydra_p.svg'
+import oathkeeperPolyglot from '../../images/oathkeeper/oathkeeper_p.svg'
 import opensource from '../../images/illustrations/opensource.svg'
-import hydraProcess from '../../images/hydra/hydra.svg'
+import oathkeeperProcess from '../../images/oathkeeper/oathkeeper.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
 
@@ -39,33 +39,44 @@ const IntegrationCodeBox = () => (
   <CodeBox
     tabs={[
       {
-        filename: 'login.js',
-        language: Languages.JavaScript,
-        code: `fetch('https://hydra-admin-api/oauth2/auth/requests/login/accept?login_challenge=12345', {
-    method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        subject: 'john.doe@mydomain.com',
-        remember: true
-    }),
-})
-    .then((res) => res.json())`
+        filename: 'access-rules.yml',
+        language: Languages.YML,
+        code: `---
+- upstream:
+    url: http://my-backend-service
+  match:
+    url: http://my-app/some-route/<.*>
+    methods:
+      - GET
+  authenticators:
+    - handler: jwt
+  authorizer:
+    handler: allow
+  mutators:
+    - handler: headers
+      config:
+        headers:
+          X-User: "{{ print .Subject }}"
+# ...`
       },
       {
-        filename: 'consent.js',
-        language: Languages.JavaScript,
-        code: `fetch('https://hydra-admin-api/oauth2/auth/requests/consent/accept?consent_challenge=12345', {
-    method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        grant_scope: ['openid', 'offline', 'photos.read'],
-        session: {
-            access_token: { subscription_plan: 'small', foo: 'bar' },
-            id_token: { phone: '+123 321 123 321', foo: 'bar' }
-        }
-    }),
-})
-    .then((res) => res.json())`
+        filename: 'config.yml',
+        language: Languages.YML,
+        code: `---
+daemon:
+  proxy:
+    port: 4455
+access_rules:
+  repositories:
+    - access-rules.yml
+authenticators:
+  jwt:
+    enabled: true
+    config:
+      jwks_urls:
+        - https://my-website.com/.well-known/jwks.json
+# ...
+`
       }
     ]}
   />
@@ -74,11 +85,11 @@ const IntegrationCodeBox = () => (
 const IndexPage = () => (
   <Layout>
     <Hero
-      title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
+      title={'Global access control'}
       description={
-        ' Secure access to your applications and APIs, and authenticate third party users.'
+        'Manage user roles, rights, and permissions with ACL based on Google Zanzibar'
       }
-      image={<img loading="lazy" alt="" src={hydraProcess} />}
+      image={<img loading="lazy" alt="" src={oathkeeperProcess} />}
     />
 
     <FeatureImage
@@ -86,20 +97,20 @@ const IndexPage = () => (
       title={<>Easy Integration</>}
       description={
         <>
-          Ory / Hydra is Open Source and OpenID Connect Certified® technology
-          that integrates with any login system. Get started in minutes, and
-          provide secure access to your application and API endpoints.
           <br />
-          Ory / Hydra works with any login system and only a few lines of code
-          are required.
+          Ory / Oathkeeper is a cloud native Identity & Access Proxy / API (IAP)
+          and Access Control Decision API. It authenticates, authorizes, and
+          mutates incoming HTTP(s) requests, is Open Source, and written in Go.
           <br />
-          Head over to our documentation and learn more.
+          Ory / Oathkeeper is straightforward on any system. We provide
+          pre-built binaries, Docker images, and support a number of package
+          managers.
         </>
       }
       buttons={
         <>
           <Button
-            to={'docs/hydra/'}
+            to={'docs/oathkeeper/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -116,26 +127,24 @@ const IndexPage = () => (
       title={<>SDKs for all languages</>}
       description={
         <>
-          Ory / Hydra is written in Go and we provide SDKs for every language.
+          Ory / Oathkeeper is written in Go and we provide SDKs for every
+          language.
           <br />
-          We work with any login system and it is easy to customize the login
-          experience.
-          <br />
-          Our documentation makes integrating Ory / Hydra a snap.
+          Our documentation makes integrating Ory / Oathkeeper a snap.
         </>
       }
       buttons={
         <>
           <Button
-            to={'docs/hydra/next/'}
+            to={'docs/oathkeeper/next/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
-            Install Hydra
+            Install Kratos
           </Button>
         </>
       }
-      image={<img loading="lazy" alt="" src={hydraPolyglot} />}
+      image={<img loading="lazy" alt="" src={oathkeeperPolyglot} />}
     />
 
     <Quickstart
