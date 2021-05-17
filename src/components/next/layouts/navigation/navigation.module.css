@@ -72,7 +72,7 @@ ul > * {
   margin-top: 0;
   visibility: visible;
   opacity: 1;
-  display: block
+  display: block;
 }
 
 ul li ul li > * {

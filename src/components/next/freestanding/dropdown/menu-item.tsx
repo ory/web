@@ -17,10 +17,8 @@ const MenuItem = ({ className, title, children }: PropType) => (
         {title}
       </Button>
     </ColourWrapper>
-    <ul className={cn('dropdown')} aria-label={"submenu"}>
-      <li>
-          {children}
-      </li>
+    <ul className={cn('dropdown')} aria-label={'submenu'}>
+      <li>{children}</li>
     </ul>
   </li>
 )

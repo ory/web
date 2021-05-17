@@ -11,7 +11,13 @@ interface PropTypes {
   className?: string
 }
 
-const DropdownItem = ({ className, image, title, description, button }: PropTypes) => (
+const DropdownItem = ({
+  className,
+  image,
+  title,
+  description,
+  button
+}: PropTypes) => (
   <div className={cn(dropdownItem, className && className)}>
     <img className={cn(imageHidden)} src={image} loading={'eager'} />
     <div className={cn('font-h5')}>{title}</div>

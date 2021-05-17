@@ -1,5 +1,5 @@
 import React from 'react'
-import { footer, footerContainer } from './footer.module.css'
+import { footer, footerContainer, footerImg } from './footer.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -66,7 +66,7 @@ const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
         justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}
       >
         <Grid lg={12} sm={4} xs={6} className={cn(pb64)}>
-          {logo}
+          <div className={cn(footerImg)}>{logo}</div>
         </Grid>
         <ColourWrapper text={'base-grey-600'}>
           {contact.contactEmail}

@@ -97,7 +97,12 @@ const Layout = ({ children }: PropTypes) => (
               description: 'The Open Source Ecosystem',
               title: 'Ory Open Source',
               button: (
-                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
                   Read more
                 </Button>
               )
@@ -111,7 +116,12 @@ const Layout = ({ children }: PropTypes) => (
               image: developerIllustration,
               description: 'Start integrating Ory products',
               button: (
-                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
                   Read more
                 </Button>
               ),
@@ -121,7 +131,12 @@ const Layout = ({ children }: PropTypes) => (
               image: developerIllustration,
               description: 'Ory Open Source Community',
               button: (
-                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
                   Read more
                 </Button>
               ),
@@ -131,7 +146,12 @@ const Layout = ({ children }: PropTypes) => (
               image: developerIllustration,
               description: 'Ory Development & Discussion',
               button: (
-                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
                   Read more
                 </Button>
               ),
@@ -146,7 +166,12 @@ const Layout = ({ children }: PropTypes) => (
               image: developerIllustration,
               description: 'Description',
               button: (
-                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
                   Read more
                 </Button>
               ),
@@ -156,7 +181,12 @@ const Layout = ({ children }: PropTypes) => (
               image: developerIllustration,
               description: 'Description',
               button: (
-                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                <Button
+                  to={'/'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
                   Read more
                 </Button>
               ),
@@ -187,7 +217,7 @@ const Layout = ({ children }: PropTypes) => (
         }
       ]}
     />
-    <main >{children}</main>
+    <main>{children}</main>
     <Footer
       logo={<img loading="lazy" alt="Ory logo footer" src={logoOryFooter} />}
       copyright={<>© Copyright 2021 Ory Corp</>}

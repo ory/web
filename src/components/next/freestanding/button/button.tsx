@@ -60,7 +60,6 @@ const Button = ({
       {iconLeft && <div className={cn(pr8)}>{iconLeft}</div>}
       {children}
       {iconRight && <div className={cn(pl8)}>{iconRight}</div>}
-      
     </GatsbyLink>
   ) : (
     <a
