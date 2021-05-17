@@ -116,7 +116,7 @@ const IndexPage = () => (
       title={<>SDKs for all languages</>}
       description={
         <>
-          Ory / Hydra is written in Go and we provide SDKs for every language.
+          Ory / Hydra  is written in Go and we provide SDKs for almost every language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and Typescript.
           <br />
           We work with any login system and it is easy to customize the login
           experience.
@@ -131,7 +131,7 @@ const IndexPage = () => (
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
-            Install Hydra
+            Install Ory / Hydra
           </Button>
         </>
       }
