@@ -37,7 +37,7 @@ interface Visual {
 }
 
 const Visual = ({image}: Visual) => (
-  <Grid className={cn(pt32)} lg={6} md={6} sm={12} xs={12}>
+  <Grid lg={6} md={6} sm={12} xs={12} className={cn(pt32)}>
     <ContentVisual>{image}</ContentVisual>
   </Grid>
 )
@@ -75,41 +75,54 @@ const FeatureImage = ({
                         buttons
                       }: PropTypes) => {
   const order = [
-    <Visual image={image}/>,
+    <Visual image={image} key={1}/>,
     <Content
       title={title}
       description={description}
       overline={overline}
       buttons={buttons}
+      key={2}
     />
   ]
   
   let containerMirror: ContainerProps = {
+    smHidden: true,
     xsHidden: true,
+    mdHidden: true,
+    lgHidden: true,
+  }
+  
+  let containerAdditional: ContainerProps = {
     smHidden: false,
+    xsHidden: false,
     mdHidden: false,
     lgHidden: false
-  }
-  let containerAdditional: ContainerProps = {
-    xsHidden: false,
-    smHidden: true,
-    mdHidden: true,
-    lgHidden: true
   }
   
   if (mirror) {
     order.reverse()
-    containerMirror.xsHidden = false
-    containerAdditional.xsHidden = true
+    containerMirror = {
+      smHidden: false,
+      xsHidden: false,
+      mdHidden: true,
+      lgHidden: true,
+    }
+    containerAdditional = {
+      smHidden: true,
+      xsHidden: true,
+      mdHidden: false,
+      lgHidden: false
+    }
   }
   
   return (
     <div className={cn(featureImage)}>
-      <Container fluid={true} alignItems={'start'} {...containerMirror}>
-        {order.map((x) => x)}
+      <Container fluid={true} justify={'space-between'}
+                 alignItems={'start'} {...containerMirror}>
+        {order.map((x, index) => x)}
       </Container>
-      <Container fluid={true} alignItems={'start'} {...containerAdditional}>
-        {order.reverse().map((x) => x)}
+      <Container fluid={true} justify={'space-between'} alignItems={'start'} {...containerAdditional}>
+        {order.reverse().map((x, index) => x)}
       </Container>
     </div>
   )

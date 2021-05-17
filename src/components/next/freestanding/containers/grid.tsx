@@ -3,13 +3,16 @@ import * as styles from './container.module.css'
 import cn from 'classnames'
 import { ParseCase } from '../../../../util'
 
+export type Grid = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+export type Viewports = 'lg' | 'md' | 'sm' | 'xs'
+
 interface PropTypes {
   children: React.ReactNode
   className?: string
-  xs?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  sm?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  md?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  lg?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  xs?: Grid
+  sm?: Grid
+  md?: Grid
+  lg?: Grid
   lgOffset?: boolean
   mdOffset?: boolean
   smOffset?: boolean

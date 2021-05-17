@@ -44,8 +44,8 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
       </Grid>
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container alignItems={'start'}>
-          {content.map(({ button, icon, description, title }) => (
-            <Grid lg={5} md={6} sm={12} xs={12} className={cn(pb48)}>
+          {content.map(({ button, icon, description, title }, index) => (
+            <Grid lg={5} md={6} sm={12} xs={12} className={cn(pb48)} key={index}>
               <ContentText>
                 <ColourWrapper text={'themed-primary'}>{icon}</ColourWrapper>
                 <div className={cn('font-h5', pb8)}>{title}</div>

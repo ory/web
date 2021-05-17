@@ -2,19 +2,17 @@ import React from 'react'
 import * as styles from './container.module.css'
 import cn from 'classnames'
 import { ParseCase } from '../../../../util'
+import { Viewports } from './grid'
+
+type FlexJustify = 'center' | 'space-around' | 'space-between' | 'start' | 'end' | 'stretch'
+type FlexAlign = 'start' | 'center' | 'end' | 'stretch'
 
 export interface PropTypes {
   children: React.ReactNode
   className?: string
   flexContainer?: 'row' | 'column'
-  alignItems?: 'start' | 'center' | 'end' | 'stretch'
-  justify?:
-    | 'center'
-    | 'space-around'
-    | 'space-between'
-    | 'start'
-    | 'end'
-    | 'stretch'
+  alignItems?: Array<FlexAlign | `${FlexAlign}-${Viewports}`> | FlexAlign | `${FlexAlign}-${Viewports}`
+  justify?: Array<FlexJustify | `${FlexJustify}-${Viewports}`> | FlexJustify | `${FlexAlign}-${Viewports}`
   fluid?: false | true
   lgHidden?: boolean
   mdHidden?: boolean
@@ -28,14 +26,35 @@ const getFlex = (flex: string) => {
   return styles[flex]
 }
 
-const getAlign = (align: string) => {
-  // @ts-ignore
-  return styles[`flex${ParseCase(align)}`]
+const getAlign = (align: Array<string> | string) => {
+  if (typeof align === 'string') {
+    // @ts-ignore
+    return styles[`flex${ParseCase(align)}`]
+  }
+  
+  if (align instanceof Array) {
+    const s: Array<string> = []
+    align.map((a) => {
+      // @ts-ignore
+      s.push(styles[`flex${ParseCase(a)}`])
+    })
+    return s
+  }
 }
 
-const getJustify = (justify: string) => {
-  // @ts-ignore
-  return styles[`justify${ParseCase(justify)}`]
+const getJustify = (justify: Array<string> | string) => {
+  if (typeof justify === 'string') {
+    // @ts-ignore
+    return styles[`justify${ParseCase(justify)}`]
+  }
+  if (justify instanceof Array) {
+    const s: Array<string> = []
+    justify.map((j) => {
+      // @ts-ignore
+      s.push(styles[`justify${ParseCase(j)}`])
+    })
+    return s
+  }
 }
 
 const getHidden = (mode: string) => {

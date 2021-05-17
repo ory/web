@@ -32,21 +32,21 @@ const Adopters = ({ adopters }: PropTypes) => (
           <Container key={index}>
             {chunk.map((adopter) => {
               return (
-                <Grid lg={3} md={5} sm={4} xs={12} key={adopter.title}>
-                  <AdoptersLogo>
-                    <Button
-                      to={adopter.url}
-                      style={'none'}
-                      openInNewWindow={true}
-                    >
-                      <img
-                        loading="lazy"
-                        src={adopter.image}
-                        alt={adopter.title}
-                      />
-                    </Button>
-                    <a href={adopter.url} key={adopter.title}></a>
-                  </AdoptersLogo>
+                <Grid lg={3} md={5} sm={5} xs={12} key={adopter.title}>
+                    <AdoptersLogo>
+                      <Button
+                        to={adopter.url}
+                        style={'none'}
+                        openInNewWindow={true}
+                      >
+                        <img
+                          loading="lazy"
+                          src={adopter.image}
+                          alt={adopter.title}
+                        />
+                      </Button>
+                      <a href={adopter.url} key={adopter.title}></a>
+                    </AdoptersLogo>
                 </Grid>
               )
             })}

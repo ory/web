@@ -32,7 +32,7 @@ const Faq = ({ title, description, content }: PropTypes) => {
 
   return (
     <div className={cn(faq)}>
-      <Container fluid={true} alignItems={'start'}>
+      <Container fluid={true} alignItems={['start']}>
         <Grid lg={5} md={5} sm={12} xs={12} className={pb48}>
           <ContentText>
             <div className={cn('font-h3', pb32)}>{title}</div>

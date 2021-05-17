@@ -200,12 +200,6 @@
   }
 }
 
-@media (--sm), (--xs) {
-  .btn-base {
-    padding: 4px 12px;
-  }
-}
-
 .disabled {
   pointer-events: none;
   opacity: 0.7;

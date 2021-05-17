@@ -401,25 +401,25 @@ main a.cta {
   Tablets, large phones, smaller phones
 */
 @media (--md), (--sm), (--xs) {
-  .font-btn {
+  /*.font-btn {
     font-size: 13px;
     line-height: 184.6%;
-  }
+  }*/
 
-  .font-hero {
+  /*.font-hero {
     font-size: 34px;
     line-height: 120%;
-  }
+  }*/
 
-  .font-h1 {
+  /*.font-h1 {
     font-size: 30px;
     line-height: 120%;
-  }
+  }*/
 
-  .font-h2 {
+  /*.font-h2 {
     font-size: 26px;
     line-height: 120%;
-  }
+  }*/
 
   .font-subtitle {
     font-size: 18px;

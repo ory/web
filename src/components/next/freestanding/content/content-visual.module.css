@@ -1,5 +1,8 @@
 .content-visual {
-  padding: 0;
   box-shadow: var(--elevation-xxl);
   border-radius: 20px;
+}
+
+* > img {
+  width: 100%;
 }

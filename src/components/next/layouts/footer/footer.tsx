@@ -53,18 +53,20 @@ interface FooterMain {
 }
 
 const FooterMain = ({className, logo, contact, links}: FooterMain) => (
-  <Container className={className} justify={'space-between'} alignItems={'start'}>
-    <Grid lg={6} md={4} sm={4} xs={6}>
-      <ContentText>
-        <div className={cn(pb64)}>{logo}</div>
-        {contact.contactEmail}
-        <div className={cn('p-sm')}>{contact.contactText}</div>
-      </ContentText>
+  <Container className={className} justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']} alignItems={'start'}>
+    <Grid lg={5} md={4} sm={12} xs={12} className={cn(pb32)}>
+      <Container alignItems={'center'} justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}>
+        <ContentText>
+          <div className={cn(pb64)}>{logo}</div>
+          {contact.contactEmail}
+          <div className={cn('p-sm')}>{contact.contactText}</div>
+        </ContentText>
+      </Container>
     </Grid>
-    <Grid lg={6} md={8} sm={8} xs={6}>
-      <Container alignItems={'start'} justify={'end'}>
+    <Grid lg={6} md={8} sm={12} xs={12}>
+      <Container alignItems={'start'} justify={['end-lg', 'end-md', 'space-between-sm', 'space-between-xs']}>
         {links.map((l) => (
-          <Grid lg={3} md={3} sm={4} xs={3} key={l.title} className={cn(pb24)}>
+          <Grid lg={3} md={3} sm={4} xs={4} key={l.title} className={cn(pb24)}>
             <ContentText>
               {l.title}
               {l.links.map((i, index) => (
@@ -89,10 +91,12 @@ interface FooterSub {
 const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
   <Container className={cn(className)} alignItems={'start'}>
     <Grid lg={4} md={4} sm={3} xs={12} className={cn(pb16)}>
-      <div className={cn('font-p-sm')}>{copyright}</div>
+      <Container justify={['start-lg', 'start-md', 'center-sm', 'center-xs']}>
+        <div className={cn('font-p-sm')}>{copyright}</div>
+      </Container>
     </Grid>
     <Grid lg={4} md={4} sm={3} xs={12}>
-      <Container justify={'center'}>
+      <Container justify={['center-lg','center-md', 'center-sm', 'center-xs']}>
         <MoleculeInteraction>
           {social.map((s, index) => (
             <ColourWrapper className={pl16} text={'base-grey-400'} key={index}>
@@ -103,7 +107,7 @@ const FooterSub = ({className, copyright, social, legal}: FooterSub) => (
       </Container>
     </Grid>
     <Grid lg={4} md={4} sm={3} xs={12}>
-      <Container justify={'end'}>
+      <Container justify={['end-lg', 'end-md', 'center-xs']}>
         <MoleculeInteraction>
           {legal.map((l, index) => (
             <ColourWrapper className={cn(pl16)} text={'base-grey-400'} key={index}>

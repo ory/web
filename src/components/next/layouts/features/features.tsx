@@ -42,11 +42,11 @@ const Features = ({
 }: PropTypes) => (
   <div className={cn(features)}>
     <Container fluid={true}>
-      <Grid lg={6} md={6} sm={12} xs={12}>
+      <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
             <div className={cn('font-overline', pb16)}>{overline}</div>
-            <div className={cn('font-h2')}>{title}</div>
+            <div className={cn('font-h3')}>{title}</div>
             {description && (
               <div className={cn('font-p', pt32)}>{description}</div>
             )}
@@ -58,9 +58,9 @@ const Features = ({
       </Grid>
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container alignItems={'start'} justify={'start'}>
-          {feature.map((f) => {
+          {feature.map((f, index) => {
             return (
-              <Grid lg={5} md={5} sm={12} xs={12} className={cn(pr32, pb64)}>
+              <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb64)} key={index}>
                 <ColourWrapper text={'themed-primary'} className={cn(pr32)}>
                   {f.icon}
                 </ColourWrapper>

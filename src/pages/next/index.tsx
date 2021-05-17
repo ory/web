@@ -16,11 +16,7 @@ import ColourWrapper from '../../components/next/freestanding/colour/colour-wrap
 import Molecule from '../../components/next/freestanding/molecule/molecule'
 import Adopters from '../../components/next/layouts/adopters/adopters'
 import Coding from '../../components/next/layouts/coding/coding'
-import FeatureFour from '../../components/next/layouts/feature-four/feature-four'
 import FeatureImage from '../../components/next/layouts/feature-image/feature-image'
-import FeatureOne from '../../components/next/layouts/feature-one/feature-one'
-import FeatureThree from '../../components/next/layouts/feature-three/feature-three'
-import FeatureTwo from '../../components/next/layouts/feature-two/feature-two'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
@@ -116,6 +112,7 @@ const IndexPage = () => (
     />
 
     <FeatureImage
+      mirror={true}
       overline={'Security'}
       title={<>Ory as a service</>}
       description={
@@ -130,7 +127,6 @@ const IndexPage = () => (
     />
 
     <FeatureImage
-      mirror={true}
       overline={'Flexibility'}
       title={<>Bring your own UX</>}
       description={
@@ -217,7 +213,7 @@ const IndexPage = () => (
       }
       buttons={
         <Button to={'/'} style={'link'} iconRight={<ArrowRight size={16} />}>
-          Get started today
+          See our roadmap
         </Button>
       }
       feature={[
@@ -291,7 +287,7 @@ const IndexPage = () => (
           description: <>Securing modern digital systems requires new approaches to identity. With Ory, I can build custom and secure ID infrastructure and APIs that fit perfectly into my client's ever-evolving cloud environments.</>,
           person: `Ken Adler`,
           jobTitle: `Identity & Infosec, Thoughtworks`
-        },        
+        },
         {
           logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
           description: <>I needed an Auth System that would work with modern setups, and I did not want to write it myself. Ory fit the bill perfectly and just works.</>,
