@@ -4,13 +4,18 @@
 }
 
 .nav-logo {
-  width: 16px;
+  display: flex;
+  align-items: center;
+  width: 64px;
+  padding-right: 32px;
 }
 
 .nav-container {
   width: calc(100% - 32px);
   max-width: 1216px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 @media (--md) {

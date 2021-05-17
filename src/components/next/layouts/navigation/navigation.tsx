@@ -4,13 +4,13 @@ import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import Button from '../../freestanding/button/button'
-import { ArrowRight } from 'phosphor-react'
+import {ArrowRight} from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MenuItem from '../../freestanding/dropdown/menu-item'
 import DropdownMenu from '../../freestanding/dropdown/dropdown-menu'
 import DropdownItem from '../../freestanding/dropdown/dropdown-item'
-import { pb24, pr32 } from '../../freestanding/utils/padding.module.css'
+import {pb24, pr32} from '../../freestanding/utils/padding.module.css'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 
 export interface DropdownMenuItem {
@@ -37,7 +37,7 @@ interface PropTypes {
   sideNav: React.ReactNodeArray
 }
 
-const Navigation = ({ logo, dropdownMenu, sideNav }: PropTypes) => {
+const Navigation = ({logo, dropdownMenu, sideNav}: PropTypes) => {
   return (
     <div className={cn(styles.navigation)}>
       <Container className={cn(styles.navContainer)}>
@@ -57,11 +57,11 @@ const Navigation = ({ logo, dropdownMenu, sideNav }: PropTypes) => {
           <Container justify={'center'}>
             <nav role={'navigation'}>
               <ul>
-                {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
+                {dropdownMenu.map(({title, mainMenu, sideMenu}, index) => (
                   <MenuItem title={title} key={index} className={cn(pr32)}>
                     <DropdownMenu>
                       {mainMenu.map(
-                        ({ title, image, button, description }, index) => (
+                        ({title, image, button, description}, index) => (
                           <DropdownItem
                             className={cn(pr32)}
                             key={index}
@@ -72,10 +72,10 @@ const Navigation = ({ logo, dropdownMenu, sideNav }: PropTypes) => {
                           />
                         )
                       )}
-
+                      
                       {sideMenu && (
                         <Container flexContainer={'column'}>
-                          {sideMenu.map(({ description, button }, index) => (
+                          {sideMenu.map(({description, button}, index) => (
                             <ContentText key={index} className={cn(pb24)}>
                               {button}
                               <div className={cn('font-p-sm')}>
@@ -93,7 +93,12 @@ const Navigation = ({ logo, dropdownMenu, sideNav }: PropTypes) => {
           </Container>
         </Grid>
         <Grid lg={4}>
-          <Container justify={'end'}>{sideNav.map((x) => x)}</Container>
+          <Container justify={'end'}>
+            {sideNav.map((x, index) => (
+                <div className={cn(pr32)} key={index}>{x}</div>
+              )
+            )}
+          </Container>
         </Grid>
       </Container>
     </div>
