@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+img {
+  width: 92px;
+}
+
 @media (--md) {
   .footer-container {
     width: calc(100% - 32px);

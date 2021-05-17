@@ -34,19 +34,28 @@
   }
 }
 
-
 li {
   display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
   transition-duration: 0.5s;
 }
 
-li:hover {
+li:hover,
+li:focus-within {
   cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
 }
 
 ul li ul {
   visibility: hidden;
   opacity: 0;
+  /*min-width: 5rem;*/
   position: absolute;
   transition: all 0.5s ease;
   margin-top: 1rem;
@@ -55,13 +64,18 @@ ul li ul {
 }
 
 ul li:hover > ul,
-ul li ul:hover {
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus,
+ul > * {
+  padding-top: 0;
+  margin-top: 0;
   visibility: visible;
   opacity: 1;
-  display: block;
+  display: block
 }
 
-ul li ul li {
+ul li ul li > * {
   clear: both;
   width: 100%;
 }

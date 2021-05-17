@@ -3,7 +3,7 @@ import * as styles from './layout.module.css'
 import cn from 'classnames'
 import Footer, { Contact, FooterPropTypes, LinkSection } from '../footer/footer'
 import Navigation from '../navigation/navigation'
-import heroIllustration from '../../../../images/illustrations/hero.svg'
+import logoOryFooter from '../../../../images/logo-ory-footer.svg'
 import Button from '../../freestanding/button/button'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import {
@@ -50,6 +50,30 @@ const Layout = ({ children }: PropTypes) => (
                   Kratos
                 </Button>
               )
+            },
+            {
+              description: 'OAuth 2.0 & OpenIDConnect',
+              button: (
+                <Button to={'/'} style={'none'} openInNewWindow={true}>
+                  Hydra
+                </Button>
+              )
+            },
+            {
+              description: 'Authorization Server',
+              button: (
+                <Button to={'/'} style={'none'} openInNewWindow={true}>
+                  Keto
+                </Button>
+              )
+            },
+            {
+              description: 'Zero Trust Networking',
+              button: (
+                <Button to={'/'} style={'none'} openInNewWindow={true}>
+                  Oathkeeper
+                </Button>
+              )
             }
           ],
           mainMenu: [
@@ -67,6 +91,97 @@ const Layout = ({ children }: PropTypes) => (
                   Read more
                 </Button>
               )
+            },
+            {
+              image: developerIllustration,
+              description: 'The Open Source Ecosystem',
+              title: 'Ory Open Source',
+              button: (
+                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                  Read more
+                </Button>
+              )
+            }
+          ]
+        },
+        {
+          title: 'Developers',
+          mainMenu: [
+            {
+              image: developerIllustration,
+              description: 'Start integrating Ory products',
+              button: (
+                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                  Read more
+                </Button>
+              ),
+              title: 'Documentation'
+            },
+            {
+              image: developerIllustration,
+              description: 'Ory Open Source Community',
+              button: (
+                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                  Read more
+                </Button>
+              ),
+              title: 'Community'
+            },
+            {
+              image: developerIllustration,
+              description: 'Ory Development & Discussion',
+              button: (
+                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                  Read more
+                </Button>
+              ),
+              title: 'GitHub'
+            }
+          ]
+        },
+        {
+          title: 'Company',
+          mainMenu: [
+            {
+              image: developerIllustration,
+              description: 'Description',
+              button: (
+                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                  Read more
+                </Button>
+              ),
+              title: 'Blog'
+            },
+            {
+              image: developerIllustration,
+              description: 'Description',
+              button: (
+                <Button to={'/'} style={'link'} openInNewWindow={false} iconRight={<ArrowRight size={16} />}>
+                  Read more
+                </Button>
+              ),
+              title: 'Contact Us'
+            }
+          ],
+          sideMenu: [
+            {
+              description: 'Description',
+              button: (
+                <Button to={'/'} style={'none'} openInNewWindow={true}>
+                  About Us
+                </Button>
+              )
+            },
+            {
+              description: 'Description',
+              button: (
+                <Button to={'/'} style={'none'} openInNewWindow={true}>
+                  Jobs
+                  <ColourWrapper text={'themed-primary'}>
+                    <h5 className={cn('font-p-sm')}>We're hiring!</h5>
+                  </ColourWrapper>
+                </Button>
+              )
             }
           ]
         }
@@ -74,7 +189,7 @@ const Layout = ({ children }: PropTypes) => (
     />
     <main >{children}</main>
     <Footer
-      logo={<img loading="lazy" alt="" src={heroIllustration} />}
+      logo={<img loading="lazy" alt="Ory logo footer" src={logoOryFooter} />}
       copyright={<>© Copyright 2021 Ory Corp</>}
       contact={{
         contactEmail: (
