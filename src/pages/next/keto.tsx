@@ -167,7 +167,7 @@ const IndexPage = () => (
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
-            Install Kratos
+            Install Ory / Keto
           </Button>
         </>
       }
