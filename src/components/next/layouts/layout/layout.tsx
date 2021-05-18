@@ -77,7 +77,7 @@ const Layout = ({children}: PropTypes) => (
               description: 'Zero Trust Networking',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'/'} style={'link'} openInNewWindow={true}>
+                  <Button className={cn('font-h5')} to={'oathkeeper'} style={'link'} openInNewWindow={true}>
                     Oathkeeper
                   </Button>
                 </ColourWrapper>
@@ -91,12 +91,12 @@ const Layout = ({children}: PropTypes) => (
               title: 'Ory as a Service',
               button: (
                 <Button
-                  to={'/'}
+                  to={'https://console.ory.sh/registration'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16}/>}
                 >
-                  Read more
+                  Get started
                 </Button>
               )
             },
@@ -106,7 +106,7 @@ const Layout = ({children}: PropTypes) => (
               title: 'Ory Open Source',
               button: (
                 <Button
-                  to={'/'}
+                  to={'opensource'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16}/>}
