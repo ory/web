@@ -155,7 +155,6 @@ const PricingTier = ({
             </Grid>
             <Grid lg={6} md={6} sm={6} xs={12}>
               <Container justify={'center'} alignItems={'start'}>
-                <MoleculeSeparator style={'vertical'} />
                 <PricingFeatures classes={classes} features={features} />
               </Container>
             </Grid>
