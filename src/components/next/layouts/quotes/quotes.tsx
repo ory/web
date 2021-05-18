@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import ContentText from '../../freestanding/content/content-text'
 import { quote, quoteBlock, quoteImg } from './quote.module.css'
-import { pt32, pt4, pt64 } from '../../freestanding/utils/padding.module.css'
+import {pb32, pt32, pt4, pt64 } from '../../freestanding/utils/padding.module.css'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
@@ -19,10 +19,11 @@ export interface Quote {
   description: React.ReactElement
   person: string
   jobTitle: string
+  className?: string
 }
 
-const QuoteBlock = ({ logo, description, person, jobTitle }: Quote) => (
-  <ContentText className={cn(quoteBlock)}>
+const QuoteBlock = ({ className, logo, description, person, jobTitle }: Quote) => (
+  <ContentText className={cn(quoteBlock, className && className)}>
     <div className={cn(quoteImg)}>
       {logo}
     </div>
@@ -75,13 +76,15 @@ const Quotes = ({ quotes, title }: PropTypes) => (
       </Grid>
       <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
         {quotes.map((quote, index) => (
-          <QuoteBlock
-            logo={quote.logo}
-            description={quote.description}
-            person={quote.person}
-            jobTitle={quote.jobTitle}
-            key={index}
-          />
+          <div className={cn(pb32)}>
+            <QuoteBlock
+              logo={quote.logo}
+              description={quote.description}
+              person={quote.person}
+              jobTitle={quote.jobTitle}
+              key={index}
+            />
+          </div>
         ))}
       </Grid>
     </Container>
