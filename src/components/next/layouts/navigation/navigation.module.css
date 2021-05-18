@@ -4,6 +4,7 @@
   padding: 16px 0;
   position: sticky;
   top: 0;
+  margin-top: 0;
   z-index: 999;
 }
 
@@ -53,6 +54,22 @@ nav li:focus-within {
   cursor: pointer;
 }*/
 
+.mobile-container {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.mobile-nav-active {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+  width: 100%;
+}
+
 ul li ul {
   visibility: hidden;
   opacity: 0;
@@ -73,7 +90,8 @@ ul li ul > * {
   display: block;
 }
 
-ul li ul li, ul li ul li > * {
+ul li ul li,
+ul li ul li > * {
   clear: both;
   width: 100%;
 }

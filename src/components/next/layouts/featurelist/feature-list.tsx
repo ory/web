@@ -155,9 +155,7 @@ const FeatureList = () => (
               <ContentText>
                 <Molecule>
                   <MoleculeIconWrapper>{section.icon}</MoleculeIconWrapper>
-                  <h3 className={cn('font-h3', pb32, pt32)}>
-                    {section.title}
-                  </h3>
+                  <h3 className={cn('font-h3', pb32, pt32)}>{section.title}</h3>
                   <p className={cn('font-p')}>{section.description}</p>
                 </Molecule>
               </ContentText>

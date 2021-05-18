@@ -2,9 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import Container from '../../../freestanding/containers/container'
 import Grid from '../../../freestanding/containers/grid'
-import {
-  pb32,
-} from '../../../freestanding/utils/padding.module.css'
+import { pb32 } from '../../../freestanding/utils/padding.module.css'
 import PricingTier, { PriceTier } from './pricing-tier'
 
 interface PropTypes {

@@ -178,9 +178,9 @@ const Pricing = () => {
             <PricingBlock tiers={pricingOS} />
           )}
           <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
-            <div className={cn('font-p-sm')}>
+            <p className={cn('font-p-sm')}>
               Prices in USD, taxes may apply. Billed monthly.
-            </div>
+            </p>
           </Container>
         </Grid>
       </Container>

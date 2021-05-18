@@ -5,21 +5,27 @@ import ColourWrapper from '../colour/colour-wrapper'
 import './menu-item.module.css'
 
 interface PropType {
-  title: string
+  title: string | React.ReactElement
   children: React.ReactElement
   className?: string
 }
 
 const MenuItem = ({ className, title, children }: PropType) => (
   <li aria-haspopup="true" className={cn(className && className)}>
-    <ColourWrapper text={'base-grey'}>
-      <Button to={'#'} style={'none'}>
-        {title}
-      </Button>
-    </ColourWrapper>
-    <ul className={cn('dropdown')} aria-label={'submenu'}>
-      <li>{children}</li>
-    </ul>
+    {typeof title === 'string' ? (
+      <>
+        <ColourWrapper text={'base-grey'}>
+          <Button to={'#'} style={'none'}>
+            {title}
+          </Button>
+        </ColourWrapper>
+        <ul className={cn('dropdown')} aria-label={'submenu'}>
+          <li>{children}</li>
+        </ul>
+      </>
+    ) : (
+      <ColourWrapper text={'base-grey'}>{title}</ColourWrapper>
+    )}
   </li>
 )
 
