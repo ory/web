@@ -4,6 +4,10 @@
   align-items: flex-start;
 }
 
+.dropdown-item-image {
+  width: 240px;
+}
+
 @media (--xs), (--sm) {
   .image-hidden {
     display: none !important;

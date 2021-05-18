@@ -2,6 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import Button from '../button/button'
 import ColourWrapper from '../colour/colour-wrapper'
+import './menu-item.module.css'
 
 interface PropType {
   title: string

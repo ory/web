@@ -5,10 +5,11 @@ import Container from '../containers/container'
 
 interface PropTypes {
   children: React.ReactNode
+  className?: string
 }
 
-const DropdownMenu = ({ children }: PropTypes) => (
-    <Container className={cn(dropdownMenu)} justify={'space-between'} alignItems={'start'}>
+const DropdownMenu = ({ className, children }: PropTypes) => (
+    <Container className={cn(dropdownMenu, className && className)} justify={'space-between'} alignItems={'start'}>
       {children}
     </Container>
 )
