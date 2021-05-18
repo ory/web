@@ -88,7 +88,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
             </Button>
           </Container>
         </Grid>
-        <Grid lg={5} mdHidden={true} smHidden={true} xsHidden={true}>
+        <Grid lg={5} smHidden={true} xsHidden={true}>
           <Container justify={'center'}>
             <nav role="navigation">
               <ul>
@@ -129,7 +129,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
             </nav>
           </Container>
         </Grid>
-        <Grid lg={4}>
+        <Grid lg={4} md={5}>
           <Container justify={'end'} smHidden={true} xsHidden={true}>
             {sideNav.map((x, index) => (
               <div className={cn(pr32)} key={index}>
