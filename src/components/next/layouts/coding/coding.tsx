@@ -52,7 +52,7 @@ const Coding = ({
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
           <ContentText padded={true}>
-            <p className={cn('font-overline-light', pb16)}>{overline}</p>
+            <h2 className={cn('font-overline-light', pb16)}>{overline}</h2>
             <h3 className={cn('font-h3-light', pb32)}>{title}</h3>
             <p className={cn('font-p-light')}>{description}</p>
             {buttons && (
