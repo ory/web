@@ -70,7 +70,7 @@ const Features = ({
                   {f.icon}
                 </ColourWrapper>
                 <ContentText>
-                  <h5 className={cn('font-h5', pb8)}>{f.title}</h5>
+                  <h4 className={cn('font-h5', pb8)}>{f.title}</h4>
                   <p className={cn('font-p-sm')}>{f.description}</p>
                 </ContentText>
               </Grid>
