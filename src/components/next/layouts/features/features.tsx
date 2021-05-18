@@ -47,9 +47,7 @@ const Features = ({
           <Molecule>
             <p className={cn('font-overline', pb16)}>{overline}</p>
             <h3 className={cn('font-h3')}>{title}</h3>
-            {description && (
-              <p className={cn('font-p', pt32)}>{description}</p>
-            )}
+            {description && <p className={cn('font-p', pt32)}>{description}</p>}
           </Molecule>
           <MoleculeInteraction className={cn(pt24)}>
             {buttons}

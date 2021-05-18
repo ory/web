@@ -10,3 +10,9 @@ export const ParseCase = (s: string) => {
   }
   return final
 }
+
+export const Chunks = (arrObj: Array<unknown>, size: number) => {
+  return Array.from(new Array(Math.ceil(arrObj.length / size)), (_, i) =>
+    arrObj.slice(i * size, i * size + size)
+  )
+}

@@ -14,9 +14,7 @@ const getStyle = (style: string) => {
 }
 
 const MoleculeSeparator = ({ className, style = 'vertical' }: PropTypes) => (
-  <div className={cn(styles.moleculeSeparator, className && className)}>
-    <div className={cn(getStyle(style))} />
-  </div>
+  <div className={cn(styles.moleculeSeparator, getStyle(style), className && className)} />
 )
 
 export default MoleculeSeparator
