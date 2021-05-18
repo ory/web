@@ -16,20 +16,13 @@ import ColourWrapper from '../../components/next/freestanding/colour/colour-wrap
 import Molecule from '../../components/next/freestanding/molecule/molecule'
 import Adopters from '../../components/next/layouts/adopters/adopters'
 import Coding from '../../components/next/layouts/coding/coding'
-import FeatureFour from '../../components/next/layouts/feature-four/feature-four'
 import FeatureImage from '../../components/next/layouts/feature-image/feature-image'
-import FeatureOne from '../../components/next/layouts/feature-one/feature-one'
-import FeatureThree from '../../components/next/layouts/feature-three/feature-three'
-import FeatureTwo from '../../components/next/layouts/feature-two/feature-two'
 import Footer from '../../components/next/layouts/footer/footer'
 import Hero from '../../components/next/layouts/hero/hero'
 import Layout from '../../components/next/layouts/layout/layout'
 import Quickstart from '../../components/next/layouts/quickstart/quickstart'
-import Security from '../../components/next/layouts/security/security'
 import Stats from '../../components/next/layouts/stats/stats'
-import Features from '../../components/next/layouts/features/features'
 import Quotes from '../../components/next/layouts/quotes/quotes'
-import heroIllustration from '../../images/illustrations/hero.svg'
 import opensource from '../../images/illustrations/opensource.svg'
 import kratos from '../../images/kratos/kratos.svg'
 import hydra from '../../images/hydra/hydra.svg'
@@ -45,9 +38,17 @@ import hootsuite from '../../images/adopters/hootsuite.svg'
 import threerein from '../../images/adopters/threerein.svg'
 import { pl32 } from '../../components/next/freestanding/utils/padding.module.css'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const IndexPage = () => (
   <Layout>
+    <SEO
+      description={
+        'Implement a secure, modern Auth system in minutes with open source from Ory. Works in both new and existing systems.'
+      }
+      title={'Open Source Auth Solutions For Everyone'}
+    />
+
     <Hero
       title={'Ory is Open Source'}
       description={

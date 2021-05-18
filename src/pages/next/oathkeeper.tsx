@@ -26,6 +26,7 @@ import oathkeeperPolyglot from '../../images/oathkeeper/oathkeeper_p.svg'
 import oathkeeperProcess from '../../images/oathkeeper/oathkeeper.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -76,6 +77,13 @@ authenticators:
 
 const IndexPage = () => (
   <Layout>
+    <SEO
+      description={
+        'Oathkeeper Open Source Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust.'
+      }
+      title={'Open Source Identity and Access Proxy (IAP)'}
+    />
+
     <Hero
       title={'Global access control'}
       description={

@@ -13,6 +13,7 @@ import DropdownItem from '../../freestanding/dropdown/dropdown-item'
 import {
   pb24,
   pb32,
+  pb64,
   pr32,
   pt32
 } from '../../freestanding/utils/padding.module.css'
@@ -74,7 +75,6 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
   return (
     <div className={cn(styles.navigation)}>
       <Container className={cn(styles.navContainer)}>
-        
         <Grid lg={2}>
           <Container justify={'start'}>
             <Button to={'/'} style={'none'}>
@@ -145,7 +145,6 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
       </Container>
       <div className={cn(mobileNav)}>
         <DropdownMobileMenu>
-          
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
               <DropdownMobileItem title={headline.button} description={headline.description} key={index}/>
@@ -154,7 +153,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           
           <MoleculeSeparator style={'horizontal'}/>
           
-          <p className={cn('font-p-sm', pb32)}>{mobileMenu.main.title}</p>
+          <p className={cn('font-p-sm')}>{mobileMenu.main.title}</p>
           <DropdownMobileMenuSection>
             {mobileMenu.main.buttons.map((button, index) => (
               <DropdownMobileItem button={button as React.ReactElement} key={index}/>
@@ -171,7 +170,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           
           <MoleculeSeparator style={'horizontal'}/>
           
-          <ContentText>
+          <ContentText className={cn(pb64)}>
             {sideNav.map((x, index) => (
               <div key={index}>{x}</div>
             ))}
