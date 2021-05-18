@@ -28,14 +28,14 @@ const Layout = ({children}: PropTypes) => (
       logo={oryLogoPrimary}
       sideNav={[
         <Button
-          to={'/'}
+          to={'https://console.ory.sh/login'}
           style={'text'}
           openInNewWindow={false}
           iconRight={<SignIn size={24}/>}
         >
           Login
         </Button>,
-        <Button to={'/'} style={'filled'} openInNewWindow={false}>
+        <Button to={'https://console.ory.sh/registration'} style={'filled'} openInNewWindow={false}>
           Get Started
         </Button>
       ]}
@@ -331,7 +331,7 @@ const Layout = ({children}: PropTypes) => (
               Pricing
             </Button>
           ]
-        },
+        },        
         {
           title: 'Developers',
           links: [

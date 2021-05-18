@@ -17,9 +17,20 @@ import ColourWrapper from '../../components/next/freestanding/colour/colour-wrap
 import Faq from '../../components/next/layouts/faq/faq'
 import Button from '../../components/next/freestanding/button/button'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const PricingPage = () => (
   <Layout>
+    <SEO
+      description={
+        'Implement OAuth 2.0 and OpenID Connect in minutes with open source from Ory. Works in both new and existing systems.'
+      }
+      title={'Ory as a Service - Secure and performant Auth solutions'}
+      keywords={
+        'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
+      }
+    />
+
     <Pricing />
     <Adopters
       adopters={[
