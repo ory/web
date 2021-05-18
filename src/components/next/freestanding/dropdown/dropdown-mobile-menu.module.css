@@ -16,10 +16,10 @@
 }
 
 .dropdown-section {
-  padding-top: 32px
+  padding: 32px 8px;
 }
 
-@media(--xs) {
+@media (--xs) {
   .dropdown-section {
     padding-top: 24px;
   }

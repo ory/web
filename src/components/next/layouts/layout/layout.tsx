@@ -421,14 +421,14 @@ const Layout = ({ children }: PropTypes) => (
           </ColourWrapper>,
           <ColourWrapper text={'base-grey'}>
             <Button
-              className={cn('font-h5')}
+              className={cn('font-h5 font-nowrap')}
               to={'/'}
               style={'link'}
               openInNewWindow={true}
             >
               Jobs&nbsp;
-              <ColourWrapper text={'themed-primary'}>
-                <div className={cn('font-p-sm')}>We're hiring!</div>
+              <ColourWrapper text={'themed-primary'} >
+                <div className={cn('font-p-sm')}>we're hiring!</div>
               </ColourWrapper>
             </Button>
           </ColourWrapper>
@@ -606,12 +606,12 @@ const Layout = ({ children }: PropTypes) => (
               About Us
             </Button>,
             <Button
-              className={cn('font-p-sm')}
+              className={cn('font-p-sm font-nowrap')}
               to={'https://github.com/ory/jobs'}
               style={'none'}
               openInNewWindow={true}
             >
-              Jobs
+              Jobs&nbsp;
               <ColourWrapper text={'themed-primary'}>
                 <div className={cn('font-p-sm')}>we're hiring!</div>
               </ColourWrapper>

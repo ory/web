@@ -21,6 +21,7 @@ import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 import {DropdownMobileMenu, DropdownMobileMenuSection} from '../../freestanding/dropdown/dropdown-mobile-menu'
 import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
 import {Chunks} from '../../../../util'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 
 export interface DropdownMenuItem {
   title: string | React.ReactElement
@@ -170,11 +171,11 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           
           <MoleculeSeparator style={'horizontal'}/>
           
-          <ContentText className={cn(pb64)}>
+          <MoleculeInteraction className={cn(pb64, pt32)}>
             {sideNav.map((x, index) => (
               <div key={index}>{x}</div>
             ))}
-          </ContentText>
+          </MoleculeInteraction>
         
         </DropdownMobileMenu>
       </div>

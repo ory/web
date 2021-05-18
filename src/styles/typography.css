@@ -192,6 +192,10 @@ input {
   color: var(--colors-base-grey);
 }
 
+.font-nowrap {
+  white-space: nowrap;
+}
+
 .font-bold {
   font-weight: bold;
 }

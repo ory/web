@@ -1,5 +1,5 @@
 import React from 'react'
-import {dropdownMobileContainer, dropdownMobileMenu, dropdownSection} from './dropdown-mobile-menu.module.css'
+import {dropdownMobileContainer, dropdownMobileMenu, dropdownSection, dropdownSectionItem} from './dropdown-mobile-menu.module.css'
 import cn from 'classnames'
 import {Chunks} from '../../../../util'
 import Container from '../containers/container'
@@ -21,7 +21,7 @@ export const DropdownMobileMenuSection = ({className, children}: PropTypes) => (
           justify={'space-between'}
         >
           {(chunks as Array<React.ReactNode>).map((child, index) => (
-            <Grid sm={4} xs={3} key={index}>
+            <Grid sm={4} xs={4} key={index} className={cn(dropdownSection)}>
               {child}
             </Grid>
           ))}
