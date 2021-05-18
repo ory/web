@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './layout.module.css'
 import cn from 'classnames'
-import Footer, {Contact, FooterPropTypes, LinkSection} from '../footer/footer'
+import Footer, { Contact, FooterPropTypes, LinkSection } from '../footer/footer'
 import Navigation from '../navigation/navigation'
 import logoOryFooter from '../../../../images/logo-ory-footer.svg'
 import Button from '../../freestanding/button/button'
@@ -22,20 +22,20 @@ interface PropTypes {
   children?: React.ReactNode
 }
 
-const Layout = ({children}: PropTypes) => (
+const Layout = ({ children }: PropTypes) => (
   <div className={cn(styles.layout)}>
     <Navigation
       logo={oryLogoPrimary}
       sideNav={[
         <Button
-          to={'https://console.ory.sh/login'}
+          to={'/'}
           style={'text'}
           openInNewWindow={false}
-          iconRight={<SignIn size={24}/>}
+          iconRight={<SignIn size={24} />}
         >
           Login
         </Button>,
-        <Button to={'https://console.ory.sh/registration'} style={'filled'} openInNewWindow={false}>
+        <Button to={'/'} style={'filled'} openInNewWindow={false}>
           Get Started
         </Button>
       ]}
@@ -47,7 +47,12 @@ const Layout = ({children}: PropTypes) => (
               description: 'User & Identity Management',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'kratos'} style={'link'} openInNewWindow={true}>
+                  <Button
+                    className={cn('font-h5')}
+                    to={'kratos'}
+                    style={'link'}
+                    openInNewWindow={true}
+                  >
                     Kratos
                   </Button>
                 </ColourWrapper>
@@ -57,7 +62,12 @@ const Layout = ({children}: PropTypes) => (
               description: 'OAuth 2.0 & OpenIDConnect',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'hydra'} style={'link'} openInNewWindow={true}>
+                  <Button
+                    className={cn('font-h5')}
+                    to={'hydra'}
+                    style={'link'}
+                    openInNewWindow={true}
+                  >
                     Hydra
                   </Button>
                 </ColourWrapper>
@@ -67,7 +77,12 @@ const Layout = ({children}: PropTypes) => (
               description: 'Authorization Server',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'keto'} style={'link'} openInNewWindow={true}>
+                  <Button
+                    className={cn('font-h5')}
+                    to={'keto'}
+                    style={'link'}
+                    openInNewWindow={true}
+                  >
                     Keto
                   </Button>
                 </ColourWrapper>
@@ -77,7 +92,12 @@ const Layout = ({children}: PropTypes) => (
               description: 'Zero Trust Networking',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'oathkeeper'} style={'link'} openInNewWindow={true}>
+                  <Button
+                    className={cn('font-h5')}
+                    to={'/'}
+                    style={'link'}
+                    openInNewWindow={true}
+                  >
                     Oathkeeper
                   </Button>
                 </ColourWrapper>
@@ -91,12 +111,12 @@ const Layout = ({children}: PropTypes) => (
               title: 'Ory as a Service',
               button: (
                 <Button
-                  to={'https://console.ory.sh/registration'}
+                  to={'/'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
-                  Get started
+                  Read more
                 </Button>
               )
             },
@@ -106,10 +126,10 @@ const Layout = ({children}: PropTypes) => (
               title: 'Ory Open Source',
               button: (
                 <Button
-                  to={'opensource'}
+                  to={'/'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Read more
                 </Button>
@@ -128,7 +148,7 @@ const Layout = ({children}: PropTypes) => (
                   to={'docs'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Read more
                 </Button>
@@ -143,7 +163,7 @@ const Layout = ({children}: PropTypes) => (
                   to={'docs/ecosystem/community/'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Read more
                 </Button>
@@ -158,7 +178,7 @@ const Layout = ({children}: PropTypes) => (
                   to={'https://github.com/ory'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Read more
                 </Button>
@@ -166,6 +186,13 @@ const Layout = ({children}: PropTypes) => (
               title: 'GitHub'
             }
           ]
+        },
+        {
+          title: (
+            <Button to={'/'} style={'none'}>
+              Pricing
+            </Button>
+          )
         },
         {
           title: 'Company',
@@ -178,7 +205,7 @@ const Layout = ({children}: PropTypes) => (
                   to={'blog'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Read more
                 </Button>
@@ -193,7 +220,7 @@ const Layout = ({children}: PropTypes) => (
                   to={'mailto:office@ory.sh'}
                   style={'link'}
                   openInNewWindow={false}
-                  iconRight={<ArrowRight size={16}/>}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Read more
                 </Button>
@@ -206,7 +233,12 @@ const Layout = ({children}: PropTypes) => (
               description: 'Description',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'../about'} style={'link'} openInNewWindow={true}>
+                  <Button
+                    className={cn('font-h5')}
+                    to={'../about'}
+                    style={'link'}
+                    openInNewWindow={true}
+                  >
                     About Us
                   </Button>
                 </ColourWrapper>
@@ -216,8 +248,12 @@ const Layout = ({children}: PropTypes) => (
               description: 'Description',
               button: (
                 <ColourWrapper text={'base-grey'}>
-                  <Button className={cn('font-h5')} to={'https://github.com/ory/jobs'} style={'link'}
-                          openInNewWindow={true}>
+                  <Button
+                    className={cn('font-h5')}
+                    to={'https://github.com/ory/jobs'}
+                    style={'link'}
+                    openInNewWindow={true}
+                  >
                     Jobs&nbsp;
                     <ColourWrapper text={'themed-primary'}>
                       <div className={cn('font-p-sm')}>We're hiring!</div>
@@ -229,10 +265,179 @@ const Layout = ({children}: PropTypes) => (
           ]
         }
       ]}
+      mobileMenu={{
+        headline: [
+          {
+            description: 'Never Build Auth Again',
+            button: (
+              <ColourWrapper text={'base-grey'}>
+                <Button
+                  className={cn('font-h5')}
+                  to={'../about'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Ory as a Service
+                </Button>
+              </ColourWrapper>
+            )
+          },
+          {
+            description: 'Start integrating Ory products',
+            button: (
+              <ColourWrapper text={'base-grey'}>
+                <Button
+                  className={cn('font-h5')}
+                  to={'../about'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Documentation
+                </Button>
+              </ColourWrapper>
+            )
+          },
+          {
+            description: 'Ory Open Source Community',
+            button: (
+              <ColourWrapper text={'base-grey'}>
+                <Button
+                  className={cn('font-h5')}
+                  to={'../about'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Community
+                </Button>
+              </ColourWrapper>
+            )
+          }
+        ],
+        main: {
+          title: 'Product',
+          buttons: [
+            <ColourWrapper text={'base-grey'}>
+              <Button
+                className={cn('font-h5')}
+                to={'/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Pricing
+              </Button>
+            </ColourWrapper>,
+            <ColourWrapper text={'base-grey'}>
+              <Button
+                className={cn('font-h5')}
+                to={'/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Ory Open Source
+              </Button>
+            </ColourWrapper>,
+            <ColourWrapper text={'base-grey'}>
+              <Button
+                className={cn('font-h5')}
+                to={'/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Kratos
+              </Button>
+            </ColourWrapper>,
+            <ColourWrapper text={'base-grey'}>
+              <Button
+                className={cn('font-h5')}
+                to={'/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Hydra
+              </Button>
+            </ColourWrapper>,
+            <ColourWrapper text={'base-grey'}>
+              <Button
+                className={cn('font-h5')}
+                to={'/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Oathkeeper
+              </Button>
+            </ColourWrapper>,
+            <ColourWrapper text={'base-grey'}>
+              <Button
+                className={cn('font-h5')}
+                to={'/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Keto
+              </Button>
+            </ColourWrapper>
+          ]
+        },
+        extra: [
+          <ColourWrapper text={'base-grey'}>
+            <Button
+              className={cn('font-h5')}
+              to={'/'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              GitHub
+            </Button>
+          </ColourWrapper>,
+          <ColourWrapper text={'base-grey'}>
+            <Button
+              className={cn('font-h5')}
+              to={'/'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Blog
+            </Button>
+          </ColourWrapper>,
+          <ColourWrapper text={'base-grey'}>
+            <Button
+              className={cn('font-h5')}
+              to={'/'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Contact us
+            </Button>
+          </ColourWrapper>,
+          <ColourWrapper text={'base-grey'}>
+            <Button
+              className={cn('font-h5')}
+              to={'/'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              About us
+            </Button>
+          </ColourWrapper>,
+          <ColourWrapper text={'base-grey'}>
+            <Button
+              className={cn('font-h5')}
+              to={'/'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Jobs&nbsp;
+              <ColourWrapper text={'themed-primary'}>
+                <div className={cn('font-p-sm')}>We're hiring!</div>
+              </ColourWrapper>
+            </Button>
+          </ColourWrapper>
+        ]
+      }}
     />
     <main>{children}</main>
     <Footer
-      logo={<img loading="lazy" alt="Ory logo footer" src={logoOryFooter}/>}
+      logo={<img loading="lazy" alt="Ory logo footer" src={logoOryFooter} />}
       copyright={<>© Copyright 2021 Ory Corp</>}
       contact={{
         contactEmail: (
@@ -243,24 +448,44 @@ const Layout = ({children}: PropTypes) => (
         contactText: <>👋 Say Hello</>
       }}
       social={[
-        <Button to={'https://www.github.com/ory'} style={'none'} openInNewWindow={true}>
-          <GithubLogo size={24}/>
+        <Button
+          to={'https://www.github.com/ory'}
+          style={'none'}
+          openInNewWindow={true}
+        >
+          <GithubLogo size={24} />
         </Button>,
-        <Button to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'} style={'none'} openInNewWindow={true}>
-          <YoutubeLogo size={24}/>
+        <Button
+          to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'}
+          style={'none'}
+          openInNewWindow={true}
+        >
+          <YoutubeLogo size={24} />
         </Button>,
-        <Button to={'https://twitter.com/orycorp'} style={'none'} openInNewWindow={true}>
-          <TwitterLogo size={24}/>
+        <Button
+          to={'https://twitter.com/orycorp'}
+          style={'none'}
+          openInNewWindow={true}
+        >
+          <TwitterLogo size={24} />
         </Button>,
         <Button to={'chat'} style={'none'} openInNewWindow={true}>
-          <SlackLogo size={24}/>
+          <SlackLogo size={24} />
         </Button>,
-        <Button to={'https://www.linkedin.com/company/ory-corp/'} style={'none'} openInNewWindow={true}>
-          <LinkedinLogo size={24}/>
+        <Button
+          to={'https://www.linkedin.com/company/ory-corp/'}
+          style={'none'}
+          openInNewWindow={true}
+        >
+          <LinkedinLogo size={24} />
         </Button>
       ]}
       legal={[
-        <Button to={'https://status.ory.sh/'} style={'none'} openInNewWindow={true}>
+        <Button
+          to={'https://status.ory.sh/'}
+          style={'none'}
+          openInNewWindow={true}
+        >
           Status
         </Button>,
         <Button to={'../privacy'} style={'none'} openInNewWindow={true}>
@@ -331,7 +556,7 @@ const Layout = ({children}: PropTypes) => (
               Pricing
             </Button>
           ]
-        },        
+        },
         {
           title: 'Developers',
           links: [
