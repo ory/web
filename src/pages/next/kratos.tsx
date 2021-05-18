@@ -26,6 +26,7 @@ import kratosPolyglot from '../../images/kratos/kratos_p.svg'
 import kratosProcess from '../../images/kratos/kratos.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -76,6 +77,10 @@ export const registrationRoute = (req, res) => {
 
 const IndexPage = () => (
   <Layout>
+    <SEO
+      description="Open source user management and identity server."
+      title={`Ory / Kratos Cloud Native Identity and User Management System`}
+    />
     <Hero
       title={'Identity and User Management System'}
       description={

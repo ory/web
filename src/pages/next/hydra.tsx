@@ -26,6 +26,7 @@ import hydraPolyglot from '../../images/hydra/hydra_p.svg'
 import hydraProcess from '../../images/hydra/hydra.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -65,10 +66,19 @@ const IntegrationCodeBox = () => (
 
 const IndexPage = () => (
   <Layout>
+    <SEO
+      description="Open Source OAuth 2.0 and OpenID Connect Server - gethydra.sh."
+      title={
+        process.env.GATSBY_DOMAIN === 'gethydra.sh'
+          ? 'Open Source OAuth 2.0 and OpenID Connect Server - gethydra.sh'
+          : `Ory / Hydra Open Source OAuth 2.0 and OpenID Connect Server`
+      }
+    />
+
     <Hero
       title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
       description={
-        ' Secure access to your applications and APIs, and authenticate third party users.'
+        'Secure access to your applications and APIs, and authenticate third party users.'
       }
       image={<img loading="lazy" alt="" src={hydraProcess} />}
     />

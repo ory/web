@@ -26,6 +26,7 @@ import ketoPolyglot from '../../images/keto/keto_p.svg'
 import ketoProcess from '../../images/keto/keto.svg'
 import CodeBox, { Languages } from '../../components/codebox'
 import cn from 'classnames'
+import SEO from '../../components/next/layouts/seo/seo'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -106,6 +107,12 @@ checkClient.check(checkRequest, (error, resp) => {
 
 const IndexPage = () => (
   <Layout>
+    <SEO
+      description={
+        'Authorization Server based on Google Zanzibar, providing RBAC, ABAC and ACL.'
+      }
+      title={`Ory / Keto Permission and Role Management`}
+    />
     <Hero
       title={'Global access control'}
       description={

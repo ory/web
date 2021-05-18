@@ -48,7 +48,17 @@ import Footer from '../../components/next/layouts/footer/footer'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title={'Ory'} description={''} />
+    <SEO
+      description={
+        'Implement OAuth 2.0 and OpenID Connect in minutes with open source from Ory. Works in both new and existing systems.'
+      }
+      title={
+        'Ory - Open Source OAuth2 and OpenID Connect Access Control & API Security'
+      }
+      keywords={
+        'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
+      }
+    />
 
     <Hero
       title={'Never Build Auth Again'}
