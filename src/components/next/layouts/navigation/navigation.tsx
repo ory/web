@@ -151,36 +151,35 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
               <DropdownMobileItem title={headline.button} description={headline.description} key={index}/>
             ))}
           </DropdownMobileMenuSection>
-          
+      
           <MoleculeSeparator style={'horizontal'}/>
-          
+      
           <p className={cn('font-p-sm')}>{mobileMenu.main.title}</p>
           <DropdownMobileMenuSection>
             {mobileMenu.main.buttons.map((button, index) => (
               <DropdownMobileItem button={button as React.ReactElement} key={index}/>
             ))}
           </DropdownMobileMenuSection>
-          
+      
           <MoleculeSeparator style={'horizontal'}/>
-          
+      
           <DropdownMobileMenuSection>
             {mobileMenu.extra.map((button, index) => (
               <DropdownMobileItem button={button as React.ReactElement} key={index}/>
             ))}
           </DropdownMobileMenuSection>
-          
+      
           <MoleculeSeparator style={'horizontal'}/>
-          
+      
           <MoleculeInteraction className={cn(pb64, pt32)}>
             {sideNav.map((x, index) => (
               <div key={index}>{x}</div>
             ))}
           </MoleculeInteraction>
-        
+    
         </DropdownMobileMenu>
       </div>
     </div>
-  
   )
 }
 

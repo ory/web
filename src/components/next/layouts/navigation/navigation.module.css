@@ -2,10 +2,10 @@
   background-color: var(--colors-base-white--next);
   box-shadow: var(--elevation-large);
   padding: 16px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
-  margin-top: 0;
   z-index: 999;
+  width: 100%;
 }
 
 .nav-logo {
