@@ -13,6 +13,7 @@ import DropdownItem from '../../freestanding/dropdown/dropdown-item'
 import {
   pb24,
   pb32,
+  pb64,
   pr32,
   pt32
 } from '../../freestanding/utils/padding.module.css'
@@ -142,7 +143,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           </Container>
         </Grid>
       </Container>
-      <Container className={cn(mobileNav, styles.navContainer)}>
+      <div className={cn(mobileNav)}>
         <DropdownMobileMenu>
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
@@ -169,14 +170,14 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           
           <MoleculeSeparator style={'horizontal'}/>
           
-          <ContentText>
+          <ContentText className={cn(pb64)}>
             {sideNav.map((x, index) => (
               <div key={index}>{x}</div>
             ))}
           </ContentText>
         
         </DropdownMobileMenu>
-      </Container>
+      </div>
     </div>
   
   )
