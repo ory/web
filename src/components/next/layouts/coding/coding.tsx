@@ -78,8 +78,8 @@ const Coding = ({
                       <ColourWrapper text={'themed-darkmode'}>
                         {icon}
                       </ColourWrapper>
-                      <h3 className={cn('font-h3-light', pt8)}>{title}</h3>
-                      <p className={cn('font-p-light', pt8)}>{description}</p>
+                      <h4 className={cn('font-h5-light', pt8)}>{title}</h4>
+                      <p className={cn('font-p-sm-light', pt8)}>{description}</p>
                     </Molecule>
                     <MoleculeInteraction className={cn(pt24)}>
                       {button}
