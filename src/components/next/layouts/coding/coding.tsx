@@ -52,7 +52,7 @@ const Coding = ({
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
           <ContentText padded={true}>
-            <p className={cn('font-overline-light', pb16)}>{overline}</p>
+            <h2 className={cn('font-overline-light', pb16)}>{overline}</h2>
             <h3 className={cn('font-h3-light', pb32)}>{title}</h3>
             <p className={cn('font-p-light')}>{description}</p>
             {buttons && (
@@ -78,8 +78,8 @@ const Coding = ({
                       <ColourWrapper text={'themed-darkmode'}>
                         {icon}
                       </ColourWrapper>
-                      <h3 className={cn('font-h3-light', pt8)}>{title}</h3>
-                      <p className={cn('font-p-light', pt8)}>{description}</p>
+                      <h4 className={cn('font-h5-light', pt8)}>{title}</h4>
+                      <p className={cn('font-p-sm-light', pt8)}>{description}</p>
                     </Molecule>
                     <MoleculeInteraction className={cn(pt24)}>
                       {button}

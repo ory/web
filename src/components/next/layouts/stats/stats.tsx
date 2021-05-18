@@ -253,10 +253,10 @@ class Stats extends Component<PropTypes, StateTypes> {
                     <Container justify={'start'}>
                       <ContentText padded={true}>
                         <Molecule>
-                          <h1 className={cn('font-h1-light')}>
+                          <h5 className={cn('font-h1-light')}>
                             <AnimatedCounter countTo={amount} />
-                          </h1>
-                          <p className={cn('font-p-lg-light')}>{title}</p>
+                          </h5>
+                          <h4 className={cn('font-p-lg-light')}>{title}</h4>
                           <p className={cn('font-p-lg')}>{description}</p>
                         </Molecule>
                       </ContentText>

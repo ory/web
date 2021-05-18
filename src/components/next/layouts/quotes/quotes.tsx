@@ -50,7 +50,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
   <div className={cn(quote)}>
     <Container fluid={true} justify={'start'} smHidden={true} xsHidden={true}>
       <Grid lg={6} md={6} sm={12} xs={12}>
-        <h2 className={cn('font-h2')}>{title}</h2>
+        <h3 className={cn('font-h3')}>{title}</h3>
       </Grid>
       <Grid lg={6} md={6}>
         <Carousel
@@ -81,7 +81,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
     </Container>
     <Container fluid={true} lgHidden={true} mdHidden={true}>
       <Grid lg={5} md={6} sm={12} xs={12}>
-        <h2 className={cn('font-h2')}>{title}</h2>
+        <h3 className={cn('font-h3')}>{title}</h3>
       </Grid>
       <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
         {quotes.map((quote, index) => (
