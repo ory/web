@@ -11,8 +11,18 @@
 .dropdown-mobile-container {
   margin: 0 auto;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
+}
+
+.dropdown-section {
+  padding-top: 32px
+}
+
+@media(--xs) {
+  .dropdown-section {
+    padding-top: 24px;
+  }
 }
 
 /*@media (--md) {

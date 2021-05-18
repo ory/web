@@ -85,13 +85,12 @@ const Quotes = ({ quotes, title }: PropTypes) => (
       </Grid>
       <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
         {quotes.map((quote, index) => (
-          <div className={cn(pb32)}>
+          <div className={cn(pb32)} key={index}>
             <QuoteBlock
               logo={quote.logo}
               description={quote.description}
               person={quote.person}
               jobTitle={quote.jobTitle}
-              key={index}
             />
           </div>
         ))}

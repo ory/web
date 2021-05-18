@@ -74,7 +74,6 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
   return (
     <div className={cn(styles.navigation)}>
       <Container className={cn(styles.navContainer)}>
-        
         <Grid lg={2}>
           <Container justify={'start'}>
             <Button to={'/'} style={'none'}>
@@ -143,9 +142,8 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           </Container>
         </Grid>
       </Container>
-      <div className={cn(mobileNav)}>
+      <Container className={cn(mobileNav, styles.navContainer)}>
         <DropdownMobileMenu>
-          
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
               <DropdownMobileItem title={headline.button} description={headline.description} key={index}/>
@@ -154,7 +152,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           
           <MoleculeSeparator style={'horizontal'}/>
           
-          <p className={cn('font-p-sm', pb32)}>{mobileMenu.main.title}</p>
+          <p className={cn('font-p-sm')}>{mobileMenu.main.title}</p>
           <DropdownMobileMenuSection>
             {mobileMenu.main.buttons.map((button, index) => (
               <DropdownMobileItem button={button as React.ReactElement} key={index}/>
@@ -178,7 +176,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           </ContentText>
         
         </DropdownMobileMenu>
-      </div>
+      </Container>
     </div>
   
   )
