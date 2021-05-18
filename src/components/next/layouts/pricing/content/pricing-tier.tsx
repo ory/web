@@ -69,14 +69,14 @@ const PricingContent = ({
     <Container flexContainer={'column'} alignItems={'start'}>
       <ContentText className={cn(pb48)}>
         <Molecule>
-          <div className={cn(classes.fonth3, pb32)}>{title}</div>
-          <div className={cn(classes.fontp)}>{description}</div>
+          <h3 className={cn(classes.fonth3, pb32)}>{title}</h3>
+          <p className={cn(classes.fontp)}>{description}</p>
         </Molecule>
       </ContentText>
       <ContentText className={cn(pb48)}>
         <Molecule>
-          <div className={cn(classes.fonth2, pb8)}>{price}</div>
-          <div className={cn(classes.fontpsm)}>{priceDescription}</div>
+          <h2 className={cn(classes.fonth2, pb8)}>{price}</h2>
+          <p className={cn(classes.fontpsm)}>{priceDescription}</p>
         </Molecule>
       </ContentText>
     </Container>
@@ -94,7 +94,7 @@ const PricingFeatures = ({ features, classes }: PriceTierFeatures) => (
       return (
         <Container justify={'start'} alignItems={'start'} key={feature.title}>
           <div className={cn(pr8)}>{feature.icon}</div>
-          <div className={cn(classes.fontp)}>{feature.title}</div>
+          <p className={cn(classes.fontp)}>{feature.title}</p>
         </Container>
       )
     })}
