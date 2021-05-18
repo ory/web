@@ -45,7 +45,7 @@ const Features = ({
       <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
-            <p className={cn('font-overline', pb16)}>{overline}</p>
+            <h2 className={cn('font-overline', pb16)}>{overline}</h2>
             <h3 className={cn('font-h3')}>{title}</h3>
             {description && <p className={cn('font-p', pt32)}>{description}</p>}
           </Molecule>
