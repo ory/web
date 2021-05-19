@@ -186,8 +186,7 @@ const IndexPage = () => (
       title={<>Ory Keto</>}
       description={
         <>
-          Keep threats out and easily verify who is a user and customize sign in
-          flows that fit you and your users.
+          Personalize experiences using customer specific access rules, define roles, and give customers individual access to your service.
         </>
       }
       buttons={
