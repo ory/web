@@ -1,5 +1,5 @@
 import React from 'react'
-import {dropdownMobileContainer, dropdownMobileMenu, dropdownSection, dropdownSectionItem} from './dropdown-mobile-menu.module.css'
+import {dropdownMobileContainer, dropdownMobileMenu, dropdownSection} from './dropdown-mobile-menu.module.css'
 import cn from 'classnames'
 import {Chunks} from '../../../../util'
 import Container from '../containers/container'

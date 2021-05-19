@@ -106,7 +106,11 @@ const Layout = ({ children }: PropTypes) => (
           ],
           mainMenu: [
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'Never Build Auth Again',
               title: 'Ory as a Service',
               button: (
@@ -121,7 +125,11 @@ const Layout = ({ children }: PropTypes) => (
               )
             },
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'The Open Source Ecosystem',
               title: 'Ory Open Source',
               button: (
@@ -141,7 +149,11 @@ const Layout = ({ children }: PropTypes) => (
           title: 'Developers',
           mainMenu: [
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'Start integrating Ory products',
               button: (
                 <Button
@@ -156,7 +168,11 @@ const Layout = ({ children }: PropTypes) => (
               title: 'Documentation'
             },
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'Ory Open Source Community',
               button: (
                 <Button
@@ -171,7 +187,11 @@ const Layout = ({ children }: PropTypes) => (
               title: 'Community'
             },
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'Ory Development & Discussion',
               button: (
                 <Button
@@ -198,7 +218,11 @@ const Layout = ({ children }: PropTypes) => (
           title: 'Company',
           mainMenu: [
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'Description',
               button: (
                 <Button
@@ -213,7 +237,11 @@ const Layout = ({ children }: PropTypes) => (
               title: 'Blog'
             },
             {
-              image: developerIllustration,
+              image: <img
+                src={developerIllustration}
+                loading={'eager'}
+                alt={'Ory dropdown menu icon'}
+              />,
               description: 'Description',
               button: (
                 <Button

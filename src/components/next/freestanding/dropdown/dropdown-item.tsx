@@ -10,7 +10,7 @@ import Button from '../button/button'
 import ContentText from '../content/content-text'
 
 interface PropTypes {
-  image: string
+  image: string | React.ReactElement
   title: string
   description: string
   button: React.ReactElement
@@ -26,11 +26,16 @@ const DropdownItem = ({
 }: PropTypes) => (
   <div className={cn(dropdownItem, className && className)}>
     <ContentText>
-      <img
-        className={cn(imageHidden, dropdownItemImage)}
-        src={image}
-        loading={'eager'}
-      />
+      {typeof image === 'string' ? (
+        <img
+          className={cn(imageHidden, dropdownItemImage)}
+          src={image}
+          loading={'eager'}
+          alt={'Ory dropdown menu icon'}
+        />
+      ): (
+        <div className={cn(imageHidden, dropdownItemImage)}>{image}</div>
+      )}
       <h5 className={cn('font-h5', pt16)}>{title}</h5>
       <p className={cn('font-p-sm', pt8)}>{description}</p>
       <div className={cn(pt24)}>{button}</div>
