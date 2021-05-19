@@ -35,7 +35,7 @@ const featureSections: Array<FeatureSection> = [
     description:
       'Sign up now and instantly access these features. All features except the Ory CLI and interfaces are included when self hosting.',
     button: (
-      <Button style={'text'} to={'/'} iconRight={<ArrowRight size={16} />}>
+      <Button style={'text'} to={'docs'} iconRight={<ArrowRight size={16} />}>
         Read more
       </Button>
     ),
@@ -53,7 +53,7 @@ const featureSections: Array<FeatureSection> = [
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
       },
       {
-        title: 'Account Managment',
+        title: 'Account Management',
         description:
           'Manage your users, enable email verification, let users pick new passwords and change their profile data.',
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
@@ -61,7 +61,7 @@ const featureSections: Array<FeatureSection> = [
       {
         title: 'User Interface & Dashboards',
         description:
-          'Display everything in a smooth and responsive dashboard. We also offer presets for all common user interfaces.',
+          'Display stats in a smooth and responsive dashboard. We also offer presets for all common user interfaces.',
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />
       },
       {
@@ -84,7 +84,7 @@ const featureSections: Array<FeatureSection> = [
     description:
       'We are currently working on implementing these features. Sign up for the newsletter to stay up to date!',
     button: (
-      <Button style={'text'} to={'/'} iconRight={<ArrowRight size={16} />}>
+      <Button style={'text'} to={'/docs/ecosystem/roadmap'} iconRight={<ArrowRight size={16} />}>
         Visit the Ory roadmap
       </Button>
     ),
