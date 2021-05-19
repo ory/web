@@ -9,9 +9,9 @@
   lost-utility: edit;
 }
 
-.wrap {
-  overflow-wrap: break-word;
-  line-break: anywhere;
+.no-wrap {
+  display: flex;
+  white-space: nowrap;
   flex-wrap: nowrap;
 }
 

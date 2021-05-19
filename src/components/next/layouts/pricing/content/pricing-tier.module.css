@@ -9,3 +9,7 @@
   border: 1px solid var(--colors-themed-darkmode--next);
   box-sizing: border-box;
 }
+
+.text-wrap {
+  white-space: break-spaces;
+}

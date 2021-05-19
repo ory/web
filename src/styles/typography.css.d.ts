@@ -4,6 +4,7 @@ declare const styles: {
   readonly "visited": string;
   readonly "secondary": string;
   readonly "remarkEmoji": string;
+  readonly "fontNowrap": string;
   readonly "fontBold": string;
   readonly "fontHero": string;
   readonly "fontH1": string;

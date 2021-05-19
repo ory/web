@@ -30,6 +30,7 @@ export interface PropTypes {
   mdHidden?: boolean
   smHidden?: boolean
   xsHidden?: boolean
+  noWrap?: boolean
   editMode?: false | true
 }
 
@@ -85,7 +86,8 @@ const Container = ({
   mdHidden = false,
   smHidden = false,
   xsHidden = false,
-  editMode = false
+  editMode = false,
+  noWrap = false
 }: PropTypes) => (
   <div
     className={cn(fluid && styles.containerFluid, editMode && styles.editMode)}
@@ -93,6 +95,7 @@ const Container = ({
     <div
       className={cn(
         styles.container,
+        noWrap && styles.noWrap,
         getFlex(flexContainer),
         alignItems && getAlign(alignItems),
         justify && getJustify(justify),
