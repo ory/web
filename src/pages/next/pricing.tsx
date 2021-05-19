@@ -171,11 +171,11 @@ const PricingPage = () => (
       ]}
     />
     <Stats />
+
     <Quotes
       title={
         <>
-          Read about our
-          <br /> customers experience
+          What our customers say:
         </>
       }
       quotes={[
@@ -187,19 +187,37 @@ const PricingPage = () => (
           ),
           description: (
             <>
-              At Sainsbury’s Tech we use Ory tools to power our identity
-              platform. We needed a feature complete OAuth provider which can
-              operate securely at scale and Ory Hydra fit the bill perfectly.
+              We like using Ory because it’s API first design made it super easy
+              to integrate with the rest our stack.
             </>
           ),
           person: `Paul Harman`,
           jobTitle: `Engineering Manager, Sainsbury’s Tech`
         },
         {
+          logo: (
+            <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
+          ),
+          description: (
+            <>
+              With Ory, I can build custom and secure ID
+              infrastructure and APIs that fit perfectly into my client's
+              ever-evolving cloud environments.
+            </>
+          ),
+          person: `Ken Adler`,
+          jobTitle: `Identity & Infosec, Thoughtworks`
+        },
+        {
           logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
-          description: <>We love it!</>,
-          person: `Harman Harman`,
-          jobTitle: `Engineering Manager, B’s Tech`
+          description: (
+            <>
+              I needed an Auth System that would work with modern setups. Ory fit the bill perfectly and
+              just works.
+            </>
+          ),
+          person: `Steff Kelsey`,
+          jobTitle: `VP of Engineering. Blues Inc.`
         }
       ]}
     />
