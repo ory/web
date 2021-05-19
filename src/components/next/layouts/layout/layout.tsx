@@ -263,7 +263,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'../about'}
+                    to={'about'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -627,7 +627,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'../about'}
+              to={'about'}
               style={'none'}
               openInNewWindow={true}
             >
