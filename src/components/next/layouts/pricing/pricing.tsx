@@ -54,7 +54,7 @@ const pricingTiers: Array<PriceTier> = [
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Data objects not metered'
+        title: 'Community Support'
       }
     ]
   },
@@ -92,7 +92,7 @@ const pricingTiers: Array<PriceTier> = [
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Unlimited data objects'
+        title: 'HyperCare Support'
       }
     ]
   }
@@ -133,8 +133,8 @@ const pricingOS: Array<PriceTier> = [
         title: 'Ory CLI'
       },
       {
-        icon: <CheckCircle className={cn(styles.featureDisabled)} size={16} />,
-        title: 'Data limited by database'
+        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
+        title: 'Community Support'
       }
     ]
   }
