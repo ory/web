@@ -28,14 +28,14 @@ const Layout = ({ children }: PropTypes) => (
       logo={oryLogoPrimary}
       sideNav={[
         <Button
-          to={'/'}
+          to={'https://console.ory.sh/login'}
           style={'text'}
           openInNewWindow={false}
           iconRight={<SignIn size={24} />}
         >
           Login
         </Button>,
-        <Button to={'/'} style={'filled'} openInNewWindow={false}>
+        <Button to={'https://console.ory.sh/registration'} style={'filled'} openInNewWindow={false}>
           Get Started
         </Button>
       ]}
@@ -94,7 +94,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'/'}
+                    to={'oathkeeper'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -115,7 +115,7 @@ const Layout = ({ children }: PropTypes) => (
               title: 'Ory as a Service',
               button: (
                 <Button
-                  to={'/'}
+                  to={'https://console.ory.sh'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
@@ -134,7 +134,7 @@ const Layout = ({ children }: PropTypes) => (
               title: 'Ory Open Source',
               button: (
                 <Button
-                  to={'/'}
+                  to={'opensource'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
@@ -209,7 +209,7 @@ const Layout = ({ children }: PropTypes) => (
         },
         {
           title: (
-            <Button to={'/'} style={'none'}>
+            <Button to={'pricing'} style={'none'}>
               Pricing
             </Button>
           )
@@ -301,7 +301,7 @@ const Layout = ({ children }: PropTypes) => (
               <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
-                  to={'../about'}
+                  to={'https://console.ory.sh'}
                   style={'link'}
                   openInNewWindow={true}
                 >
@@ -316,7 +316,7 @@ const Layout = ({ children }: PropTypes) => (
               <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
-                  to={'../about'}
+                  to={'docs'}
                   style={'link'}
                   openInNewWindow={true}
                 >
@@ -331,7 +331,7 @@ const Layout = ({ children }: PropTypes) => (
               <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
-                  to={'../about'}
+                  to={'docs/ecosystem/community/'}
                   style={'link'}
                   openInNewWindow={true}
                 >
@@ -347,7 +347,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'/'}
+                to={'pricing'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -357,7 +357,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'/'}
+                to={'opensource'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -367,7 +367,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'/'}
+                to={'kratos'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -377,7 +377,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'/'}
+                to={'hydra'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -387,7 +387,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'/'}
+                to={'oathkeeper'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -397,7 +397,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'/'}
+                to={'keto'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -410,7 +410,7 @@ const Layout = ({ children }: PropTypes) => (
           <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5')}
-              to={'/'}
+              to={'https://github.com/ory'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -420,7 +420,7 @@ const Layout = ({ children }: PropTypes) => (
           <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5')}
-              to={'/'}
+              to={'blog'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -430,7 +430,7 @@ const Layout = ({ children }: PropTypes) => (
           <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5')}
-              to={'/'}
+              to={'mailto:hi@ory.sh'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -440,7 +440,7 @@ const Layout = ({ children }: PropTypes) => (
           <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5')}
-              to={'/'}
+              to={'about'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -450,7 +450,7 @@ const Layout = ({ children }: PropTypes) => (
           <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5 font-nowrap')}
-              to={'/'}
+              to={'https://github.com/ory/jobs'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -469,7 +469,7 @@ const Layout = ({ children }: PropTypes) => (
       copyright={<>© Copyright 2021 Ory Corp</>}
       contact={{
         contactEmail: (
-          <Button to={'mailto://'} style={'link'}>
+          <Button to={'mailto:office@ory.sh'} style={'link'}>
             office@ory.sh
           </Button>
         ),
