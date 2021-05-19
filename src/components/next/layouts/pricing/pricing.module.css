@@ -1,0 +1,12 @@
+.pricing {
+  background-color: var(--colors-base-white--next);
+  padding: 128px 0;
+}
+
+.feature-enabled {
+  color: var(--color-success-primary--next);
+}
+
+.feature-disabled {
+  color: var(--colors-base-grey-600--next);
+}

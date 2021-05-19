@@ -134,3 +134,29 @@
     }
   }
 }
+
+/* NEXT */
+
+@media (--xs) {
+  .hidden-xs--next {
+    display: none !important;
+  }
+}
+
+@media (--sm-viewport) {
+  .hidden-sm--next {
+    display: none !important;
+  }
+}
+
+@media (--md-viewport) {
+  .hidden-md--next {
+    display: none !important;
+  }
+}
+
+@media (--lg-viewport) {
+  .hidden-lg--next {
+    display: none !important;
+  }
+}

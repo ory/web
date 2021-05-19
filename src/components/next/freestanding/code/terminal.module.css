@@ -1,0 +1,35 @@
+.terminal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /*padding: 8px 24px;*/
+  background-color: var(--colors-base-black--next) !important;
+}
+
+.terminal-container {
+  width: 100%;
+}
+
+.terminal-code {
+  color: var(--colors-themed-darkmode--next) !important;
+  background-color: var(--colors-base-black--next) !important;
+  opacity: inherit !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  overflow: hidden;
+
+  /* prevent text select */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* prevent prism from changing text background color */
+span[class*='token operator'] {
+  background-color: transparent !important;
+}

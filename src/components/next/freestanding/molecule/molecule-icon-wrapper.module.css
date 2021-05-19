@@ -1,0 +1,12 @@
+.molecule-icon-wrapper {
+  background: var(--colors-themed-primary--next);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.molecule-padding {
+  padding: 8px;
+  border-radius: 64px;
+}

@@ -1,0 +1,15 @@
+.tier-dark {
+  background: var(--colors-base-grey--next);
+  padding: 24px 24px;
+}
+
+.tier-light {
+  background: var(--colors-base-white--next);
+  padding: 24px 24px;
+  border: 1px solid var(--colors-themed-darkmode--next);
+  box-sizing: border-box;
+}
+
+.text-wrap {
+  white-space: break-spaces;
+}

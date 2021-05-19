@@ -1,0 +1,15 @@
+.content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-padded {
+  padding: 24px;
+}
