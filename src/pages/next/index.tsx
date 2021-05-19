@@ -137,9 +137,9 @@ const IndexPage = () => (
       description={
         <>
           Authenticate and manage users, set and check permissions, protect
-          APIs, applications and data. Ory as a Service comes with dashboards
-          for metrics and insights and can be managed fully from the intuitive
-          user interface or dedicated CLI.
+          APIs, applications and data. <br /> Ory as a Service comes with a dashboard
+          for metrics and insights and can be managed from the
+          user interface or CLI.
         </>
       }
       image={<img loading="lazy" alt="" src={dashboardIllustration} />}
@@ -151,8 +151,8 @@ const IndexPage = () => (
       description={
         <>
           You want to brand user facing UIs and use your styles and design? No
-          problem with headless integration. You want custom auth flows? Done.
-          And this is included without extra charges.
+          problem with headless integration. <br />You want custom auth flows? Done.
+          <br />This feature is included without extra charges.
         </>
       }
       image={<img loading="lazy" alt="" src={headlessIllustration} />}
@@ -164,16 +164,16 @@ const IndexPage = () => (
       description={
         <>
           At Ory, our mission is to improve the overall developer experience. We
-          ship SDKs for all programming languages, documentation, tutorials and
-          intuitive CLIs. Our open source approach lets you to participate in
+          provide SDKs, documentation, tutorials, CLIs and community support. 
+          <br />Our open source approach lets you to participate in
           API and architecture discussions - your next PR will be shipped in
           Ory.
         </>
       }
       buttons={
         <>
-          <Button to={'/'} style={'filled'}>
-            Get Started Today
+          <Button to={'https://console.ory.sh/registration'} style={'filled'}>
+            Get Started
           </Button>
         </>
       }
@@ -190,7 +190,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'/'}
+              to={'docs'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
@@ -203,13 +203,12 @@ const IndexPage = () => (
           title: <>Based on Open Source</>,
           description: (
             <>
-              Participate in discussions, feature requests, bug fixes, and PRs,
-              the way you are used to from open source.
+              Participate in discussions, feature requests, and PRs on GitHub.
             </>
           ),
           button: (
             <Button
-              to={'/'}
+              to={'https://github.com/ory/'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
@@ -223,7 +222,7 @@ const IndexPage = () => (
     <Stats />
 
     <Features
-      overline={'Top Features'}
+      overline={'Modular Integration'}
       title={
         <>
           Auth integration in 1.. 2..
@@ -231,8 +230,8 @@ const IndexPage = () => (
         </>
       }
       buttons={
-        <Button to={'/'} style={'link'} iconRight={<ArrowRight size={16} />}>
-          See our roadmap
+        <Button to={'https://console.ory.sh/registration'} style={'link'} iconRight={<ArrowRight size={16} />}>
+          Get Started
         </Button>
       }
       feature={[
@@ -241,7 +240,7 @@ const IndexPage = () => (
           title: <>Ory is open source</>,
           description: (
             <>
-              Ory's heart and soul are rooted in the open source community. Our
+              Ory's heart and soul are rooted in Open Source. Our
               commitment to open software will stay unchanged.
             </>
           )
@@ -251,8 +250,7 @@ const IndexPage = () => (
           title: <>No limits on identities</>,
           description: (
             <>
-              The unique pricing model does not charge you for Monthly Active
-              Users. Choose a transparent plan that adapts to your needs.
+              Dont pay for Monthly Active Users. Pay for what you use.Choose a transparent plan that adapts to your needs.
             </>
           )
         },
@@ -282,8 +280,7 @@ const IndexPage = () => (
     <Quotes
       title={
         <>
-          Read about our
-          <br /> customers experience
+          What our customers say:
         </>
       }
       quotes={[
@@ -308,8 +305,7 @@ const IndexPage = () => (
           ),
           description: (
             <>
-              Securing modern digital systems requires new approaches to
-              identity. With Ory, I can build custom and secure ID
+              With Ory, I can build custom and secure ID
               infrastructure and APIs that fit perfectly into my client's
               ever-evolving cloud environments.
             </>
@@ -321,13 +317,12 @@ const IndexPage = () => (
           logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
           description: (
             <>
-              I needed an Auth System that would work with modern setups, and I
-              did not want to write it myself. Ory fit the bill perfectly and
+              I needed an Auth System that would work with modern setups. Ory fit the bill perfectly and
               just works.
             </>
           ),
           person: `Steff Kelsey`,
-          jobTitle: `Head of Engineering. Blues Wireless`
+          jobTitle: `VP of Engineering. Blues Inc.`
         }
       ]}
     />
@@ -344,10 +339,10 @@ const IndexPage = () => (
         <>
           <Button
             style={'filled'}
-            to={'/'}
+            to={'https://console.ory.sh/registration'}
             iconLeft={<RocketLaunch size={24} />}
           >
-            Get started today
+            Get started
           </Button>
         </>
       }
@@ -363,7 +358,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'/'}
+              to={'docs'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
@@ -382,7 +377,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'/'}
+              to={'chat'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
