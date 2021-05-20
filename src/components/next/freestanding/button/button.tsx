@@ -5,6 +5,7 @@ import cn from 'classnames'
 import Container from '../containers/container'
 import {pl8, pr8} from '../utils/padding.module.css'
 import {ParseCase} from '../../../../util'
+import ColourWrapper from '../colour/colour-wrapper'
 
 export interface PropTypes {
   children?: React.ReactNode
