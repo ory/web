@@ -555,7 +555,7 @@ const PricingPage = () => (
   
     <Stats
       title={(
-        <>Billions of Identities.</>
+        <>Billions of Identities</>
       )}
       description={(
         <>
