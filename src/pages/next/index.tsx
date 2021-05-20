@@ -252,7 +252,7 @@ const IndexPage = () => (
       title={
         <>
           Auth integration in 1.. 2..
-          <br/> done!
+          <br /> done
         </>
       }
       buttons={
@@ -307,7 +307,7 @@ const IndexPage = () => (
     <Quotes
       title={
         <>
-          What our customers say:
+          What our customers say
         </>
       }
       quotes={[

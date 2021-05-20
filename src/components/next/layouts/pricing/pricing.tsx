@@ -27,14 +27,14 @@ const pricingTiers: Array<PriceTier> = [
     price: '$99',
     priceDescription: 'per Project/Member',
     button: (
-      <Button to={'/'} style={'filled'}>
+      <Button to={'https://console.ory.sh/'} style={'filled'}>
         Become a member
       </Button>
     ),
     features: [
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'No limits on identities'
+        title: 'Flexible identity model *'
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
@@ -65,14 +65,14 @@ const pricingTiers: Array<PriceTier> = [
     price: 'Individual',
     priceDescription: 'per Project/Member',
     button: (
-      <Button to={'/'} style={'outlined'} theme={'grey'}>
+      <Button to={'mailto:sales@ory.sh'} style={'outlined'} theme={'grey'}>
         Contact sales
       </Button>
     ),
     features: [
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'No limits on identities'
+        title: 'Flexible identity model *'
       },
       {
         icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
@@ -106,7 +106,7 @@ const pricingOS: Array<PriceTier> = [
     price: 'Free',
     priceDescription: '',
     button: (
-      <Button to={'/'} style={'filled'}>
+      <Button to={'/docs'} style={'filled'}>
         Get Started
       </Button>
     ),
@@ -180,6 +180,7 @@ const Pricing = () => {
           <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
             <p className={cn('font-p-sm')}>
               Prices in USD, taxes may apply. Billed monthly.
+              <br/>* Fair use of database storage for identities, flows & sessions. Upgrades possible.
             </p>
           </Container>
         </Grid>

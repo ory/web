@@ -94,7 +94,7 @@ const PricingPage = () => (
         description:
           'Sign up now and instantly access these features. All features except the Ory CLI and interfaces are included when self hosting.',
         button: (
-          <Button style={'text'} to={'docs'} iconRight={<ArrowRight size={16} />}>
+          <Button style={'text'} to={'/docs'} iconRight={<ArrowRight size={16} />}>
             Read more
           </Button>
         ),
@@ -341,6 +341,15 @@ const PricingPage = () => (
               A project is one instance of Ory, e.g. to host sign up for a web
               application you need one project. A member is one admin or
               superuser to control that project.
+            </>
+          )
+        },
+        {
+          question: `What does Flexible identity model mean?`,
+          answer: (
+            <>
+              Ory does not charge you for individual identities. We do have limits on database storage space.
+              You can create as many identities as you require, but to prevent abuse of the system we limit the database storage.
             </>
           )
         }
