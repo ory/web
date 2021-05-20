@@ -1,6 +1,9 @@
 import React from 'react'
+import {itemFont} from './dropdown-mobile-item.module.css'
 import cn from 'classnames'
 import ContentText from '../content/content-text'
+import MoleculeInteraction from '../molecule/molecule-interaction'
+import Container from '../containers/container'
 
 interface PropTypes {
   className?: string
@@ -15,8 +18,7 @@ const DropdownMobileItem = ({
   description,
   button
 }: PropTypes) => (
-  <div className={cn(className && className)}>
-    <ContentText>
+  <Container className={cn(itemFont, className && className)} alignItems={'start'} justify={'start'}>
       {title && typeof title === 'string' ? (
         <h5 className={cn('font-h5')}>{title}</h5>
       ) : (
@@ -24,8 +26,7 @@ const DropdownMobileItem = ({
       )}
       {description && <p className={cn('font-p-sm')}>{description}</p>}
       {button && button}
-    </ContentText>
-  </div>
+  </Container>
 )
 
 export default DropdownMobileItem

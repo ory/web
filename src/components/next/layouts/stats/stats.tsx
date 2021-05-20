@@ -86,7 +86,10 @@ const stats = (state: StateTypes) => [
   }
 ]
 
-interface PropTypes {}
+interface PropTypes {
+  title: React.ReactElement
+  description: React.ReactElement
+}
 
 type GitHub = {
   [repo: string]: number
@@ -231,16 +234,9 @@ class Stats extends Component<PropTypes, StateTypes> {
           <Grid lg={3} md={3} sm={12} xs={12}>
             <ContentText padded={true}>
               <Molecule>
-                <h3 className={cn('font-h3-light')}>Billions of Identities.</h3>
+                <h3 className={cn('font-h3-light')}>{this.props.title}</h3>
                 <p className={cn('font-p-light')}>
-                  <a
-                    href={'#'}
-                    className={cn('font-link font-link-lg link-news')}
-                  >
-                    Companies
-                  </a>{' '}
-                  from all over the world rely on Ory for their identity needs.
-                  Ory technology secures billions of identity requests.
+                  {this.props.description}
                 </p>
               </Molecule>
             </ContentText>
@@ -256,8 +252,8 @@ class Stats extends Component<PropTypes, StateTypes> {
                           <h5 className={cn('font-h1-light')}>
                             <AnimatedCounter countTo={amount} />
                           </h5>
-                          <h4 className={cn('font-p-lg-light')}>{title}</h4>
-                          <p className={cn('font-p-lg')}>{description}</p>
+                          <p className={cn('font-p-light')}>{title}</p>
+                          <p className={cn('font-p-light')}>{description}</p>
                         </Molecule>
                       </ContentText>
                     </Container>

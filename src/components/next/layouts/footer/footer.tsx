@@ -112,7 +112,7 @@ const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
     <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
       <Container justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}>
         <ColourWrapper text={'base-grey-400'}>
-          <div className={cn('font-p-sm')}>{copyright}</div>
+          <p className={cn('font-p-sm')}>{copyright}</p>
         </ColourWrapper>
       </Container>
     </Grid>

@@ -41,7 +41,7 @@
       background-color: var(--colors-hydra-primary--next);
     }
     &.second {
-      background-color: var(--color-warning-primary--next);
+      background-color: var(--colors-warning-primary--next);
     }
     &.third {
       background-color: var(--colors-keto-primary--next);

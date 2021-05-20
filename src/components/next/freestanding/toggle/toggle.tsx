@@ -28,17 +28,17 @@ const Toggle = ({ className, enabled = false, text, onClick }: PropTypes) => {
   return (
     <Container className={cn(className && className)}>
       {text && (
-        <div className={cn(getTextToggle(!enabled), pr16, 'font-btn')}>
+        <p className={cn(getTextToggle(!enabled), pr16, 'font-btn')}>
           {text.textEnable}
-        </div>
+        </p>
       )}
       <div className={cn(styles.toggle, getToggle(enabled))} onClick={onClick}>
         <div className={cn(styles.toggleRectangle)} />
       </div>
       {text && (
-        <div className={cn(getTextToggle(enabled), pl16, 'font-btn')}>
+        <p className={cn(getTextToggle(enabled), pl16, 'font-btn')}>
           {text.textDisable}
-        </div>
+        </p>
       )}
     </Container>
   )

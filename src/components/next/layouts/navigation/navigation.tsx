@@ -14,8 +14,12 @@ import {
   pb24,
   pb32,
   pb64,
+  pb8,
+  pl8,
   pr32,
-  pt32
+  pr8,
+  pt32,
+  pt8
 } from '../../freestanding/utils/padding.module.css'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 import {DropdownMobileMenu, DropdownMobileMenuSection} from '../../freestanding/dropdown/dropdown-mobile-menu'
@@ -170,12 +174,10 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
           </DropdownMobileMenuSection>
       
           <MoleculeSeparator style={'horizontal'}/>
-      
-          <MoleculeInteraction className={cn(pb64, pt32)}>
+          
             {sideNav.map((x, index) => (
-              <div key={index}>{x}</div>
+              <div className={cn(pb8, pt8)} key={index}>{x}</div>
             ))}
-          </MoleculeInteraction>
     
         </DropdownMobileMenu>
       </div>

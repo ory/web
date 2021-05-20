@@ -4,6 +4,13 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.btn-text-container {
+  display: inline-flex;
+  align-self: center;
+  flex-wrap: wrap;
 }
 
 .style-filled-light {

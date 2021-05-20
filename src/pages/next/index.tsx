@@ -41,7 +41,7 @@ import segment from '../../images/adopters/segment.svg'
 import sainsburys from '../../images/adopters/sainsburys.svg'
 import hootsuite from '../../images/adopters/hootsuite.svg'
 import threerein from '../../images/adopters/threerein.svg'
-import { pl32 } from '../../components/next/freestanding/utils/padding.module.css'
+import {pl32} from '../../components/next/freestanding/utils/padding.module.css'
 import cn from 'classnames'
 import SEO from '../../components/next/layouts/seo/seo'
 import Footer from '../../components/next/layouts/footer/footer'
@@ -59,7 +59,7 @@ const IndexPage = () => (
         'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
       }
     />
-
+    
     <Hero
       title={'Never Build Auth Again'}
       description={
@@ -69,14 +69,14 @@ const IndexPage = () => (
         <Button
           to={'https://console.ory.sh'}
           style={'filled'}
-          iconLeft={<RocketLaunch size={24} />}
+          iconLeft={<RocketLaunch size={24}/>}
         >
           Get Started
         </Button>
       }
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+      image={<img loading="lazy" alt="" src={heroIllustration}/>}
     />
-
+    
     <Adopters
       adopters={[
         {
@@ -129,7 +129,7 @@ const IndexPage = () => (
         }
       ]}
     />
-
+    
     <FeatureImage
       mirror={true}
       overline={'Security'}
@@ -137,11 +137,11 @@ const IndexPage = () => (
       description={
         <>
           Authenticate and manage users, set and check permissions, protect
-          APIs, applications and data. <br /> Ory as a Service comes with a dashboard
+          APIs, applications and data. <br/> Ory as a Service comes with a dashboard
           for metrics and insights and can be managed from the
           user interface or CLI.
         </>
-      }      
+      }
       buttons={
         <Button
           to={'https://console.ory.sh'}
@@ -150,19 +150,19 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="lazy" alt="" src={dashboardIllustration} />}
+      image={<img loading="lazy" alt="" src={dashboardIllustration}/>}
     />
-
+    
     <FeatureImage
       overline={'Flexibility'}
       title={<>Bring your own UX</>}
       description={
         <>
           You want to brand user facing UIs and use your styles and design? No
-          problem with headless integration. <br />You want custom auth flows? Done.
-          <br />This feature is included without extra charges.
+          problem with headless integration. <br/>You want custom auth flows? Done.
+          <br/>This feature is included without extra charges.
         </>
-      }      
+      }
       buttons={
         <Button
           to={'https://console.ory.sh'}
@@ -171,17 +171,17 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="lazy" alt="" src={headlessIllustration} />}
+      image={<img loading="lazy" alt="" src={headlessIllustration}/>}
     />
-
+    
     <Coding
       overline={'Made for developers'}
       title={<>Improve your developer experience</>}
       description={
         <>
           At Ory, our mission is to improve the overall developer experience. We
-          provide SDKs, documentation, tutorials, CLIs and community support. 
-          <br />Our open source approach lets you to participate in
+          provide SDKs, documentation, tutorials, CLIs and community support.
+          <br/>Our open source approach lets you to participate in
           API and architecture discussions - your next PR will be shipped in
           Ory.
         </>
@@ -193,10 +193,10 @@ const IndexPage = () => (
           </Button>
         </>
       }
-      visual={<img loading="lazy" alt="" src={codeboxIllustration} />}
+      visual={<img loading="lazy" alt="" src={codeboxIllustration}/>}
       content={[
         {
-          icon: <Terminal size={32} />,
+          icon: <Terminal size={32}/>,
           title: <>Powerful tools</>,
           description: (
             <>
@@ -208,14 +208,14 @@ const IndexPage = () => (
             <Button
               to={'/docs'}
               style={'link'}
-              iconRight={<ArrowRight size={16} />}
+              iconRight={<ArrowRight size={16}/>}
             >
               Read the docs
             </Button>
           )
         },
         {
-          icon: <GitMerge size={32} />,
+          icon: <GitMerge size={32}/>,
           title: <>Based on Open Source</>,
           description: (
             <>
@@ -226,7 +226,7 @@ const IndexPage = () => (
             <Button
               to={'https://github.com/ory/'}
               style={'link'}
-              iconRight={<ArrowRight size={16} />}
+              iconRight={<ArrowRight size={16}/>}
             >
               Star us on GitHub
             </Button>
@@ -234,9 +234,19 @@ const IndexPage = () => (
         }
       ]}
     />
-
-    <Stats />
-
+    
+    <Stats
+      title={(
+        <>Billions of Identities</>
+      )}
+      description={(
+        <>
+          Companies
+          from all over the world rely on Ory for their identity needs.
+          Ory technology secures billions of identity requests.
+        </>)
+      }/>
+    
     <Features
       overline={'Modular Integration'}
       title={
@@ -246,13 +256,13 @@ const IndexPage = () => (
         </>
       }
       buttons={
-        <Button to={'https://console.ory.sh/registration'} style={'link'} iconRight={<ArrowRight size={16} />}>
+        <Button to={'https://console.ory.sh/registration'} style={'link'} iconRight={<ArrowRight size={16}/>}>
           Get Started
         </Button>
       }
       feature={[
         {
-          icon: <Code size={32} />,
+          icon: <Code size={32}/>,
           title: <>Ory is open source</>,
           description: (
             <>
@@ -262,16 +272,17 @@ const IndexPage = () => (
           )
         },
         {
-          icon: <UserPlus size={32} />,
+          icon: <UserPlus size={32}/>,
           title: <>No limits on identities</>,
           description: (
             <>
-              Dont pay for Monthly Active Users. Pay for what you use.Choose a transparent plan that adapts to your needs.
+              Dont pay for Monthly Active Users. Pay for what you use.Choose a transparent plan that adapts to your
+              needs.
             </>
           )
         },
         {
-          icon: <CirclesThreePlus size={32} />,
+          icon: <CirclesThreePlus size={32}/>,
           title: <>More features</>,
           description: (
             <>
@@ -281,7 +292,7 @@ const IndexPage = () => (
           )
         },
         {
-          icon: <LockOpen size={32} />,
+          icon: <LockOpen size={32}/>,
           title: <>No lock in</>,
           description: (
             <>
@@ -292,7 +303,7 @@ const IndexPage = () => (
         }
       ]}
     />
-
+    
     <Quotes
       title={
         <>
@@ -303,7 +314,7 @@ const IndexPage = () => (
         {
           logo: (
             <ColourWrapper text={'kratos-primary'}>
-              <img src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"} />
+              <img src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"}/>
             </ColourWrapper>
           ),
           description: (
@@ -317,7 +328,7 @@ const IndexPage = () => (
         },
         {
           logo: (
-            <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
+            <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'}/>
           ),
           description: (
             <>
@@ -330,7 +341,7 @@ const IndexPage = () => (
           jobTitle: `Identity & Infosec, Thoughtworks`
         },
         {
-          logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
+          logo: <img src={blues} loading="lazy" alt={'Blues Logo'}/>,
           description: (
             <>
               I needed an Auth System that would work with modern setups. Ory fit the bill perfectly and
@@ -342,13 +353,13 @@ const IndexPage = () => (
         }
       ]}
     />
-
+    
     <Quickstart
       title={<>Ready to get started?</>}
       description={
         <>
           Explore Ory and the future of identity. Contact us
-          <br /> for a custom support package for your business.
+          <br/> for a custom support package for your business.
         </>
       }
       buttons={
@@ -356,7 +367,7 @@ const IndexPage = () => (
           <Button
             style={'filled'}
             to={'https://console.ory.sh/registration'}
-            iconLeft={<RocketLaunch size={24} />}
+            iconLeft={<RocketLaunch size={24}/>}
           >
             Get started
           </Button>
@@ -364,7 +375,7 @@ const IndexPage = () => (
       }
       content={[
         {
-          icon: <BookOpen size={32} />,
+          icon: <BookOpen size={32}/>,
           title: <>Check out our docs</>,
           description: (
             <>
@@ -376,14 +387,14 @@ const IndexPage = () => (
             <Button
               to={'/docs'}
               style={'link'}
-              iconRight={<ArrowRight size={16} />}
+              iconRight={<ArrowRight size={16}/>}
             >
               Read the docs
             </Button>
           )
         },
         {
-          icon: <Users size={32} />,
+          icon: <Users size={32}/>,
           title: <>Join a diverse community</>,
           description: (
             <>
@@ -395,7 +406,7 @@ const IndexPage = () => (
             <Button
               to={'/chat'}
               style={'link'}
-              iconRight={<ArrowRight size={16} />}
+              iconRight={<ArrowRight size={16}/>}
             >
               Read more
             </Button>

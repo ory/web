@@ -18,6 +18,7 @@ import Faq from '../../components/next/layouts/faq/faq'
 import Button from '../../components/next/freestanding/button/button'
 import cn from 'classnames'
 import SEO from '../../components/next/layouts/seo/seo'
+import {ArrowRight, CheckCircle, Circle, Flag, Triangle } from 'phosphor-react'
 
 const PricingPage = () => (
   <Layout>
@@ -31,7 +32,205 @@ const PricingPage = () => (
       }
     />
 
-    <Pricing />
+    <Pricing
+    title={<>No limits on identity</>}
+    description={<>Ory is based on mature open source software and open standards.
+    And it’s affordable for everyone. We also offer individual plans
+    for enterprise customers, please contact us to learn more!</>}
+    saas={[
+    {
+      theme: 'dark',
+      title: 'Early Access',
+      description: 'Get early access to the full Ory platform now',
+      price: '$99',
+      priceDescription: 'per Project/Member',
+      button: (
+      <Button to={'https://console.ory.sh/'} style={'filled'}>
+      Become a member
+      </Button>
+      ),
+      features: [
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Flexible identity model *'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: '1 Member & Project'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: '100k API Calls / 24 hours'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'UI & Dashboard'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle  size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Ory CLI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Community Support'
+    }
+      ]
+    },
+    {
+      theme: 'light',
+      title: 'Enterprise',
+      description: 'Ory with dedicated support & custom hosting options',
+      price: 'Individual',
+      priceDescription: 'per Project/Member',
+      button: (
+      <Button to={'mailto:sales@ory.sh'} style={'outlined'} theme={'grey'}>
+      Contact sales
+      </Button>
+      ),
+      features: [
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Flexible identity model *'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: '>1 Member & Project'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'No limits on API calls'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'UI & Dashboard'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Ory CLI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'HyperCare Support'
+    }
+      ]
+    }
+    ]}
+    opensource={[
+    {
+      theme: 'light',
+      title: 'Self-hosted',
+      description:
+      'Try out Ory locally or deploy self-hosted without any limits.',
+      price: 'Free',
+      priceDescription: '',
+      button: (
+      <Button to={'/docs'} style={'filled'}>
+      Get Started
+      </Button>
+      ),
+      featuresContainer: 'row',
+      features: [
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'No Limits'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Self-hosted'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Write your own UI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'base-grey-600'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'UI & Dashboard'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'base-grey-600'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Ory CLI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Community Support'
+    }
+      ]
+    }
+    ]}
+  />
+    
     <Adopters
       adopters={[
         {
@@ -84,23 +283,197 @@ const PricingPage = () => (
         }
       ]}
     />
-    <FeatureList />
+    
+    <FeatureList features={[
+      {
+        icon: <Triangle color={'white'} size={24} />,
+        title: 'Features',
+        description:
+          'Sign up now and instantly access these features. All features except the Ory CLI and interfaces are included when self hosting.',
+        button: (
+          <Button style={'text'} to={'/docs'} iconRight={<ArrowRight size={16} />}>
+            Read more
+          </Button>
+        ),
+        features: [
+          {
+            title: 'Ory Cli',
+            description:
+              'Control the Ory platform from the command line with an intuitive and accessible syntax. ',
+            icon: (
+              <ColourWrapper text={'success-primary'}>
+                <CheckCircle size={16} />
+              </ColourWrapper>)
+              
+          },
+          {
+            title: 'Log in & Sign up',
+            description:
+              'The basics of IAM: Login & register users fast and without complicated flows and store credentials securely.',
+            icon: (
+              <ColourWrapper text={'success-primary'}>
+                <CheckCircle size={16} />
+              </ColourWrapper>
+            )
+          },
+          {
+            title: 'Account Management',
+            description:
+              'Manage your users, enable email verification, let users pick new passwords and change their profile data.',
+            icon: (
+              <ColourWrapper text={'success-primary'}>
+                <CheckCircle size={16} />
+              </ColourWrapper>
+            )
+          },
+          {
+            title: 'User Interface & Dashboards',
+            description:
+              'Display stats in a smooth and responsive dashboard. We also offer presets for all common user interfaces.',
+            icon: (
+              <ColourWrapper text={'success-primary'}>
+                <CheckCircle size={16} />
+              </ColourWrapper>
+            )
+          },
+          {
+            title: 'Identity Model',
+            description:
+              'A flexible identity model adapts to your business needs. You can use one of our provided presets or cook up your own identity model.',
+            icon: (
+              <ColourWrapper text={'success-primary'}>
+                <CheckCircle size={16} />
+              </ColourWrapper>
+            )
+          },
+          {
+            title: 'Social Logins',
+            description:
+              'Simplify your users experience and let them use their existing accounts at Google, GitHub, Apple etc. to sign up and log in. All OIDC providers are supported.',
+            icon:
+              (
+                <ColourWrapper text={'success-primary'}>
+                  <CheckCircle size={16} />
+                </ColourWrapper>
+              )
+          }
+        ]
+      },
+      {
+        icon: (
+          <ColourWrapper text={'base-white'}>
+            <Circle size={24} />
+          </ColourWrapper>
+        ),
+        title: 'Features landing in 2021',
+        description:
+          'We are currently working on implementing these features. Sign up for the newsletter to stay up to date!',
+        button: (
+          <Button style={'text'} to={'/docs/ecosystem/roadmap'} iconRight={<ArrowRight size={16} />}>
+            Visit the Ory roadmap
+          </Button>
+        ),
+        features: [
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Multifactor Authentication',
+            description:
+              'Securely authenticate your users with a variety of factors, including passwordless, WebAuthn, TOTP.'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Permissions & Roles',
+            description:
+              'From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Use your UI',
+            description:
+              'Bring your own UI and Branding. Easily add your own personal look, feel and brand to any user or internal interface.'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Webhooks & Triggers',
+            description:
+              'Use webhooks to define and trigger certain actions when users e.g. register, log in, verify their email... you name it!'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Payments',
+            description:
+              'Payments integration powered by Stripe. Secure, fast and reliable payments.'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Email',
+            description:
+              'Send out emails in bulk or individually reliably and without hassle. Send updates to all users connected to your platform.'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'OAuth2.0',
+            description:
+              'Become an OAuth2.0 provider, enable complex use cases, standardize and interface your business with other systems.'
+          },
+          {
+            icon: (
+              <ColourWrapper text={'themed-primary'}>
+                <Flag size={16} />
+              </ColourWrapper>
+            ),
+            title: 'Machine 2 Machine',
+            description:
+              'Enables machine interactions powered by Ory. If you use automated agents, this is for you!'
+          }
+        ]
+      }
+    ]} />
+    
     <Faq
       title={<>Frequently Asked Questions</>}
       description={
         <>
           If you cant find your question here, reach out to us on{' '}
-          <a href={'https://github.com/ory'} className={cn('link link-md link-news')}>
+          <Button style={'none'} to={'https://github.com/ory'} className={cn('link link-md link-news')}>
             GitHub
-          </a>
-          , our{' '}
-          <a href={'/chat'} className={cn('link link-md link-news')}>
+          </Button>
+          , our
+          <Button style={'none'} to={'/chat'} className={cn('link link-md link-news')}>
             Slack Channel
-          </a>{' '}
-          or{' '}
-          <a href={'mailto:office@ory.sh'} className={cn('link link-md link-news')}>
+          </Button>
+          or
+          <Button style={'none'} to={'mailto:office@ory.sh'} className={cn('link link-md link-news')}>
             via email.
-          </a>{' '}
+          </Button>
         </>
       }
       content={[
@@ -167,7 +540,7 @@ const PricingPage = () => (
               superuser to control that project.
             </>
           )
-        },       
+        },
         {
           question: `What does Flexible identity model mean?`,
           answer: (
@@ -179,7 +552,18 @@ const PricingPage = () => (
         }
       ]}
     />
-    <Stats />
+  
+    <Stats
+      title={(
+        <>Billions of Identities</>
+      )}
+      description={(
+        <>
+          Companies
+          from all over the world rely on Ory for their identity needs.
+          Ory technology secures billions of identity requests.
+        </>)
+      }/>
 
     <Quotes
       title={

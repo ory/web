@@ -1,15 +1,3 @@
 .feature-list {
   padding: 64px 0;
 }
-
-.feature-enabled {
-  color: var(--color-success-primary--next);
-}
-
-.feature-disabled {
-  color: var(--colors-base-grey-600--next);
-}
-
-.feature-planned {
-  color: var(--colors-themed-primary--next);
-}
