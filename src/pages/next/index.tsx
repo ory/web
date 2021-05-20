@@ -67,11 +67,11 @@ const IndexPage = () => (
       }
       buttons={
         <Button
-          to={'/products'}
+          to={'https://console.ory.sh'}
           style={'filled'}
           iconLeft={<RocketLaunch size={24} />}
         >
-          Get Started Today
+          Get Started
         </Button>
       }
       image={<img loading="lazy" alt="" src={heroIllustration} />}
@@ -141,6 +141,14 @@ const IndexPage = () => (
           for metrics and insights and can be managed from the
           user interface or CLI.
         </>
+      }      
+      buttons={
+        <Button
+          to={'https://console.ory.sh'}
+          style={'filled'}
+        >
+          Get Started
+        </Button>
       }
       image={<img loading="lazy" alt="" src={dashboardIllustration} />}
     />
@@ -154,6 +162,14 @@ const IndexPage = () => (
           problem with headless integration. <br />You want custom auth flows? Done.
           <br />This feature is included without extra charges.
         </>
+      }      
+      buttons={
+        <Button
+          to={'https://console.ory.sh'}
+          style={'filled'}
+        >
+          Get Started
+        </Button>
       }
       image={<img loading="lazy" alt="" src={headlessIllustration} />}
     />
@@ -190,7 +206,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'docs'}
+              to={'/docs'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
@@ -358,7 +374,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'docs'}
+              to={'/docs'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
@@ -377,7 +393,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'chat'}
+              to={'/chat'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >

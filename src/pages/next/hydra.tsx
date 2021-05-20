@@ -103,7 +103,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/hydra/'}
+            to={'/docs/hydra/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -133,7 +133,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/hydra/next/'}
+            to={'/docs/keto/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >

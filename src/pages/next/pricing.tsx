@@ -266,15 +266,15 @@ const PricingPage = () => (
       description={
         <>
           If you cant find your question here, reach out to us on{' '}
-          <Button style={'none'} to={'/'} className={cn('link link-md link-news')}>
+          <Button style={'none'} to={'https://github.com/ory'} className={cn('link link-md link-news')}>
             GitHub
           </Button>
           , our
-          <Button style={'none'} to={'/'} className={cn('link link-md link-news')}>
+          <Button style={'none'} to={'/chat'} className={cn('link link-md link-news')}>
             Slack Channel
           </Button>
           or
-          <Button style={'none'} to={'mailto://'} className={cn('link link-md link-news')}>
+          <Button style={'none'} to={'mailto:office@ory.sh'} className={cn('link link-md link-news')}>
             via email.
           </Button>
         </>
