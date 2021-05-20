@@ -516,7 +516,7 @@ const Layout = ({ children }: PropTypes) => (
         >
           Status
         </Button>,
-        <Button to={'/privacy'} style={'none'} openInNewWindow={false}>
+        <Button to={'/privacy'} style={'none'}>
           Privacy
         </Button>,
         <Button to={'/tos'} style={'none'} openInNewWindow={false}>
