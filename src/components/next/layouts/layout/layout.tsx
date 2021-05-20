@@ -634,14 +634,14 @@ const Layout = ({ children }: PropTypes) => (
               About Us
             </Button>,
             <Button
-              className={cn('font-p-sm font-nowrap')}
+              className={cn('font-p-sm')}
               to={'https://github.com/ory/jobs'}
               style={'none'}
               openInNewWindow={true}
             >
               Jobs&nbsp;
               <ColourWrapper text={'themed-primary'}>
-                <div className={cn('font-p-sm')}>we're hiring!</div>
+                <span className={cn('font-p-sm font-nowrap')}>we're hiring!</span>
               </ColourWrapper>
             </Button>,
             <Button
