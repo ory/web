@@ -8,134 +8,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-li,
-input,
-div {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin-bottom: 1.38rem;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 600;
-}
-
-h4,
-h5 {
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 1.383rem;
-}
-
-h2 {
-  font-size: 1.296rem;
-}
-
-h3 {
-  font-size: 1.215rem;
-}
-
-h4 {
-  font-size: 1.138rem;
-}
-
-h5 {
-  font-size: 1.067rem;
-}
-
-@media (--md-viewport) {
-  h1 {
-    font-size: 1.802rem;
-  }
-
-  h2 {
-    font-size: 1.602rem;
-  }
-
-  h3 {
-    font-size: 1.424rem;
-  }
-
-  h4 {
-    font-size: 1.266rem;
-  }
-
-  h5 {
-    font-size: 1.125rem;
-  }
-}
-
-@media (--lg-viewport) {
-  h1 {
-    font-size: 2.488rem;
-  }
-
-  h2 {
-    font-size: 2.074rem;
-  }
-
-  h3 {
-    font-size: 1.728rem;
-  }
-
-  h4 {
-    font-size: 1.44rem;
-  }
-
-  h5 {
-    font-size: 1.2rem;
-  }
-}
-
-p {
-  margin-bottom: 1rem;
-}*/
-
 a:any-link {
   text-decoration: none;
   transition: color ease 200ms, background-color ease 200ms,
     border-color ease 200ms;
 }
-
-/*p.secondary {
-  font-weight: normal;
-  font-size: 0.833rem;
-}*/
-
-/*ul,
-ol {
-  padding: 0;
-  margin: 32px 0 20px 32px;
-  list-style-position: outside;
-
-  & li {
-    margin: 0 0 12px 0;
-    padding: 0 0 0 12px;
-  }
-}*/
 
 main a.cta {
   text-align: center;
@@ -175,8 +52,6 @@ main a.cta {
   margin-top: 1px;
 }
 
-/*Custom classes for font sizing*/
-
 h1,
 h2,
 h3,
@@ -189,7 +64,7 @@ li,
 input {
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  color: var(--colors-base-grey);
+  color: inherit;
 }
 
 .font-nowrap {
@@ -201,90 +76,90 @@ input {
 }
 
 .font-hero {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 44px;
   line-height: 120%;
 }
 
 .font-h1 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 40px;
   line-height: 120%;
   color: var(--colors-base-grey--next);
 }
 
 .font-h1-light {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 40px;
   line-height: 120%;
   color: var(--colors-base-white--next);
 }
 
 .font-h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 32px;
   line-height: 120%;
   color: var(--colors-base-grey--next);
 }
 
 .font-h2-light {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 32px;
   line-height: 120%;
   color: var(--colors-base-white--next);
 }
 
 .font-h3 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   line-height: 120%;
   color: var(--colors-base-grey--next);
 }
 
 .font-h3-light {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   line-height: 120%;
   color: var(--colors-base-white--next);
 }
 
 .font-h4 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 120%;
   color: var(--colors-base-grey--next);
 }
 
 .font-h4-light {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 120%;
   color: var(--colors-base-white--next);
 }
 
 .font-h5 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   line-height: 135%;
   color: var(--colors-base-grey--next);
 }
 
 .font-h5-light {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   line-height: 135%;
   color: var(--colors-base-white--next);
 }
 
 .font-h6 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   color: var(--colors-base-grey--next);
 }
 
 .font-h6-light {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   color: var(--colors-base-white--next);
@@ -306,12 +181,6 @@ input {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--colors-base-white--next);
-}
-
-.font-subtitle {
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 200%;
 }
 
 .font-btn {
@@ -341,14 +210,12 @@ input {
 }
 
 .font-p {
-  font-weight: normal;
   font-size: 16px;
   line-height: 200%;
   color: var(--colors-base-grey-900--next);
 }
 
 .font-p-light {
-  font-weight: normal;
   font-size: 16px;
   line-height: 200%;
   color: var(--colors-base-white--next);
@@ -393,13 +260,11 @@ input {
 }
 
 .font-mono {
-  font-weight: normal;
   font-size: 16px;
   line-height: 200%;
 }
 
 .font-mono-s {
-  font-weight: normal;
   font-size: 14px;
   line-height: 228.5%;
 }
@@ -417,32 +282,4 @@ input {
   font-size: 13px;
   line-height: 184.6%;
 }
-/*
-  Tablets, large phones, smaller phones
-*/
-@media (--md), (--sm), (--xs) {
-  /*.font-btn {
-    font-size: 13px;
-    line-height: 184.6%;
-  }*/
 
-  /*.font-hero {
-    font-size: 34px;
-    line-height: 120%;
-  }*/
-
-  /*.font-h1 {
-    font-size: 30px;
-    line-height: 120%;
-  }*/
-
-  /*.font-h2 {
-    font-size: 26px;
-    line-height: 120%;
-  }*/
-
-  .font-subtitle {
-    font-size: 18px;
-    line-height: 200%;
-  }
-}
