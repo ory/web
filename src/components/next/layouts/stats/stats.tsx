@@ -231,7 +231,7 @@ class Stats extends Component<PropTypes, StateTypes> {
           <Grid lg={3} md={3} sm={12} xs={12}>
             <ContentText padded={true}>
               <Molecule>
-                <h3 className={cn('font-h3-light')}>Billions of Identities.</h3>
+                <h3 className={cn('font-h3-light')}>Billions of Identities</h3>
                 <p className={cn('font-p-light')}>
                   <a
                     href={'#'}
