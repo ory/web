@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   background-color: var(--colors-base-dark);
+  -webkit-text-size-adjust: 100%;
 }
 
 img.responsive {
