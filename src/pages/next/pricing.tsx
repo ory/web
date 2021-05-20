@@ -167,6 +167,15 @@ const PricingPage = () => (
               superuser to control that project.
             </>
           )
+        },       
+        {
+          question: `What does Flexible identity model mean?`,
+          answer: (
+            <>
+              Ory does not charge you for individual identities. We do have limits on database storage space.
+              You can create as many identities as you require, but to prevent abuse of the system we limit the database storage.
+            </>
+          )
         }
       ]}
     />
