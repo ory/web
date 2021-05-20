@@ -32,7 +32,204 @@ const PricingPage = () => (
       }
     />
 
-    <Pricing />
+    <Pricing
+    title={<>No limits on identity</>}
+    description={<>Ory is based on mature open source software and open standards.
+    And it’s affordable for everyone. We also offer individual plans
+    for enterprise customers, please contact us to learn more!</>}
+    saas={[
+    {
+      theme: 'dark',
+      title: 'Early Access',
+      description: 'Get early access to the full Ory platform now',
+      price: '$99',
+      priceDescription: 'per Project/Member',
+      button: (
+      <Button to={'https://console.ory.sh/'} style={'filled'}>
+      Become a member
+      </Button>
+      ),
+      features: [
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Flexible identity model *'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: '1 Member & Project'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: '100k API Calls / 24 hours'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'UI & Dashboard'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle  size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Ory CLI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Community Support'
+    }
+      ]
+    },
+    {
+      theme: 'light',
+      title: 'Enterprise',
+      description: 'Ory with dedicated support & custom hosting options',
+      price: 'Individual',
+      priceDescription: 'per Project/Member',
+      button: (
+      <Button to={'mailto:sales@ory.sh'} style={'outlined'} theme={'grey'}>
+      Contact sales
+      </Button>
+      ),
+      features: [
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Flexible identity model *'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: '>1 Member & Project'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'No limits on API calls'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'UI & Dashboard'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Ory CLI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'HyperCare Support'
+    }
+      ]
+    }
+    ]}
+    opensource={[
+    {
+      theme: 'light',
+      title: 'Self-hosted',
+      description:
+      'Try out Ory locally or deploy self-hosted without any limits.',
+      price: 'Free',
+      priceDescription: '',
+      button: (
+      <Button to={'/docs'} style={'filled'}>
+      Get Started
+      </Button>
+      ),
+      featuresContainer: 'row',
+      features: [
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'No Limits'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Self-hosted'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Write your own UI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'base-grey-600'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'UI & Dashboard'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'base-grey-600'}>
+          <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Ory CLI'
+    },
+    {
+      icon: (
+        <ColourWrapper text={'success-primary'}>
+        <CheckCircle size={16} />
+        </ColourWrapper>
+      ),
+      title: 'Community Support'
+    }
+      ]
+    }
+    ]}
+  />
     
     <Adopters
       adopters={[

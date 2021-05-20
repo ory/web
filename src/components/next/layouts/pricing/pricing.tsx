@@ -19,128 +19,16 @@ import { PriceTier } from './content/pricing-tier'
 import Toggle from '../../freestanding/toggle/toggle'
 import { useState } from 'react'
 
-const pricingTiers: Array<PriceTier> = [
-  {
-    theme: 'dark',
-    title: 'Early Access',
-    description: 'Get early access to the full Ory platform now',
-    price: '$99',
-    priceDescription: 'per Project/Member',
-    button: (
-      <Button to={'https://console.ory.sh/'} style={'filled'}>
-        Become a member
-      </Button>
-    ),
-    features: [
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Flexible identity model *'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: '1 Member & Project'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: '100k API Calls / 24 hours'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'UI & Dashboard'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Ory CLI'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Community Support'
-      }
-    ]
-  },
-  {
-    theme: 'light',
-    title: 'Enterprise',
-    description: 'Ory with dedicated support & custom hosting options',
-    price: 'Individual',
-    priceDescription: 'per Project/Member',
-    button: (
-      <Button to={'mailto:sales@ory.sh'} style={'outlined'} theme={'grey'}>
-        Contact sales
-      </Button>
-    ),
-    features: [
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Flexible identity model *'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: '>1 Member & Project'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'No limits on API calls'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'UI & Dashboard'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Ory CLI'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'HyperCare Support'
-      }
-    ]
-  }
-]
-const pricingOS: Array<PriceTier> = [
-  {
-    theme: 'light',
-    title: 'Self-hosted',
-    description:
-      'Try out Ory locally or deploy self-hosted without any limits.',
-    price: 'Free',
-    priceDescription: '',
-    button: (
-      <Button to={'/docs'} style={'filled'}>
-        Get Started
-      </Button>
-    ),
-    featuresContainer: 'row',
-    features: [
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'No Limits'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Self-hosted'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Write your own UI'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureDisabled)} size={16} />,
-        title: 'UI & Dashboard'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureDisabled)} size={16} />,
-        title: 'Ory CLI'
-      },
-      {
-        icon: <CheckCircle className={cn(styles.featureEnabled)} size={16} />,
-        title: 'Community Support'
-      }
-    ]
-  }
-]
+interface PropTypes {
+  className?: string
+  title: React.ReactElement
+  description: React.ReactElement
+  saas: Array<PriceTier>
+  opensource: Array<PriceTier>
+}
 
-const Pricing = () => {
+
+const Pricing = ({className, title, description, saas, opensource}: PropTypes) => {
   const [togglePricing, setTogglePricing] = useState<boolean>(true)
 
   const handleToggle = () => {
@@ -153,11 +41,9 @@ const Pricing = () => {
         <Grid lg={3} md={6} sm={12} xs={12}>
           <ContentText className={cn(pt64, pb64)}>
             <Molecule>
-              <h1 className={cn('font-h1', pb32)}>No limits on identity</h1>
+              <h1 className={cn('font-h1', pb32)}>{title}</h1>
               <p className={cn('font-p-lg')}>
-                Ory is based on mature open source software and open standards.
-                And it’s affordable for everyone. We also offer individual plans
-                for enterprise customers, please contact us to learn more!
+                {description}
               </p>
             </Molecule>
           </ContentText>
@@ -173,9 +59,9 @@ const Pricing = () => {
           </Container>
 
           {togglePricing ? (
-            <PricingBlock tiers={pricingTiers} />
+            <PricingBlock tiers={saas} />
           ) : (
-            <PricingBlock tiers={pricingOS} />
+            <PricingBlock tiers={opensource} />
           )}
           <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
             <p className={cn('font-p-sm')}>
