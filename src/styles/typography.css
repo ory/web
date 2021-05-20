@@ -64,7 +64,7 @@ li,
 input {
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  color: var(--colors-base-grey);
+  color: inherit;
 }
 
 .font-nowrap {
