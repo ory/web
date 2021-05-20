@@ -49,7 +49,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'kratos'}
+                    to={'/kratos'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -64,7 +64,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'hydra'}
+                    to={'/hydra'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -79,7 +79,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'keto'}
+                    to={'/keto'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -94,7 +94,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'oathkeeper'}
+                    to={'/oathkeeper'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -134,7 +134,7 @@ const Layout = ({ children }: PropTypes) => (
               title: 'Ory Open Source',
               button: (
                 <Button
-                  to={'opensource'}
+                  to={'/open-source'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
@@ -157,7 +157,7 @@ const Layout = ({ children }: PropTypes) => (
               description: 'Start integrating Ory products',
               button: (
                 <Button
-                  to={'docs'}
+                  to={'/docs'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
@@ -176,7 +176,7 @@ const Layout = ({ children }: PropTypes) => (
               description: 'Ory Open Source Community',
               button: (
                 <Button
-                  to={'docs/ecosystem/community/'}
+                  to={'/docs/ecosystem/community/'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
@@ -209,7 +209,7 @@ const Layout = ({ children }: PropTypes) => (
         },
         {
           title: (
-            <Button to={'pricing'} style={'none'}>
+            <Button to={'/pricing'} style={'none'}>
               Pricing
             </Button>
           )
@@ -226,7 +226,7 @@ const Layout = ({ children }: PropTypes) => (
               description: 'Description',
               button: (
                 <Button
-                  to={'blog'}
+                  to={'/blog'}
                   style={'link'}
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
@@ -263,7 +263,7 @@ const Layout = ({ children }: PropTypes) => (
                 <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
-                    to={'about'}
+                    to={'/about'}
                     style={'link'}
                     openInNewWindow={true}
                   >
@@ -316,7 +316,7 @@ const Layout = ({ children }: PropTypes) => (
               <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
-                  to={'docs'}
+                  to={'/docs'}
                   style={'link'}
                   openInNewWindow={true}
                 >
@@ -331,7 +331,7 @@ const Layout = ({ children }: PropTypes) => (
               <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
-                  to={'docs/ecosystem/community/'}
+                  to={'/docs/ecosystem/community/'}
                   style={'link'}
                   openInNewWindow={true}
                 >
@@ -347,7 +347,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'pricing'}
+                to={'/pricing'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -357,7 +357,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'opensource'}
+                to={'/open-source'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -367,7 +367,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'kratos'}
+                to={'/kratos'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -377,7 +377,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'hydra'}
+                to={'/hydra'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -387,7 +387,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'oathkeeper'}
+                to={'/oathkeeper'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -397,7 +397,7 @@ const Layout = ({ children }: PropTypes) => (
             <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
-                to={'keto'}
+                to={'/keto'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -420,7 +420,7 @@ const Layout = ({ children }: PropTypes) => (
           <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5')}
-              to={'blog'}
+              to={'/blog'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -497,7 +497,7 @@ const Layout = ({ children }: PropTypes) => (
         >
           <TwitterLogo size={24} />
         </Button>,
-        <Button to={'chat'} style={'none'} openInNewWindow={true}>
+        <Button to={'/chat'} style={'none'} openInNewWindow={true}>
           <SlackLogo size={24} />
         </Button>,
         <Button
@@ -516,10 +516,10 @@ const Layout = ({ children }: PropTypes) => (
         >
           Status
         </Button>,
-        <Button to={'../privacy'} style={'none'} openInNewWindow={true}>
+        <Button to={'/privacy'} style={'none'} openInNewWindow={false}>
           Privacy
         </Button>,
-        <Button to={'../tos'} style={'none'} openInNewWindow={true}>
+        <Button to={'/tos'} style={'none'} openInNewWindow={false}>
           Terms
         </Button>
       ]}
@@ -537,7 +537,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'opensource'}
+              to={'/open-source'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -545,7 +545,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'hydra'}
+              to={'/hydra'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -553,7 +553,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'kratos'}
+              to={'/kratos'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -561,7 +561,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'keto'}
+              to={'/keto'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -569,7 +569,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'oathkeeper'}
+              to={'/oathkeeper'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -577,7 +577,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'pricing'}
+              to={'/pricing'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -590,7 +590,7 @@ const Layout = ({ children }: PropTypes) => (
           links: [
             <Button
               className={cn('font-p-sm')}
-              to={'docs'}
+              to={'/docs'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -598,7 +598,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'docs/ecosystem/community/'}
+              to={'/docs/ecosystem/community/'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -619,7 +619,7 @@ const Layout = ({ children }: PropTypes) => (
           links: [
             <Button
               className={cn('font-p-sm')}
-              to={'blog'}
+              to={'/blog'}
               style={'none'}
               openInNewWindow={true}
             >
@@ -627,7 +627,7 @@ const Layout = ({ children }: PropTypes) => (
             </Button>,
             <Button
               className={cn('font-p-sm')}
-              to={'about'}
+              to={'/about'}
               style={'none'}
               openInNewWindow={true}
             >
