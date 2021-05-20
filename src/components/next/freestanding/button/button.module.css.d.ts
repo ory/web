@@ -1,5 +1,6 @@
 declare const styles: {
   readonly "btnBase": string;
+  readonly "btnTextContainer": string;
   readonly "styleFilledLight": string;
   readonly "styleFilledDark": string;
   readonly "styleOutlinedLight": string;
