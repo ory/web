@@ -21,7 +21,6 @@ declare const styles: {
   readonly "fontH6Light": string;
   readonly "fontOverline": string;
   readonly "fontOverlineLight": string;
-  readonly "fontSubtitle": string;
   readonly "fontBtn": string;
   readonly "fontLink": string;
   readonly "fontLinkLg": string;

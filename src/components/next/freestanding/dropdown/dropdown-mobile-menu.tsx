@@ -12,24 +12,26 @@ interface PropTypes {
 }
 
 export const DropdownMobileMenuSection = ({className, children}: PropTypes) => (
-  <div>
+  <>
     {Chunks(React.Children.toArray(children), 3).map((chunks, index) => (
         <Container
           className={cn(dropdownSection)}
           key={index}
           alignItems={'start'}
-          justify={'space-between'}
+          justify={'start'}
         >
           {(chunks as Array<React.ReactNode>).map((child, index) => (
-            <Grid sm={4} xs={4} key={index} className={cn(dropdownSection)}>
-              {child}
-            </Grid>
+              <Grid sm={4} xs={4} key={index}>
+                {child}
+              </Grid>
           ))}
         </Container>
     ))}
-  </div>
+  </>
 )
 
 export const DropdownMobileMenu = ({className, children}: PropTypes) => (
-  <div className={cn(dropdownMobileMenu)}>{children}</div>
+  <div className={cn(dropdownMobileMenu)}>
+    <Container className={cn(pb32)} flexContainer={'column'} justify={'start'} alignItems={'stretch'}>{children}</Container>
+  </div>
 )

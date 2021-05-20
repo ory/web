@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "pricing": string;
+  readonly "itemFont": string;
 };
 export = styles;
 
