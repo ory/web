@@ -35,7 +35,7 @@ const featureSections: Array<FeatureSection> = [
     description:
       'Sign up now and instantly access these features. All features except the Ory CLI and interfaces are included when self hosting.',
     button: (
-      <Button style={'text'} to={'docs'} iconRight={<ArrowRight size={16} />}>
+      <Button style={'text'} to={'/docs'} iconRight={<ArrowRight size={16} />}>
         Read more
       </Button>
     ),
