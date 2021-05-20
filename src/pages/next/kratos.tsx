@@ -111,7 +111,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/kratos/'}
+            to={'/docs/kratos/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -139,7 +139,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/kratos/next/'}
+            to={'/docs/kratos/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >

@@ -139,7 +139,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/keto/'}
+            to={'/docs/keto/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -164,7 +164,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/keto/next/'}
+            to={'/docs/keto/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >

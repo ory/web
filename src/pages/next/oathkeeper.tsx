@@ -112,7 +112,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/oathkeeper/'}
+            to={'/docs/oathkeeper/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -139,7 +139,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/oathkeeper/next/'}
+            to={'/docs/oathkeeper/next/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >

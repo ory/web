@@ -146,7 +146,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/kratos/next/'}
+            to={'/docs/kratos/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -170,7 +170,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/hydra/next/'}
+            to={'/docs/hydra/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -192,7 +192,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/keto/next/'}
+            to={'/docs/keto/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
@@ -216,7 +216,7 @@ const IndexPage = () => (
       buttons={
         <>
           <Button
-            to={'docs/oathkeeper/next/'}
+            to={'/docs/oathkeeper/install/'}
             style={'link'}
             iconRight={<ArrowRight size={16} />}
           >
