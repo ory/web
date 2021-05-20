@@ -90,15 +90,15 @@ const PricingPage = () => (
       description={
         <>
           If you cant find your question here, reach out to us on{' '}
-          <a href={'/'} className={cn('link link-md link-news')}>
+          <a href={'https://github.com/ory'} className={cn('link link-md link-news')}>
             GitHub
           </a>
           , our{' '}
-          <a href={'/'} className={cn('link link-md link-news')}>
+          <a href={'/chat'} className={cn('link link-md link-news')}>
             Slack Channel
           </a>{' '}
           or{' '}
-          <a href={'mailto://'} className={cn('link link-md link-news')}>
+          <a href={'mailto:office@ory.sh'} className={cn('link link-md link-news')}>
             via email.
           </a>{' '}
         </>
