@@ -18,7 +18,7 @@ import Faq from '../../components/next/layouts/faq/faq'
 import Button from '../../components/next/freestanding/button/button'
 import cn from 'classnames'
 import SEO from '../../components/next/layouts/seo/seo'
-import {ArrowRight, CheckCircle, Circle, Flag, Triangle } from 'phosphor-react'
+import {ArrowRight, CheckCircle, Circle, CirclesThreePlus, Flag, MapTrifold, Triangle } from 'phosphor-react'
 
 const PricingPage = () => (
   <Layout>
@@ -286,7 +286,7 @@ const PricingPage = () => (
     
     <FeatureList features={[
       {
-        icon: <Triangle color={'white'} size={24} />,
+        icon: (<CirclesThreePlus size={24} />),
         title: 'Features',
         description:
           'Sign up now and instantly access these features. All features except the Ory CLI and interfaces are included when self hosting.',
@@ -302,7 +302,7 @@ const PricingPage = () => (
               'Control the Ory platform from the command line with an intuitive and accessible syntax. ',
             icon: (
               <ColourWrapper text={'success-primary'}>
-                <CheckCircle size={16} />
+                <CheckCircle size={16} weight={'bold'} />
               </ColourWrapper>)
               
           },
@@ -312,7 +312,7 @@ const PricingPage = () => (
               'The basics of IAM: Login & register users fast and without complicated flows and store credentials securely.',
             icon: (
               <ColourWrapper text={'success-primary'}>
-                <CheckCircle size={16} />
+                <CheckCircle size={16} weight={'bold'} />
               </ColourWrapper>
             )
           },
@@ -322,7 +322,7 @@ const PricingPage = () => (
               'Manage your users, enable email verification, let users pick new passwords and change their profile data.',
             icon: (
               <ColourWrapper text={'success-primary'}>
-                <CheckCircle size={16} />
+                <CheckCircle size={16} weight={'bold'} />
               </ColourWrapper>
             )
           },
@@ -332,7 +332,7 @@ const PricingPage = () => (
               'Display stats in a smooth and responsive dashboard. We also offer presets for all common user interfaces.',
             icon: (
               <ColourWrapper text={'success-primary'}>
-                <CheckCircle size={16} />
+                <CheckCircle size={16} weight={'bold'} />
               </ColourWrapper>
             )
           },
@@ -342,7 +342,7 @@ const PricingPage = () => (
               'A flexible identity model adapts to your business needs. You can use one of our provided presets or cook up your own identity model.',
             icon: (
               <ColourWrapper text={'success-primary'}>
-                <CheckCircle size={16} />
+                <CheckCircle size={16} weight={'bold'} />
               </ColourWrapper>
             )
           },
@@ -353,18 +353,14 @@ const PricingPage = () => (
             icon:
               (
                 <ColourWrapper text={'success-primary'}>
-                  <CheckCircle size={16} />
+                  <CheckCircle size={16} weight={'bold'} />
                 </ColourWrapper>
               )
           }
         ]
       },
       {
-        icon: (
-          <ColourWrapper text={'base-white'}>
-            <Circle size={24} />
-          </ColourWrapper>
-        ),
+        icon: (<MapTrifold size={24} />),
         title: 'Features landing in 2021',
         description:
           'We are currently working on implementing these features. Sign up for the newsletter to stay up to date!',
@@ -377,7 +373,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Multifactor Authentication',
@@ -387,7 +383,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Permissions & Roles',
@@ -397,7 +393,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Use your UI',
@@ -407,7 +403,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Webhooks & Triggers',
@@ -417,7 +413,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Payments',
@@ -427,7 +423,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Email',
@@ -437,7 +433,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'OAuth2.0',
@@ -447,7 +443,7 @@ const PricingPage = () => (
           {
             icon: (
               <ColourWrapper text={'themed-primary'}>
-                <Flag size={16} />
+                <Flag size={16} weight={'bold'} />
               </ColourWrapper>
             ),
             title: 'Machine 2 Machine',
@@ -462,16 +458,16 @@ const PricingPage = () => (
       title={<>Frequently Asked Questions</>}
       description={
         <>
-          If you cant find your question here, reach out to us on{' '}
-          <Button style={'none'} to={'https://github.com/ory'} className={cn('link link-md link-news')}>
-            GitHub
-          </Button>
-          , our
-          <Button style={'none'} to={'/chat'} className={cn('link link-md link-news')}>
+          If you cant find your question here, reach out to us on&nbsp;
+            <Button style={'link-inline'} to={'https://github.com/ory'}>
+              GitHub
+            </Button>
+          , our&nbsp;
+          <Button style={'link-inline'} to={'/chat'}>
             Slack Channel
           </Button>
-          or
-          <Button style={'none'} to={'mailto:office@ory.sh'} className={cn('link link-md link-news')}>
+          &nbsp;or&nbsp;
+          <Button style={'link-inline'} to={'mailto:office@ory.sh'} className={cn('link link-md link-news')}>
             via email.
           </Button>
         </>

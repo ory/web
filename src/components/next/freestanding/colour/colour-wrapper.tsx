@@ -19,7 +19,7 @@ type Themes =
   | Base
 
 interface PropType {
-  children: React.ReactNode
+  children: React.ReactElement
   className?: string
   background?: Themes
   text?: Themes
@@ -36,7 +36,7 @@ const Colour = styled.div<ColourProps>`
   > * {
     color: var(${(props) => props.text || ''});
     background: var(${(props) => props.background || ''});
-    filter: var(${(props) => props.fill || ''});
+    /*filter: var(${(props) => props.fill || ''});*/
   }
 `
 
