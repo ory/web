@@ -46,7 +46,6 @@ const Layout = ({ children }: PropTypes) => (
             {
               description: 'User & Identity Management',
               button: (
-                <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
                     to={'/kratos'}
@@ -55,13 +54,11 @@ const Layout = ({ children }: PropTypes) => (
                   >
                     Kratos
                   </Button>
-                </ColourWrapper>
               )
             },
             {
               description: 'OAuth 2.0 & OpenIDConnect',
               button: (
-                <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
                     to={'/hydra'}
@@ -70,13 +67,11 @@ const Layout = ({ children }: PropTypes) => (
                   >
                     Hydra
                   </Button>
-                </ColourWrapper>
               )
             },
             {
               description: 'Authorization Server',
               button: (
-                <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
                     to={'/keto'}
@@ -85,13 +80,11 @@ const Layout = ({ children }: PropTypes) => (
                   >
                     Keto
                   </Button>
-                </ColourWrapper>
               )
             },
             {
               description: 'Zero Trust Networking',
               button: (
-                <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
                     to={'/oathkeeper'}
@@ -100,7 +93,6 @@ const Layout = ({ children }: PropTypes) => (
                   >
                     Oathkeeper
                   </Button>
-                </ColourWrapper>
               )
             }
           ],
@@ -225,7 +217,6 @@ const Layout = ({ children }: PropTypes) => (
             {
               description: '',
               button: (
-                <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
                     to={'/about'}
@@ -234,13 +225,11 @@ const Layout = ({ children }: PropTypes) => (
                   >
                     About Us
                   </Button>
-                </ColourWrapper>
               )
             },
             {
               description: '',
               button: (
-                <ColourWrapper text={'base-grey'}>
                   <Button
                     className={cn('font-h5')}
                     to={'https://github.com/ory/jobs'}
@@ -252,7 +241,6 @@ const Layout = ({ children }: PropTypes) => (
                       <div className={cn('font-p-sm')}>We're hiring!</div>
                     </ColourWrapper>
                   </Button>
-                </ColourWrapper>
               )
             }
           ]
@@ -263,7 +251,6 @@ const Layout = ({ children }: PropTypes) => (
           {
             description: 'Never Build Auth Again',
             button: (
-              <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
                   to={'https://console.ory.sh'}
@@ -272,13 +259,11 @@ const Layout = ({ children }: PropTypes) => (
                 >
                   Ory as a Service
                 </Button>
-              </ColourWrapper>
             )
           },
           {
             description: 'Start integrating Ory products',
             button: (
-              <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
                   to={'/docs'}
@@ -287,13 +272,11 @@ const Layout = ({ children }: PropTypes) => (
                 >
                   Documentation
                 </Button>
-              </ColourWrapper>
             )
           },
           {
             description: 'Ory Open Source Community',
             button: (
-              <ColourWrapper text={'base-grey'}>
                 <Button
                   className={cn('font-h5')}
                   to={'/docs/ecosystem/community/'}
@@ -302,14 +285,12 @@ const Layout = ({ children }: PropTypes) => (
                 >
                   Community
                 </Button>
-              </ColourWrapper>
             )
           }
         ],
         main: {
           title: 'Product',
           buttons: [
-            <ColourWrapper text={'base-grey'}>
               <Button
                 className={cn('font-h5')}
                 to={'/pricing'}
@@ -317,9 +298,7 @@ const Layout = ({ children }: PropTypes) => (
                 openInNewWindow={true}
               >
                 Pricing
-              </Button>
-            </ColourWrapper>,
-            <ColourWrapper text={'base-grey'}>
+              </Button>,
               <Button
                 className={cn('font-h5')}
                 to={'/open-source'}
@@ -327,9 +306,7 @@ const Layout = ({ children }: PropTypes) => (
                 openInNewWindow={true}
               >
                 Ory Open Source
-              </Button>
-            </ColourWrapper>,
-            <ColourWrapper text={'base-grey'}>
+              </Button>,
               <Button
                 className={cn('font-h5')}
                 to={'/kratos'}
@@ -337,9 +314,7 @@ const Layout = ({ children }: PropTypes) => (
                 openInNewWindow={true}
               >
                 Kratos
-              </Button>
-            </ColourWrapper>,
-            <ColourWrapper text={'base-grey'}>
+              </Button>,
               <Button
                 className={cn('font-h5')}
                 to={'/hydra'}
@@ -347,9 +322,7 @@ const Layout = ({ children }: PropTypes) => (
                 openInNewWindow={true}
               >
                 Hydra
-              </Button>
-            </ColourWrapper>,
-            <ColourWrapper text={'base-grey'}>
+              </Button>,
               <Button
                 className={cn('font-h5')}
                 to={'/oathkeeper'}
@@ -357,9 +330,7 @@ const Layout = ({ children }: PropTypes) => (
                 openInNewWindow={true}
               >
                 Oathkeeper
-              </Button>
-            </ColourWrapper>,
-            <ColourWrapper text={'base-grey'}>
+              </Button>,
               <Button
                 className={cn('font-h5')}
                 to={'/keto'}
@@ -368,11 +339,9 @@ const Layout = ({ children }: PropTypes) => (
               >
                 Keto
               </Button>
-            </ColourWrapper>
           ]
         },
         extra: [
-          <ColourWrapper text={'base-grey'}>
             <Button
               className={cn('font-h5')}
               to={'https://github.com/ory'}
@@ -380,9 +349,7 @@ const Layout = ({ children }: PropTypes) => (
               openInNewWindow={true}
             >
               GitHub
-            </Button>
-          </ColourWrapper>,
-          <ColourWrapper text={'base-grey'}>
+            </Button>,
             <Button
               className={cn('font-h5')}
               to={'/blog'}
@@ -390,9 +357,7 @@ const Layout = ({ children }: PropTypes) => (
               openInNewWindow={true}
             >
               Blog
-            </Button>
-          </ColourWrapper>,
-          <ColourWrapper text={'base-grey'}>
+            </Button>,
             <Button
               className={cn('font-h5')}
               to={'mailto:hi@ory.sh'}
@@ -400,9 +365,7 @@ const Layout = ({ children }: PropTypes) => (
               openInNewWindow={true}
             >
               Contact us
-            </Button>
-          </ColourWrapper>,
-          <ColourWrapper text={'base-grey'}>
+            </Button>,
             <Button
               className={cn('font-h5')}
               to={'about'}
@@ -410,9 +373,7 @@ const Layout = ({ children }: PropTypes) => (
               openInNewWindow={true}
             >
               About us
-            </Button>
-          </ColourWrapper>,
-          <ColourWrapper text={'base-grey'}>
+            </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
               to={'https://github.com/ory/jobs'}
@@ -424,7 +385,6 @@ const Layout = ({ children }: PropTypes) => (
                 <div className={cn('font-p-sm')}>we're hiring!</div>
               </ColourWrapper>
             </Button>
-          </ColourWrapper>
         ]
       }}
     />
