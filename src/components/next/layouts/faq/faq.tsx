@@ -4,7 +4,7 @@ import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import { pb32, pb48, pl8 } from '../../freestanding/utils/padding.module.css'
+import {pb16, pb32, pb4, pb48, pl8 } from '../../freestanding/utils/padding.module.css'
 import {
   Accordion,
   AccordionItem,
@@ -56,14 +56,16 @@ const Faq = ({ title, description, content }: PropTypes) => {
               >
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <h3 className={cn('font-h3', faqHeading)}>
-                      {question}
+                    <Container className={cn(pb16)}>
+                      <h3 className={cn('font-h3', faqHeading)}>
+                        {question}
+                      </h3>
                       {expanded.includes(String(index)) ? (
                         <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
                       ) : (
                         <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
                       )}
-                    </h3>
+                    </Container>
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
