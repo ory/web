@@ -1,5 +1,13 @@
 .faq {
   padding: 128px 0;
+  & a {
+    color: var(--colors-themed-primary--next);
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--colors-themed-dark--next);
+    }
+  }
 }
 
 .faq-heading {
