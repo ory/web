@@ -19,7 +19,7 @@ type Themes =
   | Base
 
 interface PropType {
-  children: React.ReactElement
+  children: React.ReactNode
   className?: string
   background?: Themes
   text?: Themes
