@@ -11,6 +11,7 @@ import Grid from '../../../freestanding/containers/grid'
 import ContentText from '../../../freestanding/content/content-text'
 import Molecule from '../../../freestanding/molecule/molecule'
 import MoleculeIconWrapper from '../../../freestanding/molecule/molecule-icon-wrapper'
+import {Styling} from '../../../freestanding/styling/styling'
 
 export interface Features {
   title: string
@@ -23,7 +24,7 @@ interface PropType {
   features: Array<Features>
 }
 
-const FeatureListContent = ({ className, features }: PropType) => (
+const FeatureListContent = ({className, features}: PropType) => (
   <div className={cn(className && className)}>
     <Container flexContainer={'column'}>
       {features.map((feature) => {

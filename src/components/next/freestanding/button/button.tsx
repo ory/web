@@ -10,7 +10,7 @@ import ColourWrapper from '../colour/colour-wrapper'
 export interface PropTypes {
   children?: React.ReactNode
   className?: string
-  style: 'filled' | 'outlined' | 'text' | 'none' | 'link'
+  style: 'filled' | 'outlined' | 'text' | 'none' | 'link' | 'link-inline'
   theme?: 'light' | 'dark' | 'grey'
   to: string | (() => void)
   openInNewWindow?: boolean
@@ -30,12 +30,12 @@ const Button = ({
                   iconRight,
                   iconLeft
                 }: PropTypes) => {
-  const getStyle = (style: string, theme: string) => {
+  const getStyle = (style: string, theme: string): string => {
     // @ts-ignore
     return styles[`style${ParseCase(style)}${ParseCase(theme)}`]
   }
   
-  let classes = [disabled && styles.disabled, className && className]
+  let classes: Array<string> = []
   
   if (style !== 'none') {
     classes = classes.concat([styles.btnBase, getStyle(style, theme)])
@@ -43,8 +43,21 @@ const Button = ({
   
   if (style == 'link') {
     classes = classes.concat(['font-link', 'font-link-md'])
-  } else {
+  }
+  else {
     classes.push('font-btn')
+  }
+  
+  if (style == 'link-inline') {
+    classes = classes.filter(val => !['font-btn', styles.btnBase].includes(val))
+  }
+  
+  if (disabled) {
+    classes.push(styles.disabled)
+  }
+  
+  if (className) {
+    classes.push(className)
   }
   
   if (typeof to === 'string') {
