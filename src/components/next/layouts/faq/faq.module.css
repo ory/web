@@ -3,6 +3,7 @@
 }
 
 .faq-heading {
+
   &:hover {
     cursor: pointer;
   }
