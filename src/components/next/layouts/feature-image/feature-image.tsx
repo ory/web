@@ -46,8 +46,8 @@ const Content = ({ title, overline, description, buttons }: Content) => (
   <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb32)}>
     <ContentText>
       <Molecule>
-        <h2 className={cn(pb16, 'font-overline')}>{overline}</h2>
-        <h3 className={cn('font-h3', pb32)}>{title}</h3>
+        <h3 className={cn(pb16, 'font-overline')}>{overline}</h3>
+        <h2 className={cn('font-h3', pb32)}>{title}</h2>
         <p className={cn('font-p')}>{description}</p>
       </Molecule>
       {buttons && (
