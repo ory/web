@@ -4,7 +4,7 @@ import {
   dropdownSection
 } from './dropdown-mobile-menu.module.css'
 import cn from 'classnames'
-import { Chunks } from '../../../../util'
+import { Chunks } from '../../../util'
 import Container from '../containers/container'
 import { pb24, pb32 } from '../utils/padding.module.css'
 import Grid from '../containers/grid'

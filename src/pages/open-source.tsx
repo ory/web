@@ -11,34 +11,34 @@ import {
   Users
 } from 'phosphor-react'
 import React from 'react'
-import Button from '../../components/next/freestanding/button/button'
-import ColourWrapper from '../../components/next/freestanding/colour/colour-wrapper'
-import Molecule from '../../components/next/freestanding/molecule/molecule'
-import Adopters from '../../components/next/layouts/adopters/adopters'
-import Coding from '../../components/next/layouts/coding/coding'
-import FeatureImage from '../../components/next/layouts/feature-image/feature-image'
-import Footer from '../../components/next/layouts/footer/footer'
-import Hero from '../../components/next/layouts/hero/hero'
-import Layout from '../../components/next/layouts/layout/layout'
-import Quickstart from '../../components/next/layouts/quickstart/quickstart'
-import Stats from '../../components/next/layouts/stats/stats'
-import Quotes from '../../components/next/layouts/quotes/quotes'
-import opensource from '../../images/illustrations/opensource.svg'
-import kratos from '../../images/kratos/kratos.svg'
-import hydra from '../../images/hydra/hydra.svg'
-import keto from '../../images/keto/keto.svg'
-import oathkeeper from '../../images/oathkeeper/oathkeeper.svg'
-import blues from '../../images/adopters/blues.svg'
-import thoughtworks from '../../images/adopters/thoughtworks.svg'
-import kyma from '../../images/adopters/kyma.svg'
-import raspberrypi from '../../images/adopters/raspberrypi.svg'
-import segment from '../../images/adopters/segment.svg'
-import sainsburys from '../../images/adopters/sainsburys.svg'
-import hootsuite from '../../images/adopters/hootsuite.svg'
-import threerein from '../../images/adopters/threerein.svg'
-import { pl32 } from '../../components/next/freestanding/utils/padding.module.css'
+import Button from '../components/freestanding/button/button'
+import ColourWrapper from '../components/freestanding/colour/colour-wrapper'
+import Molecule from '../components/freestanding/molecule/molecule'
+import Adopters from '../components/layouts/adopters/adopters'
+import Coding from '../components/layouts/coding/coding'
+import FeatureImage from '../components/layouts/feature-image/feature-image'
+import Footer from '../components/layouts/footer/footer'
+import Hero from '../components/layouts/hero/hero'
+import Layout from '../components/layouts/layout/layout'
+import Quickstart from '../components/layouts/quickstart/quickstart'
+import Stats from '../components/layouts/stats/stats'
+import Quotes from '../components/layouts/quotes/quotes'
+import opensource from '../images/illustrations/opensource.svg'
+import kratos from '../images/kratos/kratos.svg'
+import hydra from '../images/hydra/hydra.svg'
+import keto from '../images/keto/keto.svg'
+import oathkeeper from '../images/oathkeeper/oathkeeper.svg'
+import blues from '../images/adopters/blues.svg'
+import thoughtworks from '../images/adopters/thoughtworks.svg'
+import kyma from '../images/adopters/kyma.svg'
+import raspberrypi from '../images/adopters/raspberrypi.svg'
+import segment from '../images/adopters/segment.svg'
+import sainsburys from '../images/adopters/sainsburys.svg'
+import hootsuite from '../images/adopters/hootsuite.svg'
+import threerein from '../images/adopters/threerein.svg'
+import { pl32 } from '../components/freestanding/utils/padding.module.css'
 import cn from 'classnames'
-import SEO from '../../components/next/layouts/seo/seo'
+import SEO from '../components/layouts/seo/seo'
 
 const IndexPage = () => (
   <Layout>
@@ -132,7 +132,15 @@ const IndexPage = () => (
         }
       ]}
     />
-    <Stats />
+    <Stats
+      title={<>Billions of Identities</>}
+      description={
+        <>
+          Companies from all over the world rely on Ory for their identity
+          needs. Ory technology secures billions of identity requests.
+        </>
+      }
+    />
 
     <FeatureImage
       overline={'User & Identity Management'}

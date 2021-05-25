@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from 'gatsby'
 import cn from 'classnames'
 import Container from '../containers/container'
 import { pl8, pr8 } from '../utils/padding.module.css'
-import { ParseCase } from '../../../../util'
+import { ParseCase } from '../../../util'
 import ColourWrapper from '../colour/colour-wrapper'
 
 export interface PropTypes {

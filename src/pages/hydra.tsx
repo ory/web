@@ -1,34 +1,30 @@
-import Layout from '../components/layout'
+import {
+  ArrowRight,
+  BookOpen,
+  CirclesThreePlus,
+  Code,
+  GitMerge,
+  LockOpen,
+  RocketLaunch,
+  Terminal,
+  UserPlus,
+  Users
+} from 'phosphor-react'
 import React from 'react'
-import CompressedHero from '../components/compressed-hero'
+import Button from '../components/freestanding/button/button'
+import ColourWrapper from '../components/freestanding/colour/colour-wrapper'
+import Molecule from '../components/freestanding/molecule/molecule'
+import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Newsletter from '../components/newsletter'
-import CompressedSection from '../components/compressed-section'
-import SEO from '../components/seo'
-import Stats from '../components/stats'
-import CodeBox, { Languages } from '../components/codebox'
-import { brandPrefix } from '../config'
-import Collaborator from '../components/collaborator'
-import hydraProcess from '../images/hydra/hydra.svg'
+import Footer from '../components/layouts/footer/footer'
+import Hero from '../components/layouts/hero/hero'
+import Layout from '../components/layouts/layout/layout'
+import Quickstart from '../components/layouts/quickstart/quickstart'
 import hydraPolyglot from '../images/hydra/hydra_p.svg'
-import Adopters from '../components/adopters'
-
-const HydraAnimation = () => (
-  <img
-    loading="lazy"
-    alt="The ORY Hydra login and consent flow"
-    className="responsive"
-    src={hydraProcess}
-  />
-)
-
-const HydraSdk = () => (
-  <img
-    loading="lazy"
-    alt="ORY Hydra SDKs"
-    className="responsive"
-    src={hydraPolyglot}
-  />
-)
+import hydraProcess from '../images/hydra/hydra.svg'
+import CodeBox, { Languages } from '../components/codebox'
+import cn from 'classnames'
+import SEO from '../components/layouts/seo/seo'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -66,111 +62,161 @@ const IntegrationCodeBox = () => (
   />
 )
 
-const HydraPage = () => (
-  <Layout
-    theme="hydra"
-    appendix={'Hydra'}
-    githubLink="https://github.com/ory/hydra"
-    discussionsLink="https://github.com/ory/hydra/discussions"
-  >
+const IndexPage = () => (
+  <Layout>
     <SEO
-      description=""
+      description="Open Source OAuth 2.0 and OpenID Connect Server - gethydra.sh."
       title={
         process.env.GATSBY_DOMAIN === 'gethydra.sh'
           ? 'Open Source OAuth 2.0 and OpenID Connect Server - gethydra.sh'
-          : `${brandPrefix}Hydra Open Source OAuth 2.0 and OpenID Connect Server - ory.sh`
+          : `Ory / Hydra Open Source OAuth 2.0 and OpenID Connect Server`
       }
     />
 
-    <CompressedHero
-      title="OAuth 2.0 and OpenID Certified® OpenID Connect Server"
-      subtitle="Secure access to your applications and APIs, and authenticate third party users."
-      cta={[
-        {
-          title: 'Get started',
-          href: 'https://www.ory.sh/docs/hydra/5min-tutorial',
-          style: 'primary'
-        },
-        {
-          title: 'GitHub',
-          href: 'https://github.com/ory/hydra',
-          style: 'secondary'
-        }
-      ]}
-      visual={<HydraAnimation />}
+    <Hero
+      title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
+      description={
+        'Secure access to your applications and APIs, and authenticate third party users.'
+      }
+      image={<img loading="lazy" alt="" src={hydraProcess} />}
     />
 
     <Newsletter preselect="hydra" />
-    <CompressedSection
-      expanded
-      left={
+
+    <FeatureImage
+      overline={'Start in minutes'}
+      title={<>Easy Integration</>}
+      description={
         <>
-          <h3>Easy integration</h3>
-          <p>
-            {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
-            technology that integrates with any login system. Get started in
-            minutes, and provide secure access to your application and API
-            endpoints.
-          </p>
-          <p>
-            {brandPrefix}Hydra works with any login system and only a few lines
-            of code are required. Head over to our{' '}
-            <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
-            more.{' '}
-          </p>
+          Ory / Hydra is Open Source and OpenID Connect Certified® technology
+          that integrates with any login system. Get started in minutes, and
+          provide secure access to your application and API endpoints.
+          <br />
+          Ory / Hydra works with any login system and only a few lines of code
+          are required.
+          <br />
+          Head over to our documentation and learn more.
         </>
       }
-      right={<IntegrationCodeBox />}
-      mobile={[
-        <h3>Easy integration</h3>,
-        <IntegrationCodeBox />,
-        <div className={'mobile-offset-32'}>
-          <p>
-            {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
-            technology that integrates with any login system. Get started in
-            minutes, and provide secure access to your application and API
-            endpoints.
-          </p>
-          <p>
-            {brandPrefix}Hydra works with any login system and only a few lines
-            of code are required. Head over to our{' '}
-            <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
-            more.{' '}
-          </p>
-        </div>
-      ]}
+      buttons={
+        <>
+          <Button
+            to={'/docs/hydra/'}
+            style={'link'}
+            iconRight={<ArrowRight size={16} />}
+          >
+            Check out the docs
+          </Button>
+        </>
+      }
+      image={<IntegrationCodeBox />}
     />
 
-    <CompressedSection
-      right={<HydraSdk />}
-      left={
+    <FeatureImage
+      mirror={true}
+      overline={'Polyglot'}
+      title={<>SDKs for all languages</>}
+      description={
         <>
-          <h3>Polyglot</h3>
-          <p>
-            {brandPrefix}Hydra is written in Go and we provide SDKs for every
-            language. We work with any login system and it is easy to customize
-            the login experience. Our{' '}
-            <a href="https://www.ory.sh/docs/hydra/sdk/">documentation</a> makes
-            integrating {brandPrefix}Hydra a snap.
-          </p>
+          Ory / Hydra is written in Go and we provide SDKs for almost every
+          language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
+          Typescript.
+          <br />
+          We work with any login system and it is easy to customize the login
+          experience.
+          <br />
+          Our documentation makes integrating Ory / Hydra a snap.
         </>
       }
-      mobile={[
-        <h3>Polyglot</h3>,
-        <HydraSdk />,
-        <p className="mobile-offset-32">
-          {brandPrefix}Hydra is written in Go and we provide SDKs for every
-          language. We work with any login system and it is easy to customize
-          the login experience. Our{' '}
-          <a href="https://www.ory.sh/docs/hydra/sdk/">documentation</a> makes
-          integrating {brandPrefix}Hydra a snap.
-        </p>
+      buttons={
+        <>
+          <Button
+            to={'/docs/keto/install/'}
+            style={'link'}
+            iconRight={<ArrowRight size={16} />}
+          >
+            Install Ory / Hydra
+          </Button>
+        </>
+      }
+      image={<img loading="lazy" alt="" src={hydraPolyglot} />}
+    />
+
+    <Quickstart
+      title={<>Ready to get started?</>}
+      description={
+        <>
+          Explore Ory and the future of identity.
+          <br />
+          Make yourself heard in discussions and contribute on GitHub.
+          <br />
+          Your code will be shipped in the next version.
+        </>
+      }
+      buttons={
+        <>
+          <Button
+            style={'link'}
+            to={'/docs/ecosystem/projects'}
+            iconRight={<ArrowRight size={16} />}
+          >
+            Open Source Documentation
+          </Button>
+        </>
+      }
+      content={[
+        {
+          icon: <BookOpen size={32} />,
+          title: (
+            <>
+              Slack:
+              <br />
+              Developer Chat
+            </>
+          ),
+          description: (
+            <>
+              A community to help you succeed. Become a hero for developers, ask
+              questions & participate in events.
+            </>
+          ),
+          button: (
+            <Button
+              to={'/chat'}
+              style={'link'}
+              iconRight={<ArrowRight size={16} />}
+            >
+              Join the chat
+            </Button>
+          )
+        },
+        {
+          icon: <Users size={32} />,
+          title: (
+            <>
+              GitHub:
+              <br /> Discussions & Code
+            </>
+          ),
+          description: (
+            <>
+              Make yourself heard on GitHub and contribute code and insights to
+              the open source projects at the heart of Ory.
+            </>
+          ),
+          button: (
+            <Button
+              to={'https://github.com/ory/'}
+              style={'link'}
+              iconRight={<ArrowRight size={16} />}
+            >
+              Explore ecosystem
+            </Button>
+          )
+        }
       ]}
     />
-    <Collaborator />
-    <Adopters />
-    <Stats />
   </Layout>
 )
 
-export default HydraPage
+export default IndexPage

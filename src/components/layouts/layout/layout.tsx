@@ -3,7 +3,7 @@ import * as styles from './layout.module.css'
 import cn from 'classnames'
 import Footer, { Contact, FooterPropTypes, LinkSection } from '../footer/footer'
 import Navigation from '../navigation/navigation'
-import logoOryFooter from '../../../../images/logo-ory-footer.svg'
+import logoOryFooter from '../../../images/logo-ory-footer.svg'
 import Button from '../../freestanding/button/button'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import {
@@ -15,8 +15,8 @@ import {
   TwitterLogo,
   YoutubeLogo
 } from 'phosphor-react'
-import oryLogoPrimary from '../../../../images/logo-ory-primary.svg'
-import developerIllustration from '../../../../images/illustrations/developer.svg'
+import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
+import developerIllustration from '../../../images/illustrations/developer.svg'
 
 interface PropTypes {
   children?: React.ReactNode

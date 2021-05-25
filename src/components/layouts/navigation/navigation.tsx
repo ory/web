@@ -27,7 +27,7 @@ import {
   DropdownMobileMenuSection
 } from '../../freestanding/dropdown/dropdown-mobile-menu'
 import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
-import { Chunks } from '../../../../util'
+import { Chunks } from '../../../util'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 
 export interface DropdownMenuItem {
