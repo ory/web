@@ -6,6 +6,7 @@ declare const styles: {
   readonly "styleOutlinedLight": string;
   readonly "styleOutlinedDark": string;
   readonly "styleOutlinedGrey": string;
+  readonly "styleLinkInlineLight": string;
   readonly "styleTextLight": string;
   readonly "styleTextDark": string;
   readonly "styleLinkLight": string;

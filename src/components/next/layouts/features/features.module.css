@@ -1,3 +1,9 @@
 .features {
   padding: 128px 0;
 }
+
+.feature-icon-container {
+  display: inline-flex;
+  align-self: center;
+  flex-wrap: nowrap;
+}
