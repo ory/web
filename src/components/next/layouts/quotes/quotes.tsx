@@ -34,7 +34,7 @@ const QuoteBlock = ({
   person,
   jobTitle
 }: Quote) => (
-  <ContentText className={cn(quoteBlock, className && className)}>
+  <div className={cn(quoteBlock, className && className)}>
     <div className={cn(quoteImg)}>{logo}</div>
     <h4 className={cn('font-h4', pt64)}>{description}</h4>
     <ColourWrapper text={'base-grey-600'}>
@@ -43,16 +43,16 @@ const QuoteBlock = ({
     <ColourWrapper text={'base-grey-400'}>
       <p className={cn('font-p-lg', pt4)}>{jobTitle}</p>
     </ColourWrapper>
-  </ContentText>
+  </div>
 )
 
 const Quotes = ({ quotes, title }: PropTypes) => (
-  <div className={cn(quote)}>
-    <Container fluid={true} justify={'start'} smHidden={true} xsHidden={true}>
-      <Grid lg={6} md={6} sm={12} xs={12}>
-        <h3 className={cn('font-h3')}>{title}</h3>
+  <>
+    <Container fluid={true} className={cn(quote)}>
+      <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb32)}>
+        <span className={cn('font-h3')}>{title}</span>
       </Grid>
-      <Grid lg={6} md={6}>
+      <Grid lg={5} md={5} sm={12} xs={12}>
         <Carousel
           centerMode={false}
           autoPlay={true}
@@ -79,24 +79,7 @@ const Quotes = ({ quotes, title }: PropTypes) => (
         </Carousel>
       </Grid>
     </Container>
-    <Container fluid={true} lgHidden={true} mdHidden={true}>
-      <Grid lg={5} md={6} sm={12} xs={12}>
-        <h3 className={cn('font-h3')}>{title}</h3>
-      </Grid>
-      <Grid lgHidden={true} mdHidden={true} sm={12} xs={12}>
-        {quotes.map((quote, index) => (
-          <div className={cn(pb32)} key={index}>
-            <QuoteBlock
-              logo={quote.logo}
-              description={quote.description}
-              person={quote.person}
-              jobTitle={quote.jobTitle}
-            />
-          </div>
-        ))}
-      </Grid>
-    </Container>
-  </div>
+  </>
 )
 
 export default Quotes
