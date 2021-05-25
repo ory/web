@@ -125,7 +125,7 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Explore 
+                  Explore
                 </Button>
               )
             }
@@ -227,7 +227,7 @@ const Layout = ({ children }: PropTypes) => (
                   style={'link'}
                   openInNewWindow={true}
                 >
-                  About 
+                  About
                 </Button>
               )
             },

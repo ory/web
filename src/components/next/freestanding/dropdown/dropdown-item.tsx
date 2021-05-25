@@ -10,7 +10,7 @@ import Button from '../button/button'
 import ContentText from '../content/content-text'
 
 interface PropTypes {
-  image: string | React.ReactElement
+  image?: string | React.ReactElement
   title: string
   description: string
   button: React.ReactElement
