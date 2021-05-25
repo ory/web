@@ -235,9 +235,7 @@ class Stats extends Component<PropTypes, StateTypes> {
             <ContentText padded={true}>
               <Molecule>
                 <h3 className={cn('font-h3-light')}>{this.props.title}</h3>
-                <p className={cn('font-p-light')}>
-                  {this.props.description}
-                </p>
+                <p className={cn('font-p-light')}>{this.props.description}</p>
               </Molecule>
             </ContentText>
           </Grid>

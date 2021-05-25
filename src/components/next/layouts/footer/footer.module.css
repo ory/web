@@ -14,6 +14,10 @@
   width: 92px;
 }
 
+.footer-font {
+  word-break: break-all;
+}
+
 @media (--md) {
   .footer-container {
     width: calc(100% - 32px);
