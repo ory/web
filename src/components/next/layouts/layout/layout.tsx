@@ -111,13 +111,13 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  Get started
                 </Button>
               )
             },
             {
-              description: 'The Open Source Ecosystem',
-              title: 'Ory Open Source',
+              description: 'Ory is Open Source',
+              title: 'Open Source Ecosystem',
               button: (
                 <Button
                   to={'/open-source'}
@@ -125,7 +125,7 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  Explore 
                 </Button>
               )
             }
@@ -143,13 +143,13 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  Read the docs
                 </Button>
               ),
               title: 'Documentation'
             },
             {
-              description: 'Ory Open Source Community',
+              description: 'Become a part of the Ory Community',
               button: (
                 <Button
                   to={'/docs/ecosystem/community/'}
@@ -157,13 +157,13 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  Join us
                 </Button>
               ),
               title: 'Community'
             },
             {
-              description: 'Ory Development & Discussion',
+              description: 'Participate in Development & Discussion',
               button: (
                 <Button
                   to={'https://github.com/ory'}
@@ -171,7 +171,7 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  To GitHub
                 </Button>
               ),
               title: 'GitHub'
@@ -197,7 +197,7 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  Read articles
                 </Button>
               ),
               title: 'Blog'
@@ -211,10 +211,10 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read more
+                  Write us
                 </Button>
               ),
-              title: 'Contact Us'
+              title: 'Contact'
             }
           ],
           sideMenu: [
@@ -227,7 +227,7 @@ const Layout = ({ children }: PropTypes) => (
                   style={'link'}
                   openInNewWindow={true}
                 >
-                  About Us
+                  About 
                 </Button>
               )
             },

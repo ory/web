@@ -313,7 +313,7 @@ const PricingPage = () => (
               to={'/docs'}
               iconRight={<ArrowRight size={16} />}
             >
-              Read more
+              Read the docs
             </Button>
           ),
           features: [
