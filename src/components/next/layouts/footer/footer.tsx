@@ -1,5 +1,10 @@
 import React from 'react'
-import { footer, footerContainer, footerImg, footerFont } from './footer.module.css'
+import {
+  footer,
+  footerContainer,
+  footerImg,
+  footerFont
+} from './footer.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
