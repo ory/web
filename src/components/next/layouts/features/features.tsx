@@ -46,8 +46,8 @@ const Features = ({
       <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
-            <h2 className={cn('font-overline', pb16)}>{overline}</h2>
-            <h3 className={cn('font-h3')}>{title}</h3>
+            <h3 className={cn('font-overline', pb16)}>{overline}</h3>
+            <h2 className={cn('font-h3')}>{title}</h2>
             {description && <p className={cn('font-p', pt32)}>{description}</p>}
           </Molecule>
           <MoleculeInteraction className={cn(pt24)}>
