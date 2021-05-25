@@ -50,7 +50,7 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
               md={6}
               sm={12}
               xs={12}
-              className={cn(pb48)}
+              className={cn(pb48, styles.quickstartContent)}
               key={index}
             >
               <Container flexContainer={'row'} alignItems={'start'}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { features } from './features.module.css'
+import { features, featuresContent } from './features.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -56,7 +56,10 @@ const Features = ({
         </ContentText>
       </Grid>
       <Grid lg={6} md={6} sm={12} xs={12}>
-        <Container alignItems={'start'} justify={'start'}>
+        <Container
+          alignItems={'start'}
+          justify={'space-between'}
+        >
           {feature.map((f, index) => {
             return (
               <Grid
@@ -64,13 +67,13 @@ const Features = ({
                 md={5}
                 sm={12}
                 xs={12}
-                className={cn(pb64)}
+                className={cn(pb64, featuresContent)}
                 key={index}
               >
                 <Container
                   flexContainer={'row'}
                   alignItems={'start'}
-                  justify={'space-between'}
+                  justify={'start'}
                 >
                   <Grid lg={4} md={3} sm={2} xs={2}>
                     <ColourWrapper text={'themed-primary'}>
