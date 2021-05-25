@@ -1,5 +1,4 @@
 declare const styles: {
-  readonly "adopters": string;
-};
-export = styles;
-
+  readonly adopters: string
+}
+export = styles

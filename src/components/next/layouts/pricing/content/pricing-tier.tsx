@@ -59,13 +59,13 @@ interface Theme {
 }
 
 const PricingContent = ({
-                          title,
-                          description,
-                          price,
-                          priceDescription,
-                          button,
-                          classes
-                        }: PriceTierContent) => (
+  title,
+  description,
+  price,
+  priceDescription,
+  button,
+  classes
+}: PriceTierContent) => (
   <>
     <Container flexContainer={'column'} alignItems={'start'}>
       <ContentText className={cn(pb48)}>
@@ -85,17 +85,13 @@ const PricingContent = ({
   </>
 )
 
-const PricingFeatures = ({features, classes}: PriceTierFeatures) => (
-  <Container
-    flexContainer={'column'}
-    alignItems={'start'}
-  >
+const PricingFeatures = ({ features, classes }: PriceTierFeatures) => (
+  <Container flexContainer={'column'} alignItems={'start'}>
     {features.map((feature) => {
       return (
-        <Container justify={'start'} alignItems={'center'}
-                   key={feature.title}>
-            <div className={cn(pr8)}>{feature.icon}</div>
-            <p className={cn(classes.fontp)}>{feature.title}</p>
+        <Container justify={'start'} alignItems={'center'} key={feature.title}>
+          <div className={cn(pr8)}>{feature.icon}</div>
+          <p className={cn(classes.fontp)}>{feature.title}</p>
         </Container>
       )
     })}
@@ -103,20 +99,20 @@ const PricingFeatures = ({features, classes}: PriceTierFeatures) => (
 )
 
 const PricingTier = ({
-                       className,
-                       tier: {
-                         theme = 'light',
-                         title,
-                         description,
-                         price,
-                         priceDescription,
-                         button,
-                         featuresContainer = 'column',
-                         features
-                       }
-                     }: PropTypes) => {
+  className,
+  tier: {
+    theme = 'light',
+    title,
+    description,
+    price,
+    priceDescription,
+    button,
+    featuresContainer = 'column',
+    features
+  }
+}: PropTypes) => {
   let classes: Theme
-  
+
   if (theme === 'light') {
     classes = {
       fonth2: 'font-h2',
@@ -134,7 +130,7 @@ const PricingTier = ({
       background: styles.tierDark
     }
   }
-  
+
   return (
     <div className={cn(classes.background, className && className)}>
       <Container
@@ -156,7 +152,7 @@ const PricingTier = ({
             </Grid>
             <Grid lg={6} md={6} sm={6} xs={12}>
               <Container justify={'center'} alignItems={'start'}>
-                <PricingFeatures classes={classes} features={features}/>
+                <PricingFeatures classes={classes} features={features} />
               </Container>
             </Grid>
           </>
@@ -170,7 +166,7 @@ const PricingTier = ({
               priceDescription={priceDescription}
               button={button}
             />
-            <PricingFeatures classes={classes} features={features}/>
+            <PricingFeatures classes={classes} features={features} />
           </>
         )}
       </Container>

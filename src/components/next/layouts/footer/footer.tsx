@@ -1,5 +1,10 @@
 import React from 'react'
-import { footer, footerContainer, footerImg } from './footer.module.css'
+import {
+  footer,
+  footerContainer,
+  footerImg,
+  footerFont
+} from './footer.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -80,14 +85,14 @@ const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
         justify={['end-lg', 'end-md', 'space-between-sm', 'space-between-xs']}
       >
         {links.map((l) => (
-          <Grid lg={3} md={3} sm={3} xs={3} key={l.title} className={cn(pb24)}>
+          <Grid lg={3} md={3} sm={3} xs={4} key={l.title} className={cn(pb24)}>
             <ContentText>
               <p className={cn('font-p-sm', pb16)}>{l.title}</p>
               {l.links.map((i, index) => (
                 <ColourWrapper
                   text={'base-grey-600'}
                   key={index}
-                  className={cn('font-menu')}
+                  className={cn('font-menu', footerFont)}
                 >
                   {i as React.ReactElement}
                 </ColourWrapper>

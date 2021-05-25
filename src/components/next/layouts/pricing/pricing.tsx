@@ -27,8 +27,13 @@ interface PropTypes {
   opensource: Array<PriceTier>
 }
 
-
-const Pricing = ({className, title, description, saas, opensource}: PropTypes) => {
+const Pricing = ({
+  className,
+  title,
+  description,
+  saas,
+  opensource
+}: PropTypes) => {
   const [togglePricing, setTogglePricing] = useState<boolean>(true)
 
   const handleToggle = () => {
@@ -42,9 +47,7 @@ const Pricing = ({className, title, description, saas, opensource}: PropTypes) =
           <ContentText className={cn(pt64, pb64)}>
             <Molecule>
               <h1 className={cn('font-h1', pb32)}>{title}</h1>
-              <p className={cn('font-p-lg')}>
-                {description}
-              </p>
+              <p className={cn('font-p-lg')}>{description}</p>
             </Molecule>
           </ContentText>
         </Grid>
@@ -66,7 +69,8 @@ const Pricing = ({className, title, description, saas, opensource}: PropTypes) =
           <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
             <p className={cn('font-p-sm')}>
               Prices in USD, taxes may apply. Billed monthly.
-              <br/>* Fair use of database storage for identities, flows & sessions. Upgrades possible.
+              <br />* Fair use of database storage for identities, flows &
+              sessions. Upgrades possible.
             </p>
           </Container>
         </Grid>

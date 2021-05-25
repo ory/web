@@ -186,7 +186,8 @@ const IndexPage = () => (
       title={<>Ory Keto</>}
       description={
         <>
-          Personalize experiences using customer specific access rules, define roles, and give customers individual access to your service.
+          Personalize experiences using customer specific access rules, define
+          roles, and give customers individual access to your service.
         </>
       }
       buttons={

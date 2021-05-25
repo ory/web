@@ -79,7 +79,9 @@ const Coding = ({
                         {icon}
                       </ColourWrapper>
                       <h4 className={cn('font-h5-light', pt8)}>{title}</h4>
-                      <p className={cn('font-p-sm-light', pt8)}>{description}</p>
+                      <p className={cn('font-p-sm-light', pt8)}>
+                        {description}
+                      </p>
                     </Molecule>
                     <MoleculeInteraction className={cn(pt24)}>
                       {button}
