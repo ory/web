@@ -53,14 +53,20 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
               className={cn(pb48)}
               key={index}
             >
-              <ContentText>
-                <ColourWrapper text={'themed-primary'}>{icon}</ColourWrapper>
-                <h4 className={cn('font-h5', pb8)}>{title}</h4>
-                <p className={cn('font-p-sm')}>{description}</p>
-                <MoleculeInteraction className={pt24}>
-                  {button}
-                </MoleculeInteraction>
-              </ContentText>
+              <Container flexContainer={'row'} alignItems={'start'}>
+                <Grid lg={4} md={3} sm={2} xs={2}>
+                  <ColourWrapper text={'themed-primary'}>{icon}</ColourWrapper>
+                </Grid>
+                <Grid lg={8} md={9} sm={10} xs={10}>
+                  <ContentText>
+                    <h4 className={cn('font-h5', pb8)}>{title}</h4>
+                    <p className={cn('font-p-sm')}>{description}</p>
+                    <MoleculeInteraction className={pt24}>
+                      {button}
+                    </MoleculeInteraction>
+                  </ContentText>
+                </Grid>
+              </Container>
             </Grid>
           ))}
         </Container>

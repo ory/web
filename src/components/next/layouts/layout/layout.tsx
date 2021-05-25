@@ -35,7 +35,11 @@ const Layout = ({ children }: PropTypes) => (
         >
           Login
         </Button>,
-        <Button to={'https://console.ory.sh/registration'} style={'filled'} openInNewWindow={false}>
+        <Button
+          to={'https://console.ory.sh/registration'}
+          style={'filled'}
+          openInNewWindow={false}
+        >
           Get Started
         </Button>
       ]}
@@ -46,53 +50,53 @@ const Layout = ({ children }: PropTypes) => (
             {
               description: 'User & Identity Management',
               button: (
-                  <Button
-                    className={cn('font-h5')}
-                    to={'/kratos'}
-                    style={'link'}
-                    openInNewWindow={true}
-                  >
-                    Kratos
-                  </Button>
+                <Button
+                  className={cn('font-h5')}
+                  to={'/kratos'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Kratos
+                </Button>
               )
             },
             {
               description: 'OAuth 2.0 & OpenIDConnect',
               button: (
-                  <Button
-                    className={cn('font-h5')}
-                    to={'/hydra'}
-                    style={'link'}
-                    openInNewWindow={true}
-                  >
-                    Hydra
-                  </Button>
+                <Button
+                  className={cn('font-h5')}
+                  to={'/hydra'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Hydra
+                </Button>
               )
             },
             {
               description: 'Authorization Server',
               button: (
-                  <Button
-                    className={cn('font-h5')}
-                    to={'/keto'}
-                    style={'link'}
-                    openInNewWindow={true}
-                  >
-                    Keto
-                  </Button>
+                <Button
+                  className={cn('font-h5')}
+                  to={'/keto'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Keto
+                </Button>
               )
             },
             {
               description: 'Zero Trust Networking',
               button: (
-                  <Button
-                    className={cn('font-h5')}
-                    to={'/oathkeeper'}
-                    style={'link'}
-                    openInNewWindow={true}
-                  >
-                    Oathkeeper
-                  </Button>
+                <Button
+                  className={cn('font-h5')}
+                  to={'/oathkeeper'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Oathkeeper
+                </Button>
               )
             }
           ],
@@ -217,30 +221,30 @@ const Layout = ({ children }: PropTypes) => (
             {
               description: '',
               button: (
-                  <Button
-                    className={cn('font-h5')}
-                    to={'/about'}
-                    style={'link'}
-                    openInNewWindow={true}
-                  >
-                    About Us
-                  </Button>
+                <Button
+                  className={cn('font-h5')}
+                  to={'/about'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  About Us
+                </Button>
               )
             },
             {
               description: '',
               button: (
-                  <Button
-                    className={cn('font-h5')}
-                    to={'https://github.com/ory/jobs'}
-                    style={'link'}
-                    openInNewWindow={true}
-                  >
-                    Jobs&nbsp;
-                    <ColourWrapper text={'themed-primary'}>
-                      <div className={cn('font-p-sm')}>We're hiring!</div>
-                    </ColourWrapper>
-                  </Button>
+                <Button
+                  className={cn('font-h5')}
+                  to={'https://github.com/ory/jobs'}
+                  style={'link'}
+                  openInNewWindow={true}
+                >
+                  Jobs&nbsp;
+                  <ColourWrapper text={'themed-primary'}>
+                    <div className={cn('font-p-sm')}>We're hiring!</div>
+                  </ColourWrapper>
+                </Button>
               )
             }
           ]
@@ -251,140 +255,140 @@ const Layout = ({ children }: PropTypes) => (
           {
             description: 'Never Build Auth Again',
             button: (
-                <Button
-                  className={cn('font-h5')}
-                  to={'https://console.ory.sh'}
-                  style={'link'}
-                  openInNewWindow={true}
-                >
-                  Ory as a Service
-                </Button>
+              <Button
+                className={cn('font-h5')}
+                to={'https://console.ory.sh'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Ory as a Service
+              </Button>
             )
           },
           {
             description: 'Start integrating Ory products',
             button: (
-                <Button
-                  className={cn('font-h5')}
-                  to={'/docs'}
-                  style={'link'}
-                  openInNewWindow={true}
-                >
-                  Documentation
-                </Button>
+              <Button
+                className={cn('font-h5')}
+                to={'/docs'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Documentation
+              </Button>
             )
           },
           {
             description: 'Ory Open Source Community',
             button: (
-                <Button
-                  className={cn('font-h5')}
-                  to={'/docs/ecosystem/community/'}
-                  style={'link'}
-                  openInNewWindow={true}
-                >
-                  Community
-                </Button>
+              <Button
+                className={cn('font-h5')}
+                to={'/docs/ecosystem/community/'}
+                style={'link'}
+                openInNewWindow={true}
+              >
+                Community
+              </Button>
             )
           }
         ],
         main: {
           title: 'Product',
           buttons: [
-              <Button
-                className={cn('font-h5')}
-                to={'/pricing'}
-                style={'link'}
-                openInNewWindow={true}
-              >
-                Pricing
-              </Button>,
-              <Button
-                className={cn('font-h5')}
-                to={'/open-source'}
-                style={'link'}
-                openInNewWindow={true}
-              >
-                Ory Open Source
-              </Button>,
-              <Button
-                className={cn('font-h5')}
-                to={'/kratos'}
-                style={'link'}
-                openInNewWindow={true}
-              >
-                Kratos
-              </Button>,
-              <Button
-                className={cn('font-h5')}
-                to={'/hydra'}
-                style={'link'}
-                openInNewWindow={true}
-              >
-                Hydra
-              </Button>,
-              <Button
-                className={cn('font-h5')}
-                to={'/oathkeeper'}
-                style={'link'}
-                openInNewWindow={true}
-              >
-                Oathkeeper
-              </Button>,
-              <Button
-                className={cn('font-h5')}
-                to={'/keto'}
-                style={'link'}
-                openInNewWindow={true}
-              >
-                Keto
-              </Button>
+            <Button
+              className={cn('font-h5')}
+              to={'/pricing'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Pricing
+            </Button>,
+            <Button
+              className={cn('font-h5')}
+              to={'/open-source'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Ory Open Source
+            </Button>,
+            <Button
+              className={cn('font-h5')}
+              to={'/kratos'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Kratos
+            </Button>,
+            <Button
+              className={cn('font-h5')}
+              to={'/hydra'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Hydra
+            </Button>,
+            <Button
+              className={cn('font-h5')}
+              to={'/oathkeeper'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Oathkeeper
+            </Button>,
+            <Button
+              className={cn('font-h5')}
+              to={'/keto'}
+              style={'link'}
+              openInNewWindow={true}
+            >
+              Keto
+            </Button>
           ]
         },
         extra: [
-            <Button
-              className={cn('font-h5')}
-              to={'https://github.com/ory'}
-              style={'link'}
-              openInNewWindow={true}
-            >
-              GitHub
-            </Button>,
-            <Button
-              className={cn('font-h5')}
-              to={'/blog'}
-              style={'link'}
-              openInNewWindow={true}
-            >
-              Blog
-            </Button>,
-            <Button
-              className={cn('font-h5')}
-              to={'mailto:hi@ory.sh'}
-              style={'link'}
-              openInNewWindow={true}
-            >
-              Contact us
-            </Button>,
-            <Button
-              className={cn('font-h5')}
-              to={'about'}
-              style={'link'}
-              openInNewWindow={true}
-            >
-              About us
-            </Button>,
-            <Button
-              className={cn('font-h5 font-nowrap')}
-              to={'https://github.com/ory/jobs'}
-              style={'link'}
-              openInNewWindow={true}
-            >
-              Jobs&nbsp;
-              <ColourWrapper text={'themed-primary'} >
-                <div className={cn('font-p-sm')}>we're hiring!</div>
-              </ColourWrapper>
-            </Button>
+          <Button
+            className={cn('font-h5')}
+            to={'https://github.com/ory'}
+            style={'link'}
+            openInNewWindow={true}
+          >
+            GitHub
+          </Button>,
+          <Button
+            className={cn('font-h5')}
+            to={'/blog'}
+            style={'link'}
+            openInNewWindow={true}
+          >
+            Blog
+          </Button>,
+          <Button
+            className={cn('font-h5')}
+            to={'mailto:hi@ory.sh'}
+            style={'link'}
+            openInNewWindow={true}
+          >
+            Contact us
+          </Button>,
+          <Button
+            className={cn('font-h5')}
+            to={'about'}
+            style={'link'}
+            openInNewWindow={true}
+          >
+            About us
+          </Button>,
+          <Button
+            className={cn('font-h5 font-nowrap')}
+            to={'https://github.com/ory/jobs'}
+            style={'link'}
+            openInNewWindow={true}
+          >
+            Jobs&nbsp;
+            <ColourWrapper text={'themed-primary'}>
+              <div className={cn('font-p-sm')}>we're hiring!</div>
+            </ColourWrapper>
+          </Button>
         ]
       }}
     />
@@ -566,7 +570,9 @@ const Layout = ({ children }: PropTypes) => (
             >
               Jobs&nbsp;
               <ColourWrapper text={'themed-primary'}>
-                <span className={cn('font-p-sm font-nowrap')}>we're hiring!</span>
+                <span className={cn('font-p-sm font-nowrap')}>
+                  we're hiring!
+                </span>
               </ColourWrapper>
             </Button>,
             <Button

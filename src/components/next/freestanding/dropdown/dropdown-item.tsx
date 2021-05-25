@@ -33,7 +33,7 @@ const DropdownItem = ({
           loading={'eager'}
           alt={'Ory dropdown menu icon'}
         />
-      ): (
+      ) : (
         <div className={cn(imageHidden, dropdownItemImage)}>{image}</div>
       )}
       <h5 className={cn('font-h5', pt16)}>{title}</h5>

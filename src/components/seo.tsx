@@ -32,9 +32,7 @@ const SEO = ({
         : ''
     }`}
     link={
-      canonical
-        ? [{ rel: 'canonical', key: canonical, href: canonical }]
-        : []
+      canonical ? [{ rel: 'canonical', key: canonical, href: canonical }] : []
     }
     meta={[
       {

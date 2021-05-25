@@ -33,7 +33,7 @@ interface PropTypes {
   features: Array<FeatureSection>
 }
 
-const FeatureList = ({className, features}: PropTypes) => (
+const FeatureList = ({ className, features }: PropTypes) => (
   <div className={cn(styles.featureList)}>
     <Container fluid={true}>
       {features.map((section) => {

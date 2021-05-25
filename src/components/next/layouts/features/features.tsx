@@ -1,5 +1,5 @@
 import React from 'react'
-import {featureIconContainer, features} from './features.module.css'
+import { features } from './features.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -35,12 +35,12 @@ interface PropTypes {
 }
 
 const Features = ({
-                    overline,
-                    title,
-                    description,
-                    buttons,
-                    feature
-                  }: PropTypes) => (
+  overline,
+  title,
+  description,
+  buttons,
+  feature
+}: PropTypes) => (
   <div className={cn(features)}>
     <Container fluid={true}>
       <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb64)}>
@@ -67,27 +67,30 @@ const Features = ({
                 className={cn(pb64)}
                 key={index}
               >
-                <Container flexContainer={'row'} alignItems={'start'} justify={'space-between'}>
+                <Container
+                  flexContainer={'row'}
+                  alignItems={'start'}
+                  justify={'space-between'}
+                >
                   <Grid lg={4} md={3} sm={2} xs={2}>
                     <ColourWrapper text={'themed-primary'}>
                       {f.icon}
                     </ColourWrapper>
                   </Grid>
-                  <Grid lg={8} md={9} sm={10} xs={10} className={cn(featureIconContainer)}>
+                  <Grid lg={8} md={9} sm={10} xs={10}>
                     <ContentText>
                       <h4 className={cn('font-h5', pb8)}>{f.title}</h4>
                       <p className={cn('font-p-sm')}>{f.description}</p>
                     </ContentText>
                   </Grid>
                 </Container>
-              
               </Grid>
             )
           })}
-            </Container>
-            </Grid>
-            </Container>
-            </div>
-            )
-            
-            export default Features
+        </Container>
+      </Grid>
+    </Container>
+  </div>
+)
+
+export default Features
