@@ -402,7 +402,7 @@ const IndexPage = () => (
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
-              Read more
+              Join the chat
             </Button>
           )
         }
