@@ -34,7 +34,7 @@ const QuoteBlock = ({
   person,
   jobTitle
 }: Quote) => (
-  <div className={cn(quoteBlock, className && className)}>
+  <ContentText className={cn(quoteBlock, className && className)}>
     <div className={cn(quoteImg)}>{logo}</div>
     <h4 className={cn('font-h4', pt64)}>{description}</h4>
     <ColourWrapper text={'base-grey-600'}>
@@ -43,16 +43,16 @@ const QuoteBlock = ({
     <ColourWrapper text={'base-grey-400'}>
       <p className={cn('font-p-lg', pt4)}>{jobTitle}</p>
     </ColourWrapper>
-  </div>
+  </ContentText>
 )
 
 const Quotes = ({ quotes, title }: PropTypes) => (
   <>
     <Container fluid={true} className={cn(quote)}>
-      <Grid lg={6} md={6} sm={12} xs={12} className={cn(pb32)}>
-        <span className={cn('font-h3')}>{title}</span>
+      <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb32)}>
+        <h3 className={cn('font-h3')}>{title}</h3>
       </Grid>
-      <Grid lg={5} md={5} sm={12} xs={12}>
+      <Grid lg={6} md={6} sm={12} xs={12}>
         <Carousel
           centerMode={false}
           autoPlay={true}

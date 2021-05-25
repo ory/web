@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  dropdownMobileContainer,
   dropdownMobileMenu,
   dropdownSection
 } from './dropdown-mobile-menu.module.css'

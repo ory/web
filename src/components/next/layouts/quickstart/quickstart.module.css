@@ -1,3 +1,11 @@
 .quickstart {
   padding: 128px 0;
 }
+
+.quickstart-content {
+  display: flex;
+  flex-grow: 1;
+  &:last-child {
+    margin-right: 32px;
+  }
+}

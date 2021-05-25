@@ -1,5 +1,5 @@
 import React from 'react'
-import { features } from './features.module.css'
+import { features, featuresContent } from './features.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -12,6 +12,7 @@ import {
   pb64,
   pb8,
   pl32,
+  pr16,
   pr32,
   pr8,
   pt24,
@@ -64,7 +65,7 @@ const Features = ({
                 md={5}
                 sm={12}
                 xs={12}
-                className={cn(pb64)}
+                className={cn(pb64, featuresContent)}
                 key={index}
               >
                 <Container
@@ -72,12 +73,12 @@ const Features = ({
                   alignItems={'start'}
                   justify={'space-between'}
                 >
-                  <Grid lg={4} md={3} sm={2} xs={2}>
+                  <Grid lg={3} md={3} sm={1} xs={2}>
                     <ColourWrapper text={'themed-primary'}>
                       {f.icon}
                     </ColourWrapper>
                   </Grid>
-                  <Grid lg={8} md={9} sm={10} xs={10}>
+                  <Grid lg={9} md={9} sm={10} xs={10}>
                     <ContentText>
                       <h4 className={cn('font-h5', pb8)}>{f.title}</h4>
                       <p className={cn('font-p-sm')}>{f.description}</p>

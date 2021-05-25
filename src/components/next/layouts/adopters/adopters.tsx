@@ -40,12 +40,13 @@ const Adopters = ({ adopters }: PropTypes) => (
                       openInNewWindow={true}
                     >
                       <img
+                        width={'100%'}
+                        height={'100%'}
                         loading="lazy"
                         src={adopter.image}
                         alt={adopter.title}
                       />
                     </Button>
-                    <a href={adopter.url} key={adopter.title}></a>
                   </AdoptersLogo>
                 </Grid>
               )

@@ -230,22 +230,22 @@ class Stats extends Component<PropTypes, StateTypes> {
   render() {
     return (
       <div className={styles.stats}>
-        <Container fluid={true} justify={'stretch'}>
-          <Grid lg={3} md={3} sm={12} xs={12}>
-            <ContentText padded={true}>
+        <Container fluid={true} justify={'space-between'}>
+          <Grid lg={4} md={4} sm={12} xs={12}>
+            <ContentText>
               <Molecule>
                 <h3 className={cn('font-h3-light')}>{this.props.title}</h3>
                 <p className={cn('font-p-light')}>{this.props.description}</p>
               </Molecule>
             </ContentText>
           </Grid>
-          <Grid lg={9} md={9} sm={12} xs={12}>
+          <Grid lg={6} md={6} sm={12} xs={12}>
             <Container alignItems={'start'}>
               {stats(this.state).map(
                 ({ title, amount, description }, index) => (
                   <Grid lg={3} md={3} sm={3} xs={12} key={index}>
                     <Container justify={'start'}>
-                      <ContentText padded={true}>
+                      <ContentText>
                         <Molecule>
                           <h5 className={cn('font-h1-light')}>
                             <AnimatedCounter countTo={amount} />

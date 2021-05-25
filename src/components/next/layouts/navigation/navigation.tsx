@@ -55,6 +55,7 @@ export interface MobileMenuMain {
 export interface DropdownMainItem {
   title: string
   description: string
+  image?: string | React.ReactElement
   button: React.ReactElement
 }
 

@@ -51,7 +51,7 @@ const Coding = ({
     <Container fluid={true}>
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>
-          <ContentText padded={true}>
+          <ContentText>
             <h3 className={cn('font-overline-light', pb16)}>{overline}</h3>
             <h2 className={cn('font-h3-light', pb32)}>{title}</h2>
             <p className={cn('font-p-light')}>{description}</p>
@@ -72,7 +72,7 @@ const Coding = ({
                 className={cn(pb64)}
                 key={index}
               >
-                <ContentText padded={true}>
+                <ContentText>
                   <MoleculeTextInteraction>
                     <Molecule>
                       <ColourWrapper text={'themed-darkmode'}>

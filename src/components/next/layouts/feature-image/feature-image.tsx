@@ -120,7 +120,7 @@ const FeatureImage = ({
       <Container
         fluid={true}
         justify={'space-between'}
-        alignItems={'start'}
+        alignItems={'center'}
         {...containerMirror}
       >
         {order.map((x, index) => x)}
@@ -128,7 +128,7 @@ const FeatureImage = ({
       <Container
         fluid={true}
         justify={'space-between'}
-        alignItems={'start'}
+        alignItems={'center'}
         {...containerAdditional}
       >
         {order.reverse().map((x, index) => x)}
