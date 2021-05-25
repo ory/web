@@ -90,24 +90,22 @@ const Container = ({
   noWrap = false
 }: PropTypes) => (
   <div
-    className={cn(fluid && styles.containerFluid, editMode && styles.editMode)}
+    className={cn(
+      fluid && styles.containerFluid,
+      editMode && styles.editMode,
+      styles.container,
+      noWrap && styles.noWrap,
+      getFlex(flexContainer),
+      alignItems && getAlign(alignItems),
+      justify && getJustify(justify),
+      xsHidden && getHidden('xs'),
+      smHidden && getHidden('sm'),
+      mdHidden && getHidden('md'),
+      lgHidden && getHidden('lg'),
+      className && className
+    )}
   >
-    <div
-      className={cn(
-        styles.container,
-        noWrap && styles.noWrap,
-        getFlex(flexContainer),
-        alignItems && getAlign(alignItems),
-        justify && getJustify(justify),
-        xsHidden && getHidden('xs'),
-        smHidden && getHidden('sm'),
-        mdHidden && getHidden('md'),
-        lgHidden && getHidden('lg'),
-        className && className
-      )}
-    >
-      {children}
-    </div>
+    {children}
   </div>
 )
 
