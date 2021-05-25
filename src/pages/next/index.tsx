@@ -74,7 +74,7 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="eager" alt="" src={heroIllustration} />}
+      image={<img loading="lazy" alt="" src={heroIllustration} />}
     />
 
     <Adopters
@@ -147,7 +147,7 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="eager" alt="" src={dashboardIllustration} />}
+      image={<img loading="lazy" alt="" src={dashboardIllustration} />}
     />
 
     <FeatureImage
@@ -167,7 +167,7 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="eager" alt="" src={headlessIllustration} />}
+      image={<img loading="lazy" alt="" src={headlessIllustration} />}
     />
 
     <Coding
@@ -189,7 +189,7 @@ const IndexPage = () => (
           </Button>
         </>
       }
-      visual={<img loading="eager" alt="" src={codeboxIllustration} />}
+      visual={<img loading="lazy" alt="" src={codeboxIllustration} />}
       content={[
         {
           icon: <Terminal size={32} />,
