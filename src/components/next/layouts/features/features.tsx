@@ -12,6 +12,7 @@ import {
   pb64,
   pb8,
   pl32,
+  pr16,
   pr32,
   pr8,
   pt24,
@@ -58,7 +59,7 @@ const Features = ({
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container
           alignItems={'start'}
-          justify={'space-between'}
+          justify={'start'}
         >
           {feature.map((f, index) => {
             return (
@@ -73,14 +74,14 @@ const Features = ({
                 <Container
                   flexContainer={'row'}
                   alignItems={'start'}
-                  justify={'start'}
+                  justify={'space-between'}
                 >
-                  <Grid lg={4} md={3} sm={2} xs={2}>
+                  <Grid lg={3} md={3} sm={1} xs={2}>
                     <ColourWrapper text={'themed-primary'}>
                       {f.icon}
                     </ColourWrapper>
                   </Grid>
-                  <Grid lg={8} md={9} sm={10} xs={10}>
+                  <Grid lg={9} md={9} sm={10} xs={10}>
                     <ContentText>
                       <h4 className={cn('font-h5', pb8)}>{f.title}</h4>
                       <p className={cn('font-p-sm')}>{f.description}</p>
