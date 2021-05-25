@@ -596,7 +596,7 @@ const PricingPage = () => (
         {
           logo: (
             <ColourWrapper text={'kratos-primary'}>
-              <img src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"} />
+              <img width={'100%'} height={'100%'} src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"} />
             </ColourWrapper>
           ),
           description: (
@@ -610,7 +610,7 @@ const PricingPage = () => (
         },
         {
           logo: (
-            <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
+            <img width={'100%'} height={'100%'} src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
           ),
           description: (
             <>
@@ -623,7 +623,7 @@ const PricingPage = () => (
           jobTitle: `Identity & Infosec, Thoughtworks`
         },
         {
-          logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
+          logo: <img width={'100%'} height={'100%'} src={blues} loading="lazy" alt={'Blues Logo'} />,
           description: (
             <>
               I needed an Auth System that would work with modern setups. Ory

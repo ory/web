@@ -74,7 +74,7 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="lazy" alt="" src={heroIllustration} />}
+      image={<img width={'100%'} height={'100%'} loading="lazy" alt="" src={heroIllustration} />}
     />
 
     <Adopters
@@ -147,7 +147,7 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="lazy" alt="" src={dashboardIllustration} />}
+      image={<img width={'100%'} height={'100%'} loading="lazy" alt="" src={dashboardIllustration} />}
     />
 
     <FeatureImage
@@ -167,7 +167,7 @@ const IndexPage = () => (
           Get Started
         </Button>
       }
-      image={<img loading="lazy" alt="" src={headlessIllustration} />}
+      image={<img width={'100%'} height={'100%'} loading="lazy" alt="" src={headlessIllustration} />}
     />
 
     <Coding
@@ -189,7 +189,7 @@ const IndexPage = () => (
           </Button>
         </>
       }
-      visual={<img loading="lazy" alt="" src={codeboxIllustration} />}
+      visual={<img width={'100%'} height={'100%'} loading="lazy" alt="" src={codeboxIllustration} />}
       content={[
         {
           icon: <Terminal size={32} />,
@@ -308,7 +308,7 @@ const IndexPage = () => (
         {
           logo: (
             <ColourWrapper text={'kratos-primary'}>
-              <img src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"} />
+              <img width={'100%'} height={'100%'} src={sainsburys} loading="lazy" alt={"Sainsbury's Logo"} />
             </ColourWrapper>
           ),
           description: (
@@ -322,7 +322,7 @@ const IndexPage = () => (
         },
         {
           logo: (
-            <img src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
+            <img width={'100%'} height={'100%'} src={thoughtworks} loading="lazy" alt={'Thoughtworks Logo'} />
           ),
           description: (
             <>
@@ -335,7 +335,7 @@ const IndexPage = () => (
           jobTitle: `Identity & Infosec, Thoughtworks`
         },
         {
-          logo: <img src={blues} loading="lazy" alt={'Blues Logo'} />,
+          logo: <img width={'100%'} height={'100%'} src={blues} loading="lazy" alt={'Blues Logo'} />,
           description: (
             <>
               I needed an Auth System that would work with modern setups. Ory
