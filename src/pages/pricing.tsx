@@ -384,7 +384,7 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Ory Kratos (New Features)',
+              title: 'Advanced Identity and Access Management',
               description:
                 'Multifactor authentication, including passwordless, WebAuthn, TOTP; Ability to use your own UI and Branding as well as webhooks to define and trigger actions.'
             },
@@ -394,9 +394,9 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Ory Keto',
+              title: 'Permissions & Roles',
               description:
-                'Permissions & Roles: From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.'
+                'From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.'
             },
             {
               icon: (
@@ -404,7 +404,7 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Ory Hydra',
+              title: 'Oauth2 & OpenID Connect',
               description:
                 'Become an OAuth2.0 provider, enable complex use cases and machine2machine interactions, interface your business with third party systems.'
             },
