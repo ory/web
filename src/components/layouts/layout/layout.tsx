@@ -211,7 +211,7 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Write us
+                  Get in touch with us
                 </Button>
               ),
               title: 'Contact'
