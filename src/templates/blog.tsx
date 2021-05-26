@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import BlogSection from '../components/blog-section'
 import BlogHero from '../components/blog-hero'
 import SEO from '../components/seo'
-import Layout from '../components/layout'
+import Layout from '../components/layouts/layout/layout'
 import Newsletter from '../components/newsletter'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 

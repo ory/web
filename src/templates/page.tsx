@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/seo'
 import BlogSection from '../components/blog-section'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
