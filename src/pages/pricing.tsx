@@ -367,7 +367,7 @@ const PricingPage = () => (
           icon: <MapTrifold size={24} />,
           title: 'Features landing in 2021',
           description:
-            'We are currently working on implementing these features.',
+            'We are currently working on bringing these features into the Ory Cloud.',
           button: (
             <Button
               style={'text'}
@@ -384,9 +384,9 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Multifactor Authentication',
+              title: 'Ory Kratos (New Features)',
               description:
-                'Securely authenticate your users with a variety of factors, including passwordless, WebAuthn, TOTP.'
+                'Multifactor authentication, including passwordless, WebAuthn, TOTP; Ability to use your own UI and Branding as well as webhooks to define and trigger actions.'
             },
             {
               icon: (
@@ -394,9 +394,9 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Permissions & Roles',
+              title: 'Ory Keto',
               description:
-                'From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.'
+                'Permissions & Roles: From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.'
             },
             {
               icon: (
@@ -404,9 +404,9 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Use your UI',
+              title: 'Ory Hydra',
               description:
-                'Bring your own UI and Branding. Easily add your own personal look, feel and brand to any user or internal interface.'
+                'Become an OAuth2.0 provider, enable complex use cases and machine2machine interactions, interface your business with third party systems.'
             },
             {
               icon: (
@@ -414,49 +414,9 @@ const PricingPage = () => (
                   <Flag size={16} weight={'bold'} />
                 </ColourWrapper>
               ),
-              title: 'Webhooks & Triggers',
+              title: 'Integrations',
               description:
-                'Use webhooks to define and trigger certain actions when users e.g. register, log in, verify their email... you name it!'
-            },
-            {
-              icon: (
-                <ColourWrapper text={'themed-primary'}>
-                  <Flag size={16} weight={'bold'} />
-                </ColourWrapper>
-              ),
-              title: 'Payments',
-              description:
-                'Payments integration powered by Stripe. Secure, fast and reliable payments.'
-            },
-            {
-              icon: (
-                <ColourWrapper text={'themed-primary'}>
-                  <Flag size={16} weight={'bold'} />
-                </ColourWrapper>
-              ),
-              title: 'Email',
-              description:
-                'Send out emails in bulk or individually reliably and without hassle. Send updates to all users connected to your platform.'
-            },
-            {
-              icon: (
-                <ColourWrapper text={'themed-primary'}>
-                  <Flag size={16} weight={'bold'} />
-                </ColourWrapper>
-              ),
-              title: 'OAuth2.0',
-              description:
-                'Become an OAuth2.0 provider, enable complex use cases, standardize and interface your business with other systems.'
-            },
-            {
-              icon: (
-                <ColourWrapper text={'themed-primary'}>
-                  <Flag size={16} weight={'bold'} />
-                </ColourWrapper>
-              ),
-              title: 'Machine 2 Machine',
-              description:
-                'Enables machine interactions powered by Ory. If you use automated agents, this is for you!'
+                'Payments integration powered by Stripe as well as Email integration to send out emails in bulk or individually.'
             }
           ]
         }
