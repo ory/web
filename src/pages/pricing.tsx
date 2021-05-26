@@ -220,22 +220,6 @@ const PricingPage = () => (
             },
             {
               icon: (
-                <ColourWrapper text={'base-grey-600'}>
-                  <CheckCircle size={16} />
-                </ColourWrapper>
-              ),
-              title: 'UI & Dashboard'
-            },
-            {
-              icon: (
-                <ColourWrapper text={'base-grey-600'}>
-                  <CheckCircle size={16} />
-                </ColourWrapper>
-              ),
-              title: 'Ory CLI'
-            },
-            {
-              icon: (
                 <ColourWrapper text={'success-primary'}>
                   <CheckCircle size={16} />
                 </ColourWrapper>
@@ -306,7 +290,7 @@ const PricingPage = () => (
           icon: <CirclesThreePlus size={24} />,
           title: 'Features',
           description:
-            'Sign up now and instantly access these features. All features except the Ory CLI and interfaces are included when self hosting.',
+            'Sign up now and instantly access these features. All features except the Ory CLI and user interfaces are included when self hosting.',
           button: (
             <Button
               style={'text'}
@@ -318,7 +302,7 @@ const PricingPage = () => (
           ),
           features: [
             {
-              title: 'Ory Cli',
+              title: 'Ory CLI',
               description:
                 'Control the Ory platform from the command line with an intuitive and accessible syntax. ',
               icon: (
@@ -383,7 +367,7 @@ const PricingPage = () => (
           icon: <MapTrifold size={24} />,
           title: 'Features landing in 2021',
           description:
-            'We are currently working on implementing these features. Sign up for the newsletter to stay up to date!',
+            'We are currently working on implementing these features.',
           button: (
             <Button
               style={'text'}
