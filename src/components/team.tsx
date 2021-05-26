@@ -21,13 +21,6 @@ const Team = () => {
           }
         }
       }
-      jared: file(relativePath: { eq: "jared.png" }) {
-        childImageSharp {
-          fixed(width: 90, height: 90) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
     }
   `)
 
@@ -66,20 +59,6 @@ const Team = () => {
                     }
                   ]}
                   img={data.thomas.childImageSharp.fixed}
-                />
-                <Profile
-                  name="Jared Preston"
-                  social={[
-                    {
-                      network: SocialNetworks.github,
-                      href: 'https://github.com/jaredpreston'
-                    },
-                    {
-                      network: SocialNetworks.linkedin,
-                      href: 'https://www.linkedin.com/in/jaredpreston'
-                    }
-                  ]}
-                  img={data.jared.childImageSharp.fixed}
                 />
               </>
             </div>
@@ -121,20 +100,6 @@ const Team = () => {
                   }
                 ]}
                 img={data.thomas.childImageSharp.fixed}
-              />
-              <Profile
-                name="Jared Preston"
-                social={[
-                  {
-                    network: SocialNetworks.github,
-                    href: 'https://github.com/jaredpreston'
-                  },
-                  {
-                    network: SocialNetworks.linkedin,
-                    href: 'https://www.linkedin.com/in/jaredpreston'
-                  }
-                ]}
-                img={data.jared.childImageSharp.fixed}
               />
             </>
           </div>
