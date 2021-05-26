@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/layouts/layout/layout'
 import { Link } from 'gatsby'
 import Section from '../components/section'
 
