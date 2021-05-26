@@ -116,7 +116,7 @@ const Layout = ({ children }: PropTypes) => (
               )
             },
             {
-              description: 'Ory is Open Source',
+              description: "Ory's heart is Open Source",
               title: 'Open Source Ecosystem',
               button: (
                 <Button
