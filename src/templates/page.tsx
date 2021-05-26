@@ -15,6 +15,7 @@ export default function PageTemplate(props: any) {
       <SEO description={fn.metaDescription || ''} title={fn.metaTitle} />
       <BlogHero
         title={fn.title}
+        author={fn.author}
         date={fn.lastUpdatedAt && `Last updated at ${fn.lastUpdatedAt}`}
       />
       <BlogSection>
