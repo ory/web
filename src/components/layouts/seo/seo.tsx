@@ -8,6 +8,7 @@ interface PropTypes {
   meta?: any[]
   title: string
   keywords?: string
+  canonical?: string
 }
 
 const author = 'ORY'
@@ -17,7 +18,8 @@ const SEO = ({
   lang = 'en',
   meta = [],
   title,
-  keywords
+  keywords,
+  canonical
 }: PropTypes) => (
   <Helmet
     htmlAttributes={{
@@ -29,6 +31,11 @@ const SEO = ({
         ? ' - ory.sh'
         : ''
     }`}
+    link={
+      canonical
+        ? [{ rel: 'canonical', key: canonical, href: canonical }]
+        : []
+    }
     meta={[
       {
         name: `description`,

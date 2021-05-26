@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layouts/layout/layout'
+import SEO from '../components/layouts/seo/seo'
 import BlogSection from '../components/blog-section'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import BlogHero from '../components/blog-hero'
@@ -15,6 +15,7 @@ export default function PageTemplate(props: any) {
       <SEO description={fn.metaDescription || ''} title={fn.metaTitle} />
       <BlogHero
         title={fn.title}
+        author={fn.author}
         date={fn.lastUpdatedAt && `Last updated at ${fn.lastUpdatedAt}`}
       />
       <BlogSection>

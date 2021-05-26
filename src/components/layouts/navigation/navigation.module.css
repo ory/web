@@ -95,6 +95,7 @@ ul li ul {
   margin-top: 0;
   left: 30%;
   display: none;
+  z-index: 1;
 }
 
 ul li:hover > ul,
