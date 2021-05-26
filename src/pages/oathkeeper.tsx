@@ -99,11 +99,9 @@ const IndexPage = () => (
       title={<>Easy Integration</>}
       description={
         <>
-          <br />
           Ory / Oathkeeper is a cloud native Identity & Access Proxy / API (IAP)
           and Access Control Decision API. It authenticates, authorizes, and
           mutates incoming HTTP(s) requests, is Open Source, and written in Go.
-          <br />
           Ory / Oathkeeper is straightforward on any system. We provide
           pre-built binaries, Docker images, and support a number of package
           managers.
@@ -132,7 +130,6 @@ const IndexPage = () => (
           Ory / Oathkeeper is written in Go and we provide SDKs for almost every
           language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
           Typescript.
-          <br />
           Our documentation makes integrating Ory / Oathkeeper a snap.
         </>
       }
@@ -155,9 +152,7 @@ const IndexPage = () => (
       description={
         <>
           Explore Ory and the future of identity.
-          <br />
           Make yourself heard in discussions and contribute on GitHub.
-          <br />
           Your code will be shipped in the next version.
         </>
       }

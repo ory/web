@@ -145,7 +145,7 @@ const IndexPage = () => (
       description={
         <>
           Authenticate and manage users, set and check permissions, protect
-          APIs, applications and data. <br /> Ory as a Service comes with a
+          APIs, applications and data. Ory as a Service comes with a
           dashboard for metrics and insights and can be managed from the user
           interface or CLI.
         </>
@@ -172,9 +172,8 @@ const IndexPage = () => (
       description={
         <>
           You want to brand user facing UIs and use your styles and design? No
-          problem with headless integration. <br />
+          problem with headless integration.
           You want custom auth flows? Done.
-          <br />
           This feature is included without extra charges.
         </>
       }
@@ -201,7 +200,6 @@ const IndexPage = () => (
         <>
           At Ory, our mission is to improve the overall developer experience. We
           provide SDKs, documentation, tutorials, CLIs and community support.
-          <br />
           Our open source approach lets you to participate in API and
           architecture discussions - your next PR will be shipped in Ory.
         </>
@@ -278,7 +276,7 @@ const IndexPage = () => (
       title={
         <>
           Auth integration in 1.. 2..
-          <br /> done
+          done
         </>
       }
       buttons={
@@ -405,7 +403,7 @@ const IndexPage = () => (
       description={
         <>
           Explore Ory and the future of identity. Contact us
-          <br /> for a custom support package for your business.
+          for a custom support package for your business.
         </>
       }
       buttons={

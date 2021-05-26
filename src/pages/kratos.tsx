@@ -99,11 +99,9 @@ const IndexPage = () => (
           Ory / Kratos is a cloud native user management system. It provides
           user login and registration, multi-factor authentication, and user
           information storage with a headless API.
-          <br />
           It is fully configurable and supports a wide range of protocols such
           as Google Authenticator, and stores user information using JSON
           Schema.
-          <br />
           Ory / Kratos works with any UI framework and only a few lines of code
           are required. Take a look at our documentation and learn more.
         </>
@@ -129,10 +127,8 @@ const IndexPage = () => (
       description={
         <>
           Ory / Kratos is written in Go and we provide SDKs for every language.
-          <br />
           We work with any UI framework and interfacing with the login,
           registration and profile management is easy.
-          <br />
           Our documentation makes integrating Ory / Kratos a snap.
         </>
       }
@@ -155,9 +151,7 @@ const IndexPage = () => (
       description={
         <>
           Explore Ory and the future of identity.
-          <br />
           Make yourself heard in discussions and contribute on GitHub.
-          <br />
           Your code will be shipped in the next version.
         </>
       }

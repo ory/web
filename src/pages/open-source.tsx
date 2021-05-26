@@ -62,10 +62,8 @@ const IndexPage = () => (
       description={
         <>
           Explore Ory and the future of identity.
-          <br />
           Make yourself heard in discussions and contribute directly to Ory on
           GitHub.
-          <br />
           Your code will be shipped in the next version.
         </>
       }
@@ -239,8 +237,7 @@ const IndexPage = () => (
     <Quotes
       title={
         <>
-          Read about our
-          <br /> users experience
+          Read about our users experience
         </>
       }
       quotes={[

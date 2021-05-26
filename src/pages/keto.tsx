@@ -131,7 +131,6 @@ const IndexPage = () => (
           Ory / Keto is a global and consistent permission & authorization
           server with an easy and granular permission language and sub
           10-millisecond latency.
-          <br />
           It is based on Google Zanzibar, written in Go, and ships gRPC and REST
           APIs.
         </>
@@ -157,7 +156,6 @@ const IndexPage = () => (
       description={
         <>
           Ory / Keto is written in Go and we provide SDKs for every language.
-          <br />
           Our documentation makes integrating Ory / Keto a snap.
         </>
       }
@@ -180,9 +178,7 @@ const IndexPage = () => (
       description={
         <>
           Explore Ory and the future of identity.
-          <br />
           Make yourself heard in discussions and contribute on GitHub.
-          <br />
           Your code will be shipped in the next version.
         </>
       }

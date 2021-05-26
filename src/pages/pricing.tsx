@@ -591,7 +591,7 @@ const PricingPage = () => (
     />
 
     <Quotes
-      title={<>What our customers say:</>}
+      title={<>What our customers say</>}
       quotes={[
         {
           logo: (
