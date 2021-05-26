@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './container.module.css'
 import cn from 'classnames'
-import { ParseCase } from '../../../../util'
+import { ParseCase } from '../../../util'
 import { Viewports } from './grid'
 
 type FlexJustify =
