@@ -215,39 +215,36 @@ const Layout = ({ children }: PropTypes) => (
                 </Button>
               ),
               title: 'Contact'
-            }
-          ],
-          sideMenu: [
-            {
-              description: '',
-              button: (
-                <Button
-                  className={cn('font-h5')}
-                  to={'/about'}
-                  style={'link'}
-                  openInNewWindow={true}
-                >
-                  About
-                </Button>
-              )
             },
             {
               description: '',
               button: (
                 <Button
-                  className={cn('font-h5')}
+                  to={'/about'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
+                  About Ory
+                </Button>
+              ),
+              title: 'About'
+            },
+            {
+              description: '',
+              button: (
+                <Button
                   to={'https://github.com/ory/jobs'}
                   style={'link'}
-                  openInNewWindow={true}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
                 >
-                  Jobs&nbsp;
-                  <ColourWrapper text={'themed-primary'}>
-                    <div className={cn('font-p-sm')}>We're hiring!</div>
-                  </ColourWrapper>
+                  We're hiring!
                 </Button>
-              )
+              ),
+              title: 'Jobs'
             }
-          ]
+          ],
         }
       ]}
       mobileMenu={{
