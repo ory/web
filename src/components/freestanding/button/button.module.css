@@ -181,6 +181,11 @@
 
   &:hover {
     color: var(--colors-themed-dark--next);
+
+    & svg {
+      transform: translateX(2px);
+      transition: transform ease 200ms;
+    }
   }
 
   &:focus {
@@ -202,6 +207,11 @@
 
   &:hover {
     color: var(--colors-themed-dark--next);
+
+    & svg {
+      transform: translateX(2px);
+      transition: transform ease 200ms;
+    }
   }
 
   &:focus {
