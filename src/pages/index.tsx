@@ -302,7 +302,7 @@ const IndexPage = () => (
           description: (
             <>
               Ory draws from a large set of features: IAM, Permissions and
-              Roles, Zero-Trust, OAuth2, OIDC, Integrations and many more.
+              Roles, Zero-Trust, OAuth2, OIDC, Integrations and more.
             </>
           )
         },
