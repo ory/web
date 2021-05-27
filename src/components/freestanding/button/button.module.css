@@ -183,7 +183,7 @@
     color: var(--colors-themed-dark--next);
 
     & svg {
-      transform: translateX(2px);
+      transform: translateX(4px);
       transition: transform ease 200ms;
     }
   }
@@ -209,7 +209,7 @@
     color: var(--colors-themed-dark--next);
 
     & svg {
-      transform: translateX(2px);
+      transform: translateX(4px);
       transition: transform ease 200ms;
     }
   }
