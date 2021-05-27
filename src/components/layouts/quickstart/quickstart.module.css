@@ -1,11 +1,9 @@
 .quickstart {
   padding: 128px 0;
+  background-color: var(--colors-base-grey-25--next)
 }
 
 .quickstart-content {
   display: flex;
   flex-grow: 1;
-  &:last-child {
-    margin-right: 32px;
-  }
 }
