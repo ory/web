@@ -1,34 +1,27 @@
 import {
   ArrowRight,
-  BookOpen,
   CirclesThreePlus,
   Code,
-  GithubLogo,
   GitMerge,
-  LinkedinLogo,
   LockOpen,
   RocketLaunch,
-  SlackLogo,
   Terminal,
-  TwitterLogo,
-  UserPlus,
-  Users,
-  YoutubeLogo
+  UserPlus
 } from 'phosphor-react'
 import React from 'react'
 import Button from '../components/freestanding/button/button'
-import ColourWrapper from '../components/freestanding/colour/colour-wrapper'
-import Molecule from '../components/freestanding/molecule/molecule'
 import Adopters from '../components/layouts/adopters/adopters'
 import Coding from '../components/layouts/coding/coding'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
+import { quickstartDefault } from '../components/layouts/quickstart/quickstart-content'
 import Security from '../components/layouts/security/security'
 import Stats from '../components/layouts/stats/stats'
 import Features from '../components/layouts/features/features'
 import Quotes from '../components/layouts/quotes/quotes'
+import { quotesDefault } from '../components/layouts/quotes/quotes-content'
 import heroIllustration from '../images/illustrations/hero.svg'
 import headlessIllustration from '../images/illustrations/examplelogin.svg'
 import dashboardIllustration from '../images/illustrations/dashboard.svg'
@@ -41,10 +34,8 @@ import segment from '../images/adopters/segment.svg'
 import sainsburys from '../images/adopters/sainsburys.svg'
 import hootsuite from '../images/adopters/hootsuite.svg'
 import threerein from '../images/adopters/threerein.svg'
-import { pl32 } from '../components/freestanding/utils/padding.module.css'
-import cn from 'classnames'
+
 import SEO from '../components/layouts/seo/seo'
-import Footer from '../components/layouts/footer/footer'
 
 const IndexPage = () => (
   <Layout>
@@ -145,9 +136,9 @@ const IndexPage = () => (
       description={
         <>
           Authenticate and manage users, set and check permissions, protect
-          APIs, applications and data. Ory as a Service comes with a
-          dashboard for metrics and insights and can be managed from the user
-          interface or CLI.
+          APIs, applications and data. Ory as a Service comes with a dashboard
+          for metrics and insights and can be managed from the user interface or
+          CLI.
         </>
       }
       buttons={
@@ -172,8 +163,7 @@ const IndexPage = () => (
       description={
         <>
           You want to brand user facing UIs and use your styles and design? No
-          problem with headless integration.
-          You want custom auth flows? Done.
+          problem with headless integration. You want custom auth flows? Done.
           This feature is included without extra charges.
         </>
       }
@@ -273,24 +263,19 @@ const IndexPage = () => (
 
     <Features
       overline={'Modular Integration'}
-      title={
-        <>
-          Auth integration in 1.. 2..
-          done
-        </>
-      }
+      title={<>Auth integration in 1.. 2.. done</>}
       buttons={
         <Button
           to={'https://console.ory.sh/registration'}
           style={'link'}
-          iconRight={<ArrowRight size={16} />}
+          iconRight={<ArrowRight size={16} weight={'bold'} />}
         >
           Get Started
         </Button>
       }
       feature={[
         {
-          icon: <Code size={32} />,
+          icon: <Code size={32} weight={'duotone'} />,
           title: <>Ory is open source</>,
           description: (
             <>
@@ -300,7 +285,7 @@ const IndexPage = () => (
           )
         },
         {
-          icon: <UserPlus size={32} />,
+          icon: <UserPlus size={32} weight={'duotone'} />,
           title: <>No limits on identities</>,
           description: (
             <>
@@ -310,7 +295,7 @@ const IndexPage = () => (
           )
         },
         {
-          icon: <CirclesThreePlus size={32} />,
+          icon: <CirclesThreePlus size={32} weight={'duotone'} />,
           title: <>More features</>,
           description: (
             <>
@@ -320,7 +305,7 @@ const IndexPage = () => (
           )
         },
         {
-          icon: <LockOpen size={32} />,
+          icon: <LockOpen size={32} weight={'duotone'} />,
           title: <>No lock in</>,
           description: (
             <>
@@ -332,132 +317,8 @@ const IndexPage = () => (
       ]}
     />
 
-    <Quotes
-      title={<>What our customers say</>}
-      quotes={[
-        {
-          logo: (
-            <ColourWrapper text={'kratos-primary'}>
-              <img
-                width={'100%'}
-                height={'100%'}
-                src={sainsburys}
-                loading="lazy"
-                alt={"Sainsbury's Logo"}
-              />
-            </ColourWrapper>
-          ),
-          description: (
-            <>
-              We like using Ory because it’s API first design made it super easy
-              to integrate with the rest our stack.
-            </>
-          ),
-          person: `Paul Harman`,
-          jobTitle: `Engineering Manager, Sainsbury’s Tech`
-        },
-        {
-          logo: (
-            <img
-              width={'100%'}
-              height={'100%'}
-              src={thoughtworks}
-              loading="lazy"
-              alt={'Thoughtworks Logo'}
-            />
-          ),
-          description: (
-            <>
-              With Ory, I can build custom and secure ID infrastructure and APIs
-              that fit perfectly into my client's ever-evolving cloud
-              environments.
-            </>
-          ),
-          person: `Ken Adler`,
-          jobTitle: `Identity & Infosec, Thoughtworks`
-        },
-        {
-          logo: (
-            <img
-              width={'100%'}
-              height={'100%'}
-              src={blues}
-              loading="lazy"
-              alt={'Blues Logo'}
-            />
-          ),
-          description: (
-            <>
-              I needed an Auth System that would work with modern setups. Ory
-              fit the bill perfectly and just works.
-            </>
-          ),
-          person: `Steff Kelsey`,
-          jobTitle: `VP of Engineering. Blues Inc.`
-        }
-      ]}
-    />
-
-    <Quickstart
-      title={<>Ready to get started?</>}
-      description={
-        <>
-          Explore Ory and the future of identity. Contact us
-          for a custom support package for your business.
-        </>
-      }
-      buttons={
-        <>
-          <Button
-            style={'filled'}
-            to={'https://console.ory.sh/registration'}
-            iconLeft={<RocketLaunch size={24} />}
-          >
-            Get started
-          </Button>
-        </>
-      }
-      content={[
-        {
-          icon: <BookOpen size={32} />,
-          title: <>Check out our docs</>,
-          description: (
-            <>
-              Visit our documentation to learn more about technical concepts,
-              read tutorials and guides as well as an extensive API reference.
-            </>
-          ),
-          button: (
-            <Button
-              to={'/docs'}
-              style={'link'}
-              iconRight={<ArrowRight size={16} />}
-            >
-              Read the docs
-            </Button>
-          )
-        },
-        {
-          icon: <Users size={32} />,
-          title: <>Join a diverse community</>,
-          description: (
-            <>
-              Make yourself heard in chat and contribute code and insights to
-              the open source projects at the heart of Ory.
-            </>
-          ),
-          button: (
-            <Button
-              to={'/chat'}
-              style={'link'}
-              iconRight={<ArrowRight size={16} />}
-            >
-              Join the chat
-            </Button>
-          )
-        }
-      ]}
-    />
+    <Quotes {...quotesDefault} />
+    <Quickstart {...quickstartDefault} />
   </Layout>
 )
 
