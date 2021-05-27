@@ -212,7 +212,7 @@ const IndexPage = () => (
       }
       content={[
         {
-          icon: <Terminal size={32} />,
+          icon: <Terminal size={32} weight={'duotone'} />,
           title: <>Powerful tools</>,
           description: (
             <>
@@ -224,14 +224,15 @@ const IndexPage = () => (
             <Button
               to={'/docs'}
               style={'link'}
-              iconRight={<ArrowRight size={16} />}
+              theme={'dark'}
+              iconRight={<ArrowRight size={16} weight={'bold'} />}
             >
               Read the docs
             </Button>
           )
         },
         {
-          icon: <GitMerge size={32} />,
+          icon: <GitMerge size={32} weight={'duotone'} />,
           title: <>Based on Open Source</>,
           description: (
             <>
@@ -242,7 +243,8 @@ const IndexPage = () => (
             <Button
               to={'https://github.com/ory/'}
               style={'link'}
-              iconRight={<ArrowRight size={16} />}
+              theme={'dark'}
+              iconRight={<ArrowRight size={16} weight={'bold'} />}
             >
               Star us on GitHub
             </Button>
