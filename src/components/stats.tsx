@@ -8,7 +8,7 @@ import csvHydraHitsPerMonth from 'raw-loader!../stats/hydra/hits-per-month.csv'
 import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-month.csv'
 import csvKetoHitsPerMonth from 'raw-loader!../stats/keto/hits-per-month.csv'
 import csvKratosHitsPerMonth from 'raw-loader!../stats/kratos/hits-per-month.csv'
-import AnimatedCounter from './animated-counter'
+import AnimatedCounter from './layouts/stats/animated-counter'
 
 const countGitHubStars = (state: StateTypes) =>
   Object.keys(state.github)
