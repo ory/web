@@ -11,9 +11,7 @@ import {
   pb16,
   pb32,
   pb64,
-  pb8,
-  pt24,
-  pt8
+  pb8
 } from '../../freestanding/utils/padding.module.css'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import ContentVisual from '../../freestanding/content/content-visual'
@@ -72,7 +70,10 @@ const Coding = ({
                 <ContentText>
                   <MoleculeTextInteraction>
                     <Molecule>
-                      <ColourWrapper text={'themed-light'} className={cn(pb8)}>
+                      <ColourWrapper
+                        text={'themed-primary'}
+                        className={cn(pb8)}
+                      >
                         {icon}
                       </ColourWrapper>
                       <h4 className={cn('font-h5', 'light', pb8)}>{title}</h4>
