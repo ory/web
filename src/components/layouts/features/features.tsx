@@ -38,8 +38,8 @@ const Features = ({
   feature
 }: PropTypes) => (
   <div className={cn(features)}>
-    <Container fluid={true}>
-      <Grid lg={4} md={4} sm={12} xs={12} className={cn(pb64)}>
+    <Container fluid={true} alignItems={'start'}>
+      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
             <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
@@ -51,7 +51,7 @@ const Features = ({
           </MoleculeInteraction>
         </ContentText>
       </Grid>
-      <Grid lg={6} md={6} sm={12} xs={12}>
+      <Grid lg={6} md={8} sm={12} xs={12}>
         <Container alignItems={'start'} justify={'start'}>
           {feature.map((f, index) => {
             return (
