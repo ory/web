@@ -1,94 +1,29 @@
 .stats {
-  background-color: var(--colors-base-grey--next);
-  /*background: url(molecules / pattern.png), #0D1F39;*/
-  color: var(--colors-base-black);
-  padding: 128px 0;
+  background-color: var(--colors-themed-primary--next);
+  padding: 64px 0;
 }
 
-.statsRow {
-  padding-top: 3rem;
+.stats-row {
+  margin-bottom: unset;
 }
 
-.items {
-  display: flex;
-  justify-content: space-evenly;
-
-  & .item {
-    /*width: 33%;*/
-    border-right: 2px solid;
-    border-color: var(--colors-themed-light);
-    margin: 0 6rem 0 0;
-    padding: 0 2rem 0 0;
-
-    &:last-child {
-      border-right: none;
-      margin: unset;
-      padding: unset;
-    }
-
-    & .title {
-      font-size: 0.833rem;
-    }
-
-    & .amount * {
-      color: var(--colors-themed-default);
-      font-weight: 600;
-      font-size: 2.488rem;
-    }
-
-    & .description {
-      font-size: 0.833rem;
-      color: var(--colors-base-text);
-    }
+@media (--md) {
+  .stats-row {
+    margin-bottom: 32px;
   }
 }
 
-@media (--md-viewport) {
-  .items {
-    flex-direction: column;
-
-    & .item {
-      /*width: 100%;*/
-      border-right: none;
-      border-bottom: 2px solid;
-      border-color: var(--colors-themed-light);
-      margin: 0 0 2rem 0;
-      padding: 0 0 2rem 0;
-
-      &:last-child {
-        border-bottom: none;
-        margin: unset;
-        padding: unset;
-      }
-
-      & .amount * {
-        font-size: 1.802rem;
-      }
-    }
+@media (--sm) {
+  .stats-row {
+    margin-bottom: 32px;
   }
 }
 
-@media (--sm-viewport) {
-  .items {
-    flex-direction: column;
-
-    & .item {
-      /*width: 100%;*/
-      border-right: none;
-      border-bottom: 2px solid;
-      border-color: var(--colors-themed-light);
-      margin: 0 0 2rem 0;
-      padding: 0 0 2rem 0;
-
-      &:last-child {
-        border-bottom: none;
-        margin: unset;
-        padding: unset;
-      }
-
-      & .amount * {
-        font-size: 1.383rem;
-      }
-    }
+@media (--xs) {
+  .stats-row {
+    margin-bottom: 32px;
+  }
+  .stats-items {
+    margin-bottom: 32px;
   }
 }
