@@ -39,10 +39,10 @@ const QuoteBlock = ({
 const Quotes = ({ quotes, title }: PropTypes) => (
   <>
     <Container fluid={true} className={cn(quote)}>
-      <Grid lg={5} md={5} sm={12} xs={12} className={cn(pb32)}>
+      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb32)}>
         <h3 className={cn('font-h3')}>{title}</h3>
       </Grid>
-      <Grid lg={6} md={6} sm={12} xs={12}>
+      <Grid lg={6} md={8} sm={12} xs={12}>
         <Carousel
           centerMode={false}
           autoPlay={true}

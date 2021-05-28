@@ -5,7 +5,6 @@ import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
-import Button from '../../freestanding/button/button'
 import {
   pb32,
   pb64,
@@ -14,7 +13,6 @@ import {
   pt64
 } from '../../freestanding/utils/padding.module.css'
 import PricingBlock from './content/pricing-block'
-import { CheckCircle } from 'phosphor-react'
 import { PriceTier } from './content/pricing-tier'
 import Toggle from '../../freestanding/toggle/toggle'
 import { useState } from 'react'
@@ -43,7 +41,7 @@ const Pricing = ({
   return (
     <div className={cn(styles.pricing)}>
       <Container fluid={true} alignItems={'start'}>
-        <Grid lg={3} md={6} sm={12} xs={12}>
+        <Grid lg={4} md={3} sm={12} xs={12}>
           <ContentText className={cn(pt64, pb64)}>
             <Molecule>
               <h1 className={cn('font-h1', pb32)}>{title}</h1>
@@ -51,7 +49,7 @@ const Pricing = ({
             </Molecule>
           </ContentText>
         </Grid>
-        <Grid lg={6} md={6} sm={12} xs={12}>
+        <Grid lg={6} md={8} sm={12} xs={12}>
           <Container justify={'center'}>
             <Toggle
               className={cn(pb32, pr24)}

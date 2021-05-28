@@ -30,8 +30,8 @@ interface PropType {
 
 const Quickstart = ({ title, description, buttons, content }: PropType) => (
   <div className={cn(styles.quickstart)}>
-    <Container fluid={true} alignItems={'center'}>
-      <Grid lg={4} md={4} sm={12} xs={12} className={cn(pb64)}>
+    <Container fluid={true} alignItems={'start'}>
+      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb64)}>
         <ContentText>
           <Molecule>
             <h3 className={cn('font-h3', pb32)}>{title}</h3>
@@ -40,7 +40,7 @@ const Quickstart = ({ title, description, buttons, content }: PropType) => (
           <MoleculeInteraction>{buttons}</MoleculeInteraction>
         </ContentText>
       </Grid>
-      <Grid lg={6} md={6} sm={12} xs={12}>
+      <Grid lg={6} md={8} sm={12} xs={12}>
         <Container alignItems={'start'}>
           {content.map(({ button, icon, description, title }, index) => (
             <Grid
