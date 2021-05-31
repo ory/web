@@ -185,7 +185,7 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'/chat'}
+              to={'https://slack.ory.sh/'}
               style={'link'}
               iconRight={<ArrowRight size={16} />}
             >
