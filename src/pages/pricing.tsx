@@ -1,17 +1,9 @@
 import React from 'react'
 import Adopters from '../components/layouts/adopters/adopters'
+import Stats from '../components/layouts/stats/stats'
 import FeatureList from '../components/layouts/featurelist/feature-list'
 import Layout from '../components/layouts/layout/layout'
 import Pricing from '../components/layouts/pricing/pricing'
-import Stats from '../components/layouts/stats/stats'
-import blues from '../images/adopters/blues.svg'
-import thoughtworks from '../images/adopters/thoughtworks.svg'
-import kyma from '../images/adopters/kyma.svg'
-import raspberrypi from '../images/adopters/raspberrypi.svg'
-import segment from '../images/adopters/segment.svg'
-import sainsburys from '../images/adopters/sainsburys.svg'
-import hootsuite from '../images/adopters/hootsuite.svg'
-import threerein from '../images/adopters/threerein.svg'
 import Quotes from '../components/layouts/quotes/quotes'
 import ColourWrapper from '../components/freestanding/colour/colour-wrapper'
 import Faq from '../components/layouts/faq/faq'
@@ -21,12 +13,12 @@ import SEO from '../components/layouts/seo/seo'
 import {
   ArrowRight,
   CheckCircle,
-  Circle,
   CirclesThreePlus,
   Flag,
-  MapTrifold,
-  Triangle
+  MapTrifold
 } from 'phosphor-react'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import { quotesDefault } from '../components/layouts/quotes/quotes-content'
 
 const PricingPage = () => (
   <Layout>
@@ -231,58 +223,7 @@ const PricingPage = () => (
       ]}
     />
 
-    <Adopters
-      adopters={[
-        {
-          title: 'BluesWireless',
-          image: blues,
-          url: 'https://blues.io/',
-          pos: 1
-        },
-        {
-          title: 'ThoughtWorks',
-          image: thoughtworks,
-          url: 'https://www.thoughtworks.com',
-          pos: 8
-        },
-        {
-          title: 'Segment',
-          image: segment,
-          url: 'https://segment.com/',
-          pos: 5
-        },
-        {
-          title: 'Raspberry Pi',
-          image: raspberrypi,
-          url: 'https://www.raspberrypi.org/',
-          pos: 3
-        },
-        {
-          title: `Sainsbury's`,
-          image: sainsburys,
-          url: 'https://www.sainsburys.co.uk/',
-          pos: 2
-        },
-        {
-          title: 'Hootsuite',
-          image: hootsuite,
-          url: 'https://hootsuite.com',
-          pos: 7
-        },
-        {
-          title: 'Kyma Project',
-          image: kyma,
-          url: 'https://kyma-project.io/',
-          pos: 4
-        },
-        {
-          title: '3REIN',
-          image: threerein,
-          url: 'https://3rein.com/',
-          pos: 6
-        }
-      ]}
-    />
+    <Adopters {...adoptersDefault} />
 
     <FeatureList
       features={[
@@ -538,71 +479,7 @@ const PricingPage = () => (
       }
     />
 
-    <Quotes
-      title={<>What our customers say</>}
-      quotes={[
-        {
-          logo: (
-            <ColourWrapper text={'kratos-primary'}>
-              <img
-                width={'100%'}
-                height={'100%'}
-                src={sainsburys}
-                loading="lazy"
-                alt={"Sainsbury's Logo"}
-              />
-            </ColourWrapper>
-          ),
-          description: (
-            <>
-              We like using Ory because it’s API first design made it super easy
-              to integrate with the rest our stack.
-            </>
-          ),
-          person: `Paul Harman`,
-          jobTitle: `Engineering Manager, Sainsbury’s Tech`
-        },
-        {
-          logo: (
-            <img
-              width={'100%'}
-              height={'100%'}
-              src={thoughtworks}
-              loading="lazy"
-              alt={'Thoughtworks Logo'}
-            />
-          ),
-          description: (
-            <>
-              With Ory, I can build custom and secure ID infrastructure and APIs
-              that fit perfectly into my client's ever-evolving cloud
-              environments.
-            </>
-          ),
-          person: `Ken Adler`,
-          jobTitle: `Identity & Infosec, Thoughtworks`
-        },
-        {
-          logo: (
-            <img
-              width={'100%'}
-              height={'100%'}
-              src={blues}
-              loading="lazy"
-              alt={'Blues Logo'}
-            />
-          ),
-          description: (
-            <>
-              I needed an Auth System that would work with modern setups. Ory
-              fit the bill perfectly and just works.
-            </>
-          ),
-          person: `Steff Kelsey`,
-          jobTitle: `VP of Engineering. Blues Inc.`
-        }
-      ]}
-    />
+    <Quotes {...quotesDefault} />
   </Layout>
 )
 
