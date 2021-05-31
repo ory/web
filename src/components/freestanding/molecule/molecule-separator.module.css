@@ -1,5 +1,5 @@
 .molecule-separator {
-  border: 1px solid var(--colors-base-grey-200--next);
+  border-top: 1px solid var(--colors-base-grey-200--next);
 }
 
 .molecule-separator-vertical {
@@ -9,7 +9,6 @@
 }
 
 .molecule-separator-horizontal {
-  transform: rotate(180deg);
-  width: calc(100% - 32px);
+  width: 100%;
   margin: 0 auto;
 }

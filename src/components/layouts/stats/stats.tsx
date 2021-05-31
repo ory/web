@@ -8,11 +8,12 @@ import csvHydraHitsPerMonth from 'raw-loader!../../../stats/hydra/hits-per-month
 import csvOathkeeperHitsPerMonth from 'raw-loader!../../../stats/oathkeeper/hits-per-month.csv'
 import csvKetoHitsPerMonth from 'raw-loader!../../../stats/keto/hits-per-month.csv'
 import csvKratosHitsPerMonth from 'raw-loader!../../../stats/kratos/hits-per-month.csv'
-import AnimatedCounter from '../../animated-counter'
+import AnimatedCounter from './animated-counter'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
+import { pb32, pb64, pt64 } from '../../freestanding/utils/padding.module.css'
 
 const countGitHubStars = (state: StateTypes) =>
   Object.keys(state.github)
@@ -231,27 +232,38 @@ class Stats extends Component<PropTypes, StateTypes> {
     return (
       <div className={styles.stats}>
         <Container fluid={true} justify={'space-between'}>
-          <Grid lg={4} md={4} sm={12} xs={12}>
+          <Grid className={cn(styles.statsRow)} lg={4} md={3} sm={12} xs={12}>
             <ContentText>
               <Molecule>
-                <h3 className={cn('font-h3-light')}>{this.props.title}</h3>
-                <p className={cn('font-p-light')}>{this.props.description}</p>
+                <h3 className={cn('font-h3', 'light', pb32)}>
+                  {this.props.title}
+                </h3>
+                <p className={cn('font-p', 'light', 'mute-85')}>
+                  {this.props.description}
+                </p>
               </Molecule>
             </ContentText>
           </Grid>
-          <Grid lg={6} md={6} sm={12} xs={12}>
+          <Grid lg={6} md={8} sm={12} xs={12}>
             <Container alignItems={'start'}>
               {stats(this.state).map(
                 ({ title, amount, description }, index) => (
                   <Grid lg={3} md={3} sm={3} xs={12} key={index}>
-                    <Container justify={'start'}>
+                    <Container
+                      justify={'start'}
+                      className={cn(styles.statsItems)}
+                    >
                       <ContentText>
                         <Molecule>
-                          <h5 className={cn('font-h1-light')}>
+                          <h5 className={cn('font-h1', 'light')}>
                             <AnimatedCounter countTo={amount} />
                           </h5>
-                          <p className={cn('font-p-light')}>{title}</p>
-                          <p className={cn('font-p-light')}>{description}</p>
+                          <p className={cn('font-p-sm', 'light', 'mute-85')}>
+                            {title}
+                          </p>
+                          <p className={cn('font-p-sm', 'light', 'mute-60')}>
+                            {description}
+                          </p>
                         </Molecule>
                       </ContentText>
                     </Container>

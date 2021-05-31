@@ -476,10 +476,11 @@ const PricingPage = () => (
               backwards compatible. Security patches are merged and released
               within 48 hours after disclosure, see details in our security
               policy. Live details on the Ory Network, including uptime and
-              status updates can be found on our &nbsp;
-          <Button style={'link-inline'} to={'https://status.ory.sh/'}>
-            status page
-          </Button>.
+              status updates can be found on our {''}
+              <Button style={'link-inline'} to={'https://status.ory.sh/'}>
+                status page
+              </Button>
+              .
             </>
           )
         },

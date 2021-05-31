@@ -10,6 +10,7 @@ declare const styles: {
   readonly styleTextLight: string
   readonly styleTextDark: string
   readonly styleLinkLight: string
+  readonly styleLinkDark: string
   readonly disabled: string
   readonly iconRight: string
 }

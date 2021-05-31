@@ -39,7 +39,9 @@ const FeatureListContent = ({ className, features }: PropType) => (
             <Container flexContainer={'column'} className={cn(pl24)}>
               <ContentText>
                 <Molecule>
-                  <p className={cn('font-p-sm')}>{feature.description}</p>
+                  <p className={cn('font-p-sm', 'mute-85')}>
+                    {feature.description}
+                  </p>
                 </Molecule>
               </ContentText>
             </Container>

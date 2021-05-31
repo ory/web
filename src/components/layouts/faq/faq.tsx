@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { faq, faqHeading, faqHeadingIcon } from './faq.module.css'
+import { faq, faqHeading, faqHighlight, faqHeadingIcon } from './faq.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -21,6 +21,7 @@ import {
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 import { Minus, Plus } from 'phosphor-react'
+import { start } from 'repl'
 
 export interface FaqContent {
   question: string
@@ -39,13 +40,13 @@ const Faq = ({ title, description, content }: PropTypes) => {
   return (
     <div className={cn(faq)}>
       <Container fluid={true} alignItems={['start']}>
-        <Grid lg={5} md={5} sm={12} xs={12} className={pb48}>
+        <Grid lg={4} md={3} sm={12} xs={12} className={pb48}>
           <ContentText>
-            <h3 className={cn('font-h3', pb32)}>{title}</h3>
-            <p className={cn('font-p')}>{description}</p>
+            <h3 className={cn('font-h3', 'light', pb32)}>{title}</h3>
+            <p className={cn('font-p', 'light')}>{description}</p>
           </ContentText>
         </Grid>
-        <Grid lg={6} md={6} sm={12} xs={12}>
+        <Grid lg={6} md={8} sm={12} xs={12}>
           <Accordion
             allowMultipleExpanded={false}
             allowZeroExpanded={true}
@@ -62,7 +63,10 @@ const Faq = ({ title, description, content }: PropTypes) => {
               >
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Container className={cn(pb16)}>
+                    <Container
+                      alignItems={'start'}
+                      className={cn(faqHighlight, pb16)}
+                    >
                       <h3 className={cn('font-h3', faqHeading)}>{question}</h3>
                       {expanded.includes(String(index)) ? (
                         <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
@@ -73,7 +77,9 @@ const Faq = ({ title, description, content }: PropTypes) => {
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  <p className={'font-p'}>{answer}</p>
+                  <p className={cn('font-p', 'light', 'mute-85', pb16)}>
+                    {answer}
+                  </p>
                 </AccordionItemPanel>
                 <MoleculeSeparator style={'horizontal'} />
               </AccordionItem>

@@ -2,6 +2,7 @@ import React from 'react'
 import {
   footer,
   footerContainer,
+  footerCategories,
   footerImg,
   footerFont
 } from './footer.module.css'
@@ -59,47 +60,36 @@ interface FooterMain {
 }
 
 const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
-  <Container
-    className={className}
-    justify={['space-between-lg', 'space-between-md', 'start-sm', 'start-xs']}
-    alignItems={'start'}
-  >
-    <Grid lg={4} md={4} sm={12} xs={12} className={cn(pb32)}>
-      <Container
-        flexContainer={'column'}
-        alignItems={'start'}
-        justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}
-      >
-        <Grid lg={12} sm={4} xs={6} className={cn(pb64)}>
-          <div className={cn(footerImg)}>{logo}</div>
+  <Container fluid={true}>
+    <Grid lg={12} md={12} sm={12} xs={12}>
+      <Container className={className} alignItems={'start'}>
+        <Grid lg={3} md={3} sm={6} xs={6} className={cn(pb32)}>
+          <Container
+            flexContainer={'column'}
+            alignItems={'start'}
+            justify={['start-lg', 'start-md', 'start-sm', 'start-xs']}
+          >
+            <div className={cn(footerImg)}>{logo}</div>
+            <ColourWrapper text={'base-grey-600'}>
+              {contact.contactEmail}
+            </ColourWrapper>
+            <p className={cn('p-sm')}>{contact.contactText}</p>
+          </Container>
         </Grid>
-        <ColourWrapper text={'base-grey-600'}>
-          {contact.contactEmail}
-        </ColourWrapper>
-        <p className={cn('p-sm')}>{contact.contactText}</p>
-      </Container>
-    </Grid>
-    <Grid lg={8} md={8} sm={12} xs={12}>
-      <Container
-        alignItems={'start'}
-        justify={['end-lg', 'end-md', 'space-between-sm', 'space-between-xs']}
-      >
-        {links.map((l) => (
-          <Grid lg={3} md={3} sm={3} xs={4} key={l.title} className={cn(pb24)}>
-            <ContentText>
-              <p className={cn('font-p-sm', pb16)}>{l.title}</p>
-              {l.links.map((i, index) => (
-                <ColourWrapper
-                  text={'base-grey-600'}
-                  key={index}
-                  className={cn('font-menu', footerFont)}
-                >
-                  {i as React.ReactElement}
-                </ColourWrapper>
-              ))}
-            </ContentText>
-          </Grid>
-        ))}
+        <Grid lg={8} md={8} sm={12} xs={12}>
+          <Container alignItems={'start'} justify={['end-lg', 'space-between']}>
+            {links.map((l, index) => (
+              <ContentText key={index} className={cn(footerCategories)}>
+                <p className={cn('font-p-sm', pb16)}>{l.title}</p>
+                {l.links.map((i, index) => (
+                  <ColourWrapper key={index} className={cn(footerFont)}>
+                    {i as React.ReactElement}
+                  </ColourWrapper>
+                ))}
+              </ContentText>
+            ))}
+          </Container>
+        </Grid>
       </Container>
     </Grid>
   </Container>
@@ -113,34 +103,53 @@ interface FooterSub {
 }
 
 const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
-  <Container className={cn(className)} alignItems={'start'} justify={'center'}>
-    <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
-      <Container justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}>
-        <ColourWrapper text={'base-grey-400'}>
-          <p className={cn('font-p-sm')}>{copyright}</p>
-        </ColourWrapper>
-      </Container>
-    </Grid>
-    <Grid lg={4} md={4} sm={4} xs={12}>
-      <Container justify={'center'}>
-        <MoleculeInteraction>
-          {social.map((s, index) => (
-            <ColourWrapper text={'base-grey-400'} key={index}>
-              {s as React.ReactElement}
+  <Container fluid={true}>
+    <Grid lg={12} md={12} sm={12} xs={12}>
+      <Container
+        className={cn(className)}
+        alignItems={'start'}
+        justify={'center'}
+      >
+        <MoleculeSeparator style={'horizontal'} className={cn(pb16)} />
+        <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
+          <Container
+            justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}
+          >
+            <ColourWrapper text={'base-grey-400'}>
+              <p className={cn('font-p-sm')}>{copyright}</p>
             </ColourWrapper>
-          ))}
-        </MoleculeInteraction>
-      </Container>
-    </Grid>
-    <Grid lg={4} md={4} sm={4} xs={12}>
-      <Container justify={['end-lg', 'end-md', 'center-sm', 'center-xs']}>
-        <MoleculeInteraction>
-          {legal.map((l, index) => (
-            <ColourWrapper text={'base-grey-400'} key={index}>
-              {l as React.ReactElement}
-            </ColourWrapper>
-          ))}
-        </MoleculeInteraction>
+          </Container>
+        </Grid>
+        <Grid lg={4} md={4} sm={4} xs={12}>
+          <Container justify={'center'}>
+            <MoleculeInteraction>
+              {social.map((s, index) => (
+                <ColourWrapper
+                  className={cn(footerFont)}
+                  text={'base-grey-400'}
+                  key={index}
+                >
+                  {s as React.ReactElement}
+                </ColourWrapper>
+              ))}
+            </MoleculeInteraction>
+          </Container>
+        </Grid>
+        <Grid lg={4} md={4} sm={4} xs={12}>
+          <Container justify={['end-lg', 'end-md', 'center-sm', 'center-xs']}>
+            <MoleculeInteraction>
+              {legal.map((l, index) => (
+                <ColourWrapper
+                  className={cn(footerFont)}
+                  text={'base-grey-400'}
+                  key={index}
+                >
+                  {l as React.ReactElement}
+                </ColourWrapper>
+              ))}
+            </MoleculeInteraction>
+          </Container>
+        </Grid>
       </Container>
     </Grid>
   </Container>
@@ -161,7 +170,6 @@ const Footer = ({
       links={links}
       logo={logo}
     />
-    <MoleculeSeparator style={'horizontal'} />
     <FooterSub
       className={cn(footerContainer, pt32)}
       copyright={copyright}
