@@ -1,5 +1,5 @@
 import React from 'react'
-import { features, featuresContent, projectButton } from './projects.module.css'
+import { features, featuresContent} from './projects.module.css'
 import { projects } from '../../../config'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
