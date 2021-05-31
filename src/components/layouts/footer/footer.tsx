@@ -78,8 +78,8 @@ const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
         </Grid>
         <Grid lg={8} md={8} sm={12} xs={12}>
           <Container alignItems={'start'} justify={['end-lg', 'space-between']}>
-            {links.map((l) => (
-              <ContentText className={cn(footerCategories)}>
+            {links.map((l, index) => (
+              <ContentText key={index} className={cn(footerCategories)}>
                 <p className={cn('font-p-sm', pb16)}>{l.title}</p>
                 {l.links.map((i, index) => (
                   <ColourWrapper key={index} className={cn(footerFont)}>
