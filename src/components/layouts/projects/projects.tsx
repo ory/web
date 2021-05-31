@@ -1,5 +1,5 @@
 import React from 'react'
-import { features, featuresContent, featuresSmall } from './projects.module.css'
+import { features, featuresContent, projectButton } from './projects.module.css'
 import { projects } from '../../../config'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
@@ -33,7 +33,7 @@ const Projects = ({ overline, title, description, buttons }: PropTypes) => (
         <ContentText>
           <Molecule>
             <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
-            <h2 className={cn('font-h3')}>{title}</h2>
+            <h1 className={cn('font-h3')}>{title}</h1>
             {description && <p className={cn('font-p', pt32)}>{description}</p>}
           </Molecule>
           <MoleculeInteraction className={cn(pt24)}>
@@ -65,7 +65,7 @@ const Projects = ({ overline, title, description, buttons }: PropTypes) => (
                   <h3 className={cn('font-overline', 'primary', pb16)}>
                     {project.descriptiveTitle}
                   </h3>
-                  <h4 className={cn('font-h5', pb8)}>{project.title}</h4>
+                  <h2 className={cn('font-h5', pb8)}>{project.title}</h2>
                   <p className={cn('font-p-sm', 'mute-60', pb8)}>
                     {project.description}
                   </p>
@@ -74,7 +74,7 @@ const Projects = ({ overline, title, description, buttons }: PropTypes) => (
                     style={'link'}
                     iconRight={<ArrowRight size={16} weight={'bold'} />}
                   >
-                    Explore our GitHub
+                    Explore {project.title}
                   </Button>
                 </ContentText>
               </Container>
