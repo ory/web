@@ -1,5 +1,30 @@
 .adopters {
   background-color: var(--colors-base-grey-25--next);
-  position: relative;
   padding: 64px 0;
+}
+
+.adopters-link {
+  display: flex;
+}
+
+.adopters-container {
+  flex: 0 calc(100% / 5);
+}
+
+@media (--md) {
+  .adopters-container {
+    flex: 0 calc(100% / 4)
+  }
+}
+
+@media (--sm) {
+  .adopters-container {
+    flex: 0 calc(100% / 3)
+  }
+}
+
+@media (--xs) {
+  .adopters-container {
+    flex: 0 calc(100% / 2)
+  }
 }

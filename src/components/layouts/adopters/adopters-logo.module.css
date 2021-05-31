@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   padding: 24px;
-  opacity: 100;
 
   & a img {
     transition: all ease 200ms;
+    max-height: 1.8rem;
   }
 
   & a:any-link {
