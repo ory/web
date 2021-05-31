@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  BookOpen,
   CirclesThreePlus,
   Code,
   GitMerge,
@@ -138,8 +139,12 @@ const IndexPage = () => (
       }
       buttons={
         <>
-          <Button to={'https://console.ory.sh/registration'} style={'filled'}>
-            Get Started
+          <Button
+            to={'/docs/get-started'}
+            style={'filled'}
+            iconLeft={<BookOpen size={24} weight={'duotone'} />}
+          >
+            Get started
           </Button>
         </>
       }
@@ -164,12 +169,12 @@ const IndexPage = () => (
           ),
           button: (
             <Button
-              to={'/docs'}
+              to={'/docs/guides/ory-cli-install-use'}
               style={'link'}
               theme={'dark'}
               iconRight={<ArrowRight size={16} weight={'bold'} />}
             >
-              Read the docs
+              Install the CLI
             </Button>
           )
         },
