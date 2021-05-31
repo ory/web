@@ -7,6 +7,12 @@ import Quotes from '../components/layouts/quotes/quotes'
 import SEO from '../components/layouts/seo/seo'
 import Projects from '../components/layouts/projects/projects'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import Adopters from '../components/layouts/adopters/adopters'
+import Button from '../components/freestanding/button/button'
+import codeboxIllustration from '../images/illustrations/codebox.svg'
+import { ArrowRight, BookOpen, GitMerge, Terminal } from 'phosphor-react'
+import Coding from '../components/layouts/coding/coding'
 
 const IndexPage = () => (
   <Layout>
@@ -26,7 +32,7 @@ const IndexPage = () => (
         </>
       }
     />
-
+    <Adopters {...adoptersDefault} />
     <Stats
       title={<>Billions of Identities</>}
       description={
