@@ -45,7 +45,7 @@ const Pricing = ({
           <ContentText className={cn(pt64, pb64)}>
             <Molecule>
               <h1 className={cn('font-h1', pb32)}>{title}</h1>
-              <p className={cn('font-p-lg')}>{description}</p>
+              <p className={cn('font-p-lg', 'mute-85')}>{description}</p>
             </Molecule>
           </ContentText>
         </Grid>
@@ -64,11 +64,13 @@ const Pricing = ({
           ) : (
             <PricingBlock tiers={opensource} />
           )}
-          <Container className={cn(pt32)} justify={'center'} alignItems={'end'}>
-            <p className={cn('font-p-sm')}>
+          <Container justify={'center'} alignItems={'end'}>
+            <p className={cn('font-p-sm', 'mute-60')}>
+              * Fair use of database storage for identities, flows and sessions.
+              Upgrades are possible.
+            </p>
+            <p className={cn('font-p-sm', 'mute-60')}>
               Prices in USD, taxes may apply. Billed monthly.
-              <br />* Fair use of database storage for identities, flows &
-              sessions. Upgrades possible.
             </p>
           </Container>
         </Grid>
