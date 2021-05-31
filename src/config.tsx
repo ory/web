@@ -6,10 +6,21 @@ import kratosAnimation from './images/kratos/kratos.svg'
 import hydraAnimation from './images/hydra/hydra.svg'
 import ketoAnimation from './images/keto/keto.svg'
 import oathkeeperAnimation from './images/oathkeeper/oathkeeper.svg'
+import {
+  CirclesThreePlus,
+  Code,
+  Fingerprint,
+  Key,
+  LockOpen,
+  ShieldWarning,
+  UserGear,
+  UserPlus
+} from 'phosphor-react'
 export const brandPrefix = 'Ory / '
 
 export type Project = {
   id: 'hydra' | 'keto' | 'oathkeeper' | 'kratos'
+  icon: React.ReactElement
   title: string
   descriptiveTitle: string
   description: string
@@ -23,7 +34,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 'kratos',
-    title: `${brandPrefix}Kratos`,
+    icon: <UserGear size={32} weight={'duotone'} />,
+    title: 'Kratos',
     descriptiveTitle: 'User Management',
     description:
       'Cloud native user management system. Provision IDs, store user information, configure authentication methods and use a headless API.',
@@ -35,7 +47,8 @@ export const projects: Project[] = [
   },
   {
     id: 'hydra',
-    title: `${brandPrefix}Hydra`,
+    icon: <Fingerprint size={32} weight={'duotone'} />,
+    title: 'Hydra',
     descriptiveTitle: 'OAuth 2.0 and OpenID Connect',
     description:
       'OAuth 2.0 and OpenID Certified® OpenID Connect server. Secure access to your applications and APIs.',
@@ -47,7 +60,8 @@ export const projects: Project[] = [
   },
   {
     id: 'oathkeeper',
-    title: `${brandPrefix}Oathkeeper`,
+    icon: <ShieldWarning size={32} weight={'duotone'} />,
+    title: 'Oathkeeper',
     descriptiveTitle: 'Identity and Access Proxy',
     description:
       'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.',
@@ -59,7 +73,8 @@ export const projects: Project[] = [
   },
   {
     id: 'keto',
-    title: `${brandPrefix}Keto`,
+    icon: <Key size={32} weight={'duotone'} />,
+    title: 'Keto',
     descriptiveTitle: 'Global access control',
     description:
       'Authorization Server based on Google Zanzibar, providing RBAC, ABAC and ACL.',
