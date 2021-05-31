@@ -11,7 +11,7 @@ import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import { pb16, pb32, pt32 } from '../../freestanding/utils/padding.module.css'
+import { pb16, pb32 } from '../../freestanding/utils/padding.module.css'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
@@ -59,8 +59,8 @@ const FooterMain = ({ className, logo, contact, links }: FooterMain) => (
             <p className={cn('p-sm')}>{contact.contactText}</p>
           </Container>
         </Grid>
-        <Grid lg={8} md={8} sm={12} xs={12}>
-          <Container alignItems={'start'} justify={['end-lg', 'space-between']}>
+        <Grid lg={6} md={8} sm={12} xs={12}>
+          <Container alignItems={'start'} justify={'space-between'}>
             {links.map((l, index) => (
               <ContentText key={index} className={cn(footerCategories)}>
                 <p className={cn('font-p-sm', pb16)}>{l.title}</p>
@@ -146,6 +146,7 @@ const Footer = ({
   legal
 }: FooterPropTypes) => (
   <>
+    <MoleculeSeparator style={'horizontal'} />
     <div className={cn(footer)}>
       <FooterMain
         className={cn(footerContainer, pb32)}
