@@ -21,6 +21,7 @@ import Footer from '../components/layouts/footer/footer'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
+import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
 import Stats from '../components/layouts/stats/stats'
 import Quotes from '../components/layouts/quotes/quotes'
 import opensource from '../images/illustrations/opensource.svg'
@@ -57,88 +58,7 @@ const IndexPage = () => (
       image={<img loading="lazy" alt="" src={opensource} />}
     />
 
-    <Quickstart
-      title={<>Ready to get started?</>}
-      description={
-        <>
-          Explore Ory and the future of identity.
-          Make yourself heard in discussions and contribute directly to Ory on
-          GitHub.
-          Your code will be shipped in the next version.
-        </>
-      }
-      buttons={
-        <>
-          <Button
-            style={'link'}
-            to={'/docs/ecosystem/projects'}
-            iconRight={<ArrowRight size={16} />}
-          >
-            Open Source Documentation
-          </Button>
-        </>
-      }
-      content={[
-        {
-          icon: <BookOpen size={32} />,
-          title: (
-            <>
-              Slack:
-              <br />
-              Developer Chat
-            </>
-          ),
-          description: (
-            <>
-              A community to help you succeed. Become a hero for developers, ask
-              questions & participate in events.
-            </>
-          ),
-          button: (
-            <Button
-              to={'https://slack.ory.sh/'}
-              style={'link'}
-              iconRight={<ArrowRight size={16} />}
-            >
-              Join the chat
-            </Button>
-          )
-        },
-        {
-          icon: <Users size={32} />,
-          title: (
-            <>
-              GitHub:
-              <br /> Discussions & Code
-            </>
-          ),
-          description: (
-            <>
-              Make yourself heard on GitHub and contribute code and insights to
-              the open source projects at the heart of Ory.
-            </>
-          ),
-          button: (
-            <Button
-              to={'https://github.com/ory/'}
-              style={'link'}
-              iconRight={<ArrowRight size={16} />}
-            >
-              Explore ecosystem
-            </Button>
-          )
-        }
-      ]}
-    />
-    <Stats
-      title={<>Billions of Identities</>}
-      description={
-        <>
-          Companies from all over the world rely on Ory for their identity
-          needs. Ory technology secures billions of identity requests.
-        </>
-      }
-    />
+    <Quickstart {...quickstartOpenSource} />
 
     <FeatureImage
       overline={'User & Identity Management'}
@@ -235,11 +155,7 @@ const IndexPage = () => (
     />
 
     <Quotes
-      title={
-        <>
-          Read about our users experience
-        </>
-      }
+      title={<>Read about our users experience</>}
       quotes={[
         {
           logo: (
