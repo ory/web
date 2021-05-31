@@ -2,6 +2,7 @@ import React from 'react'
 import {
   footer,
   footerContainer,
+  footerSub,
   footerCategories,
   footerImg,
   footerFont
@@ -10,25 +11,7 @@ import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
-import ContentVisual from '../../freestanding/content/content-visual'
-import {
-  pb16,
-  pb24,
-  pb32,
-  pb64,
-  pl128,
-  pl16,
-  pl24,
-  pl32,
-  pl64,
-  pl8,
-  pr16,
-  pr24,
-  pr32,
-  pr8,
-  pt32
-} from '../../freestanding/utils/padding.module.css'
+import { pb16, pb32, pt32 } from '../../freestanding/utils/padding.module.css'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
@@ -110,8 +93,7 @@ const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
         alignItems={'start'}
         justify={'center'}
       >
-        <MoleculeSeparator style={'horizontal'} className={cn(pb16)} />
-        <Grid lg={4} md={4} sm={4} xs={12} className={cn(pb16)}>
+        <Grid lg={4} md={4} sm={4} xs={12}>
           <Container
             justify={['start-lg', 'start-md', 'start-sm', 'center-xs']}
           >
@@ -163,20 +145,24 @@ const Footer = ({
   social,
   legal
 }: FooterPropTypes) => (
-  <div className={cn(footer)}>
-    <FooterMain
-      className={cn(footerContainer, pb32)}
-      contact={contact}
-      links={links}
-      logo={logo}
-    />
-    <FooterSub
-      className={cn(footerContainer, pt32)}
-      copyright={copyright}
-      social={social}
-      legal={legal}
-    />
-  </div>
+  <>
+    <div className={cn(footer)}>
+      <FooterMain
+        className={cn(footerContainer, pb32)}
+        contact={contact}
+        links={links}
+        logo={logo}
+      />
+    </div>
+    <div className={cn(footerSub)}>
+      <FooterSub
+        className={cn(footerContainer)}
+        copyright={copyright}
+        social={social}
+        legal={legal}
+      />
+    </div>
+  </>
 )
 
 export default Footer
