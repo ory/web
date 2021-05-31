@@ -15,6 +15,32 @@ a:any-link {
     border-color ease 200ms;
 }
 
+.style-link-inline-light a:global {
+  color: var(--colors-themed-primary--next);
+  text-decoration: none;
+  transition: color ease 200ms, background-color ease 200ms,
+  border-color ease 200ms;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--colors-base-white--next);
+  }
+}
+
+.light a:global  {
+  color: var(--colors-themed-darkmode--next);
+  text-decoration: none;
+  transition: color ease 200ms, background-color ease 200ms,
+  border-color ease 200ms;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--colors-themed-primary--next);
+  }
+}
+
 main a.cta {
   text-align: center;
   display: inline-block;
