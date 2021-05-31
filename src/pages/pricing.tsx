@@ -432,7 +432,7 @@ const PricingPage = () => (
             GitHub
           </Button>
           , our&nbsp;
-          <Button style={'link-inline'} to={'/chat'}>
+          <Button style={'link-inline'} to={'https://slack.ory.sh/'}>
             Slack Channel
           </Button>
           &nbsp;or&nbsp;

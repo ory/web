@@ -433,7 +433,7 @@ const Layout = ({ children }: PropTypes) => (
         >
           <TwitterLogo size={24} />
         </Button>,
-        <Button to={'/chat'} style={'none'} openInNewWindow={true}>
+        <Button to={'https://slack.ory.sh/'} style={'none'} openInNewWindow={true}>
           <SlackLogo size={24} />
         </Button>,
         <Button
