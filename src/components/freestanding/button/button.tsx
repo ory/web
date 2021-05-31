@@ -2,10 +2,8 @@ import React from 'react'
 import * as styles from './button.module.css'
 import { Link as GatsbyLink } from 'gatsby'
 import cn from 'classnames'
-import Container from '../containers/container'
 import { pl8, pr8 } from '../utils/padding.module.css'
 import { ParseCase } from '../../../util'
-import ColourWrapper from '../colour/colour-wrapper'
 
 export interface PropTypes {
   children?: React.ReactNode

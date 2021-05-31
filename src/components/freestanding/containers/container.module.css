@@ -363,8 +363,8 @@
 /*@media (min-width: 0px) and (max-width: 599px) {*/
 @media (--xs) {
   .container-fluid {
-    width: calc(100% - 16px);
-    max-width: 552px;
+    width: calc(100% - (24px * 2));
+    max-width: calc(599px - (24px * 2));
   }
 
   .flex-start-xs {

@@ -254,7 +254,7 @@ const Layout = ({ children }: PropTypes) => (
               ),
               title: 'Jobs'
             }
-          ],
+          ]
         }
       ]}
       mobileMenu={{
@@ -417,31 +417,35 @@ const Layout = ({ children }: PropTypes) => (
           style={'none'}
           openInNewWindow={true}
         >
-          <GithubLogo size={24} />
+          <GithubLogo size={24} weight={'duotone'} />
         </Button>,
         <Button
           to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'}
           style={'none'}
           openInNewWindow={true}
         >
-          <YoutubeLogo size={24} />
+          <YoutubeLogo size={24} weight={'duotone'} />
         </Button>,
         <Button
           to={'https://twitter.com/orycorp'}
           style={'none'}
           openInNewWindow={true}
         >
-          <TwitterLogo size={24} />
+          <TwitterLogo size={24} weight={'duotone'} />
         </Button>,
-        <Button to={'https://slack.ory.sh/'} style={'none'} openInNewWindow={true}>
-          <SlackLogo size={24} />
+        <Button
+          to={'https://slack.ory.sh/'}
+          style={'none'}
+          openInNewWindow={true}
+        >
+          <SlackLogo size={24} weight={'duotone'} />
         </Button>,
         <Button
           to={'https://www.linkedin.com/company/ory-corp/'}
           style={'none'}
           openInNewWindow={true}
         >
-          <LinkedinLogo size={24} />
+          <LinkedinLogo size={24} weight={'duotone'} />
         </Button>
       ]}
       legal={[

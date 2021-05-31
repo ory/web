@@ -48,7 +48,9 @@ const FeatureList = ({ className, features }: PropTypes) => (
                 <Molecule>
                   <MoleculeIconWrapper>{section.icon}</MoleculeIconWrapper>
                   <h3 className={cn('font-h3', pb32, pt32)}>{section.title}</h3>
-                  <p className={cn('font-p')}>{section.description}</p>
+                  <p className={cn('font-p', 'mute-85')}>
+                    {section.description}
+                  </p>
                 </Molecule>
               </ContentText>
             </Grid>

@@ -4,8 +4,6 @@ import { pb48, pb32, pt48 } from '../../freestanding/utils/padding.module.css'
 import cn from 'classnames'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
-import Button from '../../freestanding/button/button'
-import { ArrowRight, RocketLaunch } from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
 import ContentVisual from '../../freestanding/content/content-visual'
 import Container from '../../freestanding/containers/container'
@@ -22,7 +20,7 @@ interface PropTypes {
 const Hero = ({ title, description, image, buttons }: PropTypes) => (
   <div className={cn(hero)}>
     <Container fluid={true} alignItems={'center'}>
-      <Grid lg={5} md={5} sm={5} xs={12} className={cn(pb32)}>
+      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb32)}>
         <ContentText>
           <MoleculeTextInteraction>
             <Molecule className={cn(pb48)}>
@@ -33,7 +31,7 @@ const Hero = ({ title, description, image, buttons }: PropTypes) => (
           </MoleculeTextInteraction>
         </ContentText>
       </Grid>
-      <Grid lg={6} md={6} sm={6} xs={12}>
+      <Grid lg={6} md={8} sm={12} xs={12}>
         <ContentVisual>{image}</ContentVisual>
       </Grid>
     </Container>

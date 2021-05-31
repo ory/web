@@ -4,7 +4,7 @@ import cn from 'classnames'
 import Container from '../../../freestanding/containers/container'
 import ContentText from '../../../freestanding/content/content-text'
 import {
-  pb32,
+  pb16,
   pb48,
   pb64,
   pb8,
@@ -13,7 +13,6 @@ import {
 } from '../../../freestanding/utils/padding.module.css'
 import Molecule from '../../../freestanding/molecule/molecule'
 import Grid from '../../../freestanding/containers/grid'
-import MoleculeSeparator from '../../../freestanding/molecule/molecule-separator'
 
 export interface PriceFeature {
   icon: React.ReactElement
@@ -54,6 +53,7 @@ interface Theme {
   fonth2: string
   fonth3: string
   fontp: string
+  fontp2: string
   fontpsm: string
   background: string
 }
@@ -70,13 +70,13 @@ const PricingContent = ({
     <Container flexContainer={'column'} alignItems={'start'}>
       <ContentText className={cn(pb48)}>
         <Molecule>
-          <h3 className={cn(classes.fonth3, pb32)}>{title}</h3>
+          <h3 className={cn(classes.fonth3, pb16)}>{title}</h3>
           <p className={cn(classes.fontp)}>{description}</p>
         </Molecule>
       </ContentText>
       <ContentText className={cn(pb48)}>
         <Molecule>
-          <h2 className={cn(classes.fonth2, pb8)}>{price}</h2>
+          <h2 className={cn(classes.fonth2)}>{price}</h2>
           <p className={cn(classes.fontpsm)}>{priceDescription}</p>
         </Molecule>
       </ContentText>
@@ -91,7 +91,7 @@ const PricingFeatures = ({ features, classes }: PriceTierFeatures) => (
       return (
         <Container justify={'start'} alignItems={'center'} key={feature.title}>
           <div className={cn(pr8)}>{feature.icon}</div>
-          <p className={cn(classes.fontp)}>{feature.title}</p>
+          <p className={cn(classes.fontp2)}>{feature.title}</p>
         </Container>
       )
     })}
@@ -117,16 +117,18 @@ const PricingTier = ({
     classes = {
       fonth2: 'font-h2',
       fonth3: 'font-h3',
-      fontp: 'font-p',
-      fontpsm: 'font-p-sm',
+      fontp: 'font-p mute-60',
+      fontp2: 'font-p mute-85',
+      fontpsm: 'font-p-sm mute-60',
       background: styles.tierLight
     }
   } else {
     classes = {
-      fonth2: 'font-h2-light',
-      fonth3: 'font-h3-light',
-      fontp: 'font-p-light',
-      fontpsm: 'font-p-sm-light',
+      fonth2: 'font-h2 light',
+      fonth3: 'font-h3 light',
+      fontp: 'font-p light mute-85',
+      fontp2: 'font-p light mute-85',
+      fontpsm: 'font-p-sm light mute-85',
       background: styles.tierDark
     }
   }
