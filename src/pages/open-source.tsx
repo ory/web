@@ -19,14 +19,6 @@ const IndexPage = () => (
       title={'Open Source Auth Solutions For Everyone'}
     />
 
-    <Hero
-      title={'Ory is Open Source'}
-      description={
-        ' The heart and roots of Ory are Open Source. We believe in the power of open and transparent collaboration to provide a common identity infrastructure.'
-      }
-      image={<img loading="lazy" alt="" src={opensource} />}
-    />
-
     <Projects
       overline={'Identity Server'}
       title={<>Ory Open Source</>}
