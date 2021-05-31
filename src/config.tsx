@@ -51,7 +51,7 @@ export const projects: Project[] = [
     title: 'Hydra',
     descriptiveTitle: 'OAuth 2.0 and OpenID Connect',
     description:
-      'OAuth 2.0 and OpenID Certified® OpenID Connect server. Secure access to your applications and APIs.',
+      'OAuth 2.0 and OpenID Certified® OpenID Connect server. Cloud native, security-first, headless API security for your infrastructure. ',
     path: '/hydra',
     links: {
       quickstart: 'https://www.ory.sh/hydra/docs/5min-tutorial'
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     title: 'Oathkeeper',
     descriptiveTitle: 'Identity and Access Proxy',
     description:
-      'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.',
+      'Identity and Access Proxy (IAP). Authenticate, authorize and mutate any incoming traffic, using Zero Trust / BeyondCorp as open source.',
     path: '/oathkeeper',
     links: {
       quickstart: 'https://www.ory.sh/oathkeeper/docs/index'
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     title: 'Keto',
     descriptiveTitle: 'Global access control',
     description:
-      'Authorization Server based on Google Zanzibar, providing RBAC, ABAC and ACL.',
+      "Authorization Server inspired by Google's consistent, global Authorization System, providing granular access policies with RBAC, ABAC and ACL.",
     path: '/keto',
     links: {
       quickstart: 'https://www.ory.sh/keto/docs/configure-deploy'

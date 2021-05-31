@@ -28,12 +28,11 @@ const IndexPage = () => (
     />
 
     <Projects
-      overline={'foo'}
-      title={<>list of projects ay</>}
+      overline={'Identity Server'}
+      title={<>Ory Open Source</>}
       description={
         <>
-          Grow your users, easily register and manage user identities, using
-          custom flows in your look and feel.
+          Onboard users, register and manage identities. Interface with third parties and control access to applications using modern and secure standards. Supported by a large open source community.
         </>
       }
     />
