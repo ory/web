@@ -1,8 +1,12 @@
 .dropdown-menu {
-  padding: 24px;
   background: var(--colors-base-white--next);
   box-shadow: var(--elevation-large);
-  border-radius: 20px;
-  display: flex;
-  flex-wrap: nowrap !important;
+  /*border-radius: 20px;*/
+  display: block;
+  /*flex-wrap: nowrap !important;*/
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 999;
+  width: 100%;
 }

@@ -29,6 +29,7 @@ import {
 import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
 import { Chunks } from '../../../util'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import { useEffect } from 'react'
 
 export interface DropdownMenuItem {
   title: string | React.ReactElement
@@ -74,6 +75,8 @@ interface PropTypes {
 const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
   const [openNav, setOpenNav] = useState<boolean>(false)
 
+  const [openMenu, setOpenMenu] = useState<string>()
+  
   let mobileNav = cn(styles.mobileContainer)
 
   if (openNav) {
@@ -82,75 +85,74 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
 
   return (
     <div className={cn(styles.navigation)}>
-      <Container className={cn(styles.navContainer)}>
-        <Grid lg={2}>
-          <Container justify={'start'}>
-            <Button to={'/'} style={'none'}>
-              <img
-                className={cn(styles.navLogo)}
-                src={logo}
-                loading={'eager'}
-                alt={'Ory logo'}
-              />
-            </Button>
-          </Container>
-        </Grid>
-        <Grid lg={5} smHidden={true} xsHidden={true}>
-          <Container justify={'center'}>
-            <nav role="navigation">
-              <ul>
-                {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
-                  <MenuItem title={title} key={index} className={cn(pr32)}>
-                    <DropdownMenu>
-                      {mainMenu &&
-                        mainMenu.map(
-                          ({ title, image, button, description }, index) => (
-                            <DropdownItem
-                              className={cn(pr32)}
-                              key={index}
-                              title={title}
-                              image={image}
-                              button={button}
-                              description={description}
-                            />
-                          )
-                        )}
-                      {sideMenu && (
-                        <Container
-                          flexContainer={'column'}
-                          justify={'start'}
-                          alignItems={'start'}
-                        >
-                          {sideMenu.map(({ description, button }, index) => (
-                            <ContentText key={index} className={cn(pb24)}>
-                              {button}
-                              <p className={cn('font-p-sm')}>{description}</p>
-                            </ContentText>
-                          ))}
-                        </Container>
-                      )}
-                    </DropdownMenu>
-                  </MenuItem>
-                ))}
-              </ul>
-            </nav>
-          </Container>
-        </Grid>
-        <Grid lg={4} md={5}>
-          <Container justify={'end'} smHidden={true} xsHidden={true}>
-            {sideNav.map((x, index) => (
-              <div className={cn(pr32)} key={index}>
-                {x}
-              </div>
-            ))}
-          </Container>
-          <Container justify={'end'} lgHidden={true} mdHidden={true}>
-            <Button to={() => setOpenNav(!openNav)} style={'link'}>
-              <List size={32} />
-            </Button>
-          </Container>
-        </Grid>
+      <Container fluid={true}>
+        
+        <Button to={'/'} style={'none'}>
+          <img
+            className={cn(styles.navLogo)}
+            src={logo}
+            loading={'eager'}
+            alt={'Ory logo'}
+          />
+        </Button>
+        
+        <div role={"navigation"}>
+          {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
+            <MenuItem title={title} key={index} className={cn(pr32)} show={openMenu === String(index)} onClick={() => setOpenMenu((current) => {
+              if (current === String(index)) {
+                return ""
+              }
+              return String(index)
+            })}>
+              <DropdownMenu>
+                {mainMenu &&
+                mainMenu.map(
+                  ({ title, image, button, description }, index) => (
+                    <DropdownItem
+                      className={cn(pr32)}
+                      key={index}
+                      title={title}
+                      image={image}
+                      button={button}
+                      description={description}
+                    />
+                  )
+                )}
+                {sideMenu && (
+                  <Container
+                    flexContainer={'column'}
+                    justify={'start'}
+                    alignItems={'start'}
+                  >
+                    {sideMenu.map(({ description, button }, index) => (
+                      <ContentText key={index} className={cn(pb24)}>
+                        {button}
+                        <p className={cn('font-p-sm')}>{description}</p>
+                      </ContentText>
+                    ))}
+                  </Container>
+                )}
+              </DropdownMenu>
+            </MenuItem>
+          ))}
+        </div>
+        
+        <Container justify={'end'} smHidden={true} xsHidden={true}>
+          {sideNav.map((x, index) => (
+            <div className={cn(pr32)} key={index}>
+              {x}
+            </div>
+          ))}
+        </Container>
+        
+        <Container justify={'end'} lgHidden={true} mdHidden={true}>
+          <Button to={() => setOpenNav(!openNav)} style={'link'}>
+            <List size={32} />
+          </Button>
+        </Container>
+        
       </Container>
+      
       <div className={cn(mobileNav)}>
         <DropdownMobileMenu>
           <DropdownMobileMenuSection>

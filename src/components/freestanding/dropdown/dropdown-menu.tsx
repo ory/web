@@ -9,13 +9,16 @@ interface PropTypes {
 }
 
 const DropdownMenu = ({ className, children }: PropTypes) => (
-  <Container
-    className={cn(dropdownMenu, className && className)}
-    justify={'space-between'}
-    alignItems={'start'}
-  >
-    {children}
-  </Container>
+  <div className={cn(dropdownMenu, className && className)}>
+    <Container
+      fluid={true}
+      aria-label={'submenu'}
+      justify={'space-between'}
+      alignItems={'start'}
+    >
+      {children}
+    </Container>
+  </div>
 )
 
 export default DropdownMenu
