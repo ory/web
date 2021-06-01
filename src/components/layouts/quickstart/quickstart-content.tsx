@@ -60,7 +60,7 @@ export const quickstartDefault = {
       ),
       button: (
         <Button
-          to={'/chat'}
+          to={'https://slack.ory.sh'}
           style={'link'}
           iconRight={<ArrowRight size={16} weight={'bold'} />}
         >
