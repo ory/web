@@ -1,26 +1,90 @@
 @import '../styles/properties.css';
 
-.section {
+.blog-section-alt {
   padding: 32px 0;
   background-color: var(--colors-base-white);
+}
 
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    margin-top: 1rem;
-  }
+
+.blog-section {
+  padding: 32px 0;
+  background-color: var(--colors-base-white);
 
   & li,
   & code,
   & dl,
   & dd,
   & dt,
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
   & p {
-    margin-top: 0;
-    color: var(--colors-base-black);
+    color: var(--colors-base-grey--next);
   }
+
+  & h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  & h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  & h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  & h5 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+  }
+
+  & h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  & p {
+    opacity: .85;
+    font-size: 16px;
+    line-height: 200%;
+    margin-top: 1rem;
+  }
+
+  & h1:not(:first-child),
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6
+  {
+    margin-top: 2rem;
+  }
+
+  & ul {
+    margin-top: 1rem;
+  }
+
+  & li {
+    margin-top: .5rem;
+      }
 
   & p,
   & li {
@@ -33,21 +97,6 @@
     margin-bottom: 32px !important;
   }
 
-  & p,
-  & ul,
-  & ol {
-    margin-bottom: 32px;
-  }
-
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6,
-  & li {
-    margin-bottom: 16px;
-  }
-
   & p a {
     transition: all ease 200ms;
   }
@@ -58,12 +107,7 @@
 
   & p a:hover,
   & p a:active {
-    color: var(--colors-base-black);
-    text-decoration: underline;
-  }
-
-  & p + p {
-    margin-top: -8px;
+    color: var(--colors-themed-dark--next);
   }
 
   & img {
@@ -81,13 +125,16 @@
   }
 
   & blockquote {
-    margin: 2rem 0 3rem 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     padding-left: 2rem;
-    border-left: 1px solid var(--colors-themed-default);
+    border-left: 3px solid var(--colors-themed-primary--next);
+    background-color: var(--colors-themed-background--next);
   }
 
   & blockquote p {
-    font-weight: 300;
+    padding: 1rem;
+    font-weight: 500;
   }
 
   & figure {
