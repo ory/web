@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './freestanding/button/button'
 
 interface Profile {
   fullname: string
@@ -49,9 +50,9 @@ const AuthorLink = ({
   }
 
   return (
-    <a href={profile.github} className={className}>
+    <Button className={className} style={'link-inline'} to={profile.github}>
       {profile.fullname}
-    </a>
+    </Button>
   )
 }
 
