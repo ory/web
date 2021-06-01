@@ -1,23 +1,20 @@
 import React from 'react'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import sainsburys from '../../../images/adopters/sainsburys.svg'
-import thoughtworks from '../../../images/adopters/thoughtworks.svg'
-import blues from '../../../images/adopters/blues.svg'
+import sainsburys from '../../../images/adopters/colored/sainsburys_c.svg'
+import thoughtworks from '../../../images/adopters/colored/thoughtworks_c.svg'
+import blues from '../../../images/adopters/colored/blues_c.svg'
 
 export const quotesDefault = {
   title: <>What our customers say</>,
   quotes: [
     {
       logo: (
-        <ColourWrapper text={'kratos-primary'}>
-          <img
-            width={'100%'}
-            height={'100%'}
-            src={sainsburys}
-            loading="lazy"
-            alt={"Sainsbury's Logo"}
-          />
-        </ColourWrapper>
+        <img
+          width={'100%'}
+          height={'100%'}
+          src={sainsburys}
+          loading="lazy"
+          alt={"Sainsbury's Logo"}
+        />
       ),
       description: (
         <>

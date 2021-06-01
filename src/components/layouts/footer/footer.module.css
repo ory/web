@@ -1,7 +1,13 @@
 .footer {
-  padding: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 0;
   background-color: var(--colors-base-grey-25--next);
   color: var(--colors-base-grey-600--next);
+}
+
+.footer-sub {
+  padding: 16px;
+  background-color: var(--colors-base-grey-50--next)
 }
 
 .footer-container {
