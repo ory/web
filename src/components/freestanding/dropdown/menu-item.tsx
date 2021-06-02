@@ -18,11 +18,7 @@ const MenuItem = ({ className, title, onClick, children }: PropType) => (
       {typeof title === 'string' ? (
         <>
           <ColourWrapper text={'base-grey'} className={cn(menuButton)}>
-            <Button
-              to={onClick}
-              style={'none'}
-              iconRight={<CaretDown size={12} weight={'bold'} />}
-            >
+            <Button to={onClick} style={'link'}>
               {title}
             </Button>
           </ColourWrapper>
