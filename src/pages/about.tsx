@@ -6,8 +6,8 @@ import Team from '../components/team'
 const AboutPage = () => (
   <Layout>
     <SEO
-      description="Implement modern identity infrastructure in minutes with open source from ORY. "
-      title="ORY - A modern open source identity solution"
+      description="Secure open source IAM and access control infrastructure for the cloud."
+      title="Ory - A modern open source identity solution"
     />
     <Team />
   </Layout>

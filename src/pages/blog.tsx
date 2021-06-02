@@ -43,9 +43,9 @@ const BlogPostsPage = ({
 }: any) => (
   <Layout>
     <SEO
-      title={'Developer Blog and Articles'}
+      title={'Ory Developer Blog and Articles'}
       description={
-        'Read articles and blog posts from ORY core contributors and maintainers.'
+        'Read articles and blog posts from Ory core contributors and maintainers.'
       }
     />
     <BlogSection alt={true}>
