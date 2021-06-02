@@ -73,7 +73,7 @@ const IndexPage = () => (
       title={
         process.env.GATSBY_DOMAIN === 'gethydra.sh'
           ? 'Open Source OAuth 2.0 and OpenID Connect Server - gethydra.sh'
-          : `Ory / Hydra Open Source OAuth 2.0 and OpenID Connect Server`
+          : `Ory Hydra - Open Source OAuth 2.0 and OpenID Connect Server`
       }
     />
 

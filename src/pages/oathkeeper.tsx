@@ -84,7 +84,7 @@ const IndexPage = () => (
       description={
         'Oathkeeper Open Source Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust.'
       }
-      title={'Open Source Identity and Access Proxy (IAP)'}
+      title={'Ory Oathkeeper - Open Source Identity and Access Proxy (IAP)'}
     />
 
     <Hero
