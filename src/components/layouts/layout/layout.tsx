@@ -56,7 +56,31 @@ const Layout = ({ children }: PropTypes) => (
       dropdownMenu={[
         {
           title: 'Product',
-          sideMenu: [
+          mainMenu: [
+            {
+              description: 'Never Build Auth Again',
+              button: <Button
+                to={'https://console.ory.sh'}
+                style={'link'}
+                openInNewWindow={false}
+                iconRight={<ArrowRight size={16} />}
+              >
+                Ory as a Service
+              </Button>
+            },
+            {
+              description: "Ory's heart is Open Source",
+              button: (
+                <Button
+                  to={'/open-source'}
+                  style={'link'}
+                  openInNewWindow={false}
+                  iconRight={<ArrowRight size={16} />}
+                >
+                  Open Source Ecosystem
+                </Button>
+              )
+            },
             {
               description: 'User & Identity Management',
               button: (
@@ -65,6 +89,7 @@ const Layout = ({ children }: PropTypes) => (
                   to={'/kratos'}
                   style={'link'}
                   openInNewWindow={true}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Kratos
                 </Button>
@@ -78,6 +103,7 @@ const Layout = ({ children }: PropTypes) => (
                   to={'/hydra'}
                   style={'link'}
                   openInNewWindow={true}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Hydra
                 </Button>
@@ -91,6 +117,7 @@ const Layout = ({ children }: PropTypes) => (
                   to={'/keto'}
                   style={'link'}
                   openInNewWindow={true}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Keto
                 </Button>
@@ -104,42 +131,13 @@ const Layout = ({ children }: PropTypes) => (
                   to={'/oathkeeper'}
                   style={'link'}
                   openInNewWindow={true}
+                  iconRight={<ArrowRight size={16} />}
                 >
                   Oathkeeper
                 </Button>
               )
             }
           ],
-          mainMenu: [
-            {
-              description: 'Never Build Auth Again',
-              title: 'Ory as a Service',
-              button: (
-                <Button
-                  to={'https://console.ory.sh'}
-                  style={'link'}
-                  openInNewWindow={false}
-                  iconRight={<ArrowRight size={16} />}
-                >
-                  Get started
-                </Button>
-              )
-            },
-            {
-              description: "Ory's heart is Open Source",
-              title: 'Open Source Ecosystem',
-              button: (
-                <Button
-                  to={'/open-source'}
-                  style={'link'}
-                  openInNewWindow={false}
-                  iconRight={<ArrowRight size={16} />}
-                >
-                  Explore
-                </Button>
-              )
-            }
-          ]
         },
         {
           title: 'Developers',
@@ -153,10 +151,9 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read the docs
+                  Documentation
                 </Button>
               ),
-              title: 'Documentation'
             },
             {
               description: 'Become a part of the Ory Community',
@@ -167,10 +164,9 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Join us
+                  Community
                 </Button>
               ),
-              title: 'Community'
             },
             {
               description: 'Participate in Development & Discussion',
@@ -181,10 +177,9 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  To GitHub
+                  GitHub
                 </Button>
               ),
-              title: 'GitHub'
             }
           ]
         },
@@ -207,10 +202,9 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Read articles
+                  Blog
                 </Button>
               ),
-              title: 'Blog'
             },
             {
               description: '',
@@ -221,10 +215,9 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  Get in touch with us
+                  Contact
                 </Button>
               ),
-              title: 'Contact'
             },
             {
               description: '',
@@ -238,7 +231,6 @@ const Layout = ({ children }: PropTypes) => (
                   About Ory
                 </Button>
               ),
-              title: 'About'
             },
             {
               description: '',
@@ -249,10 +241,9 @@ const Layout = ({ children }: PropTypes) => (
                   openInNewWindow={false}
                   iconRight={<ArrowRight size={16} />}
                 >
-                  We're hiring!
+                  Jobs We're hiring!
                 </Button>
               ),
-              title: 'Jobs'
             }
           ]
         }

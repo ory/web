@@ -21,7 +21,7 @@ const DropdownMenu = forwardRef(({ className, show, children }: PropTypes, ref: 
     <Container
       fluid={true}
       aria-label={'submenu'}
-      justify={'space-between'}
+      justify={'start'}
       alignItems={'start'}
     >
       {children}

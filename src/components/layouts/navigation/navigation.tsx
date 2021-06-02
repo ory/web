@@ -57,7 +57,7 @@ export interface MobileMenuMain {
 }
 
 export interface DropdownMainItem {
-  title: string
+  title?: string
   description: string
   image?: string | React.ReactElement
   button: React.ReactElement
@@ -199,7 +199,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
         </nav>
 
         <Container justify={'end'} smHidden={true} xsHidden={true}>
-          {sideNav.map((x, index) => (
+          {sideNav && sideNav.map((x, index) => (
             <div className={cn(styles.sidenavButtons)} key={index}>
               {x}
             </div>
