@@ -94,6 +94,7 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
       return;
     }
     setOpenMenu("")
+    setOpenNav(false)
   }
   
   useScrollPosition(({prevPos, currPos}) => {
@@ -103,12 +104,13 @@ const Navigation = ({logo, dropdownMenu, mobileMenu, sideNav}: PropTypes) => {
     }
     if (!isShow) {
       setOpenMenu("")
+      setOpenNav(false)
     }
   },
     [hideOnScroll],
     undefined,
     false,
-    300)
+    100)
   
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside)
