@@ -52,7 +52,7 @@ const IndexPage = () => (
       }
       buttons={
         <Button
-          to={'https://console.ory.sh'}
+          to={'https://console.ory.sh/registration'}
           style={'filled'}
           iconLeft={<RocketLaunch size={24} />}
         >
