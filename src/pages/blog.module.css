@@ -1,103 +1,52 @@
-.page-title {
-  margin-bottom: 4rem;
+.post-container {
+  flex: 1 calc((100% / 2) - 1rem);
+  margin-right: 2rem;
+
+  &:nth-child(even), &:last-child {
+    margin-right: 0;
+  }
 }
 
+@media (--md) {
+  .post-container {
+    flex: 0 calc((100% / 2) - 1rem)
+  }
+}
+
+@media (--sm) {
+  .post-container {
+    margin-right: 0;
+    flex: 0 calc(100% / 1)
+  }
+}
+
+@media (--xs) {
+  .post-container {
+    margin-right: 0;
+    flex: 0 calc(100% / 1)
+  }
+}
+
+
 .post-box {
-  color: var(--colors-base-black);
-  font-size: 0.833rem;
+  height: calc(100% - 6rem);
+  padding: 2rem;
+  color: inherit;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 2rem;
-
-  background-color: var(--colors-themed-light);
+  background-color: var(--colors-themed-background--next);
   border: 1px solid;
-  border-color: var(--colors-themed-light);
+  border-color: var(--colors-themed-background--next);
   transition: all ease 200ms;
+
+  & span {
+    align-self: start;
+  }
 
   &:hover,
   &:active,
   &:focus {
     border-color: var(--colors-themed-default);
-  }
-
-  & h2 {
-    font-size: 1rem;
-  }
-}
-
-.post-content {
-  width: 90%;
-  padding: 2rem;
-}
-
-.post-img {
-  width: 5%;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-p.info {
-  color: var(--colors-base-text);
-  line-height: 1.5;
-  margin-bottom: 0;
-  font-size: 0.733rem;
-}
-
-span.author {
-  color: var(--colors-themed-default);
-}
-
-p.post-overline {
-  font-size: 0.733rem;
-  line-height: 1;
-  margin: 0;
-}
-
-.post-list {
-  max-width: 100%;
-}
-
-@media (--md-viewport) {
-  .post-box {
-    flex-direction: column;
-    align-content: stretch;
-  }
-
-  .post-img {
-    height: 10%;
-    width: auto;
-    & img {
-      max-height: 2rem;
-    }
-  }
-
-  .post-content {
-    width: auto;
-    padding: 2rem;
-  }
-}
-
-@media (--sm-viewport) {
-  .post-box {
-    flex-direction: column;
-    align-content: stretch;
-  }
-
-  .post-img {
-    height: 10%;
-    width: auto;
-    & img {
-      max-height: 1rem;
-    }
-  }
-
-  .post-content {
-    width: auto;
-    padding: 2rem;
   }
 }

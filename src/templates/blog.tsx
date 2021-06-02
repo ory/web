@@ -25,7 +25,7 @@ export default function BlogTemplate(props: any) {
         author={fn.author}
         subtitle={fn.subtitle}
       />
-      <BlogSection>
+      <BlogSection alt={false}>
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
       <Newsletter
@@ -59,7 +59,6 @@ export const pageQuery = graphql`
           keywords
           canonical
         }
-
         publishedAt(formatString: "MMMM DD, YYYY")
       }
     }
