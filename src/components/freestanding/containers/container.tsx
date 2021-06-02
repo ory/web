@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as styles from './container.module.css'
 import cn from 'classnames'
 import { ParseCase } from '../../../util'
@@ -75,7 +75,7 @@ const getHidden = (mode: string) => {
   return styles[`hidden${ParseCase(mode)}`]
 }
 
-const Container = ({
+const Container = forwardRef(({
   children,
   className,
   flexContainer = 'row',
@@ -88,8 +88,9 @@ const Container = ({
   xsHidden = false,
   editMode = false,
   noWrap = false
-}: PropTypes) => (
+}: PropTypes, ref:any) => (
   <div
+    ref={ref}
     className={cn(
       fluid && styles.containerFluid,
       editMode && styles.editMode,
@@ -107,6 +108,6 @@ const Container = ({
   >
     {children}
   </div>
-)
+))
 
 export default Container

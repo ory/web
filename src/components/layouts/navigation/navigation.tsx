@@ -76,25 +76,26 @@ interface PropTypes {
 }
 
 const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
-  const [openNav, setOpenNav] = useState<boolean>(false)
+  const [mobileOpenNav, setMobileOpenNav] = useState<boolean>(false)
   const [openMenu, setOpenMenu] = useState<string>()
   const [hideOnScroll, setHideOnScroll] = useState(true)
 
-  const currentNode = useRef<any>()
-
+  const currentNode = useRef<any>(null)
+  const currentMobileNode = useRef<any>(null)
+  
   let mobileNav = cn(styles.mobileContainer)
-  if (openNav) {
+  if (mobileOpenNav) {
     mobileNav = cn(styles.mobileNavActive)
   }
 
   // once clicked outside of the nav the menu will close
   const handleClickOutside = (e: MouseEvent) => {
     if (currentNode === null) return
-    if (currentNode.current.contains(e.target)) {
+    if (currentNode.current.contains(e.target) || currentMobileNode.current.contains(e.target)){
       return
     }
     setOpenMenu('')
-    setOpenNav(false)
+    setMobileOpenNav(false)
   }
 
   useScrollPosition(
@@ -105,7 +106,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
       }
       if (!isShow) {
         setOpenMenu('')
-        setOpenNav(false)
+        setMobileOpenNav(false)
       }
     },
     [hideOnScroll],
@@ -120,12 +121,11 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [])
-
+  }, [mobileOpenNav])
+  
   return (
     <div
       className={cn(styles.navigation, !hideOnScroll && styles.navigationHide)}
-      ref={currentNode}
     >
       <Container fluid={true} noWrap={true}>
         <Button to={'/'} style={'none'}>
@@ -138,7 +138,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
         </Button>
 
         <nav role={'navigation'}>
-          <Container smHidden={true} xsHidden={true}>
+          <Container smHidden={true} xsHidden={true} ref={currentNode}>
             {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
               <MenuItem
                 title={title}
@@ -196,13 +196,17 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
         </Container>
 
         <Container justify={'end'} lgHidden={true} mdHidden={true}>
-          <Button to={() => setOpenNav(!openNav)} style={'link'}>
+          <Button to={() => setMobileOpenNav((current) => {
+              console.log(current);
+              return !current
+            })}
+           style={'link'}>
             <List size={32} />
           </Button>
         </Container>
       </Container>
 
-      <div className={cn(mobileNav)}>
+      <div className={cn(mobileNav)} ref={currentMobileNode}>
         <DropdownMobileMenu>
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
