@@ -1,13 +1,13 @@
 .footer {
   padding-top: 64px;
   padding-bottom: 0;
-  background-color: var(--colors-base-grey-25--next);
+  background-color: var(--colors-base-grey-50--next);
   color: var(--colors-base-grey-600--next);
 }
 
 .footer-sub {
   padding: 16px;
-  background-color: var(--colors-base-grey-50--next);
+  background-color: var(--colors-base-grey--next)
 }
 
 .footer-container {
@@ -34,5 +34,17 @@
   &:focus,
   &:active {
     color: var(--colors-themed-primary--next);
+  }
+}
+
+.footer-sub .footer-font a {
+  word-break: break-all;
+  color: var(--colors-base-grey-200--next);
+  transition: color ease 200ms;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--colors-base-white--next);
   }
 }

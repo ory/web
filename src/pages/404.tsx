@@ -1,25 +1,25 @@
 import React from 'react'
 import Layout from '../components/layouts/layout/layout'
-import { Link } from 'gatsby'
-import Section from '../components/section'
+import Button from '../components/freestanding/button/button'
+import FeatureImage from '../components/layouts/feature-image/feature-image'
 
 const NotFoundPage = () => (
   <Layout>
-    <Section
-      wide
-      left={
+    <FeatureImage
+      overline={'404 - not found'}
+      title={<>We couldn't find the page you were looking for</>}
+      description={
         <>
-          <h1>404 - not found</h1>
-          <p>
-            The requested page does not exist. We will try to automatically
-            redirect you to our home page in 10 seconds.
-          </p>
-          <p>
-            Please go to the the home page by clicking <Link to="/">here</Link>.
-          </p>
+          The requested page does not exist. We will try to automatically
+          redirect you to our home page in 10 seconds.
         </>
       }
-      right={
+      buttons={
+        <Button to={'/'} style={'filled'}>
+          Return home
+        </Button>
+      }
+      image={
         <video
           width="100%"
           autoPlay

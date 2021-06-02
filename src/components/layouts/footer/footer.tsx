@@ -11,7 +11,7 @@ import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import { pb16, pb32 } from '../../freestanding/utils/padding.module.css'
+import { pb16, pb32, pl16 } from '../../freestanding/utils/padding.module.css'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
@@ -90,7 +90,7 @@ const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
     <Grid lg={12} md={12} sm={12} xs={12}>
       <Container
         className={cn(className)}
-        alignItems={'start'}
+        alignItems={'center'}
         justify={'center'}
       >
         <Grid lg={4} md={4} sm={4} xs={12}>
@@ -103,7 +103,7 @@ const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
           </Container>
         </Grid>
         <Grid lg={4} md={4} sm={4} xs={12}>
-          <Container justify={'center'}>
+          <Container justify={'center'} alignItems={'center'}>
             <MoleculeInteraction>
               {social.map((s, index) => (
                 <ColourWrapper
@@ -122,7 +122,7 @@ const FooterSub = ({ className, copyright, social, legal }: FooterSub) => (
             <MoleculeInteraction>
               {legal.map((l, index) => (
                 <ColourWrapper
-                  className={cn(footerFont)}
+                  className={cn(footerFont, pl16)}
                   text={'base-grey-400'}
                   key={index}
                 >
@@ -146,7 +146,6 @@ const Footer = ({
   legal
 }: FooterPropTypes) => (
   <>
-    <MoleculeSeparator style={'horizontal'} />
     <div className={cn(footer)}>
       <FooterMain
         className={cn(footerContainer, pb32)}

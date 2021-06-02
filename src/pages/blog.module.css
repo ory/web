@@ -1,32 +1,6 @@
 .post-container {
-  flex: 1 calc((100% / 2) - 1rem);
-  margin-right: 2rem;
-
-  &:nth-child(even), &:last-child {
-    margin-right: 0;
-  }
+  flex: 0 100%;
 }
-
-@media (--md) {
-  .post-container {
-    flex: 0 calc((100% / 2) - 1rem)
-  }
-}
-
-@media (--sm) {
-  .post-container {
-    margin-right: 0;
-    flex: 0 calc(100% / 1)
-  }
-}
-
-@media (--xs) {
-  .post-container {
-    margin-right: 0;
-    flex: 0 calc(100% / 1)
-  }
-}
-
 
 .post-box {
   height: calc(100% - 6rem);
