@@ -6,7 +6,7 @@ html {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--colors-base-grey--next)
+  color: var(--colors-base-grey--next);
 }
 
 a:any-link {
@@ -19,7 +19,7 @@ a:any-link {
   color: var(--colors-themed-primary--next);
   text-decoration: none;
   transition: color ease 200ms, background-color ease 200ms,
-  border-color ease 200ms;
+    border-color ease 200ms;
 
   &:hover,
   &:focus,
@@ -28,11 +28,11 @@ a:any-link {
   }
 }
 
-.light a:global  {
+.light a:global {
   color: var(--colors-themed-darkmode--next);
   text-decoration: none;
   transition: color ease 200ms, background-color ease 200ms,
-  border-color ease 200ms;
+    border-color ease 200ms;
 
   &:hover,
   &:focus,
@@ -121,11 +121,11 @@ input {
 }
 
 .mute-60 {
-  opacity: 0.60;
+  opacity: 0.6;
 }
 
 .mute-40 {
-  opacity: 0.40;
+  opacity: 0.4;
 }
 
 .font-h1 {

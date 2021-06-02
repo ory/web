@@ -90,10 +90,9 @@ const IndexPage = () => (
         <>
           Ory / Hydra is Open Source and OpenID Connect Certified® technology
           that integrates with any login system. Get started in minutes, and
-          provide secure access to your application and API endpoints.
-          Ory / Hydra works with any login system and only a few lines of code
-          are required.
-          Head over to our documentation and learn more.
+          provide secure access to your application and API endpoints. Ory /
+          Hydra works with any login system and only a few lines of code are
+          required. Head over to our documentation and learn more.
         </>
       }
       buttons={
@@ -118,10 +117,9 @@ const IndexPage = () => (
         <>
           Ory / Hydra is written in Go and we provide SDKs for almost every
           language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
-          Typescript.
-          We work with any login system and it is easy to customize the login
-          experience.
-          Our documentation makes integrating Ory / Hydra a snap.
+          Typescript. We work with any login system and it is easy to customize
+          the login experience. Our documentation makes integrating Ory / Hydra
+          a snap.
         </>
       }
       buttons={
@@ -142,9 +140,9 @@ const IndexPage = () => (
       title={<>Ready to get started?</>}
       description={
         <>
-          Explore Ory and the future of identity.
-          Make yourself heard in discussions and contribute on GitHub.
-          Your code will be shipped in the next version.
+          Explore Ory and the future of identity. Make yourself heard in
+          discussions and contribute on GitHub. Your code will be shipped in the
+          next version.
         </>
       }
       buttons={

@@ -13,18 +13,18 @@
 
 @media (--md) {
   .adopters-container {
-    flex: 0 calc(100% / 4)
+    flex: 0 calc(100% / 4);
   }
 }
 
 @media (--sm) {
   .adopters-container {
-    flex: 0 calc(100% / 3)
+    flex: 0 calc(100% / 3);
   }
 }
 
 @media (--xs) {
   .adopters-container {
-    flex: 0 calc(100% / 2)
+    flex: 0 calc(100% / 2);
   }
 }

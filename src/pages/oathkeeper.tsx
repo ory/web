@@ -129,8 +129,8 @@ const IndexPage = () => (
         <>
           Ory / Oathkeeper is written in Go and we provide SDKs for almost every
           language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
-          Typescript.
-          Our documentation makes integrating Ory / Oathkeeper a snap.
+          Typescript. Our documentation makes integrating Ory / Oathkeeper a
+          snap.
         </>
       }
       buttons={
@@ -151,9 +151,9 @@ const IndexPage = () => (
       title={<>Ready to get started?</>}
       description={
         <>
-          Explore Ory and the future of identity.
-          Make yourself heard in discussions and contribute on GitHub.
-          Your code will be shipped in the next version.
+          Explore Ory and the future of identity. Make yourself heard in
+          discussions and contribute on GitHub. Your code will be shipped in the
+          next version.
         </>
       }
       buttons={

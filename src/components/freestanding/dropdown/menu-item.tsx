@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import Button from '../button/button'
 import ColourWrapper from '../colour/colour-wrapper'
-import {menuItem, menuButton} from './menu-item.module.css'
+import { menuItem, menuButton } from './menu-item.module.css'
 import { ArrowDown, CaretDown } from 'phosphor-react'
 
 interface PropType {
@@ -12,13 +12,17 @@ interface PropType {
   onClick: () => void
 }
 
-const MenuItem = ({className, title, onClick, children}: PropType) => (
+const MenuItem = ({ className, title, onClick, children }: PropType) => (
   <>
     <li aria-haspopup="true" className={cn(menuItem, className && className)}>
       {typeof title === 'string' ? (
         <>
           <ColourWrapper text={'base-grey'} className={cn(menuButton)}>
-            <Button to={onClick} style={'none'} iconRight={<CaretDown size={12} weight={"bold"}/>}>
+            <Button
+              to={onClick}
+              style={'none'}
+              iconRight={<CaretDown size={12} weight={'bold'} />}
+            >
               {title}
             </Button>
           </ColourWrapper>
@@ -28,7 +32,6 @@ const MenuItem = ({className, title, onClick, children}: PropType) => (
         <ColourWrapper text={'base-grey'}>{title}</ColourWrapper>
       )}
     </li>
-    
   </>
 )
 

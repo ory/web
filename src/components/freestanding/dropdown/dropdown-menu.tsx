@@ -10,7 +10,13 @@ interface PropTypes {
 }
 
 const DropdownMenu = ({ className, show, children }: PropTypes) => (
-  <div className={cn(dropdownMenu, !show && dropdownMenuHide, className && className)}>
+  <div
+    className={cn(
+      dropdownMenu,
+      !show && dropdownMenuHide,
+      className && className
+    )}
+  >
     <Container
       fluid={true}
       aria-label={'submenu'}
