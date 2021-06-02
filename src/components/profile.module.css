@@ -1,64 +1,13 @@
 .profile {
   display: flex;
-  margin-bottom: 34px;
   align-items: center;
 
   &:last-child {
-    margin-bottom: 0 !important;
-  }
-
-  & h4 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 168%;
-    margin-bottom: 8px;
-    color: var(--colors-base-dark);
+    margin-bottom: 0;
   }
 
   & img {
     width: 90px;
     height: 90px;
   }
-
-  & a img.social {
-    padding-right: 8px;
-    width: auto;
-    height: auto;
-    transition: all ease 200ms;
-  }
-
-  & a:any-link {
-    &:hover,
-    &:active,
-    &:focus {
-      & img {
-        filter: invert(1);
-      }
-    }
-  }
-
-  @media (--sm-viewport) {
-    .profile {
-      margin-bottom: 34px;
-
-      &:last-child {
-        margin-bottom: 34px !important;
-      }
-    }
-
-    @media (--md-viewport) {
-      .profile {
-        margin-bottom: 34px;
-      }
-
-      &:last-child {
-        margin-bottom: 34px !important;
-      }
-    }
-  }
-}
-
-.space {
-  margin-left: 20px;
 }
