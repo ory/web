@@ -1,33 +1,39 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 import BlogSection from '../components/blog-section'
-
 import * as styles from './blog.module.css'
 import cn from 'classnames'
 import { AuthorName } from '../components/author'
+import Button from '../components/freestanding/button/button'
+import ContentText from '../components/freestanding/content/content-text'
+import Molecule from '../components/freestanding/molecule/molecule'
+import {
+  pb16,
+  pb24,
+  pb32
+} from '../components/freestanding/utils/padding.module.css'
+import Container from '../components/freestanding/containers/container'
 
 const Post = ({
   node: {
-    frontmatter: { path, banner, overline, title, teaser, author, publishedAt }
+    frontmatter: { path, overline, title, teaser, author, publishedAt }
   }
 }: any) => (
-  <Link to={path}>
-    <div className={styles.postBox}>
-      <div className={cn(styles.postImg)}>
-        <img src={banner} alt={overline} />
-      </div>
-      <div className={cn(styles.postContent)}>
-        <p className={styles.postOverline}>{overline}</p>
-        <h2 className={styles.postTitle}>{title}</h2>
-        <p className={styles.postTeaser}>{teaser}</p>
-        <p className={styles.info}>
-          <AuthorName name={author} className={styles.author} /> - {publishedAt}
+  <Button style={'none'} to={path} className={cn(styles.postBox)}>
+    <ContentText>
+      <Molecule>
+        <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
+        <h2 className={cn('font-h4', pb32)}>{title}</h2>
+        <p className={cn('font-p-sm', 'mute-85', pb24)}>{teaser}</p>
+        <p className={cn('font-p-sm', 'mute-40')}>
+          <AuthorName className={cn('font-p-sm')} name={author} /> -{' '}
+          {publishedAt}
         </p>
-      </div>
-    </div>
-  </Link>
+      </Molecule>
+    </ContentText>
+  </Button>
 )
 
 const BlogPostsPage = ({
@@ -42,15 +48,19 @@ const BlogPostsPage = ({
         'Read articles and blog posts from ORY core contributors and maintainers.'
       }
     />
-    <BlogSection overrideStyles={{ paddingTop: 32, paddingBottom: 32 }}>
-      <h1 className={styles.pageTitle}>Developer Blog & Articles</h1>
-      <div className={styles.postList}>
+    <BlogSection alt={true}>
+      <h1 className={cn('font-h1', pb32)}>Developer Blog & Articles</h1>
+      <Container alignItems={'stretch'} align-content={'stretch'}>
         {edges.map(({ node }: any) => (
-          <div key={node.id} className={styles.postItem}>
+          <Container
+            align-content={'start'}
+            key={node.id}
+            className={cn(styles.postContainer)}
+          >
             <Post node={node} />
-          </div>
+          </Container>
         ))}
-      </div>
+      </Container>
     </BlogSection>
   </Layout>
 )
@@ -80,7 +90,6 @@ export const pageQuery = graphql`
             title
             teaser
             overline
-            banner
           }
         }
       }

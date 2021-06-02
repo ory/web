@@ -21,6 +21,8 @@ h6,
 p,
 a,
 li,
+ul,
+blockquote,
 input {
   margin: 0;
 }

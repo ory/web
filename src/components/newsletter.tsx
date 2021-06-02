@@ -7,7 +7,16 @@ import React, {
 } from 'react'
 import cn from 'classnames'
 import * as styles from './newsletter.module.css'
-import VerticalDivider from './vertical-divider'
+import { hero } from './layouts/hero/hero.module.css'
+import Container from './freestanding/containers/container'
+import Grid from './freestanding/containers/grid'
+import { pb32, pb48 } from './freestanding/utils/padding.module.css'
+import ContentText from './freestanding/content/content-text'
+import MoleculeTextInteraction from './freestanding/molecule/molecule-text-interaction'
+import Molecule from './freestanding/molecule/molecule'
+import MoleculeInteraction from './freestanding/molecule/molecule-interaction'
+import ContentVisual from './freestanding/content/content-visual'
+import Button from './freestanding/button/button'
 
 interface StateTypes {
   email: string
@@ -21,8 +30,7 @@ const projects = {
 }
 
 interface PropTypes {
-  left?: ReactNode
-  light?: boolean
+  special?: ReactNode
   preselect?: keyof typeof projects
 }
 
@@ -45,32 +53,31 @@ class Newsletter extends Component<PropTypes, StateTypes> {
   }
 
   render() {
-    const { left, light } = this.props
+    const { special } = this.props
 
     return (
-      <div className={cn(styles.newsletter, { [styles.light]: light })}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-              {left ? (
-                left
-              ) : (
-                <>
-                  <h3>Never miss a patch</h3>
-                  <p>
-                    Ory ships regular product patches and updates. Subscribe to
-                    our newsletter to get the good stuff, and stay up to date.
-                  </p>
-                </>
-              )}
-            </div>
-            <div
-              className={cn(
-                'col-lg-offset-2 col-lg-4  col-md-offset-1 col-sm-10  col-sm-offset-1 col-sm-10',
-                styles.right
-              )}
-            >
-              <h3>Subscribe now</h3>
+      <div className={cn(styles.newsletter)}>
+        <Container fluid={true} justify={'center'}>
+          <Grid lg={5} md={8} sm={10} xs={12} className={cn(pb32)}>
+            <ContentText>
+              <Container justify={'center'} className={cn(styles.textAlign)}>
+                {special ? (
+                  special
+                ) : (
+                  <>
+                    <h3 className={cn('font-h3', 'light', pb32)}>
+                      Never miss a patch
+                    </h3>
+                    <p className={cn('font-p', 'mute-85', 'light', pb32)}>
+                      Ory ships regular product patches and updates. Subscribe
+                      to our newsletter to get the good stuff, and stay up to
+                      date.
+                    </p>
+                  </>
+                )}
+              </Container>
+            </ContentText>
+            <Molecule>
               <form className={styles.form} onSubmit={this.onSubmit}>
                 <input
                   type="email"
@@ -81,15 +88,16 @@ class Newsletter extends Component<PropTypes, StateTypes> {
                   value={this.state.email}
                 />
                 <input
+                  className={cn('font-link', 'light')}
                   type="button"
                   name={'submit'}
                   value={'Subscribe'}
                   onClick={this.onSubmit}
                 />
               </form>
-            </div>
-          </div>
-        </div>
+            </Molecule>
+          </Grid>
+        </Container>
       </div>
     )
   }
