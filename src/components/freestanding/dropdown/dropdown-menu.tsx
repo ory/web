@@ -1,15 +1,16 @@
 import React from 'react'
 import cn from 'classnames'
-import { dropdownMenu } from './dropdown-menu.module.css'
+import { dropdownMenu, dropdownMenuHide } from './dropdown-menu.module.css'
 import Container from '../containers/container'
 
 interface PropTypes {
   children: React.ReactNode
+  show: boolean
   className?: string
 }
 
-const DropdownMenu = ({ className, children }: PropTypes) => (
-  <div className={cn(dropdownMenu, className && className)}>
+const DropdownMenu = ({ className, show, children }: PropTypes) => (
+  <div className={cn(dropdownMenu, !show && dropdownMenuHide, className && className)}>
     <Container
       fluid={true}
       aria-label={'submenu'}

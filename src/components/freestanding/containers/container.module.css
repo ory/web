@@ -11,8 +11,7 @@
 
 .no-wrap {
   display: flex;
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
 }
 
 .container-fluid {
