@@ -27,6 +27,9 @@ import kratosProcess from '../images/kratos/kratos.svg'
 import CodeBox, { Languages } from '../components/codebox'
 import cn from 'classnames'
 import SEO from '../components/layouts/seo/seo'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import Stats from '../components/layouts/stats/stats'
+import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -98,12 +101,11 @@ const IndexPage = () => (
         <>
           Ory / Kratos is a cloud native user management system. It provides
           user login and registration, multi-factor authentication, and user
-          information storage with a headless API.
-          It is fully configurable and supports a wide range of protocols such
-          as Google Authenticator, and stores user information using JSON
-          Schema.
-          Ory / Kratos works with any UI framework and only a few lines of code
-          are required. Take a look at our documentation and learn more.
+          information storage with a headless API. It is fully configurable and
+          supports a wide range of protocols such as Google Authenticator, and
+          stores user information using JSON Schema. Ory / Kratos works with any
+          UI framework and only a few lines of code are required. Take a look at
+          our documentation and learn more.
         </>
       }
       buttons={
@@ -128,8 +130,8 @@ const IndexPage = () => (
         <>
           Ory / Kratos is written in Go and we provide SDKs for every language.
           We work with any UI framework and interfacing with the login,
-          registration and profile management is easy.
-          Our documentation makes integrating Ory / Kratos a snap.
+          registration and profile management is easy. Our documentation makes
+          integrating Ory / Kratos a snap.
         </>
       }
       buttons={
@@ -145,79 +147,17 @@ const IndexPage = () => (
       }
       image={<img loading="lazy" alt="" src={kratosPolyglot} />}
     />
-
-    <Quickstart
-      title={<>Ready to get started?</>}
+    <Adopters {...adoptersDefault} />
+    <Stats
+      title={<>Billions of Identities</>}
       description={
         <>
-          Explore Ory and the future of identity.
-          Make yourself heard in discussions and contribute on GitHub.
-          Your code will be shipped in the next version.
+          Companies from all over the world rely on Ory for their identity
+          needs. Ory technology secures billions of identity requests.
         </>
       }
-      buttons={
-        <>
-          <Button
-            style={'link'}
-            to={'/docs/ecosystem/projects'}
-            iconRight={<ArrowRight size={16} />}
-          >
-            Open Source Documentation
-          </Button>
-        </>
-      }
-      content={[
-        {
-          icon: <BookOpen size={32} />,
-          title: (
-            <>
-              Slack:
-              <br />
-              Developer Chat
-            </>
-          ),
-          description: (
-            <>
-              A community to help you succeed. Become a hero for developers, ask
-              questions & participate in events.
-            </>
-          ),
-          button: (
-            <Button
-              to={'https://slack.ory.sh/'}
-              style={'link'}
-              iconRight={<ArrowRight size={16} />}
-            >
-              Join the chat
-            </Button>
-          )
-        },
-        {
-          icon: <Users size={32} />,
-          title: (
-            <>
-              GitHub:
-              <br /> Discussions & Code
-            </>
-          ),
-          description: (
-            <>
-              Make yourself heard on GitHub and contribute code and insights to
-              the open source projects at the heart of Ory.
-            </>
-          ),
-          button: (
-            <Button
-              to={'https://github.com/ory/'}
-              style={'link'}
-              iconRight={<ArrowRight size={16} />}
-            >
-              Explore ecosystem
-            </Button>
-          )
-        }
-      ]}
     />
+    <Quickstart {...quickstartOpenSource} />
   </Layout>
 )
 
