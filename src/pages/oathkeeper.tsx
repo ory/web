@@ -88,9 +88,9 @@ const IndexPage = () => (
     />
 
     <Hero
-      title={'Global access control'}
+      title={'Configure how traffic interacts with your application'}
       description={
-        'Manage user roles, rights, and permissions with ACL based on Google Zanzibar'
+        'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.'
       }
       image={<img loading="lazy" alt="" src={oathkeeperProcess} />}
     />

@@ -119,7 +119,7 @@ const IndexPage = () => (
     <Hero
       title={'Global access control'}
       description={
-        'Manage user roles, rights, and permissions with ACL based on Google Zanzibar'
+        'Manage user roles, rights, and permissions with ACL based on Google Zanzibar.'
       }
       image={<img loading="lazy" alt="" src={ketoProcess} />}
     />
