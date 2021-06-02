@@ -60,7 +60,7 @@ const Layout = ({ children }: PropTypes) => (
             {
               description: 'Never Build Auth Again',
               button: <Button
-                to={'https://console.ory.sh'}
+                to={'https://console.ory.sh/registration'}
                 style={'link'}
                 openInNewWindow={false}
                 iconRight={<ArrowRight size={16} />}
@@ -255,7 +255,7 @@ const Layout = ({ children }: PropTypes) => (
             button: (
               <Button
                 className={cn('font-h5')}
-                to={'https://console.ory.sh'}
+                to={'https://console.ory.sh/registration'}
                 style={'link'}
                 openInNewWindow={true}
               >
@@ -460,7 +460,7 @@ const Layout = ({ children }: PropTypes) => (
           links: [
             <Button
               className={cn('font-p-sm')}
-              to={'https://console.ory.sh'}
+              to={'https://console.ory.sh/registration'}
               style={'none'}
               openInNewWindow={true}
             >

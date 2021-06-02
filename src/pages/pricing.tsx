@@ -49,7 +49,7 @@ const PricingPage = () => (
           price: '$99',
           priceDescription: 'per Project/Member',
           button: (
-            <Button to={'https://console.ory.sh/'} style={'filled'}>
+            <Button to={'https://console.ory.sh/registration'} style={'filled'}>
               Become a member
             </Button>
           ),
