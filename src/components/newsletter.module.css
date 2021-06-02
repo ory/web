@@ -4,52 +4,46 @@
 @import '../styles/typography.css';
 
 .newsletter {
-  background-color: var(--colors-base-light);
+  background-color: var(--colors-base-grey--next);
   padding: 4rem 0;
-  color: var(--colors-base-black);
+}
+
+.text-align {
+  text-align: center;
 }
 
 @media (--sm-viewport) {
-  .newsletter {
-    padding: 4rem 0;
-  }
 
-  .right {
-    margin-top: 2rem;
-  }
 }
 
 @media (--md-viewport) {
-  .newsletter {
-    padding: 4rem 0;
-  }
-
-  .right {
-    margin-top: 2rem;
-  }
-}
-
-.light {
-  background-color: var(--colors-base-dark);
 }
 
 .form {
   width: 100%;
   margin-bottom: 10px;
+  align-self: center;
 
   & input {
     font-style: normal;
     font-size: 14px;
     color: var(--colors-base-white);
-    padding: 8px 16px;
+    padding: .75rem 1rem .75rem 1rem;
     border: none;
     line-height: 168%;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   & input[type='button'] {
+    padding: .75rem 1rem .75rem 1rem;
     font-weight: 500;
-    width: calc(40%);
+    width: 40%;
+    margin-left: -10%;
     cursor: pointer;
+    border-radius: 100px;
     transition: color ease 200ms, background-color ease 200ms,
       border-color ease 200ms;
 
@@ -67,12 +61,12 @@
   }
 
   & input[type='email'] {
-    color: var(--colors-base-black);
-    background-color: rgba(33, 16, 100, 0.1);
-    width: calc(60% - 2rem);
+    border-radius: 100px;
+    background-color: var(--colors-base-grey-800--next);
+    width: 60%;
 
     &::placeholder {
-      color: var(--colors-base-text);
+      color: var(--colors-base-grey-400--next);
     }
   }
 }

@@ -6,6 +6,9 @@ import SEO from '../components/layouts/seo/seo'
 import Layout from '../components/layouts/layout/layout'
 import Newsletter from '../components/newsletter'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import cn from 'classnames'
+import { pb32 } from '../components/freestanding/utils/padding.module.css'
+import Container from '../components/freestanding/containers/container'
 
 export default function BlogTemplate(props: any) {
   const { mdx } = props.data // data.mdx holds our post data
@@ -29,10 +32,12 @@ export default function BlogTemplate(props: any) {
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
       <Newsletter
-        left={
+        special={
           <>
-            <h3>Never miss an article</h3>
-            <p>
+            <h3 className={cn('font-h3', 'light', pb32)}>
+              Never miss an article
+            </h3>
+            <p className={cn('font-p', 'mute-85', 'light', pb32)}>
               Ory ships regular product patches and updates. Subscribe to our
               newsletter to get the good stuff, and stay up to date.
             </p>
