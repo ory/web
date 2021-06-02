@@ -189,7 +189,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
 
         <Container justify={'end'} smHidden={true} xsHidden={true}>
           {sideNav.map((x, index) => (
-            <div className={cn(pr32)} key={index}>
+            <div className={cn(styles.sidenavButtons)} key={index}>
               {x}
             </div>
           ))}

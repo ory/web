@@ -1,6 +1,7 @@
 .navigation {
   background-color: var(--colors-base-white--next);
-  box-shadow: var(--elevation-large);
+  border-bottom: 1px solid;
+  border-color: var(--colors-base-grey-50--next);
   padding: 16px 0;
   position: fixed;
 
@@ -15,6 +16,13 @@
 
   width: 100%;
   max-height: 100%;
+}
+
+.sidenav-buttons {
+  padding-right: 2rem;
+  &:last-child{
+    padding-right: 0;
+  }
 }
 
 .navigation-hide {
