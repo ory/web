@@ -18,9 +18,9 @@ const IndexPage = () => (
   <Layout>
     <SEO
       description={
-        'Implement a secure, modern Auth system in minutes with open source from Ory. Works in both new and existing systems.'
+        'Adopt a secure, modern Auth system for the cloud with open source from Ory. Fast, modular integration into any tech stack.'
       }
-      title={'Open Source Auth Solutions For Everyone'}
+      title={'Ory - Open Source Auth Solutions For Everyone'}
     />
 
     <Projects

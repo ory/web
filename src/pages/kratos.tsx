@@ -82,7 +82,7 @@ const IndexPage = () => (
   <Layout>
     <SEO
       description="Open source user management and identity server."
-      title={`Ory / Kratos Cloud Native Identity and User Management System`}
+      title={`Ory Kratos - Cloud Native Identity and User Management System`}
     />
     <Hero
       title={'Identity and User Management System'}

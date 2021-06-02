@@ -114,7 +114,7 @@ const IndexPage = () => (
       description={
         'Authorization Server based on Google Zanzibar, providing RBAC, ABAC and ACL.'
       }
-      title={`Ory / Keto Permission and Role Management`}
+      title={`Ory Keto - Permission and Role Management`}
     />
     <Hero
       title={'Global access control'}
