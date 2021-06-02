@@ -1,5 +1,5 @@
 .dropdown-menu {
-  background: var(--colors-base-white--next);
+  background-color: var(--colors-base-grey-25--next);
   box-shadow: var(--elevation-large);
   /*border-radius: 20px;*/
   display: block;
