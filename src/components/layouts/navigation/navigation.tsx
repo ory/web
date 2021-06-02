@@ -75,29 +75,48 @@ interface PropTypes {
   sideNav: React.ReactNodeArray
 }
 
+const onClickOutsideRef = (refs: Array<React.MutableRefObject<any>>, handler: (e: MouseEvent | TouchEvent) => void) => {
+  useEffect(() => {
+    const listener = (event: MouseEvent | TouchEvent) => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (refs.filter(value => !value.current || value.current.contains(event.target)).length > 0) {
+        return;
+      }
+      
+      handler(event)
+    }
+  
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+    
+  })
+}
+
 const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
   const [mobileOpenNav, setMobileOpenNav] = useState<boolean>(false)
   const [openMenu, setOpenMenu] = useState<string>()
   const [hideOnScroll, setHideOnScroll] = useState(true)
 
   const currentNode = useRef<any>(null)
+  const currentMobileNavBtnNode = useRef<any>(null)
   const currentMobileNode = useRef<any>(null)
   
   let mobileNav = cn(styles.mobileContainer)
   if (mobileOpenNav) {
     mobileNav = cn(styles.mobileNavActive)
   }
-
+  
   // once clicked outside of the nav the menu will close
-  const handleClickOutside = (e: MouseEvent) => {
-    if (currentNode === null) return
-    if (currentNode.current.contains(e.target) || currentMobileNode.current.contains(e.target)){
-      return
-    }
+  onClickOutsideRef([currentNode, currentMobileNode, currentMobileNavBtnNode], () => {
     setOpenMenu('')
     setMobileOpenNav(false)
-  }
-
+  })
+  
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const isShow = currPos.y > prevPos.y
@@ -114,14 +133,6 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
     false,
     100
   )
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [mobileOpenNav])
   
   return (
     <div
@@ -137,8 +148,8 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
           />
         </Button>
 
-        <nav role={'navigation'}>
-          <Container smHidden={true} xsHidden={true} ref={currentNode}>
+        <nav role={'navigation'} ref={currentNode}>
+          <Container smHidden={true} xsHidden={true}>
             {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
               <MenuItem
                 title={title}
@@ -195,17 +206,14 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
           ))}
         </Container>
 
-        <Container justify={'end'} lgHidden={true} mdHidden={true}>
-          <Button to={() => setMobileOpenNav((current) => {
-              console.log(current);
-              return !current
-            })}
+        <Container lgHidden={true} mdHidden={true} ref={currentMobileNavBtnNode}>
+          <Button to={() => setMobileOpenNav((current) => !current)}
            style={'link'}>
             <List size={32} />
           </Button>
         </Container>
       </Container>
-
+      
       <div className={cn(mobileNav)} ref={currentMobileNode}>
         <DropdownMobileMenu>
           <DropdownMobileMenuSection>
@@ -217,9 +225,9 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
               />
             ))}
           </DropdownMobileMenuSection>
-
+      
           <MoleculeSeparator style={'horizontal'} />
-
+      
           <p className={cn('font-p-sm')}>{mobileMenu.main.title}</p>
           <DropdownMobileMenuSection>
             {mobileMenu.main.buttons.map((button, index) => (
@@ -229,9 +237,9 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
               />
             ))}
           </DropdownMobileMenuSection>
-
+      
           <MoleculeSeparator style={'horizontal'} />
-
+      
           <DropdownMobileMenuSection>
             {mobileMenu.extra.map((button, index) => (
               <DropdownMobileItem
@@ -240,9 +248,9 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
               />
             ))}
           </DropdownMobileMenuSection>
-
+      
           <MoleculeSeparator style={'horizontal'} />
-
+      
           {sideNav.map((x, index) => (
             <div className={cn(pb8, pt8)} key={index}>
               {x}

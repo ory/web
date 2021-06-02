@@ -56,7 +56,7 @@
   /*height: 90vh;
   max-height: 90vh;*/
   overflow-y: hidden;
-  margin: 0;
+  margin: 20px 0;
   overscroll-behavior: contain;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
