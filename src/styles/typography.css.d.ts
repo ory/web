@@ -1,23 +1,24 @@
 declare const styles: {
+  readonly styleLinkInlineLight: string
+  readonly light: string
   readonly cta: string
   readonly primary: string
   readonly visited: string
   readonly secondary: string
   readonly remarkEmoji: string
   readonly fontNowrap: string
+  readonly fontBold: string
+  readonly fontHero: string
   readonly mute85: string
   readonly mute60: string
   readonly mute40: string
-  readonly dark: string
-  readonly light: string
-  readonly fontBold: string
-  readonly fontHero: string
   readonly fontH1: string
   readonly fontH2: string
   readonly fontH3: string
   readonly fontH4: string
   readonly fontH5: string
   readonly fontH6: string
+  readonly fontQuote: string
   readonly fontOverline: string
   readonly fontBtn: string
   readonly fontLink: string

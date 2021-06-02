@@ -1,4 +1,4 @@
 .item-font {
   flex-wrap: wrap;
-  word-break: break-word;
+  word-break: normal;
 }

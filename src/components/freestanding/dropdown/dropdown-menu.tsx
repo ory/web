@@ -1,21 +1,32 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import cn from 'classnames'
-import { dropdownMenu } from './dropdown-menu.module.css'
+import { dropdownMenu, dropdownMenuHide } from './dropdown-menu.module.css'
 import Container from '../containers/container'
 
 interface PropTypes {
   children: React.ReactNode
+  show: boolean
   className?: string
 }
 
-const DropdownMenu = ({ className, children }: PropTypes) => (
-  <Container
-    className={cn(dropdownMenu, className && className)}
-    justify={'space-between'}
-    alignItems={'start'}
+const DropdownMenu = forwardRef(({ className, show, children }: PropTypes, ref: any) => (
+  <div
+    ref={ref}
+    className={cn(
+      dropdownMenu,
+      !show && dropdownMenuHide,
+      className && className
+    )}
   >
-    {children}
-  </Container>
-)
+    <Container
+      fluid={true}
+      aria-label={'submenu'}
+      justify={'start'}
+      alignItems={'start'}
+    >
+      {children}
+    </Container>
+  </div>
+))
 
 export default DropdownMenu

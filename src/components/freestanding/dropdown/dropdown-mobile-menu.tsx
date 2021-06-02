@@ -27,7 +27,7 @@ export const DropdownMobileMenuSection = ({
         justify={'start'}
       >
         {(chunks as Array<React.ReactNode>).map((child, index) => (
-          <Grid sm={4} xs={4} key={index}>
+          <Grid sm={4} xs={5} key={index}>
             {child}
           </Grid>
         ))}
@@ -39,6 +39,7 @@ export const DropdownMobileMenuSection = ({
 export const DropdownMobileMenu = ({ className, children }: PropTypes) => (
   <div className={cn(dropdownMobileMenu)}>
     <Container
+      fluid={true}
       className={cn(pb32)}
       flexContainer={'column'}
       justify={'start'}

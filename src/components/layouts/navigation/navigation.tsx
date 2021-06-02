@@ -16,6 +16,7 @@ import {
   pb64,
   pb8,
   pl8,
+  pr16,
   pr32,
   pr8,
   pt32,
@@ -29,6 +30,9 @@ import {
 import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
 import { Chunks } from '../../../util'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import { useEffect } from 'react'
+import { useRef } from 'react'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 export interface DropdownMenuItem {
   title: string | React.ReactElement
@@ -53,7 +57,7 @@ export interface MobileMenuMain {
 }
 
 export interface DropdownMainItem {
-  title: string
+  title?: string
   description: string
   image?: string | React.ReactElement
   button: React.ReactElement
@@ -71,87 +75,146 @@ interface PropTypes {
   sideNav: React.ReactNodeArray
 }
 
+const onClickOutsideRef = (refs: Array<React.MutableRefObject<any>>, handler: (e: MouseEvent | TouchEvent) => void) => {
+  useEffect(() => {
+    const listener = (event: MouseEvent | TouchEvent) => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (refs.filter(value => !value.current || value.current.contains(event.target)).length > 0) {
+        return;
+      }
+      
+      handler(event)
+    }
+  
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+    
+  })
+}
+
 const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
-  const [openNav, setOpenNav] = useState<boolean>(false)
+  const [mobileOpenNav, setMobileOpenNav] = useState<boolean>(false)
+  const [openMenu, setOpenMenu] = useState<string>()
+  const [hideOnScroll, setHideOnScroll] = useState(true)
 
+  const currentNode = useRef<any>(null)
+  const currentMobileNavBtnNode = useRef<any>(null)
+  const currentMobileNode = useRef<any>(null)
+  
   let mobileNav = cn(styles.mobileContainer)
-
-  if (openNav) {
+  if (mobileOpenNav) {
     mobileNav = cn(styles.mobileNavActive)
   }
-
+  
+  // once clicked outside of the nav the menu will close
+  onClickOutsideRef([currentNode, currentMobileNode, currentMobileNavBtnNode], () => {
+    setOpenMenu('')
+    setMobileOpenNav(false)
+  })
+  
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      const isShow = currPos.y > prevPos.y
+      if (isShow !== hideOnScroll) {
+        setHideOnScroll(isShow)
+      }
+      if (!isShow) {
+        setOpenMenu('')
+        setMobileOpenNav(false)
+      }
+    },
+    [hideOnScroll],
+    undefined,
+    false,
+    100
+  )
+  
   return (
-    <div className={cn(styles.navigation)}>
-      <Container className={cn(styles.navContainer)}>
-        <Grid lg={2}>
-          <Container justify={'start'}>
-            <Button to={'/'} style={'none'}>
-              <img
-                className={cn(styles.navLogo)}
-                src={logo}
-                loading={'eager'}
-                alt={'Ory logo'}
-              />
-            </Button>
-          </Container>
-        </Grid>
-        <Grid lg={5} smHidden={true} xsHidden={true}>
-          <Container justify={'center'}>
-            <nav role="navigation">
-              <ul>
-                {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
-                  <MenuItem title={title} key={index} className={cn(pr32)}>
-                    <DropdownMenu>
-                      {mainMenu &&
-                        mainMenu.map(
-                          ({ title, image, button, description }, index) => (
-                            <DropdownItem
-                              className={cn(pr32)}
-                              key={index}
-                              title={title}
-                              image={image}
-                              button={button}
-                              description={description}
-                            />
-                          )
-                        )}
-                      {sideMenu && (
-                        <Container
-                          flexContainer={'column'}
-                          justify={'start'}
-                          alignItems={'start'}
-                        >
-                          {sideMenu.map(({ description, button }, index) => (
-                            <ContentText key={index} className={cn(pb24)}>
-                              {button}
-                              <p className={cn('font-p-sm')}>{description}</p>
-                            </ContentText>
-                          ))}
-                        </Container>
-                      )}
-                    </DropdownMenu>
-                  </MenuItem>
-                ))}
-              </ul>
-            </nav>
-          </Container>
-        </Grid>
-        <Grid lg={4} md={5}>
-          <Container justify={'end'} smHidden={true} xsHidden={true}>
-            {sideNav.map((x, index) => (
-              <div className={cn(pr32)} key={index}>
-                {x}
-              </div>
+    <div
+      className={cn(styles.navigation, !hideOnScroll && styles.navigationHide)}
+    >
+      <Container fluid={true} noWrap={true}>
+        <Button to={'/'} style={'none'}>
+          <img
+            className={cn(styles.navLogo)}
+            src={logo}
+            loading={'eager'}
+            alt={'Ory logo'}
+          />
+        </Button>
+
+        <nav role={'navigation'} ref={currentNode}>
+          <Container smHidden={true} xsHidden={true}>
+            {dropdownMenu.map(({ title, mainMenu, sideMenu }, index) => (
+              <MenuItem
+                title={title}
+                key={index}
+                className={cn(pr32)}
+                onClick={() =>
+                  setOpenMenu((current) => {
+                    if (current === String(index)) {
+                      return ''
+                    }
+                    return String(index)
+                  })
+                }
+              >
+                <DropdownMenu show={openMenu === String(index)}>
+                  {mainMenu &&
+                    mainMenu.map(
+                      ({ title, image, button, description }, index) => (
+                        <DropdownItem
+                          className={cn(pr32)}
+                          key={index}
+                          title={title}
+                          image={image}
+                          button={button}
+                          description={description}
+                        />
+                      )
+                    )}
+                  {sideMenu && (
+                    <Container
+                      flexContainer={'column'}
+                      justify={'start'}
+                      alignItems={'start'}
+                    >
+                      {sideMenu.map(({ description, button }, index) => (
+                        <ContentText key={index} className={cn(pb24)}>
+                          {button}
+                          <p className={cn('font-p-sm')}>{description}</p>
+                        </ContentText>
+                      ))}
+                    </Container>
+                  )}
+                </DropdownMenu>
+              </MenuItem>
             ))}
           </Container>
-          <Container justify={'end'} lgHidden={true} mdHidden={true}>
-            <Button to={() => setOpenNav(!openNav)} style={'link'}>
-              <List size={32} />
-            </Button>
-          </Container>
-        </Grid>
+        </nav>
+
+        <Container justify={'end'} smHidden={true} xsHidden={true}>
+          {sideNav && sideNav.map((x, index) => (
+            <div className={cn(styles.sidenavButtons)} key={index}>
+              {x}
+            </div>
+          ))}
+        </Container>
+
+        <Container lgHidden={true} mdHidden={true} ref={currentMobileNavBtnNode}>
+          <Button to={() => setMobileOpenNav((current) => !current)}
+           style={'link'}>
+            <List size={32} />
+          </Button>
+        </Container>
       </Container>
-      <div className={cn(mobileNav)}>
+      
+      <div className={cn(mobileNav)} ref={currentMobileNode}>
         <DropdownMobileMenu>
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
@@ -162,9 +225,9 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
               />
             ))}
           </DropdownMobileMenuSection>
-
+      
           <MoleculeSeparator style={'horizontal'} />
-
+      
           <p className={cn('font-p-sm')}>{mobileMenu.main.title}</p>
           <DropdownMobileMenuSection>
             {mobileMenu.main.buttons.map((button, index) => (
@@ -174,9 +237,9 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
               />
             ))}
           </DropdownMobileMenuSection>
-
+      
           <MoleculeSeparator style={'horizontal'} />
-
+      
           <DropdownMobileMenuSection>
             {mobileMenu.extra.map((button, index) => (
               <DropdownMobileItem
@@ -185,9 +248,9 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
               />
             ))}
           </DropdownMobileMenuSection>
-
+      
           <MoleculeSeparator style={'horizontal'} />
-
+      
           {sideNav.map((x, index) => (
             <div className={cn(pb8, pt8)} key={index}>
               {x}

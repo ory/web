@@ -1,8 +1,23 @@
 .dropdown-menu {
-  padding: 24px;
-  background: var(--colors-base-white--next);
+  background-color: var(--colors-base-grey-25--next);
   box-shadow: var(--elevation-large);
-  border-radius: 20px;
-  display: flex;
-  flex-wrap: nowrap !important;
+  /*border-radius: 20px;*/
+  display: block;
+  /*flex-wrap: nowrap !important;*/
+  position: fixed;
+  left: 0;
+  top: 80px;
+  z-index: 999;
+  width: 100%;
+  padding: 24px 0;
+  visibility: visible;
+  transition: all 200ms ease-in;
+  transform: none;
+}
+
+.dropdown-menu-hide {
+  visibility: hidden;
+  transition: all 200ms ease-out;
+  -webkit-transition: all 200ms ease 0s;
+  transform: translate(0, 0);
 }

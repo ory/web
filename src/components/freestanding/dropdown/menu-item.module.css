@@ -1,9 +1,16 @@
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus,
-ul li ul > * {
-  visibility: visible;
-  opacity: 1;
-  display: block;
+.menu-item {
+  float: left;
+  display: inline-block;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.menu-button {
+  cursor: pointer;
 }

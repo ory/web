@@ -5,15 +5,16 @@ import {
   dropdownItemImage
 } from './dropdown-item.module.css'
 import cn from 'classnames'
-import { pt16, pt24, pt8 } from '../utils/padding.module.css'
+import {pb16, pb24, pt16, pt24, pt8 } from '../utils/padding.module.css'
 import Button from '../button/button'
 import ContentText from '../content/content-text'
+import Container from '../containers/container'
 
 interface PropTypes {
   image?: string | React.ReactElement
-  title: string
+  title?: string
   description: string
-  button: React.ReactElement
+  button?: React.ReactElement
   className?: string
 }
 
@@ -24,7 +25,7 @@ const DropdownItem = ({
   description,
   button
 }: PropTypes) => (
-  <div className={cn(dropdownItem, className && className)}>
+  <div className={cn(pb24, className && className)}>
     <ContentText>
       {typeof image === 'string' ? (
         <img
@@ -36,9 +37,10 @@ const DropdownItem = ({
       ) : (
         <div className={cn(imageHidden, dropdownItemImage)}>{image}</div>
       )}
-      <h5 className={cn('font-h5', pt16)}>{title}</h5>
-      <p className={cn('font-p-sm', pt8)}>{description}</p>
-      <div className={cn(pt24)}>{button}</div>
+      {title && <h5 className={cn('font-h5', pt16)}>{title}</h5>}
+      {button && <div className={cn(pb16)}>{button}</div>}
+      <p className={cn('font-p-sm')}>{description}</p>
+      
     </ContentText>
   </div>
 )
