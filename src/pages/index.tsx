@@ -35,10 +35,10 @@ const IndexPage = () => (
   <Layout>
     <SEO
       description={
-        'Implement OAuth 2.0 and OpenID Connect in minutes with open source from Ory. Works in both new and existing systems.'
+        'Ory is a certified and battle-tested identity solution backed by a large Open Source community and trusted by Fortune500 orgs.'
       }
       title={
-        'Ory - Open Source OAuth2 and OpenID Connect Access Control & API Security'
+        'Ory - Open Source Identity Solutions For Everyone'
       }
       keywords={
         'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
