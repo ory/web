@@ -123,7 +123,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
         setHideOnScroll(true);
         return;
       }
-      console.log(`Current: ${currPos.y}\nPrevious:${prevPos.y}`)
+      
       const isShow = currPos.y > prevPos.y
       if (isShow !== hideOnScroll) {
         setHideOnScroll(isShow)
@@ -221,6 +221,17 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
       
       <div className={cn(mobileNav)} ref={currentMobileNode}>
         <DropdownMobileMenu>
+  
+          <div className={cn(pb8)}>
+            {sideNav.map((x, index) => (
+              <div className={cn(pb8)} key={index}>
+                {x}
+              </div>
+            ))}
+          </div>
+          
+          <MoleculeSeparator style={'horizontal'}/>
+          
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
               <DropdownMobileItem
@@ -256,11 +267,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
       
           <MoleculeSeparator style={'horizontal'} />
       
-          {sideNav.map((x, index) => (
-            <div className={cn(pb8, pt8)} key={index}>
-              {x}
-            </div>
-          ))}
+          
         </DropdownMobileMenu>
       </div>
     </div>

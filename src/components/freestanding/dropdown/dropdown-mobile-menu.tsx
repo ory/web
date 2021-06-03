@@ -6,7 +6,7 @@ import {
 import cn from 'classnames'
 import { Chunks } from '../../../util'
 import Container from '../containers/container'
-import { pb24, pb32 } from '../utils/padding.module.css'
+import { pb24, pb32, pb64 } from '../utils/padding.module.css'
 import Grid from '../containers/grid'
 
 interface PropTypes {
@@ -37,10 +37,10 @@ export const DropdownMobileMenuSection = ({
 )
 
 export const DropdownMobileMenu = ({ className, children }: PropTypes) => (
-  <div className={cn(dropdownMobileMenu)}>
+  <div className={cn(dropdownMobileMenu, className && className)}>
     <Container
       fluid={true}
-      className={cn(pb32)}
+      className={cn(pb64)}
       flexContainer={'column'}
       justify={'start'}
       alignItems={'stretch'}

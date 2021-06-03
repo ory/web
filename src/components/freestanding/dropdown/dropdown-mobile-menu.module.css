@@ -5,8 +5,8 @@
   padding: 24px;
   background: var(--colors-base-white--next);
   box-shadow: var(--elevation-large);
-  border-radius: 20px;
-  height: 100%;
+  /*border-radius: 20px;*/
+  /*height: 100%;*/
 }
 
 /*.dropdown-mobile-container {
