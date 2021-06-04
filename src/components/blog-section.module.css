@@ -1,13 +1,13 @@
 @import '../styles/properties.css';
 
 .blog-section-alt {
-  padding: 32px 0;
+  padding: 128px 0;
   background-color: var(--colors-base-white);
 }
 
 
 .blog-section {
-  padding: 32px 0;
+  padding-top: 32px;
   background-color: var(--colors-base-white);
 
   & li,

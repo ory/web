@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 import BlogSection from '../components/blog-section'
 import * as styles from './blog.module.css'
@@ -15,6 +14,7 @@ import {
   pb32
 } from '../components/freestanding/utils/padding.module.css'
 import Container from '../components/freestanding/containers/container'
+import Layout from '../components/layouts/layout/layout'
 
 const Post = ({
   node: {
