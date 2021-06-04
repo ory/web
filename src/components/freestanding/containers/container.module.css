@@ -3,6 +3,8 @@
 
 .container {
   display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .edit-mode {
@@ -12,22 +14,22 @@
 .no-wrap {
   display: flex;
   flex-wrap: nowrap !important;
+  -webkit-flex-wrap: nowrap !important;
 }
 
 .container-fluid {
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .row {
   lost-flex-container: row;
-  /*flex-direction: row;*/
 }
 
 .column {
   lost-flex-container: column;
-  /*flex-direction: column;*/
 }
 
 .flex-start {

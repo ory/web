@@ -18,13 +18,13 @@ export const DropdownMobileMenuSection = ({
   className,
   children
 }: PropTypes) => (
-  <>
+  <div className={cn(className && className)}>
     {Chunks(React.Children.toArray(children), 3).map((chunks, index) => (
       <Container
         className={cn(dropdownSection)}
         key={index}
         alignItems={'start'}
-        justify={'start'}
+        justify={'space-between'}
       >
         {(chunks as Array<React.ReactNode>).map((child, index) => (
           <Grid sm={4} xs={5} key={index}>
@@ -33,7 +33,7 @@ export const DropdownMobileMenuSection = ({
         ))}
       </Container>
     ))}
-  </>
+  </div>
 )
 
 export const DropdownMobileMenu = ({ className, children }: PropTypes) => (

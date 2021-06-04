@@ -10,13 +10,15 @@ interface PropTypes {
   title?: string | React.ReactElement
   description?: string
   button?: React.ReactElement
+  onClick: () => void
 }
 
 const DropdownMobileItem = ({
   className,
   title,
   description,
-  button
+  button,
+  onClick
 }: PropTypes) => (
   <Container
     className={cn(itemFont, className && className)}
@@ -26,10 +28,15 @@ const DropdownMobileItem = ({
     {title && typeof title === 'string' ? (
       <h5 className={cn('font-h5')}>{title}</h5>
     ) : (
-      title
+      <div onClick={onClick}>
+        {title}
+      </div>
     )}
     {description && <p className={cn('font-p-sm')}>{description}</p>}
-    {button && button}
+    <div onClick={onClick}>
+      {button && button}
+    </div>
+    
   </Container>
 )
 

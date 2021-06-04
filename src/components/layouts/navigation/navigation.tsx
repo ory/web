@@ -176,6 +176,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
                     mainMenu.map(
                       ({ title, image, button, description }, index) => (
                         <DropdownItem
+                          onClick={() => setOpenMenu('')}
                           className={cn(pr32)}
                           key={index}
                           title={title}
@@ -237,6 +238,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
           <DropdownMobileMenuSection>
             {mobileMenu.headline.map((headline, index) => (
               <DropdownMobileItem
+                onClick={() => setMobileOpenNav((current) => !current)}
                 title={headline.button}
                 description={headline.description}
                 key={index}
@@ -250,6 +252,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
           <DropdownMobileMenuSection>
             {mobileMenu.main.buttons.map((button, index) => (
               <DropdownMobileItem
+                onClick={() => setMobileOpenNav((current) => !current)}
                 button={button as React.ReactElement}
                 key={index}
               />
@@ -261,6 +264,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
           <DropdownMobileMenuSection>
             {mobileMenu.extra.map((button, index) => (
               <DropdownMobileItem
+                onClick={() => setMobileOpenNav((current) => !current)}
                 button={button as React.ReactElement}
                 key={index}
               />
