@@ -79,6 +79,7 @@
 
   &:focus {
     border: 4px solid var(--colors-themed-light--next);
+    margin: -3px;
   }
 
   &:active {
@@ -105,6 +106,7 @@
 
   &:focus {
     border: 4px solid var(--colors-themed-light--next);
+    margin: -3px;
   }
 
   &:active {
@@ -121,7 +123,6 @@
   border-radius: 100px;
   background: transparent;
   color: var(--colors-base-grey--next);
-  border: 4px solid transparent;
   border: 1px solid var(--colors-base-grey--next);
   box-sizing: border-box;
 
@@ -132,6 +133,7 @@
 
   &:focus {
     border: 4px solid var(--colors-themed-light--next);
+    margin: -3px;
   }
 
   &:active {
