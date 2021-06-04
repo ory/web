@@ -1,4 +1,6 @@
 .item-font {
-  flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;*/
   word-break: normal;
+  padding: 4px;
 }

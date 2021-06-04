@@ -13,22 +13,24 @@ interface PropType {
 }
 
 const MenuItem = ({ className, title, onClick, children }: PropType) => (
-  <>
+  <div>
     <li aria-haspopup="true" className={cn(menuItem, className && className)}>
       {typeof title === 'string' ? (
         <>
           <ColourWrapper text={'base-grey'} className={cn(menuButton)}>
-            <Button to={onClick} style={'link'}>
+            <Button to={onClick} style={'none'}>
               {title}
             </Button>
           </ColourWrapper>
           {children}
         </>
       ) : (
-        <ColourWrapper text={'base-grey'}>{title}</ColourWrapper>
+        <div onClick={onClick}>
+          <ColourWrapper text={'base-grey'}>{title}</ColourWrapper>
+        </div>
       )}
     </li>
-  </>
+  </div>
 )
 
 export default MenuItem

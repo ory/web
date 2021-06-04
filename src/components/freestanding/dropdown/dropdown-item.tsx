@@ -16,6 +16,7 @@ interface PropTypes {
   description: string
   button?: React.ReactElement
   className?: string
+  onClick: () => void
 }
 
 const DropdownItem = ({
@@ -23,7 +24,8 @@ const DropdownItem = ({
   image,
   title,
   description,
-  button
+  button,
+  onClick
 }: PropTypes) => (
   <div className={cn(pb24, className && className)}>
     <ContentText>
@@ -38,7 +40,7 @@ const DropdownItem = ({
         <div className={cn(imageHidden, dropdownItemImage)}>{image}</div>
       )}
       {title && <h5 className={cn('font-h5', pt16)}>{title}</h5>}
-      {button && <div className={cn(pb16)}>{button}</div>}
+      {button && <div className={cn(pb16)} onClick={onClick}>{button}</div>}
       <p className={cn('font-p-sm')}>{description}</p>
       
     </ContentText>

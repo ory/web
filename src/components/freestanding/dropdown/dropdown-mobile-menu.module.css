@@ -2,12 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1 1 auto;
   padding: 24px;
   background: var(--colors-base-white--next);
   box-shadow: var(--elevation-large);
-  /*height: 100%;*/
-  /*border-radius: 20px;*/
-  /*height: 100%;*/
 }
 
 /*.dropdown-mobile-container {
