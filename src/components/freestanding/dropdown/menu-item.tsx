@@ -3,7 +3,6 @@ import cn from 'classnames'
 import Button from '../button/button'
 import ColourWrapper from '../colour/colour-wrapper'
 import { menuItem, menuButton } from './menu-item.module.css'
-import { ArrowDown, CaretDown } from 'phosphor-react'
 
 interface PropType {
   title: string | React.ReactElement

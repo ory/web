@@ -2,25 +2,15 @@ import React, { useState } from 'react'
 import * as styles from './navigation.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
-import Grid from '../../freestanding/containers/grid'
 import Button from '../../freestanding/button/button'
-import { ArrowRight, List } from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MenuItem from '../../freestanding/dropdown/menu-item'
 import DropdownMenu from '../../freestanding/dropdown/dropdown-menu'
 import DropdownItem from '../../freestanding/dropdown/dropdown-item'
 import {
   pb24,
-  pb32,
-  pb64,
   pb8,
-  pl8,
-  pr16,
-  pr32,
-  pr8,
-  pt32,
-  pt8
+  pr32
 } from '../../freestanding/utils/padding.module.css'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 import {
@@ -28,11 +18,10 @@ import {
   DropdownMobileMenuSection
 } from '../../freestanding/dropdown/dropdown-mobile-menu'
 import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
-import { Chunks } from '../../../util'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import { useEffect } from 'react'
 import { useRef } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import IconWrapper from "../../freestanding/icon/icon-wrapper";
 
 export interface DropdownMenuItem {
   title: string | React.ReactElement
@@ -110,6 +99,8 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
   if (mobileOpenNav) {
     mobileNav = cn(styles.mobileNavActive)
   }
+  
+  const List = <IconWrapper color={'themed-primary'} icon={'List'} size={'32'} />
   
   // once clicked outside of the nav the menu will close
   onClickOutsideRef([currentNode, currentMobileNode, currentMobileNavBtnNode], () => {
@@ -217,7 +208,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
         <Container lgHidden={true} mdHidden={true} ref={currentMobileNavBtnNode}>
           <Button to={() => setMobileOpenNav((current) => !current)}
            style={'link'}>
-            <List size={32} />
+            {List}
           </Button>
         </Container>
       </Container>

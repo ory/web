@@ -18,10 +18,8 @@ import {
   AccordionItemHeading,
   AccordionItemPanel
 } from 'react-accessible-accordion'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
-import { Minus, Plus } from 'phosphor-react'
-import { start } from 'repl'
+import IconWrapper from "../../freestanding/icon/icon-wrapper";
 
 export interface FaqContent {
   question: string
@@ -37,6 +35,9 @@ interface PropTypes {
 const Faq = ({ title, description, content }: PropTypes) => {
   const [expanded, setExpanded] = useState<Array<string>>(['0'])
 
+  const Minus = <IconWrapper color={'base-white'} icon={'Minus'} size={'32'} className={cn(pl8, faqHeadingIcon)} />
+  const Plus = <IconWrapper color={'base-white'} icon={'Plus'} size={'32'} className={cn(pl8, faqHeadingIcon)} />
+  
   return (
     <div className={cn(faq)}>
       <Container fluid={true} alignItems={['start']}>
@@ -69,9 +70,9 @@ const Faq = ({ title, description, content }: PropTypes) => {
                     >
                       <h3 className={cn('font-h3', faqHeading)}>{question}</h3>
                       {expanded.includes(String(index)) ? (
-                        <Minus size={32} className={cn(pl8, faqHeadingIcon)} />
+                        Minus
                       ) : (
-                        <Plus size={32} className={cn(pl8, faqHeadingIcon)} />
+                        Plus
                       )}
                     </Container>
                   </AccordionItemButton>

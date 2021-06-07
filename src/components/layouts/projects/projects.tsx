@@ -16,8 +16,8 @@ import {
 } from '../../freestanding/utils/padding.module.css'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import { ArrowRight } from 'phosphor-react'
 import Button from '../../freestanding/button/button'
+import IconWrapper from "../../freestanding/icon/icon-wrapper";
 
 interface PropTypes {
   overline: string
@@ -26,64 +26,68 @@ interface PropTypes {
   buttons?: React.ReactNode
 }
 
-const Projects = ({ overline, title, description, buttons }: PropTypes) => (
-  <div className={cn(features)}>
-    <Container fluid={true} alignItems={'start'}>
-      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb64)}>
-        <ContentText>
-          <Molecule>
-            <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
-            <h1 className={cn('font-h3')}>{title}</h1>
-            {description && <p className={cn('font-p', pt32)}>{description}</p>}
-          </Molecule>
-          <MoleculeInteraction className={cn(pt24)}>
-            {buttons}
-          </MoleculeInteraction>
-        </ContentText>
-      </Grid>
-      <Grid lg={6} md={8} sm={12} xs={12}>
-        <Container alignItems={'start'} justify={'start'}>
-          {projects.map((project, index) => (
-            <Grid
-              lg={6}
-              md={6}
-              sm={6}
-              xs={12}
-              className={cn(pb48, featuresContent)}
-              key={index}
-            >
-              <Container
-                key={index}
+const Projects = ({ overline, title, description, buttons }: PropTypes) => {
+  const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
+  
+  return (
+    <div className={cn(features)}>
+      <Container fluid={true} alignItems={'start'}>
+        <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb64)}>
+          <ContentText>
+            <Molecule>
+              <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
+              <h1 className={cn('font-h3')}>{title}</h1>
+              {description && <p className={cn('font-p', pt32)}>{description}</p>}
+            </Molecule>
+            <MoleculeInteraction className={cn(pt24)}>
+              {buttons}
+            </MoleculeInteraction>
+          </ContentText>
+        </Grid>
+        <Grid lg={6} md={8} sm={12} xs={12}>
+          <Container alignItems={'start'} justify={'start'}>
+            {projects.map((project, index) => (
+              <Grid
+                lg={6}
+                md={6}
+                sm={6}
+                xs={12}
                 className={cn(pb48, featuresContent)}
-                flexContainer={'row'}
-                alignItems={'start'}
+                key={index}
               >
-                <ColourWrapper className={cn(pb8)} text={'themed-primary'}>
-                  {project.icon}
-                </ColourWrapper>
-                <ContentText>
-                  <h3 className={cn('font-overline', 'primary', pb16)}>
-                    {project.descriptiveTitle}
-                  </h3>
-                  <h2 className={cn('font-h5', pb8)}>{project.title}</h2>
-                  <p className={cn('font-p-sm', 'mute-60', pb8)}>
-                    {project.description}
-                  </p>
-                  <Button
-                    to={project.path}
-                    style={'link'}
-                    iconRight={<ArrowRight size={16} weight={'bold'} />}
-                  >
-                    Explore {project.title}
-                  </Button>
-                </ContentText>
-              </Container>
-            </Grid>
-          ))}
-        </Container>
-      </Grid>
-    </Container>
-  </div>
-)
+                <Container
+                  key={index}
+                  className={cn(pb48, featuresContent)}
+                  flexContainer={'row'}
+                  alignItems={'start'}
+                >
+                  <ColourWrapper className={cn(pb8)} text={'themed-primary'}>
+                    {project.icon}
+                  </ColourWrapper>
+                  <ContentText>
+                    <h3 className={cn('font-overline', 'primary', pb16)}>
+                      {project.descriptiveTitle}
+                    </h3>
+                    <h2 className={cn('font-h5', pb8)}>{project.title}</h2>
+                    <p className={cn('font-p-sm', 'mute-60', pb8)}>
+                      {project.description}
+                    </p>
+                    <Button
+                      to={project.path}
+                      style={'link'}
+                      iconRight={ArrowRight}
+                    >
+                      Explore {project.title}
+                    </Button>
+                  </ContentText>
+                </Container>
+              </Grid>
+            ))}
+          </Container>
+        </Grid>
+      </Container>
+    </div>
+  )
+}
 
 export default Projects

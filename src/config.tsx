@@ -6,16 +6,7 @@ import kratosAnimation from './images/kratos/kratos.svg'
 import hydraAnimation from './images/hydra/hydra.svg'
 import ketoAnimation from './images/keto/keto.svg'
 import oathkeeperAnimation from './images/oathkeeper/oathkeeper.svg'
-import {
-  CirclesThreePlus,
-  Code,
-  Fingerprint,
-  Key,
-  LockOpen,
-  ShieldWarning,
-  UserGear,
-  UserPlus
-} from 'phosphor-react'
+import IconWrapper from "./components/freestanding/icon/icon-wrapper";
 export const brandPrefix = 'Ory / '
 
 export type Project = {
@@ -31,10 +22,15 @@ export type Project = {
   visual: string
 }
 
+const UserGear = <IconWrapper icon={'UserGear'} size={'32'} />
+const Fingerprint = <IconWrapper icon={'Fingerprint'} size={'32'} />
+const ShieldWarning = <IconWrapper icon={'ShieldWarning'} size={'32'} />
+const Key = <IconWrapper icon={'Key'} size={'32'} />
+
 export const projects: Project[] = [
   {
     id: 'kratos',
-    icon: <UserGear size={32} weight={'duotone'} />,
+    icon: UserGear,
     title: 'Kratos',
     descriptiveTitle: 'User Management',
     description:
@@ -47,7 +43,7 @@ export const projects: Project[] = [
   },
   {
     id: 'hydra',
-    icon: <Fingerprint size={32} weight={'duotone'} />,
+    icon: Fingerprint,
     title: 'Hydra',
     descriptiveTitle: 'OAuth 2.0 and OpenID Connect',
     description:
@@ -60,7 +56,7 @@ export const projects: Project[] = [
   },
   {
     id: 'oathkeeper',
-    icon: <ShieldWarning size={32} weight={'duotone'} />,
+    icon: ShieldWarning,
     title: 'Oathkeeper',
     descriptiveTitle: 'Identity and Access Proxy',
     description:
@@ -73,7 +69,7 @@ export const projects: Project[] = [
   },
   {
     id: 'keto',
-    icon: <Key size={32} weight={'duotone'} />,
+    icon: Key,
     title: 'Keto',
     descriptiveTitle: 'Global access control',
     description:

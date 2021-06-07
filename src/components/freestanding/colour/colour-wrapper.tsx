@@ -1,22 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import cn from 'classnames'
+import {Themes} from "../shared-types";
+import {hexToCSSFilter} from "hex-to-css-filter/dist/es2015";
 
-type Greys = '25' | '50' | '75' | '200' | '400' | '600' | '800' | '900'
-type ThemeTypes = 'primary' | 'dark' | 'light' | 'darkmode' | 'background'
-type Base = 'base-white' | 'base-black' | 'base-grey' | `base-grey-${Greys}`
-type Themes =
-  | `themed-${ThemeTypes}`
-  | `info-${ThemeTypes}`
-  | `success-${ThemeTypes}`
-  | `warning-${ThemeTypes}`
-  | `error-${ThemeTypes}`
-  | `hydra-${ThemeTypes}`
-  | `kratos-${ThemeTypes}`
-  | `keto-${ThemeTypes}`
-  | `dockertest-${ThemeTypes}`
-  | `oathkeeper-${ThemeTypes}`
-  | Base
 
 interface PropType {
   children: React.ReactNode
@@ -34,9 +21,9 @@ interface ColourProps {
 
 const Colour = styled.div<ColourProps>`
   > * {
-    color: var(${(props) => props.text || ''});
-    background: var(${(props) => props.background || ''});
-    /*filter: var(${(props) => props.fill || ''});*/
+    color: ${(props) => props.text || ''};
+    background: ${(props) => props.background || ''};
+    filter: ${(props) => props.fill || ''};
   }
 `
 
@@ -52,17 +39,18 @@ const ColourWrapper = ({
   fill
 }: PropType) => {
   let props: ColourProps = {}
-
+  let colourVariables = getComputedStyle(document.body)
+  
   if (text) {
-    props.text = getVariable(text)
+    props.text = colourVariables.getPropertyValue(getVariable(text)).trim()
   }
 
   if (background) {
-    props.background = getVariable(background)
+    props.background = colourVariables.getPropertyValue(getVariable(background)).trim()
   }
-
+  
   if (fill) {
-    props.fill = getVariable(fill)
+    props.fill = hexToCSSFilter(colourVariables.getPropertyValue(getVariable(fill)).trim()).filter
   }
 
   return (

@@ -14,7 +14,6 @@ import ContentText from '../../freestanding/content/content-text'
 import { pb16, pb32, pl16 } from '../../freestanding/utils/padding.module.css'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
-import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 
 export interface Contact {
   contactEmail: React.ReactElement

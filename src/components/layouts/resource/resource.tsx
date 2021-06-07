@@ -1,7 +1,6 @@
 import React from 'react'
 import * as styles from './resource.module.css'
 import cn from 'classnames'
-import { ArrowRight } from 'phosphor-react'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import ResourceBox from './content/resource-box'
@@ -10,30 +9,33 @@ import ContentText from '../../freestanding/content/content-text'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import Grid from '../../freestanding/containers/grid'
 import Button from '../../freestanding/button/button'
+import IconWrapper from "../../freestanding/icon/icon-wrapper";
+
+const ArrowRight = <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'32'} />
 
 const resources = [
   {
     title: 'Quickstart in 5 minutes',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    linkIcon: ArrowRight,
     background: 'keto'
   },
   {
     title: 'Complete API reference',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    linkIcon: ArrowRight,
     background: 'dockertest'
   },
   {
     title: 'Community Slack Channel',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    linkIcon: ArrowRight,
     background: 'kratos'
   },
   {
     title: 'Onboard with one of our engineers',
     linkTitle: 'Resources',
-    linkIcon: <ArrowRight color={'white'} weight={'fill'} size={32} />,
+    linkIcon: ArrowRight,
     background: 'hydra'
   }
 ]

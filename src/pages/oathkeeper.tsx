@@ -1,35 +1,19 @@
-import {
-  ArrowRight,
-  BookOpen,
-  CirclesThreePlus,
-  Code,
-  GitMerge,
-  LockOpen,
-  RocketLaunch,
-  Terminal,
-  UserPlus,
-  Users
-} from 'phosphor-react'
 import React from 'react'
 import Button from '../components/freestanding/button/button'
-import ColourWrapper from '../components/freestanding/colour/colour-wrapper'
-import Molecule from '../components/freestanding/molecule/molecule'
 import Adopters from '../components/layouts/adopters/adopters'
-import Coding from '../components/layouts/coding/coding'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Newsletter from '../components/newsletter'
-import Footer from '../components/layouts/footer/footer'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import oathkeeperPolyglot from '../images/oathkeeper/oathkeeper_p.svg'
 import oathkeeperProcess from '../images/oathkeeper/oathkeeper.svg'
 import CodeBox, { Languages } from '../components/codebox'
-import cn from 'classnames'
 import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
+import IconWrapper from "../components/freestanding/icon/icon-wrapper";
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -78,89 +62,93 @@ authenticators:
   />
 )
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      description={
-        'Oathkeeper Open Source Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust.'
-      }
-      title={'Ory Oathkeeper - Open Source Identity and Access Proxy (IAP)'}
-    />
-
-    <Hero
-      title={'Configure how traffic interacts with your application'}
-      description={
-        'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.'
-      }
-      image={<img loading="lazy" alt="" src={oathkeeperProcess} />}
-    />
-
-    <Newsletter preselect="oathkeeper" />
-
-    <FeatureImage
-      overline={'Start in minutes'}
-      title={<>Easy Integration</>}
-      description={
-        <>
-          Ory / Oathkeeper is a cloud native Identity & Access Proxy / API (IAP)
-          and Access Control Decision API. It authenticates, authorizes, and
-          mutates incoming HTTP(s) requests, is Open Source, and written in Go.
-          Ory / Oathkeeper is straightforward on any system. We provide
-          pre-built binaries, Docker images, and support a number of package
-          managers.
-        </>
-      }
-      buttons={
-        <>
-          <Button
-            to={'/docs/oathkeeper/'}
-            style={'link'}
-            iconRight={<ArrowRight size={16} />}
-          >
-            Check out the docs
-          </Button>
-        </>
-      }
-      image={<IntegrationCodeBox />}
-    />
-
-    <FeatureImage
-      mirror={true}
-      overline={'Polyglot'}
-      title={<>SDKs for all languages</>}
-      description={
-        <>
-          Ory / Oathkeeper is written in Go and we provide SDKs for almost every
-          language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
-          Typescript. Our documentation makes integrating Ory / Oathkeeper a
-          snap.
-        </>
-      }
-      buttons={
-        <>
-          <Button
-            to={'/docs/oathkeeper/next/'}
-            style={'link'}
-            iconRight={<ArrowRight size={16} />}
-          >
-            Install Ory / Oathkeeper
-          </Button>
-        </>
-      }
-      image={<img loading="lazy" alt="" src={oathkeeperPolyglot} />}
-    />
-    <Adopters {...adoptersDefault} />
-    <Stats
-      title={<>Billions of Identities</>}
-      description={
-        <>
-          Companies from all over the world rely on Ory for their identity
-          needs. Ory technology secures billions of identity requests.
-        </>
-      }
-    />
-    <Quickstart {...quickstartOpenSource} />
-  </Layout>
-)
+const IndexPage = () => {
+  const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
+  
+  return (
+    <Layout>
+      <SEO
+        description={
+          'Oathkeeper Open Source Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust.'
+        }
+        title={'Ory Oathkeeper - Open Source Identity and Access Proxy (IAP)'}
+      />
+      
+      <Hero
+        title={'Configure how traffic interacts with your application'}
+        description={
+          'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.'
+        }
+        image={<img loading="lazy" alt="" src={oathkeeperProcess} />}
+      />
+      
+      <Newsletter preselect="oathkeeper" />
+      
+      <FeatureImage
+        overline={'Start in minutes'}
+        title={<>Easy Integration</>}
+        description={
+          <>
+            Ory / Oathkeeper is a cloud native Identity & Access Proxy / API (IAP)
+            and Access Control Decision API. It authenticates, authorizes, and
+            mutates incoming HTTP(s) requests, is Open Source, and written in Go.
+            Ory / Oathkeeper is straightforward on any system. We provide
+            pre-built binaries, Docker images, and support a number of package
+            managers.
+          </>
+        }
+        buttons={
+          <>
+            <Button
+              to={'/docs/oathkeeper/'}
+              style={'link'}
+              iconRight={ArrowRight}
+            >
+              Check out the docs
+            </Button>
+          </>
+        }
+        image={<IntegrationCodeBox />}
+      />
+      
+      <FeatureImage
+        mirror={true}
+        overline={'Polyglot'}
+        title={<>SDKs for all languages</>}
+        description={
+          <>
+            Ory / Oathkeeper is written in Go and we provide SDKs for almost every
+            language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
+            Typescript. Our documentation makes integrating Ory / Oathkeeper a
+            snap.
+          </>
+        }
+        buttons={
+          <>
+            <Button
+              to={'/docs/oathkeeper/next/'}
+              style={'link'}
+              iconRight={ArrowRight}
+            >
+              Install Ory / Oathkeeper
+            </Button>
+          </>
+        }
+        image={<img loading="lazy" alt="" src={oathkeeperPolyglot} />}
+      />
+      <Adopters {...adoptersDefault} />
+      <Stats
+        title={<>Billions of Identities</>}
+        description={
+          <>
+            Companies from all over the world rely on Ory for their identity
+            needs. Ory technology secures billions of identity requests.
+          </>
+        }
+      />
+      <Quickstart {...quickstartOpenSource} />
+    </Layout>
+  )
+}
 
 export default IndexPage

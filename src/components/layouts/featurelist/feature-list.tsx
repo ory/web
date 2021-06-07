@@ -7,18 +7,13 @@ import {
   pt32,
   pt64
 } from '../../freestanding/utils/padding.module.css'
-
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import FeatureListContent, { Features } from './content/feature-list-content'
-import { ArrowRight, CheckCircle, Circle, Flag, Triangle } from 'phosphor-react'
 import ContentText from '../../freestanding/content/content-text'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Molecule from '../../freestanding/molecule/molecule'
-import Button from '../../freestanding/button/button'
 import Grid from '../../freestanding/containers/grid'
 import MoleculeIconWrapper from '../../freestanding/molecule/molecule-icon-wrapper'
-import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 
 interface FeatureSection {
   icon: React.ReactElement
@@ -34,7 +29,7 @@ interface PropTypes {
 }
 
 const FeatureList = ({ className, features }: PropTypes) => (
-  <div className={cn(styles.featureList)}>
+  <div className={cn(styles.featureList, className && className)}>
     <Container fluid={true}>
       {features.map((section) => {
         return (
