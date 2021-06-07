@@ -209,7 +209,7 @@
   background: transparent;
   color: var(--colors-themed-primary--next);
 
-  & svg {
+  & img {
     transition: transform ease 200ms;
     transform: translateX(0);
   }
@@ -217,7 +217,7 @@
   &:hover {
     color: var(--colors-themed-dark--next);
 
-    & svg {
+    & img {
       transform: translateX(4px);
     }
   }
@@ -239,7 +239,7 @@
   background: transparent;
   color: var(--colors-base-white--next);
 
-  & svg {
+  & img {
     transition: transform ease 200ms;
     transform: translateX(0);
   }
@@ -247,7 +247,7 @@
   &:hover {
     color: var(--colors-themed-darkmode--next);
 
-    & svg {
+    & img {
       transform: translateX(4px);
     }
   }
