@@ -1,7 +1,8 @@
 import React from 'react'
 import { Themes } from '../shared-types'
 import ColourWrapper from '../colour/colour-wrapper'
-import { PhosphorIconTypes, PhosphorIcon } from '../../../images/phosphor'
+import { PhosphorIconTypes } from './phosphor'
+import * as PhosphorIcon from './phosphor'
 import { PascalToSnake } from '../../../util'
 import './icon-wrapper.module.css'
 
