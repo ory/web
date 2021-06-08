@@ -25,6 +25,7 @@ const IconWrapper = ({
   return (
     <ColourWrapper fill={color} background={background} className={className}>
       <img
+        loading="lazy"
         alt={`phosphor-icon-${PascalToSnake(icon)}`}
         src={iconLoaded}
         width={size}
