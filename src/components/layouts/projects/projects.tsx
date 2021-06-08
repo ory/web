@@ -27,7 +27,7 @@ interface PropTypes {
 }
 
 const Projects = ({ overline, title, description, buttons }: PropTypes) => {
-  const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
+  const ArrowRight = <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
 
   return (
     <div className={cn(features)}>

@@ -28,8 +28,11 @@ const IndexPage = () => {
   const BookOpen = (
     <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
   )
-  const ArrowRight = (
+  const ArrowRightWhite = (
     <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
+  )
+  const ArrowRightThemed = (
+    <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
   )
   const Terminal = (
     <IconWrapper color={'themed-primary'} icon={'TerminalDuotone'} size={'32'} />
@@ -193,7 +196,7 @@ const IndexPage = () => {
                 to={'/docs/guides/ory-cli-install-use'}
                 style={'link'}
                 theme={'dark'}
-                iconRight={ArrowRight}
+                iconRight={ArrowRightWhite}
               >
                 Install the CLI
               </Button>
@@ -212,7 +215,7 @@ const IndexPage = () => {
                 to={'https://github.com/ory/'}
                 style={'link'}
                 theme={'dark'}
-                iconRight={ArrowRight}
+                iconRight={ArrowRightWhite}
               >
                 Star us on GitHub
               </Button>
@@ -238,7 +241,7 @@ const IndexPage = () => {
           <Button
             to={'https://console.ory.sh/registration'}
             style={'link'}
-            iconRight={ArrowRight}
+            iconRight={ArrowRightThemed}
           >
             Get Started
           </Button>

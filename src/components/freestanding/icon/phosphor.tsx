@@ -35,6 +35,7 @@ import ChatsCircleDuotone from '../../../images/phosphor/chats-circle-duotone.sv
 import BookOpen from '../../../images/phosphor/book-open.svg'
 import BookOpenDuotone from '../../../images/phosphor/book-open-duotone.svg'
 import Fingerprint from '../../../images/phosphor/fingerprint.svg'
+import FingerprintDuotone from '../../../images/phosphor/fingerprint-duotone.svg'
 import GitMerge from '../../../images/phosphor/git-merge.svg'
 import GitMergeDuotone from '../../../images/phosphor/git-merge-duotone.svg'
 import Flag from '../../../images/phosphor/flag.svg'
@@ -46,8 +47,11 @@ import CodeDuotone from '../../../images/phosphor/code-duotone.svg'
 import LockOpen from '../../../images/phosphor/lock-open.svg'
 import LockOpenDuotone from '../../../images/phosphor/lock-open-duotone.svg'
 import UserGear from '../../../images/phosphor/user-gear.svg'
+import UserGearDuotone from '../../../images/phosphor/user-gear-duotone.svg'
 import ShieldWarning from '../../../images/phosphor/shield-warning.svg'
+import ShieldWarningDuotone from '../../../images/phosphor/shield-warning-duotone.svg'
 import Key from '../../../images/phosphor/key.svg'
+import KeyDuotone from '../../../images/phosphor/key-duotone.svg'
 
 export {
   GithubLogo,
@@ -87,6 +91,7 @@ export {
   BookOpen,
   BookOpenDuotone,
   Fingerprint,
+  FingerprintDuotone,
   GitMerge,
   GitMergeDuotone,
   Flag,
@@ -98,7 +103,10 @@ export {
   LockOpen,
   LockOpenDuotone,
   UserGear,
+  UserGearDuotone,
   ShieldWarning,
+  ShieldWarningDuotone,
+  KeyDuotone,
   Key
 }
 type IconName =
