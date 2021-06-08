@@ -393,7 +393,7 @@ const Layout = ({ children }: PropTypes) => {
       />
       <main>{children}</main>
       <Footer
-        logo={<img loading="lazy" alt="Ory logo footer" src={logoOryFooter} />}
+        logo={<img width={'100%'} height={'100%'} loading="lazy" alt="Ory logo footer" src={logoOryFooter} />}
         copyright={<>© Copyright 2021 Ory Corp</>}
         contact={{
           contactEmail: (
@@ -409,7 +409,7 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-white'} icon={'GithubLogo'} size={'24'} />
+            <IconWrapper color={'base-grey-200'} icon={'GithubLogoDuotone'} size={'24'} />
           </Button>,
           <Button
             to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'}
@@ -417,8 +417,8 @@ const Layout = ({ children }: PropTypes) => {
             openInNewWindow={true}
           >
             <IconWrapper
-              color={'base-white'}
-              icon={'YoutubeLogo'}
+              color={'base-grey-200'}
+              icon={'YoutubeLogoDuotone'}
               size={'24'}
             />
           </Button>,
@@ -428,8 +428,8 @@ const Layout = ({ children }: PropTypes) => {
             openInNewWindow={true}
           >
             <IconWrapper
-              color={'base-white'}
-              icon={'TwitterLogo'}
+              color={'base-grey-200'}
+              icon={'TwitterLogoDuotone'}
               size={'24'}
             />
           </Button>,
@@ -438,7 +438,7 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-white'} icon={'SlackLogo'} size={'24'} />
+            <IconWrapper color={'base-grey-200'} icon={'SlackLogoDuotone'} size={'24'} />
           </Button>,
           <Button
             to={'https://www.linkedin.com/company/ory-corp/'}
@@ -446,8 +446,8 @@ const Layout = ({ children }: PropTypes) => {
             openInNewWindow={true}
           >
             <IconWrapper
-              color={'base-white'}
-              icon={'LinkedinLogo'}
+              color={'base-grey-200'}
+              icon={'LinkedinLogoDuotone'}
               size={'24'}
             />
           </Button>

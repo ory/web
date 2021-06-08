@@ -13,7 +13,7 @@
     }
   }
 
-  & a:any-link svg {
+  & a:any-link img {
     color: var(--colors-base-grey-400--next);
     transition: all ease 200ms;
 

@@ -26,30 +26,30 @@ const IndexPage = () => {
     <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
   )
   const BookOpen = (
-    <IconWrapper color={'base-white'} icon={'BookOpen'} size={'24'} />
+    <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
   )
   const ArrowRight = (
-    <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'16'} />
+    <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
   )
   const Terminal = (
-    <IconWrapper color={'themed-primary'} icon={'Terminal'} size={'32'} />
+    <IconWrapper color={'themed-primary'} icon={'TerminalDuotone'} size={'32'} />
   )
   const GitMerge = (
-    <IconWrapper color={'themed-primary'} icon={'GitMerge'} size={'32'} />
+    <IconWrapper color={'themed-primary'} icon={'GitMergeDuotone'} size={'32'} />
   )
   const Code = (
-    <IconWrapper color={'themed-primary'} icon={'Code'} size={'32'} />
+    <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />
   )
   const LockOpen = (
-    <IconWrapper color={'themed-primary'} icon={'LockOpen'} size={'32'} />
+    <IconWrapper color={'themed-primary'} icon={'LockOpenDuotone'} size={'32'} />
   )
   const UserPlus = (
-    <IconWrapper color={'themed-primary'} icon={'UserPlus'} size={'32'} />
+    <IconWrapper color={'themed-primary'} icon={'UserPlusDuotone'} size={'32'} />
   )
   const CirclesThreePlus = (
     <IconWrapper
       color={'themed-primary'}
-      icon={'CirclesThreePlus'}
+      icon={'CirclesThreePlusDuotone'}
       size={'32'}
     />
   )

@@ -1,5 +1,5 @@
-> img {
-  display: inline;
+.icon {
+  display: inline-flex;
   *display: inline;
   *zoom: 1;
   padding: 0;

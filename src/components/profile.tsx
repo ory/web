@@ -4,7 +4,6 @@ import cn from 'classnames'
 import * as styles from './profile.module.css'
 import Button from './freestanding/button/button'
 import { pb16, pb8, pr16, pr8 } from './freestanding/utils/padding.module.css'
-import { PhosphorIconTypes } from '../images/phosphor'
 import IconWrapper from './freestanding/icon/icon-wrapper'
 
 interface PropTypes {
@@ -25,7 +24,7 @@ type SocialLinks = {
 }
 
 type resolvedSocial = {
-  Icon: React.ReactElement<PhosphorIconTypes>
+  Icon: React.ReactElement
   href: string
   alt: string
 }
@@ -35,15 +34,15 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
   let alt
   switch (network) {
     case SocialNetworks.github:
-      Icon = <IconWrapper icon={'GithubLogo'} size={'24'} />
+      Icon = <IconWrapper color={'base-grey-400'} icon={'GithubLogoDuotone'} size={'24'} />
       alt = 'GitHub'
       break
     case SocialNetworks.linkedin:
-      Icon = <IconWrapper icon={'LinkedinLogo'} size={'24'} />
+      Icon = <IconWrapper color={'base-grey-400'} icon={'LinkedinLogoDuotone'} size={'24'} />
       alt = 'Linkedin'
       break
     case SocialNetworks.twitter:
-      Icon = <IconWrapper icon={'TwitterLogo'} size={'24'} />
+      Icon = <IconWrapper color={'base-grey-400'} icon={'TwitterLogoDuotone'} size={'24'} />
       alt = 'Twitter'
       break
   }

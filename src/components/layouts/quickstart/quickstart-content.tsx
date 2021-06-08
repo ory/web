@@ -6,16 +6,16 @@ const RocketLaunch = (
   <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
 )
 const BookOpen = (
-  <IconWrapper color={'themed-primary'} icon={'BookOpen'} size={'32'} />
+  <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
 )
 const ArrowRight = (
-  <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
+  <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
 )
 const Users = (
-  <IconWrapper color={'themed-primary'} icon={'Users'} size={'32'} />
+  <IconWrapper color={'themed-primary'} icon={'UsersDuotone'} size={'32'} />
 )
-const SlackLogo = <IconWrapper icon={'SlackLogo'} size={'32'} />
-const ChatsCircle = <IconWrapper icon={'ChatsCircle'} size={'32'} />
+const SlackLogo = <IconWrapper color={'themed-primary'} icon={'SlackLogoDuotone'} size={'32'} />
+const ChatsCircle = <IconWrapper color={'themed-primary'} icon={'ChatsCircleDuotone'} size={'32'} />
 
 export const quickstartDefault = {
   title: <>Ready to get started?</>,
@@ -38,7 +38,7 @@ export const quickstartDefault = {
   ),
   content: [
     {
-      icon: BookOpen,
+      icon: <IconWrapper color={'themed-primary'} icon={'BookOpenDuotone'} size={'32'} />,
       title: <>Check out our docs</>,
       description: (
         <>
