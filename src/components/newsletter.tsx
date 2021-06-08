@@ -7,16 +7,11 @@ import React, {
 } from 'react'
 import cn from 'classnames'
 import * as styles from './newsletter.module.css'
-import { hero } from './layouts/hero/hero.module.css'
 import Container from './freestanding/containers/container'
 import Grid from './freestanding/containers/grid'
-import { pb32, pb48 } from './freestanding/utils/padding.module.css'
+import { pb32 } from './freestanding/utils/padding.module.css'
 import ContentText from './freestanding/content/content-text'
-import MoleculeTextInteraction from './freestanding/molecule/molecule-text-interaction'
 import Molecule from './freestanding/molecule/molecule'
-import MoleculeInteraction from './freestanding/molecule/molecule-interaction'
-import ContentVisual from './freestanding/content/content-visual'
-import Button from './freestanding/button/button'
 
 interface StateTypes {
   email: string

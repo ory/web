@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import cn from 'classnames'
-import {Themes} from '../shared-types'
-import {hexToCSSFilter} from 'hex-to-css-filter/dist/es2015'
+import { Themes } from '../shared-types'
+import { hexToCSSFilter } from 'hex-to-css-filter/dist/es2015'
 import ReactDOM from 'react-dom'
 
 interface PropType {
@@ -32,42 +32,39 @@ const getVariable = (name: string) => {
 }
 
 const ColourWrapper = ({
-                         children,
-                         className,
-                         background,
-                         text,
-                         fill
-                       }: PropType) => {
-  
+  children,
+  className,
+  background,
+  text,
+  fill
+}: PropType) => {
   const [props, setProps] = useState<ColourProps>({})
-  
+
   useEffect(() => {
     if (window !== undefined) {
       const colourVariables = window.getComputedStyle(document.documentElement)
       const p: ColourProps = {}
-      
+
       if (text) {
         p.text = colourVariables.getPropertyValue(getVariable(text)).trim()
       }
-  
+
       if (background) {
         p.background = colourVariables
           .getPropertyValue(getVariable(background))
           .trim()
       }
-  
+
       if (fill) {
         p.fill = hexToCSSFilter(
           colourVariables.getPropertyValue(getVariable(fill)).trim()
         ).filter
       }
-      
+
       setProps(p)
     }
-  }, [props])
-  
-  
-  
+  }, [])
+
   return (
     <Colour className={cn(className && className)} {...props}>
       {children}
