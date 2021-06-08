@@ -1,5 +1,6 @@
 declare const styles: {
-  readonly blogSection: string
   readonly blogSectionAlt: string
+  readonly blogSection: string
+  readonly section: string
 }
 export = styles

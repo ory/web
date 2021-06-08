@@ -1,11 +1,19 @@
 import Button from '../../freestanding/button/button'
 import React from 'react'
-import IconWrapper from "../../freestanding/icon/icon-wrapper";
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
-const RocketLaunch = <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
-const BookOpen = <IconWrapper color={'themed-primary'} icon={'BookOpen'} size={'32'} />
-const ArrowRight = <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-const Users = <IconWrapper color={'themed-primary'} icon={'Users'} size={'32'} />
+const RocketLaunch = (
+  <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
+)
+const BookOpen = (
+  <IconWrapper color={'themed-primary'} icon={'BookOpen'} size={'32'} />
+)
+const ArrowRight = (
+  <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
+)
+const Users = (
+  <IconWrapper color={'themed-primary'} icon={'Users'} size={'32'} />
+)
 const SlackLogo = <IconWrapper icon={'SlackLogo'} size={'32'} />
 const ChatsCircle = <IconWrapper icon={'ChatsCircle'} size={'32'} />
 
@@ -39,11 +47,7 @@ export const quickstartDefault = {
         </>
       ),
       button: (
-        <Button
-          to={'/docs'}
-          style={'link'}
-          iconRight={ArrowRight}
-        >
+        <Button to={'/docs'} style={'link'} iconRight={ArrowRight}>
           Read the docs
         </Button>
       )

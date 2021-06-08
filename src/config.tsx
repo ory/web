@@ -6,7 +6,7 @@ import kratosAnimation from './images/kratos/kratos.svg'
 import hydraAnimation from './images/hydra/hydra.svg'
 import ketoAnimation from './images/keto/keto.svg'
 import oathkeeperAnimation from './images/oathkeeper/oathkeeper.svg'
-import IconWrapper from "./components/freestanding/icon/icon-wrapper";
+import IconWrapper from './components/freestanding/icon/icon-wrapper'
 export const brandPrefix = 'Ory / '
 
 export type Project = {

@@ -13,7 +13,7 @@ import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -77,9 +77,9 @@ const IndexPage = () => {
         }
         image={<img loading="lazy" alt="" src={kratosProcess} />}
       />
-      
+
       <Newsletter preselect="kratos" />
-      
+
       <FeatureImage
         overline={'Start in minutes'}
         title={<>Easy Integration</>}
@@ -87,37 +87,33 @@ const IndexPage = () => {
           <>
             Ory / Kratos is a cloud native user management system. It provides
             user login and registration, multi-factor authentication, and user
-            information storage with a headless API. It is fully configurable and
-            supports a wide range of protocols such as Google Authenticator, and
-            stores user information using JSON Schema. Ory / Kratos works with any
-            UI framework and only a few lines of code are required. Take a look at
-            our documentation and learn more.
+            information storage with a headless API. It is fully configurable
+            and supports a wide range of protocols such as Google Authenticator,
+            and stores user information using JSON Schema. Ory / Kratos works
+            with any UI framework and only a few lines of code are required.
+            Take a look at our documentation and learn more.
           </>
         }
         buttons={
           <>
-            <Button
-              to={'/docs/kratos/'}
-              style={'link'}
-              iconRight={ArrowRight}
-            >
+            <Button to={'/docs/kratos/'} style={'link'} iconRight={ArrowRight}>
               Check out the docs
             </Button>
           </>
         }
         image={<IntegrationCodeBox />}
       />
-      
+
       <FeatureImage
         mirror={true}
         overline={'Polyglot'}
         title={<>SDKs for all languages</>}
         description={
           <>
-            Ory / Kratos is written in Go and we provide SDKs for every language.
-            We work with any UI framework and interfacing with the login,
-            registration and profile management is easy. Our documentation makes
-            integrating Ory / Kratos a snap.
+            Ory / Kratos is written in Go and we provide SDKs for every
+            language. We work with any UI framework and interfacing with the
+            login, registration and profile management is easy. Our
+            documentation makes integrating Ory / Kratos a snap.
           </>
         }
         buttons={

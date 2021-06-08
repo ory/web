@@ -19,7 +19,7 @@ import {
   AccordionItemPanel
 } from 'react-accessible-accordion'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
-import IconWrapper from "../../freestanding/icon/icon-wrapper";
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 export interface FaqContent {
   question: string
@@ -35,9 +35,23 @@ interface PropTypes {
 const Faq = ({ title, description, content }: PropTypes) => {
   const [expanded, setExpanded] = useState<Array<string>>(['0'])
 
-  const Minus = <IconWrapper color={'base-white'} icon={'Minus'} size={'32'} className={cn(pl8, faqHeadingIcon)} />
-  const Plus = <IconWrapper color={'base-white'} icon={'Plus'} size={'32'} className={cn(pl8, faqHeadingIcon)} />
-  
+  const Minus = (
+    <IconWrapper
+      color={'base-white'}
+      icon={'Minus'}
+      size={'32'}
+      className={cn(pl8, faqHeadingIcon)}
+    />
+  )
+  const Plus = (
+    <IconWrapper
+      color={'base-white'}
+      icon={'Plus'}
+      size={'32'}
+      className={cn(pl8, faqHeadingIcon)}
+    />
+  )
+
   return (
     <div className={cn(faq)}>
       <Container fluid={true} alignItems={['start']}>
@@ -69,11 +83,7 @@ const Faq = ({ title, description, content }: PropTypes) => {
                       className={cn(faqHighlight, pb16)}
                     >
                       <h3 className={cn('font-h3', faqHeading)}>{question}</h3>
-                      {expanded.includes(String(index)) ? (
-                        Minus
-                      ) : (
-                        Plus
-                      )}
+                      {expanded.includes(String(index)) ? Minus : Plus}
                     </Container>
                   </AccordionItemButton>
                 </AccordionItemHeading>

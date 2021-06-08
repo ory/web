@@ -17,17 +17,20 @@ import 'prismjs/components/prism-go'
 import 'prismjs/components/prism-yaml'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-shell-session'
-import IconWrapper from "../../freestanding/icon/icon-wrapper";
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 interface PropTypes {
   children?: React.ReactNode
 }
 
 const Layout = ({ children }: PropTypes) => {
-  
-  const arrowRight = <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  const signIn = <IconWrapper color={'themed-primary'} icon={'SignIn'} size={'24'} />
-  
+  const arrowRight = (
+    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
+  )
+  const signIn = (
+    <IconWrapper color={'themed-primary'} icon={'SignIn'} size={'24'} />
+  )
+
   return (
     <div className={cn(styles.layout)}>
       <Navigation
@@ -55,14 +58,16 @@ const Layout = ({ children }: PropTypes) => {
             mainMenu: [
               {
                 description: 'Never Build Auth Again',
-                button: <Button
-                  to={'https://console.ory.sh/registration'}
-                  style={'link'}
-                  openInNewWindow={false}
-                  iconRight={arrowRight}
-                >
-                  Ory as a Service
-                </Button>
+                button: (
+                  <Button
+                    to={'https://console.ory.sh/registration'}
+                    style={'link'}
+                    openInNewWindow={false}
+                    iconRight={arrowRight}
+                  >
+                    Ory as a Service
+                  </Button>
+                )
               },
               {
                 description: "Ory's heart is Open Source",
@@ -133,7 +138,7 @@ const Layout = ({ children }: PropTypes) => {
                   </Button>
                 )
               }
-            ],
+            ]
           },
           {
             title: 'Developers',
@@ -149,7 +154,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     Documentation
                   </Button>
-                ),
+                )
               },
               {
                 description: 'Become a part of the Ory Community',
@@ -162,7 +167,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     Community
                   </Button>
-                ),
+                )
               },
               {
                 description: 'Participate in Development & Discussion',
@@ -175,7 +180,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     GitHub
                   </Button>
-                ),
+                )
               }
             ]
           },
@@ -200,7 +205,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     Blog
                   </Button>
-                ),
+                )
               },
               {
                 description: '',
@@ -213,7 +218,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     Contact
                   </Button>
-                ),
+                )
               },
               {
                 description: '',
@@ -226,7 +231,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     About Ory
                   </Button>
-                ),
+                )
               },
               {
                 description: '',
@@ -239,7 +244,7 @@ const Layout = ({ children }: PropTypes) => {
                   >
                     Jobs We're hiring!
                   </Button>
-                ),
+                )
               }
             ]
           }
@@ -411,14 +416,22 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-white'} icon={'YoutubeLogo'} size={'24'} />
+            <IconWrapper
+              color={'base-white'}
+              icon={'YoutubeLogo'}
+              size={'24'}
+            />
           </Button>,
           <Button
             to={'https://twitter.com/orycorp'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-white'} icon={'TwitterLogo'} size={'24'} />
+            <IconWrapper
+              color={'base-white'}
+              icon={'TwitterLogo'}
+              size={'24'}
+            />
           </Button>,
           <Button
             to={'https://slack.ory.sh/'}
@@ -432,7 +445,11 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-white'} icon={'LinkedinLogo'} size={'24'} />
+            <IconWrapper
+              color={'base-white'}
+              icon={'LinkedinLogo'}
+              size={'24'}
+            />
           </Button>
         ]}
         legal={[
@@ -568,9 +585,9 @@ const Layout = ({ children }: PropTypes) => {
               >
                 Jobs&nbsp;
                 <ColourWrapper text={'themed-primary'}>
-                <span className={cn('font-p-sm font-nowrap')}>
-                  we're hiring!
-                </span>
+                  <span className={cn('font-p-sm font-nowrap')}>
+                    we're hiring!
+                  </span>
                 </ColourWrapper>
               </Button>,
               <Button

@@ -10,10 +10,15 @@ const NotFoundPage = () => (
       title={<>We couldn't find the page you were looking for</>}
       description={
         <>
-          The requested page does not exist. If you think this page should exist, please  {''}
-              <Button style={'link-inline'} to={'https://github.com/ory/web/issues/new/'}>
-                let us know
-              </Button>!
+          The requested page does not exist. If you think this page should
+          exist, please {''}
+          <Button
+            style={'link-inline'}
+            to={'https://github.com/ory/web/issues/new/'}
+          >
+            let us know
+          </Button>
+          !
         </>
       }
       buttons={

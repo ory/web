@@ -13,7 +13,7 @@ import { quickstartOpenSource } from '../components/layouts/quickstart/quickstar
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Adopters from '../components/layouts/adopters/adopters'
 import Stats from '../components/layouts/stats/stats'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -53,7 +53,7 @@ const IntegrationCodeBox = () => (
 
 const IndexPage = () => {
   const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
-  
+
   return (
     <Layout>
       <SEO
@@ -64,7 +64,7 @@ const IndexPage = () => {
             : `Ory Hydra - Open Source OAuth 2.0 and OpenID Connect Server`
         }
       />
-      
+
       <Hero
         title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
         description={
@@ -73,7 +73,7 @@ const IndexPage = () => {
         image={<img loading="lazy" alt="" src={hydraProcess} />}
       />
       <Newsletter preselect="hydra" />
-      
+
       <FeatureImage
         overline={'Start in minutes'}
         title={<>Easy Integration</>}
@@ -88,18 +88,14 @@ const IndexPage = () => {
         }
         buttons={
           <>
-            <Button
-              to={'/docs/hydra/'}
-              style={'link'}
-              iconRight={ArrowRight}
-            >
+            <Button to={'/docs/hydra/'} style={'link'} iconRight={ArrowRight}>
               Check out the docs
             </Button>
           </>
         }
         image={<IntegrationCodeBox />}
       />
-      
+
       <FeatureImage
         mirror={true}
         overline={'Polyglot'}
@@ -108,9 +104,9 @@ const IndexPage = () => {
           <>
             Ory / Hydra is written in Go and we provide SDKs for almost every
             language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
-            Typescript. We work with any login system and it is easy to customize
-            the login experience. Our documentation makes integrating Ory / Hydra
-            a snap.
+            Typescript. We work with any login system and it is easy to
+            customize the login experience. Our documentation makes integrating
+            Ory / Hydra a snap.
           </>
         }
         buttons={

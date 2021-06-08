@@ -12,7 +12,10 @@ export const ParseCase = (s: string) => {
 }
 
 export const PascalToSnake = (s: string) => {
-  return s.split(/(?=[A-Z])/).join('-').toLowerCase();
+  return s
+    .split(/(?=[A-Z])/)
+    .join('-')
+    .toLowerCase()
 }
 
 export const Chunks = (arrObj: Array<unknown>, size: number) => {

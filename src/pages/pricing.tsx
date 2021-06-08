@@ -11,16 +11,23 @@ import cn from 'classnames'
 import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const PricingPage = () => {
-  
-  const CheckCircle = <IconWrapper icon={'CheckCircle'} size={'16'} color={'success-primary'}/>
-  const CircleThreePlus = <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
-  const MapTriFold = <IconWrapper color={'base-white'} icon={'MapTrifold'} size={'24'} />
-  const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'}/>
-  const Flag = <IconWrapper icon={'Flag'} size={'16'} color={'themed-primary'}/>
-  
+  const CheckCircle = (
+    <IconWrapper icon={'CheckCircle'} size={'16'} color={'success-primary'} />
+  )
+  const CircleThreePlus = (
+    <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
+  )
+  const MapTriFold = (
+    <IconWrapper color={'base-white'} icon={'MapTrifold'} size={'24'} />
+  )
+  const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
+  const Flag = (
+    <IconWrapper icon={'Flag'} size={'16'} color={'themed-primary'} />
+  )
+
   return (
     <Layout>
       <SEO
@@ -32,7 +39,7 @@ const PricingPage = () => {
           'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
         }
       />
-      
+
       <Pricing
         title={<>No limits on identity</>}
         description={
@@ -50,7 +57,10 @@ const PricingPage = () => {
             price: '$99',
             priceDescription: 'per Project/Member',
             button: (
-              <Button to={'https://console.ory.sh/registration'} style={'filled'}>
+              <Button
+                to={'https://console.ory.sh/registration'}
+                style={'filled'}
+              >
                 Become a member
               </Button>
             ),
@@ -159,9 +169,9 @@ const PricingPage = () => {
           }
         ]}
       />
-      
+
       <Adopters {...adoptersDefault} />
-      
+
       <FeatureList
         features={[
           {
@@ -170,11 +180,7 @@ const PricingPage = () => {
             description:
               'Sign up now and instantly access these features. All features except the Ory CLI and user interfaces are included when self hosting.',
             button: (
-              <Button
-                style={'text'}
-                to={'/docs'}
-                iconRight={ArrowRight}
-              >
+              <Button style={'text'} to={'/docs'} iconRight={ArrowRight}>
                 Read the docs
               </Button>
             ),
@@ -260,7 +266,7 @@ const PricingPage = () => {
           }
         ]}
       />
-      
+
       <Faq
         title={<>Frequently Asked Questions</>}
         description={
@@ -289,9 +295,9 @@ const PricingPage = () => {
             answer: (
               <>
                 Fortune500 companies and financial institutions use our hardened
-                and reliable software. Our software is open source and vetted by a
-                large international community. Our unique pricing model does not
-                charge you for identities.
+                and reliable software. Our software is open source and vetted by
+                a large international community. Our unique pricing model does
+                not charge you for identities.
               </>
             )
           },
@@ -337,8 +343,8 @@ const PricingPage = () => {
             question: `What payment methods are accepted?`,
             answer: (
               <>
-                Visa, MasterCard, and American Express credit cards are accepted.
-                All payments are processed and secured by Stripe.
+                Visa, MasterCard, and American Express credit cards are
+                accepted. All payments are processed and secured by Stripe.
               </>
             )
           },
@@ -365,7 +371,7 @@ const PricingPage = () => {
           }
         ]}
       />
-      
+
       <Stats
         title={<>Billions of Identities</>}
         description={
@@ -375,7 +381,7 @@ const PricingPage = () => {
           </>
         }
       />
-      
+
       <Quotes {...quotesDefault} />
     </Layout>
   )

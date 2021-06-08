@@ -13,7 +13,6 @@
 }
 
 @media (--sm-viewport) {
-
 }
 
 @media (--md-viewport) {
@@ -28,7 +27,7 @@
     font-style: normal;
     font-size: 14px;
     color: var(--colors-base-white);
-    padding: .75rem 1rem .75rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 1rem;
     border: none;
     line-height: 168%;
 
@@ -38,7 +37,7 @@
   }
 
   & input[type='button'] {
-    padding: .75rem 1rem .75rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 1rem;
     font-weight: 500;
     width: 40%;
     margin-left: -10%;

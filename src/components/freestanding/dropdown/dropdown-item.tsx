@@ -5,7 +5,7 @@ import {
   dropdownItemImage
 } from './dropdown-item.module.css'
 import cn from 'classnames'
-import {pb16, pb24, pt16, pt24, pt8 } from '../utils/padding.module.css'
+import { pb16, pb24, pt16, pt24, pt8 } from '../utils/padding.module.css'
 import Button from '../button/button'
 import ContentText from '../content/content-text'
 import Container from '../containers/container'
@@ -40,9 +40,12 @@ const DropdownItem = ({
         <div className={cn(imageHidden, dropdownItemImage)}>{image}</div>
       )}
       {title && <h5 className={cn('font-h5', pt16)}>{title}</h5>}
-      {button && <div className={cn(pb16)} onClick={onClick}>{button}</div>}
+      {button && (
+        <div className={cn(pb16)} onClick={onClick}>
+          {button}
+        </div>
+      )}
       <p className={cn('font-p-sm')}>{description}</p>
-      
     </ContentText>
   </div>
 )

@@ -13,7 +13,7 @@ import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -94,7 +94,7 @@ checkClient.check(checkRequest, (error, resp) => {
 
 const IndexPage = () => {
   const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
-  
+
   return (
     <Layout>
       <SEO
@@ -110,9 +110,9 @@ const IndexPage = () => {
         }
         image={<img loading="lazy" alt="" src={ketoProcess} />}
       />
-      
+
       <Newsletter preselect="keto" />
-      
+
       <FeatureImage
         overline={'Start in minutes'}
         title={<>Easy Integration</>}
@@ -120,24 +120,20 @@ const IndexPage = () => {
           <>
             Ory / Keto is a global and consistent permission & authorization
             server with an easy and granular permission language and sub
-            10-millisecond latency. It is based on Google Zanzibar, written in Go,
-            and ships gRPC and REST APIs.
+            10-millisecond latency. It is based on Google Zanzibar, written in
+            Go, and ships gRPC and REST APIs.
           </>
         }
         buttons={
           <>
-            <Button
-              to={'/docs/keto/'}
-              style={'link'}
-              iconRight={ArrowRight}
-            >
+            <Button to={'/docs/keto/'} style={'link'} iconRight={ArrowRight}>
               Check out the docs
             </Button>
           </>
         }
         image={<IntegrationCodeBox />}
       />
-      
+
       <FeatureImage
         mirror={true}
         overline={'Polyglot'}

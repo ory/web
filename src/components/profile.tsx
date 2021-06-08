@@ -4,8 +4,8 @@ import cn from 'classnames'
 import * as styles from './profile.module.css'
 import Button from './freestanding/button/button'
 import { pb16, pb8, pr16, pr8 } from './freestanding/utils/padding.module.css'
-import {PhosphorIconTypes} from "../images/phosphor";
-import IconWrapper from "./freestanding/icon/icon-wrapper";
+import { PhosphorIconTypes } from '../images/phosphor'
+import IconWrapper from './freestanding/icon/icon-wrapper'
 
 interface PropTypes {
   name: string

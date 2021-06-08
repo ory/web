@@ -19,33 +19,53 @@ import codeboxIllustration from '../images/illustrations/codebox.svg'
 
 import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IndexPage = () => {
-  const RocketLaunch = <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
-  const BookOpen = <IconWrapper color={'base-white'} icon={'BookOpen'} size={'24'} />
-  const ArrowRight = <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'16'} />
-  const Terminal = <IconWrapper color={'themed-primary'} icon={'Terminal'} size={'32'} />
-  const GitMerge = <IconWrapper color={'themed-primary'} icon={'GitMerge'} size={'32'} />
-  const Code = <IconWrapper color={'themed-primary'} icon={'Code'} size={'32'} />
-  const LockOpen = <IconWrapper color={'themed-primary'} icon={'LockOpen'} size={'32'} />
-  const UserPlus = <IconWrapper color={'themed-primary'} icon={'UserPlus'} size={'32'} />
-  const CirclesThreePlus = <IconWrapper color={'themed-primary'} icon={'CirclesThreePlus'} size={'32'} />
-  
+  const RocketLaunch = (
+    <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
+  )
+  const BookOpen = (
+    <IconWrapper color={'base-white'} icon={'BookOpen'} size={'24'} />
+  )
+  const ArrowRight = (
+    <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'16'} />
+  )
+  const Terminal = (
+    <IconWrapper color={'themed-primary'} icon={'Terminal'} size={'32'} />
+  )
+  const GitMerge = (
+    <IconWrapper color={'themed-primary'} icon={'GitMerge'} size={'32'} />
+  )
+  const Code = (
+    <IconWrapper color={'themed-primary'} icon={'Code'} size={'32'} />
+  )
+  const LockOpen = (
+    <IconWrapper color={'themed-primary'} icon={'LockOpen'} size={'32'} />
+  )
+  const UserPlus = (
+    <IconWrapper color={'themed-primary'} icon={'UserPlus'} size={'32'} />
+  )
+  const CirclesThreePlus = (
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'CirclesThreePlus'}
+      size={'32'}
+    />
+  )
+
   return (
     <Layout>
       <SEO
         description={
           'Ory is a certified and battle-tested identity solution backed by a large Open Source community and trusted by Fortune500 orgs.'
         }
-        title={
-          'Ory - Open Source Identity Solutions For Everyone'
-        }
+        title={'Ory - Open Source Identity Solutions For Everyone'}
         keywords={
           'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
         }
       />
-      
+
       <Hero
         title={'Never Build Auth Again'}
         description={
@@ -70,9 +90,9 @@ const IndexPage = () => {
           />
         }
       />
-      
+
       <Adopters {...adoptersDefault} />
-      
+
       <FeatureImage
         mirror={true}
         overline={'Security'}
@@ -81,8 +101,8 @@ const IndexPage = () => {
           <>
             Authenticate and manage users, set and check permissions, protect
             APIs, applications and data. Ory as a Service comes with a dashboard
-            for metrics and insights and can be managed from the user interface or
-            CLI.
+            for metrics and insights and can be managed from the user interface
+            or CLI.
           </>
         }
         buttons={
@@ -100,7 +120,7 @@ const IndexPage = () => {
           />
         }
       />
-      
+
       <FeatureImage
         overline={'Flexibility'}
         title={<>Bring your own UX</>}
@@ -126,15 +146,15 @@ const IndexPage = () => {
           />
         }
       />
-      
+
       <Coding
         overline={'Made for developers'}
         title={<>Improve your developer experience</>}
         description={
           <>
-            At Ory, our mission is to improve the overall developer experience. We
-            provide SDKs, documentation, tutorials, CLIs and community support.
-            Our open source approach lets you to participate in API and
+            At Ory, our mission is to improve the overall developer experience.
+            We provide SDKs, documentation, tutorials, CLIs and community
+            support. Our open source approach lets you to participate in API and
             architecture discussions - your next PR will be shipped in Ory.
           </>
         }
@@ -200,7 +220,7 @@ const IndexPage = () => {
           }
         ]}
       />
-      
+
       <Stats
         title={<>Billions of Identities</>}
         description={
@@ -210,7 +230,7 @@ const IndexPage = () => {
           </>
         }
       />
-      
+
       <Features
         overline={'Modular Integration'}
         title={<>Auth integration in 1.. 2.. done</>}
@@ -229,8 +249,8 @@ const IndexPage = () => {
             title: <>Ory is open source</>,
             description: (
               <>
-                Ory's heart and soul are rooted in Open Source. Our commitment to
-                open software will stay unchanged.
+                Ory's heart and soul are rooted in Open Source. Our commitment
+                to open software will stay unchanged.
               </>
             )
           },
@@ -259,14 +279,14 @@ const IndexPage = () => {
             title: <>No lock in</>,
             description: (
               <>
-                We support the migration from Ory open source to Ory as a Service,
-                and the other way around. Don't worry about lock in.
+                We support the migration from Ory open source to Ory as a
+                Service, and the other way around. Don't worry about lock in.
               </>
             )
           }
         ]}
       />
-      
+
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartDefault} />
     </Layout>

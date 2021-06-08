@@ -12,15 +12,14 @@ import Adopters from '../components/layouts/adopters/adopters'
 import Button from '../components/freestanding/button/button'
 import codeboxIllustration from '../images/illustrations/codebox.svg'
 import Coding from '../components/layouts/coding/coding'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IndexPage = () => {
-  
   const BookOpen = <IconWrapper icon={'BookOpen'} size={'24'} />
   const Terminal = <IconWrapper icon={'Terminal'} size={'32'} />
   const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
   const GitMerge = <IconWrapper icon={'GitMerge'} size={'32'} />
-  
+
   return (
     <Layout>
       <SEO
@@ -29,7 +28,7 @@ const IndexPage = () => {
         }
         title={'Ory - Open Source Auth Solutions For Everyone'}
       />
-      
+
       <Projects
         overline={'Identity Server'}
         title={<>Ory Open Source</>}
@@ -51,15 +50,15 @@ const IndexPage = () => {
           </>
         }
       />
-      
+
       <Coding
         overline={'Made for developers'}
         title={<>Improve your developer experience</>}
         description={
           <>
-            At Ory, our mission is to improve the overall developer experience. We
-            provide SDKs, documentation, tutorials, CLIs and community support.
-            Our open source approach lets you to participate in API and
+            At Ory, our mission is to improve the overall developer experience.
+            We provide SDKs, documentation, tutorials, CLIs and community
+            support. Our open source approach lets you to participate in API and
             architecture discussions - your next PR will be shipped in Ory.
           </>
         }
@@ -125,7 +124,7 @@ const IndexPage = () => {
           }
         ]}
       />
-      
+
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartOpenSource} />
     </Layout>

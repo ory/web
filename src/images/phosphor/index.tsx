@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import GithubLogo from './github-logo.svg'
 import LinkedinLogo from './linkedin-logo.svg'
 import SlackLogo from './slack-logo.svg'
@@ -105,4 +105,3 @@ const icons = [
 export type PhosphorIconTypes = typeof icons[number]
 
 export * as PhosphorIcon from './'
-

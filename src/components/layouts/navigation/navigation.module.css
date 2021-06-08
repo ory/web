@@ -20,7 +20,7 @@
 
 .sidenav-buttons {
   padding-right: 2rem;
-  &:last-child{
+  &:last-child {
     padding-right: 0;
   }
 }

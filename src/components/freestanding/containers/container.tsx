@@ -75,39 +75,44 @@ const getHidden = (mode: string) => {
   return styles[`hidden${ParseCase(mode)}`]
 }
 
-const Container = forwardRef(({
-  children,
-  className,
-  flexContainer = 'row',
-  alignItems = 'center',
-  justify = 'space-between',
-  fluid = false,
-  lgHidden = false,
-  mdHidden = false,
-  smHidden = false,
-  xsHidden = false,
-  editMode = false,
-  noWrap = false
-}: PropTypes, ref:any) => (
-  <div
-    ref={ref}
-    className={cn(
-      fluid && styles.containerFluid,
-      editMode && styles.editMode,
-      styles.container,
-      noWrap && styles.noWrap,
-      getFlex(flexContainer),
-      alignItems && getAlign(alignItems),
-      justify && getJustify(justify),
-      xsHidden && getHidden('xs'),
-      smHidden && getHidden('sm'),
-      mdHidden && getHidden('md'),
-      lgHidden && getHidden('lg'),
-      className && className
-    )}
-  >
-    {children}
-  </div>
-))
+const Container = forwardRef(
+  (
+    {
+      children,
+      className,
+      flexContainer = 'row',
+      alignItems = 'center',
+      justify = 'space-between',
+      fluid = false,
+      lgHidden = false,
+      mdHidden = false,
+      smHidden = false,
+      xsHidden = false,
+      editMode = false,
+      noWrap = false
+    }: PropTypes,
+    ref: any
+  ) => (
+    <div
+      ref={ref}
+      className={cn(
+        fluid && styles.containerFluid,
+        editMode && styles.editMode,
+        styles.container,
+        noWrap && styles.noWrap,
+        getFlex(flexContainer),
+        alignItems && getAlign(alignItems),
+        justify && getJustify(justify),
+        xsHidden && getHidden('xs'),
+        smHidden && getHidden('sm'),
+        mdHidden && getHidden('md'),
+        lgHidden && getHidden('lg'),
+        className && className
+      )}
+    >
+      {children}
+    </div>
+  )
+)
 
 export default Container

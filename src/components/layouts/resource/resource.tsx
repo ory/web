@@ -9,9 +9,11 @@ import ContentText from '../../freestanding/content/content-text'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import Grid from '../../freestanding/containers/grid'
 import Button from '../../freestanding/button/button'
-import IconWrapper from "../../freestanding/icon/icon-wrapper";
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
-const ArrowRight = <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'32'} />
+const ArrowRight = (
+  <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'32'} />
+)
 
 const resources = [
   {

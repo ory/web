@@ -13,7 +13,7 @@ import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import IconWrapper from "../components/freestanding/icon/icon-wrapper";
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -64,7 +64,7 @@ authenticators:
 
 const IndexPage = () => {
   const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
-  
+
   return (
     <Layout>
       <SEO
@@ -73,7 +73,7 @@ const IndexPage = () => {
         }
         title={'Ory Oathkeeper - Open Source Identity and Access Proxy (IAP)'}
       />
-      
+
       <Hero
         title={'Configure how traffic interacts with your application'}
         description={
@@ -81,18 +81,18 @@ const IndexPage = () => {
         }
         image={<img loading="lazy" alt="" src={oathkeeperProcess} />}
       />
-      
+
       <Newsletter preselect="oathkeeper" />
-      
+
       <FeatureImage
         overline={'Start in minutes'}
         title={<>Easy Integration</>}
         description={
           <>
-            Ory / Oathkeeper is a cloud native Identity & Access Proxy / API (IAP)
-            and Access Control Decision API. It authenticates, authorizes, and
-            mutates incoming HTTP(s) requests, is Open Source, and written in Go.
-            Ory / Oathkeeper is straightforward on any system. We provide
+            Ory / Oathkeeper is a cloud native Identity & Access Proxy / API
+            (IAP) and Access Control Decision API. It authenticates, authorizes,
+            and mutates incoming HTTP(s) requests, is Open Source, and written
+            in Go. Ory / Oathkeeper is straightforward on any system. We provide
             pre-built binaries, Docker images, and support a number of package
             managers.
           </>
@@ -110,17 +110,17 @@ const IndexPage = () => {
         }
         image={<IntegrationCodeBox />}
       />
-      
+
       <FeatureImage
         mirror={true}
         overline={'Polyglot'}
         title={<>SDKs for all languages</>}
         description={
           <>
-            Ory / Oathkeeper is written in Go and we provide SDKs for almost every
-            language including Dart, .NET, Go, Java, PHP, Python, Ruby, Rust and
-            Typescript. Our documentation makes integrating Ory / Oathkeeper a
-            snap.
+            Ory / Oathkeeper is written in Go and we provide SDKs for almost
+            every language including Dart, .NET, Go, Java, PHP, Python, Ruby,
+            Rust and Typescript. Our documentation makes integrating Ory /
+            Oathkeeper a snap.
           </>
         }
         buttons={

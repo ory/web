@@ -28,15 +28,10 @@ const DropdownMobileItem = ({
     {title && typeof title === 'string' ? (
       <h5 className={cn('font-h5')}>{title}</h5>
     ) : (
-      <div onClick={onClick}>
-        {title}
-      </div>
+      <div onClick={onClick}>{title}</div>
     )}
     {description && <p className={cn('font-p-sm')}>{description}</p>}
-    <div onClick={onClick}>
-      {button && button}
-    </div>
-    
+    <div onClick={onClick}>{button && button}</div>
   </Container>
 )
 

@@ -8,9 +8,11 @@ import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Button from '../../freestanding/button/button'
-import IconWrapper from "../../freestanding/icon/icon-wrapper";
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
-const Fingerprint = <IconWrapper icon={'Fingerprint'} size={'32'} className={cn('icon-dark')}/>
+const Fingerprint = (
+  <IconWrapper icon={'Fingerprint'} size={'32'} className={cn('icon-dark')} />
+)
 
 const features = [
   {

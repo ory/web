@@ -9,24 +9,26 @@ interface PropTypes {
   className?: string
 }
 
-const DropdownMenu = forwardRef(({ className, show, children }: PropTypes, ref: any) => (
-  <div
-    ref={ref}
-    className={cn(
-      dropdownMenu,
-      !show && dropdownMenuHide,
-      className && className
-    )}
-  >
-    <Container
-      fluid={true}
-      aria-label={'submenu'}
-      justify={'start'}
-      alignItems={'start'}
+const DropdownMenu = forwardRef(
+  ({ className, show, children }: PropTypes, ref: any) => (
+    <div
+      ref={ref}
+      className={cn(
+        dropdownMenu,
+        !show && dropdownMenuHide,
+        className && className
+      )}
     >
-      {children}
-    </Container>
-  </div>
-))
+      <Container
+        fluid={true}
+        aria-label={'submenu'}
+        justify={'start'}
+        alignItems={'start'}
+      >
+        {children}
+      </Container>
+    </div>
+  )
+)
 
 export default DropdownMenu
