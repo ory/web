@@ -80,7 +80,7 @@ const IndexPage = () => {
             style={'filled'}
             iconLeft={RocketLaunch}
           >
-            Get Started
+            Request Access
           </Button>
         }
         image={
@@ -110,7 +110,7 @@ const IndexPage = () => {
         }
         buttons={
           <Button to={'https://console.ory.sh'} style={'filled'}>
-            Get Started
+            Request Access
           </Button>
         }
         image={
@@ -136,7 +136,7 @@ const IndexPage = () => {
         }
         buttons={
           <Button to={'https://console.ory.sh'} style={'filled'}>
-            Get Started
+            Request Access
           </Button>
         }
         image={

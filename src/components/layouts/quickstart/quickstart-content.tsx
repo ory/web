@@ -32,7 +32,7 @@ export const quickstartDefault = {
         to={'https://console.ory.sh/registration'}
         iconLeft={RocketLaunch}
       >
-        Get started
+        Request Access
       </Button>
     </>
   ),

@@ -49,7 +49,7 @@ const Layout = ({ children }: PropTypes) => {
             style={'filled'}
             openInNewWindow={false}
           >
-            Get Started
+            Request Access
           </Button>
         ]}
         dropdownMenu={[

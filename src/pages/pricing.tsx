@@ -61,7 +61,7 @@ const PricingPage = () => {
                 to={'https://console.ory.sh/registration'}
                 style={'filled'}
               >
-                Become a member
+                Get started
               </Button>
             ),
             features: [
