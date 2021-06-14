@@ -243,7 +243,7 @@ const IndexPage = () => {
             style={'link'}
             iconRight={ArrowRightThemed}
           >
-            Get Started
+            Request Access
           </Button>
         }
         feature={[
