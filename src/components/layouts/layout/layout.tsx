@@ -229,7 +229,7 @@ const Layout = ({ children }: PropTypes) => {
                     openInNewWindow={false}
                     iconRight={arrowRight}
                   >
-                    About Ory
+                    About Us
                   </Button>
                 )
               },
@@ -367,7 +367,7 @@ const Layout = ({ children }: PropTypes) => {
               style={'link'}
               openInNewWindow={true}
             >
-              Contact us
+              Contact Us
             </Button>,
             <Button
               className={cn('font-h5')}
@@ -375,7 +375,7 @@ const Layout = ({ children }: PropTypes) => {
               style={'link'}
               openInNewWindow={true}
             >
-              About us
+              About Us
             </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
