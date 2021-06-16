@@ -452,4 +452,4 @@ approachable.
 
 4.  [ORY Keto concepts: relation tuples](https://www.ory.sh/keto/docs/concepts/relation-tuples)
 
-5.  [PRY Keto concepts: objects](https://www.ory.sh/keto/docs/concepts/objects)
+5.  [ORY Keto concepts: objects](https://www.ory.sh/keto/docs/concepts/objects)
