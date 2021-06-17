@@ -15,10 +15,26 @@ import Coding from '../components/layouts/coding/coding'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IndexPage = () => {
-  const BookOpen = <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
-  const Terminal = <IconWrapper color={'themed-primary'} icon={'TerminalDuotone'} size={'32'} />
-  const ArrowRight = <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
-  const GitMerge = <IconWrapper color={'themed-primary'} icon={'GitMergeDuotone'} size={'32'} />
+  const BookOpen = (
+    <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
+  )
+  const Terminal = (
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'TerminalDuotone'}
+      size={'32'}
+    />
+  )
+  const ArrowRight = (
+    <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
+  )
+  const GitMerge = (
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'GitMergeDuotone'}
+      size={'32'}
+    />
+  )
 
   return (
     <Layout>

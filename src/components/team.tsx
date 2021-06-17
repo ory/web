@@ -37,13 +37,15 @@ const Team = () => {
             <Molecule className={cn(pb48)}>
               <h1 className={cn('font-h2', pb32)}>About Us</h1>
               <p className={cn('font-p', 'mute-85')}>
-                Our mission is to provide a common identity and access infrastructure 
-                that manages how IAM data is used in cloud applications. We deliver
-                the data and associated analytics to members in the network in accordance 
-                with data privacy and usage conventions. We embrace and practice Open  
-                Source Software development. We base our work on existing and emerging 
-                open cloud standards. As developers, we will continue to push the 
-                boundries in engineering and design to help other developers succeed.
+                Our mission is to provide a common identity and access
+                infrastructure that manages how IAM data is used in cloud
+                applications. We deliver the data and associated analytics to
+                members in the network in accordance with data privacy and usage
+                conventions. We embrace and practice Open Source Software
+                development. We base our work on existing and emerging open
+                cloud standards. As developers, we will continue to push the
+                boundries in engineering and design to help other developers
+                succeed.
               </p>
             </Molecule>
           </ContentText>

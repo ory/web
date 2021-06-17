@@ -35,19 +35,35 @@ const IndexPage = () => {
     <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
   )
   const Terminal = (
-    <IconWrapper color={'themed-primary'} icon={'TerminalDuotone'} size={'32'} />
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'TerminalDuotone'}
+      size={'32'}
+    />
   )
   const GitMerge = (
-    <IconWrapper color={'themed-primary'} icon={'GitMergeDuotone'} size={'32'} />
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'GitMergeDuotone'}
+      size={'32'}
+    />
   )
   const Code = (
     <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />
   )
   const LockOpen = (
-    <IconWrapper color={'themed-primary'} icon={'LockOpenDuotone'} size={'32'} />
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'LockOpenDuotone'}
+      size={'32'}
+    />
   )
   const UserPlus = (
-    <IconWrapper color={'themed-primary'} icon={'UserPlusDuotone'} size={'32'} />
+    <IconWrapper
+      color={'themed-primary'}
+      icon={'UserPlusDuotone'}
+      size={'32'}
+    />
   )
   const CirclesThreePlus = (
     <IconWrapper
