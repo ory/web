@@ -22,10 +22,26 @@ export type Project = {
   visual: string
 }
 
-const UserGear = <IconWrapper color={'themed-primary'} icon={'UserGearDuotone'} size={'32'} />
-const Fingerprint = <IconWrapper color={'themed-primary'} icon={'FingerprintDuotone'} size={'32'} />
-const ShieldWarning = <IconWrapper color={'themed-primary'} icon={'ShieldWarningDuotone'} size={'32'} />
-const Key = <IconWrapper color={'themed-primary'} icon={'KeyDuotone'} size={'32'} />
+const UserGear = (
+  <IconWrapper color={'themed-primary'} icon={'UserGearDuotone'} size={'32'} />
+)
+const Fingerprint = (
+  <IconWrapper
+    color={'themed-primary'}
+    icon={'FingerprintDuotone'}
+    size={'32'}
+  />
+)
+const ShieldWarning = (
+  <IconWrapper
+    color={'themed-primary'}
+    icon={'ShieldWarningDuotone'}
+    size={'32'}
+  />
+)
+const Key = (
+  <IconWrapper color={'themed-primary'} icon={'KeyDuotone'} size={'32'} />
+)
 
 export const projects: Project[] = [
   {
