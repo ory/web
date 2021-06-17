@@ -110,7 +110,7 @@ export {
   Key
 }
 type IconName =
-  'GithubLogo'
+  | 'GithubLogo'
   | 'LinkedinLogo'
   | 'SlackLogo'
   | 'YoutubeLogo'
@@ -142,7 +142,7 @@ type IconName =
   | 'UserGear'
   | 'ShieldWarning'
   | 'Key'
-  
+
 type IconType = 'Duotone' | 'Bold'
 
 export type PhosphorIconTypes = IconName | `${IconName}${IconType}`

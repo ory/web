@@ -15,7 +15,11 @@ import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const PricingPage = () => {
   const CheckCircle = (
-    <IconWrapper icon={'CheckCircleBold'} size={'16'} color={'success-primary'} />
+    <IconWrapper
+      icon={'CheckCircleBold'}
+      size={'16'}
+      color={'success-primary'}
+    />
   )
   const CircleThreePlus = (
     <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />

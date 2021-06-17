@@ -52,7 +52,9 @@ const IntegrationCodeBox = () => (
 )
 
 const IndexPage = () => {
-  const ArrowRight = <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
+  const ArrowRight = (
+    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
+  )
 
   return (
     <Layout>
