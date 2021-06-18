@@ -1,22 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Container from './freestanding/containers/container'
+import Grid from './freestanding/containers/grid'
+import cn from 'classnames'
+import * as styles from './youtubeembed.module.css'
+import { pb32 } from './freestanding/utils/padding.module.css'
 
 const YoutubeEmbed = ({ embedId }) => (
-  <div className="youtube">
-    <iframe
-      width="425"
-      height="240"
-      src={`https://www.youtube.com/embed/${embedId}`}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      title="Embedded youtube"
-    />
-  </div>
-);
+  <Container fluid={true} justify={'center'}>
+    <Grid lg={12} md={12} sm={12} xs={12} className={cn(pb32)}>
+      <div className={cn(styles.videoContainer)}>
+        <iframe
+          className={cn(styles.video)}
+          src={`https://www.youtube.com/embed/${embedId}`}
+          allowFullScreen
+        />
+      </div>
+    </Grid>
+  </Container>
+)
 
 YoutubeEmbed.propTypes = {
   embedId: PropTypes.string.isRequired
-};
+}
 
-export default YoutubeEmbed;
+export default YoutubeEmbed
