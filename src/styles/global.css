@@ -46,7 +46,7 @@ video {
 .youtube {
   overflow: hidden;
   position: relative;
-  width: 75%;
+  width: 100%;
   margin: 2rem auto;
   &.youtube::after {
     padding-top: 56.25%;

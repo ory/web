@@ -14,7 +14,7 @@ import { adoptersDefault } from '../components/layouts/adopters/adopters-content
 import Adopters from '../components/layouts/adopters/adopters'
 import Stats from '../components/layouts/stats/stats'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
-import YoutubeEmbed from "../components/youtubeembed";
+import YoutubeEmbed from "../components/layouts/embed/embed";
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -76,7 +76,26 @@ const IndexPage = () => {
         image={<img loading="lazy" alt="" src={hydraProcess} />}
       />
 
-      <YoutubeEmbed embedId="xcOjpLjy_rY" />
+<FeatureImage
+        overline={'A proven solution'}
+        title={<>Millions of users? No problem</>}
+        description={
+          <>
+            If you need a reliable open source solution Hydra is the right tool for the job.
+            <br></br>Watch the video to learn how Hydra powers Sainsbury's My ID, handling hundreds of users per second with ease.
+          </>
+        }
+        buttons={
+          <>
+            <Button to={'/docs/hydra/'} style={'link'} iconRight={ArrowRight}>
+              Check out the docs
+            </Button>
+          </>
+        }
+        image={<YoutubeEmbed embedId="xcOjpLjy_rY?" />}
+      />
+      
+            
       
       <Newsletter preselect="hydra" />
 

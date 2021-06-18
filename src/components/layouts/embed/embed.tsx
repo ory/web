@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Container from './freestanding/containers/container'
-import Grid from './freestanding/containers/grid'
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
 import cn from 'classnames'
-import * as styles from './youtubeembed.module.css'
-import { pb32 } from './freestanding/utils/padding.module.css'
+import * as styles from './embed.module.css'
+import { pb32 } from '../../freestanding/utils/padding.module.css'
 
 const YoutubeEmbed = ({ embedId }) => (
   <Container fluid={true} justify={'center'}>
