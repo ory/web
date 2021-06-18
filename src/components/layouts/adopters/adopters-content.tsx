@@ -7,6 +7,7 @@ import discogs from '../../../images/adopters/discogs.svg'
 import hootsuite from '../../../images/adopters/hootsuite.svg'
 import kyma from '../../../images/adopters/kyma.svg'
 import threerein from '../../../images/adopters/threerein.svg'
+import contraste from '../../../images/adopters/contraste.svg'
 import React from 'react'
 
 export const adoptersDefault = {
@@ -55,6 +56,11 @@ export const adoptersDefault = {
       title: '3REIN',
       image: threerein,
       url: 'https://3rein.com/'
+    },
+    {      
+      title: 'Contraste Digital',
+      image: contraste,
+      url: 'https://www.contraste.com/en/digital'
     }
   ]
 }
