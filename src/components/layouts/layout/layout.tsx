@@ -49,7 +49,7 @@ const Layout = ({ children }: PropTypes) => {
             style={'filled'}
             openInNewWindow={false}
           >
-            Get Started
+            Request Access
           </Button>
         ]}
         dropdownMenu={[
@@ -229,7 +229,7 @@ const Layout = ({ children }: PropTypes) => {
                     openInNewWindow={false}
                     iconRight={arrowRight}
                   >
-                    About Ory
+                    About Us
                   </Button>
                 )
               },
@@ -367,7 +367,7 @@ const Layout = ({ children }: PropTypes) => {
               style={'link'}
               openInNewWindow={true}
             >
-              Contact us
+              Contact Us
             </Button>,
             <Button
               className={cn('font-h5')}
@@ -375,7 +375,7 @@ const Layout = ({ children }: PropTypes) => {
               style={'link'}
               openInNewWindow={true}
             >
-              About us
+              About Us
             </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
@@ -393,7 +393,15 @@ const Layout = ({ children }: PropTypes) => {
       />
       <main>{children}</main>
       <Footer
-        logo={<img width={'100%'} height={'100%'} loading="lazy" alt="Ory logo footer" src={logoOryFooter} />}
+        logo={
+          <img
+            width={'100%'}
+            height={'100%'}
+            loading="lazy"
+            alt="Ory logo footer"
+            src={logoOryFooter}
+          />
+        }
         copyright={<>© Copyright 2021 Ory Corp</>}
         contact={{
           contactEmail: (
@@ -409,7 +417,11 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-grey-200'} icon={'GithubLogoDuotone'} size={'24'} />
+            <IconWrapper
+              color={'base-grey-200'}
+              icon={'GithubLogoDuotone'}
+              size={'24'}
+            />
           </Button>,
           <Button
             to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'}
@@ -438,7 +450,11 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper color={'base-grey-200'} icon={'SlackLogoDuotone'} size={'24'} />
+            <IconWrapper
+              color={'base-grey-200'}
+              icon={'SlackLogoDuotone'}
+              size={'24'}
+            />
           </Button>,
           <Button
             to={'https://www.linkedin.com/company/ory-corp/'}

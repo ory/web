@@ -14,8 +14,16 @@ const ArrowRight = (
 const Users = (
   <IconWrapper color={'themed-primary'} icon={'UsersDuotone'} size={'32'} />
 )
-const SlackLogo = <IconWrapper color={'themed-primary'} icon={'SlackLogoDuotone'} size={'32'} />
-const ChatsCircle = <IconWrapper color={'themed-primary'} icon={'ChatsCircleDuotone'} size={'32'} />
+const SlackLogo = (
+  <IconWrapper color={'themed-primary'} icon={'SlackLogoDuotone'} size={'32'} />
+)
+const ChatsCircle = (
+  <IconWrapper
+    color={'themed-primary'}
+    icon={'ChatsCircleDuotone'}
+    size={'32'}
+  />
+)
 
 export const quickstartDefault = {
   title: <>Ready to get started?</>,
@@ -32,13 +40,19 @@ export const quickstartDefault = {
         to={'https://console.ory.sh/registration'}
         iconLeft={RocketLaunch}
       >
-        Get started
+        Request Access
       </Button>
     </>
   ),
   content: [
     {
-      icon: <IconWrapper color={'themed-primary'} icon={'BookOpenDuotone'} size={'32'} />,
+      icon: (
+        <IconWrapper
+          color={'themed-primary'}
+          icon={'BookOpenDuotone'}
+          size={'32'}
+        />
+      ),
       title: <>Check out our docs</>,
       description: (
         <>

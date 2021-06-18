@@ -5,7 +5,7 @@ import { PhosphorIconTypes } from './phosphor'
 import * as PhosphorIcon from './phosphor'
 import { PascalToSnake } from '../../../util'
 import * as styles from './icon-wrapper.module.css'
-import cn from "classnames";
+import cn from 'classnames'
 
 interface PropType {
   icon: PhosphorIconTypes
@@ -25,7 +25,11 @@ const IconWrapper = ({
   // @ts-ignore
   const iconLoaded = PhosphorIcon[icon]
   return (
-    <ColourWrapper fill={color} background={background} className={cn(styles.icon, className && className)}>
+    <ColourWrapper
+      fill={color}
+      background={background}
+      className={cn(styles.icon, className && className)}
+    >
       <img
         className={cn(styles.icon)}
         loading="lazy"

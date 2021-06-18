@@ -15,7 +15,11 @@ import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const PricingPage = () => {
   const CheckCircle = (
-    <IconWrapper icon={'CheckCircleBold'} size={'16'} color={'success-primary'} />
+    <IconWrapper
+      icon={'CheckCircleBold'}
+      size={'16'}
+      color={'success-primary'}
+    />
   )
   const CircleThreePlus = (
     <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
@@ -61,7 +65,7 @@ const PricingPage = () => {
                 to={'https://console.ory.sh/registration'}
                 style={'filled'}
               >
-                Become a member
+                Request Access
               </Button>
             ),
             features: [
