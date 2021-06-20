@@ -85,6 +85,7 @@ const IndexPage = () => {
           <>
             Ory Hydra powers Sainsbury's My ID with millions of
             customers and serving hundreds of users per second.
+            Watch the video to learn more!
           </>
         }
         buttons={
