@@ -75,9 +75,16 @@ const IndexPage = () => {
       <Hero
         title={'Identity and User Management System'}
         description={
-          ' Use configurable authentication mechanisms and master user management in the cloud.'
+          'Use configurable authentication mechanisms and master user management in the cloud.'
         }
-        image={<img loading="lazy" alt="" src={kratosProcess} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={kratosProcess}
+          />
+        }
       />
 
       <Newsletter preselect="kratos" />
@@ -129,7 +136,14 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<img loading="lazy" alt="" src={kratosPolyglot} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={kratosPolyglot}
+          />
+        }
       />
       <Adopters {...adoptersDefault} />
       <Stats

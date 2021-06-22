@@ -110,7 +110,9 @@ const IndexPage = () => {
         description={
           'Manage user roles, rights, and permissions with ACL based on Google Zanzibar.'
         }
-        image={<img loading="lazy" alt="" src={ketoProcess} />}
+        image={
+          <img className="responsive" loading="lazy" alt="" src={ketoProcess} />
+        }
       />
 
       <Newsletter preselect="keto" />
@@ -157,7 +159,14 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<img loading="lazy" alt="" src={ketoPolyglot} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={ketoPolyglot}
+          />
+        }
       />
       <Adopters {...adoptersDefault} />
       <Stats

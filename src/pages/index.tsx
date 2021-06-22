@@ -104,6 +104,7 @@ const IndexPage = () => {
             width={'100%'}
             height={'100%'}
             loading="lazy"
+            className="responsive"
             alt=""
             src={heroIllustration}
           />
@@ -134,6 +135,7 @@ const IndexPage = () => {
             width={'100%'}
             height={'100%'}
             loading="lazy"
+            className="responsive"
             alt=""
             src={dashboardIllustration}
           />
@@ -160,6 +162,7 @@ const IndexPage = () => {
             width={'100%'}
             height={'100%'}
             loading="lazy"
+            className="responsive"
             alt=""
             src={headlessIllustration}
           />
@@ -193,6 +196,7 @@ const IndexPage = () => {
             width={'100%'}
             height={'100%'}
             loading="lazy"
+            className="responsive"
             alt=""
             src={codeboxIllustration}
           />

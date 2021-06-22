@@ -81,7 +81,14 @@ const IndexPage = () => {
         description={
           'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.'
         }
-        image={<img loading="lazy" alt="" src={oathkeeperProcess} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={oathkeeperProcess}
+          />
+        }
       />
 
       <Newsletter preselect="oathkeeper" />
@@ -136,7 +143,14 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<img loading="lazy" alt="" src={oathkeeperPolyglot} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={oathkeeperPolyglot}
+          />
+        }
       />
 
       <Adopters {...adoptersDefault} />

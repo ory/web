@@ -73,7 +73,14 @@ const IndexPage = () => {
         description={
           'Secure access to your applications and APIs, and authenticate third party users.'
         }
-        image={<img loading="lazy" alt="" src={hydraProcess} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={hydraProcess}
+          />
+        }
       />
 
       <Newsletter preselect="hydra" />
@@ -83,9 +90,8 @@ const IndexPage = () => {
         title={<>Scale to millions</>}
         description={
           <>
-            Ory Hydra powers Sainsbury's My ID with millions of
-            customers and serving hundreds of users per second.
-            Watch the video to learn more!
+            Ory Hydra powers Sainsbury's My ID with millions of customers and
+            serving hundreds of users per second. Watch the video to learn more!
           </>
         }
         buttons={
@@ -99,7 +105,9 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<YoutubeEmbed embedId="xcOjpLjy_rY?modestbranding=1&autohide=1&showinfo=0&controls=0" />}
+        image={
+          <YoutubeEmbed embedId="xcOjpLjy_rY?modestbranding=1&autohide=1&showinfo=0&controls=0" />
+        }
       />
 
       <FeatureImage
@@ -148,7 +156,14 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<img loading="lazy" alt="" src={hydraPolyglot} />}
+        image={
+          <img
+            className="responsive"
+            loading="lazy"
+            alt=""
+            src={hydraPolyglot}
+          />
+        }
       />
       <Adopters {...adoptersDefault} />
       <Stats
