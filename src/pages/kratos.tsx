@@ -81,7 +81,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt=""
+            alt="Representation of Kratos UIs"
             src={kratosProcess}
           />
         }
@@ -110,7 +110,7 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<IntegrationCodeBox />}
+        image={<IntegrationCodeBox/>}
       />
 
       <FeatureImage
@@ -140,7 +140,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt=""
+            alt="Kratos SDKs for any programming language"
             src={kratosPolyglot}
           />
         }
