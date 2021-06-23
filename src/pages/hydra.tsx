@@ -129,7 +129,7 @@ const IndexPage = () => {
               Check out the docs
             </Button>
           </>
-        }          
+        }
         image={<IntegrationCodeBox />}
       />
 

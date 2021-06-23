@@ -110,7 +110,7 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={<IntegrationCodeBox/>}
+        image={<IntegrationCodeBox />}
       />
 
       <FeatureImage
