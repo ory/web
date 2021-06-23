@@ -56,6 +56,9 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
+  const CheckCircle = (
+    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
+  )
 
   return (
     <Layout>
@@ -69,9 +72,18 @@ const IndexPage = () => {
       />
 
       <Hero
-        title={'OAuth 2.0 and OpenID Certified® OpenID Connect Server'}
+        title={'OAuth 2.0 and OIDC Certified® Server'}
         description={
-          'Secure access to your applications and APIs, and authenticate third party users.'
+          'Authenticate third party users and secure access to your Apps and APIs.'
+        }
+        buttons={
+          <Button
+            to={'/hydra/docs/5min-tutorial/'}
+            style={'filled'}
+            iconRight={CheckCircle}
+          >
+            Get Started
+          </Button>
         }
         image={
           <img
@@ -117,16 +129,14 @@ const IndexPage = () => {
         description={
           <>
             Ory Hydra is Open Source and OpenID Connect Certified® technology
-            that integrates with any login system. Get started in minutes, and
-            provide secure access to your application and API endpoints. Ory
-            Hydra works with any login system and only a few lines of code are
-            required. Head over to our documentation and learn more.
+            that integrates with any login system. Get started in minutes, only
+            a few lines of code are required.
           </>
         }
         buttons={
           <>
             <Button to={'/docs/hydra/'} style={'link'} iconRight={ArrowRight}>
-              Check out the docs
+              Check out the documentation
             </Button>
           </>
         }
@@ -148,11 +158,11 @@ const IndexPage = () => {
         buttons={
           <>
             <Button
-              to={'/docs/hydra/install/'}
+              to={'/hydra/docs/5min-tutorial/'}
               style={'link'}
               iconRight={ArrowRight}
             >
-              Install Ory Hydra
+              Run the Quickstart
             </Button>
           </>
         }
