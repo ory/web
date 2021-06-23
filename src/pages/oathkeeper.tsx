@@ -148,7 +148,7 @@ const IndexPage = () => {
               style={'link'}
               iconRight={ArrowRight}
             >
-              Install Ory Oathkeeper
+              Run the Quickstart
             </Button>
           </>
         }
