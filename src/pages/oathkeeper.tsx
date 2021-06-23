@@ -66,20 +66,31 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-
+  const CheckCircle = (
+    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
+  )
   return (
     <Layout>
       <SEO
         description={
-          'Oathkeeper Open Source Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust.'
+          'Oathkeeper Open Source Identity and Access Proxy (IAP). Authenticate and authorize traffic using Zero Trust.'
         }
         title={'Ory Oathkeeper - Open Source Identity and Access Proxy (IAP)'}
       />
 
       <Hero
-        title={'Configure how traffic interacts with your application'}
+        title={'Control Incoming Traffic'}
         description={
-          'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, using Zero Trust / BeyondCorp as open source.'
+          'Authenticate and authorize all traffic with a Zero Trust security model.'
+        }
+        buttons={
+          <Button
+            to={'/oathkeeper/docs/configure-deploy/'}
+            style={'filled'}
+            iconRight={CheckCircle}
+          >
+            Get Started
+          </Button>
         }
         image={
           <img
@@ -98,12 +109,10 @@ const IndexPage = () => {
         title={<>Easy Integration</>}
         description={
           <>
-            Ory Oathkeeper is a cloud native Identity & Access Proxy / API (IAP)
-            and Access Control Decision API. It authenticates, authorizes, and
-            mutates incoming HTTP(s) requests, is Open Source, and written in
-            Go. Ory Oathkeeper is straightforward on any system. We provide
-            pre-built binaries, Docker images, and support a number of package
-            managers.
+            Ory Oathkeeper is an Open Source cloud native Identity & Access
+            Proxy / API (IAP) and Access Control Decision API. It authenticates,
+            authorizes, and mutates incoming HTTP(s) requests, and is written in
+            Go. Implementation is straightforward on any system.
           </>
         }
         buttons={
@@ -113,7 +122,7 @@ const IndexPage = () => {
               style={'link'}
               iconRight={ArrowRight}
             >
-              Check out the docs
+              Check out the documentation
             </Button>
           </>
         }
@@ -135,7 +144,7 @@ const IndexPage = () => {
         buttons={
           <>
             <Button
-              to={'/docs/oathkeeper/next/'}
+              to={'/oathkeeper/docs/configure-deploy/'}
               style={'link'}
               iconRight={ArrowRight}
             >
