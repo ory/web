@@ -57,7 +57,7 @@ export const adoptersDefault = {
       image: threerein,
       url: 'https://3rein.com/'
     },
-    {      
+    {
       title: 'Contraste Digital',
       image: contraste,
       url: 'https://www.contraste.com/en/digital'
