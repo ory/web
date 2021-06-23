@@ -51,8 +51,17 @@
   }
 }
 
+.content-wrapper {
+
+  display: flex;
+  
+}
+
+
 .content {
   max-height: 85%;
+  width: 100%;
+  align-items: flex-start;
   overflow: auto;
 
   & pre {
@@ -86,3 +95,4 @@
     background-color: var(--colors-base-dark);
   }
 }
+

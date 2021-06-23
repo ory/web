@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Prism from 'prismjs'
 import cn from 'classnames'
 import * as styles from './codebox.module.css'
+import Container from '../containers/container'
 
 export enum Languages {
   HTML = 'html',
@@ -56,7 +57,7 @@ class CodeBox extends Component<PropTypes, StateTypes> {
   render() {
     const { tabs } = this.state
     return (
-      <div className={styles.box}>
+      <Container className={styles.box} alignItems={"start"}> 
         <div className={styles.editorHeader}>
           <div className={styles.windowActions}>
             <div className={cn(styles.windowAction, styles.primary)} />
@@ -77,7 +78,8 @@ class CodeBox extends Component<PropTypes, StateTypes> {
             ))}
           </div>
         </div>
-        <div className={styles.content}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.content}>
           {tabs.map(({ filename, code, language }, index) => (
             <pre
               key={filename}
@@ -89,7 +91,8 @@ class CodeBox extends Component<PropTypes, StateTypes> {
             </pre>
           ))}
         </div>
-      </div>
+        </div>
+      </Container>
     )
   }
 }

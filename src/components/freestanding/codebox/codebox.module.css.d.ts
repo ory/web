@@ -5,6 +5,7 @@ declare const styles: {
   readonly tab: string
   readonly selected: string
   readonly windowActions: string
+  readonly contentWrapper: string
   readonly windowAction: string
   readonly primary: string
   readonly content: string
