@@ -19,7 +19,7 @@ interface PropTypes {
 
 const Hero = ({ title, description, image, buttons }: PropTypes) => (
   <div className={cn(hero)}>
-    <Container fluid={true} alignItems={'center'} >
+    <Container fluid={true} alignItems={'center'}>
       <Grid lg={6} md={7} sm={12} xs={12} className={cn(pb32)}>
         <ContentText>
           <MoleculeTextInteraction>
