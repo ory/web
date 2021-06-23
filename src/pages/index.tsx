@@ -94,7 +94,7 @@ const IndexPage = () => {
           <Button
             to={'https://console.ory.sh/registration'}
             style={'filled'}
-            iconLeft={RocketLaunch}
+            iconRight={RocketLaunch}
           >
             Request Access
           </Button>
