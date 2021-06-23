@@ -66,6 +66,9 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
+  const CheckCircle = (
+    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
+  )
   return (
     <Layout>
       <SEO
@@ -73,9 +76,18 @@ const IndexPage = () => {
         title={`Ory Kratos - Cloud Native Identity and User Management System`}
       />
       <Hero
-        title={'Identity and User Management System'}
+        title={'Identity & User Management'}
         description={
-          'Use configurable authentication mechanisms and master user management in the cloud.'
+          'Use configurable authentication and master user management in the cloud.'
+        }
+        buttons={
+          <Button
+            to={'/kratos/docs/quickstart'}
+            style={'filled'}
+            iconRight={CheckCircle}
+          >
+            Get Started
+          </Button>
         }
         image={
           <img
@@ -97,16 +109,15 @@ const IndexPage = () => {
             Ory Kratos is a cloud native user management system. It provides
             user login and registration, multi-factor authentication, and user
             information storage with a headless API. It is fully configurable
-            and supports a wide range of protocols such as Google Authenticator,
-            and stores user information using JSON Schema. Ory Kratos works with
-            any UI framework and only a few lines of code are required. Take a
-            look at our documentation and learn more.
+            and supports a wide range of protocols such as Google Authenticator.
+            Ory Kratos works with any UI framework and only a few lines of code
+            are required.
           </>
         }
         buttons={
           <>
             <Button to={'/docs/kratos/'} style={'link'} iconRight={ArrowRight}>
-              Check out the docs
+              Check out the documentation
             </Button>
           </>
         }
@@ -128,11 +139,11 @@ const IndexPage = () => {
         buttons={
           <>
             <Button
-              to={'/docs/kratos/install/'}
+              to={'/docs/kratos/quickstart/'}
               style={'link'}
               iconRight={ArrowRight}
             >
-              Install Ory Kratos
+              Run the Quickstart
             </Button>
           </>
         }
