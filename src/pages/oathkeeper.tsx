@@ -85,7 +85,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt=""
+            alt="Representation of Oathkeeper UIs"
             src={oathkeeperProcess}
           />
         }
@@ -147,7 +147,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt=""
+            alt="Oathkeeper SDKs for any programming language"
             src={oathkeeperPolyglot}
           />
         }
