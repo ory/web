@@ -105,7 +105,7 @@ const IndexPage = () => {
             height={'100%'}
             loading="lazy"
             className="responsive"
-            alt=""
+            alt="Overview of the Ory Console"
             src={heroIllustration}
           />
         }
@@ -136,7 +136,7 @@ const IndexPage = () => {
             height={'100%'}
             loading="lazy"
             className="responsive"
-            alt=""
+            alt="Ory Project Dashboard"
             src={dashboardIllustration}
           />
         }
@@ -163,7 +163,7 @@ const IndexPage = () => {
             height={'100%'}
             loading="lazy"
             className="responsive"
-            alt=""
+            alt="Individual styling on user interfaces"
             src={headlessIllustration}
           />
         }
@@ -197,7 +197,7 @@ const IndexPage = () => {
             height={'100%'}
             loading="lazy"
             className="responsive"
-            alt=""
+            alt="Example of integrating Ory"
             src={codeboxIllustration}
           />
         }
