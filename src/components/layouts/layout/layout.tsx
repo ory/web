@@ -83,7 +83,7 @@ const Layout = ({ children }: PropTypes) => {
                 )
               },
               {
-                description: 'User & Identity Management',
+                description: 'Identity & User Management',
                 button: (
                   <Button
                     className={cn('font-h5')}
