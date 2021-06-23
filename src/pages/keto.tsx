@@ -96,7 +96,9 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-
+  const CheckCircle = (
+    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
+  )
   return (
     <Layout>
       <SEO
@@ -106,9 +108,18 @@ const IndexPage = () => {
         title={`Ory Keto - Permission and Role Management`}
       />
       <Hero
-        title={'Global access control'}
+        title={'Global Access Control'}
         description={
-          'Manage user roles, rights, and permissions with ACL based on Google Zanzibar.'
+          'Manage user roles, rights, and permissions with access-control lists.'
+        }
+        buttons={
+          <Button
+            to={'/keto/docs/quickstart/'}
+            style={'filled'}
+            iconRight={CheckCircle}
+          >
+            Get Started
+          </Button>
         }
         image={
           <img className="responsive" loading="lazy" alt="" src={ketoProcess} />
@@ -122,16 +133,16 @@ const IndexPage = () => {
         title={<>Easy Integration</>}
         description={
           <>
-            Ory Keto is a global and consistent permission & authorization
-            server with an easy and granular permission language and sub
-            10-millisecond latency. It is based on Google Zanzibar, written in
-            Go, and ships gRPC and REST APIs.
+            Ory Keto is an Open Source global and consistent permission &
+            authorization server with an easy and granular permission language
+            and low latency. It is based on Google Zanzibar, written in Go, and
+            ships gRPC and REST APIs.
           </>
         }
         buttons={
           <>
             <Button to={'/docs/keto/'} style={'link'} iconRight={ArrowRight}>
-              Check out the docs
+              Check out the documentation
             </Button>
           </>
         }
@@ -151,11 +162,11 @@ const IndexPage = () => {
         buttons={
           <>
             <Button
-              to={'/docs/keto/install/'}
+              to={'/keto/docs/quickstart/'}
               style={'link'}
               iconRight={ArrowRight}
             >
-              Install Ory / Keto
+              Run the Quickstart
             </Button>
           </>
         }
