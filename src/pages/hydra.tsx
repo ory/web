@@ -77,7 +77,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt="Representation of Hydra UIs"
+            alt="Example OAuth2 flow with headless UI using Hydra"
             src={hydraProcess}
           />
         }

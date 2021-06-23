@@ -85,7 +85,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt="Representation of Oathkeeper UIs"
+            alt="Example use of Oathkeeper IAM capabilities inside a UI"
             src={oathkeeperProcess}
           />
         }

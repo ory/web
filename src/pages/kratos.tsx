@@ -81,7 +81,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt="Representation of Kratos UIs"
+            alt="Examples of headless Login and Registrations forms with different styles using Kratos"
             src={kratosProcess}
           />
         }

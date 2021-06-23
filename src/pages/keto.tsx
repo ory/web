@@ -114,7 +114,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt="Representation of Keto UIs"
+            alt="Example use of Keto authorisation methods inside a UI"
             src={ketoProcess}
           />
         }

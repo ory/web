@@ -197,7 +197,7 @@ const IndexPage = () => {
             height={'100%'}
             loading="lazy"
             className="responsive"
-            alt="Example of integrating Ory"
+            alt="Example code and terminal response when integrating Ory"
             src={codeboxIllustration}
           />
         }
