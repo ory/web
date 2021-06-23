@@ -77,7 +77,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt=""
+            alt="Representation of Hydra UIs"
             src={hydraProcess}
           />
         }
@@ -129,7 +129,7 @@ const IndexPage = () => {
               Check out the docs
             </Button>
           </>
-        }
+        }          
         image={<IntegrationCodeBox />}
       />
 
@@ -160,7 +160,7 @@ const IndexPage = () => {
           <img
             className="responsive"
             loading="lazy"
-            alt=""
+            alt="Hydra SDKs for any programming language"
             src={hydraPolyglot}
           />
         }
