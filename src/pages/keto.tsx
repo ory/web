@@ -2,13 +2,14 @@ import React from 'react'
 import Button from '../components/freestanding/button/button'
 import Adopters from '../components/layouts/adopters/adopters'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
+import FeatureCodebox from '../components/layouts/feature-codebox/feature-codebox'
 import Newsletter from '../components/newsletter'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import ketoPolyglot from '../images/keto/keto_p.svg'
 import ketoProcess from '../images/keto/keto.svg'
-import CodeBox, { Languages } from '../components/codebox'
+import CodeBox, { Languages } from '../components/freestanding/codebox/codebox'
 import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Stats from '../components/layouts/stats/stats'
@@ -122,7 +123,7 @@ const IndexPage = () => {
 
       <Newsletter preselect="keto" />
 
-      <FeatureImage
+      <FeatureCodebox
         overline={'Start in minutes'}
         title={<>Easy Integration</>}
         description={

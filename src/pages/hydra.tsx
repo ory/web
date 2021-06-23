@@ -1,13 +1,14 @@
 import React from 'react'
 import Button from '../components/freestanding/button/button'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
+import FeatureCodebox from '../components/layouts/feature-codebox/feature-codebox'
 import Newsletter from '../components/newsletter'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import hydraPolyglot from '../images/hydra/hydra_p.svg'
 import hydraProcess from '../images/hydra/hydra.svg'
-import CodeBox, { Languages } from '../components/codebox'
+import CodeBox, { Languages } from '../components/freestanding/codebox/codebox'
 import SEO from '../components/layouts/seo/seo'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
@@ -110,7 +111,7 @@ const IndexPage = () => {
         }
       />
 
-      <FeatureImage
+      <FeatureCodebox
         mirror={true}
         overline={'Start in minutes'}
         title={<>Easy Integration</>}
