@@ -144,7 +144,7 @@ const Layout = ({ children }: PropTypes) => {
             title: 'Developers',
             mainMenu: [
               {
-                description: 'Start integrating Ory products',
+                description: 'Start integrating Ory',
                 button: (
                   <Button
                     to={'/docs'}
@@ -157,7 +157,7 @@ const Layout = ({ children }: PropTypes) => {
                 )
               },
               {
-                description: 'Become a part of the Ory Community',
+                description: 'Be a part of the Ory Community',
                 button: (
                   <Button
                     to={'/docs/ecosystem/community/'}
@@ -170,7 +170,20 @@ const Layout = ({ children }: PropTypes) => {
                 )
               },
               {
-                description: 'Participate in Development & Discussion',
+                description: 'Articles & Guides',
+                button: (
+                  <Button
+                    to={'/blog'}
+                    style={'link'}
+                    openInNewWindow={false}
+                    iconRight={arrowRight}
+                  >
+                    Blog
+                  </Button>
+                )
+              },
+              {
+                description: 'Participate in Development',
                 button: (
                   <Button
                     to={'https://github.com/ory'}
@@ -194,19 +207,6 @@ const Layout = ({ children }: PropTypes) => {
           {
             title: 'Company',
             mainMenu: [
-              {
-                description: '',
-                button: (
-                  <Button
-                    to={'/blog'}
-                    style={'link'}
-                    openInNewWindow={false}
-                    iconRight={arrowRight}
-                  >
-                    Blog
-                  </Button>
-                )
-              },
               {
                 description: '',
                 button: (
