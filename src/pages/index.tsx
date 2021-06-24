@@ -86,9 +86,9 @@ const IndexPage = () => {
       />
 
       <Hero
-        title={'Never Build Auth Again'}
+        title={'Open Source Identity Platform For Everyone'}
         description={
-          'Login, register and manage your users with a reliable and certified solution trusted by Fortune 500 companies.'
+          'Secure cloud applications and authenticate, authorize and manage users. Ory is built on open standards and secures billions of requests in production every month.'
         }
         buttons={
           <Button
