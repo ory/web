@@ -87,7 +87,7 @@ const Team = () => {
     <div className={cn(styles.team)}>
       <Container fluid={true} alignItems={'start'}>
         <Grid lg={12} md={12} sm={12} xs={12}>
-          <h1 className={cn('font-h2', pb32)}>About Us</h1>
+          <h1 className={cn('font-h2', pb32)}>Meet the Ory team</h1>
           <div className={cn(styles.profiles)}>
             <Profile
               name="Aeneas Rekkas"
@@ -106,7 +106,7 @@ const Team = () => {
             />
             <Profile
               name="Thomas Aidan Curran"
-              title="Operations"
+              title="Product"
               social={[
                 {
                   network: SocialNetworks.github,
