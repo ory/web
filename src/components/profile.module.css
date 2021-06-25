@@ -11,6 +11,7 @@
 .profileImg {
   width: 100%;
   height: auto;
+  filter: grayscale(.95);
 }
 
 @media (--md) {
