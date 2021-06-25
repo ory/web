@@ -1,6 +1,6 @@
 .team {
-  background-color: var(--colors-base-light);
-  padding: 112px 0;
+  background-color: var(--colors-base-white);
+  padding: 144px 0;
 
   & a:any-link {
     color: var(--colors-themed-default);
@@ -12,35 +12,11 @@
       text-decoration: underline;
     }
   }
-
-  & a:any-link img {
-    color: var(--colors-base-grey-400--next);
-    transition: all ease 200ms;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--colors-themed-primary--next);
-    }
-  }
 }
 
-@media (--sm-viewport) {
-  .team {
-    padding: 32px 0;
-
-    & img {
-      margin-bottom: 32px;
-    }
-  }
-}
-
-@media (--md-viewport) {
-  .team {
-    padding: 32px 0;
-
-    & img {
-      margin-bottom: 32px;
-    }
-  }
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
 }
