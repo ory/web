@@ -144,19 +144,6 @@ const Layout = ({ children }: PropTypes) => {
             title: 'Developers',
             mainMenu: [
               {
-                description: 'Start integrating Ory',
-                button: (
-                  <Button
-                    to={'/docs'}
-                    style={'link'}
-                    openInNewWindow={false}
-                    iconRight={arrowRight}
-                  >
-                    Documentation
-                  </Button>
-                )
-              },
-              {
                 description: 'Be a part of the Ory Community',
                 button: (
                   <Button
@@ -203,7 +190,15 @@ const Layout = ({ children }: PropTypes) => {
                 Pricing
               </Button>
             )
+          },          
+          {
+            title: (
+              <Button to={'/docs'} style={'none'}>
+                Docs
+              </Button>
+            )
           },
+
           {
             title: 'Company',
             mainMenu: [
