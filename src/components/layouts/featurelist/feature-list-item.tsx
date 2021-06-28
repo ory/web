@@ -4,18 +4,15 @@ import {
   pb24,
   pl8,
   pl24
-} from '../../../freestanding/utils/padding.module.css'
+} from '../../freestanding/utils/padding.module.css'
 import cn from 'classnames'
-import Container from '../../../freestanding/containers/container'
-import Grid from '../../../freestanding/containers/grid'
-import ContentText from '../../../freestanding/content/content-text'
-import Molecule from '../../../freestanding/molecule/molecule'
-import MoleculeIconWrapper from '../../../freestanding/molecule/molecule-icon-wrapper'
-import { Styling } from '../../../freestanding/styling/styling'
+import Container from '../../freestanding/containers/container'
+import ContentText from '../../freestanding/content/content-text'
+import Molecule from '../../freestanding/molecule/molecule'
 
 export interface Features {
   title: string
-  description: string
+  description: React.ReactElement
   icon: React.ReactElement
 }
 
@@ -24,7 +21,7 @@ interface PropType {
   features: Array<Features>
 }
 
-const FeatureListContent = ({ className, features }: PropType) => (
+const FeatureListItem = ({ className, features }: PropType) => (
   <div className={cn(className && className)}>
     <Container flexContainer={'column'}>
       {features.map((feature) => {
@@ -52,4 +49,4 @@ const FeatureListContent = ({ className, features }: PropType) => (
   </div>
 )
 
-export default FeatureListContent
+export default FeatureListItem

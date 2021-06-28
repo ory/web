@@ -12,6 +12,7 @@ import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import { featureListPricing } from '../components/layouts/featurelist/feature-list-content'
 
 const PricingPage = () => {
   const CheckCircle = (
@@ -176,100 +177,7 @@ const PricingPage = () => {
 
       <Adopters {...adoptersDefault} />
 
-      <FeatureList
-        features={[
-          {
-            icon: CircleThreePlus,
-            title: 'Features',
-            description:
-              'Sign up now and instantly access these features. All features except the Ory CLI and user interfaces are included when self hosting.',
-            button: (
-              <Button style={'text'} to={'/docs'} iconRight={ArrowRight}>
-                Read the docs
-              </Button>
-            ),
-            features: [
-              {
-                title: 'Ory CLI',
-                description:
-                  'Control the Ory platform from the command line with an intuitive and accessible syntax. ',
-                icon: CheckCircle
-              },
-              {
-                title: 'Log in & Sign up',
-                description:
-                  'The basics of IAM: Login & register users fast and without complicated flows and store credentials securely.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Account Management',
-                description:
-                  'Manage your users, enable email verification, let users pick new passwords and change their profile data.',
-                icon: CheckCircle
-              },
-              {
-                title: 'User Interface & Dashboards',
-                description:
-                  'Display stats in a smooth and responsive dashboard. We also offer presets for all common user interfaces.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Identity Model',
-                description:
-                  'A flexible identity model adapts to your business needs. You can use one of our provided presets or cook up your own identity model.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Social Logins',
-                description:
-                  'Simplify your users experience and let them use their existing accounts at Google, GitHub, Apple etc. to sign up and log in. All OIDC providers are supported.',
-                icon: CheckCircle
-              }
-            ]
-          },
-          {
-            icon: MapTriFold,
-            title: 'Features landing in 2021',
-            description:
-              'We are currently working on bringing these features into the Ory Cloud.',
-            button: (
-              <Button
-                style={'text'}
-                to={'/docs/ecosystem/roadmap'}
-                iconRight={ArrowRight}
-              >
-                Visit the Ory roadmap
-              </Button>
-            ),
-            features: [
-              {
-                icon: Flag,
-                title: 'Advanced Identity and Access Management',
-                description:
-                  'Multifactor authentication, including passwordless, WebAuthn, TOTP; Ability to use your own UI and Branding as well as webhooks to define and trigger actions.'
-              },
-              {
-                icon: Flag,
-                title: 'Permissions & Roles',
-                description:
-                  'From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.'
-              },
-              {
-                icon: Flag,
-                title: 'Oauth2 & OpenID Connect',
-                description:
-                  'Become an OAuth2.0 provider, enable complex use cases and machine2machine interactions, interface your business with third party systems.'
-              },
-              {
-                icon: Flag,
-                title: 'Integrations',
-                description:
-                  'Payments integration powered by Stripe as well as Email integration to send out emails in bulk or individually.'
-              }
-            ]
-          }
-        ]}
-      />
+      <FeatureList {...featureListPricing}  />
 
       <Faq
         title={<>Frequently Asked Questions</>}

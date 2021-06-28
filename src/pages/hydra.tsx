@@ -16,6 +16,7 @@ import Adopters from '../components/layouts/adopters/adopters'
 import Stats from '../components/layouts/stats/stats'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import YoutubeEmbed from '../components/layouts/embed/embed'
+import { featureListHydra } from '../components/layouts/featurelist/feature-list-content'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -133,59 +134,7 @@ const IndexPage = () => {
         }
       />
 
-<FeatureList
-        features={[
-          {
-            icon: CircleThreePlus,
-            title: 'Ory Hydra Features',
-            description:
-              'Issue OAuth 2.0 Access, Refresh and ID tokens in a secure and efficient manner. Ory Hydra secures critical environments for billions of users. ',
-            button: (
-              <Button style={'text'} to={'/docs'} iconRight={ArrowRight}>
-                Read the docs
-              </Button>
-            ),
-            features: [
-              {
-                title: 'Flexible User Management',
-                description:
-                  'Implement the full Open Authorization 2.0 standard in your technology stack. Ory Hydra integrates with any open source (e.g. Ory Kratos) or proprietary IAM system.',
-                icon: CheckCircle
-              },
-              {
-                title: 'OpenID Certified®',
-                description:
-                  'Rely on an OpenID Certified® OIDC Provider. Ory Hydra implements all flows specified by the IETF and OpenID Foundation.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Headless Interface and APIs',
-                description:
-                  'Use your own branding and user interfaces for all OAuth2.0 and OIDC flows. Ory Hydra lets you use your styles and flows powered by a REST API and intuitive CLI.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Compatible with MITreid',
-                description:
-                  'Migrate from MITREid Connect to Ory Hydra. Migration documentation is provided.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Cryptographic Key Storage',
-                description:
-                  'Store cryptographic keys for e.g. signing JWTs securely and manage OAuth 2.0 clients directly from the CLI.',
-                icon: CheckCircle
-              },              
-              {
-                title: 'Security First and High Performance',
-                description:
-                  'Sleep easy, knowing that Ory Hydra is secured against attack vectors and scales as required. Ory Hydra serves tokens to millions of users weekly and just works.',
-                icon: CheckCircle
-              }
-            ]
-          }
-        ]}
-      />
+      <FeatureList {...featureListHydra} />
 
       <FeatureImage
         mirror={true}

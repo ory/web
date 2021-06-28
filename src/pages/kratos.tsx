@@ -15,6 +15,7 @@ import { adoptersDefault } from '../components/layouts/adopters/adopters-content
 import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import { featureListKratos } from '../components/layouts/featurelist/feature-list-content'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -112,60 +113,7 @@ const IndexPage = () => {
 
       <Newsletter preselect="kratos" />
 
-      <FeatureList
-        features={[
-          {
-            icon: CircleThreePlus,
-            title: 'Ory Kratos Features',
-            description:
-              'Most software applications need to deal with user and identity management. Ory Kratos serves common flows so you dont need to rewrite everything yourself.',
-            button: (
-              <Button style={'text'} to={'/docs'} iconRight={ArrowRight}>
-                Read the docs
-              </Button>
-            ),
-            features: [
-              {
-                title: 'Self Service Login and Registration',
-                description:
-                  'Enable users to create and sign in to accounts using username/email and password combinations, Social Login, passwordless flows and more.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Admin Management',
-                description:
-                  'Manage your userbase and get, create, update or delete identities and their data.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Headless APIs and Custom Data Models',
-                description:
-                  'Use customizable identity models (add fields like name, address, favourite pet ect..) and create your own user interfaces for flows in your style and branding.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Profile and Account Management',
-                description:
-                  'Let your users use secure flows to update passwords, personal details, email addresses, linked social profiles and more.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Social Logins',
-                description:
-                  'Simplify UX and let them use their existing accounts at Google, GitHub, etc. to sign up and log in. All OIDC providers are supported.',
-                icon: CheckCircle
-              },
-              {
-                title: 'Account Verification and Recovery',
-                description:
-                  'Verify an identity by checking email, phone number, or physical address of that user. Provide recovery of accounts using "Forgot Password" flows, security codes, ect.',
-                icon: CheckCircle
-              }
-            ]
-          }
-        ]}
-      />
-
+      <FeatureList {...featureListKratos} />
 
       <FeatureImage
         overline={'Start in minutes'}
