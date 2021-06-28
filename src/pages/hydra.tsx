@@ -129,7 +129,7 @@ const IndexPage = () => {
           </>
         }
         image={
-          <YoutubeEmbed embedId="xcOjpLjy_rY?modestbranding=1&autohide=1&showinfo=0&controls=0" />
+          <YoutubeEmbed embedId="xcOjpLjy_rY" />
         }
       />
 
