@@ -205,6 +205,13 @@ const Layout = ({ children }: PropTypes) => {
             )
           },
           {
+            title: (
+              <Button to={'/docs'} style={'none'}>
+                Docs
+              </Button>
+            )
+          },
+          {
             title: 'Company',
             mainMenu: [
               {
