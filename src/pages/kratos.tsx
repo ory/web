@@ -68,18 +68,8 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
-    <IconWrapper
-      icon={'CheckCircleBold'}
-      size={'16'}
-      color={'success-primary'}
-    />
-  )
   const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
-  )
-  const CircleThreePlus = (
-    <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
   )
   return (
     <Layout>

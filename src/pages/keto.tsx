@@ -96,9 +96,10 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
+  const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
+  
   return (
     <Layout>
       <SEO
@@ -116,7 +117,7 @@ const IndexPage = () => {
           <Button
             to={'/keto/docs/quickstart/'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>

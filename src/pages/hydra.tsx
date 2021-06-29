@@ -58,18 +58,8 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
-    <IconWrapper
-      icon={'CheckCircleBold'}
-      size={'16'}
-      color={'success-primary'}
-    />
-  )
   const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
-  )
-  const CircleThreePlus = (
-    <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
   )
 
   return (
@@ -92,7 +82,7 @@ const IndexPage = () => {
           <Button
             to={'/hydra/docs/5min-tutorial/'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>
@@ -117,7 +107,7 @@ const IndexPage = () => {
             Ory Hydra powers Sainsbury's My ID with millions of customers and
             serving hundreds of users per second. Watch the video to learn more!
           </>
-        }
+        }        
         buttons={
           <>
             <Button

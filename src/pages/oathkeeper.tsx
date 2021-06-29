@@ -66,7 +66,7 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
+  const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
   return (
@@ -87,7 +87,7 @@ const IndexPage = () => {
           <Button
             to={'/oathkeeper/docs/configure-deploy/'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>
