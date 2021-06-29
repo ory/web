@@ -54,10 +54,6 @@ export const featureListPricing  = {
         Sign up now and instantly access these features. All features except the Ory CLI and user interfaces are included when self hosting.
         </>
       ),
-      button: (
-        <Button
-        style={'text'} to={'/docs'} iconRight={ArrowRight} />
-      ),
       features: [
         {
           title: 'Ory CLI',
@@ -123,12 +119,6 @@ export const featureListPricing  = {
         We are currently working on bringing these features into the Ory Cloud.
         </>
       ),
-      button: (
-        <Button
-          style={'text'}
-          to={'/docs/ecosystem/roadmap'}
-          iconRight={ArrowRight}  />        
-      ),
       features: [
         {
           icon: Flag,
@@ -175,7 +165,7 @@ export const featureListKratos = {
 features : [
   {
     icon: CircleThreePlus,
-    title: <>Ory Kratos Features</>,
+    title: 'Ory Kratos Features',
     description: (
       <>
       Most software applications need to deal with user and identity management. Ory Kratos serves common flows so you dont need to rewrite everything yourself.
@@ -183,11 +173,11 @@ features : [
     ),
     button: (
       <Button
-      style={'text'} to={'/docs'} iconRight={ArrowRight} />
+      style={'link'} to={'/docs/kratos/quickstart/'} iconRight={ArrowRight} > Get started </Button>
     ),
     features: [
       {
-        title: <>Self Service Login and Registration</>,
+        title: 'Self Service Login and Registration',
         description: (
           <>
           Enable users to create and sign in to accounts using username/email and password combinations, Social Login, passwordless flows and more.
@@ -196,7 +186,7 @@ features : [
         icon: CheckCircle
         },
         {
-          title: <>Admin Management</>,
+          title: 'User Management',
           description: (
           <>
           Manage your userbase and get, create, update or delete identities and their data.
@@ -205,7 +195,7 @@ features : [
         icon: CheckCircle
         },
         {
-          title: <>Headless APIs and Custom Data Models</>,
+          title: 'Headless APIs and Custom Data Models',
           description: (
           <>
           Use customizable identity models (add fields like name, address, favourite pet ect..) and create your own user interfaces for flows in your style and branding.
@@ -214,7 +204,7 @@ features : [
         icon: CheckCircle
         },
         {
-          title: <>Profile and Account Management</>,
+          title: 'Profile and Account Management',
           description: (
           <>
           Let your users use secure flows to update passwords, personal details, email addresses, linked social profiles and more.
@@ -223,7 +213,7 @@ features : [
           icon: CheckCircle
         },
         {
-          title: <>Social Logins</>,
+          title: 'Social Logins',
           description: (
           <>
           Simplify UX and let them use their existing accounts at Google, GitHub, etc. to sign up and log in. All OIDC providers are supported.
@@ -232,7 +222,7 @@ features : [
           icon: CheckCircle
         },
         {
-          title: <>Account Verification and Recovery</>,
+          title: 'Account Verification and Recovery',
           description: (
           <>
           Verify an identity by checking email, phone number, or physical address of that user. Provide recovery of accounts using "Forgot Password" flows, security codes, ect.
@@ -249,7 +239,7 @@ export const featureListHydra  = {
   features : [
     {
       icon: CircleThreePlus,
-      title: <>Ory Hydra Features</>,
+      title: 'Ory Hydra Features',
       description: (
         <>
         Issue OAuth 2.0 Access, Refresh and ID tokens in a secure and efficient manner. Ory Hydra secures critical environments for billions of users.
@@ -257,29 +247,29 @@ export const featureListHydra  = {
       ),
       button: (
         <Button
-        style={'text'} to={'/docs'} iconRight={ArrowRight} />
+        style={'link'} to={'/docs/hydra/quickstart/'} iconRight={ArrowRight} > Get started </Button>
       ),
       features: [
         {
-          title: <>Flexible User Management</>,
+          title: 'Integrates Everywhere',
           description: (
             <>
-            Implement the full Open Authorization 2.0 standard in your technology stack. Ory Hydra integrates with any open source (e.g. Ory Kratos) or proprietary IAM system.
+            Implement the full Open Authorization 2.0 standard in your technology stack. Ory Hydra integrates with any open source (e.g. <Button style={'link-inline'} to={'./kratos'}> Ory Kratos</Button>) or proprietary IAM system.
             </>
           ),
           icon: CheckCircle
           },
           {
-            title: <>OpenID Certified®</>,
+            title: 'OpenID Certified®',
             description: (
             <>
-            Rely on an OpenID Certified® OIDC Provider. Ory Hydra implements all flows specified by the IETF and OpenID Foundation.
+            Rely on an <Button style={'link-inline'} to={'https://openid.net/developers/certified/'}> OpenID Certified® OIDC Provider</Button>. Ory Hydra implements all flows specified by the IETF and OpenID Foundation.
             </>
           ),
           icon: CheckCircle
           },
           {
-            title: <>Headless Interface and APIs</>,
+            title: 'Bring Your Own UX',
             description: (
             <>
             Use your own branding and user interfaces for all OAuth2.0 and OIDC flows. Ory Hydra lets you use your styles and flows powered by a REST API and intuitive CLI.
@@ -288,16 +278,16 @@ export const featureListHydra  = {
           icon: CheckCircle
           },
           {
-            title: <>Compatible with MITreid</>,
+            title: 'Compatible with MITreid',
             description: (
             <>
-            Migrate from MITREid Connect to Ory Hydra. Migration documentation is provided.
+            Migrate from <Button style={'link-inline'} to={'https://mitreid-connect.github.io/'}>MITREid Connect</Button> to Ory Hydra. Migration documentation is provided.
             </>
           ),
             icon: CheckCircle
           },
           {
-            title: <>Cryptographic Key Storage</>,
+            title: 'Cryptographic Key Storage',
             description: (
             <>
             Store cryptographic keys for e.g. signing JWTs securely and manage OAuth 2.0 clients directly from the CLI.
@@ -306,7 +296,7 @@ export const featureListHydra  = {
             icon: CheckCircle
           },
           {
-            title: <>Security First and High Performance</>,
+            title: 'Security First and High Performance',
             description: (
             <>
             Sleep easy, knowing that Ory Hydra is secured against attack vectors and scales as required. Ory Hydra serves tokens to millions of users weekly and just works.

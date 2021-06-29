@@ -14,12 +14,13 @@ import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import Grid from '../../freestanding/containers/grid'
 import MoleculeIconWrapper from '../../freestanding/molecule/molecule-icon-wrapper'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 
 interface FeatureSection {
   icon: React.ReactElement
   title: string
   description: React.ReactElement
-  button: React.ReactElement
+  button?: React.ReactElement
   features: Array<Features>
 }
 
@@ -46,8 +47,8 @@ const FeatureList = ({ className, features }: PropTypes) => (
                   <p className={cn('font-p', 'mute-85')}>
                     {section.description}
                   </p>
-                  {section.button}
                 </Molecule>
+                {section.button && <MoleculeInteraction>{section.button}</MoleculeInteraction>}
               </ContentText>
             </Grid>
             <Grid lg={6} md={8} sm={12} xs={12}>
