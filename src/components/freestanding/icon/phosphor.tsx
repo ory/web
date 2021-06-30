@@ -19,11 +19,14 @@ import CirclesThreePlus from '../../../images/phosphor/circles-three-plus.svg'
 import CirclesThreePlusDuotone from '../../../images/phosphor/circles-three-plus-duotone.svg'
 import CheckCircle from '../../../images/phosphor/check-circle.svg'
 import CheckCircleBold from '../../../images/phosphor/check-circle-bold.svg'
+import CheckCircleDuotone from '../../../images/phosphor/check-circle-duotone.svg'
 import SignIn from '../../../images/phosphor/sign-in.svg'
 import UserPlus from '../../../images/phosphor/user-plus.svg'
 import UserPlusDuotone from '../../../images/phosphor/user-plus-duotone.svg'
 import MapTrifold from '../../../images/phosphor/map-trifold.svg'
 import Plus from '../../../images/phosphor/plus.svg'
+import PlusCircle from '../../../images/phosphor/plus-circle.svg'
+import PlusCircleBold from '../../../images/phosphor/plus-circle-bold.svg'
 import Minus from '../../../images/phosphor/minus.svg'
 import Terminal from '../../../images/phosphor/terminal.svg'
 import TerminalDuotone from '../../../images/phosphor/terminal-duotone.svg'
@@ -75,11 +78,14 @@ export {
   CirclesThreePlusDuotone,
   CheckCircle,
   CheckCircleBold,
+  CheckCircleDuotone,
   SignIn,
   UserPlus,
   UserPlusDuotone,
   MapTrifold,
   Plus,
+  PlusCircle,
+  PlusCircleBold,
   Minus,
   Terminal,
   TerminalDuotone,
@@ -127,6 +133,7 @@ type IconName =
   | 'UserPlus'
   | 'MapTrifold'
   | 'Plus'
+  | 'PlusCircle'
   | 'Minus'
   | 'Terminal'
   | 'RocketLaunch'

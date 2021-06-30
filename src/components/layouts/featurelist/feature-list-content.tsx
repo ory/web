@@ -34,6 +34,13 @@ const CheckCircle = (
     color={'success-primary'}
   />
 )
+const PlusCircle = (
+  <IconWrapper
+    icon={'PlusCircleBold'}
+    size={'16'}
+    color={'base-grey-400'}
+  />
+)
 const ArrowRight = (
   <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
 )
@@ -121,40 +128,40 @@ export const featureListPricing  = {
       ),
       features: [
         {
-          icon: Flag,
           title: 'Advanced Identity and Access Management',
           description: (
-            <>
-            Multifactor authentication, including passwordless, WebAuthn, TOTP; Ability to use your own UI and Branding as well as webhooks to define and trigger actions.
-            </>
+          <>
+          Multifactor authentication, including passwordless, WebAuthn, TOTP; Ability to use your own UI and Branding as well as webhooks to define and trigger actions.
+          </>
           ),
+          icon: PlusCircle
         },
         {
-          icon: Flag,
           title: 'Permissions and Roles',
           description: (
             <>
             From a member of the marketing team, to an admin in your support staff— give everyone the right level of access to sensitive data.
             </>
-          ),         
+          ),      
+          icon: PlusCircle
         },
         {
-          icon: Flag,
           title: 'Oauth2 and OpenID Connect',
           description: (
             <>            
             Become an OAuth2.0 provider, enable complex use cases and machine2machine interactions, interface your business with third party systems.
             </>
           ),
+          icon: PlusCircle
         },
         {
-          icon: Flag,
           title: 'Integrations',
           description: (
             <>            
             Payments integration powered by Stripe as well as Email integration to send out emails in bulk or individually.
             </>
           ),
+          icon: PlusCircle
         }
       ]
     }
@@ -195,7 +202,7 @@ features : [
         icon: CheckCircle
         },
         {
-          title: 'Headless APIs and Custom Data Models',
+          title: 'Bring Your Own UI and Identity Models',
           description: (
           <>
           Use customizable identity models (add fields like name, address, favourite pet ect..) and create your own user interfaces for flows in your style and branding.
@@ -303,6 +310,112 @@ export const featureListHydra  = {
             </>
           ),
             icon: CheckCircle
+        }
+      ]
+    }
+  ]
+}
+
+
+export const featureListKeto  = {
+  features : [
+    {
+      icon: CircleThreePlus,
+      title: 'Ory Keto Features',
+      description: (
+        <>
+        Control who can access what in your application. Ory Keto serves decisions at scale globally with low latency.
+        </>
+      ),
+      button: (
+        <Button
+        style={'link'} to={'/docs/keto/quickstart/'} iconRight={ArrowRight} > Get started </Button>
+      ),
+      features: [
+        {
+          title: 'Manage and Check Permissions',
+          description: (
+            <>
+            Determine if a user is allowed to take an action with HTTP and gRPC APIs.
+            </>
+          ),
+          icon: CheckCircle
+          },
+          {
+            title: 'Low Latency and Zero Downtime',
+            description: (
+              <>
+              Delight users with a smooth experience and no downtime.
+              </>
+            ),
+            icon: CheckCircle
+          },
+          {
+          title: 'Flexible Permission Management',
+          description: (
+            <>
+            Integrate easily with your existing data structures. Ory Keto works with any kind of identifiers.
+            </>
+          ),
+          icon: CheckCircle
+          },
+          {
+          title: 'Global Access Control',
+          description: (
+            <>
+            Coming soon: Deploy around the globe and provide a fast response no matter where your users are.
+            </>
+          ),
+          icon: PlusCircle
+          },
+          {
+          title: 'Strong Consistency',
+          description: (
+            <>
+            Coming soon: Provide a straightforward user experience by serving strong consistent responses using snaptokens.
+            </>
+          ),
+          icon: PlusCircle
+        }         
+      ]
+    }
+  ]
+}
+
+
+
+export const featureListOathkeeper  = {
+  features : [
+    {
+      icon: CircleThreePlus,
+      title: 'Ory Oathkeeper Features',
+      description: (
+        <>
+        Control who can access what in your application. Ory Keto serves decisions at scale globally with low latency.
+        </>
+      ),
+      button: (
+        <Button
+        style={'link'} to={'/docs/keto/quickstart/'} iconRight={ArrowRight} > Get started </Button>
+      ),
+      features: [
+        {
+          title: 'Manage and Check Permissions',
+          description: (
+            <>
+            Determine if a user is allowed to take an action with HTTP and gRPC APIs.
+            </>
+          ),
+          icon: CheckCircle
+          },
+          {
+          title: 'Flexible Permission Management',
+          description: (
+            <>
+            Authenticate distinct types of credentials such as OAuth 2.0 Access Tokens, SAML Assertions, JWTs, ect. and define complex permission rules.
+            </>
+          ),
+          icon: CheckCircle
           }
         ]
       }
