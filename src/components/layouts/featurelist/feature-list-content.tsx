@@ -372,7 +372,7 @@ export const featureListKeto  = {
           title: 'Strong Consistency',
           description: (
             <>
-            Coming soon: Provide a straightforward user experience by serving strong consistent responses using snaptokens.
+            Coming soon: Provide a straightforward user experience by serving strong consistent responses using <Button style={'link-inline'} to={'https://github.com/ory/keto/issues/517'}>snaptokens</Button> .
             </>
           ),
           icon: PlusCircle
@@ -391,32 +391,59 @@ export const featureListOathkeeper  = {
       title: 'Ory Oathkeeper Features',
       description: (
         <>
-        Control who can access what in your application. Ory Keto serves decisions at scale globally with low latency.
+        Forward authorized requests and reject unauthorized ones. Ory Oathkeeper can act as reverse proxy or interface with your existing API Gateway.
         </>
       ),
       button: (
         <Button
-        style={'link'} to={'/docs/keto/quickstart/'} iconRight={ArrowRight} > Get started </Button>
+        style={'link'} to={'/oathkeeper/docs/configure-deploy/'} iconRight={ArrowRight} > Get started </Button>
       ),
       features: [
         {
-          title: 'Manage and Check Permissions',
+          title: 'Identity and Access Proxy',
           description: (
             <>
-            Determine if a user is allowed to take an action with HTTP and gRPC APIs.
+            Authorize HTTP requests to your server based on sets of Access Rules.
             </>
           ),
           icon: CheckCircle
           },
           {
-          title: 'Flexible Permission Management',
+          title: 'Zero Trust Architecture',
           description: (
             <>
-            Authenticate distinct types of credentials such as OAuth 2.0 Access Tokens, SAML Assertions, JWTs, ect. and define complex permission rules.
+            Apply Zero Trust / BeyondCorp security in your tech stack. Ory Oathkeeper enables secure access for all users (employees, partners, customers etc.)
             </>
           ),
           icon: CheckCircle
-          }
+          },        
+          {
+            title: 'Carefree Integration',
+            description: (
+              <>
+              Deploy alongside your existing API Gateways. Ory Oathkeeper plugs into Ambassador, Envoy, AWS API Gateway, Nginx and many more. 
+              </>
+          ),
+          icon: CheckCircle
+          },
+          {
+            title: 'Mutate Data',
+            description: (
+              <>
+              Encode the resulting content into custom headers (X-User-ID), JSON Web Tokens and more.
+              </>
+          ),
+          icon: CheckCircle
+          },          
+          {
+            title: 'Next Generation Oathkeeper',
+            description: (
+              <>
+              <i>Coming soon:</i> The next generation of Ory Oathkeeper. Learn more and submit feedback on <Button style={'link-inline'} to={'https://github.com/ory/oathkeeper/issues/441'}>GitHub</Button>.
+              </>
+          ),
+          icon: PlusCircle
+          },
         ]
       }
     ]
