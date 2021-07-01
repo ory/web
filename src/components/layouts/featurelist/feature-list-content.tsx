@@ -427,10 +427,10 @@ export const featureListOathkeeper  = {
           icon: CheckCircle
           },
           {
-            title: 'Mutate Data',
+            title: 'Enrich Data',
             description: (
               <>
-              Encode the resulting content into custom headers (X-User-ID), JSON Web Tokens and more.
+              Accumulate data from multiple sources and parse it into custom headers (X-User-ID), JSON Web Tokens and more.
               </>
           ),
           icon: CheckCircle
