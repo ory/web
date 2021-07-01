@@ -30,6 +30,7 @@
 
   &:active {
     background: var(--colors-base-grey--next);
+    border: 4px solid var(--colors-themed-light--next);
   }
 
   &:disabled {
@@ -56,6 +57,7 @@
 
   &:active {
     background: var(--colors-base-grey--next);
+    border: 4px solid var(--colors-themed-light--next);
   }
 
   &:disabled {
