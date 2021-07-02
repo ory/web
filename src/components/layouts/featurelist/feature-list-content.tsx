@@ -193,8 +193,7 @@ export const featureListKratos = {
           to={'/docs/kratos/quickstart/'}
           iconRight={ArrowRight}
         >
-          {' '}
-          Get started{' '}
+          Get started
         </Button>
       ),
       features: [
@@ -274,9 +273,9 @@ export const featureListHydra = {
       title: 'Ory Hydra Features',
       description: (
         <>
-          Issue OAuth 2.0 Access, Refresh and ID tokens in a secure and
-          efficient manner. Ory Hydra secures critical environments for billions
-          of users.
+          Ory Hydra is a hardened and certified OAuth 2.0 and OpenID Connect
+          provider, securing hundreds of billions of API requests in thousands
+          of deployments.
         </>
       ),
       button: (
@@ -285,8 +284,7 @@ export const featureListHydra = {
           to={'/docs/hydra/quickstart/'}
           iconRight={ArrowRight}
         >
-          {' '}
-          Get started{' '}
+          Get started
         </Button>
       ),
       features: [
@@ -297,7 +295,6 @@ export const featureListHydra = {
               Implement the full Open Authorization 2.0 standard in your
               technology stack. Ory Hydra integrates with any open source (e.g.{' '}
               <Button style={'link-inline'} to={'./kratos'}>
-                {' '}
                 Ory Kratos
               </Button>
               ) or proprietary IAM system.
@@ -327,9 +324,9 @@ export const featureListHydra = {
           title: 'Bring Your Own UX',
           description: (
             <>
-              Use your own branding and user interfaces for all OAuth2.0 and
-              OIDC flows. Ory Hydra lets you use your styles and flows powered
-              by a REST API and intuitive CLI.
+              Use your branding and user interfaces for all OAuth2.0 and OpenID
+              Connect flows. Your own styles and flows powered by a robust API
+              and intuitive CLI.
             </>
           ),
           icon: CheckCircle
@@ -345,7 +342,14 @@ export const featureListHydra = {
               >
                 MITREid Connect
               </Button>{' '}
-              to Ory Hydra. Migration documentation is provided.
+              to Ory Hydra. Migration{' '}
+              <Button
+                style={'link-inline'}
+                to={'/hydra/docs/guides/migrating-from-mitreid/'}
+              >
+                documentation
+              </Button>{' '}
+              is provided.
             </>
           ),
           icon: CheckCircle
@@ -364,9 +368,15 @@ export const featureListHydra = {
           title: 'Security First and High Performance',
           description: (
             <>
-              Sleep easy, knowing that Ory Hydra is secured against attack
-              vectors and scales as required. Ory Hydra serves tokens to
-              millions of users weekly and just works.
+              Sleep easy, knowing that Ory Hydra is{' '}
+              <Button
+                style={'link-inline'}
+                to={'/hydra/docs/security-architecture/'}
+              >
+                secured
+              </Button>{' '}
+              against attack vectors and scales as required. Ory Hydra serves
+              tokens to millions of users weekly and just works.
             </>
           ),
           icon: CheckCircle
@@ -393,8 +403,7 @@ export const featureListKeto = {
           to={'/docs/keto/quickstart/'}
           iconRight={ArrowRight}
         >
-          {' '}
-          Get started{' '}
+          Get started
         </Button>
       ),
       features: [
@@ -446,7 +455,7 @@ export const featureListKeto = {
                 to={'https://github.com/ory/keto/issues/517'}
               >
                 snaptokens
-              </Button>{' '}
+              </Button>
               .
             </>
           ),
@@ -475,8 +484,7 @@ export const featureListOathkeeper = {
           to={'/oathkeeper/docs/configure-deploy/'}
           iconRight={ArrowRight}
         >
-          {' '}
-          Get started{' '}
+          Get started
         </Button>
       ),
       features: [
@@ -496,7 +504,7 @@ export const featureListOathkeeper = {
             <>
               Apply Zero Trust / BeyondCorp security in your tech stack. Ory
               Oathkeeper enables secure access for all users (employees,
-              partners, customers etc.)
+              partners, customers etc.).
             </>
           ),
           icon: CheckCircle
