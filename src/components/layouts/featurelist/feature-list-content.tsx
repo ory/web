@@ -256,7 +256,7 @@ export const featureListKratos = {
             <>
               Verify an identity by checking email, phone number, or physical
               address of that user. Provide recovery of accounts using "Forgot
-              Password" flows, security codes, ect.
+              Password" flows, security codes, ect...
             </>
           ),
           icon: CheckCircle
@@ -504,7 +504,7 @@ export const featureListOathkeeper = {
             <>
               Apply Zero Trust / BeyondCorp security in your tech stack. Ory
               Oathkeeper enables secure access for all users (employees,
-              partners, customers etc.).
+              partners, customers, etc...).
             </>
           ),
           icon: CheckCircle
