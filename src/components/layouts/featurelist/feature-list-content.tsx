@@ -1,14 +1,4 @@
 import React from 'react'
-import {
-  pb4,
-  pb24,
-  pl8,
-  pl24
-} from '../../freestanding/utils/padding.module.css'
-import cn from 'classnames'
-import Container from '../../freestanding/containers/container'
-import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
 import Button from '../../freestanding/button/button'
 import IconWrapper from '../../../components/freestanding/icon/icon-wrapper'
 
@@ -18,10 +8,6 @@ export interface Features {
   icon: React.ReactElement
 }
 
-interface PropType {
-  className?: string
-  features: Array<Features>
-}
 
 const CircleThreePlus = (
   <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
@@ -38,9 +24,7 @@ const ArrowRight = (
 const MapTriFold = (
   <IconWrapper color={'base-white'} icon={'MapTrifold'} size={'24'} />
 )
-const Flag = (
-  <IconWrapper icon={'FlagBold'} size={'16'} color={'themed-primary'} />
-)
+
 
 export const featureListPricing = {
   features: [
@@ -358,8 +342,8 @@ export const featureListHydra = {
           title: 'Cryptographic Key Storage',
           description: (
             <>
-              Store cryptographic keys for e.g. signing JWTs securely and manage
-              OAuth 2.0 clients directly from the CLI.
+              Encrypt cryptographic keys for e.g. signing JWTs, store them
+              securely and manage OAuth 2.0 clients directly from the CLI.
             </>
           ),
           icon: CheckCircle
@@ -373,10 +357,10 @@ export const featureListHydra = {
                 style={'link-inline'}
                 to={'/hydra/docs/security-architecture/'}
               >
-                secured
+                designed
               </Button>{' '}
-              against attack vectors and scales as required. Ory Hydra serves
-              tokens to millions of users weekly and just works.
+              to reduce security incidents and scales as required. Ory Hydra
+              serves tokens to millions of users weekly and just works.
             </>
           ),
           icon: CheckCircle
@@ -394,7 +378,7 @@ export const featureListKeto = {
       description: (
         <>
           Control who can access what in your application. Ory Keto serves
-          decisions at scale globally with low latency.
+          answers at scale globally with low latency.
         </>
       ),
       button: (
@@ -411,16 +395,21 @@ export const featureListKeto = {
           title: 'Manage and Check Permissions',
           description: (
             <>
-              Determine if a user is allowed to take an action with HTTP and
-              gRPC APIs.
+              Determine if an entity (user, service, IoT) is allowed to perform
+              an action using HTTP or gRPC APIs.
             </>
           ),
           icon: CheckCircle
         },
         {
-          title: 'Low Latency and Zero Downtime',
+          title: 'Low Latency and Highly Available',
           description: (
-            <>Delight users with a smooth experience and no downtime.</>
+            <>
+              Ory Keto is based on Zanzibar, which has maintained
+              95th-percentile latency of less than 10 milliseconds and
+              availability greater than 99.999% over 3 years of production
+              use.
+            </>
           ),
           icon: CheckCircle
         },
@@ -428,8 +417,8 @@ export const featureListKeto = {
           title: 'Flexible Permission Management',
           description: (
             <>
-              Integrate easily with your existing data structures. Ory Keto
-              works with any kind of identifiers.
+              Ory Keto integrates with any existing data structures and
+              identifiers.
             </>
           ),
           icon: CheckCircle
