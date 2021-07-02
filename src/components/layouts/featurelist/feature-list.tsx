@@ -48,7 +48,9 @@ const FeatureList = ({ className, features }: PropTypes) => (
                     {section.description}
                   </p>
                 </Molecule>
-                {section.button && <MoleculeInteraction>{section.button}</MoleculeInteraction>}
+                {section.button && (
+                  <MoleculeInteraction>{section.button}</MoleculeInteraction>
+                )}
               </ContentText>
             </Grid>
             <Grid lg={6} md={8} sm={12} xs={12}>

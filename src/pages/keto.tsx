@@ -101,7 +101,7 @@ const IndexPage = () => {
   const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
-  
+
   return (
     <Layout>
       <SEO

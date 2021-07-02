@@ -29,7 +29,7 @@ const PricingPage = () => {
     <IconWrapper color={'base-white'} icon={'MapTrifold'} size={'24'} />
   )
   const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
-  
+
   return (
     <Layout>
       <SEO
@@ -174,7 +174,7 @@ const PricingPage = () => {
 
       <Adopters {...adoptersDefault} />
 
-      <FeatureList {...featureListPricing}  />
+      <FeatureList {...featureListPricing} />
 
       <Faq
         title={<>Frequently Asked Questions</>}
