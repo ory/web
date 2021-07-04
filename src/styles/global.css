@@ -33,6 +33,7 @@ img {
 
 img.responsive {
   width: 100%;
+  image-rendering: -webkit-crisp-edges;
 }
 
 video {
