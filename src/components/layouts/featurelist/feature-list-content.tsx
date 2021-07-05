@@ -8,7 +8,6 @@ export interface Features {
   icon: React.ReactElement
 }
 
-
 const CircleThreePlus = (
   <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
 )
@@ -24,7 +23,6 @@ const ArrowRight = (
 const MapTriFold = (
   <IconWrapper color={'base-white'} icon={'MapTrifold'} size={'24'} />
 )
-
 
 export const featureListPricing = {
   features: [
@@ -406,9 +404,8 @@ export const featureListKeto = {
           description: (
             <>
               Ory Keto is based on Zanzibar, which has maintained
-              95th-percentile latency of less than 10 milliseconds and
-              availability greater than 99.999% over 3 years of production
-              use.
+              95th-percentile latency of less than 10 ms and
+              availability greater than 99.99% over  years of production use.
             </>
           ),
           icon: CheckCircle
