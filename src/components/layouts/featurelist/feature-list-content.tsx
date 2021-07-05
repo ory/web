@@ -204,8 +204,8 @@ export const featureListKratos = {
           title: 'Bring Your Own UI and Identity Models',
           description: (
             <>
-              Use customizable identity models (add fields like name, address,
-              favourite pet ect..) and create your own user interfaces for flows
+              Use customizable identity models (defining custom fields such as name, address,
+              favourite pet) and create your own user interfaces for flows
               in your style and branding.
             </>
           ),
@@ -404,8 +404,8 @@ export const featureListKeto = {
           description: (
             <>
               Ory Keto is based on Zanzibar, which has maintained
-              95th-percentile latency of less than 10 ms and
-              availability greater than 99.99% over  years of production use.
+              95th-percentile latency of less than 10 ms and availability
+              greater than 99.99% over years of production use.
             </>
           ),
           icon: CheckCircle
@@ -489,8 +489,8 @@ export const featureListOathkeeper = {
           description: (
             <>
               Apply Zero Trust / BeyondCorp security in your tech stack. Ory
-              Oathkeeper enables secure access for all users (employees,
-              partners, customers, etc...).
+              Oathkeeper enables secure access for all users (e.g. employees,
+              partners, customers).
             </>
           ),
           icon: CheckCircle
