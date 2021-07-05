@@ -165,7 +165,7 @@ export const featureListKratos = {
       description: (
         <>
           Most software applications need to deal with user and identity
-          management. Ory Kratos serves common flows so you dont need to rewrite
+          management. Ory Kratos serves common flows, so you don't need to rewrite
           everything yourself.
         </>
       ),
@@ -236,7 +236,7 @@ export const featureListKratos = {
           title: 'Account Verification and Recovery',
           description: (
             <>
-              Verify an identity by checking email, phone number, or physical
+              Verify an identity by checking the email, phone number, or physical
               address of that user. Provide recovery of accounts using "Forgot
               Password" flows, security codes, etc.
             </>
@@ -460,7 +460,7 @@ export const featureListOathkeeper = {
       description: (
         <>
           Forward authorized requests and reject unauthorized ones. Ory
-          Oathkeeper can act as reverse proxy or interface with your existing
+          Oathkeeper can act as a reverse proxy or interface with your existing
           API Gateway.
         </>
       ),
