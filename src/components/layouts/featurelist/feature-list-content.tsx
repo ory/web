@@ -205,7 +205,7 @@ export const featureListKratos = {
           description: (
             <>
               Use customizable identity models (defining custom fields such as
-              name, address, favourite pet) and create your own user interfaces
+              name, address, favorite pet) and create your own user interfaces
               for flows in your style and branding.
             </>
           ),
@@ -226,7 +226,7 @@ export const featureListKratos = {
           description: (
             <>
               Simplify your users' experience and let them use their existing
-              accounts at Google, GitHub, Apple etc. to sign up and log in. All
+              accounts at Google, GitHub, Apple, etc. to sign up and log in. All
               OIDC providers are supported.
             </>
           ),
@@ -238,7 +238,7 @@ export const featureListKratos = {
             <>
               Verify an identity by checking email, phone number, or physical
               address of that user. Provide recovery of accounts using "Forgot
-              Password" flows, security codes, ect...
+              Password" flows, security codes, etc.
             </>
           ),
           icon: CheckCircle
@@ -314,7 +314,7 @@ export const featureListHydra = {
           icon: CheckCircle
         },
         {
-          title: 'Compatible with MITreid',
+          title: 'Compatible with MITREid',
           description: (
             <>
               Migrate from{' '}
@@ -510,7 +510,7 @@ export const featureListOathkeeper = {
           description: (
             <>
               Accumulate data from multiple sources and parse it into custom
-              headers (X-User-ID), JSON Web Tokens and more.
+              headers: X-User-ID, JSON Web Tokens and more.
             </>
           ),
           icon: CheckCircle
