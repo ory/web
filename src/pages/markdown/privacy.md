@@ -45,14 +45,13 @@ We do not publicly display or provide access to personally identifying
 information. We do not sell, rent, or otherwise share the information.
 
 _Information collected using third party metrics and analytics services._ We use
-third party metrics and analytics services such as Google Analytics to collect
-information and to learn more about the visitors to our Service. We also do this
-to be able to gauge how effectively we are marketing the service. Information
-collected include third party tags and cookies, Ory cookies, browser metadata,
-and IP addresses among other things. We use the information collected to
-maintain a good Service experience and to help us understand who is visiting the
-Service from where and for what reasons. This information may be compiled and
-analyzed by Ory Corp.
+the open-source analytics service Matomo to collect information and to learn
+more about the visitors to our Service. We also do this to be able to gauge how
+effectively we are marketing the service. Information collected include third
+party tags and cookies, Ory cookies, browser metadata, and IP addresses among
+other things. We use the information collected to maintain a good Service
+experience and to help us understand who is visiting the Service from where and
+for what reasons. This information may be compiled and analyzed by Ory Corp.
 
 ## Messages and Notifications
 

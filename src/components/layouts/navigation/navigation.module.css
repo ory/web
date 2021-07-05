@@ -7,7 +7,6 @@
 
   top: 0;
   z-index: 999;
-  overflow: hidden;
 
   visibility: visible;
   transition: all 200ms ease-in;
