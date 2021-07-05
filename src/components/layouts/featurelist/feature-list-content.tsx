@@ -204,9 +204,9 @@ export const featureListKratos = {
           title: 'Bring Your Own UI and Identity Models',
           description: (
             <>
-              Use customizable identity models (defining custom fields such as name, address,
-              favourite pet) and create your own user interfaces for flows
-              in your style and branding.
+              Use customizable identity models (defining custom fields such as
+              name, address, favourite pet) and create your own user interfaces
+              for flows in your style and branding.
             </>
           ),
           icon: CheckCircle
