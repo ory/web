@@ -519,7 +519,7 @@ export const featureListOathkeeper = {
           title: 'Next Generation Oathkeeper',
           description: (
             <>
-              <i>Coming soon:</i> The next generation of Ory Oathkeeper. Learn
+              <em>Coming soon:</em> The next generation of Ory Oathkeeper. Learn
               more and submit feedback on{' '}
               <Button
                 style={'link-inline'}
