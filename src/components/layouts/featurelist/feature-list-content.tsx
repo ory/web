@@ -91,7 +91,7 @@ export const featureListPricing = {
           title: 'Social Logins',
           description: (
             <>
-              Simplify your users experience and let them use their existing
+              Simplify your users' experience and let them use their existing
               accounts at Google, GitHub, Apple etc. to sign up and log in. All
               OIDC providers are supported.
             </>
@@ -225,9 +225,9 @@ export const featureListKratos = {
           title: 'Social Logins',
           description: (
             <>
-              Simplify UX and let them use their existing accounts at Google,
-              GitHub, etc. to sign up and log in. All OIDC providers are
-              supported.
+              Simplify your users' experience and let them use their existing
+              accounts at Google, GitHub, Apple etc. to sign up and log in. All
+              OIDC providers are supported.
             </>
           ),
           icon: CheckCircle
