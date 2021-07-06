@@ -11,6 +11,14 @@ const NotFoundPage = () => (
       description={
         <>
           We're undergoing some routine maintenance, and will be back online in just a bit. Don't worry, we've got our best engineers on the job. 
+          If you have feedback or want to file a bug report, please {''}
+          <Button
+            style={'link-inline'}
+            to={'https://github.com/ory/platform/issues/new/choose'}
+          >
+            open an issue
+          </Button>
+          !
         </>
       }
       buttons={
