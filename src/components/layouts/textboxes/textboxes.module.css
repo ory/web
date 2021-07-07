@@ -1,0 +1,12 @@
+.textboxes {
+  padding: 128px 0;
+}
+
+.textboxes-content {
+  display: flex;
+  flex-grow: 1;
+
+  &:nth-child(even) {
+    margin-right: unset;
+  }
+}

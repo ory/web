@@ -22,7 +22,7 @@ const CirclesThreePlus = (
   />
 )
 
-export const featuresDefault = {
+export const textboxesDefault = {
   overline: 'Modular Integration',
   title: <>Auth integration in 1.. 2.. done'</>,
   buttons: (
@@ -78,6 +78,7 @@ export const featuresDefault = {
     }
   ]
 }
+
 
 export const featuresJobsBenefits = {
   overline: 'Free Real Estate',

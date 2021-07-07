@@ -165,8 +165,8 @@ export const featureListKratos = {
       description: (
         <>
           Most software applications need to deal with user and identity
-          management. Ory Kratos serves common flows, so you don't need to rewrite
-          everything yourself.
+          management. Ory Kratos serves common flows, so you don't need to
+          rewrite everything yourself.
         </>
       ),
       button: (
@@ -236,9 +236,9 @@ export const featureListKratos = {
           title: 'Account Verification and Recovery',
           description: (
             <>
-              Verify an identity by checking the email, phone number, or physical
-              address of that user. Provide recovery of accounts using "Forgot
-              Password" flows, security codes, etc.
+              Verify an identity by checking the email, phone number, or
+              physical address of that user. Provide recovery of accounts using
+              "Forgot Password" flows, security codes, etc.
             </>
           ),
           icon: CheckCircle

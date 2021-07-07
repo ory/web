@@ -9,8 +9,8 @@ import Button from '../components/freestanding/button/button'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Hero from '../components/layouts/hero/hero'
 import heroIllustration from '../images/illustrations/hero.svg'
-import Features from '../components/layouts/features/features'
-import { featuresDefault } from '../components/layouts/features/features-content'
+import Textboxes from '../components/layouts/textboxes/textboxes'
+import { featuresJobsBenefits } from '../components/layouts/textboxes/textboxes-content'
 import JobsList from '../components/layouts/jobs/jobs-list'
 
 const IndexPage = () => {
@@ -102,14 +102,9 @@ const IndexPage = () => {
         title={'Open Positions'}
         description={
           <>
-            We are constantly looking for fresh ideas and foo text Lorem Ipsum
-            is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has{' '}
-            <Button to={'#'} style={'link-inline'}>
-              Work with us!
-            </Button>{' '}
-            been the industry's standard dummy text ever since the 1500s, when
-            an unknown printer took a galley of type and scrambled it
+            We provide developers with a secure, reliable, and scalable access
+            solution to their products by building open source libraries that
+            are a proven standard for AuthZ/AuthN.
           </>
         }
         buttons={
@@ -118,7 +113,7 @@ const IndexPage = () => {
           </Button>
         }
       />
-      <Features {...featuresDefault} />
+      <Textboxes {...featuresJobsBenefits} />
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartOpenSource} />
     </Layout>
