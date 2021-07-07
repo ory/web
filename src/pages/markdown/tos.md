@@ -113,7 +113,7 @@ any implied warranties.
 
 ## Hold Harmless
 
-You agree to indemnify, defend and hold harmless Sprizzl, subsidiaries,
+You agree to indemnify, defend and hold harmless ORY, subsidiaries,
 affiliates, officers, directors, employees, consultants, agents, successors and
 assigns from any and all third party claims, liability, damages, costs or
 demands, including, but not limited to, attorneys' fees, arising from (i) your
