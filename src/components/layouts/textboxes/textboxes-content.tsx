@@ -35,7 +35,7 @@ export const textboxesDefault = {
     </Button>
   ),
 
-  feature: [
+  textbox: [
     {
       icon: Code,
       title: <>Ory is open source</>,
@@ -93,7 +93,7 @@ export const featuresJobsBenefits = {
     </Button>
   ),
 
-  feature: [
+  textbox: [
     {
       icon: Code,
       title: <>Open Source Company</>,
@@ -127,7 +127,7 @@ export const featuresJobsBenefits = {
       description: (
         <>
           Everyone working at Ory has a passion for the work we do. Being a
-          small startup we foster a culture of flat hierarchy, which means
+          growing startup we foster a culture of flat hierarchy, which means
           everyone has a voice and we seek input from the whole company on
           important decisions. You will also get insight and influence other
           areas of operation regardless of your position (dev, product,

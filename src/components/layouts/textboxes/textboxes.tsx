@@ -27,7 +27,7 @@ interface PropTypes {
   title: React.ReactElement
   description?: React.ReactElement
   buttons?: React.ReactNode
-  textboxes: Array<Text>
+  textbox: Array<Text>
 }
 
 const Textboxes = ({
@@ -35,25 +35,13 @@ const Textboxes = ({
   title,
   description,
   buttons,
-  textboxes
+  textbox
 }: PropTypes) => (
   <div className={cn(textboxes)}>
     <Container fluid={true} alignItems={'start'}>
-      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb64)}>
-        <ContentText>
-          <Molecule>
-            <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
-            <h2 className={cn('font-h3')}>{title}</h2>
-            {description && <p className={cn('font-p', pt32)}>{description}</p>}
-          </Molecule>
-          <MoleculeInteraction className={cn(pt24)}>
-            {buttons}
-          </MoleculeInteraction>
-        </ContentText>
-      </Grid>
-      <Grid lg={6} md={8} sm={12} xs={12}>
+      <Grid lg={12} md={12} sm={12} xs={12}>
         <Container alignItems={'start'} justify={'start'}>
-          {textboxes.map((f, index) => {
+          {textbox.map((f, index) => {
             return (
               <Grid
                 lg={6}
