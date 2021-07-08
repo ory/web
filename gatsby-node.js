@@ -101,3 +101,18 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
       return Promise.resolve()
     })
 }
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      node: {
+        Buffer: true
+      },
+      fallback: {
+        'stream': require.resolve('stream-browserify'),
+        'events': require.resolve('events'),
+        'buffer': require.resolve('buffer')
+      }
+    }
+  })
+}

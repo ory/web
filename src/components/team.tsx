@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
-import styles from './team.module.css'
+import * as styles from './team.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import Profile, { SocialNetworks } from './profile'
 import Container from './freestanding/containers/container'

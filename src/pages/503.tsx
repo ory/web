@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layouts/layout/layout'
 import Button from '../components/freestanding/button/button'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
+import img404 from '../images/404.mp4'
 
 const NotFoundPage = () => (
   <Layout>
@@ -36,7 +37,7 @@ const NotFoundPage = () => (
           playsInline
           preload="true"
         >
-          <source src={require('../images/404.mp4')} type="video/mp4" />
+          <source src={img404} type="video/mp4" />
         </video>
       }
     />
