@@ -1,5 +1,4 @@
 import React from 'react'
-import * as styles from './coding.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
@@ -7,14 +6,16 @@ import ContentText from '../../freestanding/content/content-text'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import ContentVisual from '../../freestanding/content/content-visual'
+
 import {
   pb16,
   pb32,
   pb64,
   pb8
 } from '../../freestanding/utils/padding.module.css'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import ContentVisual from '../../freestanding/content/content-visual'
+import {coding} from './coding.module.css'
 
 export interface CodingContent {
   icon: React.ReactElement
@@ -40,7 +41,7 @@ const Coding = ({
   visual,
   content
 }: PropTypes) => (
-  <div className={cn(styles.coding)}>
+  <div className={cn(coding)}>
     <Container fluid={true}>
       <Grid lg={6} md={6} sm={12} xs={12}>
         <Container flexContainer={'column'}>

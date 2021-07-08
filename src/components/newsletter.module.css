@@ -1,8 +1,3 @@
-@import '../styles/properties.css';
-@import '../styles/grid.css';
-@import '../styles/global.css';
-@import '../styles/typography.css';
-
 .newsletter {
   background-color: var(--colors-base-grey--next);
   padding: 4rem 0;

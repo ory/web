@@ -1,4 +1,5 @@
 import React from 'react'
+import Coding from '../components/layouts/coding/coding'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
@@ -11,7 +12,6 @@ import { adoptersDefault } from '../components/layouts/adopters/adopters-content
 import Adopters from '../components/layouts/adopters/adopters'
 import Button from '../components/freestanding/button/button'
 import codeboxIllustration from '../images/illustrations/codebox.svg'
-import Coding from '../components/layouts/coding/coding'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IndexPage = () => {

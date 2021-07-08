@@ -165,12 +165,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        cssLoaderOptions: {
-          esModule: false,
-          modules: {
-            namedExport: false
-          }
-        },
+        cssLoaderOptions: {},
         postCssPlugins: [
           require('postcss-for'),
           require('postcss-color-mod-function')(),

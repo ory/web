@@ -1,5 +1,6 @@
 const path = require(`path`)
 const fetch = require('node-fetch')
+const webpack = require('webpack')
 
 const trimLeft = (s, charlist) => {
   if (charlist === undefined) {
@@ -105,14 +106,17 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      node: {
-        Buffer: true
-      },
       fallback: {
         'stream': require.resolve('stream-browserify'),
         'events': require.resolve('events'),
-        'buffer': require.resolve('buffer')
+        'buffer': require.resolve('buffer/')
       }
-    }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+        Buffer: ['buffer', 'Buffer'],
+      }),
+    ]
   })
 }
