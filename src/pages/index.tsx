@@ -2,7 +2,6 @@ import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import Button from '../components/freestanding/button/button'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Adopters from '../components/layouts/adopters/adopters'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Coding from '../components/layouts/coding/coding'
@@ -19,55 +18,21 @@ import SEO from '../components/layouts/seo/seo'
 import Stats from '../components/layouts/stats/stats'
 
 const IndexPage = () => {
-  const RocketLaunch = (
-    <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
-  )
-  const BookOpen = (
-    <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
-  )
+  const RocketLaunch = <i className="ph-rocket-launch base-white size24" />
+  const BookOpen = <i className="ph-book-open base-white size24" />
   const ArrowRightWhite = (
-    <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
+    <i className="ph-arrow-right-bold base-white size16" />
   )
   const ArrowRightThemed = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
+    <i className="ph-arrow-right-bold themed-primary size16" />
   )
-  const Terminal = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'TerminalDuotone'}
-      size={'32'}
-    />
-  )
-  const GitMerge = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'GitMergeDuotone'}
-      size={'32'}
-    />
-  )
-  const Code = (
-    <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />
-  )
-  const LockOpen = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'LockOpenDuotone'}
-      size={'32'}
-    />
-  )
-  const UserPlus = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'UserPlusDuotone'}
-      size={'32'}
-    />
-  )
+  const Terminal = <i className="ph-terminal themed-primary size32" />
+  const GitMerge = <i className="ph-git-merge themed-primary size32" />
+  const Code = <i className="ph-codethemed-primary size32" />
+  const LockOpen = <i className="ph-lock-open themed-primary size32" />
+  const UserPlus = <i className="ph-user-plus themed-primary size32" />
   const CirclesThreePlus = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'CirclesThreePlusDuotone'}
-      size={'32'}
-    />
+    <i className="ph-circles-three-plus themed-primary size32" />
   )
 
   return (

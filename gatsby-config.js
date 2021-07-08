@@ -102,8 +102,9 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 860,
-              tracedSVG: false,
-              loading: 'lazy'
+              tracedSVG: true,
+              loading: 'lazy',
+              withWebp: true
             }
           },
           {
@@ -157,7 +158,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,

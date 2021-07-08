@@ -1,5 +1,6 @@
 declare const styles: {
   readonly responsive: string
+  readonly crisp: string
   readonly embedVideoContainer: string
   readonly youtube: string
   readonly elevationBase: string

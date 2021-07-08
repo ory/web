@@ -119,7 +119,6 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      console.log(`prevPos: ${prevPos.y}\ncurrPos: ${currPos.y}`)
       if (prevPos.y > -300 || currPos.y > -300) {
         setHideOnScroll(true)
         return

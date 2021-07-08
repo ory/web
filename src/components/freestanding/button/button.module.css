@@ -211,7 +211,8 @@
   background: transparent;
   color: var(--colors-themed-primary--next);
 
-  & img {
+  & img,
+  & i {
     transition: transform ease 200ms;
     transform: translateX(0);
   }
@@ -219,7 +220,8 @@
   &:hover {
     color: var(--colors-themed-dark--next);
 
-    & img {
+    & img,
+    & i {
       transform: translateX(4px);
     }
   }
@@ -241,7 +243,8 @@
   background: transparent;
   color: var(--colors-base-white--next);
 
-  & img {
+  & img,
+  & i {
     transition: transform ease 200ms;
     transform: translateX(0);
   }

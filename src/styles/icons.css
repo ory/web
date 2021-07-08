@@ -1,0 +1,25 @@
+i.base-white {
+  color: var(--colors-base-white--next);
+}
+
+i.themed-primary {
+  color: var(--colors-themed-primary--next);
+}
+
+i.size24 {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+i.size16 {
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+i.size32 {
+  font-size: 32px;
+  width: 24px;
+  height: 24px;
+}

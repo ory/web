@@ -42,6 +42,7 @@ export default function HTML(props: any) {
         <meta name="msapplication-square150x150logo" content={icon15} />
         <meta name="msapplication-wide310x150logo" content={icon16} />
         <meta name="msapplication-square310x310logo" content={icon17} />
+        <script src="https://unpkg.com/phosphor-icons" />
 
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

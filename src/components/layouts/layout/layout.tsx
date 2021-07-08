@@ -26,12 +26,8 @@ interface PropTypes {
 }
 
 const Layout = ({ children }: PropTypes) => {
-  const arrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  )
-  const signIn = (
-    <IconWrapper color={'themed-primary'} icon={'SignIn'} size={'24'} />
-  )
+  const arrowRight = <i className="ph-arrow-right themed-primary size16" />
+  const signIn = <i className="ph-sign-in themed-primary size24" />
 
   return (
     <div className={cn(styles.layout)}>
