@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import cn from 'classnames'
 import parse from 'csv-parse'
 import dateformat from 'dateformat'
-
-import cn from 'classnames'
-import * as styles from './stats.module.css'
 import csvHydraHitsPerMonth from 'raw-loader!../stats/hydra/hits-per-month.csv'
-import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-month.csv'
 import csvKetoHitsPerMonth from 'raw-loader!../stats/keto/hits-per-month.csv'
 import csvKratosHitsPerMonth from 'raw-loader!../stats/kratos/hits-per-month.csv'
+import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-month.csv'
+import React, { Component } from 'react'
+
 import AnimatedCounter from './layouts/stats/animated-counter'
+import * as styles from './stats.module.css'
 
 const countGitHubStars = (state: StateTypes) =>
   Object.keys(state.github)

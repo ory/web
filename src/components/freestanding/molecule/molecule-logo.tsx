@@ -1,5 +1,6 @@
-import React from 'react'
 import cn from 'classnames'
+import React from 'react'
+
 import * as styles from './molecule-logo.module.css'
 
 interface PropTypes {

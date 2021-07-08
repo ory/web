@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import VisibilitySensor from 'react-visibility-sensor'
-import CountUp from 'react-countup'
 import numeral from 'numeral'
+import React, { Component } from 'react'
+import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
 interface PropTypes {
   countTo: number

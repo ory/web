@@ -1,18 +1,19 @@
-import React from 'react'
-import { featureImage } from './feature-image.module.css'
 import cn from 'classnames'
+import React from 'react'
+
 import Container from '../../freestanding/containers/container'
-import ContentText from '../../freestanding/content/content-text'
 import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
+import ContentVisual from '../../freestanding/content/content-visual'
 import Molecule from '../../freestanding/molecule/molecule'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import {
   pb16,
   pb24,
   pb32,
   pb64
 } from '../../freestanding/utils/padding.module.css'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
-import ContentVisual from '../../freestanding/content/content-visual'
+import { featureImage } from './feature-image.module.css'
 
 interface PropTypes {
   mirror?: boolean

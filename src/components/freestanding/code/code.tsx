@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
-import * as styles from './code.module.css'
 import cn from 'classnames'
-import Prism from 'prismjs'
-import Container from '../containers/container'
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import styled from 'styled-components'
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark'
+import Prism from 'prismjs'
+import React, { useEffect } from 'react'
+import styled from 'styled-components'
+
+import Container from '../containers/container'
+import * as styles from './code.module.css'
 
 interface PropTypes {
   className?: string

@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import Prism from 'prismjs'
 import cn from 'classnames'
+import Prism from 'prismjs'
+import React, { Component } from 'react'
+
 import * as styles from './codebox.module.css'
 
 export enum Languages {

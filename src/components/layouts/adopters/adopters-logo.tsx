@@ -1,6 +1,7 @@
-import React from 'react'
-import * as styles from './adopters-logo.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import * as styles from './adopters-logo.module.css'
 
 interface PropTypes {
   children: React.ReactNode

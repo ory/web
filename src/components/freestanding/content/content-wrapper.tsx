@@ -1,6 +1,7 @@
-import React from 'react'
-import * as styles from './content-wrapper.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import * as styles from './content-wrapper.module.css'
 
 export interface PropTypes {
   children: React.ReactNode

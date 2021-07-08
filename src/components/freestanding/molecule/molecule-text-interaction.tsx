@@ -1,6 +1,7 @@
-import React from 'react'
-import * as styles from './molecule-text-interaction.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import * as styles from './molecule-text-interaction.module.css'
 
 export interface PropTypes {
   children: React.ReactNode

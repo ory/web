@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react'
 import { Link as GatsbyLink } from 'gatsby'
+import React, { ReactNode } from 'react'
 
 interface Proptypes {
   children: ReactNode

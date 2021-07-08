@@ -113,16 +113,15 @@ any implied warranties.
 
 ## Hold Harmless
 
-You agree to indemnify, defend and hold harmless ORY, subsidiaries,
-affiliates, officers, directors, employees, consultants, agents, successors and
-assigns from any and all third party claims, liability, damages, costs or
-demands, including, but not limited to, attorneys' fees, arising from (i) your
-use of the Service, including, but not limited to, all content therein and any
-products or services obtained by you through the Service, (ii) the violation of
-these Terms of Service by you, (iii) the infringement by you (or other user of
-the Service using your account) of any intellectual property or other right of
-any person or entity; or (iv) your violation of any applicable law or
-regulation.
+You agree to indemnify, defend and hold harmless ORY, subsidiaries, affiliates,
+officers, directors, employees, consultants, agents, successors and assigns from
+any and all third party claims, liability, damages, costs or demands, including,
+but not limited to, attorneys' fees, arising from (i) your use of the Service,
+including, but not limited to, all content therein and any products or services
+obtained by you through the Service, (ii) the violation of these Terms of
+Service by you, (iii) the infringement by you (or other user of the Service
+using your account) of any intellectual property or other right of any person or
+entity; or (iv) your violation of any applicable law or regulation.
 
 ## Limited Liability
 

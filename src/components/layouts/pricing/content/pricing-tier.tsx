@@ -1,8 +1,10 @@
-import React from 'react'
-import * as styles from './pricing-tier.module.css'
 import cn from 'classnames'
+import React from 'react'
+
 import Container from '../../../freestanding/containers/container'
+import Grid from '../../../freestanding/containers/grid'
 import ContentText from '../../../freestanding/content/content-text'
+import Molecule from '../../../freestanding/molecule/molecule'
 import {
   pb16,
   pb48,
@@ -11,8 +13,7 @@ import {
   pr4,
   pr8
 } from '../../../freestanding/utils/padding.module.css'
-import Molecule from '../../../freestanding/molecule/molecule'
-import Grid from '../../../freestanding/containers/grid'
+import * as styles from './pricing-tier.module.css'
 
 export interface PriceFeature {
   icon: React.ReactElement

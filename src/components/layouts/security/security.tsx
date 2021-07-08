@@ -1,14 +1,15 @@
-import React from 'react'
-import * as styles from './security.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import Button from '../../freestanding/button/button'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
-import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
-import Button from '../../freestanding/button/button'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
+import Molecule from '../../freestanding/molecule/molecule'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
+import * as styles from './security.module.css'
 
 const Fingerprint = (
   <IconWrapper icon={'Fingerprint'} size={'32'} className={cn('icon-dark')} />

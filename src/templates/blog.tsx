@@ -1,14 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import BlogSection from '../components/blog-section'
-import BlogHero from '../components/blog-hero'
-import SEO from '../components/layouts/seo/seo'
-import Layout from '../components/layouts/layout/layout'
-import Newsletter from '../components/newsletter'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import cn from 'classnames'
-import { pb32 } from '../components/freestanding/utils/padding.module.css'
+import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react'
+
+import BlogHero from '../components/blog-hero'
+import BlogSection from '../components/blog-section'
 import Container from '../components/freestanding/containers/container'
+import { pb32 } from '../components/freestanding/utils/padding.module.css'
+import Layout from '../components/layouts/layout/layout'
+import SEO from '../components/layouts/seo/seo'
+import Newsletter from '../components/newsletter'
 
 export default function BlogTemplate(props: any) {
   const { mdx } = props.data // data.mdx holds our post data
@@ -49,7 +50,7 @@ export default function BlogTemplate(props: any) {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       frontmatter {

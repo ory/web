@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import React, {
   ChangeEvent,
   MouseEvent,
@@ -5,13 +6,13 @@ import React, {
   ReactNode,
   FormEvent
 } from 'react'
-import cn from 'classnames'
-import * as styles from './newsletter.module.css'
+
 import Container from './freestanding/containers/container'
 import Grid from './freestanding/containers/grid'
-import { pb32 } from './freestanding/utils/padding.module.css'
 import ContentText from './freestanding/content/content-text'
 import Molecule from './freestanding/molecule/molecule'
+import { pb32 } from './freestanding/utils/padding.module.css'
+import * as styles from './newsletter.module.css'
 
 interface StateTypes {
   email: string

@@ -1,9 +1,10 @@
-import React from 'react'
-import * as styles from './adopters.module.css'
 import cn from 'classnames'
-import AdoptersLogo from './adopters-logo'
-import Container from '../../freestanding/containers/container'
+import React from 'react'
+
 import Button from '../../freestanding/button/button'
+import Container from '../../freestanding/containers/container'
+import AdoptersLogo from './adopters-logo'
+import * as styles from './adopters.module.css'
 
 interface Adopter {
   title: string

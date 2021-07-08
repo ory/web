@@ -1,16 +1,5 @@
-import React, { useState } from 'react'
-import { faq, faqHeading, faqHighlight, faqHeadingIcon } from './faq.module.css'
 import cn from 'classnames'
-import Container from '../../freestanding/containers/container'
-import Grid from '../../freestanding/containers/grid'
-import ContentText from '../../freestanding/content/content-text'
-import {
-  pb16,
-  pb32,
-  pb4,
-  pb48,
-  pl8
-} from '../../freestanding/utils/padding.module.css'
+import React, { useState } from 'react'
 import {
   Accordion,
   AccordionItem,
@@ -18,8 +7,20 @@ import {
   AccordionItemHeading,
   AccordionItemPanel
 } from 'react-accessible-accordion'
-import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
+
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
+import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
+import {
+  pb16,
+  pb32,
+  pb4,
+  pb48,
+  pl8
+} from '../../freestanding/utils/padding.module.css'
+import { faq, faqHeading, faqHighlight, faqHeadingIcon } from './faq.module.css'
 
 export interface FaqContent {
   question: string

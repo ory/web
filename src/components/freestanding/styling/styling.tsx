@@ -1,6 +1,6 @@
+import cn from 'classnames'
 import React from 'react'
 import styled from 'styled-components'
-import cn from 'classnames'
 
 type Greys = '25' | '50' | '75' | '200' | '400' | '600' | '800' | '900'
 type ThemeTypes = 'primary' | 'dark' | 'light' | 'darkmode' | 'background'

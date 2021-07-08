@@ -1,7 +1,8 @@
-import React from 'react'
-import * as styles from './content-visual.module.css'
 import cn from 'classnames'
+import React from 'react'
+
 import Container from '../containers/container'
+import * as styles from './content-visual.module.css'
 
 export interface PropTypes {
   children: React.ReactNode

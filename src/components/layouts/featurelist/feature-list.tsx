@@ -1,5 +1,12 @@
+import cn from 'classnames'
 import React from 'react'
-import * as styles from './feature-list.module.css'
+
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
+import Molecule from '../../freestanding/molecule/molecule'
+import MoleculeIconWrapper from '../../freestanding/molecule/molecule-icon-wrapper'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import {
   pb32,
   pb48,
@@ -7,14 +14,8 @@ import {
   pt32,
   pt64
 } from '../../freestanding/utils/padding.module.css'
-import cn from 'classnames'
-import Container from '../../freestanding/containers/container'
 import FeatureListItem, { Features } from './feature-list-item'
-import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
-import Grid from '../../freestanding/containers/grid'
-import MoleculeIconWrapper from '../../freestanding/molecule/molecule-icon-wrapper'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import * as styles from './feature-list.module.css'
 
 interface FeatureSection {
   icon: React.ReactElement

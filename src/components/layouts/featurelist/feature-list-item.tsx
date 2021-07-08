@@ -1,14 +1,15 @@
+import cn from 'classnames'
 import React from 'react'
+
+import Container from '../../freestanding/containers/container'
+import ContentText from '../../freestanding/content/content-text'
+import Molecule from '../../freestanding/molecule/molecule'
 import {
   pb4,
   pb24,
   pl8,
   pl24
 } from '../../freestanding/utils/padding.module.css'
-import cn from 'classnames'
-import Container from '../../freestanding/containers/container'
-import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
 
 export interface Features {
   title: string

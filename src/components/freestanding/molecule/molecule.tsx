@@ -1,6 +1,7 @@
-import React from 'react'
-import * as styles from './molecule.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import * as styles from './molecule.module.css'
 
 export interface PropTypes {
   className?: string

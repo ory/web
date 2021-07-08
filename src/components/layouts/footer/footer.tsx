@@ -1,4 +1,12 @@
+import cn from 'classnames'
 import React from 'react'
+
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import { pb16, pb32, pl16 } from '../../freestanding/utils/padding.module.css'
 import {
   footer,
   footerContainer,
@@ -7,13 +15,6 @@ import {
   footerImg,
   footerFont
 } from './footer.module.css'
-import cn from 'classnames'
-import Container from '../../freestanding/containers/container'
-import Grid from '../../freestanding/containers/grid'
-import ContentText from '../../freestanding/content/content-text'
-import { pb16, pb32, pl16 } from '../../freestanding/utils/padding.module.css'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 
 export interface Contact {
   contactEmail: React.ReactElement

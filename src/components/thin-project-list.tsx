@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { brandPrefix, projects } from '../config'
 import ThinProject from './thin-project'
 

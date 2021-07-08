@@ -1,7 +1,8 @@
-import React from 'react'
 import cn from 'classnames'
-import * as styles from './thin-project.module.css'
+import React from 'react'
+
 import Link from '../components/link'
+import * as styles from './thin-project.module.css'
 
 interface PropTypes {
   title: string

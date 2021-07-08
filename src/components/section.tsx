@@ -1,5 +1,6 @@
-import React, { ReactNode } from 'react'
 import cn from 'classnames'
+import React, { ReactNode } from 'react'
+
 import * as styles from './section.module.css'
 
 interface PropTypes {

@@ -1,14 +1,15 @@
+import React from 'react'
+
 import blues from '../../../images/adopters/blues.svg'
-import thoughtworks from '../../../images/adopters/thoughtworks.svg'
-import segment from '../../../images/adopters/segment.svg'
-import raspberrypi from '../../../images/adopters/raspberrypi.svg'
-import sainsburys from '../../../images/adopters/sainsburys.svg'
+import contraste from '../../../images/adopters/contraste.svg'
 import discogs from '../../../images/adopters/discogs.svg'
 import hootsuite from '../../../images/adopters/hootsuite.svg'
 import kyma from '../../../images/adopters/kyma.svg'
+import raspberrypi from '../../../images/adopters/raspberrypi.svg'
+import sainsburys from '../../../images/adopters/sainsburys.svg'
+import segment from '../../../images/adopters/segment.svg'
+import thoughtworks from '../../../images/adopters/thoughtworks.svg'
 import threerein from '../../../images/adopters/threerein.svg'
-import contraste from '../../../images/adopters/contraste.svg'
-import React from 'react'
 
 export const adoptersDefault = {
   adopters: [

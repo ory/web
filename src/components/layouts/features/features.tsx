@@ -1,10 +1,12 @@
-import React from 'react'
-import { features, featuresContent } from './features.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import {
   pb16,
   pb48,
@@ -13,8 +15,7 @@ import {
   pt24,
   pt32
 } from '../../freestanding/utils/padding.module.css'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import { features, featuresContent } from './features.module.css'
 
 export interface Feat {
   icon: React.ReactElement

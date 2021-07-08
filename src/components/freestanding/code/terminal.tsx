@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
-import * as styles from './terminal.module.css'
 import cn from 'classnames'
 import Prism from 'prismjs'
+import React, { useEffect } from 'react'
+
+import * as styles from './terminal.module.css'
 
 interface PropTypes {
   className?: string

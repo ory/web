@@ -1,11 +1,11 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import SEO from '../components/layouts/seo/seo'
-import BlogSection from '../components/blog-section'
-import * as styles from './blog.module.css'
 import cn from 'classnames'
+import { graphql } from 'gatsby'
+import React from 'react'
+
 import { AuthorName } from '../components/author'
+import BlogSection from '../components/blog-section'
 import Button from '../components/freestanding/button/button'
+import Container from '../components/freestanding/containers/container'
 import ContentText from '../components/freestanding/content/content-text'
 import Molecule from '../components/freestanding/molecule/molecule'
 import {
@@ -13,8 +13,9 @@ import {
   pb24,
   pb32
 } from '../components/freestanding/utils/padding.module.css'
-import Container from '../components/freestanding/containers/container'
 import Layout from '../components/layouts/layout/layout'
+import SEO from '../components/layouts/seo/seo'
+import * as styles from './blog.module.css'
 
 const Post = ({
   node: {

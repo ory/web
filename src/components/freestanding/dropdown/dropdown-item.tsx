@@ -1,14 +1,15 @@
+import cn from 'classnames'
 import React from 'react'
+
+import Button from '../button/button'
+import Container from '../containers/container'
+import ContentText from '../content/content-text'
+import { pb16, pb24, pt16, pt24, pt8 } from '../utils/padding.module.css'
 import {
   dropdownItem,
   imageHidden,
   dropdownItemImage
 } from './dropdown-item.module.css'
-import cn from 'classnames'
-import { pb16, pb24, pt16, pt24, pt8 } from '../utils/padding.module.css'
-import Button from '../button/button'
-import ContentText from '../content/content-text'
-import Container from '../containers/container'
 
 interface PropTypes {
   image?: string | React.ReactElement

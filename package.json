@@ -2,9 +2,8 @@
   "name": "ory.sh",
   "private": true,
   "version": "0.0.0",
-  "prettier": "ory-prettier-styles",
   "config": {
-    "prettierTarget": "{src/**,src}/*.{md,mdx,json,js,css,html,js,ts,tsx}"
+    "prettierTarget": "{src/**/,src/}*.{md,mdx,json,js,css,html,js,ts,tsx}"
   },
   "dependencies": {
     "@babel/plugin-transform-spread": "^7.12.1",
@@ -38,6 +37,7 @@
     "gatsby-image": "^3.9.0",
     "gatsby-plugin-force-trailing-slashes": "~1.0.4",
     "gatsby-plugin-gdpr-cookies": "^2.0.6",
+    "gatsby-plugin-image": "^1.9.0",
     "gatsby-plugin-manifest": "^3.9.0",
     "gatsby-plugin-matomo": "^0.10.0",
     "gatsby-plugin-mdx": "^2.9.0",
@@ -100,6 +100,7 @@
     "use-sse": "^2.0.0"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
     "ory-prettier-styles": "~1.1.1",
     "prettier": "~2.3.2"
   },

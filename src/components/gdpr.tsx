@@ -1,5 +1,5 @@
-import React from 'react'
 import { CookieBanner } from '@palmabit/react-cookie-law'
+import React from 'react'
 
 const getCookie = (cname: string) => {
   const name = cname + '='

@@ -70,7 +70,9 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`
       }
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

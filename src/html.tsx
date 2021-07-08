@@ -1,26 +1,26 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import icon from './images/icon/apple-touch-icon-57x57.png'
-import icon1 from './images/icon/apple-touch-icon-114x114.png'
-import icon2 from './images/icon/apple-touch-icon-72x72.png'
-import icon3 from './images/icon/apple-touch-icon-144x144.png'
 import icon4 from './images/icon/apple-touch-icon-60x60.png'
-import icon5 from './images/icon/apple-touch-icon-120x120.png'
+import icon2 from './images/icon/apple-touch-icon-72x72.png'
 import icon6 from './images/icon/apple-touch-icon-76x76.png'
+import icon1 from './images/icon/apple-touch-icon-114x114.png'
+import icon5 from './images/icon/apple-touch-icon-120x120.png'
+import icon3 from './images/icon/apple-touch-icon-144x144.png'
 import icon7 from './images/icon/apple-touch-icon-152x152.png'
-import icon8 from './images/icon/favicon-196x196.png'
-import icon9 from './images/icon/favicon-96x96.png'
-import icon10 from './images/icon/favicon-32x32.png'
 import icon11 from './images/icon/favicon-16x16.png'
+import icon10 from './images/icon/favicon-32x32.png'
+import icon9 from './images/icon/favicon-96x96.png'
 import icon12 from './images/icon/favicon-128x128.png'
-import icon13 from './images/icon/mstile-144x144.png'
+import icon8 from './images/icon/favicon-196x196.png'
 import icon14 from './images/icon/mstile-70x70.png'
+import icon13 from './images/icon/mstile-144x144.png'
 import icon15 from './images/icon/mstile-150x150.png'
 import icon16 from './images/icon/mstile-310x150.png'
 import icon17 from './images/icon/mstile-310x310.png'
 
-export default function HTML(props) {
+export default function HTML(props: any) {
   return (
     <html {...props.htmlAttributes}>
       <head>

@@ -1,7 +1,8 @@
-import React from 'react'
-import * as styles from './security-inner.module.css'
 import cn from 'classnames'
+import React from 'react'
+
 import ContentWrapper from '../../../freestanding/content/content-wrapper'
+import * as styles from './security-inner.module.css'
 
 export interface PropTypes {
   children: React.ReactNode

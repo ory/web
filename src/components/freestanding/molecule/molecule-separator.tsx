@@ -1,6 +1,7 @@
-import React from 'react'
-import * as styles from './molecule-separator.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import * as styles from './molecule-separator.module.css'
 
 interface PropTypes {
   className?: string

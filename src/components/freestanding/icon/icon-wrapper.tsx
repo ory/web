@@ -1,11 +1,12 @@
+import cn from 'classnames'
 import React from 'react'
-import { Themes } from '../shared-types'
+
+import { PascalToSnake } from '../../../util'
 import ColourWrapper from '../colour/colour-wrapper'
+import { Themes } from '../shared-types'
+import * as styles from './icon-wrapper.module.css'
 import { PhosphorIconTypes } from './phosphor'
 import * as PhosphorIcon from './phosphor'
-import { PascalToSnake } from '../../../util'
-import * as styles from './icon-wrapper.module.css'
-import cn from 'classnames'
 
 interface PropType {
   icon: PhosphorIconTypes

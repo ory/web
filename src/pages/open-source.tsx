@@ -1,18 +1,19 @@
 import React from 'react'
+
+import Button from '../components/freestanding/button/button'
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import Adopters from '../components/layouts/adopters/adopters'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Coding from '../components/layouts/coding/coding'
 import Layout from '../components/layouts/layout/layout'
+import Projects from '../components/layouts/projects/projects'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import Stats from '../components/layouts/stats/stats'
 import Quotes from '../components/layouts/quotes/quotes'
-import SEO from '../components/layouts/seo/seo'
-import Projects from '../components/layouts/projects/projects'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import Adopters from '../components/layouts/adopters/adopters'
-import Button from '../components/freestanding/button/button'
+import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
 import codeboxIllustration from '../images/illustrations/codebox.svg'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IndexPage = () => {
   const BookOpen = (

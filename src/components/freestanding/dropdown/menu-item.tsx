@@ -1,5 +1,6 @@
-import React from 'react'
 import cn from 'classnames'
+import React from 'react'
+
 import Button from '../button/button'
 import ColourWrapper from '../colour/colour-wrapper'
 import { menuItem, menuButton } from './menu-item.module.css'

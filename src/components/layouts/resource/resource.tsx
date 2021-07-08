@@ -1,15 +1,16 @@
-import React from 'react'
-import * as styles from './resource.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import Button from '../../freestanding/button/button'
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
-import ResourceBox from './content/resource-box'
-import Container from '../../freestanding/containers/container'
-import ContentText from '../../freestanding/content/content-text'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
-import Grid from '../../freestanding/containers/grid'
-import Button from '../../freestanding/button/button'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
+import ResourceBox from './content/resource-box'
+import * as styles from './resource.module.css'
 
 const ArrowRight = (
   <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'32'} />

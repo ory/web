@@ -1,5 +1,6 @@
-import Button from '../../freestanding/button/button'
 import React from 'react'
+
+import Button from '../../freestanding/button/button'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 const RocketLaunch = (

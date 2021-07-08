@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import * as styles from './toggle.module.css'
 import cn from 'classnames'
+import React, { useEffect, useState } from 'react'
+
 import Container from '../containers/container'
 import { pl16, pr16 } from '../utils/padding.module.css'
+import * as styles from './toggle.module.css'
 
 export interface ToggleText {
   textEnable: string

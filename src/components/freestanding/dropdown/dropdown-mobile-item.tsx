@@ -1,9 +1,10 @@
-import React from 'react'
-import { itemFont } from './dropdown-mobile-item.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import Container from '../containers/container'
 import ContentText from '../content/content-text'
 import MoleculeInteraction from '../molecule/molecule-interaction'
-import Container from '../containers/container'
+import { itemFont } from './dropdown-mobile-item.module.css'
 
 interface PropTypes {
   className?: string

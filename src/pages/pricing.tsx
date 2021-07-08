@@ -1,18 +1,19 @@
+import cn from 'classnames'
 import React from 'react'
+
+import Button from '../components/freestanding/button/button'
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Adopters from '../components/layouts/adopters/adopters'
-import Stats from '../components/layouts/stats/stats'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import Faq from '../components/layouts/faq/faq'
 import FeatureList from '../components/layouts/featurelist/feature-list'
+import { featureListPricing } from '../components/layouts/featurelist/feature-list-content'
 import Layout from '../components/layouts/layout/layout'
 import Pricing from '../components/layouts/pricing/pricing'
 import Quotes from '../components/layouts/quotes/quotes'
-import Faq from '../components/layouts/faq/faq'
-import Button from '../components/freestanding/button/button'
-import cn from 'classnames'
-import SEO from '../components/layouts/seo/seo'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
-import { featureListPricing } from '../components/layouts/featurelist/feature-list-content'
+import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
 
 const PricingPage = () => {
   const CheckCircle = (

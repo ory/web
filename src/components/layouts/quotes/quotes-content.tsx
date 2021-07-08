@@ -1,7 +1,8 @@
 import React from 'react'
+
+import blues from '../../../images/adopters/colored/blues_c.svg'
 import sainsburys from '../../../images/adopters/colored/sainsburys_c.svg'
 import thoughtworks from '../../../images/adopters/colored/thoughtworks_c.svg'
-import blues from '../../../images/adopters/colored/blues_c.svg'
 
 export const quotesDefault = {
   title: <>What our customers say</>,

@@ -1,6 +1,7 @@
-import React from 'react'
-import * as styles from './molecule-notification.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import * as styles from './molecule-notification.module.css'
 
 interface PropTypes {
   className?: string

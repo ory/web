@@ -1,9 +1,10 @@
-import React from 'react'
-import * as styles from './button.module.css'
-import { Link as GatsbyLink } from 'gatsby'
 import cn from 'classnames'
-import { pl8, pr8 } from '../utils/padding.module.css'
+import { Link as GatsbyLink } from 'gatsby'
+import React from 'react'
+
 import { ParseCase } from '../../../util'
+import { pl8, pr8 } from '../utils/padding.module.css'
+import * as styles from './button.module.css'
 
 export interface PropTypes {
   children?: React.ReactNode

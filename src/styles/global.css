@@ -38,7 +38,7 @@ img.responsive {
 }
 
 img.crisp {
-  image-rendering: -webkit-crisp-edges; 
+  image-rendering: -webkit-crisp-edges;
 }
 
 video {

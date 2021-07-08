@@ -1,13 +1,14 @@
+import cn from 'classnames'
 import React from 'react'
+
+import { Chunks } from '../../../util'
+import Container from '../containers/container'
+import Grid from '../containers/grid'
+import { pb24, pb32, pb64 } from '../utils/padding.module.css'
 import {
   dropdownMobileMenu,
   dropdownSection
 } from './dropdown-mobile-menu.module.css'
-import cn from 'classnames'
-import { Chunks } from '../../../util'
-import Container from '../containers/container'
-import { pb24, pb32, pb64 } from '../utils/padding.module.css'
-import Grid from '../containers/grid'
 
 interface PropTypes {
   className?: string

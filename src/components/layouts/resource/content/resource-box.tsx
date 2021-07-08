@@ -1,7 +1,8 @@
-import React from 'react'
-import * as styles from './resource-box.module.css'
 import cn from 'classnames'
-import { ParseCase } from '../../../../../util'
+import React from 'react'
+
+import { ParseCase } from '../../../../util'
+import * as styles from './resource-box.module.css'
 
 export interface PropTypes {
   children: React.ReactNode
