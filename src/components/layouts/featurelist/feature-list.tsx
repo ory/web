@@ -7,6 +7,8 @@ import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeIconWrapper from '../../freestanding/molecule/molecule-icon-wrapper'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
+import FeatureListItem, { Features } from './feature-list-item'
+
 import {
   pb32,
   pb48,
@@ -14,7 +16,6 @@ import {
   pt32,
   pt64
 } from '../../freestanding/utils/padding.module.css'
-import FeatureListItem, { Features } from './feature-list-item'
 import * as styles from './feature-list.module.css'
 
 interface FeatureSection {

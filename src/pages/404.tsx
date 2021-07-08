@@ -1,9 +1,9 @@
+import img404 from '../images/404.mp4'
 import React from 'react'
 
 import Button from '../components/freestanding/button/button'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Layout from '../components/layouts/layout/layout'
-import img404 from '../images/404.mp4'
 
 const NotFoundPage = () => (
   <Layout>

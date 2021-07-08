@@ -11,8 +11,9 @@ import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
-import { pb32, pb64, pt64 } from '../../freestanding/utils/padding.module.css'
 import AnimatedCounter from './animated-counter'
+
+import { pb32, pb64, pt64 } from '../../freestanding/utils/padding.module.css'
 import * as styles from './stats.module.css'
 
 const countGitHubStars = (state: StateTypes) =>

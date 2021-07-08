@@ -1,5 +1,3 @@
-import React from 'react'
-
 import blues from '../../../images/adopters/blues.svg'
 import contraste from '../../../images/adopters/contraste.svg'
 import discogs from '../../../images/adopters/discogs.svg'
@@ -10,6 +8,7 @@ import sainsburys from '../../../images/adopters/sainsburys.svg'
 import segment from '../../../images/adopters/segment.svg'
 import thoughtworks from '../../../images/adopters/thoughtworks.svg'
 import threerein from '../../../images/adopters/threerein.svg'
+import React from 'react'
 
 export const adoptersDefault = {
   adopters: [

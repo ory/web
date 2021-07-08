@@ -1,9 +1,10 @@
 import cn from 'classnames'
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import Button from './freestanding/button/button'
 import IconWrapper from './freestanding/icon/icon-wrapper'
+
 import { pb16, pb8, pr16, pr8 } from './freestanding/utils/padding.module.css'
 import * as styles from './profile.module.css'
 
@@ -76,7 +77,7 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
 const Profile = ({ name, img, social }: PropTypes) => (
   <div className={cn(styles.profile, pb16)}>
     <div className={cn(pr16)}>
-      <GatsbyImage fixed={img} alt={name} />
+      <GatsbyImage image={img} alt={name} />
     </div>
     <div>
       <h2 className={cn('font-h5', pb8)}>{name}</h2>

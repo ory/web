@@ -2,8 +2,9 @@ import cn from 'classnames'
 import React, { forwardRef } from 'react'
 
 import { ParseCase } from '../../../util'
-import * as styles from './container.module.css'
 import { Viewports } from './grid'
+
+import * as styles from './container.module.css'
 
 type FlexJustify =
   | 'center'

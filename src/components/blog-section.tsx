@@ -1,9 +1,10 @@
 import cn from 'classnames'
 import React, { ReactNode } from 'react'
 
-import * as styles from './blog-section.module.css'
 import Container from './freestanding/containers/container'
 import Grid from './freestanding/containers/grid'
+
+import * as styles from './blog-section.module.css'
 import { pb32 } from './freestanding/utils/padding.module.css'
 
 interface PropTypes {

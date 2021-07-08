@@ -2,6 +2,7 @@ import cn from 'classnames'
 import React from 'react'
 
 import Molecule from '../molecule/molecule'
+
 import * as styles from './content-text.module.css'
 
 export interface PropTypes {

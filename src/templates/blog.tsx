@@ -6,10 +6,11 @@ import React from 'react'
 import BlogHero from '../components/blog-hero'
 import BlogSection from '../components/blog-section'
 import Container from '../components/freestanding/containers/container'
-import { pb32 } from '../components/freestanding/utils/padding.module.css'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 import Newsletter from '../components/newsletter'
+
+import { pb32 } from '../components/freestanding/utils/padding.module.css'
 
 export default function BlogTemplate(props: any) {
   const { mdx } = props.data // data.mdx holds our post data

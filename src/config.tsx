@@ -1,12 +1,12 @@
 // export const brandPrefix = process.env.GATSBY_DOMAIN === 'gethydra.sh' ? '' : 'ORY '
 // export const brandPrefix = process.env.GATSBY_DOMAIN === 'gethydra.sh' ? '' : 'ORY '
-import React from 'react'
-
-import IconWrapper from './components/freestanding/icon/icon-wrapper'
 import hydraAnimation from './images/hydra/hydra.svg'
 import ketoAnimation from './images/keto/keto.svg'
 import kratosAnimation from './images/kratos/kratos.svg'
 import oathkeeperAnimation from './images/oathkeeper/oathkeeper.svg'
+import React from 'react'
+
+import IconWrapper from './components/freestanding/icon/icon-wrapper'
 
 export const brandPrefix = 'Ory / '
 

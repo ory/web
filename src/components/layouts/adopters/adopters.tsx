@@ -4,6 +4,7 @@ import React from 'react'
 import Button from '../../freestanding/button/button'
 import Container from '../../freestanding/containers/container'
 import AdoptersLogo from './adopters-logo'
+
 import * as styles from './adopters.module.css'
 
 interface Adopter {

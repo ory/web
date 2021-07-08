@@ -10,6 +10,7 @@ import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
 import ResourceBox from './content/resource-box'
+
 import * as styles from './resource.module.css'
 
 const ArrowRight = (

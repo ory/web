@@ -4,6 +4,7 @@ import React from 'react'
 import Container from '../containers/container'
 import ContentText from '../content/content-text'
 import MoleculeInteraction from '../molecule/molecule-interaction'
+
 import { itemFont } from './dropdown-mobile-item.module.css'
 
 interface PropTypes {

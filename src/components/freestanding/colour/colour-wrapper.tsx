@@ -1,10 +1,9 @@
+import { Themes } from '../shared-types'
 import cn from 'classnames'
 import { hexToCSSFilter } from 'hex-to-css-filter/dist/es2015'
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-
-import { Themes } from '../shared-types'
 
 interface PropType {
   children: React.ReactNode

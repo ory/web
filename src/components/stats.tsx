@@ -8,6 +8,7 @@ import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-m
 import React, { Component } from 'react'
 
 import AnimatedCounter from './layouts/stats/animated-counter'
+
 import * as styles from './stats.module.css'
 
 const countGitHubStars = (state: StateTypes) =>

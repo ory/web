@@ -6,6 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
+
 // requires a loader
 import { pb32, pt32, pb64 } from '../../freestanding/utils/padding.module.css'
 import { quote, quoteBlock, quoteImg } from './quote.module.css'

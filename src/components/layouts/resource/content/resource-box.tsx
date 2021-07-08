@@ -2,6 +2,7 @@ import cn from 'classnames'
 import React from 'react'
 
 import { ParseCase } from '../../../../util'
+
 import * as styles from './resource-box.module.css'
 
 export interface PropTypes {

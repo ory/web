@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 
 import Link from '../components/link'
+
 import * as styles from './blog-summary-section.module.css'
 
 type Edge = {

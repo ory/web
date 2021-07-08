@@ -1,10 +1,11 @@
+import MoleculeFeatureIcon from '../../../freestanding/molecule/molecule-feature-icon'
 import cn from 'classnames'
 import React from 'react'
 
 import IconWrapper from '../../../freestanding/icon/icon-wrapper'
 import Molecule from '../../../freestanding/molecule/molecule'
 import MoleculeFeature from '../../../freestanding/molecule/molecule-feature'
-import MoleculeFeatureIcon from '../../../freestanding/molecule/molecule-feature-icon'
+
 import * as styles from './security-features.module.css'
 
 export interface PropTypes {

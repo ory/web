@@ -1,3 +1,5 @@
+import logoOryFooter from '../../../images/logo-ory-footer.svg'
+import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
 import cn from 'classnames'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-go'
@@ -10,13 +12,12 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-yaml'
 import React from 'react'
 
-import logoOryFooter from '../../../images/logo-ory-footer.svg'
-import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
 import Button from '../../freestanding/button/button'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import Footer from '../footer/footer'
 import Navigation from '../navigation/navigation'
+
 import * as styles from './layout.module.css'
 
 interface PropTypes {

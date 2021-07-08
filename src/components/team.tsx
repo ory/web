@@ -6,25 +6,22 @@ import Container from './freestanding/containers/container'
 import Grid from './freestanding/containers/grid'
 import ContentText from './freestanding/content/content-text'
 import Molecule from './freestanding/molecule/molecule'
-import { pb32, pb48 } from './freestanding/utils/padding.module.css'
 import Profile, { SocialNetworks } from './profile'
+
+import { pb32, pb48 } from './freestanding/utils/padding.module.css'
 import * as styles from './team.module.css'
 
 const Team = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       aeneas: file(relativePath: { eq: "aeneas.png" }) {
         childImageSharp {
-          fixed(width: 90, height: 90) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 90, height: 90, layout: FIXED)
         }
       }
       thomas: file(relativePath: { eq: "thomas.png" }) {
         childImageSharp {
-          fixed(width: 90, height: 90) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 90, height: 90, layout: FIXED)
         }
       }
     }
@@ -64,7 +61,7 @@ const Team = () => {
                 href: 'https://www.linkedin.com/in/aeneasr'
               }
             ]}
-            img={data.aeneas.childImageSharp.fixed}
+            img={data.aeneas.childImageSharp.gatsbyImageData}
           />
           <Profile
             name="Thomas Aidan Curran"
@@ -78,7 +75,7 @@ const Team = () => {
                 href: 'https://www.linkedin.com/in/thomasaidancurran/'
               }
             ]}
-            img={data.thomas.childImageSharp.fixed}
+            img={data.thomas.childImageSharp.gatsbyImageData}
           />
         </Grid>
       </Container>

@@ -8,13 +8,14 @@ import Button from '../components/freestanding/button/button'
 import Container from '../components/freestanding/containers/container'
 import ContentText from '../components/freestanding/content/content-text'
 import Molecule from '../components/freestanding/molecule/molecule'
+import Layout from '../components/layouts/layout/layout'
+import SEO from '../components/layouts/seo/seo'
+
 import {
   pb16,
   pb24,
   pb32
 } from '../components/freestanding/utils/padding.module.css'
-import Layout from '../components/layouts/layout/layout'
-import SEO from '../components/layouts/seo/seo'
 import * as styles from './blog.module.css'
 
 const Post = ({

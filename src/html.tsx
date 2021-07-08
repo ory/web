@@ -1,6 +1,3 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-
 import icon from './images/icon/apple-touch-icon-57x57.png'
 import icon4 from './images/icon/apple-touch-icon-60x60.png'
 import icon2 from './images/icon/apple-touch-icon-72x72.png'
@@ -19,6 +16,8 @@ import icon13 from './images/icon/mstile-144x144.png'
 import icon15 from './images/icon/mstile-150x150.png'
 import icon16 from './images/icon/mstile-310x150.png'
 import icon17 from './images/icon/mstile-310x310.png'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 export default function HTML(props: any) {
   return (

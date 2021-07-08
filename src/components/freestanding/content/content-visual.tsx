@@ -2,6 +2,7 @@ import cn from 'classnames'
 import React from 'react'
 
 import Container from '../containers/container'
+
 import * as styles from './content-visual.module.css'
 
 export interface PropTypes {

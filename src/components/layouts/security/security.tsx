@@ -9,6 +9,7 @@ import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import Molecule from '../../freestanding/molecule/molecule'
 import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-interaction'
+
 import * as styles from './security.module.css'
 
 const Fingerprint = (

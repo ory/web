@@ -7,6 +7,9 @@ import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import Toggle from '../../freestanding/toggle/toggle'
+import PricingBlock from './content/pricing-block'
+import { PriceTier } from './content/pricing-tier'
+
 import {
   pb32,
   pb64,
@@ -14,8 +17,6 @@ import {
   pt32,
   pt64
 } from '../../freestanding/utils/padding.module.css'
-import PricingBlock from './content/pricing-block'
-import { PriceTier } from './content/pricing-tier'
 import * as styles from './pricing.module.css'
 
 interface PropTypes {
