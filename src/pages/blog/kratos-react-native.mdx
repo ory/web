@@ -42,28 +42,36 @@ The examples use [Ory Kratos](https://github.com/ory/kratos), a open source
 identity and authentication REST API server written in Golang.
 
 import CodeFromRemote from '../../components/codefromremote'
-import loginVideoMP4 from '../../images/articles/react-native/login.mp4'
+import loginVideoMP4 from '../../images/articles/react-native/login-small.mp4'
 import loginVideoWebm from '../../images/articles/react-native/login.webm'
-import signupVideoMP4 from '../../images/articles/react-native/signup-profile-settings.mp4'
-import signupVideoWebm from '../../images/articles/react-native/signup-profile-settings.webm'
+import signupVideoMP4 from '../../images/articles/react-native/signup-profile-settings-small.mp4'
+import signupVideoWebm from '../../images/articles/react-native/signup-profile-settings-small.webm'
+import LazyLoad from 'react-lazyload'
 
 <p>
-  <figure>
-    <video
-      style={{ height: 500, display: 'block', margin: '0 auto', width: 'auto' }}
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      <source src={loginVideoMP4} type="video/mp4" />
-      <source src={loginVideoWebm} type="video/webm" />
-    </video>
-    <figcaption>
-      React Native Mobile App with Authentication (Sign In, Sign Up) and User
-      Management using ORY Kratos as a backend.
-    </figcaption>
-  </figure>
+  <LazyLoad height={500} once>
+    <figure>
+      <video
+        style={{
+          height: 500,
+          display: 'block',
+          margin: '0 auto',
+          width: 'auto'
+        }}
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src={loginVideoMP4} type="video/mp4" />
+        <source src={loginVideoWebm} type="video/webm" />
+      </video>
+      <figcaption>
+        Authentication for React Native Mobile App with Screens for Login,
+        Registration and User Management API using Ory Kratos as a backend.
+      </figcaption>
+    </figure>
+  </LazyLoad>
 </p>
 
 As the user storage / identity management we will use the open source
@@ -82,6 +90,7 @@ as well. Both are maintained by [@aeneasr](https://github.com/aeneasr) and
           <img
             loading="lazy"
             alt="ORY Kratos GitHub Card"
+            className="responsive"
             src="https://gh-card.dev/repos/ory/kratos.svg?fullname="
           />
         </a>
@@ -95,6 +104,7 @@ as well. Both are maintained by [@aeneasr](https://github.com/aeneasr) and
         >
           <img
             loading="lazy"
+            className="responsive"
             alt="ORY Kratos React Native Self-Service UI Reference for React Native GitHub Card"
             src="https://gh-card.dev/repos/ory/kratos-selfservice-ui-react-native.svg?fullname="
           />
@@ -172,21 +182,28 @@ This short screen capture shows using the apps' user login, user registration,
 dashboard, and profile management features:
 
 <p>
-  <figure>
-    <video
-      style={{ height: 500, display: 'block', margin: '0 auto', width: 'auto' }}
-      autoPlay
-      muted
-      loop
-    >
-      <source src={signupVideoMP4} type="video/mp4" />
-      <source src={signupVideoWebm} type="video/webm" />
-    </video>
-    <figcaption>
-      User Registration, Dashboard, Profile Management in React Native using ORY
-      Kratos.
-    </figcaption>
-  </figure>
+  <LazyLoad height={500} once>
+    <figure>
+      <video
+        style={{
+          height: 500,
+          display: 'block',
+          margin: '0 auto',
+          width: 'auto'
+        }}
+        autoPlay
+        muted
+        loop
+      >
+        <source src={signupVideoMP4} type="video/mp4" />
+        <source src={signupVideoWebm} type="video/webm" />
+      </video>
+      <figcaption>
+        User Registration, Dashboard, Profile Management in React Native using
+        ORY Kratos.
+      </figcaption>
+    </figure>
+  </LazyLoad>
 </p>
 
 ## User Management and Identity Management Admin API
