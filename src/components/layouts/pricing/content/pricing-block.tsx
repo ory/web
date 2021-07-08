@@ -3,6 +3,7 @@ import React from 'react'
 
 import Container from '../../../freestanding/containers/container'
 import Grid from '../../../freestanding/containers/grid'
+
 import PricingTier, { PriceTier } from './pricing-tier'
 
 import { pb32 } from '../../../freestanding/utils/padding.module.css'

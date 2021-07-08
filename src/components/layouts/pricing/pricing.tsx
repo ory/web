@@ -7,6 +7,7 @@ import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import Toggle from '../../freestanding/toggle/toggle'
+
 import PricingBlock from './content/pricing-block'
 import { PriceTier } from './content/pricing-tier'
 

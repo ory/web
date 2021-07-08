@@ -1,9 +1,11 @@
 module.exports = {
   ...require('ory-prettier-styles'),
   "importOrder": [
-    "^\\.(.*)[^\\.][^c][^s][^s]$",
-    "^\\.(.*)\\.css$",
-    "^\\.(.*)\\.module\\.css$",
+   "^\\.\\./(?!.*\\.[a-z]+$)(.*)$",
+   "^\\./(?!.*\\.[a-z]+$)(.*)$",
+   "^\\.(?!.*module\\.css$)(.*)\\.css$",
+   "^\\.(.*)\\.module\\.css$",
+    "^\\.(.*)\\.(?!css$)[a-z]+$",
   ],
   "importOrderSeparation": true,
   "experimentalBabelParserPluginsList" : ["jsx", "typescript"]

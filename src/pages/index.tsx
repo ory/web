@@ -1,25 +1,22 @@
-import Adopters from '../components/layouts/adopters/adopters'
-import Features from '../components/layouts/features/features'
-import Quotes from '../components/layouts/quotes/quotes'
-import Stats from '../components/layouts/stats/stats'
-import codeboxIllustration from '../images/illustrations/codebox.png'
-import dashboardIllustration from '../images/illustrations/dashboard.png'
-import headlessIllustration from '../images/illustrations/examplelogin.png'
-import heroIllustration from '../images/illustrations/hero.png'
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import Button from '../components/freestanding/button/button'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import Adopters from '../components/layouts/adopters/adopters'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Coding from '../components/layouts/coding/coding'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
+import Features from '../components/layouts/features/features'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartDefault } from '../components/layouts/quickstart/quickstart-content'
+import Quotes from '../components/layouts/quotes/quotes'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
 import Security from '../components/layouts/security/security'
 import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
 
 const IndexPage = () => {
   const RocketLaunch = (
@@ -100,13 +97,11 @@ const IndexPage = () => {
           </Button>
         }
         image={
-          <img
-            width={'100%'}
-            height={'100%'}
+          <StaticImage
+            src="../images/illustrations/hero.png"
             loading="lazy"
-            className="responsive"
             alt="Overview of the Ory Console"
-            src={heroIllustration}
+            className="responsive"
           />
         }
       />
@@ -131,13 +126,11 @@ const IndexPage = () => {
           </Button>
         }
         image={
-          <img
-            width={'100%'}
-            height={'100%'}
+          <StaticImage
             loading="lazy"
             className="responsive"
             alt="Ory Project Dashboard"
-            src={dashboardIllustration}
+            src="../images/illustrations/dashboard.png"
           />
         }
       />
@@ -158,13 +151,11 @@ const IndexPage = () => {
           </Button>
         }
         image={
-          <img
-            width={'100%'}
-            height={'100%'}
+          <StaticImage
             loading="lazy"
             className="responsive"
             alt="Individual styling on user interfaces"
-            src={headlessIllustration}
+            src="../images/illustrations/examplelogin.png"
           />
         }
       />
@@ -192,13 +183,11 @@ const IndexPage = () => {
           </>
         }
         visual={
-          <img
-            width={'100%'}
-            height={'100%'}
+          <StaticImage
             loading="lazy"
             className="responsive"
             alt="Example code and terminal response when integrating Ory"
-            src={codeboxIllustration}
+            src="../images/illustrations/codebox.png"
           />
         }
         content={[

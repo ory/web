@@ -9,6 +9,7 @@
     "@babel/plugin-transform-spread": "^7.12.1",
     "@mdx-js/mdx": "~1.6.21",
     "@mdx-js/react": "~1.6.21",
+    "@mediacurrent/gatsby-plugin-silence-css-order-warning": "^1.0.0",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@palmabit/react-cookie-law": "~0.4.0",
     "@raae/gatsby-remark-oembed": "~0.1.1",

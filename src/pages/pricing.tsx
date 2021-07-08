@@ -1,19 +1,19 @@
-import Adopters from '../components/layouts/adopters/adopters'
-import FeatureList from '../components/layouts/featurelist/feature-list'
-import Quotes from '../components/layouts/quotes/quotes'
-import Stats from '../components/layouts/stats/stats'
 import cn from 'classnames'
 import React from 'react'
 
 import Button from '../components/freestanding/button/button'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import Adopters from '../components/layouts/adopters/adopters'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Faq from '../components/layouts/faq/faq'
+import FeatureList from '../components/layouts/featurelist/feature-list'
 import { featureListPricing } from '../components/layouts/featurelist/feature-list-content'
 import Layout from '../components/layouts/layout/layout'
 import Pricing from '../components/layouts/pricing/pricing'
+import Quotes from '../components/layouts/quotes/quotes'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
 import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
 
 const PricingPage = () => {
   const CheckCircle = (

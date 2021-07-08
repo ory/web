@@ -1,23 +1,24 @@
-import Adopters from '../components/layouts/adopters/adopters'
-import FeatureList from '../components/layouts/featurelist/feature-list'
-import Stats from '../components/layouts/stats/stats'
-import hydraProcess from '../images/hydra/hydra.svg'
-import hydraPolyglot from '../images/hydra/hydra_p.svg'
 import React from 'react'
 
 import CodeBox, { Languages } from '../components/codebox'
 import Button from '../components/freestanding/button/button'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import Adopters from '../components/layouts/adopters/adopters'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import YoutubeEmbed from '../components/layouts/embed/embed'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
+import FeatureList from '../components/layouts/featurelist/feature-list'
 import { featureListHydra } from '../components/layouts/featurelist/feature-list-content'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
 import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
 import Newsletter from '../components/newsletter'
+
+import hydraProcess from '../images/hydra/hydra.svg'
+import hydraPolyglot from '../images/hydra/hydra_p.svg'
 
 const IntegrationCodeBox = () => (
   <CodeBox

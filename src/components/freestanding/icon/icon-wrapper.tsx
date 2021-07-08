@@ -1,9 +1,10 @@
-import { Themes } from '../shared-types'
 import cn from 'classnames'
 import React from 'react'
 
 import { PascalToSnake } from '../../../util'
 import ColourWrapper from '../colour/colour-wrapper'
+import { Themes } from '../shared-types'
+
 import { PhosphorIconTypes } from './phosphor'
 import * as PhosphorIcon from './phosphor'
 

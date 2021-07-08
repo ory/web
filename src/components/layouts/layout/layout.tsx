@@ -1,5 +1,3 @@
-import logoOryFooter from '../../../images/logo-ory-footer.svg'
-import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
 import cn from 'classnames'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-go'
@@ -19,6 +17,9 @@ import Footer from '../footer/footer'
 import Navigation from '../navigation/navigation'
 
 import * as styles from './layout.module.css'
+
+import logoOryFooter from '../../../images/logo-ory-footer.svg'
+import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
 
 interface PropTypes {
   children?: React.ReactNode
