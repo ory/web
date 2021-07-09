@@ -2,7 +2,6 @@ import cn from 'classnames'
 import React from 'react'
 
 import Button from '../components/freestanding/button/button'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Adopters from '../components/layouts/adopters/adopters'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import Faq from '../components/layouts/faq/faq'
@@ -17,19 +16,8 @@ import Stats from '../components/layouts/stats/stats'
 
 const PricingPage = () => {
   const CheckCircle = (
-    <IconWrapper
-      icon={'CheckCircleBold'}
-      size={'16'}
-      color={'success-primary'}
-    />
+    <i className="success-primary size16 ph-check-circle-bold" />
   )
-  const CircleThreePlus = (
-    <IconWrapper color={'base-white'} icon={'CirclesThreePlus'} size={'24'} />
-  )
-  const MapTriFold = (
-    <IconWrapper color={'base-white'} icon={'MapTrifold'} size={'24'} />
-  )
-  const ArrowRight = <IconWrapper icon={'ArrowRight'} size={'16'} />
 
   return (
     <Layout>

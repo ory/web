@@ -14,9 +14,7 @@ import ResourceBox from './content/resource-box'
 
 import * as styles from './resource.module.css'
 
-const ArrowRight = (
-  <IconWrapper color={'base-white'} icon={'ArrowRight'} size={'32'} />
-)
+const ArrowRight = <i className={'ph-arrow-right base-white size32'} />
 
 const resources = [
   {

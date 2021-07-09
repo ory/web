@@ -48,7 +48,6 @@ module.exports = {
     siteUrl: `https://www.ory.sh`
   },
   plugins: [
-    '@mediacurrent/gatsby-plugin-silence-css-order-warning',
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,

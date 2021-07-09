@@ -30,7 +30,7 @@ interface PropTypes {
 
 const Projects = ({ overline, title, description, buttons }: PropTypes) => {
   const ArrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
+    <i className={'ph-arrow-right-bold theme-primary size16'} />
   )
 
   return (

@@ -409,21 +409,17 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'GithubLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-github-logo base-grey-200 size24'} />
           </Button>,
           <Button
             to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'YoutubeLogoDuotone'}
-              size={'24'}
+            <i
+              className={
+                'ph-youtube-logo ph-youtube-logo-duotone base-grey-200 size24'
+              }
             />
           </Button>,
           <Button
@@ -431,33 +427,21 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'TwitterLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-twitter-logo base-grey-200 size24'} />
           </Button>,
           <Button
             to={'https://slack.ory.sh/'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'SlackLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-slack-logo base-grey-200 size24'} />
           </Button>,
           <Button
             to={'https://www.linkedin.com/company/ory-corp/'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'LinkedinLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-linkedin-logo base-grey-200 size24'} />
           </Button>
         ]}
         legal={[

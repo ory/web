@@ -18,24 +18,14 @@ import codeboxIllustration from '../images/illustrations/codebox.svg'
 
 const IndexPage = () => {
   const BookOpen = (
-    <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
+    <i className={'base-white ph-book-open ph-book-open-duotone size24'} />
   )
   const Terminal = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'TerminalDuotone'}
-      size={'32'}
-    />
+    <i className={'themed-primary ph-terminal ph-terminal-duotone size32'} />
   )
-  const ArrowRight = (
-    <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
-  )
+  const ArrowRight = <i className={'base-white ph-arrow-right-bold size16'} />
   const GitMerge = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'GitMergeDuotone'}
-      size={'32'}
-    />
+    <i className={'themed-primary ph-git-merge ph-git-merge-duotone size32'} />
   )
 
   return (

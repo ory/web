@@ -6,6 +6,14 @@ i.themed-primary {
   color: var(--colors-themed-primary--next);
 }
 
+i.base-grey-400 {
+  color: var(--colors-base-grey-400--next);
+}
+
+i.success-primary {
+  color: var(--colors-success-primary--next);
+}
+
 i.size24 {
   font-size: 24px;
   width: 24px;

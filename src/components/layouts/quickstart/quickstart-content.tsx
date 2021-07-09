@@ -3,26 +3,20 @@ import React from 'react'
 import Button from '../../freestanding/button/button'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
-const RocketLaunch = (
-  <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'24'} />
-)
+const RocketLaunch = <i className={'base-white ph-rocket-launch size24'} />
 const BookOpen = (
-  <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
+  <i className={'base-white ph-book-open ph-book-open-duotone size24'} />
 )
-const ArrowRight = (
-  <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
-)
+const ArrowRight = <i className={'themed-primary ph-arrow-right-bold size16'} />
 const Users = (
-  <IconWrapper color={'themed-primary'} icon={'UsersDuotone'} size={'32'} />
+  <i className={'themed-primary ph-users ph-users-duotone size32'} />
 )
 const SlackLogo = (
-  <IconWrapper color={'themed-primary'} icon={'SlackLogoDuotone'} size={'32'} />
+  <i className={'themed-primary ph-slack-logo ph-slack-logo-duotone size32'} />
 )
 const ChatsCircle = (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'ChatsCircleDuotone'}
-    size={'32'}
+  <i
+    className={'themed-primary ph-chats-circle ph-chats-circle-duotone size32'}
   />
 )
 
@@ -48,10 +42,8 @@ export const quickstartDefault = {
   content: [
     {
       icon: (
-        <IconWrapper
-          color={'themed-primary'}
-          icon={'BookOpenDuotone'}
-          size={'32'}
+        <i
+          className={'themed-primary ph-book-open ph-book-open-duotone size32'}
         />
       ),
       title: <>Check out our docs</>,

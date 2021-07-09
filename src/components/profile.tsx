@@ -37,31 +37,19 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
   switch (network) {
     case SocialNetworks.github:
       Icon = (
-        <IconWrapper
-          color={'base-grey-400'}
-          icon={'GithubLogoDuotone'}
-          size={'24'}
-        />
+        <i className="ph-github-logo ph-github-logo-duotone base-grey-400 size24" />
       )
       alt = 'GitHub'
       break
     case SocialNetworks.linkedin:
       Icon = (
-        <IconWrapper
-          color={'base-grey-400'}
-          icon={'LinkedinLogoDuotone'}
-          size={'24'}
-        />
+        <i className="ph-linkedin-logo ph-linkedin-logo-duotone base-grey-400 size24" />
       )
       alt = 'Linkedin'
       break
     case SocialNetworks.twitter:
       Icon = (
-        <IconWrapper
-          color={'base-grey-400'}
-          icon={'TwitterLogoDuotone'}
-          size={'24'}
-        />
+        <i className="ph-twitter-logo ph-twitter-logo-duotone base-grey-400 size24" />
       )
       alt = 'Twitter'
       break

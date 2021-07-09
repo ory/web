@@ -13,13 +13,14 @@ import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartDefault } from '../components/layouts/quickstart/quickstart-content'
 import Quotes from '../components/layouts/quotes/quotes'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
-import Security from '../components/layouts/security/security'
 import SEO from '../components/layouts/seo/seo'
 import Stats from '../components/layouts/stats/stats'
 
 const IndexPage = () => {
   const RocketLaunch = <i className="ph-rocket-launch base-white size24" />
-  const BookOpen = <i className="ph-book-open base-white size24" />
+  const BookOpen = (
+    <i className="ph-book-open ph-book-open-duotone base-white size24" />
+  )
   const ArrowRightWhite = (
     <i className="ph-arrow-right-bold base-white size16" />
   )
@@ -28,7 +29,7 @@ const IndexPage = () => {
   )
   const Terminal = <i className="ph-terminal themed-primary size32" />
   const GitMerge = <i className="ph-git-merge themed-primary size32" />
-  const Code = <i className="ph-codethemed-primary size32" />
+  const Code = <i className="ph-code themed-primary size32" />
   const LockOpen = <i className="ph-lock-open themed-primary size32" />
   const UserPlus = <i className="ph-user-plus themed-primary size32" />
   const CirclesThreePlus = (

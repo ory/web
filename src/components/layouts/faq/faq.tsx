@@ -11,17 +11,15 @@ import {
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
 
 import {
   pb16,
   pb32,
-  pb4,
   pb48,
   pl8
 } from '../../freestanding/utils/padding.module.css'
-import { faq, faqHeading, faqHighlight, faqHeadingIcon } from './faq.module.css'
+import { faq, faqHeading, faqHeadingIcon, faqHighlight } from './faq.module.css'
 
 export interface FaqContent {
   question: string
@@ -38,20 +36,10 @@ const Faq = ({ title, description, content }: PropTypes) => {
   const [expanded, setExpanded] = useState<Array<string>>(['0'])
 
   const Minus = (
-    <IconWrapper
-      color={'base-white'}
-      icon={'Minus'}
-      size={'32'}
-      className={cn(pl8, faqHeadingIcon)}
-    />
+    <i className={cn(pl8, faqHeadingIcon, 'ph-minus base-white size32')} />
   )
   const Plus = (
-    <IconWrapper
-      color={'base-white'}
-      icon={'Plus'}
-      size={'32'}
-      className={cn(pl8, faqHeadingIcon)}
-    />
+    <i className={cn(pl8, faqHeadingIcon, 'ph-plus base-white size32')} />
   )
 
   return (

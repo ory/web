@@ -104,9 +104,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
     mobileNav = cn(styles.mobileNavActive)
   }
 
-  const List = (
-    <IconWrapper color={'themed-primary'} icon={'List'} size={'32'} />
-  )
+  const List = <i className={'ph-list themed-primary size32'} />
 
   // once clicked outside of the nav the menu will close
   onClickOutsideRef(

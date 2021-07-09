@@ -12,9 +12,7 @@ import MoleculeTextInteraction from '../../freestanding/molecule/molecule-text-i
 
 import * as styles from './security.module.css'
 
-const Fingerprint = (
-  <IconWrapper icon={'Fingerprint'} size={'32'} className={cn('icon-dark')} />
-)
+const Fingerprint = <i className={'ph-fingerprint  size32 icon-dark'} />
 
 const features = [
   {

@@ -97,12 +97,8 @@ checkClient.check(checkRequest, (error, resp) => {
 )
 
 const IndexPage = () => {
-  const ArrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  )
-  const CheckCircleHero = (
-    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
-  )
+  const ArrowRight = <i className={'themed-primary ph-arrow-right size16'} />
+  const CheckCircleHero = <i className={'base-white ph-check-circle size24'} />
 
   return (
     <Layout>

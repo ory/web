@@ -2,8 +2,6 @@
 // export const brandPrefix = process.env.GATSBY_DOMAIN === 'gethydra.sh' ? '' : 'ORY '
 import React from 'react'
 
-import IconWrapper from './components/freestanding/icon/icon-wrapper'
-
 import hydraAnimation from './images/hydra/hydra.svg'
 import ketoAnimation from './images/keto/keto.svg'
 import kratosAnimation from './images/kratos/kratos.svg'
@@ -25,25 +23,15 @@ export type Project = {
 }
 
 const UserGear = (
-  <IconWrapper color={'themed-primary'} icon={'UserGearDuotone'} size={'32'} />
+  <i className="ph-user-gear ph-user-gear-duotone themed-primary size32" />
 )
 const Fingerprint = (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'FingerprintDuotone'}
-    size={'32'}
-  />
+  <i className="ph-fingerprint ph-fingerprint-duotone themed-primary size32" />
 )
 const ShieldWarning = (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'ShieldWarningDuotone'}
-    size={'32'}
-  />
+  <i className="ph-shield-warning ph-shield-warning-duotone themed-primary size32" />
 )
-const Key = (
-  <IconWrapper color={'themed-primary'} icon={'KeyDuotone'} size={'32'} />
-)
+const Key = <i className="ph-key ph-key-duotone themed-primary size32" />
 
 export const projects: Project[] = [
   {
