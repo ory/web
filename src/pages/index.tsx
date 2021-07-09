@@ -16,6 +16,8 @@ import { quotesDefault } from '../components/layouts/quotes/quotes-content'
 import SEO from '../components/layouts/seo/seo'
 import Stats from '../components/layouts/stats/stats'
 
+import CodeBoxImage from '../images/illustrations/codebox.png'
+
 const IndexPage = () => {
   const RocketLaunch = <i className="ph-rocket-launch base-white size24" />
   const BookOpen = (
@@ -149,11 +151,11 @@ const IndexPage = () => {
           </>
         }
         visual={
-          <StaticImage
+          <img
             loading="lazy"
             className="responsive"
             alt="Example code and terminal response when integrating Ory"
-            src="../images/illustrations/codebox.png"
+            src={CodeBoxImage}
           />
         }
         content={[
