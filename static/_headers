@@ -4,4 +4,5 @@
   Content-Security-Policy: default-src 'self' blob: 'unsafe-inline' 'unsafe-eval' unpkg.com *.algolianet.com *.algolianet.net storage.googleapis.com github.com *.githubusercontent.com gh-card.dev *.ory.sh www.youtube.com www.youtube-nocookie.com fonts.googleapis.com fonts.gstatic.com data: s.ytimg.com *.cloudfront.net; img-src * data:;
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: accelerometer 'none'; ambient-light-sensor 'none'; battery 'none'; camera 'none'; display-capture 'none'; encrypted-media 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; geolocation 'none'; midi 'none'; payment 'none'
+  Feature-Policy: accelerometer 'none'; ambient-light-sensor 'none'; battery 'none'; camera 'none'; display-capture 'none'; encrypted-media 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; geolocation 'none'; midi 'none'; payment 'none'
+  Permissions-Policy: accelerometer=(); ambient-light-sensor=(); battery=(); camera=(); display-capture=(); encrypted-media=(); geolocation=(); gyroscope=(); magnetometer=(); microphone=(); geolocation=(); midi=(); payment=()
