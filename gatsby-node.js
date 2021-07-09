@@ -104,6 +104,8 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 }
 
 exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }) => {
+  /* https://github.com/gatsbyjs/gatsby/discussions/30169#discussioncomment-877458 */
+  // See also https://github.com/mediacurrent/gatsby-plugin-silence-css-order-warning/issues/1
   const config = getConfig()
   const miniCssExtractPluginIndex = config.plugins.findIndex(
     plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
@@ -129,6 +131,7 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }
     }
   }
   actions.replaceWebpackConfig(config)
+  /* end */
 
   actions.setWebpackConfig({
     resolve: {
