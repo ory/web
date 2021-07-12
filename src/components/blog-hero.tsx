@@ -10,7 +10,6 @@ import Molecule from './freestanding/molecule/molecule'
 import { blogHero } from './blog-hero.module.css'
 import { pb16, pb24, pb32, pb48 } from './freestanding/utils/padding.module.css'
 
-
 interface PropTypes {
   title: string
   date?: string
