@@ -28,7 +28,7 @@ const IndexPage = () => {
           <>
             Today, Ory powers organizations of all sizes — from single-person
             startups to multinational enterprises - and we are only just getting
-            started. We’re looking for talented, creative people to build the
+            started. We are looking for talented, creative people to build the
             future of Ory with us.
           </>
         }

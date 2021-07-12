@@ -28,7 +28,7 @@ export const heroFeaturesJobsBenefits = {
   title: 'Work with us to transform',
   description: (
     <>
-      At Ory we build secure and open Auth so developers don't have to. Ory is
+      At Ory, we build secure and open Auth so developers don't have to. Ory is
       open source, cloud-native, and building at scale.
     </>
   ),
@@ -76,9 +76,9 @@ export const heroFeaturesJobsBenefits = {
       description: (
         <>
           You will be working in a fast-moving startup, breaking up a market
-          that has been plagued by corporate mold far too long. At Ory you won’t
-          just be another employee - You will have a direct impact on Ory’s
-          success and the team will support you and also depend on you.
+          that has been plagued by corporate mold for far too long. At Ory you
+          won’t be just another employee - You have a direct impact on
+          our success and the team will support you and depend on you.
         </>
       )
     }
@@ -99,7 +99,7 @@ export const heroFeaturesJobsValues = {
           embrace leading-edge technology, new ways of thinking, and redefining
           business processes to innovate the market on how to solve some of its
           most fundamental challenges. Ory's aim is no less than to lead the
-          market in state-of-the-art solutions for future proof Identity
+          market in state-of-the-art solutions for future-proof Identity
           Management. Innovation is part of our DNA.
         </>
       )
@@ -124,8 +124,8 @@ export const heroFeaturesJobsValues = {
           We are passionate about creating and delivering meaningful work. This
           is only possible as a team: Ory as a company, Ory together with our
           customers, and Ory as part of a larger community. Giving back to the
-          community we serve also means being committed to work hard to take on
-          challenges, approaching problems with humility – and a deep respect
+          community we serve also means being committed to working hard to take
+          on challenges, approaching problems with humility – and deep respect
           for diversity in business, culture, and society. Together we build the
           products that can serve a purpose.
         </>
