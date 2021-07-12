@@ -39,7 +39,7 @@ const Team = () => {
                 infrastructure that manages how IAM data is used in cloud
                 applications. We deliver the data and associated analytics to
                 members in the network in accordance with data privacy and usage
-                conventions. We embrace and practice Open Source Software
+                conventions. We embrace and practice open source software
                 development. We base our work on existing and emerging open
                 cloud standards. As developers, we will continue to push the
                 boundries in engineering and design to help other developers

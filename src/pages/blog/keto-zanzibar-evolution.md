@@ -15,7 +15,7 @@ seo:
 publishedAt: '2021-04-26'
 author: vinckr
 overline: >
-  Next-Generation Ory Keto - An Open Source Google Zanzibar
+  Next-Generation Ory Keto - An open source Google Zanzibar
 
 category: Article
 

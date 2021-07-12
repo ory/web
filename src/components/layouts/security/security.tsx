@@ -36,7 +36,7 @@ const features = [
   {
     title: 'No lock in',
     description:
-      'We support the migration from Ory open source to Ory as a Service, and the other way around. Never worry about cloud lock in again.',
+      'We support the migration from Ory Open Source to the Ory Cloud, and the other way around. Never worry about cloud lock in again.',
     icon: Fingerprint
   }
 ]

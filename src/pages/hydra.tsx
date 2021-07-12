@@ -128,7 +128,7 @@ const IndexPage = () => {
         title={<>Easy Integration</>}
         description={
           <>
-            Ory Hydra is Open Source and OpenID Connect Certified® technology
+            Ory Hydra is open source and OpenID Connect Certified® technology
             that integrates with any login system. Get started in minutes, only
             a few lines of code are required.
           </>

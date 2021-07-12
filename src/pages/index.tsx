@@ -42,7 +42,7 @@ const IndexPage = () => {
     <Layout>
       <SEO
         description={
-          'Ory is a certified and battle-tested identity solution backed by a large Open Source community and trusted by Fortune500 orgs.'
+          'Ory is a certified and battle-tested identity solution backed by a large open source community and trusted by Fortune500 orgs.'
         }
         title={'Ory - Open Source Identity Solutions For Everyone'}
         keywords={
@@ -226,7 +226,7 @@ const IndexPage = () => {
         feature={[
           {
             icon: Code,
-            title: <>Ory is open source</>,
+            title: <>Ory is Open Source</>,
             description: (
               <>
                 Ory's heart and soul are rooted in Open Source. Our commitment
@@ -259,7 +259,7 @@ const IndexPage = () => {
             title: <>No lock in</>,
             description: (
               <>
-                We support the migration from Ory open source to Ory as a
+                We support the migration from Ory Open Source to Ory as a
                 Service, and the other way around. Don't worry about lock in.
               </>
             )

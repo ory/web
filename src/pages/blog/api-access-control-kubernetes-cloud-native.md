@@ -70,7 +70,7 @@ as well as the Kubernetes local/remote debugging tool
 [Telepresence, which is a CNCF-hosted project](https://www.telepresence.io/).
 [ORY](https://www.ory.sh/) has built and also now maintains a popular
 authentication and authorization ecosystem that works natively on all cloud
-platforms, and is available as [Open Source on GitHub](https://github.com/ory/)
+platforms, and is available as [open source on GitHub](https://github.com/ory/)
 .
 
 ## Running in Kubernetes

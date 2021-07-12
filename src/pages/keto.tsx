@@ -141,7 +141,7 @@ const IndexPage = () => {
         title={<>Easy Integration</>}
         description={
           <>
-            Ory Keto is an Open Source global and consistent permission &
+            Ory Keto is an open source global and consistent permission &
             authorization server with an easy and granular permission language
             and low latency. It is based on Google Zanzibar, written in Go, and
             ships gRPC and REST APIs.

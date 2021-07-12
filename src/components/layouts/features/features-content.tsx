@@ -42,7 +42,7 @@ export const featuresDefault = {
       title: <>Ory is open source</>,
       description: (
         <>
-          Ory's heart and soul are rooted in Open Source. Our commitment to open
+          Ory's heart and soul are rooted in open source. Our commitment to open
           software will stay unchanged.
         </>
       )

@@ -468,7 +468,7 @@ const Layout = ({ children }: PropTypes) => {
                 style={'none'}
                 openInNewWindow={true}
               >
-                Ory
+                Cloud
               </Button>,
               <Button
                 className={cn('font-p-sm')}
