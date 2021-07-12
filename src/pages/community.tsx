@@ -30,19 +30,17 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO
-        description={
-          '#Community SEO'
-        }
-        title={'#Community SEO'}
-      />
+      <SEO description={'#Community SEO'} title={'#Community SEO'} />
 
       <Projects
         overline={'Open Source'}
         title={<>Ory Community</>}
         description={
           <>
-            Something something ory community. Something something ory community Something something ory community Something something ory community
+            Ory is built in close participation with its community. Our projects
+            stand on the shoulders of our communitys dedication to open and free
+            software. We maintain discussion boards on GitHub and an active
+            Slack channel. Join Ory today!{' '}
           </>
         }
       />
