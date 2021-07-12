@@ -60,14 +60,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown`,
-        path: `${__dirname}/src/pages/markdown`
+        path: `${__dirname}/src/markdown/pages`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/pages/blog`
+        path: `${__dirname}/src/markdown/blog`
       }
     },
     `gatsby-plugin-image`,
