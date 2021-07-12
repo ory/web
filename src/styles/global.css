@@ -30,7 +30,6 @@ input {
 img {
   border-style: none;
   image-rendering: optimizequality;
-  image-rendering: -webkit-optimize-contrast;
 }
 
 img.responsive {
