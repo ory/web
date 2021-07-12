@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 const trimLeft = (s, charlist) => {
   if (charlist === undefined) {
-    charlist = 's'
+    charlist = '/s'
   }
 
   return s.replace(new RegExp('^[' + charlist + ']+'), '')
