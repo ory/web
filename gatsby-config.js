@@ -74,7 +74,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `jobs`,
-        path: `${__dirname}/src/pages/jobs`
+        path: `${__dirname}/src/markdown/jobs`
       }
     },
     `gatsby-plugin-image`,
