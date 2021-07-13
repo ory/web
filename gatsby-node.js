@@ -35,11 +35,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     let template = path.resolve(`src/templates/page.tsx`)
-    if (node.fileAbsolutePath.indexOf('pages/blog') > -1) {
+    if (node.fileAbsolutePath.indexOf('markdown/blog') > -1) {
       template = path.resolve(`src/templates/blog.tsx`)
-    } else if (node.fileAbsolutePath.indexOf('pages/page') > -1) {
+    } else if (node.fileAbsolutePath.indexOf('markdown/pages') > -1) {
       template = path.resolve(`src/templates/page.tsx`)
-    } else if (node.fileAbsolutePath.indexOf('pages/jobs') > -1) {
+    } else if (node.fileAbsolutePath.indexOf('markdown/jobs') > -1) {
       template = path.resolve(`src/templates/jobs.tsx`)
     }
 
