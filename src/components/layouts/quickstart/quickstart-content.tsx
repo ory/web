@@ -81,6 +81,106 @@ export const quickstartDefault = {
   ]
 }
 
+export const quickstartCommunity = {
+  title: <>Participate & Learn</>,
+  description: (
+    <>
+      Ory is built in cooperation with its community. Our projects are
+possible because of the dedication of our community to open and free software. We maintain discussion boards on GitHub and an active Slack channel. Talk about code, best practices and more!
+
+    </>
+  ),
+  buttons: (
+    <>
+      <Button
+        style={'filled'}
+        to={'/docs/ecosystem/projects'}
+        iconLeft={BookOpen}
+      >
+        Documentation
+      </Button>
+    </>
+  ),
+  content: [
+    {
+      icon: SlackLogo,
+      title: <>Developer Chat</>,
+      description: (
+        <>
+          A community to help you succeed. Become a hero for developers, ask
+          questions & participate in events.
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://slack.ory.sh/'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          Join the chat
+        </Button>
+      )
+    },
+    {
+      icon: ChatsCircle,
+      title: <>GitHub Discussions</>,
+      description: (
+        <>
+          Make yourself heard on GitHub and contribute code and insights to the
+          open source projects at the heart of Ory.
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://github.com/ory/'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          Explore our GitHub
+        </Button>
+      )
+    },    
+    {
+      icon: ChatsCircle,
+      title: <>Community Projects</>,
+      description: (
+        <>
+          Many members have built open source projects, extending, altering and augmenting the Ory Ecosystem. 
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://github.com/ory/'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          
+          Take a look
+        </Button>
+      )
+    },    
+    {
+      icon: ChatsCircle,
+      title: <>Community Articles</>,
+      description: (
+        <>
+          Make yourself heard on GitHub and contribute code and insights to the
+          open source projects at the heart of Ory.
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://www.ory.sh/docs/ecosystem/community/#open-source-software'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          Community Content
+        </Button>
+      )
+    }
+  ]
+}
+
 export const quickstartOpenSource = {
   title: <>Ready to get started?</>,
   description: (

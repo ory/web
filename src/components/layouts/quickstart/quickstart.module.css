@@ -6,4 +6,8 @@
 .quickstart-content {
   display: flex;
   flex-grow: 1;
+  
+  &:nth-child(even) {
+    margin-right: unset;
+  }  
 }
