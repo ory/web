@@ -21,7 +21,7 @@ const ChatsCircle = (
 const PaperPlaneTilt = (
   <i
     className={
-      'themed-primary ph-paper-plane-tilt ph-paper-plane-tilt-duotone size32'
+      'base-white ph-paper-plane-tilt ph-paper-plane-tilt-duotone size32'
     }
   />
 )
@@ -158,9 +158,9 @@ export const quickstartAbout = {
   title: <>Get to know us</>,
   description: (
     <>
-      Explore the Ory ecosystem and the work we do in open source. Participate
-      in discussions and contribute directly to Ory on GitHub. We love hiring
-      open source contributors to work with us full time.
+      Ory is open. Get to know us by trying out the Ory Cloud Platform, working
+      with us on Ory Open Source, or joining a conversation on Ory Slack or our
+      GitHub Discussions. And we are hiring.
     </>
   ),
   buttons: (
@@ -180,8 +180,8 @@ export const quickstartAbout = {
       title: <>Work for Ory</>,
       description: (
         <>
-          We are looking for talented, creative people to build the future of
-          Ory with us.
+          We are looking for collaborators and colleagues to build Ory with us.
+          We work together, learn, and grow as a team.
         </>
       ),
       button: (
@@ -195,8 +195,8 @@ export const quickstartAbout = {
       title: <>Chat with us directly</>,
       description: (
         <>
-          A community to help you succeed. Become a hero for developers, ask
-          questions & participate in events.
+          Join the Ory Community of developers, makers, and creators.
+          Contribute, ask the experts, and participate in events.
         </>
       ),
       button: (
