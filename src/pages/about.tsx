@@ -25,7 +25,7 @@ const AboutPage = () => (
       title={'About Us'}
       text={
         <>
-          Our mission is to provide a common access control, authorisation and
+          Our mission is to provide a common access control, authorization and
           identity infrastructure that manages IAM and the associated data
           created in cloud applications. We deliver the information and
           associated analytics to members in the network in accordance with data
