@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Button from '../../freestanding/button/button'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 const RocketLaunch = <i className={'base-white ph-rocket-launch size24'} />
 const BookOpen = (
@@ -17,6 +16,18 @@ const SlackLogo = (
 const ChatsCircle = (
   <i
     className={'themed-primary ph-chats-circle ph-chats-circle-duotone size32'}
+  />
+)
+const PaperPlaneTilt = (
+  <i
+    className={
+      'themed-primary ph-paper-plane-tilt ph-paper-plane-tilt-duotone size32'
+    }
+  />
+)
+const UsersThree = (
+  <i
+    className={'themed-primary ph-users-three ph-users-three-duotone size32'}
   />
 )
 
@@ -137,6 +148,64 @@ export const quickstartOpenSource = {
           iconRight={ArrowRight}
         >
           Explore our codebase
+        </Button>
+      )
+    }
+  ]
+}
+
+export const quickstartAbout = {
+  title: <>Get to know us</>,
+  description: (
+    <>
+      Explore the Ory ecosystem and the work we do in open source. Participate
+      in discussions and contribute directly to Ory on GitHub. We love hiring
+      open source contributors to work with us full time.
+    </>
+  ),
+  buttons: (
+    <>
+      <Button
+        style={'filled'}
+        to={'mailto:office@ory.sh'}
+        iconRight={PaperPlaneTilt}
+      >
+        Contact us
+      </Button>
+    </>
+  ),
+  content: [
+    {
+      icon: UsersThree,
+      title: <>Work for Ory</>,
+      description: (
+        <>
+          We are looking for talented, creative people to build the future of
+          Ory with us.
+        </>
+      ),
+      button: (
+        <Button to={'/jobs'} style={'link'} iconRight={ArrowRight}>
+          Join the team
+        </Button>
+      )
+    },
+    {
+      icon: SlackLogo,
+      title: <>Chat with us directly</>,
+      description: (
+        <>
+          A community to help you succeed. Become a hero for developers, ask
+          questions & participate in events.
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://slack.ory.sh/'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          Join the chat
         </Button>
       )
     }
