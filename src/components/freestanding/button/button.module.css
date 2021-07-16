@@ -252,7 +252,8 @@
   &:hover {
     color: var(--colors-themed-darkmode--next);
 
-    & img {
+    & img,
+    & i {
       transform: translateX(4px);
     }
   }

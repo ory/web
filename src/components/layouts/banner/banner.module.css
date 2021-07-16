@@ -1,0 +1,5 @@
+.banner-primary {
+    background-color: var(--colors-themed-primary--next);
+    padding: 32px 0;
+    color: var(--colors-base-white--next);
+}

@@ -77,8 +77,8 @@ export const heroFeaturesJobsBenefits = {
         <>
           You will be working in a fast-moving startup, breaking up a market
           that has been plagued by corporate mold for far too long. At Ory you
-          won’t be just another employee - You have a direct impact on
-          our success and the team will support you and depend on you.
+          won’t be just another employee - You have a direct impact on our
+          success and the team will support you and depend on you.
         </>
       )
     }
