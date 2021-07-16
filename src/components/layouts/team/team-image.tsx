@@ -15,7 +15,7 @@ interface PropTypes {
 }
 
 const TeamImage = ({ title, text, img }: PropTypes) => (
-  <div className={cn(styles.team)}>
+  <div className={cn(styles.team, styles.teamImage)}>
     <Container fluid={true} justify={'center'} alignItems={'start'}>
       <Grid lg={8} md={10} sm={12} xs={12}>
         <SmallText

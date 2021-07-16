@@ -24,6 +24,10 @@
   }
 }
 
+.team-image {
+    padding-top: 0;
+}
+
 @media (--lg),(--xl) {
   .team-content {
     &:nth-child(3n) {
