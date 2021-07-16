@@ -335,11 +335,13 @@ export const teamCommunity = {
     </>
   ),
   img: (
-    <img
+    <StaticImage
+      placeholder="blurred"
+      layout="fullWidth"
       loading="lazy"
-      alt="The Ory Community"
       className="responsive"
-      src="https://opencollective.com/ory/contributors.svg?avatarHeight=24&width=540&button=false"
+      alt="The Ory Community"
+      src="../../../images/community/contributors.svg"
     />
   )
 }
