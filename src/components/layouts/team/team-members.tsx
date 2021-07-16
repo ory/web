@@ -9,7 +9,7 @@ export const teamMembers = {
     <>
       We embrace and practice open source software development. We base our work
       on existing and emerging open cloud standards. As developers, we will
-      continue to push the boundaries in engineering and design to help other
+      continue to advance our level of engineering and product design to help other
       developers succeed.
     </>
   ),
@@ -222,10 +222,8 @@ export const teamCollaborators = {
   title: 'Collaborators',
   text: (
     <>
-      We embrace and practice open source software development. We base our work
-      on existing and emerging open cloud standards. As developers, we will
-      continue to push the boundaries in engineering and design to help other
-      developers succeed.
+      We believe in open source and creative collaboration as it leads to more security, increased quality and better software.
+      Open source is an artisan creation model that shapes an entire generation of applications in the cloud. 
     </>
   ),
   team: [
@@ -328,19 +326,15 @@ export const teamCommunity = {
   title: 'Our Community',
   text: (
     <>
-      The Ory Community stands on the shoulders of individuals, companies, and
-      maintainers. We thank everyone involved - from submitting bug reports and
-      feature requests, to contributing patches, to sponsoring our work.
+      Ory is a community of collaborators, friends, and makers of wonderful software. The Ory Community works together to create useful products. We thank everyone involved - submitting new ideas, sending bug reports, writing feature requests, patching code, and sponsoring our work.
     </>
   ),
   img: (
-    <StaticImage
-      placeholder="blurred"
-      layout="fullWidth"
+    <img
       loading="lazy"
-      className="responsive"
       alt="The Ory Community"
-      src="../../../images/community/contributors.svg"
+      className="responsive"
+      src="https://opencollective.com/ory/contributors.svg?avatarHeight=24&width=540&button=false"
     />
   )
 }
