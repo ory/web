@@ -29,10 +29,7 @@ const AboutPage = () => (
           identity infrastructure that manages IAM and the associated data
           created in cloud applications. We deliver the information and
           associated analytics to members in the network in accordance with data
-          privacy and usage conventions. We embrace and practice open source
-          software development. We base our work on existing and emerging open
-          cloud standards. As developers, we will continue to advance the ways
-          we engineer and design our products to help other developers succeed.
+          privacy and usage conventions.
         </>
       }
     />
