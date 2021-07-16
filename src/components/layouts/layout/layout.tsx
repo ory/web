@@ -233,7 +233,7 @@ const Layout = ({ children }: PropTypes) => {
                     openInNewWindow={false}
                     iconRight={arrowRight}
                   >
-                    Jobs We're hiring!
+                    Jobs!
                   </Button>
                 )
               }
@@ -374,10 +374,7 @@ const Layout = ({ children }: PropTypes) => {
               style={'link'}
               openInNewWindow={true}
             >
-              Jobs&nbsp;
-              <ColourWrapper text={'themed-primary'}>
-                <div className={cn('font-p-sm')}>we're hiring!</div>
-              </ColourWrapper>
+              Jobs
             </Button>
           ]
         }}
