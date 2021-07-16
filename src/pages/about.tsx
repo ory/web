@@ -18,7 +18,7 @@ import {
 const AboutPage = () => (
   <Layout>
     <SEO
-      description="Secure open source IAM, authorisation and access control infrastructure for the cloud."
+      description="Secure open source IAM, authorization and access control infrastructure for the cloud."
       title="Ory - A modern open source identity solution"
     />
     <SimpleText
