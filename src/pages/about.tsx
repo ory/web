@@ -4,10 +4,7 @@ import Banner from '../components/layouts/banner/banner'
 import { bannerContentJobs } from '../components/layouts/banner/banner-content'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
-import {
-  quickstartAbout,
-  quickstartOpenSource
-} from '../components/layouts/quickstart/quickstart-content'
+import { quickstartAbout } from '../components/layouts/quickstart/quickstart-content'
 import SEO from '../components/layouts/seo/seo'
 import SimpleText from '../components/layouts/simple-text/simple-text'
 import Team from '../components/layouts/team/team'
